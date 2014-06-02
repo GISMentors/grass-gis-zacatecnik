@@ -1,0 +1,13 @@
+/*
+ * grass.css
+ * ~~~~~~~~~~~
+ *
+ * GRASS stylesheet
+ *
+ */
+
+@import url("gismentors.css");
+
+a {
+  color: #008f00;
+}

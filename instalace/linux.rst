@@ -1,0 +1,4 @@
+Operační systém Ubuntu/Debian
+=============================
+
+...

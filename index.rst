@@ -3,15 +3,16 @@
    :align: left
 
 **GRASS** (Geographic Resources Analysis Support System) je
-multiplatformní geografický informační systém (:abbr:`GIS (Geografický
-informační systém)`) určený pro správu geografických 2D/3D rastrových
-a vektorových dat, obrazových záznamů, produkci vysoce kvalitních
-grafických výstupů, prostorové modelování a vizualizaci dat.
+multiplatformní desktopový geografický informační systém (:abbr:`GIS
+(Geografický informační systém)`) určený pro správu geografických
+2D/3D rastrových a vektorových dat, obrazových záznamů, produkci
+vysoce kvalitních grafických výstupů, časoprostorové modelování a
+vizualizaci dat.
 
 GRASS GIS (http://grass.osgeo.org) je :wikipedia:`free software
 <Svobodný software>` publikovaný pod všeobecnou licencí :abbr:`GNU
 (GNU is Not Unix)` :abbr:`GPL (General Public License)`. Softwarové
-knihovny systému GRASS a jeho nástroje (tzv. moduly) jsou z větší
+knihovny systému GRASS a jeho nástroje (tzv. *moduly*) jsou z větší
 části implementovány v programovacím jazyce :abbr:`ANSI (American
 National Standards Institute)` :wikipedia:`C <Programovací jazyk
 C>`. Několik málo modulů je potom implementováno v programovacím
@@ -19,13 +20,11 @@ jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
 :wikipedia:`Python`.
 
 
-.. important:: Níže uvedené tutoriály jsou zaměřeny na verzi `GRASS
-             7.0
-             <http://grass.osgeo.org/documentation/general-overview/#AboutGRASS7>`_. Vydání
-             této verze je plánováno na jaře roku 2014. Nicméně pokud
-             není uvedeno jinak, tak všechny uvedené postupy jsou
-             funkční i v aktuální verzi `GRASS 6.4.3
-             <http://grass.osgeo.org/documentation/general-overview/#AboutGRASS6>`_. Případné
+.. important:: Školení je zaměřeno na verzi `GRASS 7.0
+             <http://grass.osgeo.org/download/software/#g70betax>`_. Nicméně
+             pokud není uvedeno jinak, tak všechny uvedené postupy
+             jsou funkční i ve verzi `GRASS 6.4
+             <http://grass.osgeo.org/download/software/#g64x>`_. Případné
              rozdíly mezi verzemi GRASS 6.x a 7.x jsou vždy explicitně
              zdůrazněny.
 

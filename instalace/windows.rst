@@ -22,8 +22,9 @@ http://grass.osgeo.org/grass70/binary/mswindows/native/.
 
 .. admonition:: Poznámka pro pokročilé uživatele
 
-                V případě nutnosti aktuálnější verze či testování nových vlastností je
-                možné využít denní snapshoty instalátoru na adrese
+                V případě nutnosti aktuálnější verze či testování
+                nových vlastností je možné využít denní snapshoty
+                instalátoru dostupných na adrese
                 http://wingrass.fsv.cvut.cz/grass70.
 
 Image:wingrass-install-0.png

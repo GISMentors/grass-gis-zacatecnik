@@ -1,13 +1,10 @@
-GNU Linux (Ubuntu/Debian)
--------------------------
-
-http://grass.osgeo.org/download/software/
+GNU Linux
+---------
 
 Systém GRASS je dostupný ve většině rozšířených Linuxových distribucí
-jako balíček `grass`. Pokud balíčkovací systém dané linuxové
-distribuce neobsahuje GRASS nebo nabízí jeho zastaralou verzi lze
-systém GRASS poměrně jednoduše [[#Kompilace|zkompilovat]] vlastními
-silami.
+jako tzv. balíček. Pokud balíčkovací systém dané linuxové distribuce
+neobsahuje GRASS nebo nabízí jeho zastaralou verzi lze systém GRASS
+poměrně jednoduše :ref:`zkompilovat <kompilace>` vlastními silami.
 
 Postup instalace pro Debian GNU/Linux
 ===========================
@@ -38,6 +35,8 @@ Postup instalace pro Ubuntu
             :class: middle
 
             Spuštění systému GRASS v Ubuntu 12.10
+
+.. _kompilace:
 
 Kompilace
 =========
@@ -122,6 +121,6 @@ GRASS spustíme příkazem
 
           .. code-block:: bash
 
-             ln -s `pwd`/bin.i686-pc-linux-gnu/grass70 ~/bin
+             ln -s `pwd`/bin.`uname -m`-`uname -i`-linux-gnu/grass70 ~/bin
 
 

@@ -25,7 +25,7 @@ jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
              pokud není uvedeno jinak, tak všechny uvedené postupy
              jsou funkční i ve verzi `GRASS 6.4
              <http://grass.osgeo.org/download/software/#g64x>`_. Případné
-             rozdíly mezi verzemi GRASS 6.x a 7.x jsou vždy explicitně
+             rozdíly mezi těmito verzemi jsou vždy explicitně
              zdůrazněny.
 
 První kroky
@@ -48,6 +48,11 @@ Rastrové analýzy
 
 Vektorové analýzy
 ------------------
+
+Související materiály
+---------------------
+
+* `Školení GRASS GIS na Les-ejk.cz <http://les-ejk.cz/skoleni/grass/>`_
 
 .. Indices and tables
 .. ==================

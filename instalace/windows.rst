@@ -1,4 +1,4 @@
-Operační systém MS Windows
-==========================
+MS Windows
+==========
 
 ...

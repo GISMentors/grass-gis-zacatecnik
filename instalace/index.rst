@@ -7,8 +7,9 @@ operačním systémům.
 
 .. figure:: images/grass-cerl-programmers.png
 
-   Programátor systému GRASS Dave Gerdes USA-CERL před počítačem
-   Compaq 386 na který portoval GRASS
+   Programátor systému GRASS Dave Gerdes :abbr:`USA-CERL (US Army
+   Construction Engineering Research Laboratory)` před počítačem Compaq
+   386 na který portoval GRASS
 
 
 Postupem času byl portován na další platformy a nadále vyvíjen jako

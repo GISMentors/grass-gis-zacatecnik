@@ -7,7 +7,7 @@ neobsahuje GRASS nebo nabízí jeho zastaralou verzi lze systém GRASS
 poměrně jednoduše :ref:`zkompilovat <kompilace>` vlastními silami.
 
 Postup instalace pro Debian GNU/Linux
-===========================
+=====================================
 
 * `balíčky GRASS
   <http://packages.debian.org/search?keywords=grass&searchon=names&suite=all&section=all>`_
@@ -19,7 +19,7 @@ Postup instalace pro Debian GNU/Linux
    sudo apt-get install grass grass-gui grass-doc
 
 Postup instalace pro Ubuntu
-=================
+===========================
 
 * `balíčky GRASS
   <http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all>`_

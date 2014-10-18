@@ -1,5 +1,5 @@
 Výpočetní region
-================
+----------------
 
 Výpočetní region je dán *hraničními souřadnicemi* (sever, jih, východ,
 západ) a *prostorovým rozlišením* ve směru sever-jih, východ-západ. Pro
@@ -29,13 +29,13 @@ níže.
           odpovídají aktuálně nastavenému regionu.
 
 Nastavení výpočetního regionu
------------------------------
+=============================
 
 Ve většině případů stačí nastavit výpočetní region na základě rastrové
 či vektorové mapy. Toto nastavení je dostupné z kontextového menu
 správce vrstev.
 
-.. figure:: images/Wxgui-set-region-from-map.png
+.. figure:: images/wxgui-set-region-from-map.png
 
    Nastavení výpočetního regionu na základě rastrové mapy
 
@@ -48,7 +48,7 @@ správce vrstev.
 Zároveň je možné vybrat pro nastavení výpočetního regionu i více
 rastrových či vektorových map najednou.
 
-.. figure:: images/Wxgui-set-region-from-maps.png
+.. figure:: images/wxgui-set-region-from-maps.png
 
    Nastavení výpočetního regionu na základě více vybraných mapových vrstev
 
@@ -63,11 +63,11 @@ rastrových či vektorových map najednou.
    ani definováno.
 
 Pokročilé nastavení výpočetního regionu
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pro manipulaci s výpočetním regionem je určen modul :grassCmd:`g.region`. 
 
-.. figure:: images/Wxgui-g-region-menu.png
+.. figure:: images/wxgui-g-region-menu.png
 
    Nastavení výpočetního regionu z menu správce vrstev
 
@@ -78,11 +78,11 @@ výpočetní region tak, aby pokrýval rastrovou mapu :map:`elevation` a
 vektorové mapy :map:`busroute1` a :map:`busroute6`. Prostorové
 rozlišení je určeno z rastrové mapy :map:`elevation`.
 
-.. figure:: images/Wxgui-g.region-existing.png
+.. figure:: images/wxgui-g.region-existing.png
 
    Nastavení regionu na základě existujících dat
 
-.. figure:: images/Wxgui-mapdisplay-region.png
+.. figure:: images/wxgui-mapdisplay-region.png
    :class: middle
    
    Kontrola nastavení výpočetního regionu v mapovém okně
@@ -92,7 +92,7 @@ souřadnici na '1000' (v mapových jednotkách) anebo jako offset
 's+1000' (aktuálně nastavená jižní souřadnice + 1000 mapových
 jednotek).
 
-.. figure:: images/Wxgui-g.region-bounds.png
+.. figure:: images/wxgui-g.region-bounds.png
 
    Explicitní nastavení hraničních souřadnic
 
@@ -100,7 +100,7 @@ Podobně je možné explicitně definovat hodnoty prostorového rozlišení
 ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
 3D region ještě prostorové rozlišení ve směru Z-ové osy.
 
-.. figure:: images/Wxgui-g.region-res.png
+.. figure:: images/wxgui-g.region-res.png
 
    Explicitní nastavení prostorového rozlišení
 
@@ -110,16 +110,16 @@ ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
    :grassCmd:`g.region` rast=dem vect=mesto n=n+1000 s=s-1000 w=w-1000 e=e+1000
 
 Kontrola výpočetního regionu
-----------------------------
+============================
 
 Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 :grassCmd:`g.region` s přepínačem :param:`-p`.
 
-.. figure:: images/Wxgui-display-region-menu.png
+.. figure:: images/wxgui-display-region-menu.png
 
    Zobrazení aktuálního výpočetního regionu z menu správce vrstev
 
-.. figure:: images/Wxgui-display-region-out.png
+.. figure:: images/wxgui-display-region-out.png
 
    Aktuálně nastavený výpočetní region
 
@@ -131,7 +131,7 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 Aktuální nastavení výpočetního regionu lze zobrazit i v stavové liště
 mapového okna (volba "Comp. region").
 
-.. figure:: images/Wxgui-mapdisp-statusbar-menu.png
+.. figure:: images/wxgui-mapdisp-statusbar-menu.png
    :class: middle
            
    Volby stavové lišty mapového okna
@@ -140,7 +140,7 @@ Formát::
 
  hraniční souřadnice západ - východ, jih - sever (prostorové rozlišení západ-východ, jih-sever)
 
-.. figure:: images/Wxgui-mapdisp-show-region.png
+.. figure:: images/wxgui-mapdisp-show-region.png
    :class: middle
 
    Zobrazení výpočetního regionu ve stavové liště mapového okna
@@ -149,7 +149,7 @@ Formát::
           žádný vliv. Aktuální rozsah území zobrazené v mapovém okně
           je dostupné ze stavové lišty jako volba 'Extent'
 
-.. figure:: images/Wxgui-mapdisp-status-extent.png
+.. figure:: images/wxgui-mapdisp-status-extent.png
    :class: middle
 
    Rozsah zobrazeného území
@@ -160,17 +160,17 @@ Formát::
           uvnitř aktuálního pohledu. V opačném případě budou hranice
           výpočetního regionu zobrazeny modrou barvou.
 
-.. figure:: images/Wxgui-mapdisp-show-reg-0.png
+.. figure:: images/wxgui-mapdisp-show-reg-0.png
    :class: middle
 
    Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 1)
 
-.. figure:: images/Wxgui-mapdisp-show-reg-1.png
+.. figure:: images/wxgui-mapdisp-show-reg-1.png
    :class: middle
 
    Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 2)
 
-.. figure:: images/Wxgui-mapdisp-show-reg-2.png
+.. figure:: images/wxgui-mapdisp-show-reg-2.png
    :class: middle
                     
    Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně

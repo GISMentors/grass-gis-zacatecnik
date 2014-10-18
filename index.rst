@@ -32,13 +32,13 @@ První kroky
 -----------
 
 .. table::
-   :class: toc
+   :class: noborder
 
    +--------------------------------+--------------------------------+
    | Úvod                           | Základní pojmy                 |
    +================================+================================+
    | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 2                 |   :maxdepth: 1                 |
+   |   :maxdepth: 2                 |   :maxdepth: 2                 |
    |                                |                                |
    |   instalace/index              |   intro/struktura-dat          |
    |   intro/prvni-kroky            |   intro/region                 |
@@ -49,6 +49,19 @@ Rastrové analýzy
 
 Vektorové analýzy
 ------------------
+
+Další témata
+------------
+
+.. table::
+   :class: noborder
+
+   +--------------------------------+--------------------------------+
+   | .. toctree::                   | .. toctree::                   |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
+   |                                |                                |
+   |   misc/graficky-modeler        |                                |
+   +--------------------------------+--------------------------------+
 
 Související materiály
 ---------------------

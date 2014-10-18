@@ -137,7 +137,7 @@ Pro přidání *rastrové mapy* existují celkem čtyři postupy:
 
 * klávesová zkratka :key:`Ctrl+Shift+R`
 
-* příkazová řádka (``Command console``) správce vrstev, příkaz :cmd:`d.rast`
+* příkazová řádka (``Command console``) správce vrstev, příkaz :grasscmd:`d.rast`
 
 .. figure:: images/wxgui-console.png
 
@@ -151,6 +151,7 @@ Ostatní mapové vrstvy, které mají rastrový charakter jsou dostupné z
 nástrojové lišty nebo z příkazové řádky správce vrstev.
 
 .. figure:: images/wxgui-toolbar-raster-misc.png
+            :class: middle
 
             Přidání ostatních rastrových dat z nástrojové lišty správce vrstev
 
@@ -160,14 +161,15 @@ nástrojové lišty nebo z příkazové řádky správce vrstev.
 
 Jde o následující typy rastrových dat:
 
-* 3D rastová mapa, viz :doc:`3D rastrová data|Vizualizace`
-* :wikipedia:`RGB` barevná syntéza - příkaz :cmd:`d.rgb`
-* :wikipedia:`HIS <HSL>` barevná syntéza - příkaz :cmd:`d.his`
-* :wikipedia-en:`Stínovaný reliéf <Shapeded relief>` - příkaz :cmd:`d.shadedmap`
-* rastrová mapa, zobrazení směru - příkaz :cmd:`d.rast.arrow`
-* rastrová mapa, zobrazení hodnot buněk - příkaz :cmd:`d.rast.num`
+* 3D rastová data
+* :wikipedia:`RGB` barevná syntéza - příkaz :grasscmd:`d.rgb`
+* :wikipedia:`HIS <HSL>` barevná syntéza - příkaz :grasscmd:`d.his`
+* :wikipedia-en:`Stínovaný reliéf <Shapeded relief>` - příkaz :grasscmd:`d.shadedmap`
+* rastrová mapa, zobrazení směru - příkaz :grasscmd:`d.rast.arrow`
+* rastrová mapa, zobrazení hodnot buněk - příkaz :grasscmd:`d.rast.num`
 
 .. figure:: images/wxgui-d-rgb.png
+            :class: large
 
             Příklad barevné syntézy kanálů :wikipedia:`Landsat 5` TM ve skutečných barvách
 
@@ -190,7 +192,7 @@ Podobně pro přidání *vektorové mapy*:
 
 * klávesová zkratka :key:`Ctrl+Shift+V`
 
-* příkazová řádka (``Command console``) správce vrstev, příkaz :cmd:`d.vect`
+* příkazová řádka (``Command console``) správce vrstev, příkaz :grasscmd:`d.vect`
 
 .. figure:: images/wxgui-console-vector.png
 
@@ -200,17 +202,19 @@ Ostatní mapové vrstvy, které mají vektorový charakter jsou dostupné z
 nástrojové lišty nebo z příkazové řádky správce vrstev.
 
 .. figure:: images/wxgui-toolbar-vector-misc.png
+            :class: middle
 
             Přidání ostatních vektorových dat z nástrojové lišty správce vrstev
 
 .. figure:: images/wxgui-toolbar-vector-misc-1.png
+            :class: middle
 
             Menu pro přidání vektorových dat
 
 Jde o následující typy vektorových dat:
 
-* tématické zobrazení plošných vektorových dat - příkaz :cmd:`d.thematic.area`
-* zobrazení grafů - :cmd:`d.vect.chart`
+* tématické zobrazení plošných vektorových dat - příkaz :grasscmd:`d.thematic.area`
+* zobrazení grafů - :grasscmd:`d.vect.chart`
 
 Příkazy systému GRASS
 =====================
@@ -224,57 +228,61 @@ nejmenší a poměrně jednoduchý.
 Jednotlivé příkazy - GRASS moduly - mají konzistentní syntaxi, jejich
 jména se skládají z předpony označující skupinu příkazů a krátkého
 názvu napovídající účel modulu (viz tab. níže). Například modul
-:cmd:`v.buffer` patří do skupiny ``vector`` a je určen pro vytvoření
+:grasscmd:`v.buffer` patří do skupiny ``vector`` a je určen pro vytvoření
 obalové zóny (tzv. bufferu) nad vektorovými daty.
 
-+----------+---------------------------+-----------------------------------------------+
-| prefix   | skupina                   | popis                                         |
-+==========+===========================+===============================================+
-| ``db.``  | :cmd:`database`           | podpora externích databázových systémů        |
-+----------+---------------------------+-----------------------------------------------+
-| ``d.``   | :cmd:`display`            | grafické výstupy a vizuální dotazy            |
-+----------+---------------------------+-----------------------------------------------+
-| ``g.``   | :cmd:`general`            | obecné příkazy pro manipulaci s daty          |
-+----------+---------------------------+-----------------------------------------------+
-| ``i.``   | :cmd:`imagery`            | zpracování obrazových dat                     |
-+----------+---------------------------+-----------------------------------------------+
-|- ``ps.`` | :cmd:`postscript`         | tvorba mapových výstupů ve formátu PostScript |
-+----------+---------------------------+-----------------------------------------------+
-| ``r.``   | :cmd:`raster`             | zpracování (2D) rastrových dat                |
-+----------+---------------------------+-----------------------------------------------+
-| ``r3.``  | :cmd:`raster3D|3D raster` | zpracování 3D rastrových dat (voxels)         |
-+----------+---------------------------+-----------------------------------------------+
-| ``v.``   | :cmd:`vector`             | zpracování 2D/3D vektorových dat              |
-+----------+---------------------------+-----------------------------------------------+
+.. table::
+   :class: border
+
+   +----------+--------------------------------+-----------------------------------------------+
+   | prefix   | skupina                        | popis                                         |
+   +==========+================================+===============================================+
+   | ``db.``  | :grasscmd:`database`           | podpora externích databázových systémů        |
+   +----------+--------------------------------+-----------------------------------------------+
+   | ``d.``   | :grasscmd:`display`            | grafické výstupy a vizuální dotazy            |
+   +----------+--------------------------------+-----------------------------------------------+
+   | ``g.``   | :grasscmd:`general`            | obecné příkazy pro manipulaci s daty          |
+   +----------+--------------------------------+-----------------------------------------------+
+   | ``i.``   | :grasscmd:`imagery`            | zpracování obrazových dat                     |
+   +----------+--------------------------------+-----------------------------------------------+
+   | ``ps.``  | :grasscmd:`postscript`         | tvorba mapových výstupů ve formátu PostScript |
+   +----------+--------------------------------+-----------------------------------------------+
+   | ``r.``   | :grasscmd:`raster`             | zpracování (2D) rastrových dat                |
+   +----------+--------------------------------+-----------------------------------------------+
+   | ``r3.``  | :grasscmd:`raster3D|3D raster` | zpracování 3D rastrových dat (voxels)         |
+   +----------+--------------------------------+-----------------------------------------------+
+   | ``v.``   | :grasscmd:`vector`             | zpracování 2D/3D vektorových dat              |
+   +----------+--------------------------------+-----------------------------------------------+
 
 Příkazy (tj. moduly) systému GRASS lze spouštěn několika způsoby
-(příklad pro :cmd:`r.buffer`):
+(příklad pro :grasscmd:`r.buffer`):
 
 * z menu správce vrstev
 
 .. figure:: images/wxgui-menu-r-buffer.png
 
-            Spuštění modulu :cmd:`r.buffer` z menu správce vrstev
+            Spuštění modulu :grasscmd:`r.buffer` z menu správce vrstev
 
 * z nástroje :item:`Search module` správce vrstev
 
 .. figure:: images/wxgui-search-r-buffer.png
 
-            Spuštění modulu :cmd:`r.buffer`` pomocí nástroje :item:`Search module`
+            Spuštění modulu :grasscmd:`r.buffer`` pomocí nástroje :item:`Search module`
 
 * z příkazové řádky správce vrstev
 
 .. figure:: images/wxgui-console-r-buffer.png
+            :class: middle
 
-            Spuštění modulu :cmd:`r.buffer` s příkazové řádky správce vrstev
+            Spuštění modulu :grasscmd:`r.buffer` s příkazové řádky správce vrstev
 
 Pokud jsou zadány všechny povinné parametry (v případě modulu
-:cmd:`r.buffer` jde o :param:`input` :param:`output` a
+:grasscmd:`r.buffer` jde o :param:`input` :param:`output` a
 :param:`distances`), tak se modul spustí přímo.
 
 .. figure:: images/wxgui-console-r-buffer-launch.png
 
-            Spuštění modulu :cmd:`r.buffer` včetně zadání parametrů
+            Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů
 
-* z :doc:`grafického modeleru ...`
+* z :doc:`grafického modeleru <../misc/graficky-modeler>`
 

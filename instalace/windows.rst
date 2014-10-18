@@ -38,6 +38,8 @@ Nativní instalátor
 
 	    Zvolíme adresář, kam se má GRASS nainstalovat.
 
+.. _nativni-instalator-data:
+
 .. figure:: images/wingrass-3.png
 
 	    Při první instalaci doporučuje nainstalovat také

@@ -40,7 +40,8 @@ První kroky
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   instalace/index              |   intro/region                 |
+   |   instalace/index              |   intro/struktura-dat          |
+   |   intro/prvni-kroky            |   intro/region                 |
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy

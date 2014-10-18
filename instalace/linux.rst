@@ -1,3 +1,5 @@
+.. _label: instalace-linux
+
 GNU Linux
 ---------
 

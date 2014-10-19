@@ -32,7 +32,7 @@ Intro
 -----
 
 .. table::
-   :class: noborder
+   :class: toc
 
    +--------------------------------+--------------------------------+
    | První kroky                    | Základní pojmy                 |
@@ -43,6 +43,19 @@ Intro
    |   instalace/index              |   intro/struktura-dat          |
    |   intro/prvni-kroky            |   intro/region                 |
    |   intro/import                 |                                |
+   +--------------------------------+--------------------------------+
+
+.. table::
+   :class: toc
+
+   +--------------------------------+--------------------------------+
+   | Dotazování                     | x                              |
+   +================================+================================+
+   | .. toctree::                   | .. toctree::                   |
+   |   :maxdepth: 2                 |   :maxdepth: 2                 |
+   |                                |                                |
+   |   intro/atributove-dotazy      |   intro/region                 |
+   |   intro/prostorove-dotazy      |                                |
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy

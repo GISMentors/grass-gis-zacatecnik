@@ -28,20 +28,21 @@ jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
              rozdíly mezi těmito verzemi jsou vždy explicitně
              zdůrazněny.
 
-První kroky
------------
+Intro
+-----
 
 .. table::
    :class: noborder
 
    +--------------------------------+--------------------------------+
-   | Úvod                           | Základní pojmy                 |
+   | První kroky                    | Základní pojmy                 |
    +================================+================================+
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 2                 |
    |                                |                                |
    |   instalace/index              |   intro/struktura-dat          |
    |   intro/prvni-kroky            |   intro/region                 |
+   |   intro/import                 |                                |
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy

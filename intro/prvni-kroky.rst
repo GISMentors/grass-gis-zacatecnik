@@ -1,5 +1,5 @@
-První kroky
------------
+Úvod do systému GRASS
+---------------------
 
 Po instalaci (viz návod pro :doc:`GNU/Linux <../instalace/linux>` a
 :doc:`MS Windows <../instalace/windows>`) systému GRASS je potřeba

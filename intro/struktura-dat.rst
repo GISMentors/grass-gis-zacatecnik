@@ -117,8 +117,8 @@ souřadnicový systém S-JTSK to je :epsg:`5514`.
 .. note::
 
    :epsg:`5514` podporuje systém GRASS pouze pokud používate verzi
-         knihovny Proj.4 4.9 a vyšší. V opačném případě doporučujeme
-         použít :epsg:`2065`.
+   knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V opačném případě doporučujeme
+   použít :epsg:`2065`.
 
 .. figure:: images/wxgui-loc-s-jtsk-3.png
 
@@ -263,10 +263,12 @@ Volitelně můžeme data na základě kterých byla lokace vytvořena i
 naimportovat (do mapsetu *PERMANENT*).
 
 .. figure:: images/wxgui-loc-srtm-4.png
+            :class: small
 
             Vytvoření lokace pro data SRTM (import dat, krok 1)
 
 .. figure:: images/wxgui-loc-srtm-5.png
+            :class: small
 
             Vytvoření lokace pro data SRTM (import dat, krok 2)
 
@@ -316,3 +318,31 @@ Vytvoření lokace pro souřadnicově nepřipojená data
 
 Vytvoření nového mapsetu v rámci lokace
 =======================================
+
+Nový mapset v rámci již existující lokace můžeme vytvořit dvěma
+způsoby:
+
+* z uvítací obrazovky systému GRASS anebo
+
+.. figure:: images/wxgui-new-mapset.png
+
+            Vytvoření nového mapsetu :fignote:`(2)` v rámci vybrané
+            lokace :fignote:`(1)`.
+
+* z menu *Správce vrstev* :menuselection:`Settings --> GRASS working
+  environment --> Create new mapset`.
+
+.. figure:: images/wxgui-new-mapset-menu.png
+
+            Vytvoření nového mapsetu v rámci aktuální lokace z menu
+            *Správce vrstev*.
+
+V následující dialogu zvolíme jeho název.
+
+.. figure:: images/wxgui-new-mapset-dialog.png
+            :class: small
+
+Po vytvoření nového mapsetu se do něj systém GRASS automaticky přepne.
+
+.. figure:: images/wxgui-new-mapset-dialog-1.png
+            :class: small

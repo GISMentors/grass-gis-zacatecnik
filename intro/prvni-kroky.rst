@@ -55,6 +55,8 @@ dialog umožňuje nastavit :doc:`adresář s geodaty, lokaci a mapset
 systému. Po jejích zadaní lze pokračovat dále (tlačítko ``Start
 GRASS``).
 
+.. _spusteni-grass:
+
 .. figure:: images/welcome-screen.png
 
             Úvodní dialog systému GRASS pro výběr adresáře s geodaty :fignote:`(1)`,
@@ -98,7 +100,7 @@ Zobrazení geodat v mapovém okně
 ===============================
 
 Rastrová či vektorová data lze do *stromu vrstev* (viz záložka *Map
-layers*) přidávat z menu :item:`File | Map display`, nástrojové lišty či
+layers*) přidávat z menu :menuselection:`File --> Map display`, nástrojové lišty či
 přímo z příkazové řádky *správce vrstev*.
 
 .. note::
@@ -112,7 +114,7 @@ přímo z příkazové řádky *správce vrstev*.
                Nastavení pohledu mapového okna na vybranou mapovou vrstvu
 
    Automatické nastavení pohledu při přidání nové mapové vrstvy lze
-   nastavit v :item:`Settings | Preferences`.
+   nastavit v :menuselection:`Settings --> Preferences`.
 
    .. figure:: images/wxgui-settings-autozoom.png
 
@@ -133,9 +135,9 @@ Pro přidání *rastrové mapy* existují celkem čtyři postupy:
 
             Volba rastrové mapy
 
-* menu :item:`File | Map display | Add raster`
+* menu :menuselection:`File --> Map display --> Add raster`
 
-* klávesová zkratka :key:`Ctrl+Shift+R`
+* klávesová zkratka :kbd:`Ctrl+Shift+R`
 
 * příkazová řádka (``Command console``) správce vrstev, příkaz :grasscmd:`d.rast`
 
@@ -188,9 +190,9 @@ Podobně pro přidání *vektorové mapy*:
 
             Volba vektorové mapy
 
-* menu :item:`File | Map display | Add vector`
+* menu :menuselection:`File --> Map display --> Add vector`
 
-* klávesová zkratka :key:`Ctrl+Shift+V`
+* klávesová zkratka :kbd:`Ctrl+Shift+V`
 
 * příkazová řádka (``Command console``) správce vrstev, příkaz :grasscmd:`d.vect`
 
@@ -249,7 +251,7 @@ obalové zóny (tzv. bufferu) nad vektorovými daty.
    +----------+--------------------------------+-----------------------------------------------+
    | ``r.``   | :grasscmd:`raster`             | zpracování (2D) rastrových dat                |
    +----------+--------------------------------+-----------------------------------------------+
-   | ``r3.``  | :grasscmd:`raster3D|3D raster` | zpracování 3D rastrových dat (voxels)         |
+   | ``r3.``  | :grasscmd:`raster3D`           | zpracování 3D rastrových dat (voxels)         |
    +----------+--------------------------------+-----------------------------------------------+
    | ``v.``   | :grasscmd:`vector`             | zpracování 2D/3D vektorových dat              |
    +----------+--------------------------------+-----------------------------------------------+
@@ -277,8 +279,8 @@ Příkazy (tj. moduly) systému GRASS lze spouštěn několika způsoby
             Spuštění modulu :grasscmd:`r.buffer` s příkazové řádky správce vrstev
 
 Pokud jsou zadány všechny povinné parametry (v případě modulu
-:grasscmd:`r.buffer` jde o :param:`input` :param:`output` a
-:param:`distances`), tak se modul spustí přímo.
+:grasscmd:`r.buffer` jde o :option:`input`, :option:`output` a
+:option:`distances`), tak se modul spustí přímo.
 
 .. figure:: images/wxgui-console-r-buffer-launch.png
 

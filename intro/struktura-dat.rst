@@ -114,6 +114,12 @@ Na další stránce vybereme způsob vytvoření lokace.
 V našem případě vytvoříme lokaci na základě EPSG kódu, pro
 souřadnicový systém S-JTSK to je :epsg:`5514`.
 
+.. note::
+
+   :epsg:`5514` podporuje systém GRASS pouze pokud používate verzi
+         knihovny Proj.4 4.9 a vyšší. V opačném případě doporučujeme
+         použít :epsg:`2065`.
+
 .. figure:: images/wxgui-loc-s-jtsk-3.png
 
             Vytvoření lokace pro S-JTSK (krok 3)

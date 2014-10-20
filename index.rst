@@ -54,7 +54,7 @@ Intro
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 2                 |
    |                                |                                |
-   |   intro/atributove-dotazy      |   intro/region                 |
+   |   intro/atributove-dotazy      |                                |
    |   intro/prostorove-dotazy      |                                |
    +--------------------------------+--------------------------------+
 

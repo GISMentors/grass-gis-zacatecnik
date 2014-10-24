@@ -56,7 +56,7 @@ Novou lokaci lze vytvořit pomocí průvodce, který je dostupný z uvítací
 obrazovky systému GRASS. Spustíme GRASS a v rámci uvítací obrazovky
 vybereme :item:`Location wizard` (průvodce tvorbou lokace).
 
-.. figure:: images/wxgui-loc-gis1-0.png
+.. figure:: images/wxgui-loc-s-jtsk-0.png
 
             Spuštění průvodce tvorbou lokace
 
@@ -293,7 +293,7 @@ Vytvoření lokace na základě EPSG kódu
 
             Vytvoření lokace na základě EPSG kódu (krok 4)
 
-.. admonition:: 
+.. admonition:: Příklad vytvoření lokace pří startu systému GRASS z příkazové řádky
 
    .. code-block:: bash
 

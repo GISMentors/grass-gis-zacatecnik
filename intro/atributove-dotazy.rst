@@ -4,9 +4,9 @@ Atributové dotazy
 Atributové dotazy, tj. výběr geoprvků na základě jejich popisných
 vlastností, lze provádět pomocí :abbr:`GUI (Grafické uživatelské
 rozhraní)` :ref:`správce atributových dat <wxgui-dbmgr>`. Pokročilejší
-uživatelé mohou využít specializované moduly :ref:`v.db.select a
-db.select <db-select>` dostupné z :abbr:`GUI (Grafické uživatelské
-rozhraní)` anebo z příkazové řádky systému GRASS.
+uživatelé mohou využít :ref:`specializované moduly <db-select>`
+dostupné z :abbr:`GUI (Grafické uživatelské rozhraní)` anebo z
+příkazové řádky systému GRASS.
 
 .. _wxgui-dbmgr:
 
@@ -36,7 +36,7 @@ spustit několika způsoby:
 
                g.gui.dbmgr map=obce
 
-Dialog správce atributových dat má tři záložky:
+Dialog správce atributových dat má **tři záložky**:
 
 .. figure:: images/wxgui-dbmgr-tabs.png
             :class: middle
@@ -55,10 +55,11 @@ Dialog správce atributových dat má tři záložky:
 Dotazování
 ^^^^^^^^^^
 
-Dotazování je dostupné v záložce :item:`Browse data` v základním
-(*simple*) a pokročilém (*advanced*) módu.
+Dotazovat se na atributová data je možné v záložce :item:`Browse data`
+a to buď v základním (*simple*) anebo pokročilém (*advanced*) módu,
+viz :ref:`sql-builder`.
 
-Základní mód umožňuje definovat jednoduchou 'where' podmínku typu
+*Základní mód* umožňuje definovat jednoduchou `where` podmínku typu
 ``sloupec <op> hodnota``.
 
 .. figure:: images/wxgui-dbmgr-simple-0.png
@@ -91,17 +92,22 @@ pomocí volby :menuselection:`Highlight selected features`.
 
              Zvýraznění vektorových prvků jako výsledek atributového dotazu
 
+.. _sql-builder:
+
 SQL Builder
 ^^^^^^^^^^^
 
-*Pokročilý* (advanced) mód umožňuje zadat SQL SELECT dotazy přímo do
-dialogu *správce atributových dat*.
+*Pokročilý* (advanced) mód umožňuje zadat :abbr:`SQL (Structured Query
+Language)` SELECT dotazy přímo do dialogu *správce atributových dat*.
 
 .. figure:: images/wxgui-dbmgr-adv-edit.png
 
-            Pokročilé dotazování, SQL SELECT dotaz (výběr se provede pro stisknutí klávesy :kbd:`Enter`)
+            Pokročilé dotazování, :abbr:`SQL (Structured Query
+            Language)` SELECT dotaz (výběr se provede pro stisknutí
+            klávesy :kbd:`Enter`)
 
-Výsledný dotaz lze sestavit pomocí *SQL builderu*, tlačítko :kbd:`SQL Builder`.
+:abbr:`SQL (Structured Query Language)` dotaz lze sestavit pohodlně
+pomocí *SQL builderu*, tlačítko :kbd:`SQL Builder`.
 
 .. figure:: images/wxgui-dbmgr-sq-0.png
 
@@ -123,7 +129,8 @@ Výsledný dotaz lze sestavit pomocí *SQL builderu*, tlačítko :kbd:`SQL Build
 Editace atributových dat
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Správce atributových dat umožňuje kromě dotazování i data modifikovat.
+Správce atributových dat umožňuje kromě dotazování i atributová data
+**modifikovat**.
 
 .. youtube:: UZswOcIyaX8
 
@@ -131,21 +138,23 @@ Správce atributových dat umožňuje kromě dotazování i data modifikovat.
 
 .. notecmd:: editace atributových dat
 
-               Nabízejí se dva moduly
+               Nabízejí se dva moduly:
 
-               * :grasscmd:`db.execute` který umožňuje spustit jakýkoliv SQL dotay typu ``UPDATE``, ``ALTER`` či ``DELETE``
+             * :grasscmd:`db.execute` který umožňuje spustit jakýkoliv
+               :abbr:`SQL (Structured Query Language)` příkaz typu
+               ``UPDATE``, ``ALTER`` či ``DELETE``
 
                .. code-block:: bash
                                
                                db.execute sql="update urbanarea set UA_TYPE = 'UA (edited)' WHERE cat = 3"
 
-               * anebo :grasscmd:`v.db.update` jako frontend pro vektorové mapy
+             * anebo :grasscmd:`v.db.update` jako frontend pro vektorové mapy
 
                .. code-block:: bash
                
                                v.db.update map=urbanarea column=UA_TYPE value="UA (edited)" where="cat = 3"
 
-Správce atributových dat umožňuje *přidávat* do atributové tabulky nové záznamy.
+Správce atributových dat umožňuje **přidávat** do atributové tabulky nové záznamy.
 
 .. youtube:: mmPvMRBDxLg
 
@@ -157,7 +166,7 @@ Správce atributových dat umožňuje *přidávat* do atributové tabulky nové 
 
                                 db.execute sql="insert into urbanarea values (109, 109, 29306, 'Farmville', 'UA')"
 
-Vybrané záznamy lze z atributové tabulky odstranit.
+Vybrané záznamy lze z atributové tabulky **odstranit**.
 
 .. figure:: images/wxgui-dbmgr-delete.png
 
@@ -172,11 +181,11 @@ Vybrané záznamy lze z atributové tabulky odstranit.
 .. warning::
 
    Při odstranění či přidání záznamů do atributové tabulky dochází k
-   modifikaci pouze popisné složky geoprostorových dat. Např. při
-   odstranění záznamu z atributové tabulky zůstává asociovaný
-   vektorový prvek ve vektorové mapě zachován.
+   modifikaci pouze popisné složky geoprvků. Např. při odstranění
+   záznamu z atributové tabulky zůstává asociovaná geometrická složka
+   popisu geoprvku ve vektorové mapě zachována.
 
-Numerická atributy mohou být také *vypočítány* na základě zvolené funkce.
+Numerické atributy mohou být také *vypočítány* na základě zvolené funkce.
 
 .. figure:: images/wxgui-dbmgr-calculate.png
             :class: large
@@ -199,9 +208,9 @@ Příklad přidání nového sloupce s výměrou a její výpočet (ve
 Field Calculator
 ^^^^^^^^^^^^^^^^
 
-Field Calculator je nástroj, který umožňuje sestavit SQL UPDATE příkaz
-a pomocí něho modifikovat data. Příklad výpočtu poměru obvodu a výměry
-plochy.
+*Field Calculator* je nástroj, který umožňuje sestavit :abbr:`SQL
+(Structured Query Language)` UPDATE příkaz a pomocí něho modifikovat
+data. 
 
 .. youtube:: 44KmtnBJtgo
 
@@ -212,41 +221,52 @@ plochy.
 Pokročilé dotazování
 ====================
 
+Atributové dotazy na geoprvky umožňují dva moduly :ref:`v.db.select
+<modul-v-db-select>` a :ref:`db.select <modul-db-select>`.
+
+.. _modul-v-db-select:
+
 Modul v.db.select
 ^^^^^^^^^^^^^^^^^
 
 Modul :grasscmd:`v.db.select` umožňuje provádět dotazy pouze nad
-atributovými daty připojenými k dané vektorové mapě. Modul
-:grasscmd:`v.db.select` je dostupný z menu :menuselection:`Database
---> Query --> Query vector attribute data``. Pokud není zadána
-:option:`where` podmínka, tak modul vypíše všechny záznamy z
-atributové tabulky.
+atributovými daty připojenými k dané vektorové mapě. Je dostupný z
+menu :menuselection:`Database --> Query --> Query vector attribute
+data``. Pokud není zadána :option:`where` podmínka, tak modul vypíše
+všechny záznamy z atributové tabulky.
 
 .. figure:: images/v-db-select-0.png
 
-            Atributový dotaz pomocí modulu :grasscmd:`v.db.select` (zadání vektorové mapy)
+            Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
+            (zadání vektorové mapy)
 
 .. figure:: images/v-db-select-1.png
 
-            Atributový dotaz pomocí modulu :grasscmd:`v.db.select` (volitelně zadání 'where' podmínky)
+            Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
+            (volitelně zadání 'where' podmínky)
+
+.. _modul-db-select:
 
 Modul db.select
 ^^^^^^^^^^^^^^^
 
-Modul :grasscmd:`db.select` umožňuje provádět SQL dotazy (SELECT) nad
-*libovolnými* atributovými daty dostupnými pomocí daného databazového
-ovladače. SQL dotazy mohou být uloženy v souboru (parametr
-:option:`input`) anebo jako parametr :option:`sql`. Tento modul je
-dostupný z menu :menuselection:`Database --> Query --> Query any
-table`.
+Modul :grasscmd:`db.select` umožňuje provádět :abbr:`SQL (Structured
+Query Language)` dotazy (SELECT) nad *libovolnými* atributovými daty
+dostupnými pomocí daného databazového ovladače. :abbr:`SQL (Structured
+Query Language)` dotazy mohou být uloženy v souboru (parametr
+:option:`input`) anebo definovány jako parametr :option:`sql`. Tento
+modul je dostupný z menu :menuselection:`Database --> Query --> Query
+any table`.
 
 .. figure:: images/db-select-0-single.png
             
-            Atributový dotaz pomocí modulu :grasscmd:`db.select` (zadání SQL dotazu)
+            Atributový dotaz pomocí modulu :grasscmd:`db.select`
+            (zadání :abbr:`SQL (Structured Query Language)` dotazu)
 
 .. figure:: images/db-select-1-single.png
 
-            Atributový dotaz pomocí modulu :grasscmd:`db.select` (výsledek SQL dotazu)
+            Atributový dotaz pomocí modulu :grasscmd:`db.select`
+            (výsledek :abbr:`SQL (Structured Query Language)` dotazu)
 
 .. notecmd:: jednoduchého atributové dotazu
 
@@ -256,13 +276,18 @@ table`.
 
 .. figure:: images/db-select-0-multi.png
 
-            Vícenásobný atributový dotaz pomocí modulu :grasscmd:`db.select` (zadání SQL dotazů)
+            Vícenásobný atributový dotaz pomocí modulu
+            :grasscmd:`db.select` (zadání :abbr:`SQL (Structured Query
+            Language)` dotazů)
 
 .. figure:: images/db-select-1-multi.png
 
-            Vícenásobný atributový dotaz pomocí modulu :grasscmd:`db.select}} (výsledek SQL dotazů)
+            Vícenásobný atributový dotaz pomocí modulu
+            :grasscmd:`db.select` (výsledek :abbr:`SQL (Structured
+            Query Language)` dotazů)
 
 .. note::
 
-   Pro ostatní SQL příkazy (``INSERT``, ``UPDATE``, ``DELETE``, ``ALTER`` a další) je
-   určen modul :grasscmd:`db.execute`.
+   Pro ostatní :abbr:`SQL (Structured Query Language)` příkazy
+   (``INSERT``, ``UPDATE``, ``DELETE``, ``ALTER`` a další) je určen
+   modul :grasscmd:`db.execute`.

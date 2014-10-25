@@ -151,11 +151,11 @@ Správce atributových dat umožňuje *přidávat* do atributové tabulky nové 
 
              Přidání nového záznamu do atributové tabulky
 
-.. admonition:: Příklad vložení nového záznamu do atributové tabulky z příkazové řádky
+.. notecmd:: vložení nového záznamu do atributové tabulky
 
                 .. code-block:: bash
 
-                                :grasscmd:`db.execute` sql="insert into urbanarea values (109, 109, 29306, 'Farmville', 'UA')"
+                                db.execute sql="insert into urbanarea values (109, 109, 29306, 'Farmville', 'UA')"
 
 Vybrané záznamy lze z atributové tabulky odstranit.
 
@@ -163,9 +163,11 @@ Vybrané záznamy lze z atributové tabulky odstranit.
 
             Odstranění záznamů z atributové tabulky
 
-.. admonition:: Příklad odstranění záznamů s atributové tabulky z příkazové řádky
+.. notecmd:: odstranění záznamů s atributové tabulky
 
-                :grasscmd:`db.execute` sql="delete from urbanarea where cat = 109"
+                .. code-block:: bash
+
+                                db.execute sql="delete from urbanarea where cat = 109"
 
 .. warning::
 
@@ -188,9 +190,11 @@ Příklad přidání nového sloupce s výměrou a její výpočet (ve
 
              Přidání nového sloupce do atributové tabulky a výpočet plochy
 
-.. admonition:: Příklad výpočtu hodnoty atributu z příkazové řádky
+.. notecmd:: výpočtu hodnoty atributu
 
-                :grasscmd:`v.to.db` >map=urbanarea option=area columns=AREA
+             .. code-block:: bash
+
+                             v.to.db map=urbanarea option=area columns=AREA
 
 Field Calculator
 ^^^^^^^^^^^^^^^^
@@ -244,9 +248,11 @@ table`.
 
             Atributový dotaz pomocí modulu :grasscmd:`db.select` (výsledek SQL dotazu)
 
-.. admonition:: Příklad jednoduchého atributové dotazu z příkazové řádky
+.. notecmd:: jednoduchého atributové dotazu
 
-                :grasscmd:`db.select` sql="SELECT COUNT(*) FROM obce WHERE ob01/ob91-1 >= 1"
+             .. code-block:: bash
+
+                             db.select sql="SELECT COUNT(*) FROM obce WHERE ob01/ob91-1 >= 1"
 
 .. figure:: images/db-select-0-multi.png
 
@@ -258,5 +264,5 @@ table`.
 
 .. note::
 
-   Pro ostatní SQL příkazy (INSERT, UPDATE, DELETE, ALTER, a další je
+   Pro ostatní SQL příkazy (``INSERT``, ``UPDATE``, ``DELETE``, ``ALTER`` a další) je
    určen modul :grasscmd:`db.execute`.

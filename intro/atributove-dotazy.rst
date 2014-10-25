@@ -44,13 +44,13 @@ Dialog správce atributových dat má tři záložky:
             Záložky správce atributových dat
 
 :item:`Browse data`
-    prohlížení, dotazování a editace atributových dat (záznamů v tabulce)
+      Prohlížení, dotazování a editace atributových dat (záznamů v tabulce)
 
 :item:`Manage tables`
-      přidání, přejmenování, odebraní sloupce v atributové tabulce
+      Přidání, přejmenování, odebraní sloupce v atributové tabulce
 
 :item:`Manage layers`
-      správa atributových tabulek připojených k vektorové mapě
+      Správa atributových tabulek připojených k vektorové mapě
 
 Dotazování
 ^^^^^^^^^^
@@ -129,15 +129,17 @@ Správce atributových dat umožňuje kromě dotazování i data modifikovat.
 
              Editace záznamů v atributové tabulce
 
-.. admonition:: Příklad editace atributových dat z příkazové řádky 
+.. notecmd:: editace atributových dat
 
-               Nabízejí se dva moduly - :grasscmd:`db.execute`
+               Nabízejí se dva moduly
+
+               * :grasscmd:`db.execute` který umožňuje spustit jakýkoliv SQL dotay typu ``UPDATE``, ``ALTER`` či ``DELETE``
 
                .. code-block:: bash
                                
                                db.execute sql="update urbanarea set UA_TYPE = 'UA (edited)' WHERE cat = 3"
 
-               anebo :grasscmd:`v.db.update`
+               * anebo :grasscmd:`v.db.update` jako frontend pro vektorové mapy
 
                .. code-block:: bash
                

@@ -23,10 +23,8 @@ jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
 .. important:: Školení je zaměřeno na verzi `GRASS 7.0
              <http://grass.osgeo.org/download/software/#g70betax>`_. Nicméně
              pokud není uvedeno jinak, tak všechny uvedené postupy
-             jsou funkční i ve verzi `GRASS 6.4
-             <http://grass.osgeo.org/download/software/#g64x>`_. Případné
-             rozdíly mezi těmito verzemi jsou vždy explicitně
-             zdůrazněny.
+             jsou funkční i ve verzi GRASS 6.4. Případné rozdíly mezi
+             těmito verzemi jsou vždy explicitně zdůrazněny.
 
 Intro
 -----
@@ -82,10 +80,14 @@ Související materiály
 
 * `Školení GRASS GIS na Les-ejk.cz <http://les-ejk.cz/skoleni/grass/>`_
 
-.. Indices and tables
-.. ==================
+Licence
+-------
 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+.. table::
+   :class: noborder
+
+   +----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | .. image:: _static/cc-by-sa.png  | Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_. |
+   |           :width: 125px          |                                                                                                                                                       |
+   +----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 

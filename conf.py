@@ -7,7 +7,7 @@ import os
 
 # General information about the project.
 project = u'Školení GRASS GIS'
-copyright = u'2014, Martin Landa (GISMentors.eu)'
+copyright = u'2014 by Martin Landa a Jáchym Čepický (GISMentors)'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

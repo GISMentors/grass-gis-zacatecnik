@@ -1,3 +1,5 @@
+.. _region:
+
 Výpočetní region
 ----------------
 

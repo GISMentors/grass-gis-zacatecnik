@@ -47,7 +47,7 @@ Intro
    :class: toc
 
    +--------------------------------+--------------------------------+
-   | Dotazování                     | x                              |
+   | Dotazování                     | Prostorové funkce              |
    +================================+================================+
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 2                 |
@@ -58,6 +58,16 @@ Intro
 
 Rastrové analýzy
 -----------------
+
+.. table::
+   :class: toc
+
+   +--------------------------------+--------------------------------+
+   | .. toctree::                   | .. toctree::                   |
+   |   :maxdepth: 2                 |   :maxdepth: 2                 |
+   |                                |                                |
+   |   raster/rastrova-algebra      |   raster/analyza-nakladu       |
+   +--------------------------------+--------------------------------+
 
 Vektorové analýzy
 ------------------

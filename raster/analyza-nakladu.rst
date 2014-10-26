@@ -1,5 +1,5 @@
-Analýza nákladů
----------------
+Rastrové analýza nákladů
+------------------------
 
 .. todo::
 

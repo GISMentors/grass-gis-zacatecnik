@@ -82,13 +82,26 @@ Další témata
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   misc/graficky-modeler        |                                |
+   |   misc/graficky-modeler        |   misc/grass-qgis              |
+   |   misc/lokalizace              |                                |
    +--------------------------------+--------------------------------+
 
 Související materiály
 ---------------------
 
+*Česky:*
+
 * `Školení GRASS GIS na Les-ejk.cz <http://les-ejk.cz/skoleni/grass/>`_
+* `GRASS GIS na portálu FreeGIS <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS>`_
+
+*Anglicky:*
+
+* `Dokumentace systému GRASS 7.0 <http://grass.osgeo.org/grass70/manuals/index.html>`_
+
+*Literatura:*
+
+* `Open Source GIS: A GRASS GIS Approach <http://www.grassbook.org/>`_ (anglicky)
+* `GIS GRASS - Praktická rukověť <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Praktick%C3%A1_rukov%C4%9B%C5%A5>`_ (česky, velmi zastaralé)
 
 Licence
 -------

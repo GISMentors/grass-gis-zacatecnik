@@ -21,10 +21,12 @@ jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
 
 
 .. important:: Školení je zaměřeno na verzi `GRASS 7.0
-             <http://grass.osgeo.org/download/software/#g70betax>`_. Nicméně
-             pokud není uvedeno jinak, tak všechny uvedené postupy
-             jsou funkční i ve verzi GRASS 6.4. Případné rozdíly mezi
-             těmito verzemi jsou vždy explicitně zdůrazněny.
+               <http://grass.osgeo.org/download/software/#g70betax>`_. Nicméně
+               pokud není uvedeno jinak, tak všechny uvedené postupy
+               jsou funkční i ve verzi GRASS 6.4. Případné rozdíly mezi
+               těmito verzemi jsou vždy explicitně zdůrazněny. Dále
+               předpokládáme zapnutou *anglickou lokalizaci*,
+	       viz :ref:`volba lokalizace <volba-lokalizace>`.
 
 Intro
 -----

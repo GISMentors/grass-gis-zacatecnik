@@ -20,7 +20,7 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 
    Lokace je adresář umístěný v GRASS databance. Tento adresář
    obsahuje data, která souvisejí s daným projektem. Lokace je
-   definována souřadnicovým systémem (referenční elipsoid,
+   definována *souřadnicovým systémem* (referenční elipsoid,
    kartografické zobrazení, mapové jednotky) a velikostí zájmového
    území.
 
@@ -34,7 +34,8 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    základní datové vrstvy a ostatní mapsety jsou brány jako pracovní
    (zpracování vstupních dat, jejich analýza apod.).
 
-
+.. todo:: Přidat obrázek
+      
 .. admonition:: Poznámka pro pokročilé uživatele
    
    GRASS databanka je definovaná proměnnou prostředí

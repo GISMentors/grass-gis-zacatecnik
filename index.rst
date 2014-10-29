@@ -68,11 +68,22 @@ Rastrové analýzy
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 2                 |
    |                                |                                |
+   |   raster/index                 |                                |
    |   raster/rastrova-algebra      |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
 
 Vektorové analýzy
 ------------------
+
+.. table::
+   :class: toc
+
+   +--------------------------------+--------------------------------+
+   | .. toctree::                   | .. toctree::                   |
+   |   :maxdepth: 2                 |   :maxdepth: 2                 |
+   |                                |                                |
+   |   vektor/index                 |                                |
+   +--------------------------------+--------------------------------+
 
 Další témata
 ------------

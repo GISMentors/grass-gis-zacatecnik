@@ -1,6 +1,8 @@
 Rastrová data
 -------------
 
+Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových map**.
+
 * Reprezentace v podobě pravidelné mřížky hodnot (GRASS nepodporuje
   nepravidlé mřížky)
 * Elementem mřížky je buňka či tzv. *pixel* jehož tvar může být buď
@@ -9,8 +11,6 @@ Rastrová data
 * K hodnotě buňky lze přiřadit textový popisek (tzv. *label*)
 * Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
 
-Rastrová data jsou v systému uložena v podobě tzv. *rastrových map*.
-
 .. rubric:: Typy rastrových map v systému GRASS
 	    :class: secnotoc
 
@@ -18,9 +18,13 @@ GRASS rozlišuje tři typy rastrových map podle datové typu buňky, který
 může být:
 
 * ``CELL`` (celé číslo, `integer`)
+
+.. figure:: images/rast-num.png
+
 * ``FCELL`` (hodnoty s plovoucí desetinnou čárkou, `float`)
 * ``DCELL`` (hodnoty s plovoucí desetinout čárkou s dvojnásobnou
   přesností, `doble precision`)
+
 
 .. note::
 

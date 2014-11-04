@@ -38,7 +38,7 @@ Intro
    | První kroky                    | Základní pojmy                 |
    +================================+================================+
    | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 2                 |   :maxdepth: 2                 |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
    |   instalace/index              |   intro/struktura-dat          |
    |   intro/prvni-kroky            |   intro/region                 |
@@ -53,7 +53,7 @@ Intro
    |  Geodata                       | Dotazování                     |
    +================================+================================+
    | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 2                 |   :maxdepth: 2                 |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
    |   intro/import                 |   intro/atributove-dotazy      |
    |   intro/transformace           |   intro/prostorove-dotazy      |
@@ -67,7 +67,7 @@ Rastrové analýzy
 
    +--------------------------------+--------------------------------+
    | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 2                 |   :maxdepth: 2                 |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
    |   raster/rastrova-algebra      |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
@@ -80,8 +80,9 @@ Vektorové analýzy
 
    +--------------------------------+--------------------------------+
    | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 2                 |   :maxdepth: 2                 |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
+   |   vector/prostorove-funkce     |                                |        
    +--------------------------------+--------------------------------+
 
 Další témata

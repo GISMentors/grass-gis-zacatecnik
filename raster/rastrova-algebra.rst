@@ -42,14 +42,13 @@ Postup:
    .. code-block:: bash
 
                    r.mapcalc exp="elev_1000 = if(elev_state_500m > 1000, 1, null())"
-
-
-    Výrazy lze uložit do souboru (na každý řádek jeden výraz) a soubor
-    předat jako parametr :option:`file`.
-
-    .. code-block:: bash
-
-                    r.mapcalc file=vyrazy.txt
-
-    V tomto případě :grasscmd:`r.mapcalc` vykoná příkazy sekvenčně,
-    tak jak jsou uloženy v souboru.
+    
+   Výrazy lze uložit do souboru (na každý řádek jeden výraz) a soubor
+   předat jako parametr :option:`file`.
+   
+   .. code-block:: bash
+                   
+                   r.mapcalc file=vyrazy.txt
+                   
+   V tomto případě :grasscmd:`r.mapcalc` vykoná příkazy sekvenčně,
+   tak jak jsou uloženy v souboru.

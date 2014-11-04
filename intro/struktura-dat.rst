@@ -16,6 +16,8 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    některém z externích databázových systémů
    (např. :wikipedia:`PostgreSQL` či :wikipedia:`MySQL`).
 
+.. _lokace:
+   
 **Lokace (Location)**
 
    Lokace je adresář umístěný v GRASS databance. Tento adresář
@@ -50,6 +52,8 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
       operačních systémů jako je :wikipedia:`GNU/Linux` či :wikipedia:`Mac
       OS X` :file:`$HOME/grassdata`.
 
+.. _tvorba-lokace:
+      
 Vytvoření vlastní lokace
 ========================
 

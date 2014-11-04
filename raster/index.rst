@@ -25,6 +25,6 @@ může být:
 .. note::
 
    Kromě 2D rastrových dat GRASS podporuje i 3D rastrová data
-   (tzv. *volumes) a nad nimi postavené analýzy. Tato problematika je
+   (tzv. *volumes*) a nad nimi postavené analýzy. Tato problematika je
    ale nad rámec tohoto školení a je probírána v navazující `školení
    pro pokročilé uživatele <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.

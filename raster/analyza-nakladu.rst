@@ -1,4 +1,4 @@
-Rastrové analýza nákladů
+Rastrová analýza nákladů
 ------------------------
 
 .. todo::

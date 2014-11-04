@@ -1,6 +1,18 @@
 Import geodat
 -------------
 
+.. important::
+
+   V této kapitole předpokládáme, že importovaná data jsou
+   georeferencovaná a jsou lokalizovaná v souřadnicovém systému
+   odpovídající aktuální :ref:`lokaci <lokace>`. To, že jsou data v
+   jiném souřadnicovém systému můžete zjistit z dialogu pro import dat
+   (viz obr. níže). V tomto případě musíte nejprve data naimportovat
+   do nové lokace a následně je :ref:`transformovat <transformace>` do
+   aktuální lokace.
+
+   .. figure:: images/import-no-proj.png
+
 Většina rastrových formátů může být naimportována modulem
 :grasscmd:`r.in.gdal`, pro vektorová data existuje modul
 :grasscmd:`v.in.ogr`. GUI systému GRASS disponuje specializovanými
@@ -57,6 +69,8 @@ V dialogu pro import rastrových dat určíme:
                                     if ext in ('.png', '.tif', '.jpg', '.gif'):
                                         grass.run_command('r.in.gdal', input = fname, output = name)
 
+.. _import-vector:
+                                        
 Vektorová data
 ==============
 
@@ -190,8 +204,8 @@ nepodporuje formát verze 8.0 a vyšší.
 
 .. note::
 
-V případě formátu DGN lze doporučit jeho konverzi do formátu DXF a
-import do systému GRASS pomocí modulu :grasscmd:`v.in.dxf`.
+   V případě formátu DGN lze doporučit jeho konverzi do formátu DXF a
+   import do systému GRASS pomocí modulu :grasscmd:`v.in.dxf`.
 
 Importovaná data a výpočetní region
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -42,20 +42,21 @@ Intro
    |                                |                                |
    |   instalace/index              |   intro/struktura-dat          |
    |   intro/prvni-kroky            |   intro/region                 |
-   |   intro/import                 |                                |
+   |                                |   raster/index                 |
+   |                                |   vector/index                 |
    +--------------------------------+--------------------------------+
 
 .. table::
    :class: toc
 
    +--------------------------------+--------------------------------+
-   | Dotazování                     | Prostorové funkce              |
+   |  Geodata                       | Dotazování                     |
    +================================+================================+
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 2                 |
    |                                |                                |
-   |   intro/atributove-dotazy      |                                |
-   |   intro/prostorove-dotazy      |                                |
+   |   intro/import                 |   intro/atributove-dotazy      |
+   |   intro/transformace           |   intro/prostorove-dotazy      |
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy
@@ -68,7 +69,6 @@ Rastrové analýzy
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 2                 |
    |                                |                                |
-   |   raster/index                 |                                |
    |   raster/rastrova-algebra      |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
 
@@ -82,7 +82,6 @@ Vektorové analýzy
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 2                 |   :maxdepth: 2                 |
    |                                |                                |
-   |   vektor/index                 |                                |
    +--------------------------------+--------------------------------+
 
 Další témata
@@ -95,8 +94,8 @@ Další témata
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   misc/graficky-modeler        |   misc/grass-qgis              |
-   |   misc/lokalizace              |                                |
+   |   misc/graficky-modeler        |   misc/mapove-vystupy          |
+   |   misc/lokalizace              |   misc/grass-qgis              |
    +--------------------------------+--------------------------------+
 
 Související materiály

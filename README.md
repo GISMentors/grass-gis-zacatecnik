@@ -1,4 +1,4 @@
-GRASS-GIS
-=========
+Školení GRASS GIS - Začátečník
+==============================
 
-GRASS GIS (basic course)
+URL: http://www.gismentors.eu/skoleni/grass-gis.html#zacatecnik

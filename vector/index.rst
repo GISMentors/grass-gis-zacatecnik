@@ -76,3 +76,8 @@ následující topologickými elementy:
 * jednou linií :fignote:`2`
 * čtyřmi hraničními liniemi :fignote:`3,4,6,8`
 * dvěma centroidy :fignote:`5,7`
+
+Atributová data
+===============
+
+.. todo::

@@ -41,9 +41,9 @@ Intro
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
    |   instalace/index              |   intro/struktura-dat          |
-   |   intro/prvni-kroky            |   intro/region                 |
-   |                                |   raster/index                 |
+   |   intro/prvni-kroky            |   raster/index                 |
    |                                |   vector/index                 |
+   |                                |   intro/region                 |
    +--------------------------------+--------------------------------+
 
 .. table::

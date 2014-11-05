@@ -11,20 +11,37 @@ Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových map**
 * K hodnotě buňky lze přiřadit textový popisek (tzv. *label*)
 * Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
 
-.. rubric:: Typy rastrových map v systému GRASS
-	    :class: secnotoc
+Metadata
+========
+
+Základní metadata o vektoré mapě vypisuje modul :grasscmd:`r.info`
+dostupný ze menu *správce vrstev* :menuselection:`Raster --> Reports
+and statistics --> Basic raster metadata` anebo z kontextového menu.
+
+.. figure:: images/lmgr-r-info.png
+	    
+.. figure:: images/lmgr-r-info-example.png
+
+	    Příklad výpisu metadat rastrové mapy
+	    :map:`dmt`.
+
+Typy rastrových map
+===================
 
 GRASS rozlišuje tři typy rastrových map podle datové typu buňky, který
 může být:
 
-* ``CELL`` (celé číslo, `integer`)
+* ``CELL`` (celé číslo, :wikipedia-en:`integer <Integer (computer
+  science)>`)
 
 .. figure:: images/rast-num.png
 
-* ``FCELL`` (hodnoty s plovoucí desetinnou čárkou, `float`)
+* ``FCELL`` (hodnoty s plovoucí desetinnou čárkou,
+  :wikipedia-en:`float <Single-precision floating-point format>`)
 * ``DCELL`` (hodnoty s plovoucí desetinout čárkou s dvojnásobnou
-  přesností, `doble precision`)
+  přesností, :wikipedia-en:`double precision`)
 
+.. figure:: images/rast-num-float.png
 
 .. note::
 

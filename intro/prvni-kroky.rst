@@ -120,6 +120,18 @@ přímo z příkazové řádky *správce vrstev*.
 
                Nastavení automatické změny pohledu při přidání nové mapové vrstvy
 
+.. noteadvanced::
+
+   Geodata lze vykreslovat z příkazové řádky či skriptů do
+   nejrůznějších formátů od PNG, GIF až po SVG či PDF pomocí modulu
+   :grasscmd:`d.mon` v kombinaci s :grasscmd:`d.rast` a
+   :grasscmd:`d.vect`.
+
+   .. figure:: images/gif-example.gif
+               
+               Příklad vykreslení serie prostorových analýz do formátu
+               GIF
+                  
 Rastrová data
 ^^^^^^^^^^^^^
 

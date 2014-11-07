@@ -169,3 +169,4 @@ vlastnosti textového objektu.
 Popisek lze **odstranit** opět pomocí výše uvedeného dialogu, který je
 dostupný pomocí dvojkliku nad daným textovým objektem v mapovém okně.
 
+.. figure:: images/remove-text.png

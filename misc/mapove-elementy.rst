@@ -42,7 +42,7 @@ kterou si přejete legendu zobrazit.
             :fignote:`(1)` a nastavení potvrdíme :fignote:`(2)`
 
 Legendu může z mapové okna **odstranit** buď z nástorové lišty anebo z
-kontexového menu legendy (pravé tlačítko myši nad legendou):
+kontextového menu legendy (pravé tlačítko myši nad legendou):
                      
 .. figure:: images/remove-legend.png
 
@@ -87,6 +87,32 @@ Směrovou růžici lze do mapového okna přidat z jeho nástroje lišty:
 .. figure:: images/add-narrow.png
    :class: large
 
+Poté se do mapové okna umistí směrová růžice:
+
+.. figure:: images/narrow.png
+            :class: small
+
+**Podobu směrové růřice** lze změnit z dialogu modulu
+:grasscmd:`d.northarrow` dostupného pomocí dvojkliku nad směrovou
+růžicí umístěnou v mapovém okně.
+
+.. figure:: images/narrow-prop.png
+   :class: middle
+        
+   Přiklad změny stylu směrové růžice
+
+.. figure:: images/narrow-1.png
+   :class: small
+
+   Výsledek změny stylu směrové růžice
+
+Směrovou růžici může z mapové okna **odstranit** buď z nástorové lišty
+anebo z kontextového menu směrové růžice (pravé tlačítko myši nad
+směrovou růžicí):
+                     
+.. figure:: images/remove-narrow.png
+   :class: small
+           
 Měřítko
 =======
 
@@ -113,6 +139,12 @@ dostupného pomocí dvojkliku nad měřítkem umístěnou v mapovém okně.
 
    Výsledek změny stylu měřítka
 
+Měřítko může z mapové okna **odstranit** buď z nástorové lišty anebo z
+kontextového menu měřítka (pravé tlačítko myši nad měřítkem):
+                     
+.. figure:: images/remove-scalebar.png
+            :class: small
+            
 Textový popisek
 ===============
 

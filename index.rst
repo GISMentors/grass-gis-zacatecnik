@@ -26,10 +26,10 @@ jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
                jsou funkční i ve verzi GRASS 6.4. Případné rozdíly mezi
                těmito verzemi jsou vždy explicitně zdůrazněny. Dále
                předpokládáme zapnutou *anglickou lokalizaci*,
-	       viz :ref:`volba lokalizace <volba-lokalizace>`.
-
+               viz :ref:`volba lokalizace <volba-lokalizace>`.
+ 
 Intro
------
+=====
 
 .. table::
    :class: toc
@@ -61,7 +61,7 @@ Intro
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy
------------------
+================
 
 .. table::
    :class: toc
@@ -74,7 +74,7 @@ Rastrové analýzy
    +--------------------------------+--------------------------------+
 
 Vektorové analýzy
-------------------
+=================
 
 .. table::
    :class: toc
@@ -87,7 +87,7 @@ Vektorové analýzy
    +--------------------------------+--------------------------------+
 
 Další témata
-------------
+============
 
 .. table::
    :class: noborder
@@ -102,7 +102,7 @@ Další témata
    +--------------------------------+--------------------------------+
 
 Související materiály
----------------------
+=====================
 
 *Česky:*
 
@@ -118,8 +118,26 @@ Související materiály
 * `Open Source GIS: A GRASS GIS Approach <http://www.grassbook.org/>`_ (anglicky)
 * `GIS GRASS - Praktická rukověť <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Praktick%C3%A1_rukov%C4%9B%C5%A5>`_ (česky, velmi zastaralé)
 
+
+Technická podpora
+=================
+
+* *(česky)* Mailing list `FreeGeoCZ
+  <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_
+  (obecně Open Source GIS, nikoliv pouze GRASS) - `registrace
+  <http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz>`_ - `archiv
+  <http://mailman.fsv.cvut.cz/pipermail/freegeocz/>`_
+* *(anglicky)* Mezinárodní mailing list projektu GRASS GIS -
+  `registrace <http://lists.osgeo.org/mailman/listinfo/grass-user>`_ -
+  `archiv <http://lists.osgeo.org/pipermail/grass-user/>`_
+  (zajímavostí je archiv sahající až do roku 1991!)
+
+*Komerční podpora v ČR*
+           
+* OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
+  
 Licence
--------
+=======
 
 .. table::
    :class: noborder

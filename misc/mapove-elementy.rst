@@ -153,3 +153,19 @@ Textový popisek lze do mapového okna přidat z jeho nástroje lišty:
 .. figure:: images/add-text.png
    :class: large
 
+V následující dialogu uvedeme text a případně můžeme změnit i
+vlastnosti textového objektu.
+      
+.. figure:: images/text-prop.png
+            
+   Po nastavení textu :fignote:`(1)` můžeme nastavit rotaci
+   či styl písma :fignote:`(2)`
+
+.. figure:: images/text-example.png
+   :class: large
+               
+   Příklad textového popisku v mapovém okně
+            
+Popisek lze **odstranit** opět pomocí výše uvedeného dialogu, který je
+dostupný pomocí dvojkliku nad daným textovým objektem v mapovém okně.
+

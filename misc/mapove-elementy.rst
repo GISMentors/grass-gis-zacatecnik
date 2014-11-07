@@ -95,6 +95,24 @@ Měřítko lze do mapového okna přidat z jeho nástroje lišty:
 .. figure:: images/add-scalebar.png
    :class: large
 
+Poté se do mapové okna umistí měřitko:
+
+.. figure:: images/scalebar.png
+   :class: small
+
+**Podobu měřítka** lze změnit z dialogu modulu :grasscmd:`d.barscale`
+dostupného pomocí dvojkliku nad měřítkem umístěnou v mapovém okně.
+
+.. figure:: images/scalebar-prop.png
+   :class: middle
+        
+   Přiklad změny stylu měřítka
+
+.. figure:: images/scalebar-1.png
+   :class: small
+
+   Výsledek změny stylu měřítka
+
 Textový popisek
 ===============
 

@@ -2,8 +2,9 @@ Prostorové dotazy
 -----------------
 
 Prostorové dotazy, tj. výběr geoprvků na základě jejich prostorových
-vztahů, zajišťuje modul :grasscmd:`v.select`. Nativně tento modul
-podporuje pouze jeden prostorový operátor:
+vztahů, zajišťuje modul :grasscmd:`v.select` dostupný z menu
+:menuselection:`Vector --> Feature selection --> Select by another
+map`. Nativně tento modul podporuje pouze jeden prostorový operátor:
 
 * *overlap* - geoprvky se částečně či úplně překrývají
 

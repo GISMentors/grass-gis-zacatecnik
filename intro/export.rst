@@ -77,4 +77,5 @@ nástrojé lišty *mapového okna*
 .. figure:: images/map-display-image-2.png
             :class: large
            
-            Příklad výsledku včetně :ref:`legendy, měřítka a textového popisku <map-decorations>`
+            Příklad výsledku včetně :ref:`legendy, měřítka a textového
+            popisku <mapove-elementy>`

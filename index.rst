@@ -96,8 +96,9 @@ Další témata
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   misc/graficky-modeler        |   misc/mapove-vystupy          |
-   |   misc/lokalizace              |   misc/grass-qgis              |
+   |   misc/graficky-modeler        |   misc/mapove-elementy         |
+   |   misc/lokalizace              |   misc/mapove-vystupy          |
+   |   misc/grass-qgis              |                                |
    +--------------------------------+--------------------------------+
 
 Související materiály

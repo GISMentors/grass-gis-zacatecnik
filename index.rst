@@ -57,6 +57,7 @@ Intro
    |                                |                                |
    |   intro/import                 |   intro/atributove-dotazy      |
    |   intro/transformace           |   intro/prostorove-dotazy      |
+   |   intro/export                 |                                |        
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy

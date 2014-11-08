@@ -98,7 +98,7 @@ Další témata
    |                                |                                |
    |   misc/graficky-modeler        |   misc/mapove-elementy         |
    |   misc/lokalizace              |   misc/mapove-vystupy          |
-   |   misc/grass-qgis              |                                |
+   |   misc/grass-qgis              |   misc/georeferencovani        |
    +--------------------------------+--------------------------------+
 
 Související materiály
@@ -135,7 +135,12 @@ Technická podpora
 *Komerční podpora v ČR*
            
 * OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
-  
+
+Užitečné odkazy
+===============
+
+* http://epsg.io
+
 Licence
 =======
 

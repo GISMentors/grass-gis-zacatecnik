@@ -32,7 +32,7 @@ objeví dialog, který umožňuje se do této lokace přepnout.
            
 .. figure:: images/new-loc-switch-confirm.png
             :class: small
-           
+
 Import geodat do nové lokace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -42,6 +42,8 @@ již hodnotu ``Yes``.
 
 .. figure:: images/import-osm.png
 
+.. _loc-switch:
+            
 Po importu dat se vrátíme do původní lokace :menuselection:`Settings
 --> GRASS working environment --> Change location and mapset`.
 

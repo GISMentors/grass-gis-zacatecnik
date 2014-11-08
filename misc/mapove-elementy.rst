@@ -53,7 +53,7 @@ Z tohoto menu lze také **změnit velikost** legendy i její orientaci.
 .. figure:: images/resize-legend-1.png
    :class: small
            
-           Příklad změněné orientace legendy
+   Příklad změněné orientace legendy
 
 **Vlatnosti legendy můžeme změnit** z dialogu modulu
 :grasscmd:`d.legend` dostupného pomocí dvojkliku nad legendou

@@ -70,7 +70,8 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
 
       Pro takto převzorkovaná data bude např. území s nadmořskou
       výškou do 202.5 metrů pokrývat místo původních 2,85% nově 2,83%.
-   
+
+.. _r-univar:
 
 Základní statistika
 ===================

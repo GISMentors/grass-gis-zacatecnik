@@ -1,3 +1,5 @@
+.. _atributove-dotazy:
+
 Atributové dotazy
 -----------------
 

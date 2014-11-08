@@ -27,6 +27,8 @@ and statistics --> Basic raster metadata` anebo z kontextového menu.
 	    Příklad výpisu metadat rastrové mapy
 	    :map:`dmt`.
 
+.. _raster-types:
+                 
 Typy rastrových map
 ===================
 

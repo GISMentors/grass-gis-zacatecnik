@@ -71,9 +71,9 @@ Rastrové analýzy
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   raster/statistika            |   raster/mask                  |
-   |   raster/tabulka-barev         |   raster/reklasifikace         |      
-   |   raster/rastrova-algebra      |   raster/analyza-nakladu       |
+   |   raster/statistika            |   raster/reklasifikace         |
+   |   raster/mask                  |   raster/rastrova-algebra      |      
+   |   raster/tabulka-barev         |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
 
 Vektorové analýzy

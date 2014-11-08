@@ -63,7 +63,7 @@ File location and size:
       libglu1-mesa-dev libfftw3-dev libxmu-dev \
       libcairo2-dev g++ wx-common python-wxgtk2.8 libwxgtk2.8-dev libxmu-headers \
       libavcodec-dev libavformat-dev libswscale-dev \
-      libgeos-dev libsqlite3-dev
+      libgeos-dev libsqlite3-dev libpython-dev
    
       mkdir src
       cd src
@@ -76,6 +76,7 @@ File location and size:
       sudo make install
       sudo ldconfig
       cd ..
+      rm -rf proj
       
       # gdal
       svn checkout http://svn.osgeo.org/gdal/branches/1.11/gdal/
@@ -85,10 +86,12 @@ File location and size:
                --with-gnu-ld 
       make
       make install
-      cd..
+      sudo ldconfig
+      cd ..
+      rm -rf gdal
       
       # grass
-      svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_70 grass70_release
+      svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_0 grass70_release
       cd grass70_release
       ./configure --prefix=/usr/local \
             --with-gdal --with-proj --with-geos \
@@ -96,6 +99,7 @@ File location and size:
             --with-freetype --with-freetype-includes=/usr/include/freetype2 \
             --with-sqlite --with-python --with-wxwidgets --with-pthread --with-cairo
       make
+      
       mkdir ~/bin
       ln -s `pwd`... ~/bin
       cd ..

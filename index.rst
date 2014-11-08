@@ -71,7 +71,7 @@ Rastrové analýzy
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   raster/statistika            |                                |        
+   |   raster/statistika            |   raster/mask                  |        
    |   raster/rastrova-algebra      |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
 

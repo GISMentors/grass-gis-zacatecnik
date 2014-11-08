@@ -90,7 +90,7 @@ File location and size:
       svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_70 grass70_release
       cd grass70_release
       ./configure --prefix=/usr/local \
-            --with-gdal --with-proj --with-proj-share=/usr/share/proj --with-geos \
+            --with-gdal --with-proj --with-geos \
             --with-nls --with-readline --with-cxx --enable-largefile \
             --with-freetype --with-freetype-includes=/usr/include/freetype2 \
             --with-sqlite --with-python --with-wxwidgets --with-pthread --with-cairo

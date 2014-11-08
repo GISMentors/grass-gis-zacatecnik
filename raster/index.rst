@@ -11,6 +11,8 @@ Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových map**
 * K hodnotě buňky lze přiřadit textový popisek (tzv. *label*)
 * Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
 
+.. _raster-metadata:
+
 Metadata
 ========
 

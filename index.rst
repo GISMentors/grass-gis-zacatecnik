@@ -56,8 +56,9 @@ Intro
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
    |   intro/import                 |   intro/atributove-dotazy      |
-   |   intro/transformace           |   intro/prostorove-dotazy      |
-   |   intro/export                 |                                |        
+   |   intro/export                 |   intro/prostorove-dotazy      |
+   |   intro/transformace           |                                |
+   |   misc/georeferencovani        |                                |
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy
@@ -70,6 +71,7 @@ Rastrové analýzy
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
+   |   raster/statistika            |                                |        
    |   raster/rastrova-algebra      |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
 
@@ -98,7 +100,7 @@ Další témata
    |                                |                                |
    |   misc/graficky-modeler        |   misc/mapove-elementy         |
    |   misc/lokalizace              |   misc/mapove-vystupy          |
-   |   misc/grass-qgis              |   misc/georeferencovani        |
+   |   misc/grass-qgis              |                                |
    +--------------------------------+--------------------------------+
 
 Související materiály

@@ -1,7 +1,7 @@
 .. _transformace:
 
-Práce s geodaty v různých souřadnicových systémech
---------------------------------------------------
+Geodata v různých souřadnicových systémech
+------------------------------------------
 
 V případě, že chcete do aktuální lokace importovat geodata jejichž
 souřadnicový systém se liší od souřadnicového systému aktuální lokace

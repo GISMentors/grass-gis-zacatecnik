@@ -7,9 +7,9 @@ statistických informací o rastrových datech. Jde o:
 
 * :grasscmd:`r.report` pro přehledný výpis informací o rastorové mapě
 * :grasscmd:`r.univar` pro základní statistiku  
-* :grasscmd:`r.stats` pro výpis vybraných statistik
 * :grasscmd:`r.category` pro výpis informací o kategoriích
-
+* :grasscmd:`r.stats` pro výpis vybraných statistik
+    
 Report
 ======
 

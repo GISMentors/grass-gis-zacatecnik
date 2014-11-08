@@ -1,0 +1,2 @@
+Reklasifikace rastrových dat
+----------------------------

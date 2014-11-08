@@ -53,8 +53,8 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
 
 .. important::
 
-   Jak již bylo uvedeno v kapitole :ref:`výpočetní region <>` drtivá
-   většina modulů pro zpracování rastrových dat pracuje vždy v
+   Jak již bylo uvedeno v kapitole :ref:`výpočetní region <region>`
+   drtivá většina modulů pro zpracování rastrových dat pracuje vždy v
    aktuální výpočetním regionu! Pokud např. změníme prostorové
    rozlišení na 100m, změní se i report rastrové mapy
    :map:`dmt`. Modul nejprve data převzorkuje metou
@@ -75,10 +75,23 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
 Základní statistika
 ===================
 
+Základní statistiku o rastrových datech poskytuje modul
+:grasscmd:`r.univar` dostupný buď z menu *správce vrstev*
+:menuselection:`Raster --> Repors and statistis --> Univariate raster
+statistics`.
+
+.. figure:: images/lmgr-r-univar.png
+
+.. figure:: images/r-univar-out.png
+
+   Příklad statistiky pro rastrovou mapu :map:`dmt` (s výpočetním
+   regionem nastaveným na tuto mapu)
+   
+Informace o kategoriích
+=======================
+
 Pokročilá statistika
 ====================
 
-Informace o kategoriích
-=======================
 
     

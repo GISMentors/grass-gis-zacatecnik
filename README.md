@@ -73,7 +73,9 @@ File location and size:
       ./configure --prefix=/usr/local --mandir=/usr/local/share
       make
       sudo make install
-
+      sudo ldconfig
+      cd ..
+      
       # gdal
       svn checkout http://svn.osgeo.org/gdal/branches/1.11/gdal/
       cd gdal
@@ -82,7 +84,8 @@ File location and size:
                --with-gnu-ld 
       make
       make install
-   
+      cd..
+      
       # grass
       svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_70 grass70_release
       cd grass70_release
@@ -94,3 +97,4 @@ File location and size:
       make
       mkdir ~/bin
       ln -s `pwd`... ~/bin
+      cd ..

@@ -77,7 +77,7 @@ Základní statistika
 
 Základní statistiku o rastrových datech poskytuje modul
 :grasscmd:`r.univar` dostupný buď z menu *správce vrstev*
-:menuselection:`Raster --> Repors and statistis --> Univariate raster
+:menuselection:`Raster --> Repors and statistics --> Univariate raster
 statistics`.
 
 .. figure:: images/lmgr-r-univar.png
@@ -90,8 +90,38 @@ statistics`.
 Informace o kategoriích
 =======================
 
+.. todo::
+
+   Potřebujeme nějakou kategorizovanou mapu (třeba výsledek klasifikace)
+
 Pokročilá statistika
 ====================
 
+Modul :grasscmd:`r.stats` je základní modul poskytující statistiku
+rastrových dat, jde nicméně o modul určený především pro pokročilé
+uživatele, kteří si píší vlastní skripty. Modul je dostupný z menu
+*správce vrstev* :menuselection:`Raster --> Repors and statistics -->
+General statistics`.
 
-    
+.. notecmd:: výpisu statistiky rastrové mapy
+
+   Výpis počtu buněk na základě 10 intervalů seřazených sestupně (znak
+   `*` označuje no-data)
+
+   .. code-block:: bash
+
+                   r.stats -c input=dmt nsteps=10 sort=desc
+
+::
+   
+      * 94752766
+      355.686188-508.843563 43213697
+      202.528812-355.686188 34747630
+      508.843563-662.000938 28140420
+      662.000938-815.158314 8635189
+      49.371437-202.528812 6291794
+      815.158314-968.315689 3363937
+      968.315689-1121.473064 1231565
+      1121.473064-1274.63044 447183
+      1274.63044-1427.787815 104742
+      1427.787815-1580.94519 12743

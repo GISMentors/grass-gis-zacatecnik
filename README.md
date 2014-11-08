@@ -18,7 +18,7 @@ Poznámky k přípravě VMDK
 
 Memory size:
 
-* 4000 MB
+* 512 MB
 
 Hard drive:
 
@@ -30,7 +30,7 @@ Hard drive file type:
 
 Storage on physical hard drive:
 
-* fixed size
+* dynamically allocated
 
 File location and size:
 

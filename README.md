@@ -58,39 +58,39 @@ File location and size:
 
 -> In terminal:
 
-   sudo apt-get install subversion flex bison libncurses5-dev zlib1g-dev \
-     libreadline6-dev libtiff4-dev mesa-common-dev \
-     libglu1-mesa-dev libfftw3-dev lesstif2-dev libxmu-dev \
-     libcairo2-dev g++ wx-common python-wxgtk2.8 libwxgtk2.8-dev libxmu-headers \
-     libavcodec-dev libavformat-dev libswscale-dev
+      sudo apt-get install subversion flex bison libncurses5-dev zlib1g-dev \
+      libreadline6-dev libtiff5-dev mesa-common-dev \
+      libglu1-mesa-dev libfftw3-dev libxmu-dev \
+      libcairo2-dev g++ wx-common python-wxgtk2.8 libwxgtk2.8-dev libxmu-headers \
+      libavcodec-dev libavformat-dev libswscale-dev
    
-   mkdir src
-   cd src
+      mkdir src
+      cd src
 
-   # proj4
-   svn checkout http://svn.osgeo.org/metacrs/proj/branches/4.9/proj/
-   cd proj
-   ./configure --prefix=/usr/local --mandir=/usr/local/share
-   make
-   sudo make install
+      # proj4
+      svn checkout http://svn.osgeo.org/metacrs/proj/branches/4.9/proj/
+      cd proj
+      ./configure --prefix=/usr/local --mandir=/usr/local/share
+      make
+      sudo make install
 
-   # gdal
-   svn checkout http://svn.osgeo.org/gdal/branches/1.11/gdal/
-   cd gdal
-   ./configure --prefix=/usr/local --mandir=/usr/local/share \
+      # gdal
+      svn checkout http://svn.osgeo.org/gdal/branches/1.11/gdal/
+      cd gdal
+      ./configure --prefix=/usr/local --mandir=/usr/local/share \
                --with-sqlite3 --with-python \
                --with-gnu-ld 
-   make
-   make install
+      make
+      make install
    
-   # grass
-   svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_70 grass70_release
-   cd grass70_release
-   ./configure --prefix=/usr/local \
+      # grass
+      svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_70 grass70_release
+      cd grass70_release
+      ./configure --prefix=/usr/local \
             --with-gdal --with-proj --with-proj-share=/usr/share/proj --with-geos \
             --with-nls --with-readline --with-cxx --enable-largefile \
             --with-freetype --with-freetype-includes=/usr/include/freetype2 \
             --with-sqlite --with-python --with-wxwidgets --with-pthread --with-cairo
-   make
-   mkdir ~/bin
-   ln -s `pwd`... ~/bin
+      make
+      mkdir ~/bin
+      ln -s `pwd`... ~/bin

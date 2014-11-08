@@ -123,6 +123,12 @@ Před vlastním souřadnicovým připojení můžeme spočít pro identické bod
 tzv. RMS chybu a na jejím základě vyřadit nebo naopak přidat nové
 identické body.
 
+.. note::
+   
+   Střední kvadratická (RMS) chyba by neměla přesáhnout
+   polovinu rozlišení hodnoty cílové lokace.
+
+
 .. figure:: images/georect-12.png
             :class: large
 

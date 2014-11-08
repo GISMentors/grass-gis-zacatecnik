@@ -62,7 +62,8 @@ File location and size:
       libreadline6-dev libtiff5-dev mesa-common-dev \
       libglu1-mesa-dev libfftw3-dev libxmu-dev \
       libcairo2-dev g++ wx-common python-wxgtk2.8 libwxgtk2.8-dev libxmu-headers \
-      libavcodec-dev libavformat-dev libswscale-dev
+      libavcodec-dev libavformat-dev libswscale-dev \
+      libgeos-dev libsqlite3-dev
    
       mkdir src
       cd src

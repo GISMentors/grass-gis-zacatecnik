@@ -115,8 +115,6 @@ GRASS spustíme příkazem
    make
    sudo make install
 
-.. todo:: create own extension
-
 .. admonition:: Poznámka pro pokročilé
                 
           Krok instalace (``make install``) lze přeskočit vytvořením symlinku, např.

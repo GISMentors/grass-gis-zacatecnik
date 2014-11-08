@@ -14,7 +14,8 @@ data převádí do topologické formy automaticky.
 .. admonition:: Topologie
 
                 Sleduje prostorové vztahy mezi objekty (navaznost
-                linií, sousednost ploch atd.)
+                linií, sousednost ploch atd.) viz :wikipedia-en:`Prostorová
+                topologie <Geospatial_topology>`
    
 Ve 2D GIS rozlišuje tři zákládní **typy geoprvků**:
 

@@ -7,7 +7,7 @@ Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových map**
   nepravidlé mřížky)
 * Elementem mřížky je buňka či tzv. *pixel* jehož tvar může být buď
   čtvercový nebo obdélníkový
-* Velikost pixele je dán *prostorovým rozlišením*
+* Velikost pixelu je dána *prostorovým rozlišením*
 * K hodnotě buňky lze přiřadit textový popisek (tzv. *label*)
 * Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
 

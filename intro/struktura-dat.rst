@@ -23,7 +23,7 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    Lokace je adresář umístěný v GRASS databance. Tento adresář
    obsahuje data, která souvisejí s daným projektem. Lokace je
    definována *souřadnicovým systémem* (referenční elipsoid,
-   kartografické zobrazení, mapové jednotky) a velikostí zájmového
+   kartografické zobrazení, mapové jednotky) a výchozí velikostí zájmového
    území.
 
 **Mapset**
@@ -37,6 +37,11 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    (zpracování vstupních dat, jejich analýza apod.).
 
 .. todo:: Přidat obrázek
+
+.. figure:: images/help_loc_struct.png
+
+    Struktura GRASS Databáze, vztah Lokace a Mapsetů, umístění souborů s daty
+    pro různé datové typy.
       
 .. admonition:: Poznámka pro pokročilé uživatele
    
@@ -122,8 +127,9 @@ souřadnicový systém S-JTSK to je :epsg:`5514`.
 .. note::
 
    :epsg:`5514` podporuje systém GRASS pouze pokud používate verzi
-   knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V opačném případě doporučujeme
-   použít :epsg:`2065`.
+   knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V opačném případě musíte přidat
+   parametry pro S-JTSK do konfiguračního souboru ručně. [#krovak]_
+
 
 .. figure:: images/wxgui-loc-s-jtsk-3.png
 
@@ -351,3 +357,15 @@ Po vytvoření nového mapsetu se do něj systém GRASS automaticky přepne.
 
 .. figure:: images/wxgui-new-mapset-dialog-1.png
             :class: small
+
+.. rubric:: Poznámky pod čarou
+
+.. [#krovak] Na začátek souboru s definicí kódů EPSG (na systému Linux bývá
+    umístěn v `/usr/share/proj/epsg`, na systému Windows
+    `::OSGeo4W\share\proj\epsg`), umístěne následující 2 řádky::
+
+        # Krovak S-JTSK
+        <5514> +proj=krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.28813972222222 +k=0.9999 +x_0=-0 +y_0=-0 +ellps=bessel +pm=ferro +to_meter=-1 +no_defs +towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56
+
+    Soubor uložte, zavřete a případně restartujte GRASS Location Wizard, aby
+    došlo ke znovu načtení databáze kódů EPSG

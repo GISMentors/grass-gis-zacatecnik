@@ -36,14 +36,13 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    základní datové vrstvy a ostatní mapsety jsou brány jako pracovní
    (zpracování vstupních dat, jejich analýza apod.).
 
-.. todo:: Přidat obrázek
-
 .. figure:: images/help_loc_struct.png
-
-    Struktura GRASS Databáze, vztah Lokace a Mapsetů, umístění souborů s daty
-    pro různé datové typy.
+            :class: middle
+                    
+            Struktura GRASS DataBase, vztah Lokace a Mapsetů, umístění souborů
+            s daty pro různé typy map.
       
-.. admonition:: Poznámka pro pokročilé uživatele
+.. noteadvanced:: 
    
    GRASS databanka je definovaná proměnnou prostředí
    :envvar:`GISDBASE`, lokace :envvar:`LOCATION_NAME` a mapset
@@ -359,13 +358,15 @@ Po vytvoření nového mapsetu se do něj systém GRASS automaticky přepne.
             :class: small
 
 .. rubric:: Poznámky pod čarou
-
-.. [#krovak] Na začátek souboru s definicí kódů EPSG (na systému Linux bývá
-    umístěn v `/usr/share/proj/epsg`, na systému Windows
-    `::OSGeo4W\share\proj\epsg`), umístěne následující 2 řádky::
+   :class: secnotoc
+           
+.. [#krovak] Na začátek souboru s definicí kódů EPSG (v případě OS
+    GNU/Linux bývá umístěn v :file:`/usr/share/proj/epsg`, u MS
+    Windows :file:`c:\\OSGeo4W\\share\\proj\\epsg`), přidáme
+    následující 2 řádky::
 
         # Krovak S-JTSK
         <5514> +proj=krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.28813972222222 +k=0.9999 +x_0=-0 +y_0=-0 +ellps=bessel +pm=ferro +to_meter=-1 +no_defs +towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56
 
     Soubor uložte, zavřete a případně restartujte GRASS Location Wizard, aby
-    došlo ke znovu načtení databáze kódů EPSG
+    došlo ke znovu načtení databáze kódů EPSG.

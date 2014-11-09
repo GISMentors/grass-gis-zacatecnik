@@ -89,4 +89,82 @@ např.
 Reklasifikace rastrových dat s plovoucí desetinnou čárkou
 =========================================================
 
-.. todo::
+Našim cílem bude reklasifikovat :ref:`mapu orientace svahu <aspect>`
+do následujících třid:
+
+.. table::
+   :class: border
+   
+   +------------+----------------+---------------------+
+   | Od         | Do             | Orientace svahu     |
+   +============+================+=====================+
+   | 337.5      | 22.5           | 1 (východ)          |
+   +------------+----------------+---------------------+
+   | 22.5       | 67.5           | 2 (jihovýchod)      |
+   +------------+----------------+---------------------+
+   | 67.5       | 112.5          | 3 (jih)             |
+   +------------+----------------+---------------------+
+   | 112.5      | 157.5          | 4 (jihozápad)       |
+   +------------+----------------+---------------------+
+   | 157.5      | 202.5          | 5 (západ)           |
+   +------------+----------------+---------------------+
+   | 202.5      | 247.5          | 6 (severozápad)     |
+   +------------+----------------+---------------------+
+   | 247.5      | 292.5          | 7 (sever)           |
+   +------------+----------------+---------------------+
+   | 292.5      | 337.5          | 8 (severovýchod)    |
+   +------------+----------------+---------------------+
+
+V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypadat následovně:
+   
+::
+   
+   0:22.5:1
+   22.5:67.6:2
+   67.5:112.5:3
+   112.5:157.5:4
+   157.5:202.5:5
+   202.5:247.5:6
+   247.5:292.5:7
+   292.5:337.5:8
+   337.5:360:1
+
+.. figure:: images/r-recode-aspect.png
+
+            V dialogu :grasscmd:`r.recode` nejrpve zvolíme vstupní
+            rastrovou mapu :fignote:`(1)`, kterou chceme
+            reklasifikovat, poté název výstupní reklasifikované mapy
+            :fignote:`(2)` a reklasifikační tabulku :fignote:`(3)`
+
+.. tip::
+                     
+   Nakonec můžeme ještě přiřadit jednotlivým kategoriím štítky a to
+   pomocí modulu :grasscmd:`r.category` (:menuselection:`Raster -->
+   Report and statistics --> Manage category information`).
+
+   Příklad přiřazení štítků:
+
+   ::
+
+      1:V
+      2:JV
+      3:J
+      4:JZ
+      5:Z
+      6:SZ
+      7:S
+      8:SV
+
+   .. figure:: images/r-category-set-0.png
+
+               V záložce :item:`Optional` zvolíme nejrpve oddělovač ':'
+
+   .. figure:: images/r-category-set-1.png
+
+               A poté přiřadíme popisky z textového pole v záložce :item:`Define`
+
+.. figure:: images/aspect-reclass.png
+   :class: large
+           
+   Výsledek reklasifikace mapy orientace svahu
+            

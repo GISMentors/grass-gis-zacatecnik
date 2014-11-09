@@ -87,7 +87,7 @@ statistics`.
 
    Příklad statistiky pro rastrovou mapu :map:`dmt` (s výpočetním
    regionem nastaveným na tuto mapu)
-   
+
 Informace o kategoriích
 =======================
 

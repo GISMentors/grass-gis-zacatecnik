@@ -30,6 +30,8 @@ níže.
           interpolation>`. Mřížka výstupních rastrových dat vždy
           odpovídají aktuálně nastavenému regionu.
 
+.. _nastaveni-regionu:
+          
 Nastavení výpočetního regionu
 =============================
 

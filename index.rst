@@ -73,7 +73,8 @@ Rastrové analýzy
    |                                |                                |
    |   raster/statistika            |   raster/reklasifikace         |
    |   raster/mask                  |   raster/rastrova-algebra      |      
-   |   raster/tabulka-barev         |   raster/analyza-nakladu       |
+   |   raster/tabulka-barev         |   raster/analyzy-povrhu        |
+   |                                |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
 
 Vektorové analýzy

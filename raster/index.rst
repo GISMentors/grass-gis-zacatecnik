@@ -1,24 +1,26 @@
 Rastrová data
 -------------
 
-Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových map**.
+Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových
+map**. Jde o:
 
-* Reprezentace v podobě pravidelné mřížky hodnot (GRASS nepodporuje
+* Reprezentaci v podobě pravidelné mřížky hodnot (GRASS nepodporuje
   nepravidlé mřížky)
-* Elementem mřížky je buňka či tzv. *pixel* jehož tvar může být buď
+* Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
+* Elementem mřížky je buňka či tzv. *pixel*, jehož tvar může být buď
   čtvercový nebo obdélníkový
 * Velikost pixelu je dána *prostorovým rozlišením*
 * K hodnotě buňky lze přiřadit textový popisek (tzv. *label*)
-* Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
 
 .. _raster-metadata:
 
 Metadata
 ========
 
-Základní metadata o vektoré mapě vypisuje modul :grasscmd:`r.info`
-dostupný ze menu *správce vrstev* :menuselection:`Raster --> Reports
-and statistics --> Basic raster metadata` anebo z kontextového menu.
+Základní metadata o rastrových datech vypisuje modul
+:grasscmd:`r.info` dostupný z menu :menuselection:`Raster --> Reports
+and statistics --> Basic raster metadata` anebo z kontextového menu
+rastrové mapy ve *správci vrstev*.
 
 .. figure:: images/lmgr-r-info.png
 	    
@@ -32,8 +34,7 @@ and statistics --> Basic raster metadata` anebo z kontextového menu.
 Typy rastrových map
 ===================
 
-GRASS rozlišuje tři typy rastrových map podle datové typu buňky, který
-může být:
+GRASS rozlišuje tři typy rastrových map podle datové typu buňky:
 
 * ``CELL`` (celé číslo, :wikipedia-en:`integer <Integer (computer
   science)>`)

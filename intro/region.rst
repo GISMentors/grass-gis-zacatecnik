@@ -81,7 +81,7 @@ rastrových či vektorových map najednou.
    Příklad definice hranic výpočetního regionu interaktivně
 
 Pokročilé nastavení výpočetního regionu
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=======================================
 
 Pro manipulaci s výpočetním regionem je určen modul :grassCmd:`g.region`. 
 
@@ -91,7 +91,7 @@ Pro manipulaci s výpočetním regionem je určen modul :grassCmd:`g.region`.
 
 Modul :grassCmd:`g.region` umožňuje nastavit region na základě
 existujících rastrových, vektorových map či již dříve uloženého
-nastavení (parametr :param:`save`). V níže uvedeném případě nastavíme
+nastavení (parametr :option:`save`). V níže uvedeném případě nastavíme
 výpočetní region tak, aby pokrýval rastrovou mapu :map:`elevation` a
 vektorové mapy :map:`busroute1` a :map:`busroute6`. Prostorové
 rozlišení je určeno z rastrové mapy :map:`elevation`.
@@ -134,7 +134,7 @@ Kontrola výpočetního regionu
 ============================
 
 Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
-:grassCmd:`g.region` s přepínačem :param:`-p`.
+:grassCmd:`g.region` s přepínačem :option:`-p`.
 
 .. figure:: images/wxgui-display-region-menu.png
 
@@ -151,7 +151,7 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
       g.region -p
 
 Aktuální nastavení výpočetního regionu lze zobrazit i v stavové liště
-mapového okna (volba "Comp. region").
+mapového okna (volba :item:`Comp. region`).
 
 .. figure:: images/wxgui-mapdisp-statusbar-menu.png
    :class: middle
@@ -180,7 +180,7 @@ Formát::
 
    Minimální ohraničující obdélník výpočetního regionu lze v
    mapovém okně i zobrazit. Hraniční souřadnice budou zobrazeny
-   linie červené barvy, pokud je výpočetní region celou plochou
+   jako linie červené barvy, pokud je výpočetní region celou plochou
    uvnitř aktuálního pohledu. V opačném případě budou hranice
    výpočetního regionu zobrazeny modrou barvou.
 

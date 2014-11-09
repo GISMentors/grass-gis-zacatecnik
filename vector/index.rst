@@ -5,38 +5,51 @@ Vektorová data jsou v systému GRASS uložena v podobě
 tzv. **vektorových map**.
 
 * Vektorová data reprezentují nejčastěji diskrétní fenomény
-  
-GRASS je striktně **topologický GIS**, vektorová data ukládá v
-toopologickém formátu a v případě :ref:`importu vektorových dat
-<import-vector>` z netopologických formátů jako je např. :wikipedia-en:`Esri Shapefile`
-data převádí do topologické formy automaticky.
+
+Ve 2D GIS rozlišujeme tři zákládní *typy geoprvků*:
+
+* bodové (*point*)
+* liniové (*linestring*)
+* plošné (*polygon*)
+
+GRASS je striktně **topologický GIS**. Vektorová data ukládá v
+topologickém formátu, v případě :ref:`importu vektorových dat
+<import-vector>` z netopologických formátů jako je
+např. :wikipedia-en:`Esri Shapefile` data převádí do topologické formy
+automaticky.
 
 .. admonition:: Topologie
 
                 Sleduje prostorové vztahy mezi objekty (navaznost
                 linií, sousednost ploch atd.) viz :wikipedia-en:`Prostorová
                 topologie <Geospatial_topology>`
-   
-Ve 2D GIS rozlišuje tři zákládní **typy geoprvků**:
 
-* bodové (*point*)
-* liniové (*linestring*)
-* plošné (*polygon*)
+.. note::
 
+   Vstupní vektorová data často obsahují nejrůznější topologické
+   chyby, jako např. překrývající se polygony. Modul pro import
+   :grasscmd:`v.in.ogr` se snaží tyto chyby automaticky opravit. V
+   některých případech to však není možné a je dále na uživateli, aby
+   data opravil sám. K tomu slouží modul :grasscmd:`v.clean`. Více k
+   tomuto tématu na `portálu FreeGIS
+   <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Konzistence_vektorov%C3%BDch_dat>`_.
+
+  
 .. note::
 
    Nativní vektorový formát systému GRASS umožňuje na rozdíl od jiných
    formátů jako je např. :wikipedia-en:`Esri Shapefile` uložit v
-   jednou souboru (vektorové mapě) rozdílné typy prvků najednou, v
-   jedné vektorové mapě tedy mohou být uloženy současně bodové,
-   liniové i plošné geoprvky zároveň.
+   jednou souboru (vektorové mapě) rozdílné typy geoprvků najednou. V
+   jedné vektorové mapě tedy mohou být uloženy bodové, liniové i
+   plošné geoprvky zároveň.
 
 Metadata
 ========
 
 Základní metadata o vektoré mapě vypisuje modul :grasscmd:`v.info`
-dostupný ze menu *správce vrstev* :menuselection:`Vector --> Reports
-and statistics --> Basic vector metadata` anebo z kontextového menu.
+dostupný z menu :menuselection:`Vector --> Reports and statistics -->
+Basic vector metadata` anebo z kontextového menu vektorové mapy ve
+*správci vrstev*.
 
 .. figure:: images/lmgr-v-info.png
 	    
@@ -49,7 +62,7 @@ Topologický model
 =================
 
 Topologický model systému GRASS liniové a plošné elementy rozkládá
-dále na **topologické elementy**:
+dále na tzv. *topologické elementy*:
 
 * uzel (*node*)
  * každá linie či hraniční linie musí začínat a končit v uzlu
@@ -60,15 +73,15 @@ dále na **topologické elementy**:
 * reprezentační bod plochy (*centroid*).
 
 Hraniční linie je liniové element, který na rozdíl od elementu
-označovaného jako linie může tvořit hranici plochy. Plošný
+označovaného jako linie, může tvořit hranici plochy. Plošný
 topologický element *area* je tvořen jednou či více hraničními liniemi
-a volitelně i jedním *centroidem*. Izolovaná plocha nebo souvislá
+a případně i jedním *centroidem*. Izolovaná plocha nebo souvislá
 množina ploch formuje plošný element označovaný jako ostrov (*isle*).
 
 Příklad
 =======
 
-Na obrázku níže je zobrazen
+Na obrázku níže je zobrazen:
 
 * jeden bodový geoprvek
 * jeden liniový geoprvek
@@ -77,7 +90,7 @@ Na obrázku níže je zobrazen
 .. figure:: images/grass7-topo.png
 	    :class: large
 
-Tato kompozice bude v topologické module systému GRASS vyjádřen
+Tato kompozice bude v topologické module systému GRASS vyjádřena
 následující topologickými elementy:
 
 * pěti uzly :fignote:`n1-5`
@@ -89,7 +102,7 @@ Atributová data
 ===============
 
 Atributová data jsou uložena v libovolném formátu podporovaném jedním
-z databázových driverů systému GRASS.
+z databázových ovladačů systému GRASS.
 
 Pro verzi GRASS 7 je výchozí formát :grasscmd:`SQLite <grass-sqlite>`.
 
@@ -97,14 +110,14 @@ Pro verzi GRASS 7 je výchozí formát :grasscmd:`SQLite <grass-sqlite>`.
 
    Ve verzi GRASS 6 je výchozím formátem pro atributová data :grasscmd:`DBF <grass-dbf>`.
 
-Volitelně lze atributová data ukládat v databázi :grasscmd:`PostgreSQL
+Volitelně lze atributová data ukládat do databáze :grasscmd:`PostgreSQL
 <grass-pg>`, :grasscmd:`MySQL <grass-mysql>` či do jiné databáze
 pomocí rozhraní :grasscmd:`ODBC <grass-odbc>`.
 
-Výchozí nastavení formártu pro uložení atributových dat můžete změnit
-pomocí modulu :grasscmd:`db.connect`, který je dostupný z menu
-*správce vrstev* :menuselection:`Database --> Manage databases -->
-Connect`. Aktuální nastavení vypisuje přepínač :option:`-p`.
+Výchozí nastavení formátu pro uložení atributových dat můžete změnit
+pomocí modulu :grasscmd:`db.connect` (:menuselection:`Database -->
+Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
+:option:`-p`.
 
 .. notecmd:: nastavení databáze PostgreSQL pro uložení atributových dat
 
@@ -116,7 +129,7 @@ Connect`. Aktuální nastavení vypisuje přepínač :option:`-p`.
 
 .. note::
 
-   Změna nastavení formátu uložení atributových dat se projeví u nově
+   Změna nastavení formátu uložení atributových dat se projeví až u nově
    vytvořených vektorových map.
    
 .. noteadvanced::

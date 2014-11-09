@@ -25,28 +25,6 @@ URL:  http://live.osgeo.org/en/download.html
       mkdir src
       cd src
 
-      # proj4 (4.9)
-      svn checkout http://svn.osgeo.org/metacrs/proj/branches/4.9/proj/
-      cd proj
-      ./configure --prefix=/usr/local --mandir=/usr/local/share
-      make
-      sudo make install
-      sudo ldconfig
-      cd ..
-      ###rm -rf proj
-      
-      # gdal (1.11)
-      svn checkout http://svn.osgeo.org/gdal/branches/1.11/gdal/
-      cd gdal
-      ./configure --prefix=/usr/local --mandir=/usr/local/share \
-               --with-sqlite3 --with-python \
-               --with-gnu-ld 
-      make
-      make install
-      sudo ldconfig
-      cd ..
-      ###rm -rf gdal
-      
       # grass (7.0)
       svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_0 grass70_release
       cd grass70_release

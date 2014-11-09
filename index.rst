@@ -52,11 +52,11 @@ Intro
    +--------------------------------+--------------------------------+
    |  Dotazování                    |                                |
    +================================+================================+
-   | .. toctree::                   |                                |
-   |   :maxdepth: 1                 |                                |
+   | .. toctree::                   | .. toctree::                   |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   intro/atributove-dotazy      |                                |
-   |   intro/prostorove-dotazy      |                                |
+   |   intro/interaktivni-dotazovani|   intro/atributove-dotazy      |
+   |                                |   intro/prostorove-dotazy      |
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy

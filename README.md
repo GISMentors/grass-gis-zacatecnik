@@ -3,6 +3,12 @@
 
 URL: http://www.gismentors.eu/skoleni/grass-gis.html#zacatecnik
 
+Stažení dat
+-----------
+
+cd grassdata
+rsync -avz skoleni@46.28.111.140:~/grassdata/skoleni .
+
 Poznámky k přípravě VMDK
 ------------------------
 
@@ -19,7 +25,7 @@ URL:  http://live.osgeo.org/en/download.html
       mkdir src
       cd src
 
-      # proj4
+      # proj4 (4.9)
       svn checkout http://svn.osgeo.org/metacrs/proj/branches/4.9/proj/
       cd proj
       ./configure --prefix=/usr/local --mandir=/usr/local/share
@@ -27,9 +33,9 @@ URL:  http://live.osgeo.org/en/download.html
       sudo make install
       sudo ldconfig
       cd ..
-      rm -rf proj
+      ###rm -rf proj
       
-      # gdal
+      # gdal (1.11)
       svn checkout http://svn.osgeo.org/gdal/branches/1.11/gdal/
       cd gdal
       ./configure --prefix=/usr/local --mandir=/usr/local/share \
@@ -39,9 +45,9 @@ URL:  http://live.osgeo.org/en/download.html
       make install
       sudo ldconfig
       cd ..
-      rm -rf gdal
+      ###rm -rf gdal
       
-      # grass
+      # grass (7.0)
       svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_0 grass70_release
       cd grass70_release
       ./configure --prefix=/usr/local \

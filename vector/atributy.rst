@@ -166,4 +166,3 @@ any table`.
    Pro ostatní :abbr:`SQL (Structured Query Language)` příkazy
    (``INSERT``, ``UPDATE``, ``DELETE``, ``ALTER`` a další) je určen
    modul :grasscmd:`db.execute`.
-

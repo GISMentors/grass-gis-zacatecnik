@@ -59,3 +59,21 @@ Orientaci (expozici) svahu opět počítá modul
 
 Analýza viditelnosti
 ====================
+
+Klíčový modul pro výpočet analýzy viditelnosti je modul
+:grasscmd:`r.viewshed` (:menuselection:`Raster --> Terrain analysis
+--> Visibility`).
+
+.. figure:: images/r-viewshed-0.png
+
+            Zvolíme vstupní rastrovou mapu :fignote:`(1)` s povrchem,
+            název výstupní mapy viditelnosti :fignote:`(2)` a
+            souřadnice observačního bodu a to buď manuálně či
+            interaktivně z mapového okna :fignote:`(3)`
+
+.. tip::
+
+   Výpočet omezíme na menší území, např. :ref:`interaktivním
+   nastavením výpočetního regionu <nastaveni-regionu-mapove-okno>`
+   přímo z mapového okna.
+          

@@ -43,11 +43,11 @@ správce vrstev.
 
    Nastavení výpočetního regionu na základě rastrové mapy
 
-.. admonition:: Nastavení regionu na základě rastrové mapy z příkazové
-          řádky
-   :class: cmd
-   
-   :grassCmd:`g.region` rast=elevation
+.. notecmd:: nastavení regionu na základě rastrové mapy
+
+   .. code-block:: bash
+
+      g.region rast=elevation
 
 Zároveň je možné vybrat pro nastavení výpočetního regionu i více
 rastrových či vektorových map najednou.
@@ -56,15 +56,29 @@ rastrových či vektorových map najednou.
 
    Nastavení výpočetního regionu na základě více vybraných mapových vrstev
 
-.. admonition:: Nastavení regionu na základě vektorových map z příkazové řádky
-   :class: cmd
+.. notecmd:: nastavení regionu na základě vektorových map
 
-   :grassCmd:`g.region` vect=busroute1,busroute6
+   .. code-block:: bash
+                
+      g.region vect=busroute1,busroute6
 
-.. note:: Prostorové rozlišení může být nastaveno pouze explicitně
+.. tip:: Prostorové rozlišení může být nastaveno pouze explicitně
    (``res``) nebo na základě rastrových map (``rast``). Pro vektorové
    mapy nehraje prostorové rozlišení žádnou roli a tudíž pro ně není
    ani definováno.
+
+.. _nastaveni-regionu-mapove-okno:
+   
+.. figure:: images/zoom-menu.png
+   :class: middle
+           
+   Z nástrojové lišty mapového okna lze navíc výpočetní region
+   nastavit podle aktuálního pohledu či interaktivně
+
+.. figure:: images/region-set-interactively.png
+   :class: middle
+
+   Příklad definice hranic výpočetního regionu interaktivně
 
 Pokročilé nastavení výpočetního regionu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,10 +122,13 @@ ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
 
    Explicitní nastavení prostorového rozlišení
 
-.. admonition:: Prostorové rozlišení na základě rastrové mapy elevation, hraniční souřadnice s offsetem 1000 mapových jednotek od hranic polygonu města (vektorová mapa mesto)
-   :class: cmd
+.. notecmd:: nastavení prostorového rozlišení na základě rastrové
+             mapy, hraniční souřadnice s offsetem 1000 mapových
+             jednotek od hranic polygonu města
 
-   :grassCmd:`g.region` rast=dem vect=mesto n=n+1000 s=s-1000 w=w-1000 e=e+1000
+   .. code-block:: bash
+
+      g.region rast=dem vect=mesto n=n+1000 s=s-1000 w=w-1000 e=e+1000
 
 Kontrola výpočetního regionu
 ============================
@@ -127,10 +144,11 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 
    Aktuálně nastavený výpočetní region
 
-.. admonition:: Zobrazení aktuálně nastaveného regionu
-   :class: cmd
-           
-   :grassCmd:`g.region` -p
+.. notecmd:: zobrazení aktuálně nastaveného regionu
+
+   .. code-block:: bash
+                
+      g.region -p
 
 Aktuální nastavení výpočetního regionu lze zobrazit i v stavové liště
 mapového okna (volba "Comp. region").
@@ -158,24 +176,26 @@ Formát::
 
    Rozsah zobrazeného území
 
-.. note:: Minimální ohraničující obdélník výpočetního regionu lze v
-          mapovém okně i zobrazit. Hraniční souřadnice budou zobrazeny
-          linie červené barvy, pokud je výpočetní region celou plochou
-          uvnitř aktuálního pohledu. V opačném případě budou hranice
-          výpočetního regionu zobrazeny modrou barvou.
+.. tip::
 
-.. figure:: images/wxgui-mapdisp-show-reg-0.png
-   :class: middle
+   Minimální ohraničující obdélník výpočetního regionu lze v
+   mapovém okně i zobrazit. Hraniční souřadnice budou zobrazeny
+   linie červené barvy, pokud je výpočetní region celou plochou
+   uvnitř aktuálního pohledu. V opačném případě budou hranice
+   výpočetního regionu zobrazeny modrou barvou.
 
-   Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 1)
+   .. figure:: images/wxgui-mapdisp-show-reg-0.png
+               :class: middle
 
-.. figure:: images/wxgui-mapdisp-show-reg-1.png
-   :class: middle
+               Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 1)
 
-   Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 2)
+   .. figure:: images/wxgui-mapdisp-show-reg-1.png
+               :class: middle
 
-.. figure:: images/wxgui-mapdisp-show-reg-2.png
-   :class: middle
+               Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 2)
+
+   .. figure:: images/wxgui-mapdisp-show-reg-2.png
+               :class: middle
                     
-   Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně
+               Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně
 

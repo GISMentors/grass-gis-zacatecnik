@@ -77,3 +77,15 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
    nastavením výpočetního regionu <nastaveni-regionu-mapove-okno>`
    přímo z mapového okna.
           
+.. figure:: images/r-viewshed-1.png
+   :class: large
+
+   Observační bod je v mapovém okně označen černým křížkem,
+   oddélník červené barvy zobrazuje hranice výpočetní regionu
+
+.. figure:: images/viewshed-legend.png
+   :class: large
+           
+   Výsledek analýzy viditelnosti z observačního bodu včetně legendy
+   zobrazující velikost úhlu pod kterým je místo z daného
+   observačního bodu vidět

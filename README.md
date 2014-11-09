@@ -51,7 +51,7 @@ URL:  http://live.osgeo.org/en/download.html
       svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_0 grass70_release
       cd grass70_release
       ./configure --prefix=/usr/local \
-            --with-gdal --with-proj --with-geos \
+            --with-gdal=/usr/local/bin/gdal-config --with-proj --with-geos \
             --with-nls --with-readline --with-cxx --enable-largefile \
             --with-freetype --with-freetype-includes=/usr/include/freetype2 \
             --with-sqlite --with-python --with-wxwidgets --with-pthread --with-cairo

@@ -14,6 +14,10 @@ Reclassify`.
    plovoucí desetinnou čárkou, jsou její hodnoty převedeny automaticky
    na celé číslo.
 
+   Pokud je potřeba reklasifikovat rastrová data s plovoucí desetinnou
+   čárkou, tak je potřeba namísto :grasscmd:`r.reclass` modul
+   :grasscmd:`r.recode`, viz :ref:`příklad níže <r-recode>`
+
 .. note::
 
    Reklasifikací nevzniká fyzicky nová rastrová mapa nýbrž je zapsána
@@ -80,4 +84,9 @@ např.
 
    Výsledná reklasifikovaná mapa včetně :ref:`legendy <map-legend>`
 
-      
+.. _r-recode:
+   
+Reklasifikace rastrových dat s plovoucí desetinnou čárkou
+=========================================================
+
+.. todo::

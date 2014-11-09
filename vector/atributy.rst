@@ -1,5 +1,6 @@
 Atributová data vektorových prvků
 ---------------------------------
+.. _editace-atributovych-dat:
 
 Editace atributových dat
 ========================

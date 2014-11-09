@@ -2,7 +2,7 @@ Interaktivní dotazování
 -----------------------
 
 Funkcionalita interaktivního dotazování je dostupná z nástrojové lišty
-*mapového okna*
+*mapového okna*.
 
 .. figure:: images/map-display-query.png
    :class: middle
@@ -10,7 +10,7 @@ Funkcionalita interaktivního dotazování je dostupná z nástrojové lišty
 .. figure:: images/raster-query.png
    :class: large
       
-   Podle typu aktuálně zvolené mapy ve *správni vrstev* :fignote:`(1)`
+   Podle typu aktuálně zvolené mapy ve *správci vrstev* :fignote:`(1)`
    se zobrazí informace rastrového :fignote:`(2)` či vektorového
    charakteru.
 
@@ -20,7 +20,8 @@ Rastrová data
 Výstup pro rastrová data obsahuje:
 
 * souřadnice dotazu
-* barevnou hodnotu přižazenou na základě :ref:`tabulky barev <tabulka-barev>`
+* barevnou hodnotu přiřazenou na základě :ref:`tabulky barev
+  <raster-color-table>`
 * hodnotu rastrové buňky a
 * připadně popisek dané hodnoty
 

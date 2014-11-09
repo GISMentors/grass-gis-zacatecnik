@@ -15,8 +15,8 @@ Manage colors --> Manage color rules interactively`.
 .. noteadvanced::
    
    Podobu tabuky barev pro zvolenou rastrovou mapu vypisuje modul
-   :grasscmd:`r.colors.out` dostupný z menu *správce vrstev*
-   :menuselection:`Raster --> Manage colors --> Export color table`.
+   :grasscmd:`r.colors.out` (:menuselection:`Raster --> Manage colors
+   --> Export color table`).
 
 
    .. figure:: images/r-colors-out-dmt.png
@@ -33,7 +33,7 @@ včetně náhledu na data.
    Příklad interaktivně změněné tabulky barev :fignote:`(1)` pouze v
    náhledu :fignote:`(2)`
 
-Nástoj umožňuje použít navíc některou z předdefinovaných tabulek
+Nástroj umožňuje použít navíc některou z předdefinovaných tabulek
 barev.
 
 .. figure:: images/color-table-dmt-defined-0.png

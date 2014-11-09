@@ -1,7 +1,7 @@
 Reklasifikace rastrových dat
 ----------------------------
 
-Reklasifikaci rastrové mapy vzniká nová rastrová mapa na základě
+Reklasifikací rastrové mapy vzniká nová rastrová mapa na základě
 jejich původních hodnot. Tento proces provádí v systému GRASS modul
 :grasscmd:`r.reclass` dostupný z menu *správce vrstev*
 :menuselection:`Raster --> Change category values and labels -->
@@ -15,19 +15,19 @@ Reclassify`.
    na celé číslo.
 
    Pokud je potřeba reklasifikovat rastrová data s plovoucí desetinnou
-   čárkou, tak je potřeba namísto :grasscmd:`r.reclass` modul
-   :grasscmd:`r.recode`, viz :ref:`příklad níže <r-recode>`
+   čárkou, tak je potřeba namísto :grasscmd:`r.reclass` použít modul
+   :grasscmd:`r.recode`, viz :ref:`příklad níže <r-recode>`.
 
 .. note::
 
-   Reklasifikací nevzniká fyzicky nová rastrová mapa nýbrž je zapsána
+   Reklasifikací nevzniká fyzicky nová rastrová mapa, nýbrž je zapsána
    pouze reklasifikační tabulka. To má za následek to, že nelze
    podkladovou mapu přejmenovat či odstranit.
 
 Příklad
 =======
 
-Rastrovou mapu digitálního modelu terému reklasifikuje do čtyř typů
+Rastrovou mapu digitálního modelu terému reklasifikujeme do čtyř typů
 podle níže uvedené reklasifikační tabulky:
 
 .. table::
@@ -60,7 +60,7 @@ anebo včetně popisku
 
 .. figure:: images/r-reclass-dmt.png
 
-   V dialogu modulu :grasscmd:`r.reclass` tedy nejprve zadáme název
+   V dialogu modulu :grasscmd:`r.reclass` nejprve zadáme název
    rastrové mapy :fignote:`(1)`, kterou chceme reklasifikovat, název
    výstupní reklasifikované mapy :fignote:`(2)` a reklasifikační
    tabulku :fignote:`(3)`

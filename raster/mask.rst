@@ -4,15 +4,14 @@ Nastavení masky
 Pomocí masky lze definovat nepravidelnou oblast výpočtu. To souvisí s
 :ref:`výpočetním regionem <region>`, který má obecně tvar
 obdélníka. Masku lze vytvořit a odstranit pomocí modulu
-:grasscmd:`r.mask` dostupného ze *správce vrstev* z menu
-:menuselection:`Raster --> Mask`.
+:grasscmd:`r.mask` (:menuselection:`Raster --> Mask`).
 
 .. figure:: images/mask-statusbar.png
    :class: middle
            
-   To zda je maska aktivována zjistíte ze stavové lišty mapového okna
+   To zda je maska aktivována, zjistíte ze stavové lišty mapového okna
    
-.. note::
+.. tip::
    
    Pokud si přejete přepsat již existující masku musíte přidat přepínač
    :option:`--overwrite`.
@@ -23,8 +22,8 @@ obdélníka. Masku lze vytvořit a odstranit pomocí modulu
 
    Maska je v systému GRASS definovaná jako standardní rastrová mapa s
    názvem :map:`MASK`. Buňky s hodnotou no-data anebo 0 budou při
-   výpočtu ignorovány, naopak nenulové hodnoty označují buňky jejichž
-   hodnota nebude ve výpočtu ignorována.
+   výpočtu ignorovány, naopak nenulové hodnoty označují buňky, jejichž
+   hodnota nebude při výpočtu ignorována.
 
    Pokud rastrovou mapu s tímto názvem odstraníte, bude tím
    deaktivována i maska.
@@ -74,9 +73,9 @@ Příklad nastavení masky na základě rastrové mapy
 Příklad nastavení masky na základě vektorové mapy
 =================================================
 
-Na tomto místě si ukážeme postup vytvoření masky na základě hranice
-Ústeckého kraje. Vektorová mapa kraje vznikla na základě jednoduchého
-:ref:`atributového dotazu <atributove-dotazy>`.
+Na tomto místě si ukážeme postup vytvoření masky na základě území
+Ústeckého kraje. Vektorová mapa kraje vznikla jednoduchým 
+:ref:`atributovým dotazem <atributove-dotazy>`.
 
 .. figure:: images/dmt-uk.png
    :class: middle

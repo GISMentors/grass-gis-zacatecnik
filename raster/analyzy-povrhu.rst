@@ -2,8 +2,8 @@ Analýzy povrchu
 ---------------
 
 Základní topografické analýzy povrchu poskytuje modul
-:grasscmd:`r.slope.aspect`, který je dostupný z menu *správce vrstev*
-:menuselection:`Raster --> Terrain analysis --> Slope and aspect`.
+:grasscmd:`r.slope.aspect` (:menuselection:`Raster --> Terrain
+analysis --> Slope and aspect`).
 
 .. figure:: images/r-slope-aspect-0.png
                            
@@ -13,8 +13,8 @@ Základní topografické analýzy povrchu poskytuje modul
 
 .. important::
 
-   Jako ostatní moduly pro zpraování rastrových dat i tento modul
-   pracuje v aktálním výpočetním regionu. Proto je vhodné před
+   Jako ostatní moduly pro zpracování rastrových dat i tento modul
+   pracuje v aktuálním výpočetním regionu. Proto je vhodné před
    výpočtem tento :ref:`region nastavit podle vstupní rastrové mapy
    <nastaveni-regionu>`.
 
@@ -84,7 +84,7 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
    oddélník červené barvy zobrazuje hranice výpočetní regionu
 
 .. figure:: images/viewshed-legend.png
-   :class: large
+   :class: middle
            
    Výsledek analýzy viditelnosti z observačního bodu včetně legendy
    zobrazující velikost úhlu pod kterým je místo z daného

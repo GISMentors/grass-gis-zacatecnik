@@ -2,9 +2,9 @@ Prostorové dotazy
 -----------------
 
 Prostorové dotazy, tj. výběr geoprvků na základě jejich prostorových
-vztahů, zajišťuje modul :grasscmd:`v.select` dostupný z menu
-:menuselection:`Vector --> Feature selection --> Select by another
-map`. Nativně tento modul podporuje pouze jeden prostorový operátor:
+vztahů, zajišťuje modul :grasscmd:`v.select` (:menuselection:`Vector
+--> Feature selection --> Select by another map`). Nativně tento modul
+podporuje pouze jeden prostorový operátor:
 
 * *overlap* - geoprvky se částečně či úplně překrývají
 
@@ -17,8 +17,8 @@ rozšířena o:
 * *intersects* - geoprvky se prostorově protínají
 * *touches* - geoprvky se prostorově dotýkají
 * *crosses* - geoprvky se kříží
-* *within* - vektorový prvek je prostorově lokalizován uvnitř jiného prvku
-* *contains* - vektorový prvek je prostorově obsažen v jiném prvku
+* *within* - geoprvek je prostorově lokalizován uvnitř jiného geoprvku
+* *contains* - geoprvek je prostorově obsažen v jiném geoprvku
 * *overlaps* - geoprvky se prostorově překrývají
 * *relate* - obecný prostorový vztah definovaný jako vztahová matice
 

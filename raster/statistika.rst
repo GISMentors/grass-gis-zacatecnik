@@ -1,21 +1,21 @@
 Základní statistiky rastrových dat
 ----------------------------------
 
-Kromě :ref:`základních metadat <raster-metadata>` rastrových map
-systém GRASS disponuje dalšími základními moduly pro výpis
-statistických informací o rastrových datech. Jde o:
+Kromě výpisu :ref:`základních metadat <raster-metadata>` rastrových
+map systém GRASS disponuje dalšími moduly pro výpis statistických
+informací rastrových dat. Jde o:
 
 * :grasscmd:`r.report` pro přehledný výpis informací o rastorové mapě
 * :grasscmd:`r.univar` pro základní statistiku  
-* :grasscmd:`r.category` pro výpis informací o kategoriích
 * :grasscmd:`r.stats` pro výpis vybraných statistik
     
 Report
 ======
 
 Základní informace o rastrových datech poskytuje modul
-:grasscmd:`r.report` dostupný buď z menu *správce vrstev*
-:menuselection:`Raster --> Repors and statistis --> Sum area by raster map and category`
+:grasscmd:`r.report` dostupný buď z menu :menuselection:`Raster -->
+Repors and statistis --> Sum area by raster map and category` ýanebo z
+kontextového menu *správce vrstev*.
 
 .. figure:: images/lmgr-r-report.png
 
@@ -34,7 +34,7 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
 
 .. figure:: images/r-report-0.png
 
-   Nejprve vybereme rastrovou mapu :fignote:`(1)` pro kterou si
+   Nejprve vybereme rastrovou mapu :fignote:`(1)`, pro kterou si
    přejeme vypsat report
    
 .. figure:: images/r-report-1.png
@@ -57,7 +57,7 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
    drtivá většina modulů pro zpracování rastrových dat pracuje vždy v
    aktuální výpočetním regionu! Pokud např. změníme prostorové
    rozlišení na 100m, změní se i report rastrové mapy
-   :map:`dmt`. Modul nejprve data převzorkuje metou
+   :map:`dmt`. Modul nejprve data převzorkuje metodou
    :wikipedia-en:`nejbližšího souseda <Nearest neighbor
    interpolation>` do mřížky s velikostí buňky 100x100m a teprve nad
    těmito daty vypočítá udáje pro report.
@@ -77,9 +77,9 @@ Základní statistika
 ===================
 
 Základní statistiku o rastrových datech poskytuje modul
-:grasscmd:`r.univar` dostupný buď z menu *správce vrstev*
-:menuselection:`Raster --> Repors and statistics --> Univariate raster
-statistics`.
+:grasscmd:`r.univar` dostupný buď z menu :menuselection:`Raster -->
+Repors and statistics --> Univariate raster statistics` anebo z
+kontextového menu *správce vrstev*.
 
 .. figure:: images/lmgr-r-univar.png
 
@@ -88,26 +88,19 @@ statistics`.
    Příklad statistiky pro rastrovou mapu :map:`dmt` (s výpočetním
    regionem nastaveným na tuto mapu)
 
-Informace o kategoriích
-=======================
-
-.. todo::
-
-   Potřebujeme nějakou kategorizovanou mapu (třeba výsledek klasifikace)
-
 Pokročilá statistika
 ====================
 
 Modul :grasscmd:`r.stats` je základní modul poskytující statistiku
 rastrových dat, jde nicméně o modul určený především pro pokročilé
 uživatele, kteří si píší vlastní skripty. Modul je dostupný z menu
-*správce vrstev* :menuselection:`Raster --> Repors and statistics -->
-General statistics`.
+:menuselection:`Raster --> Repors and statistics --> General
+statistics`.
 
 .. notecmd:: výpisu statistiky rastrové mapy
 
    Výpis počtu buněk na základě 10 intervalů seřazených sestupně (znak
-   `*` označuje no-data)
+   ``*`` označuje no-data)
 
    .. code-block:: bash
 

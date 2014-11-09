@@ -38,21 +38,19 @@ spustit několika způsoby:
 
                g.gui.dbmgr map=obce
 
-Dialog správce atributových dat má **tři záložky**:
+Dialog správce atributových dat má *tři záložky*:
 
 .. figure:: images/wxgui-dbmgr-tabs.png
             :class: middle
 
-            Záložky správce atributových dat
-
 :item:`Browse data`
-      Prohlížení, dotazování a editace atributových dat (záznamů v tabulce)
+      Prohlížení, dotazování a :ref:`editace <editace-atributovych-dat>` atributových dat (záznamů v tabulce)
 
 :item:`Manage tables`
       Přidání, přejmenování, odebraní sloupce v atributové tabulce
 
 :item:`Manage layers`
-      Správa atributových tabulek připojených k vektorové mapě
+      Správa atributových tabulek připojených k vektorové mapě (pro pokročilé)
 
 Dotazování
 ^^^^^^^^^^

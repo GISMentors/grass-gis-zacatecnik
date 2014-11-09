@@ -50,15 +50,13 @@ Intro
    :class: toc
 
    +--------------------------------+--------------------------------+
-   |  Geodata                       | Dotazování                     |
+   |  Dotazování                    |                                |
    +================================+================================+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
+   | .. toctree::                   |                                |
+   |   :maxdepth: 1                 |                                |
    |                                |                                |
-   |   intro/import                 |   intro/atributove-dotazy      |
-   |   intro/export                 |   intro/prostorove-dotazy      |
-   |   intro/transformace           |                                |
-   |   misc/georeferencovani        |                                |
+   |   intro/atributove-dotazy      |                                |
+   |   intro/prostorove-dotazy      |                                |
    +--------------------------------+--------------------------------+
 
 Rastrové analýzy
@@ -96,15 +94,32 @@ Další témata
 ============
 
 .. table::
-   :class: noborder
+   :class: toc
 
    +--------------------------------+--------------------------------+
+   |  Geodata                       | Mapové výstupy                 |
+   +================================+================================+
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   misc/graficky-modeler        |   misc/mapove-elementy         |
-   |   misc/lokalizace              |   misc/mapove-vystupy          |
-   |   misc/grass-qgis              |                                |
+   |   intro/import                 |   misc/mapove-elementy         |
+   |   intro/export                 |   misc/mapove-vystupy          |
+   |   intro/transformace           |                                |
+   |   misc/georeferencovani        |                                |
+   +--------------------------------+--------------------------------+
+
+.. table::
+   :class: toc
+        
+   +--------------------------------+--------------------------------+
+   |  Různé                         |                                |
+   +================================+================================+
+   | .. toctree::                   | .. toctree::                   |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
+   |                                |                                |
+   |   misc/graficky-modeler        |   misc/grass-qgis              |
+   |   misc/lokalizace              |                                |
+   |                                |                                |
    +--------------------------------+--------------------------------+
 
 Související materiály
@@ -144,6 +159,7 @@ Technická podpora
 Užitečné odkazy
 ===============
 
+* http://freegis.fsv.cvut.cz
 * http://epsg.io
 
 Licence

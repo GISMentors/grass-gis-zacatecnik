@@ -18,9 +18,9 @@ Nástroj pro výběr :grassCmd:`v.extract` můžeme spustit z
     abyste mohli pracovat s daty v nich obsaženými. :grassCmd:`g.mapsets` vám
     umožní mapsety do cesty přidat.
 
-Vyberte z vrstvy ``doprava`` z mapsetu ``osm`` a zní všechny dálnice (vektory
+Vyberte z vrstvy :map:`doprava` z mapsetu :map:`osm` a zní všechny dálnice (vektory
 splňující podmínku ``highway = 'motorway'``. Uložte výsledek do vrstvy
-``dalnice``.
+:map:`dalnice`.
 
 .. figure:: images/v-extract.png
 
@@ -42,11 +42,11 @@ maloplošných chráněných území. Nejprve spojíme velkoplošná a maloploš
 jedné vrstvy.
 
 Spustíme modul :grasscmd:`v.overlay`, který nám umožní práci s vektory
-:menuselection:`Vector --> Overlay vector maps -> Overlay vector maps [v.overlay]`
+:menuselection:`Vector --> Overlay vector maps --> Overlay vector maps [v.overlay]`
 
 Spojení
 ~~~~~~~
-Vytvoříme mapu ``chranena_uzemi`` spojením velkoplošných a maloplošných
+Vytvoříme mapu :map:`chranena_uzemi` spojením velkoplošných a maloplošných
 chráněných území.
 
 .. figure:: images/v-overlay-01.png
@@ -59,7 +59,7 @@ atributy první vrstvy označeny prefixem ``a_`` a atributy druhé vrstvy prefix
 
 .. figure:: images/v-overlay-01-table.png
 
-    Atributy vrstvy ``chranene_uzemi``
+    Atributy vrstvy :map:`chranene_uzemi`
 
 Průnik
 ~~~~~~
@@ -81,3 +81,21 @@ Zjistíme, jak obalová zóna zasahuje do chráněných území. Opět spustíme
     Křivoklátsko
 
 Podobně fungují i operátory ``XOR`` a ``NOT``.
+
+Spojení vektorových map
+-----------------------
+Alternativním způsobem spojení vektorových map je modul :grasscmd:`v.patch`. Na
+rozdíl od :grasscmd:`v.overlay` tento modul pozná, pokud jsou tabulky atributů
+stejné a místo aby rozšiřoval jejich počet, sloučí je automaticky dohromady.
+
+V tomto příkladu si vytvoříme novou mapu :map:`silnice`, která bude obsahovat
+mapy :map:`dalnice, I_trida, II_trida, III_trida` sloučené dohromady.
+
+Spustíme modul :grasscmd:`v.patch` například z menu 
+:menuselection:`Vector --> Overlay vector maps --> Patch vector maps [v.patch]`
+
+.. figure:: images/v-patch-01.png
+
+    V modulu :grasscmd:`v.patch` jsme nastavili jako vstupní vrstvy dalnice,
+    :map:`I_trida, II_trida` a :map:`III_trida` z mapsetu ``osm`` a výstup jsme pojmenovali
+    :map:`silnice`

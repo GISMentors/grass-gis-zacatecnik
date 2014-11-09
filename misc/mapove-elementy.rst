@@ -17,6 +17,8 @@ dostupná z nástrojové lišky mapového okna.
    <wxGUI.psmap>`, více v kapitole :ref:`mapové výstupy
    <mapove-vystupy>`.
 
+.. _map-legend:
+   
 Legenda
 =======
 
@@ -78,7 +80,39 @@ umístěnou v mapovém okně.
    :grasscmd:`Cartographic Composer <wxGUI.psmap>`, více v kapitole
    :ref:`mapové výstupy <mapove-vystupy>`.
 
+.. tip::
 
+   Pokud se popisky legenda nezobrazují korektně, je potřeba změnit
+   font legendy.
+
+   .. figure:: images/legend-broken.png
+
+   Písmo změníme z dialogu nastavení dostupného z menu *správce
+   vrstev* :menuselection:`Settings --> Preferences` anebo z
+   nástrojové lišty
+
+   .. figure:: images/lmgr-settings.png
+
+   .. figure:: images/settings-font.png            
+      :class: middle
+              
+      V záložce :item:`Map display` zvolíme vhodný font
+
+   .. figure:: images/font-dialog.png
+      :class: small
+           
+      Kromě fontu :fignote:`(1)` změníme kodóvání na UTF-8
+      :fignote:`(2)`
+
+   .. figure:: images/map-render.png
+      :class: large
+              
+      Obsah mapové okna překreslíme
+   
+   .. figure:: images/legend-ok.png
+
+      Výsledek
+      
 Směrová růžice
 ==============
 

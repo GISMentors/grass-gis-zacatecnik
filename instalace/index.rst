@@ -1,7 +1,7 @@
 Instalace
 =========
 
-GRASS GIS byl od svého počátku (tj. první poloviny 80.let) vyvíjen na
+GRASS GIS byl od svého počátku (tj. první poloviny 80.let!) vyvíjen na
 platformách, které mají blízko k :wikipedia:`Unixovým <Unix>`
 operačním systémům.
 
@@ -11,7 +11,10 @@ operačním systémům.
    Construction Engineering Research Laboratory)` před počítačem Compaq
    386 na který portoval GRASS
 
+.. youtube:: 7U3Hf0qI4JLc
 
+             GRASS GIS (CERL, 1987)
+        
 Postupem času byl portován na další platformy a nadále vyvíjen jako
 striktně multiplatformní informační systém. V současnosti mezi
 oficiálně podporované platformy patří :wikipedia:`GNU/Linux`,

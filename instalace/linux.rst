@@ -43,6 +43,8 @@ Postup instalace pro Ubuntu
 Kompilace
 =========
 
+.. todo:: přesunout mimo intro...
+          
 Nejprve si stáhneme zdrojové kódy systému GRASS ze systému pro správu
 verzí `SVN
 <http://svn.osgeo.org/grass/grass/branches/releasebranch_7_0>`_.

@@ -6,8 +6,8 @@ URL: http://www.gismentors.eu/skoleni/grass-gis.html#zacatecnik
 Stažení dat
 -----------
 
-cd grassdata
-rsync -avz skoleni@46.28.111.140:~/grassdata/skoleni .
+      cd grassdata
+      rsync -avz skoleni@46.28.111.140:~/grassdata/skoleni .
 
 Poznámky k přípravě VMDK
 ------------------------

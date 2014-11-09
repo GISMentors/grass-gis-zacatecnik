@@ -39,16 +39,16 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 .. figure:: images/help_loc_struct.png
             :class: middle
                     
-            Struktura GRASS DataBase, vztah Lokace a Mapsetů, umístění souborů
+            Struktura GRASS DataBase, vztah lokace a mapsetů, umístění souborů
             s daty pro různé typy map.
       
 .. noteadvanced:: 
    
    GRASS databanka je definovaná proměnnou prostředí
    :envvar:`GISDBASE`, lokace :envvar:`LOCATION_NAME` a mapset
-   proměnnou :envvar:`MAPSET`, viz :grasscmd:`g.gisenv`.
+   proměnnou :envvar:`MAPSET`, viz modul :grasscmd:`g.gisenv`.
 
-.. admonition:: Obvyklé umístění adresáře s geodaty 
+.. note:: **Obvyklé umístění adresáře s geodaty**
       
       Adresář s geodaty je většinou umístěn v domovském adresáři pod
       názvem :file:`grassdata`. Pod :wikipedia:`MS Windows` to je
@@ -79,7 +79,7 @@ location`.
 
 Lokaci lze vytvořit několika různými postupy:
 
-* výběrem kartografické projekce, referenčního elipsoidu ze seznamu
+* výběrem kartografického zobrazení, referenčního elipsoidu
 * pomocí :wikipedia:`EPSG` kódu
 * na základě georeferencovaných dat
 * na základě :wikipedia-en:`WKT <Simple_Features#Well-known_text>` či
@@ -167,7 +167,7 @@ Poté se spustí systém GRASS s právě vytvořenou lokací.
 
 .. figure:: images/wxgui-loc-s-jtsk-8.png
 
-.. admonition:: Vytvoření lokace z příkazové řádky
+.. notecmd:: vytvoření lokace
                 
    .. code-block:: bash
 
@@ -186,7 +186,7 @@ definujeme manuálně.
 
 .. note::
 
-   Pokud bysme chtěli použít EPSG kód, tak to je :epsg:`32633`.
+   Pokud bysme chtěli použít EPSG kód, tak jde o :epsg:`32633` (33N).
 
 .. figure:: images/wxgui-loc-utm-1.png
 
@@ -226,7 +226,7 @@ Vytvoření lokace pro data v souřadnicovém systému S-42
 
 .. note::
 
-   Pokud bysme chtěli použít EPSG kód, tak to je :epsg:`3835`.
+   Pokud bysme chtěli použít EPSG kód, tak jde o :epsg:`3835`.
 
 .. figure:: images/wxgui-loc-s42-2.png
 
@@ -303,7 +303,7 @@ Vytvoření lokace na základě EPSG kódu
 
             Vytvoření lokace na základě EPSG kódu (krok 4)
 
-.. admonition:: Příklad vytvoření lokace pří startu systému GRASS z příkazové řádky
+.. notecmd:: vytvoření lokace pří startu systému GRASS
 
    .. code-block:: bash
 

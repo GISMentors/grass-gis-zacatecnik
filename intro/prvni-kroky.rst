@@ -3,10 +3,10 @@
 
 Po instalaci (viz návod pro :doc:`GNU/Linux <../instalace/linux>` a
 :doc:`MS Windows <../instalace/windows>`) systému GRASS je potřeba
-zajistit geodata ve struktuře, kterou systém vyžaduje (viz
+opatřit geodata ve struktuře, kterou systém vyžaduje (viz
 :doc:`koncept lokací a mapsetů <../intro/struktura-dat>`).
 
-.. note::
+.. tip::
 
    Na webových stránkách projektu GRASS jsou volně ke stažení
    `testovací a edukační datasety
@@ -19,8 +19,16 @@ zajistit geodata ve struktuře, kterou systém vyžaduje (viz
    instalátoru <nativni-instalator-data>`. V tomto případě najdete
    data v adresáři ``%USERPROFILE%\Documents\grassdata``.
 
-Pro další práci předpokládáme, že máme k dispozici GRASS lokaci
-datasetu *North Carolina* umístěnou v adresáři ``/opt/grassdata``.
+.. note::
+
+   Pro účely školení byl vytvořena vlastní lokace z daty pocházejících
+   z otevřených či veřejných zdrojů jako je `EU-DEM
+   <http://www.eea.europa.eu/data-and-maps/data/eu-dem>`_, `RÚIAN
+   <http://www.cuzk.cz/ruian/RUIAN.aspx>`_, `OpenStreetMap
+   <http://wiki.openstreetmap.org/wiki/Main_Page>`_, `Dibavod
+   <http://www.dibavod.cz/>`_.
+
+   Předpřipravená GRASS lokace je dostupná jako `zip archiv <>`_.
 
 Spuštění systému GRASS
 ======================
@@ -38,7 +46,7 @@ standardní cestou, měl by být dostupný z hlavní nabídky vašeho
 
             Spuštění systému GRASS z nabídky *Start* v MS Windows.
 
-.. admonition:: Spuštění systému GRASS z příkazové řádky
+.. notecmd:: spuštění systému GRASS
 
    V :abbr:`OS (Operační systém)` :wikipedia:`GNU/Linux` je dostupný systém GRASS po
    instalaci z příkazové řádky jako program ``grassXY``, kde
@@ -52,8 +60,8 @@ standardní cestou, měl by být dostupný z hlavní nabídky vašeho
 Ve výchozím nastavení program nastartuje v grafickém módu. Úvodní
 dialog umožňuje nastavit :doc:`adresář s geodaty, lokaci a mapset
 <../intro/struktura-dat>`, které jsou nutné pro samotné spuštění
-systému. Po jejích zadaní lze pokračovat dále (tlačítko ``Start
-GRASS``).
+systému. Po jejich zadaní lze pokračovat dále (tlačítko :kbd:`Start
+GRASS`).
 
 .. _spusteni-grass:
 
@@ -62,16 +70,18 @@ GRASS``).
             Úvodní dialog systému GRASS pro výběr adresáře s geodaty :fignote:`(1)`,
             lokace :fignote:`(2)` a mapsetu :fignote:`(3)`.
 
-Po spuštění systému GRASS se objeví **správce vrstev** (Layer Manager) a
-**mapové okno** (Map Display).
+Po spuštění systému GRASS se objeví *správce vrstev* (Layer Manager) a
+*mapové okno* (Map Display).
 
 .. figure:: images/grass-gui-launch.png
-            :class: middle
+            :class: large
 
             Základní komponenty GUI systému GRASS - správce vrstev
             :fignote:`(1)` a mapové okno :fignote:`(2)`.
 
-.. admonition:: Příklady spuštění z příkazové řádky (pro pokročilé uživatele)
+.. noteadvanced::
+   
+   **Příklady spuštění z příkazové řádky**
 
                 * GRASS v textovém rozhraní, adresář s geodaty nastavena na
                   ``/opt/grassdata``, lokace
@@ -99,8 +109,8 @@ Po spuštění systému GRASS se objeví **správce vrstev** (Layer Manager) a
 Zobrazení geodat v mapovém okně
 ===============================
 
-Rastrová či vektorová data lze do *stromu vrstev* (viz záložka *Map
-layers*) přidávat z menu :menuselection:`File --> Map display`, nástrojové lišty či
+Rastrová či vektorová data lze do *stromu vrstev* (viz záložka :item:`Map
+layers`) přidávat z menu :menuselection:`File --> Map display`, nástrojové lišty či
 přímo z příkazové řádky *správce vrstev*.
 
 .. note::
@@ -135,9 +145,9 @@ přímo z příkazové řádky *správce vrstev*.
 Rastrová data
 ^^^^^^^^^^^^^
 
-Pro přidání *rastrové mapy* existují celkem čtyři postupy:
+*Rastrovou mapu* lze přidat čtyřmi různými způsoby:
 
-* nástrojová lišta
+* z nástrojové lišty
 
 .. figure:: images/wxgui-toolbar-raster.png
             
@@ -147,11 +157,11 @@ Pro přidání *rastrové mapy* existují celkem čtyři postupy:
 
             Volba rastrové mapy
 
-* menu :menuselection:`File --> Map display --> Add raster`
+* z menu :menuselection:`File --> Map display --> Add raster`
 
-* klávesová zkratka :kbd:`Ctrl+Shift+R`
+* pomocí klávesové zkratky :kbd:`Ctrl+Shift+R`
 
-* příkazová řádka (``Command console``) správce vrstev, příkaz :grasscmd:`d.rast`
+* z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.rast`
 
 .. figure:: images/wxgui-console.png
 
@@ -190,9 +200,9 @@ Jde o následující typy rastrových dat:
 Vektorová data
 ^^^^^^^^^^^^^^
 
-Podobně pro přidání *vektorové mapy*:
+Podobně lze přidat *vektorovou mapu*:
 
-* nástrojová lišta
+* z nástrojové lišty:
 
 .. figure:: images/wxgui-toolbar-vector.png
 
@@ -202,11 +212,11 @@ Podobně pro přidání *vektorové mapy*:
 
             Volba vektorové mapy
 
-* menu :menuselection:`File --> Map display --> Add vector`
+* z menu :menuselection:`File --> Map display --> Add vector`
 
-* klávesová zkratka :kbd:`Ctrl+Shift+V`
+* pomocí klávesové zkratky :kbd:`Ctrl+Shift+V`
 
-* příkazová řádka (``Command console``) správce vrstev, příkaz :grasscmd:`d.vect`
+* z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.vect`
 
 .. figure:: images/wxgui-console-vector.png
 
@@ -235,14 +245,18 @@ Příkazy systému GRASS
 
 GRASS GIS je *modulární systém*, který disponuje poměrně rozsáhlou
 množinou malých, ale výkonných programů (v terminologii systému GRASS
-*modulů*). To odpovídá koncepci :wikipedia:`Unixu <Unix>` jako
-takového. Daný program má za úkol vyřešit dílčí problém, měl by být co
-nejmenší a poměrně jednoduchý.
+*modulů*).
 
-Jednotlivé příkazy - GRASS moduly - mají konzistentní syntaxi, jejich
-jména se skládají z předpony označující skupinu příkazů a krátkého
-názvu napovídající účel modulu (viz tab. níže). Například modul
-:grasscmd:`v.buffer` patří do skupiny ``vector`` a je určen pro vytvoření
+.. note::
+   
+   To odpovídá koncepci :wikipedia:`Unixu <Unix>` jako
+   takového. Daný program má za úkol vyřešit dílčí problém, měl by být co
+   nejmenší a poměrně jednoduchý.
+
+Jednotlivé příkazy - moduly - mají konzistentní syntaxi, jejich
+názvy se skládají z předpony označující skupinu příkazů a krátkého
+názvu napovídající účel modulu (viz tabulka níže). Například modul
+:grasscmd:`v.buffer` patří do skupiny *vector* a je určen pro vytvoření
 obalové zóny (tzv. bufferu) nad vektorovými daty.
 
 .. table::
@@ -268,7 +282,7 @@ obalové zóny (tzv. bufferu) nad vektorovými daty.
    | ``v.``   | :grasscmd:`vector`             | zpracování 2D/3D vektorových dat              |
    +----------+--------------------------------+-----------------------------------------------+
 
-Příkazy (tj. moduly) systému GRASS lze spouštěn několika způsoby
+Příkazy (tj. moduly) systému GRASS lze spouštět několika způsoby
 (příklad pro :grasscmd:`r.buffer`):
 
 * z menu správce vrstev
@@ -292,7 +306,8 @@ Příkazy (tj. moduly) systému GRASS lze spouštěn několika způsoby
 
 Pokud jsou zadány všechny povinné parametry (v případě modulu
 :grasscmd:`r.buffer` jde o :option:`input`, :option:`output` a
-:option:`distances`), tak se modul spustí přímo.
+:option:`distances`), tak se modul spustí přímo. Pokud tato podmínka
+není splněna, zobrazí se dialog nástroje.
 
 .. figure:: images/wxgui-console-r-buffer-launch.png
 

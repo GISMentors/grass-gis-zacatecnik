@@ -23,7 +23,7 @@ Nativní instalátor
 
 * http://grass.osgeo.org/grass70/binary/mswindows/native/
 
-.. admonition:: Poznámka pro pokročilé uživatele
+.. noteadvanced:: 
 
    V případě nutnosti aktuálnější verze či testování
    nových vlastností je možné využít denní snapshoty
@@ -111,7 +111,7 @@ OSGeo4W
 
 	    GRASS spustíme z nabídky Start ``OSGeo4W``.
 
-.. admonition:: Poznámka pro pokročilé uživatele
+.. noteadvanced::
 
    V rámci OSGeo4W frameworku je možné nainstalovat i *denní
    snapshoty* systému GRASS. To se hodí v případě, že potřebujete

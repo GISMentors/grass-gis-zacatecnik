@@ -86,7 +86,8 @@ Vektorové analýzy
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   vector/prostorove-funkce     |   vector/sitove-analyzy        |        
+   |   vector/editace               |   vector/sitove-analyzy        |        
+   |   vector/prostorove-funkce     |                                |        
    +--------------------------------+--------------------------------+
 
 Další témata

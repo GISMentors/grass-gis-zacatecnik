@@ -89,6 +89,7 @@ Vektorové analýzy
    |                                |                                |
    |   vector/editace               |   vector/sitove-analyzy        |        
    |   vector/prostorove-funkce     |                                |        
+   |   vector/atributy              |                                |        
    +--------------------------------+--------------------------------+
 
 Další témata

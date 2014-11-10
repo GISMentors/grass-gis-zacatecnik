@@ -151,6 +151,7 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
 
    ::
 
+      0:Rovina
       1:V
       2:JV
       3:J

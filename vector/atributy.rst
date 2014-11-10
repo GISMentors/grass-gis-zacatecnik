@@ -5,8 +5,8 @@ Atributová data vektorových prvků
 Editace atributových dat
 ========================
 
-Správce atributových dat umožňuje kromě dotazování i atributová data
-**modifikovat**.
+Správce atributových dat umožňuje kromě :ref:`dotazování
+<atributove-dotazy>` i atributová data **modifikovat**.
 
 .. youtube:: UZswOcIyaX8
 

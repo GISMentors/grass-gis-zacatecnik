@@ -41,7 +41,9 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
                     
             Struktura GRASS DataBase, vztah lokace a mapsetů, umístění souborů
             s daty pro různé typy map.
-      
+
+.. todo:: search_path...
+                      
 .. noteadvanced:: 
    
    GRASS databanka je definovaná proměnnou prostředí

@@ -116,9 +116,7 @@ Další témata
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   misc/graficky-modeler        |   misc/grass-qgis              |
-   |   misc/lokalizace              |                                |
-   |                                |                                |
+   |   misc/graficky-modeler        |    misc/lokalizace             |
    +--------------------------------+--------------------------------+
 
 Související materiály
@@ -151,9 +149,9 @@ Technická podpora
  * `registrace <http://lists.osgeo.org/mailman/listinfo/grass-user>`_
  * `archiv <http://lists.osgeo.org/pipermail/grass-user/>`_
    
-*Komerční podpora v ČR*
+.. *Komerční podpora v ČR*
            
-* OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
+.. * OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
 
 Užitečné odkazy
 ===============

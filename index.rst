@@ -120,20 +120,6 @@ Další témata
    |   misc/graficky-modeler        |   misc/lokalizace              |
    +--------------------------------+--------------------------------+
 
-Poznámky pro pokročilé uživatele
-================================
-
-.. table::
-   :class: toc
-
-   +--------------------------------+--------------------------------+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
-   |                                |                                |
-   |   instalace/linux-kompilace    |                                |
-   +--------------------------------+--------------------------------+        
-
-
 Související materiály
 =====================
 

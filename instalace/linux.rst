@@ -4,9 +4,16 @@ GNU Linux
 ---------
 
 Systém GRASS je dostupný ve většině rozšířených Linuxových distribucí
-jako tzv. balíček. Pokud balíčkovací systém dané linuxové distribuce
-neobsahuje GRASS nebo nabízí jeho zastaralou verzi lze systém GRASS
-poměrně jednoduše :ref:`zkompilovat <kompilace>` vlastními silami.
+jako tzv. balíček.
+
+.. noteadvanced::
+
+   Pokud balíčkovací systém dané linuxové distribuce neobsahuje GRASS
+   nebo nabízí jeho zastaralou verzi lze systém GRASS poměrně
+   jednoduše `zkompilovat
+   <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Instalace_GNU/Linux#Kompilace>`_
+   vlastními silami.
+
 
 Postup instalace pro Debian GNU/Linux
 =====================================

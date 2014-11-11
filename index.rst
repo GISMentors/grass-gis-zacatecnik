@@ -103,6 +103,7 @@ Další témata
    |                                |                                |
    |   intro/import                 |   misc/mapove-elementy         |
    |   intro/export                 |   misc/mapove-vystupy          |
+   |   intro/tvorba-lokace          |                                |
    |   intro/transformace           |                                |
    |   misc/georeferencovani        |                                |
    +--------------------------------+--------------------------------+
@@ -116,8 +117,22 @@ Další témata
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   misc/graficky-modeler        |    misc/lokalizace             |
+   |   misc/graficky-modeler        |   misc/lokalizace              |
    +--------------------------------+--------------------------------+
+
+Poznámky pro pokročilé uživatele
+================================
+
+.. table::
+   :class: toc
+
+   +--------------------------------+--------------------------------+
+   | .. toctree::                   | .. toctree::                   |
+   |   :maxdepth: 1                 |   :maxdepth: 1                 |
+   |                                |                                |
+   |   instalace/linux-kompilace    |                                |
+   +--------------------------------+--------------------------------+        
+
 
 Související materiály
 =====================

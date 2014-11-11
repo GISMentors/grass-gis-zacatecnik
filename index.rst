@@ -40,10 +40,11 @@ Intro
    | .. toctree::                   | .. toctree::                   |
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
-   |   instalace/index              |   intro/struktura-dat          |
-   |   intro/prvni-kroky            |   raster/index                 |
-   |                                |   vector/index                 |
-   |                                |   intro/region                 |
+   |   instalace/index              |   raster/index                 |
+   |   intro/prvni-kroky            |   vector/index                 |
+   |   intro/struktura-dat          |   intro/region                 |
+   |   intro/zobrazeni-geodat       |                                |
+   |   intro/moduly                 |                                |
    +--------------------------------+--------------------------------+
 
 .. table::

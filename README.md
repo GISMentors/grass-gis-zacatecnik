@@ -6,14 +6,12 @@ URL: http://www.gismentors.eu/skoleni/grass-gis.html#zacatecnik
 Poznámky pro školitele
 ----------------------
 
-Stažení dat
-^^^^^^^^^^^
+**Stažení GRASS lokace**
 
       cd grassdata
       rsync -avz --delete skoleni@46.28.111.140:~/grassdata/skoleni .
 
-Poznámky k přípravě VMDK
-^^^^^^^^^^^^^^^^^^^^^^^^
+**Poznámky k přípravě VMDK**
 
 URL:  http://live.osgeo.org/en/download.html
 
@@ -46,5 +44,5 @@ V terminálu:
       make
       
       mkdir ~/bin
-      ln -s `pwd`... ~/bin
+      ln -s `pwd`/.../grass70 ~/bin
       cd ..

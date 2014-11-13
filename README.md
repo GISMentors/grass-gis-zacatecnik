@@ -3,19 +3,29 @@
 
 URL: http://www.gismentors.eu/skoleni/grass-gis.html#zacatecnik
 
+Poznámky pro školitele
+----------------------
+
 Stažení dat
------------
+^^^^^^^^^^^
 
       cd grassdata
-      rsync -avz skoleni@46.28.111.140:~/grassdata/skoleni .
+      rsync -avz --delete skoleni@46.28.111.140:~/grassdata/skoleni .
 
 Poznámky k přípravě VMDK
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 URL:  http://live.osgeo.org/en/download.html
 
--> In terminal:
+Přidat UbuntuGIS-unstable:
 
+      deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu trusty main 
+      deb-src http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu trusty main
+      
+V terminálu:
+
+      sudo apt-get update
+      sudo apt-get upgrade
       sudo apt-get install subversion flex bison libncurses5-dev zlib1g-dev \
       libreadline6-dev libtiff5-dev mesa-common-dev \
       libglu1-mesa-dev libfftw3-dev libxmu-dev \
@@ -24,7 +34,7 @@ URL:  http://live.osgeo.org/en/download.html
    
       mkdir src
       cd src
-
+      
       # grass (7.0)
       svn checkout https://svn.osgeo.org/grass/grass/branches/releasebranch_7_0 grass70_release
       cd grass70_release

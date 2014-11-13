@@ -57,3 +57,12 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
       :file:`%USERPROFILE%\\Documents\\grassdata`, v případě UNIXových
       operačních systémů jako je :wikipedia:`GNU/Linux` či :wikipedia:`Mac
       OS X` :file:`$HOME/grassdata`.
+
+Vyhledávací cesta
+=================
+
+Vyhledávací cesta definuje viditelné mapsety z aktuálně vybrané
+lokace. Ve výchozím nastavení je ve vyhledávací cestě je vždy umístěn
+aktuální mapset a mapset `PERMANENT`.
+
+.. figure:: images/d-rast-user1.png

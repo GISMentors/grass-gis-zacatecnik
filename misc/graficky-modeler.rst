@@ -10,7 +10,7 @@ Graphical modeler` nebo z nástrojové lišty
 
 .. figure:: images/lmgr-gmodeler.png
 
-.. notecmd:: spuštění grafického modeleru
+.. notecmd:: Spuštění grafického modeleru
 
              Grafický modeler je dostupný z příkazové řádky jako modul :grasscmd:`g.gui.gmodeler`.
    

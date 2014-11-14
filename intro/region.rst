@@ -43,7 +43,7 @@ správce vrstev.
 
    Nastavení výpočetního regionu na základě rastrové mapy
 
-.. notecmd:: nastavení regionu na základě rastrové mapy
+.. notecmd:: Nastavení regionu na základě rastrové mapy
 
    .. code-block:: bash
 
@@ -56,7 +56,7 @@ rastrových či vektorových map najednou.
 
    Nastavení výpočetního regionu na základě více vybraných mapových vrstev
 
-.. notecmd:: nastavení regionu na základě vektorových map
+.. notecmd:: Nastavení regionu na základě vektorových map
 
    .. code-block:: bash
                 
@@ -122,7 +122,7 @@ ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
 
    Explicitní nastavení prostorového rozlišení
 
-.. notecmd:: nastavení prostorového rozlišení na základě rastrové
+.. notecmd:: Nastavení prostorového rozlišení na základě rastrové
              mapy, hraniční souřadnice s offsetem 1000 mapových
              jednotek od hranic polygonu města
 
@@ -144,7 +144,7 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 
    Aktuálně nastavený výpočetní region
 
-.. notecmd:: zobrazení aktuálně nastaveného regionu
+.. notecmd:: Zobrazení aktuálně nastaveného regionu
 
    .. code-block:: bash
                 

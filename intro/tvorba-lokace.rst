@@ -109,7 +109,7 @@ Poté se spustí systém GRASS s právě vytvořenou lokací.
 
 .. figure:: images/wxgui-loc-s-jtsk-8.png
 
-.. notecmd:: vytvoření lokace
+.. notecmd:: Vytvoření lokace
                 
    .. code-block:: bash
 
@@ -245,7 +245,7 @@ Vytvoření lokace na základě EPSG kódu
 
             Vytvoření lokace na základě EPSG kódu (krok 4)
 
-.. notecmd:: vytvoření lokace pří startu systému GRASS
+.. notecmd:: Vytvoření lokace pří startu systému GRASS
 
    .. code-block:: bash
 

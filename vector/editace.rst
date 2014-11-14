@@ -12,7 +12,7 @@ Novou vektorovou mapu vytvoříme z menu
    V dialogovém okně ponecháme název vazby mezi geometrickou částí a
    identifikátorem záznamu v atributové databázi ``cat``.
 
-.. notecmd:: vytvoření prázdné vektorové mapy
+.. notecmd:: Vytvoření prázdné vektorové mapy
 
     .. code-block:: bash 
     

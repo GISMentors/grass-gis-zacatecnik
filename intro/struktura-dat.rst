@@ -66,3 +66,20 @@ lokace. Ve výchozím nastavení je ve vyhledávací cestě je vždy umístěn
 aktuální mapset a mapset `PERMANENT`.
 
 .. figure:: images/d-rast-user1.png
+
+   Přidání nové rastrové mapy do mapového okna, viditelné
+   jsou pouze dva mapsety - aktuální a mapset `PERMANENT`
+
+Vyhledávací cestu lze modifikovat z menu :menuselection:`Settings -->
+GRASS working environment --> Mapset access`.
+
+.. figure:: images/mapset-access.png
+   :class: small
+           
+   Přidání mapsetu `ruian` do vyhledávací cesty
+
+.. notecmd:: Přidání mapsetu
+
+   .. code-block:: bash
+
+                   g.mapsets ruian op=add

@@ -28,7 +28,7 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát:
             vyexportují do souboru ``dmt.tif`` v aktuálním adresáři.
 
 
-.. notecmd:: exportu rastrové mapy do formátu GeoTIFF
+.. notecmd:: Export rastrové mapy do formátu GeoTIFF
 
    .. code-block:: bash
 
@@ -53,7 +53,7 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát:
             souboru :fignote:`(3)`. V tomto případě se data
             vyexportují do souboru ``obce.shp`` v aktuálním adresáři.
 
-.. notecmd:: exportu vektorové mapy do formátu Esri Shapefiel
+.. notecmd:: Export vektorové mapy do formátu Esri Shapefiel
 
    .. code-block:: bash
 

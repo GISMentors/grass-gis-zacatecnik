@@ -46,7 +46,7 @@ standardní cestou, měl by být dostupný z hlavní nabídky vašeho
 
             Spuštění systému GRASS z nabídky *Start* v MS Windows.
 
-.. notecmd:: spuštění systému GRASS
+.. notecmd:: Spuštění systému GRASS
 
    V :abbr:`OS (Operační systém)` :wikipedia:`GNU/Linux` je dostupný systém GRASS po
    instalaci z příkazové řádky jako program ``grassXY``, kde

@@ -119,7 +119,7 @@ pomocí modulu :grasscmd:`db.connect` (:menuselection:`Database -->
 Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
 :option:`-p`.
 
-.. notecmd:: nastavení databáze PostgreSQL pro uložení atributových dat
+.. notecmd:: Nastavení databáze PostgreSQL pro uložení atributových dat
 
    Nastavení PostgreSQL databáze "grass" pro uložení atributových dat
 

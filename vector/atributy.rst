@@ -12,7 +12,7 @@ Správce atributových dat umožňuje kromě :ref:`dotazování
 
              Editace záznamů v atributové tabulce
 
-.. notecmd:: editace atributových dat
+.. notecmd:: Editace atributových dat
 
                Nabízejí se dva moduly:
 
@@ -36,7 +36,7 @@ Správce atributových dat umožňuje **přidávat** do atributové tabulky nov�
 
              Přidání nového záznamu do atributové tabulky
 
-.. notecmd:: vložení nového záznamu do atributové tabulky
+.. notecmd:: Vložení nového záznamu do atributové tabulky
 
                 .. code-block:: bash
 
@@ -48,7 +48,7 @@ Vybrané záznamy lze z atributové tabulky **odstranit**.
 
             Odstranění záznamů z atributové tabulky
 
-.. notecmd:: odstranění záznamů s atributové tabulky
+.. notecmd:: Odstranění záznamů s atributové tabulky
 
                 .. code-block:: bash
 
@@ -75,7 +75,7 @@ Příklad přidání nového sloupce s výměrou a její výpočet (ve
 
              Přidání nového sloupce do atributové tabulky a výpočet plochy
 
-.. notecmd:: výpočtu hodnoty atributu
+.. notecmd:: Výpočet hodnoty atributu
 
              .. code-block:: bash
 
@@ -144,7 +144,7 @@ any table`.
             Atributový dotaz pomocí modulu :grasscmd:`db.select`
             (výsledek :abbr:`SQL (Structured Query Language)` dotazu)
 
-.. notecmd:: jednoduchého atributové dotazu
+.. notecmd:: Jednoduché atributové dotazu
 
              .. code-block:: bash
 

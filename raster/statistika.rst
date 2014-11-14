@@ -97,7 +97,7 @@ uživatele, kteří si píší vlastní skripty. Modul je dostupný z menu
 :menuselection:`Raster --> Repors and statistics --> General
 statistics`.
 
-.. notecmd:: výpisu statistiky rastrové mapy
+.. notecmd:: Výpis statistiky rastrové mapy
 
    Výpis počtu buněk na základě 10 intervalů seřazených sestupně (znak
    ``*`` označuje no-data)

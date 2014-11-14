@@ -32,7 +32,7 @@ Postup:
 
              Příklad výběru oblasti s nadmořskou výškou větší než 1000m
 
-.. notecmd:: použití 
+.. notecmd:: Použití 
 
    Modul :grassCmd:`r.mapcalc` lze spustit z příkazové řádky podobně jako
    ostatní moduly systému GRASS.

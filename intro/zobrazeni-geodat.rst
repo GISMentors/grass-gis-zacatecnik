@@ -3,6 +3,11 @@ Zobrazení geodat v mapovém okně
 Po spuštění systému GRASS se objeví *správce vrstev* (Layer Manager) a
 *mapové okno* (Map Display).
 
+.. note::
+
+   Pokud se GUI z nějaké důvodu spadne, lze ho z příkazové řádky
+   nastartovat znovu pomocí příkazu :grasscmd:`g.gui`.
+
 .. figure:: images/grass-gui-launch.png
             :class: large
 

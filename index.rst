@@ -105,6 +105,7 @@ Další témata
    |                                |                                |
    |   intro/import                 |   misc/mapove-elementy         |
    |   intro/export                 |   misc/mapove-vystupy          |
+   |   intro/prenos-dat             |                                |
    |   intro/tvorba-lokace          |                                |
    |   intro/transformace           |                                |
    |   misc/georeferencovani        |                                |

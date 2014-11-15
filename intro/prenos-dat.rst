@@ -30,6 +30,20 @@ Import vector map --> Unpack vector map`).
 
    .. figure:: images/r-unpack-proj-match.png
 
+.. note::
+
+   Takto zabalené mapy jsou samozřejmě multiplatformní a lze je
+   přenášet mezi různými operačními systémy, např. GNU/Linux na MS
+   Windows.
 
 Ṕřenos mapsetů či lokací
 ========================   
+
+Přenášet mapsety či lokace lze snadno, tak že je zabalíme napřílad
+pomocí aplikace :wikipedia:`zip <ZIP (souborový formát)>`.
+
+.. important::
+
+   Při přenášení mapsetů platí pouze jedna podmínka. Mapset může být
+   umístěn pouze do lokace se stejným souřadnicovým systém. V opačném
+   případě dojde k nekozistenci se kterou si GRASS neporadí.

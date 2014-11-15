@@ -1,5 +1,5 @@
-Topologie
-=========
+Topologie vektorových dat
+=========================
 
 Jak již bylo uvedeno v úvodní části, vektory v prostředí GRASS jsou uloženy v
 topologickém formátu. Znamená to, že nad nimi můžeme rychleji provádět celou

@@ -8,7 +8,7 @@ Prostorové funkce
              erase) v kombinaci s atributovými dotazy
 
 Výběr z vektorové mapy
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 Z vektorové mapy můžeme vybrat prvky a ty uložit mapy nové. Vybírat
 můžeme selektivně podle identifikátorů prvků anebo na základě jejich
@@ -30,7 +30,7 @@ V následujím přikladě vybereme z vektorové mapy :map:`doprava` (mapset
    Tvoření tématické vektorové mapy :map:`dalnice` z OpenStreetMap.
             
 Obalová zóna
-~~~~~~~~~~~~
+============
 
 Obalovou zónu pro vektorová data vytváří modul :grasscmd:`v.buffer`
 (:menuselection:`Vector --> Buffer vector`).
@@ -40,7 +40,7 @@ Obalovou zónu pro vektorová data vytváří modul :grasscmd:`v.buffer`
    Příklad obalové zóny 500m okolo dálnic
 
 Překrytí, průnik, spojení, vyloučení
-------------------------------------
+====================================
 
 Tyto operace zajišťuje modul :grasscmd:`v.overlay`
 (:menuselection:`Vector --> Overlay vector maps --> Overlay vector
@@ -55,7 +55,7 @@ velkoplošných a maloplošných chráněných území.
 
 
 Spojení (union)
-~~~~~~~~~~~~~~~~~~~
+===============
 
 V našem případě vytvoříme vektorovou mapu :map:`chranena_uzemi`
 spojením velkoplošných a maloplošných chráněných území.
@@ -73,7 +73,7 @@ atributy druhé prefixem ``b_``.
     Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`
 
 Průnik (intersect)
-~~~~~~~~~~~~~~~~~~
+==================
 
 V našem případě zjistíme, jak obalová zóna zasahuje do chráněných
 území. Opět spustíme modul :grasscmd:`v.overlay` a použijeme operaci
@@ -96,8 +96,8 @@ průnik (operátor ``AND``).
 
 Podobně fungují i operátory ``XOR`` a ``NOT``.
 
-Spojení vektorových map
------------------------
+Spojení vektorových map (merge)
+===============================
 
 Alternativním způsobem spojení vektorových map je modul
 :grasscmd:`v.patch`. Na rozdíl od :grasscmd:`v.overlay` tento modul

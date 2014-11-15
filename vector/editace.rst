@@ -1,5 +1,9 @@
+Editace vektorových dat
+-----------------------
+
 Vytvoření nové vektorové mapy
------------------------------
+=============================
+
 Novou vektorovou mapu vytvoříme z menu  
 :menuselection:`Vector --> Develop vector map --> Create new vector map`.
 
@@ -40,7 +44,7 @@ atributových dat <editace-atributovych-dat>`.
 
 
 Editace vektorové mapy
-----------------------
+======================
 
 Existující vektorovou mapu můžeme začít editovat z kontextového menu 
 :guilabel:`Start editing`.

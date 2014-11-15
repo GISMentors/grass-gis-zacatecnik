@@ -87,7 +87,8 @@ Vektorové analýzy
    |   :maxdepth: 1                 |   :maxdepth: 1                 |
    |                                |                                |
    |   vector/editace               |   vector/atributy              |        
-   |   vector/prostorove-funkce     |   vector/sitove-analyzy        |        
+   |   vector/prostorove-funkce     |   vector/sitove-analyzy        |
+   |   vector/topologie             |                                |        
    +--------------------------------+--------------------------------+
 
 Další témata

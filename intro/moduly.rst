@@ -72,3 +72,30 @@ není splněna, zobrazí se dialog nástroje.
             Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů
 
 * z :doc:`grafického modeleru <../misc/graficky-modeler>`
+
+Nápověda
+========  
+
+Nápověda systému GRASS je dosupná z menu :menuselection:`Help --> GRASS help`.
+
+.. figure:: images/grass-help.png
+   :class: large
+
+   Nápověda systému GRASS v okně webového prohlížeče
+
+.. notecmd:: Zobrazení nápovědy
+
+   Nápovědu lze spustit pomocí modulu :grasscmd:`g.manual`:
+
+   .. code-block:: bash
+
+      g.manual -i
+
+   .. code-block:: bash
+                
+      g.manual r.buffer
+                   
+.. figure:: images/r-buffer-help.png
+                  
+   Nápověda k jednodlivým modulům jsoi dostupné i z dialogového okna
+

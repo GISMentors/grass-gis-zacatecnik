@@ -83,3 +83,8 @@ GRASS working environment --> Mapset access`.
    .. code-block:: bash
 
                    g.mapsets ruian op=add
+
+.. figure:: images/d-rast-user1-ruian.png
+
+   Přidání nové rastrové mapy do mapového okna, kromě aktuálního
+   mapsetu a mapset `PERMANENT` je viditelný i mapset `ruian`

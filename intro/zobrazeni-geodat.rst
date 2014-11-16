@@ -44,8 +44,8 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
    Geodata lze vykreslovat z příkazové řádky či skriptů do
    nejrůznějších formátů od PNG, GIF až po SVG či PDF pomocí modulu
    :grasscmd:`d.mon` v kombinaci s :grasscmd:`d.rast` a
-   :grasscmd:`d.vect`. Tyto techniky jsou součástí navazujícího `kurzu
-   pro pokročilé
+   :grasscmd:`d.vect`. Tyto techniky jsou součástí navazujícího `školení
+   pro pokročilé uživatele
    <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 
    .. figure:: images/gif-example.gif

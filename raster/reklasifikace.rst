@@ -141,6 +141,8 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
             reklasifikovat, poté název výstupní reklasifikované mapy
             :fignote:`(2)` a reklasifikační tabulku :fignote:`(3)`
 
+.. _prirazeni-stitku:
+                     
 .. tip::
                      
    Nakonec můžeme ještě přiřadit jednotlivým kategoriím štítky a to

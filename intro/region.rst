@@ -23,7 +23,7 @@ níže.
    nástrojů pro zpracování vektorových dat (``v.*``) ignoruje
    nastavení výpočetního regionu zcela.
 
-.. note:: V případě, že se hraniční souřadnice a rozlišení vstupních
+.. warning:: V případě, že se hraniční souřadnice a rozlišení vstupních
           rastrových dat liší od nastavení výpočetního regionu, jsou
           vstupní rastrová data před výpočtem *převzorkována*
           metodou :wikipedia:`nejbližšího souseda<Nearest-neighbor
@@ -62,10 +62,11 @@ rastrových či vektorových map najednou.
                 
       g.region vect=busroute1,busroute6
 
-.. tip:: Prostorové rozlišení může být nastaveno pouze explicitně
-   (``res``) nebo na základě rastrových map (``rast``). Pro vektorové
-   mapy nehraje prostorové rozlišení žádnou roli a tudíž pro ně není
-   ani definováno.
+.. tip:: Prostorové rozlišení může být nastaveno pomocí modulu
+   :grasscmd:`g.region` explicitně (volba :option:`res`) nebo na
+   základě rastrových map (:option:`rast`). Pro vektorové mapy nehraje
+   prostorové rozlišení žádnou roli a tudíž pro ně není ani
+   definováno.
 
 .. _nastaveni-regionu-mapove-okno:
    
@@ -150,7 +151,7 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
                 
       g.region -p
 
-Aktuální nastavení výpočetního regionu lze zobrazit i v stavové liště
+Aktuální nastavení výpočetního regionu lze zobrazit i ve stavové liště
 mapového okna (volba :item:`Comp. region`).
 
 .. figure:: images/wxgui-mapdisp-statusbar-menu.png
@@ -169,12 +170,12 @@ Formát::
 
 .. note:: Změna pohledu v mapovém okně nemá na nastavení regionu
           žádný vliv. Aktuální rozsah území zobrazené v mapovém okně
-          je dostupné ze stavové lišty jako volba 'Extent'
+          je dostupné ze stavové lišty jako volba :item:`Extent`.
 
-.. figure:: images/wxgui-mapdisp-status-extent.png
-   :class: middle
+          .. figure:: images/wxgui-mapdisp-status-extent.png
+                      :class: middle
 
-   Rozsah zobrazeného území
+                      Rozsah zobrazeného území
 
 .. tip::
 

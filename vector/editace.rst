@@ -42,6 +42,7 @@ atributových dat <editace-atributovych-dat>`.
            
    Přidání sloupečku s názvem ``popis``
 
+.. _editace-vektorovych-dat:
 
 Editace vektorové mapy
 ======================

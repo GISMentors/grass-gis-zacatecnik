@@ -10,7 +10,8 @@ map**. Jde o:
 * Elementem mřížky je buňka či tzv. *pixel*, jehož tvar může být buď
   čtvercový nebo obdélníkový
 * Velikost pixelu je dána *prostorovým rozlišením*
-* K hodnotě buňky lze přiřadit textový popisek (tzv. *label*)
+* K hodnotě buňky lze přiřadit textový popisek (tzv. *label*) -
+  :ref:`příklad <prirazeni-stitku>`
 
 .. _raster-metadata:
 

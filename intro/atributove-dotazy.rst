@@ -50,7 +50,9 @@ Dialog správce atributových dat má *tři záložky*:
       Přidání, přejmenování, odebraní sloupce v atributové tabulce
 
 :item:`Manage layers`
-      Správa atributových tabulek připojených k vektorové mapě (pro pokročilé)
+      Správa atributových tabulek připojených k vektorové mapě. Tato problematika je
+      ale nad rámec tohoto školení a je probírána v navazující `školení
+      pro pokročilé uživatele <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 
 Dotazování
 ^^^^^^^^^^
@@ -107,21 +109,21 @@ Language)` SELECT dotazy přímo do dialogu *správce atributových dat*.
             klávesy :kbd:`Enter`)
 
 :abbr:`SQL (Structured Query Language)` dotaz lze sestavit pohodlně
-pomocí *SQL builderu*, tlačítko :kbd:`SQL Builder`.
+pomocí *SQL Builderu*, tlačítko :kbd:`SQL Builder`.
 
 .. figure:: images/wxgui-dbmgr-sq-0.png
 
-            Spuštění SQL builderu ze správce atributových dat
+            Spuštění SQL Builderu ze správce atributových dat
 
 .. figure:: images/wxgui-dbmgr-sq-1.png
             :class: large
 
-            Správce atributových dat a SQL builder
+            Správce atributových dat a SQL Builder
 
 .. youtube:: PByk8pipCz4
 
-             wxGUI SQL Builder - jednoduchá podmínka 'where'
+             SQL Builder - jednoduchá podmínka 'where'
 
 .. youtube:: qD7ourfheJo
 
-             wxGUI SQL Builder - výčet sloupců a jednoduchá podmínka 'where'
+             SQL Builder - výčet sloupců a jednoduchá podmínka 'where'

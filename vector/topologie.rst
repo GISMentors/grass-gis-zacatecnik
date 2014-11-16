@@ -30,8 +30,10 @@ topology`.
    (lokální kopie - :fignote:`1`). Chyby v topologii uložíme do nové
    vektorové mapy :fignote:`(2)`.
 
-Opravení topologických chyb
-===========================
+.. _oprava-topologie:
+           
+Oprava topologických chyb
+=========================
 
 Pro práci s topologií vektorových dat slouží především modul
 :grasscmd:`v.clean` (:menuselection:`Vector --> Topology maintenance

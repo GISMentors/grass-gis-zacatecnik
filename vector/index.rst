@@ -16,32 +16,30 @@ GRASS je striktně **topologický GIS**. Vektorová data ukládá v
 topologickém formátu, v případě :ref:`importu vektorových dat
 <import-vector>` z netopologických formátů jako je
 např. :wikipedia-en:`Esri Shapefile` data převádí do topologické formy
-automaticky.
+automaticky. 
 
 .. admonition:: Topologie
 
                 Sleduje prostorové vztahy mezi objekty (návaznost
-                linií, sousednost ploch atd.) viz :wikipedia-en:`Prostorová
-                topologie <Geospatial_topology>`
+                linií, sousednost ploch atd.), viz
+                :wikipedia-en:`prostorová topologie
+                <Geospatial_topology>`.
 
-.. note::
+Vstupní vektorová data často obsahují nejrůznější topologické chyby,
+jako např. překrývající se polygony. Modul pro import
+:grasscmd:`v.in.ogr` se snaží tyto chyby automaticky opravit. V
+některých případech to však není možné a je dále na uživateli, aby
+data opravil sám. Opravám případných topologických chyb se věnuje
+podrobněji :ref:`navazující kapitola <oprava-topologie>`.
 
-   Vstupní vektorová data často obsahují nejrůznější topologické
-   chyby, jako např. překrývající se polygony. Modul pro import
-   :grasscmd:`v.in.ogr` se snaží tyto chyby automaticky opravit. V
-   některých případech to však není možné a je dále na uživateli, aby
-   data opravil sám. K tomu slouží modul :grasscmd:`v.clean`. Více k
-   tomuto tématu na `portálu FreeGIS
-   <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Konzistence_vektorov%C3%BDch_dat>`_.
-
-  
 .. note::
 
    Nativní vektorový formát systému GRASS umožňuje na rozdíl od jiných
    formátů jako je např. :wikipedia-en:`Esri Shapefile` uložit v
    jednou souboru (vektorové mapě) rozdílné typy geoprvků najednou. V
    jedné vektorové mapě tedy mohou být uloženy bodové, liniové i
-   plošné geoprvky zároveň.
+   plošné geoprvky zároveň, viz :ref:`kapitola o editaci vektorových
+   dat <editace-vektorovych-dat>`.
 
 Metadata
 ========
@@ -61,8 +59,9 @@ Basic vector metadata` anebo z kontextového menu vektorové mapy ve
 Topologický model
 =================
 
-Topologický model systému GRASS liniové a plošné elementy rozkládá
-dále na tzv. *topologické elementy*:
+Topologický model systému GRASS liniové a plošné elementy (bodové
+geoprvky nejsou součástí topologie) rozkládá dále na tzv. *topologické
+elementy*:
 
 * uzel (*node*)
  * každá linie či hraniční linie musí začínat a končit v uzlu
@@ -72,7 +71,7 @@ dále na tzv. *topologické elementy*:
 * hraniční linie (*boundary*) a
 * reprezentační bod plochy (*centroid*).
 
-Hraniční linie je liniové element, který na rozdíl od elementu
+Hraniční linie je liniový element, který na rozdíl od elementu
 označovaného jako linie, může tvořit hranici plochy. Plošný
 topologický element *area* je tvořen jednou či více hraničními liniemi
 a případně i jedním *centroidem*. Izolovaná plocha nebo souvislá
@@ -90,7 +89,7 @@ Na obrázku níže je zobrazen:
 .. figure:: images/grass7-topo.png
 	    :class: large
 
-Tato kompozice bude v topologické module systému GRASS vyjádřena
+Tato kompozice bude v topologické modelu systému GRASS vyjádřena
 následující topologickými elementy:
 
 * pěti uzly :fignote:`n1-5`
@@ -120,8 +119,6 @@ Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
 :option:`-p`.
 
 .. notecmd:: Nastavení databáze PostgreSQL pro uložení atributových dat
-
-   Nastavení PostgreSQL databáze "grass" pro uložení atributových dat
 
    .. code-block:: bash
                    

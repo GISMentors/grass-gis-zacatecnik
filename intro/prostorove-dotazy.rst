@@ -8,7 +8,7 @@ podporuje pouze jeden prostorový operátor:
 
 * *overlap* - geoprvky se částečně či úplně překrývají
 
-Pokud je GRASS :ref:`zkompilován <kompilace>` s podporou knihovny `GEOS
+Pokud je GRASS zkompilován s podporou knihovny `GEOS
 <http://trac.osgeo.org/geos>`_, tak je množina prostorových operátorů
 rozšířena o:
 

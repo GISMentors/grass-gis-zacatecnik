@@ -7,7 +7,7 @@ Výpočetní region je dán *hraničními souřadnicemi* (sever, jih, východ,
 západ) a *prostorovým rozlišením* ve směru sever-jih, východ-západ. Pro
 3D data jsou definovány hraniční souřadnice a prostorové rozlišení
 navíc ve vertikálním směru (top-bottom). Vzniká tak pravidelná mřížka
-jejiž buňky mají čtvercový (prostorové rozlišení ve směru sever-jih a
+jejíž buňky mají čtvercový (prostorové rozlišení ve směru sever-jih a
 východ-západ totožnou hodnotu) nebo obdélníkový tvar, viz obrázek
 níže.
 

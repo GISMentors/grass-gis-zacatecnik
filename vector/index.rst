@@ -6,7 +6,7 @@ tzv. **vektorových map**.
 
 * Vektorová data reprezentují nejčastěji diskrétní fenomény
 
-Ve 2D GIS rozlišujeme tři zákládní *typy geoprvků*:
+Ve 2D GIS rozlišujeme tři základní *typy geoprvků*:
 
 * bodové (*point*)
 * liniové (*linestring*)
@@ -20,7 +20,7 @@ automaticky.
 
 .. admonition:: Topologie
 
-                Sleduje prostorové vztahy mezi objekty (navaznost
+                Sleduje prostorové vztahy mezi objekty (návaznost
                 linií, sousednost ploch atd.) viz :wikipedia-en:`Prostorová
                 topologie <Geospatial_topology>`
 
@@ -46,7 +46,7 @@ automaticky.
 Metadata
 ========
 
-Základní metadata o vektoré mapě vypisuje modul :grasscmd:`v.info`
+Základní metadata o vektorové mapě vypisuje modul :grasscmd:`v.info`
 dostupný z menu :menuselection:`Vector --> Reports and statistics -->
 Basic vector metadata` anebo z kontextového menu vektorové mapy ve
 *správci vrstev*.

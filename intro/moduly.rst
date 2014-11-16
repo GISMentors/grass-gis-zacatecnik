@@ -76,7 +76,7 @@ není splněna, zobrazí se dialog nástroje.
 Nápověda
 ========  
 
-Nápověda systému GRASS je dosupná z menu :menuselection:`Help --> GRASS help`.
+Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS help`.
 
 .. figure:: images/grass-help.png
    :class: large
@@ -97,5 +97,5 @@ Nápověda systému GRASS je dosupná z menu :menuselection:`Help --> GRASS help
                    
 .. figure:: images/r-buffer-help.png
                   
-   Nápověda k jednodlivým modulům jsoi dostupné i z dialogového okna
+   Nápověda k jednotlivým modulům je dostupná i z dialogového okna
 

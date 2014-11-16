@@ -33,7 +33,7 @@ Orientace svahu
 ===============
 
 Orientaci (expozici) svahu opět počítá modul
-:grasscmd:`r.slope.aspect` v kombinaci s parameterem :option:`aspect`.
+:grasscmd:`r.slope.aspect` v kombinaci s parametrem :option:`aspect`.
 
 .. figure:: images/r-slope-aspect-a.png
 
@@ -81,7 +81,7 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
    :class: large
 
    Observační bod je v mapovém okně označen černým křížkem,
-   oddélník červené barvy zobrazuje hranice výpočetní regionu
+   obdélník červené barvy zobrazuje hranice výpočetní regionu
 
 .. figure:: images/viewshed-legend.png
    :class: middle

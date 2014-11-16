@@ -5,7 +5,7 @@ Kromě výpisu :ref:`základních metadat <raster-metadata>` rastrových
 map systém GRASS disponuje dalšími moduly pro výpis statistických
 informací rastrových dat. Jde o:
 
-* :grasscmd:`r.report` pro přehledný výpis informací o rastorové mapě
+* :grasscmd:`r.report` pro přehledný výpis informací o rastrové mapě
 * :grasscmd:`r.univar` pro základní statistiku  
 * :grasscmd:`r.stats` pro výpis vybraných statistik
     
@@ -14,14 +14,14 @@ Report
 
 Základní informace o rastrových datech poskytuje modul
 :grasscmd:`r.report` dostupný buď z menu :menuselection:`Raster -->
-Repors and statistis --> Sum area by raster map and category` ýanebo z
-kontextového menu *správce vrstev*.
+Reports and statistics --> Sum area by raster map and category` anebo
+z kontextového menu *správce vrstev*.
 
 .. figure:: images/lmgr-r-report.png
 
             Pokud je modul vyvolán z kontextového menu, je automaticky
             spuštěn s parametrem ``units=h,c,p`` (tj. výměra v
-            hekratech, počet buněk a percentuální pokrytí)
+            hektarech, počet buněk a procentuální pokrytí)
 
 Příklad pro rastrovou mapu typu FCELL/DCELL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -29,7 +29,7 @@ Příklad pro rastrovou mapu typu FCELL/DCELL
 Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
 
 * výměra v kilometrech čtverečních
-* percentuální pokrytí
+* procentuální pokrytí
 * rozděleno do 10 tříd    
 
 .. figure:: images/r-report-0.png
@@ -60,7 +60,7 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
    :map:`dmt`. Modul nejprve data převzorkuje metodou
    :wikipedia-en:`nejbližšího souseda <Nearest neighbor
    interpolation>` do mřížky s velikostí buňky 100x100m a teprve nad
-   těmito daty vypočítá udáje pro report.
+   těmito daty vypočítá údaje pro report.
 
    .. code-block:: bash
 

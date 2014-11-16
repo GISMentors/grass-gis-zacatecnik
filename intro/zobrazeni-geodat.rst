@@ -44,7 +44,7 @@ přímo z příkazové řádky *správce vrstev*.
 
    .. figure:: images/gif-example.gif
                
-               Příklad vykreslení serie prostorových analýz do formátu
+               Příklad vykreslení série prostorových analýz do formátu
                GIF
                   
 Rastrová data
@@ -90,7 +90,7 @@ nástrojové lišty nebo z příkazové řádky správce vrstev.
 
 Jde o následující typy rastrových dat:
 
-* 3D rastová data
+* 3D rastrová data
 * :wikipedia:`RGB` barevná syntéza - příkaz :grasscmd:`d.rgb`
 * :wikipedia:`HIS <HSL>` barevná syntéza - příkaz :grasscmd:`d.his`
 * :wikipedia-en:`Stínovaný reliéf <Shapeded relief>` - příkaz :grasscmd:`d.shadedmap`

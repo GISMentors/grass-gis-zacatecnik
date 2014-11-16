@@ -52,7 +52,7 @@ formátu Esri Shapefile.
 
 Data obsahující topologické chyby je potřeba před dalšími analýzami
 opravit. V opačném případě budou výsledkem opět chybová
-data. Napříplad v případě spojení polygonů obcí v ČR nevznikne
+data. Například v případě spojení polygonů obcí v ČR nevznikne
 celistvá plocha reprezentující území ČR, ale několik děr a to díky
 mezerami mezi vstupními polygony. Vstupní data v tomto případě
 obsahuje nejen překrývající se polygony ale i tzv. mezery.
@@ -64,8 +64,8 @@ obsahuje nejen překrývající se polygony ale i tzv. mezery.
 
 Co se týče polygonových dat, většina topologických chyb může být
 opravena odstraněním ploch s relativně malou výměrou, tj. ploch, které
-reprezentují části, kde dochazí k překryvu či mezerám mezi vstupními
-polygony. V našem případě bude stačit ostranit plochy s výměrou menší
+reprezentují části, kde dochází k překryvu či mezerám mezi vstupními
+polygony. V našem případě bude stačit odstranit plochy s výměrou menší
 než 10km\ :sup:`2`.
 
 .. code-block:: bash

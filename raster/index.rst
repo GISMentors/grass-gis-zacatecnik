@@ -5,7 +5,7 @@ Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových
 map**. Jde o:
 
 * Reprezentaci v podobě pravidelné mřížky hodnot (GRASS nepodporuje
-  nepravidlé mřížky)
+  nepravidelné mřížky)
 * Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
 * Elementem mřížky je buňka či tzv. *pixel*, jehož tvar může být buď
   čtvercový nebo obdélníkový
@@ -43,7 +43,7 @@ GRASS rozlišuje tři typy rastrových map podle datové typu buňky:
 
 * ``FCELL`` (hodnoty s plovoucí desetinnou čárkou,
   :wikipedia-en:`float <Single-precision floating-point format>`)
-* ``DCELL`` (hodnoty s plovoucí desetinout čárkou s dvojnásobnou
+* ``DCELL`` (hodnoty s plovoucí desetinnou čárkou s dvojnásobnou
   přesností, :wikipedia-en:`double precision`)
 
 .. figure:: images/rast-num-float.png

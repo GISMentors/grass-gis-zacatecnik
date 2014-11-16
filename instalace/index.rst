@@ -22,7 +22,7 @@ oficiálně podporované platformy patří :wikipedia:`GNU/Linux`,
 menších úpravách zprovoznit na dalších méně obvyklých platformách jako
 je např. :wikipedia:`AIX`.
 
-V následujím textu se zaměříme na dvě nejrozšířenější platformy - *MS
+V následujícím textu se zaměříme na dvě nejrozšířenější platformy - *MS
 Windows* a *GNU/Linux*, konkrétně :wikipedia:`Ubuntu` a
 :wikipedia:`Debian`.
 

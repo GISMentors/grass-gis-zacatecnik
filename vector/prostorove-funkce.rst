@@ -20,7 +20,7 @@ attributes`.
     *mapsety*, abyste mohli pracovat s daty v nich obsaženými, viz
     modul :grassCmd:`g.mapsets`.
 
-V následujím přikladě vybereme z vektorové mapy :map:`doprava` (mapset
+V následujícím příkladě vybereme z vektorové mapy :map:`doprava` (mapset
 :map:`osm`) všechny dálnice (splňující podmínku ``highway =
 'motorway'``). Výsledek uložíme do vektorové mapy :map:`dalnice`.
 
@@ -65,7 +65,7 @@ spojením velkoplošných a maloplošných chráněných území.
     Vytvoření mapy maloplošných a velkoplošných chráněných území
 
 Výsledná vektorová mapa má spojenou tabulku atributů z obou vstupních
-vektorovových map. Atributy první mapy označeny prefixem ``a_`` a
+vektorových map. Atributy první mapy označeny prefixem ``a_`` a
 atributy druhé prefixem ``b_``.
 
 .. figure:: images/v-overlay-01-table.png

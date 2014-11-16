@@ -27,7 +27,7 @@ Reclassify`.
 Příklad
 =======
 
-Rastrovou mapu digitálního modelu terému reklasifikujeme do čtyř typů
+Rastrovou mapu digitálního modelu terénu reklasifikujeme do čtyř typů
 podle níže uvedené reklasifikační tabulky:
 
 .. table::
@@ -77,7 +77,7 @@ např.
             
 .. figure:: images/dmt-reclass-color-table.png
 
-            Přiklad nastavení tabulky barev pomocí modulu :grasscmd:`r.colors`   
+            Příklad nastavení tabulky barev pomocí modulu :grasscmd:`r.colors`   
 
 .. figure:: images/dmt-reclass-legend.png
    :class: large
@@ -90,7 +90,7 @@ Reklasifikace rastrových dat s plovoucí desetinnou čárkou
 =========================================================
 
 Našim cílem bude reklasifikovat :ref:`mapu orientace svahu <aspect>`
-do následujících třid:
+do následujících tříd:
 
 .. table::
    :class: border
@@ -136,7 +136,7 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
 
 .. figure:: images/r-recode-aspect.png
 
-            V dialogu :grasscmd:`r.recode` nejrpve zvolíme vstupní
+            V dialogu :grasscmd:`r.recode` nejprve zvolíme vstupní
             rastrovou mapu :fignote:`(1)`, kterou chceme
             reklasifikovat, poté název výstupní reklasifikované mapy
             :fignote:`(2)` a reklasifikační tabulku :fignote:`(3)`
@@ -163,7 +163,7 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
 
    .. figure:: images/r-category-set-0.png
 
-               V záložce :item:`Optional` zvolíme nejrpve oddělovač ':'
+               V záložce :item:`Optional` zvolíme nejprve oddělovač ':'
 
    .. figure:: images/r-category-set-1.png
 

@@ -14,7 +14,7 @@ Manage colors --> Manage color rules interactively`.
 
 .. noteadvanced::
    
-   Podobu tabuky barev pro zvolenou rastrovou mapu vypisuje modul
+   Podobu tabulky barev pro zvolenou rastrovou mapu vypisuje modul
    :grasscmd:`r.colors.out` (:menuselection:`Raster --> Manage colors
    --> Export color table`).
 
@@ -49,7 +49,7 @@ barev.
             nastavit, stiskneme tlačítko :fignote:`(1)`. Návrat k
             výchozí tabulce barev poskytuje :fignote:`(2)`
 
-Tabulku barev lza dále načíst anebo uložit do souboru.
+Tabulku barev lze dále načíst anebo uložit do souboru.
 
 .. figure:: images/color-table-file.png
             
@@ -65,11 +65,11 @@ anebo z kontextového menu rastrové mapy.
 .. figure:: images/lmgr-r-colors.png
 
 Modul umožňuje definovat tabulku barev manuálně, použít předefinovanou
-či již přižazenou jiné rastrové mapě.
+či již přiřazenou jiné rastrové mapě.
 
 .. figure:: images/r-colors-grey-i.png
 
-   Přiklad nastavení tabulky barev odstínů šedi v opačném pořadí
+   Příklad nastavení tabulky barev odstínů šedi v opačném pořadí
 
 .. figure:: images/dmt-grey-i.png
    :class: middle

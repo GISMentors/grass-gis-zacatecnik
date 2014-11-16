@@ -48,7 +48,7 @@ Příklad nastavení masky na základě rastrové mapy
    použít pro vytvoření masky.
 
    Tuto operaci lze provést např. pomocí modulu :grasscmd:`r.mapcalc`,
-   více v kapitole :ref:`rastrová algerba <rastrova-algebra>`.
+   více v kapitole :ref:`rastrová algebra <rastrova-algebra>`.
 
    .. code-block:: bash
 
@@ -63,9 +63,9 @@ Příklad nastavení masky na základě rastrové mapy
 
 .. note::
 
-   Maska samozřejmě ovlivňuje veškéré výpočty nad rastrovými daty,
+   Maska samozřejmě ovlivňuje veškeré výpočty nad rastrovými daty,
    např. modul :grasscmd:`r.univar` v tomto případě vypíše
-   :ref:`základní statistiku <r-univar>` pouze pro uzemí s nadmořskou
+   :ref:`základní statistiku <r-univar>` pouze pro území s nadmořskou
    výškou mezi 500 a 800 metry.
 
    .. figure:: images/r-univar-masked.png

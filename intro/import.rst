@@ -53,7 +53,7 @@ V dialogu pro import rastrových dat určíme:
 
             Naimportovaná data se automaticky přidají do stromu vrstev
 
-.. admonition:: Import rastrových dat z příkazové řádky
+.. notecmd:: Import rastrových dat
 
                 .. code-block:: bash
                                 
@@ -161,7 +161,7 @@ v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
 
 Modul :grasscmd:`v.in.ogr` provádí při importu operace, které by měly
 odstranit případné topologické chyby v datech, které při konverzi z
-reprezentace simple features do topogického formátu systému GRASS
+reprezentace simple features do topologického formátu systému GRASS
 mohou vzniknout. Případné topologické chyby, které nemohou být z
 nejrůznějších důvodů během importu odstraněny, je možné napravit
 pomocí modulu :grasscmd:`v.clean`, více v sekci :ref:`topologie

@@ -3,7 +3,7 @@ Rastrová analýza nákladů
 
 .. todo::
 
-   Přepsat na zakladě vlastního datasetu.
+   Přepsat na základě vlastního datasetu.
 
 Pro další analýzu nejprve převedeme síti komunikací do rastrové
 reprezentace (:grasscmd:`v.to.rast`, před konverzí je nutné nastavit

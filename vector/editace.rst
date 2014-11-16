@@ -82,7 +82,7 @@ Přiřazování atributů novým prvkům
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 V nastavení editace můžeme nastavit zobrazení editovaných prvků (šířka, barvy),
-snapping, automatické přiřazování atributů novým prkvům, a další.
+snapping, automatické přiřazování atributů novým prvkům, a další.
 
 .. figure:: images/editing-settings.png
 

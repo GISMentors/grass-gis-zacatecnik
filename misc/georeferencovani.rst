@@ -3,7 +3,7 @@ Georeferencování
 
 Souřadnicové připojení geodat (tzv. georeferencování) umožňuje v
 systému GRASS nástroj :grasscmd:`GCP Manager <wxGUI.gcp>` dostupný z menu *správce
-vrstev* :menuselection:`File --> Georectify` anebo přímo z nástrojé
+vrstev* :menuselection:`File --> Georectify` anebo přímo z nástroje
 lišty.
 
 .. figure:: images/lmgr-georectify.png
@@ -102,7 +102,7 @@ Další identické body můžeme přidat z nástrojové lišty.
 .. figure:: images/georect-10.png
             :class: large
 
-            Pokud nejsou identické body aktivovány, tak je nepjrpve
+            Pokud nejsou identické body aktivovány, tak je nejprve
             aktivujeme :fignote:`(1)` a poté nastavíme vlastnosti
             souřadnicového připojení :fignote:`(2)`
 
@@ -116,10 +116,10 @@ V dialogu nastavení:
             převzorkování rastru :fignote:`(2)` - obecně lze říci, že
             pro kategorizovaná data (např. geologická mapa) je vhodná
             metoda nejbližšího souseda (nearest), pro data jako je
-            digitální model reliefu naopak lineární interpolace
+            digitální model reliéfu naopak lineární interpolace
             (linear) či kubická konvoluce (cubic)
 
-Před vlastním souřadnicovým připojení můžeme spočít pro identické bodu
+Před vlastním souřadnicovým připojení můžeme spočíst pro identické bodu
 tzv. RMS chybu a na jejím základě vyřadit nebo naopak přidat nové
 identické body.
 

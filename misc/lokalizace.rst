@@ -36,7 +36,7 @@ Preferences` v záložce :item:`Appearance` [#f1]_.
 	    Změna lokalizace uživatelského rozhraní systému GRASS na
 	    angličtinu
 
-Systém GRASS po uložení nastavení a opětovném spuštení (změna jazyka
+Systém GRASS po uložení nastavení a opětovném spuštění (změna jazyka
 se tedy neprojeví ihned) již nastartuje ve zvolené lokalizaci.
 
 .. figure:: images/grass-welcome-english.png

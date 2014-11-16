@@ -128,7 +128,7 @@ Modul db.select
 
 Modul :grasscmd:`db.select` umožňuje provádět :abbr:`SQL (Structured
 Query Language)` dotazy (SELECT) nad *libovolnými* atributovými daty
-dostupnými pomocí daného databazového ovladače. :abbr:`SQL (Structured
+dostupnými pomocí daného databázového ovladače. :abbr:`SQL (Structured
 Query Language)` dotazy mohou být uloženy v souboru (parametr
 :option:`input`) anebo definovány jako parametr :option:`sql`. Tento
 modul je dostupný z menu :menuselection:`Database --> Query --> Query

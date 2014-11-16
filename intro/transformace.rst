@@ -20,10 +20,10 @@ Postup
 Vytvoření nové lokace
 ^^^^^^^^^^^^^^^^^^^^^
 
-Z menu *Strávce vrstev* spusťte z menu :menuselection:`Settings -->
+Z menu *správce vrstev* spusťte z menu :menuselection:`Settings -->
 GRASS working environment --> Create new location` průvodce tvorby
 lokace, novou lokaci můžete :ref:`vytvořit více způsoby
-<tvorba-lokace>`, nejrychlejší je v tomto připadě :ref:`tvorba na
+<tvorba-lokace>`, nejrychlejší je v tomto případě :ref:`tvorba na
 základě vstupních geodat <lokace-srtm>`. Po vytvoření nové lokace se
 objeví dialog, který umožňuje se do této lokace přepnout.
 
@@ -68,7 +68,7 @@ Transformace dat do cílové lokace
 Transformovat **rastrová data** umožňuje modul :grasscmd:`r.proj`
 dostupný z menu *správce vrstev* :menuselection:`Raster --> Develop
 raster map --> Reproject raster map from different GRASS location`,
-podopně pro **vektorová data** existuje :grasscmd:`v.proj` dosupný z
+podobně pro **vektorová data** existuje :grasscmd:`v.proj` dostupný z
 :menuselection:`Vector --> Develop vector map --> Reproject vector map
 from different GRASS location`.
 
@@ -93,7 +93,7 @@ Následuje příklad pro transformaci vektorových dat.
             výstupní mapu :fignote:`(5)`. Transformaci spustíme
             :fignote:`(6)`.
 
-Po úspěšné transformaci se vytvořená vrstva automaticky přídá do
+Po úspěšné transformaci se vytvořená vrstva automaticky přidá do
 *správce vrstev* a zobrazí v mapovém okně.
 
 .. figure:: images/proj-result.png

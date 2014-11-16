@@ -54,7 +54,7 @@ Nativní instalátor
 
 .. figure:: images/wingrass-7.png
 
-	    GRASS můžeme automaticky spusit ...
+	    GRASS můžeme automaticky spustit ...
 
 .. figure:: images/wingrass-8.png
 
@@ -62,7 +62,7 @@ Nativní instalátor
 
 .. figure:: images/wingrass-9.png
 
-	    Uvodní obrazovka systému GRASS pro výběr tzv. lokace a mapsetu.
+	    Úvodní obrazovka systému GRASS pro výběr tzv. lokace a mapsetu.
 
 .. _osgeo4w-instalator:
 
@@ -100,7 +100,7 @@ OSGeo4W
 
 .. figure:: images/osgeo4w-8.png
 
-	    Součástí instalace je i proprietární součast knihovny GDAL
+	    Součástí instalace je i proprietární součást knihovny GDAL
 	    ``szip``, kterou potvrdíme.
 
 .. figure:: images/osgeo4w-9.png
@@ -115,7 +115,7 @@ OSGeo4W
 
    V rámci OSGeo4W frameworku je možné nainstalovat i *denní
    snapshoty* systému GRASS. To se hodí v případě, že potřebujete
-   otestovat např. novou funkcionalitu, která není součastí stabilní
+   otestovat např. novou funkcionalitu, která není součástí stabilní
    verze.
 
    .. figure:: images/osgeo4w-12.png
@@ -130,7 +130,7 @@ Aktualizovat instalaci OSGeo4W (včetně instalace systému GRASS) lze provádě
 
 Stačí umístit do zvoleného adresáře níže uvedený skript s příponou
 :wikipedia-en:`bat <Batch file>` (předpokládejme, že je framework
-OSGeo4W nainstalován v adrešáři ``C:\OSGeo4W``):
+OSGeo4W nainstalován v adresáři ``C:\OSGeo4W``):
 
 .. code-block:: bat
 

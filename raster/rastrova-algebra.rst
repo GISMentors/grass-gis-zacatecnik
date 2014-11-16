@@ -17,7 +17,7 @@ Postup:
 
 #. zadání výstupní rastrové mapy
 #. zadání výrazu pro :grasscmd:`r.mapcalc`
-#. spuštění výpočetu
+#. spuštění vypočtu
 
 .. figure:: images/grass-r-mapcalc-dialog.png
 

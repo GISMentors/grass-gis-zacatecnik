@@ -14,9 +14,9 @@ copyright = u'2014 by Martin Landa a Jáchym Čepický (GISMentors)'
 # built documents.
 #
 # The short X.Y version.
-version = '0.1'
+version = '1.0.0'
 # The full version, including alpha/beta/rc tags.
-release = '%s alpha' % version
+release = '%s RC1' % version
 
 # -- Options for HTML output ----------------------------------------------
 

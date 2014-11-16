@@ -9,7 +9,7 @@ Poznámky pro školitele
 **Stažení GRASS lokace**
 
       cd grassdata
-      rsync -avz --delete skoleni@46.28.111.140:~/grassdata/skoleni .
+      rsync -avz --delete skoleni@46.28.111.140:~/grassdata/gismentors .
 
 **Poznámky k přípravě VMDK**
 

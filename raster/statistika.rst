@@ -23,8 +23,8 @@ z kontextového menu *správce vrstev*.
             spuštěn s parametrem ``units=h,c,p`` (tj. výměra v
             hektarech, počet buněk a procentuální pokrytí)
 
-Příklad pro rastrovou mapu typu FCELL/DCELL
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Příklad pro rastrovou mapu s hodnotami s plovoucí desetinnou čárkou
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    
 Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
 
@@ -56,8 +56,8 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
    Jak již bylo uvedeno v kapitole :ref:`výpočetní region <region>`
    drtivá většina modulů pro zpracování rastrových dat pracuje vždy v
    aktuální výpočetním regionu! Pokud např. změníme prostorové
-   rozlišení na 100m, změní se i report rastrové mapy
-   :map:`dmt`. Modul nejprve data převzorkuje metodou
+   rozlišení výpočetního regionu na 100m, změní se i report rastrové
+   mapy :map:`dmt`. Modul nejprve data převzorkuje metodou
    :wikipedia-en:`nejbližšího souseda <Nearest neighbor
    interpolation>` do mřížky s velikostí buňky 100x100m a teprve nad
    těmito daty vypočítá údaje pro report.
@@ -106,7 +106,7 @@ statistics`.
 
                    r.stats -c input=dmt nsteps=10 sort=desc
 
-::
+   ::
    
       * 94752766
       355.686188-508.843563 43213697

@@ -41,8 +41,12 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 .. figure:: images/help_loc_struct.png
             :class: middle
                     
-            Struktura GRASS DataBase, vztah lokace a mapsetů, umístění souborů
-            s daty pro různé typy map.
+            Struktura GRASS DataBase, vztah lokace a mapsetů, umístění
+            souborů s daty pro různé typy map
+
+            (zdroj: `manuál systému
+            GRASS
+            <http://grass.osgeo.org/grass70/manuals/helptext.html>`_)
 
 .. todo:: search_path...
                       
@@ -63,8 +67,8 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 Vyhledávací cesta
 =================
 
-Vyhledávací cesta definuje viditelné mapsety z aktuálně vybrané
-lokace. Ve výchozím nastavení je ve vyhledávací cestě je vždy umístěn
+Vyhledávací cesta definuje viditelné mapsety v rámci aktuální
+lokace. Ve výchozím nastavení je ve vyhledávací cestě vždy umístěn
 aktuální mapset a mapset `PERMANENT`.
 
 .. figure:: images/d-rast-user1.png
@@ -80,11 +84,11 @@ GRASS working environment --> Mapset access`.
            
    Přidání mapsetu `ruian` do vyhledávací cesty
 
-.. notecmd:: Přidání mapsetu
+.. notecmd:: Přidání mapsetu do vyhledávací cesty
 
    .. code-block:: bash
 
-                   g.mapsets ruian op=add
+                   g.mapsets mapset=ruian op=add
 
 .. figure:: images/d-rast-user1-ruian.png
 

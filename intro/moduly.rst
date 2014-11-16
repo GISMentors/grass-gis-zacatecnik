@@ -53,7 +53,7 @@ Příkazy (tj. moduly) systému GRASS lze spouštět několika způsoby
 
 .. figure:: images/wxgui-search-r-buffer.png
 
-            Spuštění modulu :grasscmd:`r.buffer`` pomocí nástroje :item:`Search module`
+            Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`
 
 * z příkazové řádky správce vrstev
 
@@ -73,8 +73,8 @@ není splněna, zobrazí se dialog nástroje.
 
 * z :doc:`grafického modeleru <../misc/graficky-modeler>`
 
-Nápověda
-========  
+Nápověda k modulům
+==================
 
 Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS help`.
 

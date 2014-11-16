@@ -3,10 +3,14 @@ Zobrazení geodat v mapovém okně
 Po spuštění systému GRASS se objeví *správce vrstev* (Layer Manager) a
 *mapové okno* (Map Display).
 
-.. note::
+.. tip::
 
-   Pokud se GUI z nějaké důvodu spadne, lze ho z příkazové řádky
+   Pokud GUI z nějaké důvodu spadne, lze ho z příkazové řádky
    nastartovat znovu pomocí příkazu :grasscmd:`g.gui`.
+
+   .. code-block:: bash
+
+      g.gui
 
 .. figure:: images/grass-gui-launch.png
             :class: large
@@ -16,7 +20,7 @@ Po spuštění systému GRASS se objeví *správce vrstev* (Layer Manager) a
 
 Rastrová či vektorová data lze do *stromu vrstev* (viz záložka :item:`Map
 layers`) přidávat z menu :menuselection:`File --> Map display`, nástrojové lišty či
-přímo z příkazové řádky *správce vrstev*.
+přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-dat-raster>`.
 
 .. note::
 
@@ -40,13 +44,18 @@ přímo z příkazové řádky *správce vrstev*.
    Geodata lze vykreslovat z příkazové řádky či skriptů do
    nejrůznějších formátů od PNG, GIF až po SVG či PDF pomocí modulu
    :grasscmd:`d.mon` v kombinaci s :grasscmd:`d.rast` a
-   :grasscmd:`d.vect`.
+   :grasscmd:`d.vect`. Tyto techniky jsou součástí navazujícího `kurzu
+   pro pokročilé
+   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 
    .. figure:: images/gif-example.gif
+      :class: middle
+              
+      Příklad vykreslení série prostorových analýz do formátu
+      GIF
+
+.. _zobrazeni-dat-raster:
                
-               Příklad vykreslení série prostorových analýz do formátu
-               GIF
-                  
 Rastrová data
 =============
 

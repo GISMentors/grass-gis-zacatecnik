@@ -58,15 +58,15 @@ Příklad nastavení masky na základě rastrové mapy
 .. figure:: images/dmt-500-800.png
             :class: middle
            
-            Po aktivaci masky se zobrazí pouze části území, kde je
-            nadmořská výška mezi 500 a 800 metry
+            Po aktivaci masky se zobrazí pouze část území, které
+            odpovídá nadmořské výšce mezi 500 a 800 metry
 
 .. note::
 
    Maska samozřejmě ovlivňuje veškeré výpočty nad rastrovými daty,
    např. modul :grasscmd:`r.univar` v tomto případě vypíše
    :ref:`základní statistiku <r-univar>` pouze pro území s nadmořskou
-   výškou mezi 500 a 800 metry.
+   výškou mezi 500 a 800 metry (viz hodnoty `minimum` a `maximum`).
 
    .. figure:: images/r-univar-masked.png
 

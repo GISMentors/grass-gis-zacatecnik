@@ -5,8 +5,8 @@ Tabulka barev
 
 Tabulka barev je zápis pravidel pro barevnou interpretaci rastrových
 hodnot. Podobu tabulky barev pro zvolenou rastrovou mapu zobrazuje
-nástroj dostupný z menu *správce vrstev* :menuselection:`Raster -->
-Manage colors --> Manage color rules interactively`.
+nástroj dostupný z menu :menuselection:`Raster --> Manage colors -->
+Manage color rules interactively`.
 
 .. figure:: images/color-table-dmt.png
 
@@ -25,7 +25,7 @@ Manage colors --> Manage color rules interactively`.
             notaci RGB, tabulka např. definuje, že buňka s hodnotou
             355.686 se vykreslí zeleně (0:255:0)
 
-Tento nástroj umožňuje tabulku barev navíc **interaktivně měnit**
+Tento nástroj umožňuje tabulku barev navíc *interaktivně měnit*
 včetně náhledu na data.
 
 .. figure:: images/color-table-dmt-custom.png
@@ -33,7 +33,7 @@ včetně náhledu na data.
    Příklad interaktivně změněné tabulky barev :fignote:`(1)` pouze v
    náhledu :fignote:`(2)`
 
-Nástroj umožňuje použít navíc některou z předdefinovaných tabulek
+Nástroj umožňuje použít některou z předdefinovaných tabulek
 barev.
 
 .. figure:: images/color-table-dmt-defined-0.png
@@ -58,9 +58,9 @@ Pokročilé nastavení tabulky barev
 
 Kromě interaktivního nástroje samozřejmě v systému GRASS existuje
 modul, který umožňuje nastavit tabulku barev neinteraktivně, jde o
-:grasscmd:`r.colors`. Tento modul je dostupný buď z menu *správce
-vrstev* :menuselection:`Raster --> Manage colors --> Color tables`
-anebo z kontextového menu rastrové mapy.
+:grasscmd:`r.colors`. Tento modul je dostupný buď z menu
+:menuselection:`Raster --> Manage colors --> Color tables` anebo z
+kontextového menu rastrové mapy.
 
 .. figure:: images/lmgr-r-colors.png
 

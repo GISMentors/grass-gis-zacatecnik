@@ -3,16 +3,15 @@ Reklasifikace rastrových dat
 
 Reklasifikací rastrové mapy vzniká nová rastrová mapa na základě
 jejich původních hodnot. Tento proces provádí v systému GRASS modul
-:grasscmd:`r.reclass` dostupný z menu *správce vrstev*
-:menuselection:`Raster --> Change category values and labels -->
-Reclassify`.
+:grasscmd:`r.reclass` (:menuselection:`Raster --> Change category
+values and labels --> Reclassify`).
 
 .. important::
 
    Reklasifikovat lze pouze celočíselné rastrové mapy (:ref:`typ CELL
-   <raster-types>`). Pokud je reklasikována rastrová mapa s hodnotami s
-   plovoucí desetinnou čárkou, jsou její hodnoty převedeny automaticky
-   na celé číslo.
+   <raster-types>`). Pokud je reklasikována rastrová mapa s hodnotami
+   s plovoucí desetinnou čárkou, jsou její hodnoty před klasifikací
+   převedeny automaticky na celé číslo.
 
    Pokud je potřeba reklasifikovat rastrová data s plovoucí desetinnou
    čárkou, tak je potřeba namísto :grasscmd:`r.reclass` použít modul
@@ -24,8 +23,8 @@ Reclassify`.
    pouze reklasifikační tabulka. To má za následek to, že nelze
    podkladovou mapu přejmenovat či odstranit.
 
-Příklad
-=======
+Příklad reklasifikace DMT
+=========================
 
 Rastrovou mapu digitálního modelu terénu reklasifikujeme do čtyř typů
 podle níže uvedené reklasifikační tabulky:

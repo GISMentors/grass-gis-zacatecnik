@@ -49,7 +49,7 @@ V dialogu pro import rastrových dat určíme:
             Průběh importu
 
 .. figure:: images/wxgui-raster-import-2.png
-            :class: middle
+            :class: large
 
             Naimportovaná data se automaticky přidají do stromu vrstev
 
@@ -102,7 +102,7 @@ V dialogu pro import vektorových dat určíme:
             Průběh importu
 
 .. figure:: images/wxgui-vector-import-2.png
-            :class: middle
+            :class: large
 
             Naimportovaná data se automaticky přidají do stromu vrstev
 
@@ -122,12 +122,14 @@ V dialogu pro import vektorových dat určíme:
                                    for fname in layers:
                                        grass.run_command('v.in.ogr', dsn = '.', layer = fname)
 
+.. _import-topologie:
+                                       
 Poznámky k importu vektorových dat
 ==================================
 
 Při importu vektorových dat provádí :grasscmd:`v.in.ogr` konverzi
 vektorových dat z reprezentace :wikipedia:`Simple Features` do
-topologického formátu systému GRASS:
+:ref:`topologického formátu <topologie>` systému GRASS:
 
 * pro body (point) a lomené čáry (linestring) nedochází ke změně
   povahy vektorového prvku, v topologickém formátu GRASS jsou
@@ -153,15 +155,17 @@ v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
  |   Number of areas:        3               Number of islands:    2          |
 
 .. figure:: images/polygon-topo.png
-
-            Topologická reprezentace dvou polygonů (druhý polygon s otvorem)
+   :class: middle
+           
+   Topologická reprezentace dvou polygonů (druhý polygon s otvorem)
 
 Modul :grasscmd:`v.in.ogr` provádí při importu operace, které by měly
 odstranit případné topologické chyby v datech, které při konverzi z
 reprezentace simple features do topogického formátu systému GRASS
 mohou vzniknout. Případné topologické chyby, které nemohou být z
 nejrůznějších důvodů během importu odstraněny, je možné napravit
-pomocí modulu :grasscmd:`v.clean`.
+pomocí modulu :grasscmd:`v.clean`, více v sekci :ref:`topologie
+<topologie>`.
 
 .. note::
 
@@ -179,22 +183,22 @@ kódování pro atributová data. Atributy obsahující diakritiku jsou
 ``cp1250``). Hodnotu kódování lze nastavit pomocí parametru
 :option:`encoding` modulu :grasscmd:`v.in.ogr`.
 
-.. admonition:: Příklad importu - znaková sada Windows-1250
+.. notecmd:: Import vektorových dat (znaková sada Windows-1250)
 
    .. code-block:: bash
 
-                   :grasscmd:`v.in.ogr` dsn=orp.shp encoding=cp1250
+      v.in.ogr dsn=orp.shp encoding=cp1250
 
-.. admonition:: Poznámka pro GRASS 6
+.. notegrass6::
 
-                Vzhledem k tomu, že modul :grasscmd:`v.in.ogr` nemá ve
-                verzi GRASS 6 parametr :option:`encoding`, je nutné
-                znakovou sadu určit pomocí proměnné prostředí
-                :envvar:`SHAPE_ENCODING`.
+   Vzhledem k tomu, že modul :grasscmd:`v.in.ogr` nemá ve
+   verzi GRASS 6 parametr :option:`encoding`, je nutné
+   znakovou sadu určit pomocí proměnné prostředí
+   :envvar:`SHAPE_ENCODING`.
 
    .. code-block:: bash
 
-                   SHAPE_ENCODING=cp1250 v.in.ogr dsn=orp.shp
+      SHAPE_ENCODING=cp1250 v.in.ogr dsn=orp.shp
 
 Formát DGN
 ^^^^^^^^^^

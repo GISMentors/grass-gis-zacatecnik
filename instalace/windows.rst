@@ -42,7 +42,7 @@ Nativní instalátor
 
 .. figure:: images/wingrass-3.png
 
-	    Při první instalaci doporučuje nainstalovat také
+	    Při první instalaci doporučujeme nainstalovat také
 	    "Important Microsoft Runtime Libraries" a ukázkovou
 	    geografickou datovou sadu pro GRASS "North Carolina".
 
@@ -62,7 +62,8 @@ Nativní instalátor
 
 .. figure:: images/wingrass-9.png
 
-	    Úvodní obrazovka systému GRASS pro výběr tzv. lokace a mapsetu.
+	    Úvodní obrazovka systému GRASS pro výběr tzv. :ref:`lokace
+	    a mapsetu <struktura-dat>`.
 
 .. _osgeo4w-instalator:
 
@@ -71,7 +72,7 @@ OSGeo4W
 
 *Instalátor frameworku OSGeo4W* je ke stažení na adrese
 
-* http://download.osgeo.org/osgeo4w/osgeo4w-setup.exe.
+* http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe
 
 .. figure:: images/osgeo4w-0.png
 
@@ -91,7 +92,10 @@ OSGeo4W
 
 .. figure:: images/osgeo4w-6.png
 
-	    Ze sekce ``Desktop`` vybereme balíček ``grass70``.
+	    Ze sekce ``Desktop`` vybereme balíček ``grass70`` či
+	    případně ``grass70-dev`` (tzv. denní buildy) pokud
+	    plánujeme software často aktualizovat a testovat tak
+	    nejnovější funkce
 
 .. figure:: images/osgeo4w-7.png
 
@@ -120,7 +124,9 @@ OSGeo4W
 
    .. figure:: images/osgeo4w-12.png
 
-	       Ze sekce ``Desktop`` vybereme balíček ``grass70``.
+	       Ze sekce ``Desktop`` vybereme balíček ``grass70-dev``
+	       (denní snapshoty verze GRASS 7.0) nebo ``grass71-dev``
+	       (denní snapshoty verze GRASS 7.1).
 
 ..  _osgeo4w-aktualizace:
 

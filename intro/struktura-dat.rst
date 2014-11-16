@@ -1,3 +1,5 @@
+.. _struktura-dat:
+
 Struktura dat - koncept lokací a mapsetů
 ----------------------------------------
 

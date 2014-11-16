@@ -10,14 +10,18 @@ vysoce kvalitních grafických výstupů, časoprostorové modelování a
 vizualizaci dat.
 
 GRASS GIS (http://grass.osgeo.org) je :wikipedia:`free software
-<Svobodný software>` publikovaný pod všeobecnou licencí :abbr:`GNU
-(GNU is Not Unix)` :abbr:`GPL (General Public License)`. Softwarové
-knihovny systému GRASS a jeho nástroje (tzv. *moduly*) jsou z větší
-části implementovány v programovacím jazyce :abbr:`ANSI (American
-National Standards Institute)` :wikipedia:`C <Programovací jazyk
-C>`. Několik málo modulů je potom implementováno v programovacím
-jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
-:wikipedia:`Python`.
+<Svobodný software>` a *open source* publikovaný pod všeobecnou licencí
+:abbr:`GNU (GNU is Not Unix)` :abbr:`GPL (General Public
+License)`. Tato licence nejenže umožňuje software použít k libovolným
+účelům včetně komerčních, dovoluje také studovat jeho zdrojový kód,
+upravovat ho a tyto změny či opravy šířit dál.
+
+.. Softwarové knihovny systému GRASS a jeho nástroje (tzv. *moduly*) jsou z větší
+   části implementovány v programovacím jazyce :abbr:`ANSI (American
+   National Standards Institute)` :wikipedia:`C <Programovací jazyk
+   C>`. Několik málo modulů je potom implementováno v programovacím
+   jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
+   :wikipedia:`Python`.
 
 
 .. important:: Školení je zaměřeno na verzi `GRASS 7.0

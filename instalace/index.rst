@@ -15,17 +15,19 @@ operačním systémům.
 
              GRASS GIS (CERL, 1987)
         
-Postupem času byl portován na další platformy a nadále vyvíjen jako
-striktně multiplatformní informační systém. V současnosti mezi
-oficiálně podporované platformy patří :wikipedia:`GNU/Linux`,
+Postupem času byl systém GRASS portován na další platformy a nadále
+vyvíjen jako striktně multiplatformní informační systém. V současnosti
+mezi oficiálně podporované platformy patří :wikipedia:`GNU/Linux`,
 :wikipedia:`Mac OSX` a :wikipedia:`MS Windows`. GRASS je ale možné po
 menších úpravách zprovoznit na dalších méně obvyklých platformách jako
 je např. :wikipedia:`AIX`.
 
 V následujícím textu se zaměříme na dvě nejrozšířenější platformy - *MS
-Windows* a *GNU/Linux*, konkrétně :wikipedia:`Ubuntu` a
-:wikipedia:`Debian`.
+Windows* a *GNU/Linux*.
 
+.. rubric:: Návod
+   :class: secnotoc
+        
 .. toctree::
    :maxdepth: 1
 

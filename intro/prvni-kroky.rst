@@ -21,14 +21,16 @@ opatřit geodata ve struktuře, kterou systém vyžaduje (viz
 
 .. note::
 
-   Pro účely školení byl vytvořena vlastní lokace z daty pocházejících
+   Pro účely školení byl vytvořena vlastní lokace s daty pocházejících
    z otevřených či veřejných zdrojů jako je `EU-DEM
    <http://www.eea.europa.eu/data-and-maps/data/eu-dem>`_, `RÚIAN
    <http://www.cuzk.cz/ruian/RUIAN.aspx>`_, `OpenStreetMap
-   <http://wiki.openstreetmap.org/wiki/Main_Page>`_, `Dibavod
+   <http://wiki.openstreetmap.org/wiki/Main_Page>`_ a `Dibavod
    <http://www.dibavod.cz/>`_.
 
-   Předpřipravená GRASS lokace je dostupná jako `zip archiv <>`_.
+   Předpřipravená **GRASS lokace pro školení** je stažitelná jako `zip
+   archiv
+   <http://46.28.111.140/gismentors/skoleni/geodata/grass-lokace-gismentors.zip>`_.
 
 Spuštění systému GRASS
 ======================
@@ -60,7 +62,7 @@ standardní cestou, měl by být dostupný z hlavní nabídky vašeho
 Ve výchozím nastavení program nastartuje v grafickém módu. Úvodní
 dialog umožňuje nastavit :doc:`adresář s geodaty, lokaci a mapset
 <../intro/struktura-dat>`, které jsou nutné pro samotné spuštění
-systému. Po jejich zadaní lze pokračovat dále (tlačítko :kbd:`Start
+systému. Po jejich zadaní lze pokračovat dále (tlačítko :item:`Start
 GRASS`).
 
 .. _spusteni-grass:
@@ -72,9 +74,9 @@ GRASS`).
 
 .. noteadvanced::
    
-   **Příklady spuštění z příkazové řádky**
+   **Příklady spuštění systému GRASS z příkazové řádky**
 
-                * GRASS v textovém rozhraní, adresář s geodaty nastavena na
+                * GRASS v textovém rozhraní, adresář s geodaty nastaven na
                   ``/opt/grassdata``, lokace
                   ``nc_spm_08_grass7`` a mapset ``user1``
 
@@ -83,16 +85,17 @@ GRASS`).
                                   grass70 -text /opt/grassdata/nc_spm_08_grass7/user1/
 
                 * GRASS v grafickém rozhraní, databanka, lokace a
-                  mapset nastaven z minulého sezení
+                  mapset nastavena z minulého sezení
 
                   .. code-block:: bash
 
                                   grass70 -gui
 
                 * GRASS v grafickém rozhraní, vytvořit novou lokace
-                  ``skoleni`` (souřadnicový systém S-JTSK
-                  :epsg:`5514`) 
+                  ``skoleni`` (souřadnicový systém S-JTSK :epsg:`5514`
+                  s transformačními parametry pro území ČR - kód
+                  ``3``)
 
                   .. code-block:: bash
 
-                                  grass70 -gui -c EPSG:5514 /opt/grassdata/skoleni
+                                  grass70 -gui -c EPSG:5514:3 /opt/grassdata/skoleni

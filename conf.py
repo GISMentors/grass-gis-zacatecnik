@@ -6,7 +6,7 @@ import os
 # -- General configuration ------------------------------------------------
 
 # General information about the project.
-project = u'Školení GRASS GIS'
+project = u'Školení GRASS GIS - Úvod do systému'
 copyright = u'2014 by Martin Landa a Jáchym Čepický (GISMentors)'
 
 # The version info for the project you're documenting, acts as replacement for

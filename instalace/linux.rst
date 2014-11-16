@@ -1,10 +1,10 @@
 .. _label: instalace-linux
 
-GNU Linux
+GNU/Linux
 ---------
 
-Systém GRASS je dostupný ve většině rozšířených Linuxových distribucí
-jako tzv. balíček.
+Systém GRASS je dostupný ve většině rozšířených linuxových distribucí
+jako tzv. *balíček*.
 
 .. noteadvanced::
 

@@ -13,7 +13,8 @@ Raster Map Calculator` anebo z nástrojové lišty *správce vrstev*.
 
             Spuštění rastrového kalkulátoru
 
-Postup:
+Postup
+======
 
 #. zadání výstupní rastrové mapy
 #. zadání výrazu pro :grasscmd:`r.mapcalc`

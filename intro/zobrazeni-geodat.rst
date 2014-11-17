@@ -109,7 +109,8 @@ Jde o následující typy rastrových dat:
 .. figure:: images/wxgui-d-rgb.png
             :class: large
 
-            Příklad barevné syntézy kanálů :wikipedia:`Landsat 5` TM ve skutečných barvách
+            Příklad barevné syntézy kanálů :wikipedia:`Landsat 8 ETM <Landsat>`
+            z mapsetu `landsat` ve skutečných barvách
 
 Vektorová data
 ==============

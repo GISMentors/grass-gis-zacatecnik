@@ -87,5 +87,5 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
    :class: middle
            
    Výsledek analýzy viditelnosti z observačního bodu včetně legendy
-   zobrazující velikost úhlu pod kterým je místo z daného
+   zobrazující velikost úhlu, pod kterým je místo z daného
    observačního bodu vidět

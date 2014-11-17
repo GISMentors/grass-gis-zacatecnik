@@ -1,5 +1,3 @@
-.. _raster-color-table:
-
 Tabulka barev
 -------------
 

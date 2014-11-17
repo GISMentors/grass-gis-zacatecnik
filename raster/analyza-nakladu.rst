@@ -3,7 +3,7 @@ Rastrová analýza nákladů
 
 Nejprve si v aktuálním mapsetu :ref:`vytvoříme kopii
 <kopie-vektorove-mapy>` vektorové mapy :map:`silnice`. Přidáme
-:ref:`nový atribut <pridani-noveho-atributu>` `rychlost`, do něhož
+:ref:`nový atribut <pridani-noveho-atributu>` ``rychlost``, do něhož
 uložíme průměrnou rychlost v následující podobě:
 
 .. table::
@@ -20,7 +20,7 @@ uložíme průměrnou rychlost v následující podobě:
    +----------------------+----------------+---------------------+
    | Silnice 2.třídy      | 4              | 70                  |
    +----------------------+----------------+---------------------+
-   | Silnice 3.třídy      | 5              | 80                  |
+   | Silnice 3.třídy      | 5              | 60                  |
    +----------------------+----------------+---------------------+
 
 .. figure:: images/field-calculator-speed.png
@@ -39,10 +39,11 @@ uložíme průměrnou rychlost v následující podobě:
       v.db.update map=silnice column=rychlost value=70  where="typ=4"
       v.db.update map=silnice column=rychlost value=60  where="typ=5"             
       
-Převedeme vektorová data :map:`silnice` do rastrové reprezentace
-(:grasscmd:`v.to.rast`, před konverzí je nutné nastavit
-:ref:`výpočetní region <region>`, např. :ref:`interaktivně
-<nastaveni-regionu-mapove-okno>` z mapového okna):
+Dále převedeme modulem :grasscmd:`v.to.rast` (:menuselection:`File -->
+Map type conversions --> Vector to raster`) vektorovou mapu
+:map:`silnice` do rastrové reprezentace. Před konverzí je nutné
+nastavit :ref:`výpočetní region <region>`, např. :ref:`interaktivně
+<nastaveni-regionu-mapove-okno>` z mapového okna:
 
 .. code-block:: bash
 
@@ -56,7 +57,7 @@ Převedeme vektorová data :map:`silnice` do rastrové reprezentace
 Pomocí modulu :grasscmd:`r.null` (:menuselection:`Raster --> Develop
 raster map --> Manage NULL values`) přiřadíme hodnotě 'NULL' (žádná
 data) rychlost pohybu '5'. Vzniklé rastrové mapě přiřadíme tabulku
-barev 'gyr', viz kapitola :ref:`tabulka barev <raster/tabulka-barev>`.
+barev 'sepia', viz kapitola :doc:`tabulka barev <tabulka-barev>`.
 
 .. code-block:: bash
 
@@ -68,7 +69,7 @@ barev 'gyr', viz kapitola :ref:`tabulka barev <raster/tabulka-barev>`.
             Rasterizovaná síť silnic s atributem průměrné rychlosti
 
 Modulem :grasscmd:`v.in.ascii` vytvoříme vektorovou mapu s ohniskem
-požáru (souřadnice v S-JTSK 754063, -981284).
+požáru (souřadnice v S-JTSK -754063, -981284).
 
 .. figure:: images/wxgui-v-in-ascii.png
             
@@ -82,8 +83,9 @@ požáru (souřadnice v S-JTSK 754063, -981284).
 
       echo "-754063|-981284|1" | v.in.ascii input=- output=pozar
             
-Rastr časové náročnosti vytvoříme pomocí :grasscmd:`r.mapcalc`, viz
-kapitola :ref:`rastrová algebra <rastrova-algebra>`.
+Rastrovou mapu časové náročnosti vytvoříme pomocí modulu
+:grasscmd:`r.mapcalc`, viz kapitola :ref:`rastrová algebra
+<rastrova-algebra>`.
 
 .. code-block:: bash
 
@@ -107,7 +109,7 @@ z rastru nákladu pomocí modulu :grasscmd:`v.what.rast`
 at point locations`). Nejprve si v aktuálním mapsetu :ref:`vytvoříme
 kopii <kopie-vektorove-mapy>` vektorové mapy
 :map:`pozarni_stanice`. Přidáme :ref:`nový atribut
-<pridani-noveho-atributu>` `dojezdovost`, do něhož uložíme hodnotu
+<pridani-noveho-atributu>` ``dojezdovost``, do něhož uložíme hodnotu
 dojezdovosti pro danou požární stanici.
 
 .. notecmd:: Přidání atributu dojezdovosti
@@ -122,10 +124,10 @@ dojezdovosti pro danou požární stanici.
 
 .. figure:: images/grass-streets-nearest.png
             
-   Nalezení požární stanice v nejmenší hodnotou dojezdovosti,
-   tj. požární stanice s kategorii '89'
+   Nalezení požární stanice s nejmenší hodnotou dojezdovosti,
+   tj. požární stanice s kategorií '89'
 
-Souřadnice požární stanice s kategorii '89' poskytne modul
+Souřadnice požární stanice s kategorií '89' poskytne modul
 :grasscmd:`v.out.ascii` (:menuselection:`File --> Export vector map
 --> ASCII points or GRASS ASCII vector export`).
 
@@ -154,4 +156,5 @@ flow`).
 .. figure:: images/grass-streets-path-3d.png
    :class: middle
            
-   Vizualizace rastrové mapy nákladů ve 3D
+   Vizualizace rastrové mapy nákladů včetně nejkratší spádové cesty ve
+   3D

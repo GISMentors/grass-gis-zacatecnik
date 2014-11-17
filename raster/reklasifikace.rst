@@ -64,7 +64,7 @@ anebo včetně popisku
    výstupní reklasifikované mapy :fignote:`(2)` a reklasifikační
    tabulku :fignote:`(3)`
 
-Výsledku přiřadíme vhodnou :ref:`tabulku barev <raster-color-table>`,
+Výsledku přiřadíme vhodnou :doc:`tabulku barev <tabulka-barev>`,
 např.
    
 ::

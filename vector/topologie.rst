@@ -17,6 +17,8 @@ modulem :grasscmd:`v.build`, který můžete spustit z menu
 :menuselection:`Vector --> Topology maintenance --> Create or rebuild
 topology`.
 
+.. _kopie-vektorove-mapy:
+
 .. note:: Pomocí modulu :grasscmd:`g.copy` či z kontextového menu
           správce vrstev (viz obr. níže) si v aktuálním mapsetu vytvoříme
           lokální kopii vektorové mapy :map:`doprava` (mapset `osm`)

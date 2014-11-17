@@ -1,102 +1,157 @@
 Rastrová analýza nákladů
 ------------------------
 
-.. todo::
+Nejprve si v aktuálním mapsetu :ref:`vytvoříme kopii
+<kopie-vektorove-mapy>` vektorové mapy :map:`silnice`. Přidáme
+:ref:`nový atribut <pridani-noveho-atributu>` `rychlost`, do něhož
+uložíme průměrnou rychlost v následující podobě:
 
-   Přepsat na základě vlastního datasetu.
+.. table::
+   :class: border
 
-Pro další analýzu nejprve převedeme síti komunikací do rastrové
-reprezentace (:grasscmd:`v.to.rast`, před konverzí je nutné nastavit
-:ref:`výpočetní region <region>` pomocí :grasscmd:`g.region`):
+   +----------------------+----------------+---------------------+
+   | Silnice              | Typ            | Rychlost (km/h)     |
+   +======================+================+=====================+
+   | Dálnice              | 1              | 110                 |
+   +----------------------+----------------+---------------------+
+   | Rychlostní silnice   | 2              | 100                 |
+   +----------------------+----------------+---------------------+
+   | Silnice 1.třídy      | 3              | 90                  |
+   +----------------------+----------------+---------------------+
+   | Silnice 2.třídy      | 4              | 70                  |
+   +----------------------+----------------+---------------------+
+   | Silnice 3.třídy      | 5              | 80                  |
+   +----------------------+----------------+---------------------+
+
+.. figure:: images/field-calculator-speed.png
+   :class: small
+           
+   Příklad uložení atributu rychlosti pro dálnice (``typ = 1``)     
+
+.. notecmd:: Nastavení atributu rychlosti
+
+   .. code-block:: bash
+
+      v.db.addcolumn map=silnice column="rychlost integer"
+      v.db.update map=silnice column=rychlost value=110 where="typ=1"
+      v.db.update map=silnice column=rychlost value=100 where="typ=2"
+      v.db.update map=silnice column=rychlost value=90  where="typ=3"
+      v.db.update map=silnice column=rychlost value=70  where="typ=4"
+      v.db.update map=silnice column=rychlost value=60  where="typ=5"             
+      
+Převedeme vektorová data :map:`silnice` do rastrové reprezentace
+(:grasscmd:`v.to.rast`, před konverzí je nutné nastavit
+:ref:`výpočetní region <region>`, např. :ref:`interaktivně
+<nastaveni-regionu-mapove-okno>` z mapového okna):
 
 .. code-block:: bash
 
-                g.region swwake_30m -p
-                v.to.rast input=streets_wake output=streets_speed use=attr attrcolumn=SPEED
+                g.region res=25
+                v.to.rast input=silnice output=silnice use=attr attrcolumn=rychlost
 
 .. notegrass6::
 
    Místo parametru :option:`attrcolumn` použijte :option:`column`.
  
-Hodnotě 'NULL' (žádná data) přiřadíme rychlost pohybu '5' -
-:grasscmd:`r.null`. Rastrové vrstvě přiřadíme tabulku barev 'gyr'
-(green-yellow-red) pomocí modulu :grasscmd:`r.colors`.
+Pomocí modulu :grasscmd:`r.null` (:menuselection:`Raster --> Develop
+raster map --> Manage NULL values`) přiřadíme hodnotě 'NULL' (žádná
+data) rychlost pohybu '5'. Vzniklé rastrové mapě přiřadíme tabulku
+barev 'gyr', viz kapitola :ref:`tabulka barev <raster/tabulka-barev>`.
 
 .. code-block:: bash
 
-                r.null map=streets_speed null=5
-                r.colors map=streets_speed color=gyr
+                r.null map=silnice null=5
+                r.colors -n map=silnice color=sepia
 
-.. figure:: images/grass-streets-speed.png.png
+.. figure:: images/grass-streets-speed.png
 
-            Rasterizovaná síť silnic s parametrem dovolené rychlosti}}
+            Rasterizovaná síť silnic s atributem průměrné rychlosti
 
-Vytvoříme vektorovou mapu s ohniskem požáru (souřadnice 34886, 224328) - :grasscmd:`v.in.ascii`.
-
-.. code-block:: bash
-
-                echo "634886|224328|1" | v.in.ascii input=- output=fire_pt
+Modulem :grasscmd:`v.in.ascii` vytvoříme vektorovou mapu s ohniskem
+požáru (souřadnice v S-JTSK 754063, -981284).
 
 .. figure:: images/wxgui-v-in-ascii.png
             
-            Vytvoření mapy ohniska požáru - v.in.ascii
+            Vytvoření mapy s ohniskem požáru - definujeme souřadnice
+            ohniska požáru :fignote:`(1)` a název výsledné vektorové mapy
+            :fignote:`(2)`
 
-Rastr časové náročnosti vytvoříme pomocí :grasscmd:`r.mapcalc`, viz :ref:`rastrova-algebra`.
+.. notecmd:: Vytvoření vektorové mapy s ohniskem požáru
+             
+   .. code-block:: bash
+
+      echo "-754063|-981284|1" | v.in.ascii input=- output=pozar
+            
+Rastr časové náročnosti vytvoříme pomocí :grasscmd:`r.mapcalc`, viz
+kapitola :ref:`rastrová algebra <rastrova-algebra>`.
 
 .. code-block:: bash
 
-                r.mapcalc "streets_travtime = 1./streets_speed"
+                r.mapcalc expr="silnice_cas = 1.0/silnice"
 
-Pomocí :grasscmd:`r.cost` vypočteme rastrovou mapu nákladů pohybu a
-data zobrazíme (:grasscmd:`d.rast`, :grasscmd:`d.vect`).
+Pomocí modulu :grasscmd:`r.cost` (:menuselection:`Raster --> Terrain
+analysis --> Cost surface`) vypočteme rastrovou mapu nákladů pohybu.
 
 .. code-block:: bash
 
-                r.cost -k input=streets_travtime output=streets_cost start_points=fire_pt
-                d.rast map=streets_cost
-                d.vect map=firestations color=red size=10 icon=basic/pushpin display=shape,attr attrcolumn=LOCATION
-                d.vect map=fire_pt color=red icon=basic/marker size=20
+                r.cost -k input=silnice_cas output=silnice_naklady start_points=pozar
 
 .. figure:: images/grass-streets-cost.png
+   :class: middle
+           
+   Analýza nákladů pohybu v terénu, ohnisko požáru a požární stanice
 
-            Analýza nákladů pohybu v terénu, ohnisko požáru + požární stanice
+Dojezdovost pro jednotlivé požární stanice k ohnisku požáru vypočteme
+z rastru nákladu pomocí modulu :grasscmd:`v.what.rast`
+(:menuselection:`Vector --> Update attributes --> Sample raster maps
+at point locations`). Nejprve si v aktuálním mapsetu :ref:`vytvoříme
+kopii <kopie-vektorove-mapy>` vektorové mapy
+:map:`pozarni_stanice`. Přidáme :ref:`nový atribut
+<pridani-noveho-atributu>` `dojezdovost`, do něhož uložíme hodnotu
+dojezdovosti pro danou požární stanici.
 
-Náklady pro jednotlivé požární stanice můžeme určit pomocí modulu
-:option:`r.what` s parametrem :option:`points`.
+.. notecmd:: Přidání atributu dojezdovosti
+
+   .. code-block:: bash
+
+      v.db.addcolumn map=pozarni_stanice column="dojezdovost double precision"
 
 .. code-block:: bash
 
-                r.what map=streets_cost points=firestations
+   v.what.rast map=pozarni_stanice raster=silnice_naklady column=dojezdovost
 
-.. notegrass6::
+.. figure:: images/grass-streets-nearest.png
+            
+   Nalezení požární stanice v nejmenší hodnotou dojezdovosti,
+   tj. požární stanice s kategorii '89'
 
-   Modul :grasscmd:`r.what` nemá parametr :option:`points`, tj, ``v.out.ascii input=firestations fs=' ' | r.what input=streets_cost``
+Souřadnice požární stanice s kategorii '89' poskytne modul
+:grasscmd:`v.out.ascii` (:menuselection:`File --> Export vector map
+--> ASCII points or GRASS ASCII vector export`).
 
-Nejkratší (spádovou) cestu vypočteme modulem :grasscmd:`r.drain`.
+.. code-block:: bash
+                
+   v.out.ascii input=pozarni_stanice cats=89                                       
+   -750649.82535985|-992867.12907965|89          
+   
+Nejkratší (spádovou) cestu vypočteme modulem :grasscmd:`r.drain`
+(:menuselection:`Raster --> Terrain analysis --> Least cost route or
+flow`).
 
 .. code-block:: bash
 
-                r.drain -n input=streets_cost output=route_20Western start_coor=635940,225912
-                r.drain -n input=streets_cost output=route_52Holly start_coor=633178,221353
+                r.drain -n input=silnice_naklady output=cesta start_coor=-750649.82535985,-992867.12907965
 
 .. notegrass6:: 
 
    Místo parametru :option:`start_coor` použijte :option:`coor`.
 
-Data zobrazíme (:grasscmd:`d.rast` a :grasscmd:`d.vect`).
-
-.. code-block:: bash
-
-                d.vect map=streets_wake color=grey
-                d.vect map=fire_pt fcolor=red icon=basic/marker size=20
-                d.vect map=firestations display=shape,cat,attr color=red icon=basic/box size=4 xref=right lsize=10 lcolor=red attrcol=LOCATION
-                d.rast map=route_20Western
-                d.rast map=route_52Holly
-
 .. figure:: images/grass-streets-path.png
-
-            Výsledek, nejkratší cesta k požáru
-
+   :class: middle
+           
+   Výsledek, nejkratší cesta k požáru
+            
 .. figure:: images/grass-streets-path-3d.png
-
-            Vizualizace rastrové vrstvy nákladů ve 3D
+   :class: middle
+           
+   Vizualizace rastrové mapy nákladů ve 3D

@@ -68,6 +68,8 @@ Numerické atributy mohou být také *vypočítány* na základě zvolené funkc
 
             Funkce pro výpočet numerických atributů
 
+.. _pridani-noveho-atributu:
+            
 Příklad přidání nového sloupce s výměrou a její výpočet (ve
 čtverečních mapových jednotkách).
 
@@ -81,6 +83,8 @@ Příklad přidání nového sloupce s výměrou a její výpočet (ve
 
                              v.to.db map=urbanarea option=area columns=AREA
 
+.. _field-calculator:
+                
 Field Calculator
 ================
 

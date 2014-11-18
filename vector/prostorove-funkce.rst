@@ -7,27 +7,28 @@ Prostorové funkce
              Příklad základních prostorových funkcí (buffer, clip,
              erase) v kombinaci s atributovými dotazy
 
+.. _v-extract:
+             
 Výběr z vektorové mapy
 ======================
 
-Z vektorové mapy můžeme vybrat prvky a ty uložit mapy nové. Vybírat
-můžeme selektivně podle identifikátorů prvků anebo na základě jejich
-atributů.  Nástroj pro výběr :grassCmd:`v.extract` můžeme spustit z
-:menuselection:`Vector --> Feature selection --> Select by
-attributes`.
+Vybírat prvky z vektorové mapy můžeme selektivně podle jejich
+identifikátorů anebo na základě jejich atributů.  Nástroj pro výběr
+:grassCmd:`v.extract` můžeme spustit z menu :menuselection:`Vector -->
+Feature selection --> Select by attributes`.
 
-.. note:: Ujistěte se, že máte v pracovní cestě přidány všechny
-    *mapsety*, abyste mohli pracovat s daty v nich obsaženými, viz
-    modul :grassCmd:`g.mapsets`.
+.. note:: Ujistěte se, že máte :ref:`v pracovní cestě <g-mapsets>`
+    přidány všechny *mapsety* tak, abyste mohli pracovat s daty v nich
+    obsaženými.
 
-V následujícím příkladě vybereme z vektorové mapy :map:`doprava` (mapset
-:map:`osm`) všechny dálnice (splňující podmínku ``highway =
-'motorway'``). Výsledek uložíme do vektorové mapy :map:`dalnice`.
+V následujícím příkladě vybereme z vektorové mapy :map:`silnice`
+(mapset :map:`osm`) všechny dálnice (splňující podmínku ``typ =
+1``). Výsledek uložíme do vektorové mapy :map:`dalnice`.
 
 .. figure:: images/v-extract.png
    :class: large
            
-   Tvoření tématické vektorové mapy :map:`dalnice` z OpenStreetMap.
+   Vytvoření tématické vektorové mapy :map:`dalnice` z OpenStreetMap.
             
 Obalová zóna
 ============
@@ -35,9 +36,16 @@ Obalová zóna
 Obalovou zónu pro vektorová data vytváří modul :grasscmd:`v.buffer`
 (:menuselection:`Vector --> Buffer vector`).
 
-.. figure:: images/v-buffer-result.png
+Příklad vytvoření obalové zóny s šířkou 5 km.
 
-   Příklad obalové zóny 500m okolo dálnic
+.. code-block:: bash
+
+   v.buffer input=dalnice output=dalnice5000 distance=5000
+
+.. figure:: images/v-buffer-result.png
+   :class: middle
+           
+   Příklad obalové zóny 5 km okolo dálnic
 
 Překrytí, průnik, spojení, vyloučení
 ====================================
@@ -46,38 +54,34 @@ Tyto operace zajišťuje modul :grasscmd:`v.overlay`
 (:menuselection:`Vector --> Overlay vector maps --> Overlay vector
 maps`).
 
-V našem případě zjistíme, jak moc zasahuje zóna 500m okolo dálnic do
-velkoplošných a maloplošných chráněných území.
-
-.. todo:: doplnit...
-          
-.. Nejprve spojíme velkoplošná a maloplošná území do jedné vrstvy.
-
-
-Spojení (union)
-===============
+Překrytí (union)
+^^^^^^^^^^^^^^^^
 
 V našem případě vytvoříme vektorovou mapu :map:`chranena_uzemi`
-spojením velkoplošných a maloplošných chráněných území.
+:fignote:`(4)` spojením :fignote:`(3)` velkoplošných :fignote:`(2)` a
+maloplošných chráněných území :fignote:`(1)`.
 
 .. figure:: images/v-overlay-01.png
 
     Vytvoření mapy maloplošných a velkoplošných chráněných území
 
-Výsledná vektorová mapa má spojenou tabulku atributů z obou vstupních
-vektorových map. Atributy první mapy označeny prefixem ``a_`` a
-atributy druhé prefixem ``b_``.
+K výsledné vektorové mapě je přiřazena atributová tabulka, která je
+spojena z obou vstupních vektorových map. Atributy první vektorové
+mapy (:option:`ainput`) jsou označeny prefixem ``a_``, atributy druhé
+(:option:`binput`) prefixem ``b_``.
 
 .. figure:: images/v-overlay-01-table.png
-
-    Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`
+   :class: middle
+        
+   Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`
 
 Průnik (intersect)
-==================
+^^^^^^^^^^^^^^^^^^
 
-V našem případě zjistíme, jak obalová zóna zasahuje do chráněných
-území. Opět spustíme modul :grasscmd:`v.overlay` a použijeme operaci
-průnik (operátor ``AND``).
+V tomto případě zjistíme, jak obalová zóna dálnic :fignote:`(2)`
+zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
+:grasscmd:`v.overlay` a použijeme operaci průnik (operátor ``AND`` -
+:fignote:`(3)`).
 
 .. figure:: images/v-overlay-02.png
 
@@ -99,15 +103,12 @@ Podobně fungují i operátory ``XOR`` a ``NOT``.
 Spojení vektorových map (merge)
 ===============================
 
-Alternativním způsobem spojení vektorových map je modul
-:grasscmd:`v.patch`. Na rozdíl od :grasscmd:`v.overlay` tento modul
-sloučí vstupní vektorové mapy automaticky.
-
-V tomto příkladu vytvoříme novou mapu :map:`silnice`, která bude
-složena ze vstupních vektorových map :map:`dalnice, I_trida, II_trida,
-III_trida`.
-
-Spustíme modul :grasscmd:`v.patch` (:menuselection:`Vector --> Overlay
-vector maps --> Patch vector maps`).
+Alternativním způsob spojení vektorových map umožňuje modul
+:grasscmd:`v.patch` (:menuselection:`Vector --> Overlay vector maps
+--> Patch vector maps`). Na rozdíl od :grasscmd:`v.overlay` tento
+modul sloučí vstupní vektorové mapy automaticky.
 
 .. figure:: images/v-patch-01.png
+
+   Příklad vytvoření nové vektorové mapy :map:`doprava`, která je
+   složena ze vstupních vektorových map :map:`silnice,zeleznice`.

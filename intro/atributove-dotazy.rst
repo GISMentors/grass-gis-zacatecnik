@@ -80,6 +80,10 @@ viz :ref:`sql-builder`.
 
             Jednoduchý atributový doraz - zobrazení výsledku
 
+.. note:: Vybírat vektorové prvky na základě jejich atributů lze i
+          pomocí modulu :grasscmd:`v.extract`, více informací
+          :ref:`zde <v-extract>`.
+            
 Zvýraznění výběru v mapovém okně
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

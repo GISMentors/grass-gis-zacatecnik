@@ -8,8 +8,9 @@ Novou vektorovou mapu vytvoříme z menu
 :menuselection:`Vector --> Develop vector map --> Create new vector map`.
 
 .. figure:: images/create-vector.png
-
-   Vytvoření nové vektorové mapy
+   :class: small
+   
+   Dialog pro výytvoření nové vektorové mapy
 
 .. noteadvanced::
       
@@ -20,27 +21,27 @@ Novou vektorovou mapu vytvoříme z menu
 
     .. code-block:: bash 
     
-        v.edit map=novy_vektor tool=create`
+        v.edit map=novy_vektor tool=create
 
 Vytvoření a úprava atributové tabulky
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nástroj pro editaci atributové tabulky spustíme z kontextového menu vektorové mapy
-:guilabel:`Show attribute data`
+:item:`Show attribute data`.
 
 .. figure:: images/edit-attributes-01.png
    :class: middle
            
-   Spuštění tabulky atributů
+   Spuštění správce atributových dat
 
-V záložce :guilabel:`Manage attributes` můžeme přidávat a
-přejmenovávat atributové sloupečky, více v sekci :ref:`editace
-atributových dat <editace-atributovych-dat>`.
+Přidávat či přejmenovávat atributy lze v záložce :item:`Manage
+attributes`ý, více v sekci :ref:`editace atributových dat
+<editace-atributovych-dat>`.
 
 .. figure:: images/attribute-table.png
    :class: middle
            
-   Přidání sloupečku s názvem ``popis``
+   Přidání nového atributu s názvem ``popis``
 
 .. _editace-vektorovych-dat:
 
@@ -48,7 +49,7 @@ Editace vektorové mapy
 ======================
 
 Existující vektorovou mapu můžeme začít editovat z kontextového menu 
-:guilabel:`Start editing`.
+:item:`Start editing`.
 
 .. figure:: images/edit-vector-01.png
    :class: middle
@@ -59,35 +60,36 @@ Nyní můžeme v mapovém okně zvolit nástroj kreslení linie (nebo kterýkoli
 a nakreslit požadovaný tvar.
 
 .. note:: Mapové okno bude zobrazovat podkladové mapy, které v něm byly načteny
-    dříve
+    dříve.
 
 Po ukončení editace geoprvku (pravým tlačítkem) se objeví formulář pro vyplnění
-atributů
+atributů.
 
 .. figure:: images/edit-vector-02.png
+   :class: middle
+        
+   Definice atributů pro nově vytvořený vektorový geoprvek
 
-    Definice atributů pro nově vytvořený vektorový geoprvek
+Počáteční a koncové body (tzv. uzly) linií a hranic ploch ploch se na
+sebe budou automaticky přichytávat (výchozí hodnota je `10px`).
 
-Počáteční a koncové body linií a ploch se budou na sebe přichytávat
-(výchozí hodnota je `10px`). Počáteční a koncové body linií a polygonů
-jsou vykresleny různou barvou, podle toho jsou-li přichyceny k dalšímu
-bodu či nikoliv.
+.. note:: Uzly jsou vykresleny různou barvou, podle toho jsou-li
+          přichyceny k dalšímu uzlu či nikoliv. Viz dialog
+          `Digitization settings`, záložka :item:`Symbology`.
 
-Při editaci ploch je každá plocha automaticky *zaplochována* centroidem. K
-centroidu se naváží požadované atributy. Hranice plochy a jejich centroidy lze
-editovat i zvlášť.
+Při editaci ploch je každá plocha automaticky *zaplochována*
+centroidem. K centroidu lze později navázat požadované atributy
+plochy. Hranice plochy a jejich centroidy lze také editovat i zvlášť.
 
-Mazání vybraných geoprvků je potřeba vždy potvrdit pravým tlačítkem myši.
-
-Přiřazování atributů novým prvkům
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mazání vybraných prvků je potřeba vždy potvrdit pravým tlačítkem myši.
 
 V nastavení editace můžeme nastavit zobrazení editovaných prvků (šířka, barvy),
-snapping, automatické přiřazování atributů novým prvkům, a další.
+snapping, automatické přiřazování atributů novým prvkům a další.
 
 .. figure:: images/editing-settings.png
+   :class: small
+        
+   Nastavení editace
 
-    Nastavení editace
-
-.. noteadvanced:: Editovat vektorové objekty lze také v příkazové řádce pomocí modulu
-    :grassCmd:`v.edit` 
+.. noteadvanced:: Editovat vektorové prvky lze také v příkazové řádce pomocí modulu
+    :grassCmd:`v.edit`.

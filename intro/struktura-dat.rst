@@ -48,8 +48,6 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
             GRASS
             <http://grass.osgeo.org/grass70/manuals/helptext.html>`_)
 
-.. todo:: search_path...
-                      
 .. noteadvanced:: 
    
    GRASS databanka je definovaná proměnnou prostředí
@@ -64,6 +62,8 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
       operačních systémů jako je :wikipedia:`GNU/Linux` či :wikipedia:`Mac
       OS X` :file:`$HOME/grassdata`.
 
+.. _g-mapsets:
+      
 Vyhledávací cesta
 =================
 

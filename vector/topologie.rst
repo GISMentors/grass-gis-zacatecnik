@@ -10,25 +10,28 @@ operací, které v netopologickém formátu jsou daleko náročnější. Toto
 je na druhou stranu vyváženo náročnější správou dat a potenciálně
 větším nebezpečím jejich poškození.
 
-Pokaždé, je-li nějakým způsobem vytvořen nový vektorový soubor či
-je-li stávající soubor upraven nějakým nástrojem, je vždy přebudována
-topologie k danému souboru. Tu můžeme znovu vybudovat také ručně
-modulem :grasscmd:`v.build`, který můžete spustit z menu
+Pokaždé když je vytvořena nová vektorová mapa či je změněna již
+existující mapa, je vždy nově vytvořena topologie vektorových prvků v
+mapě. Tu můžeme znovu vybudovat také manuálně modulem
+:grasscmd:`v.build`, který můžete spustit z menu
 :menuselection:`Vector --> Topology maintenance --> Create or rebuild
 topology`.
 
 .. _kopie-vektorove-mapy:
 
-.. note:: Pomocí modulu :grasscmd:`g.copy` či z kontextového menu
-          správce vrstev (viz obr. níže) si v aktuálním mapsetu vytvoříme
-          lokální kopii vektorové mapy :map:`doprava` (mapset `osm`)
+.. note:: Data lze modifikovat (včetně sestavení topologie) pouze v
+          aktuálním mapsetu. Pro řešení níže uvedené úlohy nejprve
+          pomocí modulu :grasscmd:`g.copy` či z kontextového menu
+          správce vrstev (viz obr. níže) si v aktuálním mapsetu
+          vytvoříme lokální kopii vektorové mapy :map:`obce_polygon`
+          (mapset `ruian`).
 
           .. figure:: images/vector-make-copy.png
                       
 .. figure:: images/v-build-01.png
    :class: large
 
-   Znovu vybudování topologie pro vektorovou mapu :map:`doprava`
+   Znovu vybudování topologie pro vektorovou mapu :map:`obce_polygon`
    (lokální kopie - :fignote:`1`). Chyby v topologii uložíme do nové
    vektorové mapy :fignote:`(2)`.
 

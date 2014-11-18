@@ -12,20 +12,24 @@ souřadnicový systém se liší od souřadnicového systému aktuální lokace
 Postup
 ======
    
-#. vytvořit novou lokaci s souřadnicovým systémem vstupních geodat
-#. do této nové lokaci se přepnout a geodata tam naimportovat
+#. :ref:`vytvořit novou lokaci <transformace-lokace>` se souřadnicovým
+   systémem vstupních geodat
+#. do této nové lokaci se přepnout a geodata tam :ref:`naimportovat
+   <transformace-import>`
 #. dále se vrátit opět do původní lokace a do této naimportovaná
-   geodata transformovat
+   geodata :ref:`transformovat <transformace-data>`
 
+.. _transformace-lokace:
+   
 Vytvoření nové lokace
 ^^^^^^^^^^^^^^^^^^^^^
 
-Z menu *správce vrstev* spusťte z menu :menuselection:`Settings -->
-GRASS working environment --> Create new location` průvodce tvorby
-lokace, novou lokaci můžete :ref:`vytvořit více způsoby
-<tvorba-lokace>`, nejrychlejší je v tomto případě :ref:`tvorba na
-základě vstupních geodat <lokace-srtm>`. Po vytvoření nové lokace se
-objeví dialog, který umožňuje se do této lokace přepnout.
+Z menu :menuselection:`Settings --> GRASS working environment -->
+Create new location` spusťte průvodce tvorby lokace, novou lokaci
+můžete :ref:`vytvořit více způsoby <tvorba-lokace>`, nejrychlejší je v
+tomto případě :ref:`tvorba na základě vstupních geodat
+<lokace-srtm>`. Po vytvoření nové lokace se objeví dialog, který
+umožňuje se do této lokace přepnout.
 
 .. figure:: images/new-loc-switch.png
             :class: small
@@ -33,6 +37,8 @@ objeví dialog, který umožňuje se do této lokace přepnout.
 .. figure:: images/new-loc-switch-confirm.png
             :class: small
 
+.. _transformace-import:
+                    
 Import geodat do nové lokace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -61,16 +67,18 @@ cílová.
 
 .. figure:: images/loc-switch-back.png
             :class: small
+
+.. _transformace-data:
                     
 Transformace dat do cílové lokace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Transformovat **rastrová data** umožňuje modul :grasscmd:`r.proj`
-dostupný z menu *správce vrstev* :menuselection:`Raster --> Develop
-raster map --> Reproject raster map from different GRASS location`,
-podobně pro **vektorová data** existuje :grasscmd:`v.proj` dostupný z
-:menuselection:`Vector --> Develop vector map --> Reproject vector map
-from different GRASS location`.
+dostupný z menu :menuselection:`Raster --> Develop raster map -->
+Reproject raster map from different GRASS location`, podobně pro
+**vektorová data** existuje :grasscmd:`v.proj` (:menuselection:`Vector
+--> Develop vector map --> Reproject vector map from different GRASS
+location`).
 
 Následuje příklad pro transformaci vektorových dat.
 
@@ -85,7 +93,7 @@ Následuje příklad pro transformaci vektorových dat.
             jsou vstupní data uložena :fignote:`(2)`, vybereme vstupní
             vektorovou mapu :fignote:`(3)`. Pokud by lokace byly
             umístěny v odlišných adresářích, je potřeba definovat
-            adresář se vstupní lokace :fignote:`(4)`.
+            adresář se vstupní lokací :fignote:`(4)`.
 
 .. figure:: images/v-proj-2.png
 

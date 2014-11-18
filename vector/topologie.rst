@@ -43,8 +43,8 @@ Oprava topologických chyb
 Pro práci s topologií vektorových dat slouží především modul
 :grasscmd:`v.clean` (:menuselection:`Vector --> Topology maintenance
 --> Clean vector map`). Tento modul je zásadní v okamžiku, kdy
-vektorová mapa obsahuje topologické chyby např. po importu dat z
-formátu Esri Shapefile.
+vektorová mapa obsahuje topologické chyby např. :ref:`po importu dat
+<import-topologie>` z formátu Esri Shapefile .
 
 ::
    

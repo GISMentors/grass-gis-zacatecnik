@@ -1,7 +1,7 @@
 Lokalizace
 ----------
 
-GRASS GIS je lokalizován alespoň částečně do více než X
+GRASS GIS je lokalizován alespoň částečně do více než 20
 jazyků. Statistiku pro jednotlivé jazyky získáte z menu
 :menuselection:`Help --> About GRASS GIS` v záložce :item:`Translation
 status`.
@@ -10,7 +10,7 @@ status`.
 	    
 	    Stav lokalizace do češtiny
 
-.. note::
+.. noteadvanced::
    
    "Fuzzy" označuje překlad, který již neodpovídá původní zprávě
    programu a musí být aktualizován.

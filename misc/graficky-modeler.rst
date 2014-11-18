@@ -5,8 +5,8 @@ Grafický modeler
 který umožňuje grafickou formou modelovat geoprostorové analýzy v
 systému GRASS.
 
-Nástroj lze spustit z menu *správce vrstev* :menuselection:`File -->
-Graphical modeler` nebo z nástrojové lišty
+Nástroj lze spustit z menu :menuselection:`File --> Graphical modeler`
+nebo z nástrojové lišty *správce vrstev* 
 
 .. figure:: images/lmgr-gmodeler.png
 
@@ -25,3 +25,6 @@ Příklad
 .. youtube:: 0jkO-ih87mw
 
              Příklad modelu neřízené klasifikace družicových dat
+
+Další videa na `wiki projektu GRASS
+<http://grasswiki.osgeo.org/wiki/WxGUI_Graphical_Modeler#Video_tutorials>`_.

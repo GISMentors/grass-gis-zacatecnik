@@ -17,17 +17,17 @@ location`.
 
 .. figure:: images/wxgui-loc-menu.png
 
-            Spuštění průvodce tvorbou lokace z menu wxGUI
+            Spuštění průvodce tvorbou lokace z menu *správce vrstev*
 
 Lokaci lze vytvořit několika různými postupy:
 
-* výběrem kartografického zobrazení, referenčního elipsoidu
-* pomocí :wikipedia:`EPSG` kódu
-* na základě georeferencovaných dat
-* na základě :wikipedia-en:`WKT <Simple_Features#Well-known_text>` či
-  :wikipedia:`PRJ <Shapefile#Dopl.C5.88kov.C3.A9_soubory>` souboru
-* definicí parametrů pro knihovnu :wikipedia-en:`PROJ.4`
-* bez zadaní parametrů (pro negeoreferencovaná data)
+#. výběrem kartografického zobrazení, referenčního elipsoidu
+#. pomocí :wikipedia:`EPSG` kódu
+#. na základě georeferencovaných dat
+#. na základě :wikipedia-en:`WKT <Simple_Features#Well-known_text>` či
+   :wikipedia:`PRJ <Shapefile#Dopl.C5.88kov.C3.A9_soubory>` souboru
+#. definicí parametrů pro knihovnu :wikipedia-en:`PROJ.4`
+#. bez zadaní parametrů (pro negeoreferencovaná data)
 
 ..
   .. figure:: images/wxgui-new-loc-methods.png
@@ -63,13 +63,13 @@ Na další stránce vybereme způsob vytvoření lokace.
             Vytvoření lokace pro S-JTSK (krok 2)
 
 V našem případě vytvoříme lokaci na základě EPSG kódu, pro
-souřadnicový systém S-JTSK to je :epsg:`5514`.
+souřadnicový systém S-JTSK :epsg:`5514`.
 
 .. note::
 
    :epsg:`5514` podporuje systém GRASS pouze pokud používate verzi
    knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V opačném případě musíte přidat
-   parametry pro S-JTSK do konfiguračního souboru ručně. [#krovak]_
+   parametry pro S-JTSK do konfiguračního souboru ručně [#krovak]_.
 
 
 .. figure:: images/wxgui-loc-s-jtsk-3.png
@@ -113,7 +113,7 @@ Poté se spustí systém GRASS s právě vytvořenou lokací.
                 
    .. code-block:: bash
 
-      grass70 -c EPSG:5514 /opt/grassdata/skoleni-s-jstk
+      grass70 -c EPSG:5514:3 /opt/grassdata/skoleni-s-jstk
 
 .. _lokace-utm:
 
@@ -211,7 +211,7 @@ Vytvoření lokace na základě geodat
 
             Vytvoření lokace pro data SRTM (krok 4)
 
-Volitelně můžeme data na základě kterých byla lokace vytvořena i
+Volitelně můžeme data, na základě kterých byla lokace vytvořena, i
 naimportovat (do mapsetu *PERMANENT*).
 
 .. figure:: images/wxgui-loc-srtm-4.png
@@ -287,7 +287,7 @@ způsoby:
 .. figure:: images/wxgui-new-mapset-menu.png
 
             Vytvoření nového mapsetu v rámci aktuální lokace z menu
-            *Správce vrstev*.
+            *správce vrstev*.
 
 V následující dialogu zvolíme jeho název.
 

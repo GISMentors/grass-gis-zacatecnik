@@ -43,8 +43,8 @@ kterou si přejete legendu zobrazit.
             Vybereme rastrovou mapu pro kterou chceme legendu zobrazit
             :fignote:`(1)` a nastavení potvrdíme :fignote:`(2)`
 
-Legendu může z mapové okna **odstranit** buď z nástorové lišty anebo z
-kontextového menu legendy (pravé tlačítko myši nad legendou):
+Legendu můžete v mapovém okně **skrýt** buď z nástorové lišty anebo
+z kontextového menu legendy (pravé tlačítko myši nad legendou):
                      
 .. figure:: images/remove-legend.png
 
@@ -57,7 +57,7 @@ Z tohoto menu lze také **změnit velikost** legendy i její orientaci.
            
    Příklad změněné orientace legendy
 
-**Vlatnosti legendy můžeme změnit** z dialogu modulu
+**Vlatnosti legendy** můžeme změnit z dialogu modulu
 :grasscmd:`d.legend` dostupného pomocí dvojkliku nad legendou
 umístěnou v mapovém okně.
 
@@ -87,9 +87,9 @@ umístěnou v mapovém okně.
 
    .. figure:: images/legend-broken.png
 
-   Písmo změníme z dialogu nastavení dostupného z menu *správce
-   vrstev* :menuselection:`Settings --> Preferences` anebo z
-   nástrojové lišty
+   Písmo změníme z dialogu nastavení dostupného z menu
+   :menuselection:`Settings --> Preferences` anebo z nástrojové lišty
+   *správce vrstev*
 
    .. figure:: images/lmgr-settings.png
 
@@ -110,7 +110,8 @@ umístěnou v mapovém okně.
       Obsah mapové okna překreslíme
    
    .. figure:: images/legend-ok.png
-
+      :class: small
+           
       Výsledek
       
 Směrová růžice
@@ -121,7 +122,7 @@ Směrovou růžici lze do mapového okna přidat z jeho nástroje lišty:
 .. figure:: images/add-narrow.png
    :class: large
 
-Poté se do mapové okna umistí směrová růžice:
+Poté se do mapové okna umístí výchozí směrová růžice:
 
 .. figure:: images/narrow.png
             :class: small
@@ -140,7 +141,7 @@ růžicí umístěnou v mapovém okně.
 
    Výsledek změny stylu směrové růžice
 
-Směrovou růžici může z mapové okna **odstranit** buď z nástorové lišty
+Směrovou růžici můžete v mapovém okně **skrýt** buď z nástorové lišty
 anebo z kontextového menu směrové růžice (pravé tlačítko myši nad
 směrovou růžicí):
                      
@@ -155,7 +156,7 @@ Měřítko lze do mapového okna přidat z jeho nástroje lišty:
 .. figure:: images/add-scalebar.png
    :class: large
 
-Poté se do mapové okna umistí měřitko:
+Poté se do mapové okna umístí výchozí měřitko:
 
 .. figure:: images/scalebar.png
    :class: small
@@ -166,14 +167,14 @@ dostupného pomocí dvojkliku nad měřítkem umístěnou v mapovém okně.
 .. figure:: images/scalebar-prop.png
    :class: middle
         
-   Přiklad změny stylu měřítka
+   Příklad změny stylu měřítka
 
 .. figure:: images/scalebar-1.png
    :class: small
 
    Výsledek změny stylu měřítka
 
-Měřítko může z mapové okna **odstranit** buď z nástorové lišty anebo z
+Měřítko můžete v mapovém okně **skrýt** buď z nástorové lišty anebo z
 kontextového menu měřítka (pravé tlačítko myši nad měřítkem):
                      
 .. figure:: images/remove-scalebar.png
@@ -191,7 +192,8 @@ V následující dialogu uvedeme text a případně můžeme změnit i
 vlastnosti textového objektu.
       
 .. figure:: images/text-prop.png
-            
+   :class: small
+        
    Po nastavení textu :fignote:`(1)` můžeme nastavit rotaci
    či styl písma :fignote:`(2)`
 
@@ -200,7 +202,8 @@ vlastnosti textového objektu.
                
    Příklad textového popisku v mapovém okně
             
-Popisek lze **odstranit** opět pomocí výše uvedeného dialogu, který je
+Popisek lze **skrýt** opět pomocí výše uvedeného dialogu, který je
 dostupný pomocí dvojkliku nad daným textovým objektem v mapovém okně.
 
 .. figure:: images/remove-text.png
+   :class: small

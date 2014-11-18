@@ -14,7 +14,7 @@ Import vector map --> Unpack vector map`).
 .. figure:: images/pack-from-gui.png
    :class: large
            
-   Zabalení rastrové a vektorové mapy z GUI systému GRASS.
+   Zabalení rastrové a vektorové mapy z GUI systému GRASS
 
 .. figure:: images/unpack-from-gui.png
    :class: middle
@@ -33,17 +33,17 @@ Import vector map --> Unpack vector map`).
 .. note::
 
    Takto zabalené mapy jsou samozřejmě multiplatformní a lze je
-   přenášet mezi různými operačními systémy, např. GNU/Linux na MS
+   přenášet mezi různými operačními systémy, např. z GNU/Linux na MS
    Windows.
 
 Ṕřenos mapsetů či lokací
 ========================   
 
-Přenášet mapsety či lokace lze snadno, tak že je zabalíme napřílad
+Přenášet mapsety či lokace lze snadno, tak že je zabalíme například
 pomocí aplikace :wikipedia:`zip <ZIP (souborový formát)>`.
 
 .. important::
 
    Při přenášení mapsetů platí pouze jedna podmínka. Mapset může být
    umístěn pouze do lokace se stejným souřadnicovým systém. V opačném
-   případě dojde k nekozistenci se kterou si GRASS neporadí.
+případě dojde k nekozistenci dat, se kterou si GRASS neporadí.

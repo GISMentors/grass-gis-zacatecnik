@@ -12,17 +12,17 @@ rastrových a vektorových formátů.
 Rastrová data
 =============
 
-Modul pro export rastrových dat je dostupný z menu *správce vrstev*
+Modul pro export rastrových dat je dostupný z menu
 :menuselection:`File --> Export raster map --> Common export formats`
-anebo z kontextového menu
+anebo z kontextového menu *správce vrstev*.
 
 .. figure:: images/export-raster-menu.png
 
-V následujícím dialogu zvolíme název výstupního souboru a jeho formát:
+V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
 .. figure:: images/export-raster.png
 
-            Rastrovou mapu pro export :fignote:`(1)`, cestu k
+            Zvolíme rastrovou mapu pro export :fignote:`(1)`, cestu k
             výstupnímu souboru :fignote:`(2)` a formát výstupního
             souboru :fignote:`(3)`. V tomto případě se data
             vyexportují do souboru ``dmt.tif`` v aktuálním adresáři.
@@ -38,17 +38,17 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát:
 Vektorová data
 ==============
 
-Modul pro export vektorových dat je dostupný z menu *správce vrstev*
+Modul pro export vektorových dat je dostupný z menu 
 :menuselection:`File --> Export vector map --> Common export formats`
-anebo z kontextového menu
+anebo z kontextového menu *správce vrstev*.
 
 .. figure:: images/export-vector-menu.png
 
-V následujícím dialogu zvolíme název výstupního souboru a jeho formát:
+V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
 .. figure:: images/export-vector.png
 
-            Rastrovou mapu pro export :fignote:`(1)`, cestu k
+            Zvolíme vektorovou mapu pro export :fignote:`(1)`, cestu k
             výstupnímu souboru :fignote:`(2)` a formát výstupního
             souboru :fignote:`(3)`. V tomto případě se data
             vyexportují do souboru ``obce.shp`` v aktuálním adresáři.
@@ -59,12 +59,12 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát:
 
       v.out.ogr input=obce_polygon dsn=obce.shp format=ESRI_Shapefile
 
-Export obsahu mapové okna do obrazku
+Export obsahu mapové okna do obrázku
 ====================================
 
 Kromě exportu do GIS formátu je možné uložit i obsah mapové okna do
 obrazového souboru jako je např. PNG. Tato funkce je dostupná z
-nástrojé lišty *mapového okna*
+nástrojé lišty *mapového okna*.
 
 .. figure:: images/map-display-image-0.png
             :class: large

@@ -1,12 +1,12 @@
-Atributová data vektorových prvků
----------------------------------
+Atributová data
+---------------
 .. _editace-atributovych-dat:
 
 Editace atributových dat
 ========================
 
 Správce atributových dat umožňuje kromě :ref:`dotazování
-<atributove-dotazy>` i atributová data **modifikovat**.
+<atributove-dotazy>` i atributová data *modifikovat*.
 
 .. youtube:: UZswOcIyaX8
 
@@ -30,7 +30,7 @@ Správce atributových dat umožňuje kromě :ref:`dotazování
                
                                v.db.update map=urbanarea column=UA_TYPE value="UA (edited)" where="cat = 3"
 
-Správce atributových dat umožňuje **přidávat** do atributové tabulky nové záznamy.
+Správce atributových dat umožňuje *přidávat* do atributové tabulky nové záznamy.
 
 .. youtube:: mmPvMRBDxLg
 
@@ -42,13 +42,13 @@ Správce atributových dat umožňuje **přidávat** do atributové tabulky nov�
 
                                 db.execute sql="insert into urbanarea values (109, 109, 29306, 'Farmville', 'UA')"
 
-Vybrané záznamy lze z atributové tabulky **odstranit**.
+Vybrané záznamy lze z atributové tabulky *odstranit*.
 
 .. figure:: images/wxgui-dbmgr-delete.png
 
             Odstranění záznamů z atributové tabulky
 
-.. notecmd:: Odstranění záznamů s atributové tabulky
+.. notecmd:: Odstranění záznamů z atributové tabulky
 
                 .. code-block:: bash
 
@@ -70,7 +70,7 @@ Numerické atributy mohou být také *vypočítány* na základě zvolené funkc
 
 .. _pridani-noveho-atributu:
             
-Příklad přidání nového sloupce s výměrou a její výpočet (ve
+Příklad přidání nového atributu s výměrou a její výpočet (ve
 čtverečních mapových jednotkách).
 
 .. youtube:: qkXgQXF1QkA
@@ -90,7 +90,7 @@ Field Calculator
 
 *Field Calculator* je nástroj, který umožňuje sestavit :abbr:`SQL
 (Structured Query Language)` UPDATE příkaz a pomocí něho modifikovat
-data. 
+atributová data.
 
 .. youtube:: 44KmtnBJtgo
 
@@ -112,7 +112,7 @@ Modul v.db.select
 Modul :grasscmd:`v.db.select` umožňuje provádět dotazy pouze nad
 atributovými daty připojenými k dané vektorové mapě. Je dostupný z
 menu :menuselection:`Database --> Query --> Query vector attribute
-data``. Pokud není zadána :option:`where` podmínka, tak modul vypíše
+data`. Pokud není zadána :option:`where` podmínka, tak modul vypíše
 všechny záznamy z atributové tabulky.
 
 .. figure:: images/v-db-select-0.png

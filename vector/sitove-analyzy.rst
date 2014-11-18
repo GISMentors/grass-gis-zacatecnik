@@ -22,21 +22,27 @@ GRASS nabízí řadu modulů pro tzv. *síťové analýzy*. Jedná se o typy
 * :grasscmd:`v.net.visibility` - konstrukce grafu viditelnosti
 * :grasscmd:`v.net.turntable` - připravovaný modul, v němž bude možné definovat ceny za odbočování v jednotlivých směrech
 
-.. youtube:: McOrMauPc_I
-
-   Příklad síťových analýz v GUI systému GRASS
-
 .. note:: Síťové analýzy jsou založeny na heuristických algoritmech,
     což znamená, že nebude pravděpodobně nalezeno optimální řešení,
     ale pouze suboptimální (kompromis mezi optimálním řešením a
     omezením výpočetního času na přípustnou dobu).
-    
-Je možné rozlišovat směr linie tam *(forward)* a zpět *(backward)*.
-Všechny moduly totiž obsahují parametry, které dovolují definovat ceny
-pro pohyb jednotlivými směry. Zakázané směry jsou reprezentovány
-negativními cenami (např. jednosměrné komunikace, uzavírky silnic,
-atd.).
 
-.. noteadvanced:: Příprava dat je náročná a je náplní `pokročilého
-    kurzu <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+Ukázka
+======
+   
+.. youtube:: McOrMauPc_I
+
+   Příklad síťových analýz v GUI systému GRASS
+
+.. noteadvanced::
+
+   Je možné rozlišovat směr linie tam *(forward)* a zpět *(backward)*.
+   Všechny moduly totiž obsahují parametry, které dovolují definovat ceny
+   pro pohyb jednotlivými směry. Zakázané směry jsou reprezentovány
+   negativními cenami (např. jednosměrné komunikace, uzavírky silnic,
+   atd.).
+   
+   Příprava dat je náročná a je náplní navazujícího
+   `školení pro pokročilé uživatele
+   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 

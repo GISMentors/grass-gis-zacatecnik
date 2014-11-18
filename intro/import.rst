@@ -6,12 +6,11 @@ Import geodat
 .. important::
 
    V této kapitole předpokládáme, že importovaná data jsou
-   georeferencovaná a jsou lokalizovaná v souřadnicovém systému
-   odpovídající aktuální :ref:`lokaci <lokace>`. To, že jsou data v
-   jiném souřadnicovém systému můžete zjistit z dialogu pro import dat
-   (viz obr. níže). V tomto případě musíte nejprve data naimportovat
-   do nové lokace a následně je :ref:`transformovat <transformace>` do
-   aktuální lokace.
+   lokalizovaná v souřadnicovém systému odpovídající aktuální
+   :ref:`lokaci <lokace>`. To, že jsou data v jiném souřadnicovém
+   systému můžete zjistit z dialogu pro import dat (viz obr. níže). V
+   tomto případě musíte nejprve data naimportovat do nové lokace a
+   následně je :ref:`transformovat <transformace>` do aktuální lokace.
 
    .. figure:: images/import-no-proj.png
 
@@ -42,7 +41,7 @@ V dialogu pro import rastrových dat určíme:
 
 .. figure:: images/wxgui-raster-import-0.png
 
-            Určení rastrových dat (PNG) k importu
+            Určení rastrových dat (PNG) z daného adresáře k importu
 
 .. figure:: images/wxgui-raster-import-1.png
 
@@ -57,20 +56,24 @@ V dialogu pro import rastrových dat určíme:
 
                 .. code-block:: bash
                                 
-                                :grasscmd:`r.in.gdal` input=dmt.tif output=dmt
+                   r.in.gdal input=dmt.tif output=dmt
 
-.. admonition:: Hromadný import rastrových dat jako Python skript
+.. admonition:: Ukázka hromadného importu rastrových dat jako Python skript
 
-                .. code-block:: python
+   .. code-block:: python
 
-                                import os
-                                import grass.script as grass
+      import os
+      import grass.script as grass
 
-                                for fname in os.listdir("."):
-                                    name, ext = os.path.splitext(fname)
-                                    if ext in ('.png', '.tif', '.jpg', '.gif'):
-                                        grass.run_command('r.in.gdal', input = fname, output = name)
+      for fname in os.listdir("."):
+          name, ext = os.path.splitext(fname)
+          if ext in ('.png', '.tif', '.jpg', '.gif'):
+              grass.run_command('r.in.gdal', input = fname, output = name)
 
+   Skriptování v jazyce Python je náplní navazujícího
+   `školení pro pokročilé uživatele
+   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+                                
 .. _import-vector:
                                         
 Vektorová data
@@ -95,7 +98,7 @@ V dialogu pro import vektorových dat určíme:
 
 .. figure:: images/wxgui-vector-import-0.png
 
-            Určení vektorových dat (Esri Shapefile)
+            Určení vektorových dat (Esri Shapefile) z daného adresáře k importu
 
 .. figure:: images/wxgui-vector-import-1.png
 
@@ -106,21 +109,26 @@ V dialogu pro import vektorových dat určíme:
 
             Naimportovaná data se automaticky přidají do stromu vrstev
 
-.. admonition:: Import rastrových dat z příkazové řádky
+.. admonition:: Import vektorových dat z příkazové řádky
 
                 .. code-block:: bash
                                 
-                                :grasscmd:`v.in.ogr` dsn=lesy.shp
+                                v.in.ogr dsn=lesy.shp
 
-.. admonition:: Hromadný import vektorových dat jako Python skript
+.. admonition:: Ukázka hromadného importu vektorových dat jako Python skript
 
-                .. code-block:: python
+   .. code-block:: python
 
-                                import grass.script as grass
+      import os
+      import grass.script as grass
 
-                                layers = grass.read_command('v.in.ogr', flags = 'l', dsn='.').splitlines()
-                                   for fname in layers:
-                                       grass.run_command('v.in.ogr', dsn = '.', layer = fname)
+      layers = grass.read_command('v.in.ogr', flags = 'l', dsn='.').splitlines()
+      for fname in layers:
+          grass.run_command('v.in.ogr', dsn = '.', layer = fname) 
+
+   Skriptování v jazyce Python je náplní navazujícího
+   `školení pro pokročilé uživatele
+   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 
 .. _import-topologie:
                                        
@@ -166,13 +174,6 @@ mohou vzniknout. Případné topologické chyby, které nemohou být z
 nejrůznějších důvodů během importu odstraněny, je možné napravit
 pomocí modulu :grasscmd:`v.clean`, více v sekci :ref:`topologie
 <topologie>`.
-
-.. note::
-
-   Některá vektorová data (např. vrstvu :map:`obce` je po importu z
-   formátu Esri Shapefile nutné ještě dále zpracovat, více na stránce
-   [[GRASS GIS / Konzistence vektorových dat|konzistence vektorových
-   dat]].
 
 Kódování atributových dat
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -228,9 +229,9 @@ pohled na aktuálně vybranou mapu.
 
             Nastavení pohledu mapového okna na vybranou mapovou vrstvu
 
-Import dat nemá vliv na nastavení :doc:`výpočetního
-regionu`. Výpočetní region lze nastavit na základě naimportovaných dat
-z kontextového menu správce vrstev.
+Import dat nemá vliv na nastavení :doc:`výpočetního regionu
+<region>`. Výpočetní region lze nastavit na základě naimportovaných
+dat z kontextového menu správce vrstev.
 
 .. figure:: images/wxgui-set-region-menu.png
 

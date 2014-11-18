@@ -2,9 +2,9 @@ Georeferencování
 ----------------
 
 Souřadnicové připojení geodat (tzv. georeferencování) umožňuje v
-systému GRASS nástroj :grasscmd:`GCP Manager <wxGUI.gcp>` dostupný z menu *správce
-vrstev* :menuselection:`File --> Georectify` anebo přímo z nástroje
-lišty.
+systému GRASS nástroj :grasscmd:`GCP Manager <wxGUI.gcp>` dostupný z
+menu :menuselection:`File --> Georectify` anebo přímo z nástroje lišty
+*správce vrstev* .
 
 .. figure:: images/lmgr-georectify.png
 
@@ -20,8 +20,8 @@ Postup
 Na vstupu tedy máme souřadnicově nepřipojená rastrová či vektorová
 data. Pokud jsou tato data k dispozici v některém z externích formátu
 jako je např. GeoTIFF či Esri Shapefile musíme je do systému GRASS
-nejprve naimportovat. Pro tento účel jsem nejprve :ref:`vytvořit
-lokaci s matematickým souřadnicovým systémem <lokace-xy>`. Do této
+nejprve naimportovat. Pro tento účel se nejprve :ref:`vytvoří
+lokace s matematickým souřadnicovým systémem <lokace-xy>`. Do této
 lokace data :ref:`naimportujeme <import>` a poté se :ref:`vrátíme zpět
 do lokace <loc-switch>`, do které chceme data georeferencovat.
 
@@ -85,8 +85,8 @@ Výběr identických bodů probíhá následovně:
 
             Z nástrojové lišty vybere nástroj definice identických
             bodů :fignote:`(1)`, zvolíme číslo identického bodu, který
-            chceme definovat :fignote:`(2)` a zvolíme jeho pozici
-            nejprve ve zdrojové :fignote:`(3)` a poté v cílové lokaci
+            chceme definovat :fignote:`(2)` a jeho pozici nejprve ve
+            zdrojové :fignote:`(3)` a poté v cílové lokaci
             :fignote:`(4)`
 
 .. figure:: images/georect-9.png
@@ -119,9 +119,9 @@ V dialogu nastavení:
             digitální model reliéfu naopak lineární interpolace
             (linear) či kubická konvoluce (cubic)
 
-Před vlastním souřadnicovým připojení můžeme spočíst pro identické bodu
-tzv. RMS chybu a na jejím základě vyřadit nebo naopak přidat nové
-identické body.
+Před vlastním souřadnicovým připojení můžeme spočíst na základě
+identických bodů tzv. RMS chybu a na jejím základě vyřadit nebo naopak
+přidat nové identické body.
 
 .. note::
    

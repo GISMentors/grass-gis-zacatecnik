@@ -5,8 +5,8 @@ Tvorba mapových výstupů
 
 Pro tvorbu kvalitních mapových výstupů je určen grafický nástroj
 :grasscmd:`Cartographic Composer <wxGUI.psmap>` dostupný z menu
-*správce vrstev* :menuselection:`File --> Cartographic Composer`
-anebo z nástrojové lišty.
+:menuselection:`File --> Cartographic Composer` anebo z nástrojové
+lišty *správce vrstev*.
 
 .. figure:: images/lmgr-gpsmap.png
             :class: middle
@@ -14,7 +14,7 @@ anebo z nástrojové lišty.
 .. note::
    
    Jde o vlastní aplikaci, která nesouvisí s aktuální obsahem mapového
-   okna. Všechny vrstvy, které chceme, aby byly součástí mapového výstupu
+   okna. Všechny vrstvy, které chceme, aby byly součástí mapového výstupu,
    je třeba přidat do aplikace ručně.
 
 

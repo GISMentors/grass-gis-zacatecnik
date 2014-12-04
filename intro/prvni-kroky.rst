@@ -30,7 +30,7 @@ opatřit geodata ve struktuře, kterou systém vyžaduje (viz
 
    Předpřipravená *GRASS lokace pro školení* je stažitelná jako `zip
    archiv
-   <http://46.28.111.140/gismentors/skoleni/geodata/grass/gismentors.zip>`_ (1.8 GB).
+   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (1.8 GB).
 
 Spuštění systému GRASS
 ======================

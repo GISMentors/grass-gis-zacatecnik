@@ -97,7 +97,7 @@ výpočetní region tak, aby pokrýval rastrovou mapu :map:`elevation` a
 vektorové mapy :map:`busroute1` a :map:`busroute6`. Prostorové
 rozlišení je určeno z rastrové mapy :map:`elevation`.
 
-.. figure:: images/wxgui-g.region-existing.png
+.. figure:: images/wxgui-g-region-existing.png
 
    Nastavení regionu na základě existujících dat
 
@@ -111,7 +111,7 @@ souřadnici na '1000' (v mapových jednotkách) anebo jako offset
 's+1000' (aktuálně nastavená jižní souřadnice + 1000 mapových
 jednotek).
 
-.. figure:: images/wxgui-g.region-bounds.png
+.. figure:: images/wxgui-g-region-bounds.png
 
    Explicitní nastavení hraničních souřadnic
 
@@ -119,7 +119,7 @@ Podobně je možné explicitně definovat hodnoty prostorového rozlišení
 ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
 3D region ještě prostorové rozlišení ve směru Z-ové osy.
 
-.. figure:: images/wxgui-g.region-res.png
+.. figure:: images/wxgui-g-region-res.png
 
    Explicitní nastavení prostorového rozlišení
 

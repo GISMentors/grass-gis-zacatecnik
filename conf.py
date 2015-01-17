@@ -16,12 +16,12 @@ copyright = u'2014 by Martin Landa a Jáchym Čepický (GISMentors)'
 # The short X.Y version.
 version = '1.0.0'
 # The full version, including alpha/beta/rc tags.
-release = '%s RC1' % version
+release = '%sRC1' % version
 
 # -- Options for HTML output ----------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Skoleni-GRASS-GIS'
+htmlhelp_basename = 'skoleni-GRASS-GIS-zacatecnik'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -29,12 +29,31 @@ html_title = project
 
 # -- Options for LaTeX output ---------------------------------------------
 
+latex_elements = {
+# The paper size ('letterpaper' or 'a4paper').
+    'papersize': 'a4paper',
+
+# The font size ('10pt', '11pt' or '12pt').
+    'pointsize': '11pt',
+
+# Additional stuff for the LaTeX preamble.
+    'preamble': "".join((
+        '\\usepackage{pifont}',
+        '\DeclareUnicodeCharacter{2605}{\ding{72}}',
+        '\DeclareUnicodeCharacter{2611}{\ding{51}}',
+        '\DeclareUnicodeCharacter{2612}{\ding{55}}',
+    )),
+#    'fontenc' : '\\usepackage[T1]{fontenc}',
+#    'inputenc' : '\\usepackage[utf8x]{inputenc}',
+    'date': 'leden 2015',
+}
+
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    ('index', '%s.tex' % htmlhelp_basename, project,
-     copyright, 'manual'),
+    ('index', '%s-%s.tex' % (htmlhelp_basename, version), project,
+     u'GISMentors', u'manual'),
     ]
 
 # -- Options for manual page output ---------------------------------------

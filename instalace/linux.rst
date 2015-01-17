@@ -18,22 +18,33 @@ jako tzv. *balíček*.
 Postup instalace pro Debian GNU/Linux
 =====================================
 
-* `balíčky GRASS
-  <http://packages.debian.org/search?keywords=grass&searchon=names&suite=all&section=all>`_
-  dostupné pro `Debian GNU/Linux <http://www.debian.org>`_ (viz
-  projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_).
+Přehled balíčků GRASS dostupné pro :wikipedia:`Debian GNU/Linux` (viz
+projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_):
 
-.. code-block:: bash
+* http://packages.debian.org/search?keywords=grass&searchon=names&suite=all&section=all
 
-   sudo apt-get install grass grass-gui grass-doc
+.. notecmd:: Instalace
+   
+   .. code-block:: bash
+
+      sudo apt-get install grass grass-gui grass-doc
 
 Postup instalace pro Ubuntu
 ===========================
 
-* `balíčky GRASS
-  <http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all>`_
-  dostupné pro :wikipedia:`Ubuntu` (viz projekt `UbuntuGIS
-  <https://wiki.ubuntu.com/UbuntuGIS>`_).
+Přehled balíčků GRASS dostupné pro :wikipedia:`Ubuntu` (viz projekt
+`UbuntuGIS <https://wiki.ubuntu.com/UbuntuGIS>`_):
+
+* http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all
+
+.. notecmd:: Instalace GRASS 7.0
+               
+   .. code-block:: bash
+
+      sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+      sudo add-apt-repository ppa:grass/grass-stable
+      sudo apt-get update
+      sudo apt-get install grass70
 
 .. figure:: images/grass-ubuntu-install.png
             :class: middle
@@ -42,5 +53,5 @@ Postup instalace pro Ubuntu
 
 .. figure:: images/grass-ubuntu-launch.png
             :class: middle
-
+           
             Spuštění systému GRASS v Ubuntu 12.10

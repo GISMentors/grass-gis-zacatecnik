@@ -1,3 +1,11 @@
+.. only:: latex
+                         
+   foo
+   ===
+
+   Intro
+   =====
+
 .. figure:: images/grass-logo.png
    :width: 130px
    :align: left
@@ -31,12 +39,13 @@ upravovat ho a tyto změny či opravy šířit dál.
                těmito verzemi jsou vždy explicitně zdůrazněny. Dále
                předpokládáme zapnutou *anglickou lokalizaci*,
                viz :ref:`volba lokalizace <volba-lokalizace>`.
- 
-Intro
-=====
 
-.. table::
-   :class: toc
+.. only:: html
+
+   Intro
+   =====
+
+   .. cssclass:: toc
 
    +--------------------------------+--------------------------------+
    | První kroky                    | Základní pojmy                 |
@@ -51,8 +60,7 @@ Intro
    |   intro/moduly                 |                                |
    +--------------------------------+--------------------------------+
 
-.. table::
-   :class: toc
+   .. cssclass:: toc
 
    +--------------------------------+--------------------------------+
    |  Dotazování                    |                                |
@@ -64,11 +72,36 @@ Intro
    |                                |   intro/prostorove-dotazy      |
    +--------------------------------+--------------------------------+
 
+.. only:: latex
+
+   První kroky
+   -----------
+          
+   .. toctree::
+      :maxdepth: 1
+
+      instalace/index
+      intro/prvni-kroky
+      intro/struktura-dat
+      intro/zobrazeni-geodat
+      intro/moduly
+
+   Základní pojmy
+   --------------
+
+   .. toctree::
+      :maxdepth: 1
+
+      raster/index
+      vector/index 
+      intro/region
+   
 Rastrové analýzy
 ================
 
-.. table::
-   :class: toc
+.. only:: html
+          
+   .. cssclass:: toc
 
    +--------------------------------+--------------------------------+
    | .. toctree::                   | .. toctree::                   |
@@ -80,11 +113,25 @@ Rastrové analýzy
    |                                |   raster/analyza-nakladu       |
    +--------------------------------+--------------------------------+
 
+.. only:: latex
+
+   .. toctree::
+      :maxdepth: 1
+
+      raster/statistika
+      raster/mask
+      raster/tabulka-barev
+      raster/analyzy-povrchu
+      raster/rastrova-algebra
+      raster/reklasifikace
+      raster/analyza-nakladu
+
 Vektorové analýzy
 =================
 
-.. table::
-   :class: toc
+.. only:: html
+          
+   .. cssclass:: toc
 
    +--------------------------------+--------------------------------+
    | .. toctree::                   | .. toctree::                   |
@@ -95,11 +142,23 @@ Vektorové analýzy
    |   vector/topologie             |                                |        
    +--------------------------------+--------------------------------+
 
+.. only:: latex
+
+   .. toctree::
+      :maxdepth: 1
+
+      vector/editace
+      vector/prostorove-funkce
+      vector/topologie
+      vector/atributy
+      vector/sitove-analyzy
+                 
 Další témata
 ============
 
-.. table::
-   :class: toc
+.. only:: html
+          
+   .. cssclass:: toc
 
    +--------------------------------+--------------------------------+
    |  Geodata                       | Mapové výstupy                 |
@@ -115,8 +174,7 @@ Další témata
    |   misc/georeferencovani        |                                |
    +--------------------------------+--------------------------------+
 
-.. table::
-   :class: toc
+   .. cssclass:: toc
         
    +--------------------------------+--------------------------------+
    |  Různé                         |                                |
@@ -127,8 +185,46 @@ Další témata
    |   misc/graficky-modeler        |   misc/lokalizace              |
    +--------------------------------+--------------------------------+
 
+.. only:: latex
+   
+   Geodata
+   -------
+          
+   .. toctree::
+      :maxdepth: 1
+
+      intro/import
+      intro/export
+      intro/prenos-dat
+      intro/tvorba-lokace
+      intro/transformace
+      misc/georeferencovani
+         
+   Mapové výstupy
+   --------------
+
+   .. toctree::
+      :maxdepth: 1
+                 
+      misc/mapove-elementy
+      misc/mapove-vystupy
+
+   Různé
+   -----
+
+   .. toctree::
+      :maxdepth: 1
+
+      misc/graficky-modeler
+      misc/lokalizace
+
+.. only:: latex
+          
+   Dodatek
+   =======
+
 Související materiály
-=====================
+---------------------
 
 *Česky:*
 
@@ -146,7 +242,7 @@ Související materiály
 
 
 Technická podpora
-=================
+-----------------
 
 * *(česky)* Mailing list `FreeGeoCZ
   <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_ (obecně Open Source GIS, nikoliv pouze GRASS)
@@ -162,19 +258,19 @@ Technická podpora
 .. * OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
 
 Užitečné odkazy
-===============
+---------------
 
 * http://freegis.fsv.cvut.cz
 * http://epsg.io
 
 Licence
-=======
+-------
 
 .. table::
    :class: noborder
 
    +----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | .. image:: _static/cc-by-sa.png  | Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_. |
+   | .. image:: images/cc-by-sa.png   | Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_. |
    |           :width: 125px          |                                                                                                                                                       |
    +----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 

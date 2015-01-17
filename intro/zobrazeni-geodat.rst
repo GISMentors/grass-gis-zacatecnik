@@ -48,11 +48,13 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
    pro pokročilé uživatele
    <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 
-   .. figure:: images/gif-example.gif
-      :class: middle
+   .. only:: html
+             
+      .. figure:: images/gif-example.gif
+         :class: middle
               
-      Příklad vykreslení série prostorových analýz do formátu
-      GIF
+         Příklad vykreslení série prostorových analýz do formátu
+         GIF
 
 .. _zobrazeni-dat-raster:
                

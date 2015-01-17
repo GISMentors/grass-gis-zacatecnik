@@ -36,7 +36,7 @@ Import vector map --> Unpack vector map`).
    přenášet mezi různými operačními systémy, např. z GNU/Linux na MS
    Windows.
 
-Ṕřenos mapsetů či lokací
+Přenos mapsetů či lokací
 ========================   
 
 Přenášet mapsety či lokace lze snadno, tak že je zabalíme například

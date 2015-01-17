@@ -17,8 +17,13 @@ názvu napovídající účel modulu (viz tabulka níže). Například modul
 :grasscmd:`v.buffer` patří do skupiny *vector* a je určen pro vytvoření
 obalové zóny (tzv. bufferu) nad vektorovými daty.
 
-.. table::
-   :class: border
+.. only:: latex
+          
+   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+                       
+.. only:: html
+                                 
+   .. cssclass:: border
 
    +----------+--------------------------------+-----------------------------------------------+
    | prefix   | skupina                        | popis                                         |
@@ -53,6 +58,7 @@ Příkazy (tj. moduly) systému GRASS lze spouštět několika způsoby
 
 .. figure:: images/wxgui-search-r-buffer.png
 
+..
             Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`
 
 * z příkazové řádky správce vrstev

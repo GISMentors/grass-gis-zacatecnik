@@ -69,8 +69,19 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 
    :epsg:`5514` podporuje systém GRASS pouze pokud používate verzi
    knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V opačném případě musíte přidat
-   parametry pro S-JTSK do konfiguračního souboru ručně [#krovak]_.
+   parametry pro S-JTSK do konfiguračního souboru ručně:
 
+   Na začátek souboru s definicí kódů EPSG (v případě OS
+   GNU/Linux bývá umístěn v :file:`/usr/share/proj/epsg`, u MS
+   Windows :file:`c:\\OSGeo4W\\share\\proj\\epsg`), přidáme
+   následující 2 řádky::
+
+        # Krovak S-JTSK
+        <5514> +proj=krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.28813972222222 +k=0.9999 +x_0=-0 +y_0=-0 \
+        +ellps=bessel +pm=ferro +to_meter=-1 +no_defs +towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56
+
+   Soubor uložte, zavřete a případně restartujte GRASS Location Wizard, aby
+   došlo ke znovu načtení databáze kódů EPSG.
 
 .. figure:: images/wxgui-loc-s-jtsk-3.png
 
@@ -207,6 +218,10 @@ Vytvoření lokace na základě geodat
 
             Vytvoření lokace pro data SRTM (krok 3)
 
+.. raw:: latex
+
+   \clearpage
+   
 .. figure:: images/wxgui-loc-srtm-3.png
 
             Vytvoření lokace pro data SRTM (krok 4)
@@ -298,17 +313,3 @@ Po vytvoření nového mapsetu se do něj systém GRASS automaticky přepne.
 
 .. figure:: images/wxgui-new-mapset-dialog-1.png
             :class: small
-
-.. rubric:: Poznámky pod čarou
-   :class: secnotoc
-           
-.. [#krovak] Na začátek souboru s definicí kódů EPSG (v případě OS
-    GNU/Linux bývá umístěn v :file:`/usr/share/proj/epsg`, u MS
-    Windows :file:`c:\\OSGeo4W\\share\\proj\\epsg`), přidáme
-    následující 2 řádky::
-
-        # Krovak S-JTSK
-        <5514> +proj=krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.28813972222222 +k=0.9999 +x_0=-0 +y_0=-0 +ellps=bessel +pm=ferro +to_meter=-1 +no_defs +towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56
-
-    Soubor uložte, zavřete a případně restartujte GRASS Location Wizard, aby
-    došlo ke znovu načtení databáze kódů EPSG.

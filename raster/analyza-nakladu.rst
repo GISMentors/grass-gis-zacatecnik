@@ -6,8 +6,13 @@ Nejprve si v aktuálním mapsetu :ref:`vytvoříme kopii
 :ref:`nový atribut <pridani-noveho-atributu>` ``rychlost``, do něhož
 uložíme průměrnou rychlost v následující podobě:
 
-.. table::
-   :class: border
+.. only:: latex
+          
+   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+                       
+.. only:: html
+                                 
+   .. cssclass:: border
 
    +----------------------+----------------+---------------------+
    | Silnice              | Typ            | Rychlost (km/h)     |

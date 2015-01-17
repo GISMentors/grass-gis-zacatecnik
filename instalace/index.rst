@@ -6,7 +6,8 @@ platformách, které mají blízko k :wikipedia:`Unixovým <Unix>`
 operačním systémům.
 
 .. figure:: images/grass-cerl-programmers.png
-
+   :scale-latex: 55 
+        
    Programátor systému GRASS Dave Gerdes :abbr:`USA-CERL (US Army
    Construction Engineering Research Laboratory)` před počítačem Compaq
    386 na který portoval GRASS
@@ -25,8 +26,10 @@ je např. :wikipedia:`AIX`.
 V následujícím textu se zaměříme na dvě nejrozšířenější platformy - *MS
 Windows* a *GNU/Linux*.
 
-.. rubric:: Návod
-   :class: secnotoc
+.. only:: html
+          
+   .. rubric:: Návod
+      :class: secnotoc
         
 .. toctree::
    :maxdepth: 1

@@ -27,8 +27,7 @@ rastrové mapy ve *správci vrstev*.
 	    
 .. figure:: images/lmgr-r-info-example.png
 
-	    Příklad výpisu metadat rastrové mapy
-	    :map:`dmt`.
+	    Příklad výpisu metadat rastrové mapy :map:`dmt`.
 
 .. _raster-types:
                  

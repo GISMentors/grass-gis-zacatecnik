@@ -93,6 +93,10 @@ umístěnou v mapovém okně.
 
    .. figure:: images/lmgr-settings.png
 
+.. raw:: latex
+
+   \clearpage
+
    .. figure:: images/settings-font.png            
       :class: middle
               

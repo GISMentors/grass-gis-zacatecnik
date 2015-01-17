@@ -112,6 +112,11 @@ latex:
 
 latexpdf:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	sed -i -e 's/\\begin{figure}\[htbp\]/\\begin{figure}\[!ht\]/' \
+		-e 's/\\DUspan{fignote}/\\textcolor{red}/g' \
+		-e 's/\\DUspan{map}/\\textsc/g' \
+		-e 's/\\DUspan{item}/\\colorbox[rgb]{0.20,0.20,0.20}/g' \
+		$(BUILDDIR)/latex/*.tex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."

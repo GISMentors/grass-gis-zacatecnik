@@ -41,11 +41,13 @@ standardní cestou, měl by být dostupný z hlavní nabídky vašeho
 
 .. figure:: ../instalace/images/grass-ubuntu-launch.png
             :class: middle
-
+            :scale-latex: 80
+                 
             Spuštění systému GRASS v Ubuntu 12.10
 
 .. figure:: ../instalace/images/wingrass-8.png
-
+            :scale-latex: 50
+                 
             Spuštění systému GRASS z nabídky *Start* v MS Windows.
 
 .. notecmd:: Spuštění systému GRASS
@@ -68,6 +70,7 @@ GRASS`).
 .. _spusteni-grass:
 
 .. figure:: images/welcome-screen.png
+            :scale-latex: 60
 
             Úvodní dialog systému GRASS pro výběr adresáře s geodaty :fignote:`(1)`,
             lokace :fignote:`(2)` a mapsetu :fignote:`(3)`.

@@ -29,8 +29,13 @@ Příklad reklasifikace DMT
 Rastrovou mapu digitálního modelu terénu reklasifikujeme do čtyř typů
 podle níže uvedené reklasifikační tabulky:
 
-.. table::
-   :class: border
+.. only:: latex
+          
+   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+                       
+.. only:: html
+                                 
+   .. cssclass:: border
 
    +------------+----------------+---------------------+
    | Min. výška | Max. výška     | Typ                 |
@@ -91,8 +96,13 @@ Reklasifikace rastrových dat s plovoucí desetinnou čárkou
 Našim cílem bude reklasifikovat :ref:`mapu orientace svahu <aspect>`
 do následujících tříd:
 
-.. table::
-   :class: border
+.. only:: latex
+          
+   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+                       
+.. only:: html
+                                 
+   .. cssclass:: border
    
    +------------+----------------+---------------------+
    | Od         | Do             | Orientace svahu     |
@@ -164,7 +174,7 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
 
    .. figure:: images/r-category-set-0.png
 
-               V záložce :item:`Optional` zvolíme nejprve oddělovač ':'
+               V záložce :item:`Optional` zvolíme nejprve oddělovač ``:``
 
    .. figure:: images/r-category-set-1.png
 

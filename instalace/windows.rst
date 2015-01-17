@@ -31,37 +31,50 @@ Nativní instalátor
    http://wingrass.fsv.cvut.cz/grass70.
 
 .. figure:: images/wingrass-0.png
-
+            :scale-latex: 50
+                   
 .. figure:: images/wingrass-1.png
-
+            :scale-latex: 50
+        
 .. figure:: images/wingrass-2.png
-
-	    Zvolíme adresář, kam se má GRASS nainstalovat.
+            :scale-latex: 50
+   
+            Zvolíme adresář, kam se má GRASS nainstalovat.
 
 .. _nativni-instalator-data:
 
 .. figure:: images/wingrass-3.png
-
+            :scale-latex: 50
+           
 	    Při první instalaci doporučujeme nainstalovat také
 	    "Important Microsoft Runtime Libraries" a ukázkovou
 	    geografickou datovou sadu pro GRASS "North Carolina".
 
-.. figure:: images/wingrass-4.png
-
-.. figure:: images/wingrass-5.png
-
-.. figure:: images/wingrass-6.png
-
+..
+   .. figure:: images/wingrass-4.png
+               :scale-latex: 50
+   .. figure:: images/wingrass-5.png
+               :scale-latex: 50
+   .. figure:: images/wingrass-6.png
+               :scale-latex: 50
+            
 .. figure:: images/wingrass-7.png
-
+            :scale-latex: 50
+            
 	    GRASS můžeme automaticky spustit ...
 
 .. figure:: images/wingrass-8.png
-
+            :scale-latex: 50
+            
             ... anebo vybrat z nabídky Start.
 
-.. figure:: images/wingrass-9.png
+.. raw:: latex
 
+   \clearpage
+            
+.. figure:: images/wingrass-9.png
+            :scale-latex: 50
+            
 	    Úvodní obrazovka systému GRASS pro výběr tzv. :ref:`lokace
 	    a mapsetu <struktura-dat>`.
 
@@ -75,44 +88,66 @@ OSGeo4W
 * http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe
 
 .. figure:: images/osgeo4w-0.png
-
+            :scale-latex: 50
+                 
 	    Pro instalaci GRASS 7 zvolíme ``Advanced Install``.
 
 .. figure:: images/osgeo4w-1.png
-
+            :scale-latex: 50
+            
 .. figure:: images/osgeo4w-2.png
-
+            :scale-latex: 50
+            
 	    Zvolíme adresář, kam se má GRASS nainstalovat.
 
 .. figure:: images/osgeo4w-3.png
+            :scale-latex: 50
 
+.. raw:: latex
+
+   \clearpage
+   
 .. figure:: images/osgeo4w-4.png
+            :scale-latex: 50
 
 .. figure:: images/osgeo4w-5.png
-
+            :scale-latex: 50
+            
 .. figure:: images/osgeo4w-6.png
-
+            :scale-latex: 50
+            
 	    Ze sekce ``Desktop`` vybereme balíček ``grass70`` či
 	    případně ``grass70-dev`` (tzv. denní buildy) pokud
 	    plánujeme software často aktualizovat a testovat tak
 	    nejnovější funkce
 
 .. figure:: images/osgeo4w-7.png
-
+            :scale-latex: 50
+            
 	    Nutné závislosti (jako např. knihovna GDAL či Python) se
 	    nainstalují automaticky.
 
+           
 .. figure:: images/osgeo4w-8.png
-
+            :scale-latex: 50
+            
 	    Součástí instalace je i proprietární součást knihovny GDAL
 	    ``szip``, kterou potvrdíme.
 
 .. figure:: images/osgeo4w-9.png
+            :scale-latex: 50
 
-.. figure:: images/osgeo4w-10.png
+.. raw:: latex
 
+   \clearpage
+
+..   
+   .. figure:: images/osgeo4w-10.png
+               :scale-latex: 50
+            
 .. figure:: images/osgeo4w-11.png
-
+            :scale-latex: 50
+            
 	    GRASS spustíme z nabídky Start ``OSGeo4W``.
 
 .. noteadvanced::
@@ -123,10 +158,11 @@ OSGeo4W
    verze.
 
    .. figure:: images/osgeo4w-12.png
-
-	       Ze sekce ``Desktop`` vybereme balíček ``grass70-dev``
-	       (denní snapshoty verze GRASS 7.0) nebo ``grass71-dev``
-	       (denní snapshoty verze GRASS 7.1).
+            :scale-latex: 50
+               
+	    Ze sekce ``Desktop`` vybereme balíček ``grass70-dev``
+            (denní snapshoty verze GRASS 7.0) nebo ``grass71-dev``
+            (denní snapshoty verze GRASS 7.1).
 
 ..  _osgeo4w-aktualizace:
 
@@ -151,9 +187,16 @@ OSGeo4W nainstalován v adresáři ``C:\OSGeo4W``):
 a nastavit spuštění skriptu jako úlohu.
 
 .. figure:: images/osgeo4w-cronjob-0.png
-
+            :scale-latex: 50
+            
 .. figure:: images/osgeo4w-cronjob-1.png
-
+            :scale-latex: 50
+            
 	    Příklad pro spuštění aktualizace OSGeo4W každý den v 8h ráno.
 
+.. raw:: latex
+
+   \clearpage
+            
 .. figure:: images/osgeo4w-cronjob-2.png
+            :scale-latex: 50

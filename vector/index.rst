@@ -137,3 +137,4 @@ Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
    <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 
    .. figure:: images/multi-layers.png
+      :class: middle

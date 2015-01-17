@@ -1,13 +1,13 @@
 .. only:: latex
                          
-   foo
-   ===
-
-   Intro
+   Obsah
    =====
 
-.. figure:: images/grass-logo.png
-   :width: 130px
+Úvod
+====
+
+.. image:: images/grass-logo.png
+   :width: 140px
    :align: left
 
 **GRASS** (Geographic Resources Analysis Support System) je
@@ -17,6 +17,13 @@ multiplatformní desktopový geografický informační systém (:abbr:`GIS
 vysoce kvalitních grafických výstupů, časoprostorové modelování a
 vizualizaci dat.
 
+.. only:: latex
+
+   .. figure:: images/grass-logo.png
+      :scale-latex: 50
+
+      Logo projektu GRASS GIS
+   
 GRASS GIS (http://grass.osgeo.org) je :wikipedia:`free software
 <Svobodný software>` a *open source* publikovaný pod všeobecnou licencí
 :abbr:`GNU (GNU is Not Unix)` :abbr:`GPL (General Public
@@ -42,7 +49,7 @@ upravovat ho a tyto změny či opravy šířit dál.
 
 .. only:: html
 
-   Intro
+   Obsah
    =====
 
    .. cssclass:: toc
@@ -218,13 +225,12 @@ Další témata
       misc/graficky-modeler
       misc/lokalizace
 
-.. only:: latex
           
-   Dodatek
-   =======
+Dodatek
+=======
 
-Související materiály
----------------------
+.. rubric:: Související materiály
+   :class: secnotoc
 
 *Česky:*
 
@@ -240,9 +246,8 @@ Související materiály
 * `Open Source GIS: A GRASS GIS Approach <http://www.grassbook.org/>`_ (anglicky)
 * `GIS GRASS - Praktická rukověť <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Praktick%C3%A1_rukov%C4%9B%C5%A5>`_ (česky, velmi zastaralé)
 
-
-Technická podpora
------------------
+.. rubric:: Technická podpora
+   :class: secnotoc
 
 * *(česky)* Mailing list `FreeGeoCZ
   <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_ (obecně Open Source GIS, nikoliv pouze GRASS)
@@ -257,21 +262,18 @@ Technická podpora
            
 .. * OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
 
-Užitečné odkazy
----------------
+.. rubric:: Užitečné odkazy
+   :class: secnotoc
 
 * http://freegis.fsv.cvut.cz
 * http://epsg.io
+  
+.. rubric:: Licence dokumentu
+   :class: secnotoc
 
-Licence
--------
+Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
-.. table::
-   :class: noborder
-
-   +----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | .. image:: images/cc-by-sa.png   | Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_. |
-   |           :width: 125px          |                                                                                                                                                       |
-   +----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+.. image:: images/cc-by-sa.png 
+   :width: 125px          
 
 *Verze textu školení:* |release| (|today|)

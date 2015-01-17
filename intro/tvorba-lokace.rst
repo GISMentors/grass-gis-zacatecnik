@@ -202,6 +202,10 @@ Vytvoření lokace pro data v souřadnicovém systému S-42
 
             Vytvoření lokace pro S-42 (krok 7)
 
+.. raw:: latex
+
+   \clearpage
+
 .. _lokace-srtm:
 
 Vytvoření lokace na základě geodat
@@ -214,14 +218,14 @@ Vytvoření lokace na základě geodat
 
             Vytvoření lokace pro data SRTM (krok 2)
 
+.. raw:: latex
+
+   \clearpage
+            
 .. figure:: images/wxgui-loc-srtm-2.png
 
             Vytvoření lokace pro data SRTM (krok 3)
 
-.. raw:: latex
-
-   \clearpage
-   
 .. figure:: images/wxgui-loc-srtm-3.png
 
             Vytvoření lokace pro data SRTM (krok 4)

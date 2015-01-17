@@ -32,10 +32,14 @@ Nativní instalátor
 
 .. figure:: images/wingrass-0.png
             :scale-latex: 50
-                   
+
+            Spustíme instalátor.
+   
 .. figure:: images/wingrass-1.png
             :scale-latex: 50
-        
+
+            Potvrdíme licenci.
+   
 .. figure:: images/wingrass-2.png
             :scale-latex: 50
    
@@ -58,15 +62,15 @@ Nativní instalátor
    .. figure:: images/wingrass-6.png
                :scale-latex: 50
             
-.. figure:: images/wingrass-7.png
-            :scale-latex: 50
+   .. figure:: images/wingrass-7.png
+               :scale-latex: 50
             
-	    GRASS můžeme automaticky spustit ...
+	       GRASS můžeme automaticky spustit ...
 
 .. figure:: images/wingrass-8.png
             :scale-latex: 50
             
-            ... anebo vybrat z nabídky Start.
+            GRASS můžeme automaticky spustit z nabídky Start.
 
 .. raw:: latex
 
@@ -90,11 +94,13 @@ OSGeo4W
 .. figure:: images/osgeo4w-0.png
             :scale-latex: 50
                  
-	    Pro instalaci GRASS 7 zvolíme ``Advanced Install``.
+	    GRASS 7 nainstalujeme ze sekce ``Advanced Install``.
 
 .. figure:: images/osgeo4w-1.png
             :scale-latex: 50
-            
+
+            Vybereme instalaci z Internetu
+   
 .. figure:: images/osgeo4w-2.png
             :scale-latex: 50
             
@@ -103,16 +109,19 @@ OSGeo4W
 .. figure:: images/osgeo4w-3.png
             :scale-latex: 50
 
+            Nastavíme cestu k adresáři, kam se budou stahovat data instalátoru.
+
+..
+   .. figure:: images/osgeo4w-4.png
+      :scale-latex: 50
+
+   .. figure:: images/osgeo4w-5.png
+      :scale-latex: 50
+                    
 .. raw:: latex
 
    \clearpage
-   
-.. figure:: images/osgeo4w-4.png
-            :scale-latex: 50
-
-.. figure:: images/osgeo4w-5.png
-            :scale-latex: 50
-            
+                             
 .. figure:: images/osgeo4w-6.png
             :scale-latex: 50
             
@@ -134,14 +143,14 @@ OSGeo4W
 	    Součástí instalace je i proprietární součást knihovny GDAL
 	    ``szip``, kterou potvrdíme.
 
-.. figure:: images/osgeo4w-9.png
-            :scale-latex: 50
-
 .. raw:: latex
 
    \clearpage
 
 ..   
+   .. figure:: images/osgeo4w-9.png
+               :scale-latex: 50
+                             
    .. figure:: images/osgeo4w-10.png
                :scale-latex: 50
             
@@ -186,17 +195,15 @@ OSGeo4W nainstalován v adresáři ``C:\OSGeo4W``):
 
 a nastavit spuštění skriptu jako úlohu.
 
-.. figure:: images/osgeo4w-cronjob-0.png
-            :scale-latex: 50
+..   
+   .. figure:: images/osgeo4w-cronjob-0.png
+      :scale-latex: 50
             
 .. figure:: images/osgeo4w-cronjob-1.png
             :scale-latex: 50
             
 	    Příklad pro spuštění aktualizace OSGeo4W každý den v 8h ráno.
 
-.. raw:: latex
-
-   \clearpage
-            
-.. figure:: images/osgeo4w-cronjob-2.png
-            :scale-latex: 50
+..            
+   .. figure:: images/osgeo4w-cronjob-2.png
+               :scale-latex: 50

@@ -16,7 +16,7 @@ copyright = u'2014 by Martin Landa a Jáchym Čepický (GISMentors)'
 # The short X.Y version.
 version = '1.0.0'
 # The full version, including alpha/beta/rc tags.
-release = '%sRC1' % version
+release = '%sRC2' % version
 
 # -- Options for HTML output ----------------------------------------------
 

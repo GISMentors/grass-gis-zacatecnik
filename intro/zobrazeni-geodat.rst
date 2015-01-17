@@ -22,6 +22,10 @@ Rastrová či vektorová data lze do *stromu vrstev* (viz záložka :item:`Map
 layers`) přidávat z menu :menuselection:`File --> Map display`, nástrojové lišty či
 přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-dat-raster>`.
 
+.. raw:: latex
+
+   \newpage
+
 .. note::
 
    Pokud se v mapovém okně nezobrazují žádná data, je nutné nastavit
@@ -38,6 +42,10 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
    .. figure:: images/wxgui-settings-autozoom.png
 
                Nastavení automatické změny pohledu při přidání nové mapové vrstvy
+
+.. raw:: latex
+
+   \newpage
 
 .. noteadvanced::
 

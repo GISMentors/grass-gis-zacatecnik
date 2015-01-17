@@ -50,6 +50,10 @@ standardní cestou, měl by být dostupný z hlavní nabídky vašeho
                  
             Spuštění systému GRASS z nabídky *Start* v MS Windows.
 
+.. raw:: latex
+                     
+   \newpage
+         
 .. notecmd:: Spuštění systému GRASS
 
    V :abbr:`OS (Operační systém)` :wikipedia:`GNU/Linux` je dostupný systém GRASS po
@@ -75,6 +79,10 @@ GRASS`).
             Úvodní dialog systému GRASS pro výběr adresáře s geodaty :fignote:`(1)`,
             lokace :fignote:`(2)` a mapsetu :fignote:`(3)`.
 
+.. raw:: latex
+                     
+   \newpage
+            
 .. noteadvanced::
    
    **Příklady spuštění systému GRASS z příkazové řádky**

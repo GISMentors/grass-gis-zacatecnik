@@ -145,6 +145,10 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 
    Aktuálně nastavený výpočetní region
 
+.. raw:: latex
+
+      \newpage
+      
 .. notecmd:: Zobrazení aktuálně nastaveného regionu
 
    .. code-block:: bash

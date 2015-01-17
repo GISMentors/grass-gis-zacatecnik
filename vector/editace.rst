@@ -35,7 +35,7 @@ Nástroj pro editaci atributové tabulky spustíme z kontextového menu vektorov
    Spuštění správce atributových dat
 
 Přidávat či přejmenovávat atributy lze v záložce :item:`Manage
-attributes`ý, více v sekci :ref:`editace atributových dat
+attributes`, více v sekci :ref:`editace atributových dat
 <editace-atributovych-dat>`.
 
 .. figure:: images/attribute-table.png
@@ -88,6 +88,7 @@ snapping, automatické přiřazování atributů novým prvkům a další.
 
 .. figure:: images/editing-settings.png
    :class: small
+   :scale-latex: 40
         
    Nastavení editace
 

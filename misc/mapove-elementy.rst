@@ -71,6 +71,10 @@ umístěnou v mapovém okně.
 
    Výsledek otočení škály legendy
 
+.. raw:: latex
+
+   \clearpage
+
 .. note::
 
    Legendu v současnosti lze definonat pouze pro rastrová data,
@@ -86,16 +90,13 @@ umístěnou v mapovém okně.
    font legendy.
 
    .. figure:: images/legend-broken.png
-
+      :class: small
+                 
    Písmo změníme z dialogu nastavení dostupného z menu
    :menuselection:`Settings --> Preferences` anebo z nástrojové lišty
    *správce vrstev*
 
    .. figure:: images/lmgr-settings.png
-
-.. raw:: latex
-
-   \clearpage
 
    .. figure:: images/settings-font.png            
       :class: middle
@@ -115,7 +116,7 @@ umístěnou v mapovém okně.
    
    .. figure:: images/legend-ok.png
       :class: small
-           
+      
       Výsledek
       
 Směrová růžice

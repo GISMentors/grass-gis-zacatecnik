@@ -9,7 +9,8 @@ dostupná z nástrojové lišky mapového okna.
 
 .. figure:: images/add-map-element.png
             :class: large
-           
+	    :scale-latex: 55
+
 .. note::
 
    Mapové okno není určeno pro tvorbu plnohodnotných mapových
@@ -27,18 +28,25 @@ lišty:
 
 .. figure:: images/add-legend.png
    :class: large
-           
-Pokud je ve *správci vrstev* aktuálně vybraná rastrová mapa, tak se
-automaticky legenda zobrazí pro ni.
+   :scale-latex: 55
 
 .. figure:: images/add-legend-0.png
-            :class: large
-           
+   :class: large
+   :scale-latex: 65
+
+   Pokud je ve *správci vrstev* aktuálně vybraná rastrová mapa, tak se
+   automaticky legenda zobrazí pro ni.
+
+.. raw:: latex
+
+   \newpage
+
 V opačném případě se zobrazí dialog pro výběr rastrové mapy, pro
 kterou si přejete legendu zobrazit.
 
 .. figure:: images/add-legend-1.png
             :class: large
+	    :scale-latex: 80
 
             Vybereme rastrovou mapu pro kterou chceme legendu zobrazit
             :fignote:`(1)` a nastavení potvrdíme :fignote:`(2)`
@@ -51,7 +59,7 @@ z kontextového menu legendy (pravé tlačítko myši nad legendou):
 Z tohoto menu lze také **změnit velikost** legendy i její orientaci.
 
 .. figure:: images/resize-legend-0.png
-            
+   
 .. figure:: images/resize-legend-1.png
    :class: small
            
@@ -63,17 +71,14 @@ umístěnou v mapovém okně.
 
 .. figure:: images/legend-prop-flip.png
    :class: middle
-        
+   :scale-latex: 55
+
    Přiklad změny legendy - otočení škály
 
 .. figure:: images/legend-flip.png
    :class: small
 
    Výsledek otočení škály legendy
-
-.. raw:: latex
-
-   \clearpage
 
 .. note::
 
@@ -91,7 +96,8 @@ umístěnou v mapovém okně.
 
    .. figure:: images/legend-broken.png
       :class: small
-                 
+      :scale-latex: 40
+
    Písmo změníme z dialogu nastavení dostupného z menu
    :menuselection:`Settings --> Preferences` anebo z nástrojové lišty
    *správce vrstev*
@@ -100,7 +106,8 @@ umístěnou v mapovém okně.
 
    .. figure:: images/settings-font.png            
       :class: middle
-              
+      :scale-latex: 70
+
       V záložce :item:`Map display` zvolíme vhodný font
 
    .. figure:: images/font-dialog.png
@@ -111,14 +118,20 @@ umístěnou v mapovém okně.
 
    .. figure:: images/map-render.png
       :class: large
-              
+      :scale-latex: 80
+
       Obsah mapové okna překreslíme
    
    .. figure:: images/legend-ok.png
       :class: small
-      
+      :scale-latex: 40
+
       Výsledek
-      
+
+.. raw:: latex
+
+   \newpage
+
 Směrová růžice
 ==============
 

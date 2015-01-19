@@ -1,3 +1,7 @@
+.. raw:: latex
+
+   \newpage
+
 Lokalizace
 ----------
 
@@ -7,8 +11,9 @@ jazyků. Statistiku pro jednotlivé jazyky získáte z menu
 status`.
 
 .. figure:: images/grass-about-lang-status.png
-	    
-	    Stav lokalizace do češtiny
+   :scale-latex: 50
+
+   Stav lokalizace do češtiny
 
 .. noteadvanced::
    
@@ -24,6 +29,7 @@ GRASS nastartuje automaticky v lokalizaci odpovídající danému
 operačnímu systému.
 
 .. figure:: ../instalace/images/wingrass-9.png
+	    :scale-latex: 50
 
 	    GRASS lokalizovaný do češtiny pro MS Windows
 

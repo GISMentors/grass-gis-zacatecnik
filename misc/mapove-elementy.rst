@@ -139,11 +139,13 @@ Směrovou růžici lze do mapového okna přidat z jeho nástroje lišty:
 
 .. figure:: images/add-narrow.png
    :class: large
+   :scale-latex: 70
 
 Poté se do mapové okna umístí výchozí směrová růžice:
 
 .. figure:: images/narrow.png
             :class: small
+	    :scale-latex: 50
 
 **Podobu směrové růřice** lze změnit z dialogu modulu
 :grasscmd:`d.northarrow` dostupného pomocí dvojkliku nad směrovou
@@ -151,21 +153,28 @@ růžicí umístěnou v mapovém okně.
 
 .. figure:: images/narrow-prop.png
    :class: middle
-        
+   :scale-latex: 60
+
    Přiklad změny stylu směrové růžice
 
 .. figure:: images/narrow-1.png
    :class: small
+   :scale-latex: 50
 
    Výsledek změny stylu směrové růžice
 
+.. raw:: latex
+	 
+   \newpage
+	 
 Směrovou růžici můžete v mapovém okně **skrýt** buď z nástorové lišty
 anebo z kontextového menu směrové růžice (pravé tlačítko myši nad
 směrovou růžicí):
                      
 .. figure:: images/remove-narrow.png
    :class: small
-           
+   :scale-latex: 55
+        
 Měřítko
 =======
 
@@ -173,22 +182,26 @@ Měřítko lze do mapového okna přidat z jeho nástroje lišty:
 
 .. figure:: images/add-scalebar.png
    :class: large
+   :scale-latex: 70
 
 Poté se do mapové okna umístí výchozí měřitko:
 
 .. figure:: images/scalebar.png
    :class: small
+   :scale-latex: 60
 
 **Podobu měřítka** lze změnit z dialogu modulu :grasscmd:`d.barscale`
 dostupného pomocí dvojkliku nad měřítkem umístěnou v mapovém okně.
 
 .. figure:: images/scalebar-prop.png
    :class: middle
-        
+   :scale-latex: 60
+     
    Příklad změny stylu měřítka
 
 .. figure:: images/scalebar-1.png
    :class: small
+   :scale-latex: 50
 
    Výsledek změny stylu měřítka
 
@@ -196,8 +209,9 @@ Měřítko můžete v mapovém okně **skrýt** buď z nástorové lišty anebo 
 kontextového menu měřítka (pravé tlačítko myši nad měřítkem):
                      
 .. figure:: images/remove-scalebar.png
-            :class: small
-            
+   :class: small
+   :scale-latex: 50
+
 Textový popisek
 ===============
 
@@ -205,6 +219,7 @@ Textový popisek lze do mapového okna přidat z jeho nástroje lišty:
 
 .. figure:: images/add-text.png
    :class: large
+   :scale-latex: 70
 
 V následující dialogu uvedeme text a případně můžeme změnit i
 vlastnosti textového objektu.
@@ -217,7 +232,8 @@ vlastnosti textového objektu.
 
 .. figure:: images/text-example.png
    :class: large
-               
+   :scale-latex: 80
+
    Příklad textového popisku v mapovém okně
             
 Popisek lze **skrýt** opět pomocí výše uvedeného dialogu, který je

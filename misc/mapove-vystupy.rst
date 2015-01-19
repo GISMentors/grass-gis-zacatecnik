@@ -10,6 +10,7 @@ lišty *správce vrstev*.
 
 .. figure:: images/lmgr-gpsmap.png
             :class: middle
+	    :scale-latex: 55
 
 .. note::
    

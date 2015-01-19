@@ -78,7 +78,7 @@ a případně i jedním *centroidem*. Izolovaná plocha nebo souvislá
 množina ploch formuje plošný element označovaný jako ostrov (*isle*).
 
 Příklad
-=======
+^^^^^^^
 
 Na obrázku níže je zobrazen:
 
@@ -96,6 +96,10 @@ následující topologickými elementy:
 * jednou linií :fignote:`2`
 * čtyřmi hraničními liniemi :fignote:`3,4,6,8`
 * dvěma centroidy :fignote:`5,7`
+
+.. raw:: latex
+
+   \newpage
 
 Atributová data
 ===============
@@ -138,3 +142,4 @@ Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
 
    .. figure:: images/multi-layers.png
       :class: middle
+      :scale-latex: 90

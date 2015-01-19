@@ -95,7 +95,12 @@ Následuje příklad pro transformaci vektorových dat.
             umístěny v odlišných adresářích, je potřeba definovat
             adresář se vstupní lokací :fignote:`(4)`.
 
+.. raw:: latex
+
+   \clearpage
+
 .. figure:: images/v-proj-2.png
+	    :scale-latex: 50
 
             Případně můžeme v záložce :item:`Target` zvolit název pro
             výstupní mapu :fignote:`(5)`. Transformaci spustíme
@@ -106,6 +111,6 @@ Po úspěšné transformaci se vytvořená vrstva automaticky přidá do
 
 .. figure:: images/proj-result.png
             :class: large
-            
+	    :scale-latex: 90
 
                

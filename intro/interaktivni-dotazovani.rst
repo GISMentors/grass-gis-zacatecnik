@@ -26,7 +26,8 @@ Výstup pro rastrová data obsahuje:
 * připadně popisek dané hodnoty
 
 .. figure:: images/raster-query-result.png
-                        
+   :scale-latex: 60
+
 Vektorová data
 ==============
 
@@ -38,3 +39,8 @@ Výstup pro rastrová data obsahuje:
 * výpis připojených atributů :fignote:`(2)`
 
 .. figure:: images/vector-query-result.png
+   :scale-latex: 60
+
+.. raw:: latex
+	 
+   \newpage

@@ -42,9 +42,14 @@ Příklad vytvoření obalové zóny s šířkou 5 km.
 
    v.buffer input=dalnice output=dalnice5000 distance=5000
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/v-buffer-result.png
    :class: middle
-           
+   :scale-latex: 65
+        
    Příklad obalové zóny 5 km okolo dálnic
 
 Překrytí, průnik, spojení, vyloučení
@@ -72,7 +77,8 @@ mapy (:option:`ainput`) jsou označeny prefixem ``a_``, atributy druhé
 
 .. figure:: images/v-overlay-01-table.png
    :class: middle
-        
+   :scale-latex: 60
+
    Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`
 
 Průnik (intersect)
@@ -89,16 +95,22 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
 
 .. figure:: images/dalnice500buffer_chranena_uzemi-01.png
    :class: middle
-           
+   :scale-latex: 70
+
    Hluková oblast zasahující maloplošné chráněné území Černovický hájek u Brna
 
 .. figure:: images/dalnice500buffer_chranena_uzemi-02.png
    :class: middle
+   :scale-latex: 70
         
    Hluková oblast zasahující velkoplošné chráněné území CHKO Česká
    kras a CHKO Křivoklátsko
 
 Podobně fungují i operátory ``XOR`` a ``NOT``.
+
+.. raw:: latex
+
+   \clearpage
 
 Spojení vektorových map (merge)
 ===============================
@@ -109,6 +121,7 @@ Alternativním způsob spojení vektorových map umožňuje modul
 modul sloučí vstupní vektorové mapy automaticky.
 
 .. figure:: images/v-patch-01.png
+   :scale-latex: 45
 
    Příklad vytvoření nové vektorové mapy :map:`doprava`, která je
    složena ze vstupních vektorových map :map:`silnice,zeleznice`.

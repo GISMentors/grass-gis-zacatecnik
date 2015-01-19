@@ -1,3 +1,7 @@
+.. raw:: latex
+	 
+   \newpage
+
 Analýzy povrchu
 ---------------
 
@@ -22,11 +26,18 @@ Míra svahu
 ==========
 
 .. figure:: images/r-slope-aspect-s.png
+   :scale-latex: 60
 
 .. figure:: images/slope.png
-            :class: middle
-           
-            Výsledná mapa míry svahu ve stupních                 
+   :class: middle
+   :scale-latex: 70
+
+   Výsledná mapa míry svahu ve stupních                 
+
+.. raw:: latex
+
+   \newpage
+
 .. _aspect:
 
 Orientace svahu
@@ -85,7 +96,8 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
 
 .. figure:: images/viewshed-legend.png
    :class: middle
-           
+   :scale-latex: 50
+
    Výsledek analýzy viditelnosti z observačního bodu včetně legendy
    zobrazující velikost úhlu, pod kterým je místo z daného
    observačního bodu vidět

@@ -13,6 +13,7 @@ Import geodat
    následně je :ref:`transformovat <transformace>` do aktuální lokace.
 
    .. figure:: images/import-no-proj.png
+	       :scale-latex: 45
 
 Většina rastrových formátů může být naimportována modulem
 :grasscmd:`r.in.gdal`, pro vektorová data existuje modul
@@ -27,6 +28,7 @@ Nástroj pro import rastrových dat je dostupný z menu
 nebo nástrojové lišty správce vrstev.
 
 .. figure:: images/wxgui-raster-import-menu.png
+	    :scale-latex: 50
 
             Nástroj pro import rastrových dat dostupný z nástrojové
             lišty správce vrstev
@@ -44,6 +46,7 @@ V dialogu pro import rastrových dat určíme:
             Určení rastrových dat (PNG) z daného adresáře k importu
 
 .. figure:: images/wxgui-raster-import-1.png
+	    :scale-latex: 60
 
             Průběh importu
 
@@ -57,6 +60,10 @@ V dialogu pro import rastrových dat určíme:
                 .. code-block:: bash
                                 
                    r.in.gdal input=dmt.tif output=dmt
+
+.. raw:: latex
+
+   \newpage
 
 .. admonition:: Ukázka hromadného importu rastrových dat jako Python skript
 
@@ -88,6 +95,10 @@ nebo nástrojové lišty správce vrstev.
             Nástroj pro import vektorových dat dostupný z nástrojové
             lišty správce vrstev
 
+.. raw:: latex
+
+   \newpage
+
 V dialogu pro import vektorových dat určíme:
 
 #. *typ zdroje*
@@ -101,6 +112,7 @@ V dialogu pro import vektorových dat určíme:
             Určení vektorových dat (Esri Shapefile) z daného adresáře k importu
 
 .. figure:: images/wxgui-vector-import-1.png
+	    :scale-latex: 60
 
             Průběh importu
 
@@ -114,6 +126,10 @@ V dialogu pro import vektorových dat určíme:
                 .. code-block:: bash
                                 
                                 v.in.ogr dsn=lesy.shp
+
+.. raw:: latex
+
+   \newpage
 
 .. admonition:: Ukázka hromadného importu vektorových dat jako Python skript
 
@@ -164,7 +180,8 @@ v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
 
 .. figure:: images/polygon-topo.png
    :class: middle
-           
+   :scale-latex: 70
+
    Topologická reprezentace dvou polygonů (druhý polygon s otvorem)
 
 Modul :grasscmd:`v.in.ogr` provádí při importu operace, které by měly

@@ -27,6 +27,9 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
             souboru :fignote:`(3)`. V tomto případě se data
             vyexportují do souboru ``dmt.tif`` v aktuálním adresáři.
 
+.. raw:: latex
+
+   \newpage
 
 .. notecmd:: Export rastrové mapy do formátu GeoTIFF
 
@@ -68,14 +71,17 @@ nástrojé lišty *mapového okna*.
 
 .. figure:: images/map-display-image-0.png
             :class: large
-           
+	    :scale-latex: 70
+
 .. figure:: images/map-display-image-1.png
             :class: small
-           
+	    :scale-latex: 45
+
             V následující dialogu zvolíme dimenzi výstupního obrázku
 
 .. figure:: images/map-display-image-2.png
             :class: large
-           
+	    :scale-latex: 85
+
             Příklad výsledku včetně :ref:`legendy, měřítka a textového
             popisku <mapove-elementy>`

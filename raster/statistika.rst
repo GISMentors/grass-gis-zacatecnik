@@ -18,6 +18,7 @@ Reports and statistics --> Sum area by raster map and category` anebo
 z kontextového menu *správce vrstev*.
 
 .. figure:: images/lmgr-r-report.png
+	    :scale-latex: 50
 
             Pokud je modul vyvolán z kontextového menu, je automaticky
             spuštěn s parametrem ``units=h,c,p`` (tj. výměra v
@@ -51,6 +52,10 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
    Výsledný report, např. území s nadmořskou výškou do 202.5 metrů
    pokrývá necelé tři procenta území ČR
 
+.. raw:: latex
+
+   \clearpage
+
 .. important::
 
    Jak již bylo uvedeno v kapitole :ref:`výpočetní region <region>`
@@ -67,6 +72,7 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
       g.region rast=dmt res=1000
 
    .. figure:: images/r-report-4.png
+      :scale-latex: 45
 
       Pro takto převzorkovaná data bude např. území s nadmořskou
       výškou do 202.5 metrů pokrývat místo původních 2,85% nově 2,83%.
@@ -82,6 +88,7 @@ Repors and statistics --> Univariate raster statistics` anebo z
 kontextového menu *správce vrstev*.
 
 .. figure:: images/lmgr-r-univar.png
+   :scale-latex: 45
 
 .. figure:: images/r-univar-out.png
 

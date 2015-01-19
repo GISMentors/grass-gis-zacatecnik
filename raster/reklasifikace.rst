@@ -31,23 +31,23 @@ podle níže uvedené reklasifikační tabulky:
 
 .. only:: latex
           
-   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+   .. tabularcolumns:: |p{2cm}|p{4cm}|p{4cm}|
                        
 .. only:: html
                                  
    .. cssclass:: border
 
-   +------------+----------------+---------------------+
-   | Min. výška | Max. výška     | Typ                 |
-   +============+================+=====================+
-   | 0          | 300            | 1 (nížina)          |
-   +------------+----------------+---------------------+
-   | 300        | 800            | 2 (nízká vysočina)  |
-   +------------+----------------+---------------------+
-   | 800        | 1500           | 3 (střední vysočina)|
-   +------------+----------------+---------------------+
-   | 1500       |                | 4 (vysoká vysočina) |
-   +------------+----------------+---------------------+
++------------+----------------+---------------------+
+| Min. výška | Max. výška     | Typ                 |
++============+================+=====================+
+| 0          | 300            | 1 (nížina)          |
++------------+----------------+---------------------+
+| 300        | 800            | 2 (nízká vysočina)  |
++------------+----------------+---------------------+
+| 800        | 1500           | 3 (střední vysočina)|
++------------+----------------+---------------------+
+| 1500       |                | 4 (vysoká vysočina) |
++------------+----------------+---------------------+
 
 Zápis reklasifikační tabulky pro modul :grasscmd:`r.reclass` vypadá
 následovně:
@@ -63,6 +63,7 @@ anebo včetně popisku
    <od> thru <do> = hodnota popisek
 
 .. figure:: images/r-reclass-dmt.png
+   :scale-latex: 60
 
    V dialogu modulu :grasscmd:`r.reclass` nejprve zadáme název
    rastrové mapy :fignote:`(1)`, kterou chceme reklasifikovat, název
@@ -78,15 +79,24 @@ např.
    2 144:238:144
    3 139:105:20
    4 255:255:255
-            
+
+.. raw:: latex
+         
+   \newpage
+	 
 .. figure:: images/dmt-reclass-color-table.png
 
             Příklad nastavení tabulky barev pomocí modulu :grasscmd:`r.colors`   
 
 .. figure:: images/dmt-reclass-legend.png
    :class: large
+   :scale-latex: 90
 
    Výsledná reklasifikovaná mapa včetně :ref:`legendy <map-legend>`
+
+.. raw:: latex
+
+   \newpage
 
 .. _r-recode:
    
@@ -98,35 +108,35 @@ do následujících tříd:
 
 .. only:: latex
           
-   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+   .. tabularcolumns:: |p{2cm}|p{2cm}|p{4cm}|
                        
 .. only:: html
                                  
    .. cssclass:: border
    
-   +------------+----------------+---------------------+
-   | Od         | Do             | Orientace svahu     |
-   +============+================+=====================+
-   | 0          | 0              | 0 (rovina)          |
-   +------------+----------------+---------------------+
-   | 0          | 22.5           | 1 (východ)          |
-   +------------+----------------+---------------------+
-   | 22.5       | 67.5           | 2 (jihovýchod)      |
-   +------------+----------------+---------------------+
-   | 67.5       | 112.5          | 3 (jih)             |
-   +------------+----------------+---------------------+
-   | 112.5      | 157.5          | 4 (jihozápad)       |
-   +------------+----------------+---------------------+
-   | 157.5      | 202.5          | 5 (západ)           |
-   +------------+----------------+---------------------+
-   | 202.5      | 247.5          | 6 (severozápad)     |
-   +------------+----------------+---------------------+
-   | 247.5      | 292.5          | 7 (sever)           |
-   +------------+----------------+---------------------+
-   | 292.5      | 337.5          | 8 (severovýchod)    |
-   +------------+----------------+---------------------+
-   | 337.5      | 360.0          | 1 (východ)          |
-   +------------+----------------+---------------------+
++------------+----------------+---------------------+
+| Od         | Do             | Orientace svahu     |
++============+================+=====================+
+| 0          | 0              | 0 (rovina)          |
++------------+----------------+---------------------+
+| 0          | 22.5           | 1 (východ)          |
++------------+----------------+---------------------+
+| 22.5       | 67.5           | 2 (jihovýchod)      |
++------------+----------------+---------------------+
+| 67.5       | 112.5          | 3 (jih)             |
++------------+----------------+---------------------+
+| 112.5      | 157.5          | 4 (jihozápad)       |
++------------+----------------+---------------------+
+| 157.5      | 202.5          | 5 (západ)           |
++------------+----------------+---------------------+
+| 202.5      | 247.5          | 6 (severozápad)     |
++------------+----------------+---------------------+
+| 247.5      | 292.5          | 7 (sever)           |
++------------+----------------+---------------------+
+| 292.5      | 337.5          | 8 (severovýchod)    |
++------------+----------------+---------------------+
+| 337.5      | 360.0          | 1 (východ)          |
++------------+----------------+---------------------+
 
 V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypadat následovně:
    
@@ -144,11 +154,15 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
    0:0:0
 
 .. figure:: images/r-recode-aspect.png
-
+	    
             V dialogu :grasscmd:`r.recode` nejprve zvolíme vstupní
             rastrovou mapu :fignote:`(1)`, kterou chceme
             reklasifikovat, poté název výstupní reklasifikované mapy
             :fignote:`(2)` a reklasifikační tabulku :fignote:`(3)`
+
+.. raw:: latex
+
+   \newpage
 
 .. _prirazeni-stitku:
                      
@@ -173,15 +187,18 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
       8:SV
 
    .. figure:: images/r-category-set-0.png
+	       :scale-latex: 50
 
                V záložce :item:`Optional` zvolíme nejprve oddělovač ``:``
 
    .. figure:: images/r-category-set-1.png
+	       :scale-latex: 50
 
                A poté přiřadíme popisky z textového pole v záložce :item:`Define`
 
 .. figure:: images/aspect-reclass.png
    :class: large
-           
+   :scale-latex: 60
+
    Výsledek reklasifikace mapy orientace svahu
             

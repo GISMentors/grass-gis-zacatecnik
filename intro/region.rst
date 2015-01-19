@@ -1,3 +1,7 @@
+.. raw:: latex
+
+   \newpage
+	 
 .. _region:
 
 Výpočetní region
@@ -43,6 +47,10 @@ správce vrstev.
 
    Nastavení výpočetního regionu na základě rastrové mapy
 
+.. raw:: latex
+	 
+   \newpage
+
 .. notecmd:: Nastavení regionu na základě rastrové mapy
 
    .. code-block:: bash
@@ -87,6 +95,7 @@ Pokročilé nastavení výpočetního regionu
 Pro manipulaci s výpočetním regionem je určen modul :grassCmd:`g.region`. 
 
 .. figure:: images/wxgui-g-region-menu.png
+   :scale-latex: 70
 
    Nastavení výpočetního regionu z menu správce vrstev
 
@@ -115,6 +124,10 @@ jednotek).
 
    Explicitní nastavení hraničních souřadnic
 
+.. raw:: latex
+
+   \clearpage
+
 Podobně je možné explicitně definovat hodnoty prostorového rozlišení
 ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
 3D region ještě prostorové rozlišení ve směru Z-ové osy.
@@ -138,6 +151,7 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 :grassCmd:`g.region` s přepínačem :option:`-p`.
 
 .. figure:: images/wxgui-display-region-menu.png
+   :scale-latex: 70
 
    Zobrazení aktuálního výpočetního regionu z menu správce vrstev
 
@@ -147,8 +161,8 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 
 .. raw:: latex
 
-      \newpage
-      
+   \newpage
+
 .. notecmd:: Zobrazení aktuálně nastaveného regionu
 
    .. code-block:: bash
@@ -204,3 +218,6 @@ Formát::
                     
                Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně
 
+.. raw:: latex
+
+   \clearpage

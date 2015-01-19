@@ -19,31 +19,31 @@ obalové zóny (tzv. bufferu) nad vektorovými daty.
 
 .. only:: latex
           
-   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+   .. tabularcolumns:: |p{1.5cm}|p{2cm}|p{8cm}|
                        
 .. only:: html
                                  
    .. cssclass:: border
 
-   +----------+--------------------------------+-----------------------------------------------+
-   | prefix   | skupina                        | popis                                         |
-   +==========+================================+===============================================+
-   | ``db.``  | :grasscmd:`database`           | podpora externích databázových systémů        |
-   +----------+--------------------------------+-----------------------------------------------+
-   | ``d.``   | :grasscmd:`display`            | grafické výstupy a vizuální dotazy            |
-   +----------+--------------------------------+-----------------------------------------------+
-   | ``g.``   | :grasscmd:`general`            | obecné příkazy pro manipulaci s daty          |
-   +----------+--------------------------------+-----------------------------------------------+
-   | ``i.``   | :grasscmd:`imagery`            | zpracování obrazových dat                     |
-   +----------+--------------------------------+-----------------------------------------------+
-   | ``ps.``  | :grasscmd:`postscript`         | tvorba mapových výstupů ve formátu PostScript |
-   +----------+--------------------------------+-----------------------------------------------+
-   | ``r.``   | :grasscmd:`raster`             | zpracování (2D) rastrových dat                |
-   +----------+--------------------------------+-----------------------------------------------+
-   | ``r3.``  | :grasscmd:`raster3D`           | zpracování 3D rastrových dat (voxels)         |
-   +----------+--------------------------------+-----------------------------------------------+
-   | ``v.``   | :grasscmd:`vector`             | zpracování 2D/3D vektorových dat              |
-   +----------+--------------------------------+-----------------------------------------------+
++----------+--------------------------------+-----------------------------------------------+
+| prefix   | skupina                        | popis                                         |
++==========+================================+===============================================+
+| ``db.``  | :grasscmd:`database`           | podpora externích databázových systémů        |
++----------+--------------------------------+-----------------------------------------------+
+| ``d.``   | :grasscmd:`display`            | grafické výstupy a vizuální dotazy            |
++----------+--------------------------------+-----------------------------------------------+
+| ``g.``   | :grasscmd:`general`            | obecné příkazy pro manipulaci s daty          |
++----------+--------------------------------+-----------------------------------------------+
+| ``i.``   | :grasscmd:`imagery`            | zpracování obrazových dat                     |
++----------+--------------------------------+-----------------------------------------------+
+| ``ps.``  | :grasscmd:`postscript`         | tvorba mapových výstupů ve formátu PostScript |
++----------+--------------------------------+-----------------------------------------------+
+| ``r.``   | :grasscmd:`raster`             | zpracování (2D) rastrových dat                |
++----------+--------------------------------+-----------------------------------------------+
+| ``r3.``  | :grasscmd:`raster3D`           | zpracování 3D rastrových dat (voxels)         |
++----------+--------------------------------+-----------------------------------------------+
+| ``v.``   | :grasscmd:`vector`             | zpracování 2D/3D vektorových dat              |
++----------+--------------------------------+-----------------------------------------------+
 
 Příkazy (tj. moduly) systému GRASS lze spouštět několika způsoby
 (příklad pro :grasscmd:`r.buffer`):
@@ -64,7 +64,8 @@ Příkazy (tj. moduly) systému GRASS lze spouštět několika způsoby
 * z příkazové řádky správce vrstev
 
 .. figure:: images/wxgui-console-r-buffer.png
-            :class: middle
+	    :class: middle
+	    :scale-latex: 100
 
             Spuštění modulu :grasscmd:`r.buffer` s příkazové řádky správce vrstev
 
@@ -102,6 +103,7 @@ Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS hel
       g.manual r.buffer
                    
 .. figure:: images/r-buffer-help.png
-                  
+   :scale-latex: 65
+
    Nápověda k jednotlivým modulům je dostupná i z dialogového okna
 

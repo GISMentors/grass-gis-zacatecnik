@@ -43,10 +43,6 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
 
                Nastavení automatické změny pohledu při přidání nové mapové vrstvy
 
-.. raw:: latex
-
-   \newpage
-
 .. noteadvanced::
 
    Geodata lze vykreslovat z příkazové řádky či skriptů do
@@ -152,11 +148,13 @@ nástrojové lišty nebo z příkazové řádky správce vrstev.
 
 .. figure:: images/wxgui-toolbar-vector-misc.png
             :class: middle
+	    :scale-latex: 60
 
             Přidání ostatních vektorových dat z nástrojové lišty správce vrstev
 
 .. figure:: images/wxgui-toolbar-vector-misc-1.png
-            :class: middle
+	    :class: middle
+	    :scale-latex: 60
 
             Menu pro přidání vektorových dat
 

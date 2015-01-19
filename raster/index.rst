@@ -24,10 +24,15 @@ and statistics --> Basic raster metadata` anebo z kontextového menu
 rastrové mapy ve *správci vrstev*.
 
 .. figure:: images/lmgr-r-info.png
-	    
+   :scale-latex: 65
+
 .. figure:: images/lmgr-r-info-example.png
 
 	    Příklad výpisu metadat rastrové mapy :map:`dmt`.
+
+.. raw:: latex
+
+   \newpage
 
 .. _raster-types:
                  
@@ -45,6 +50,10 @@ GRASS rozlišuje tři typy rastrových map podle datové typu buňky:
   :wikipedia-en:`float <Single-precision floating-point format>`)
 * ``DCELL`` (hodnoty s plovoucí desetinnou čárkou s dvojnásobnou
   přesností, :wikipedia-en:`double precision`)
+
+.. raw:: latex
+
+   \newpage
 
 .. figure:: images/rast-num-float.png
 

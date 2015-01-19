@@ -148,11 +148,19 @@ any table`.
             Atributový dotaz pomocí modulu :grasscmd:`db.select`
             (výsledek :abbr:`SQL (Structured Query Language)` dotazu)
 
+.. raw:: latex
+
+   \newpage
+
 .. notecmd:: Jednoduché atributové dotazu
 
              .. code-block:: bash
 
                              db.select sql="SELECT COUNT(*) FROM obce WHERE ob01/ob91-1 >= 1"
+
+.. raw:: latex
+
+	 \clearpage
 
 .. figure:: images/db-select-0-multi.png
 

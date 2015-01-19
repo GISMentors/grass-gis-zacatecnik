@@ -54,6 +54,10 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    :envvar:`GISDBASE`, lokace :envvar:`LOCATION_NAME` a mapset
    proměnnou :envvar:`MAPSET`, viz modul :grasscmd:`g.gisenv`.
 
+.. raw:: latex
+
+   \newpage
+
 .. note:: **Obvyklé umístění adresáře s geodaty**
       
       Adresář s geodaty je většinou umístěn v domovském adresáři pod
@@ -81,7 +85,8 @@ GRASS working environment --> Mapset access`.
 
 .. figure:: images/mapset-access.png
    :class: small
-           
+   :scale-latex: 50
+
    Přidání mapsetu `ruian` do vyhledávací cesty
 
 .. notecmd:: Přidání mapsetu do vyhledávací cesty

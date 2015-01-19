@@ -6,21 +6,22 @@
 Úvod
 ====
 
-.. image:: images/grass-logo.png
-   :width: 140px
-   :align: left
+.. only:: html
+
+   .. image:: images/grass-logo.png
+      :width: 140px
+      :align: left
 
 **GRASS** (Geographic Resources Analysis Support System) je
-multiplatformní desktopový geografický informační systém (:abbr:`GIS
-(Geografický informační systém)`) určený pro správu geografických
-2D/3D rastrových a vektorových dat, obrazových záznamů, produkci
-vysoce kvalitních grafických výstupů, časoprostorové modelování a
-vizualizaci dat.
+multiplatformní desktopový *geografický informační systém*
+(:wikipedia:`GIS`) určený pro správu geografických 2D/3D rastrových a
+vektorových dat, obrazových záznamů, produkci vysoce kvalitních
+grafických výstupů, časoprostorové modelování a vizualizaci dat.
 
 .. only:: latex
 
    .. figure:: images/grass-logo.png
-      :scale-latex: 50
+      :scale-latex: 80
 
       Logo projektu GRASS GIS
    
@@ -40,197 +41,108 @@ upravovat ho a tyto změny či opravy šířit dál.
 
 
 .. important:: Školení je zaměřeno na verzi `GRASS 7.0
-               <http://grass.osgeo.org/download/software/#g70betax>`_. Nicméně
+               <http://grass.osgeo.org/download/software/#g70x>`_. Nicméně
                pokud není uvedeno jinak, tak všechny uvedené postupy
                jsou funkční i ve verzi GRASS 6.4. Případné rozdíly mezi
                těmito verzemi jsou vždy explicitně zdůrazněny. Dále
                předpokládáme zapnutou *anglickou lokalizaci*,
                viz :ref:`volba lokalizace <volba-lokalizace>`.
 
-.. only:: html
-
-   Obsah
-   =====
-
-   .. cssclass:: toc
-
-   +--------------------------------+--------------------------------+
-   | První kroky                    | Základní pojmy                 |
-   +================================+================================+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
-   |                                |                                |
-   |   instalace/index              |   raster/index                 |
-   |   intro/prvni-kroky            |   vector/index                 |
-   |   intro/struktura-dat          |   intro/region                 |
-   |   intro/zobrazeni-geodat       |                                |
-   |   intro/moduly                 |                                |
-   +--------------------------------+--------------------------------+
-
-   .. cssclass:: toc
-
-   +--------------------------------+--------------------------------+
-   |  Dotazování                    |                                |
-   +================================+================================+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
-   |                                |                                |
-   |   intro/interaktivni-dotazovani|   intro/atributove-dotazy      |
-   |                                |   intro/prostorove-dotazy      |
-   +--------------------------------+--------------------------------+
-
-.. only:: latex
-
-   První kroky
-   -----------
+První kroky
+===========
           
-   .. toctree::
-      :maxdepth: 1
+.. toctree::
+   :maxdepth: 1
 
-      instalace/index
-      intro/prvni-kroky
-      intro/struktura-dat
-      intro/zobrazeni-geodat
-      intro/moduly
+   instalace/index
+   intro/prvni-kroky
+   intro/struktura-dat
+   intro/zobrazeni-geodat
+   intro/moduly
 
-   Základní pojmy
-   --------------
+Základní pojmy
+==============
 
-   .. toctree::
-      :maxdepth: 1
-
-      raster/index
-      vector/index 
-      intro/region
+.. toctree::
+   :maxdepth: 1
+	      
+   raster/index
+   vector/index 
+   intro/region
    
+Dotazování
+==========
+
+.. toctree::
+   :maxdepth: 1
+
+   intro/interaktivni-dotazovani
+   intro/atributove-dotazy
+   intro/prostorove-dotazy
+
 Rastrové analýzy
 ================
 
-.. only:: html
-          
-   .. cssclass:: toc
-
-   +--------------------------------+--------------------------------+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
-   |                                |                                |
-   |   raster/statistika            |   raster/analyzy-povrchu       |
-   |   raster/mask                  |   raster/rastrova-algebra      |      
-   |   raster/tabulka-barev         |   raster/reklasifikace         |
-   |                                |   raster/analyza-nakladu       |
-   +--------------------------------+--------------------------------+
-
-.. only:: latex
-
-   .. toctree::
-      :maxdepth: 1
-
-      raster/statistika
-      raster/mask
-      raster/tabulka-barev
-      raster/analyzy-povrchu
-      raster/rastrova-algebra
-      raster/reklasifikace
-      raster/analyza-nakladu
+.. toctree::
+   :maxdepth: 1
+	      
+   raster/statistika
+   raster/mask
+   raster/tabulka-barev
+   raster/analyzy-povrchu
+   raster/rastrova-algebra
+   raster/reklasifikace
+   raster/analyza-nakladu
 
 Vektorové analýzy
 =================
 
-.. only:: html
-          
-   .. cssclass:: toc
+.. toctree::
+   :maxdepth: 1
 
-   +--------------------------------+--------------------------------+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
-   |                                |                                |
-   |   vector/editace               |   vector/atributy              |        
-   |   vector/prostorove-funkce     |   vector/sitove-analyzy        |
-   |   vector/topologie             |                                |        
-   +--------------------------------+--------------------------------+
-
-.. only:: latex
-
-   .. toctree::
-      :maxdepth: 1
-
-      vector/editace
-      vector/prostorove-funkce
-      vector/topologie
-      vector/atributy
-      vector/sitove-analyzy
+   vector/editace
+   vector/prostorove-funkce
+   vector/topologie
+   vector/atributy
+   vector/sitove-analyzy
                  
-Další témata
-============
-
-.. only:: html
+Import, export geodat
+=====================
           
-   .. cssclass:: toc
-
-   +--------------------------------+--------------------------------+
-   |  Geodata                       | Mapové výstupy                 |
-   +================================+================================+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
-   |                                |                                |
-   |   intro/import                 |   misc/mapove-elementy         |
-   |   intro/export                 |   misc/mapove-vystupy          |
-   |   intro/prenos-dat             |                                |
-   |   intro/tvorba-lokace          |                                |
-   |   intro/transformace           |                                |
-   |   misc/georeferencovani        |                                |
-   +--------------------------------+--------------------------------+
-
-   .. cssclass:: toc
-        
-   +--------------------------------+--------------------------------+
-   |  Různé                         |                                |
-   +================================+================================+
-   | .. toctree::                   | .. toctree::                   |
-   |   :maxdepth: 1                 |   :maxdepth: 1                 |
-   |                                |                                |
-   |   misc/graficky-modeler        |   misc/lokalizace              |
-   +--------------------------------+--------------------------------+
-
-.. only:: latex
-   
-   Geodata
-   -------
-          
-   .. toctree::
-      :maxdepth: 1
-
-      intro/import
-      intro/export
-      intro/prenos-dat
-      intro/tvorba-lokace
-      intro/transformace
-      misc/georeferencovani
+.. toctree::
+   :maxdepth: 1
+	      
+   intro/import
+   intro/export
+   intro/prenos-dat
+   intro/tvorba-lokace
+   intro/transformace
+   misc/georeferencovani
          
-   Mapové výstupy
-   --------------
+Mapové výstupy
+==============
 
-   .. toctree::
-      :maxdepth: 1
+.. toctree::
+   :maxdepth: 1
                  
-      misc/mapove-elementy
-      misc/mapove-vystupy
+   misc/mapove-elementy
+   misc/mapove-vystupy
 
-   Různé
-   -----
+Různé
+=====
 
-   .. toctree::
-      :maxdepth: 1
-
-      misc/graficky-modeler
-      misc/lokalizace
+.. toctree::
+   :maxdepth: 1
+	      
+   misc/graficky-modeler
+   misc/lokalizace
 
           
-Dodatek
+Dodatky
 =======
 
-.. rubric:: Související materiály
-   :class: secnotoc
+Související materiály
+---------------------
 
 *Česky:*
 
@@ -246,8 +158,8 @@ Dodatek
 * `Open Source GIS: A GRASS GIS Approach <http://www.grassbook.org/>`_ (anglicky)
 * `GIS GRASS - Praktická rukověť <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Praktick%C3%A1_rukov%C4%9B%C5%A5>`_ (česky, velmi zastaralé)
 
-.. rubric:: Technická podpora
-   :class: secnotoc
+Technická podpora
+-----------------
 
 * *(česky)* Mailing list `FreeGeoCZ
   <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_ (obecně Open Source GIS, nikoliv pouze GRASS)
@@ -262,14 +174,14 @@ Dodatek
            
 .. * OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
 
-.. rubric:: Užitečné odkazy
-   :class: secnotoc
+Užitečné odkazy
+---------------
 
 * http://freegis.fsv.cvut.cz
 * http://epsg.io
   
-.. rubric:: Licence dokumentu
-   :class: secnotoc
+Licence dokumentu
+-----------------
 
 Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 

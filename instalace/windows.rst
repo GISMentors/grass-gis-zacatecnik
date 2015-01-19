@@ -19,7 +19,7 @@ Systém GRASS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 Nativní instalátor
 ==================
 
-*Nativní (standalone) instalátor* pro GRASS 7.0 je dostupný na adrese
+*Nativní (standalone) instalátor* pro GRASS 7.0 je dostupný na adrese:
 
 * http://grass.osgeo.org/grass70/binary/mswindows/native/
 
@@ -71,10 +71,6 @@ Nativní instalátor
             :scale-latex: 50
             
             GRASS můžeme automaticky spustit z nabídky Start.
-
-.. raw:: latex
-
-   \clearpage
             
 .. figure:: images/wingrass-9.png
             :scale-latex: 50
@@ -82,29 +78,37 @@ Nativní instalátor
 	    Úvodní obrazovka systému GRASS pro výběr tzv. :ref:`lokace
 	    a mapsetu <struktura-dat>`.
 
+.. raw:: latex
+
+   \clearpage
+
 .. _osgeo4w-instalator:
 
 OSGeo4W
 =======
 
-*Instalátor frameworku OSGeo4W* je ke stažení na adrese
+*Instalátor frameworku OSGeo4W* je ke stažení na adrese:
 
-* http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe
+* http://download.osgeo.org/osgeo4w/
 
 .. figure:: images/osgeo4w-0.png
-            :scale-latex: 50
+            :scale-latex: 45
                  
 	    GRASS 7 nainstalujeme ze sekce ``Advanced Install``.
 
 .. figure:: images/osgeo4w-1.png
-            :scale-latex: 50
+            :scale-latex: 45
 
             Vybereme instalaci z Internetu
    
 .. figure:: images/osgeo4w-2.png
-            :scale-latex: 50
+            :scale-latex: 45
             
 	    Zvolíme adresář, kam se má GRASS nainstalovat.
+
+.. raw:: latex
+
+   \clearpage
 
 .. figure:: images/osgeo4w-3.png
             :scale-latex: 50
@@ -118,10 +122,6 @@ OSGeo4W
    .. figure:: images/osgeo4w-5.png
       :scale-latex: 50
                     
-.. raw:: latex
-
-   \clearpage
-                             
 .. figure:: images/osgeo4w-6.png
             :scale-latex: 50
             
@@ -136,17 +136,15 @@ OSGeo4W
 	    Nutné závislosti (jako např. knihovna GDAL či Python) se
 	    nainstalují automaticky.
 
-           
+.. raw:: latex
+
+   \clearpage
+
 .. figure:: images/osgeo4w-8.png
             :scale-latex: 50
             
 	    Součástí instalace je i proprietární součást knihovny GDAL
 	    ``szip``, kterou potvrdíme.
-
-.. raw:: latex
-
-   \clearpage
-
 ..   
    .. figure:: images/osgeo4w-9.png
                :scale-latex: 50
@@ -172,6 +170,10 @@ OSGeo4W
 	    Ze sekce ``Desktop`` vybereme balíček ``grass70-dev``
             (denní snapshoty verze GRASS 7.0) nebo ``grass71-dev``
             (denní snapshoty verze GRASS 7.1).
+
+.. raw:: latex
+
+   \newpage
 
 ..  _osgeo4w-aktualizace:
 

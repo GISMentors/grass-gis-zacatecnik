@@ -7,8 +7,13 @@ nástroj dostupný z menu :menuselection:`Raster --> Manage colors -->
 Manage color rules interactively`.
 
 .. figure:: images/color-table-dmt.png
+	    :scale-latex: 45
 
             Příklad tabulky barev pro rastrovou mapu :map:`dmt`
+
+.. raw:: latex
+
+   \clearpage
 
 .. noteadvanced::
    
@@ -27,6 +32,7 @@ Tento nástroj umožňuje tabulku barev navíc *interaktivně měnit*
 včetně náhledu na data.
 
 .. figure:: images/color-table-dmt-custom.png
+   :scale-latex: 50
 
    Příklad interaktivně změněné tabulky barev :fignote:`(1)` pouze v
    náhledu :fignote:`(2)`
@@ -47,6 +53,10 @@ barev.
             nastavit, stiskneme tlačítko :fignote:`(1)`. Návrat k
             výchozí tabulce barev poskytuje :fignote:`(2)`
 
+.. raw:: latex
+	 
+   \newpage
+	 
 Tabulku barev lze dále načíst anebo uložit do souboru.
 
 .. figure:: images/color-table-file.png

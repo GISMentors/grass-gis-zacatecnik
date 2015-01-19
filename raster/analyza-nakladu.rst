@@ -8,30 +8,35 @@ uložíme průměrnou rychlost v následující podobě:
 
 .. only:: latex
           
-   .. tabularcolumns:: |p{2cm}|p{1.5cm}|p{4cm}|
+   .. tabularcolumns:: |p{3cm}|p{1.5cm}|p{4cm}|
                        
 .. only:: html
                                  
    .. cssclass:: border
 
-   +----------------------+----------------+---------------------+
-   | Silnice              | Typ            | Rychlost (km/h)     |
-   +======================+================+=====================+
-   | Dálnice              | 1              | 110                 |
-   +----------------------+----------------+---------------------+
-   | Rychlostní silnice   | 2              | 100                 |
-   +----------------------+----------------+---------------------+
-   | Silnice 1.třídy      | 3              | 90                  |
-   +----------------------+----------------+---------------------+
-   | Silnice 2.třídy      | 4              | 70                  |
-   +----------------------+----------------+---------------------+
-   | Silnice 3.třídy      | 5              | 60                  |
-   +----------------------+----------------+---------------------+
++----------------------+----------------+---------------------+
+| Silnice              | Typ            | Rychlost (km/h)     |
++======================+================+=====================+
+| Dálnice              | 1              | 110                 |
++----------------------+----------------+---------------------+
+| Rychlostní silnice   | 2              | 100                 |
++----------------------+----------------+---------------------+
+| Silnice 1.třídy      | 3              | 90                  |
++----------------------+----------------+---------------------+
+| Silnice 2.třídy      | 4              | 70                  |
++----------------------+----------------+---------------------+
+| Silnice 3.třídy      | 5              | 60                  |
++----------------------+----------------+---------------------+
 
 .. figure:: images/field-calculator-speed.png
    :class: small
-           
+   :scale-latex: 50
+
    Příklad uložení atributu rychlosti pro dálnice (``typ = 1``)     
+
+.. raw:: latex
+
+   \newpage
 
 .. notecmd:: Nastavení atributu rychlosti
 
@@ -70,6 +75,7 @@ barev 'sepia', viz kapitola :doc:`tabulka barev <tabulka-barev>`.
                 r.colors -n map=silnice color=sepia
 
 .. figure:: images/grass-streets-speed.png
+	    :scale-latex: 70
 
             Rasterizovaná síť silnic s atributem průměrné rychlosti
 
@@ -88,6 +94,10 @@ požáru (souřadnice v S-JTSK -754063, -981284).
 
       echo "-754063|-981284|1" | v.in.ascii input=- output=pozar
             
+.. raw:: latex
+
+   \newpage
+
 Rastrovou mapu časové náročnosti vytvoříme pomocí modulu
 :grasscmd:`r.mapcalc`, viz kapitola :ref:`rastrová algebra
 <rastrova-algebra>`.
@@ -128,7 +138,8 @@ dojezdovosti pro danou požární stanici.
    v.what.rast map=pozarni_stanice raster=silnice_naklady column=dojezdovost
 
 .. figure:: images/grass-streets-nearest.png
-            
+   :scale-latex: 70
+		      
    Nalezení požární stanice s nejmenší hodnotou dojezdovosti,
    tj. požární stanice s kategorií '89'
 
@@ -155,11 +166,13 @@ flow`).
 
 .. figure:: images/grass-streets-path.png
    :class: middle
-           
+   :scale-latex: 60
+
    Výsledek, nejkratší cesta k požáru
             
 .. figure:: images/grass-streets-path-3d.png
    :class: middle
-           
+   :scale-latex: 90
+        
    Vizualizace rastrové mapy nákladů včetně nejkratší spádové cesty ve
    3D

@@ -83,7 +83,11 @@ viz :ref:`sql-builder`.
 .. note:: Vybírat vektorové prvky na základě jejich atributů lze i
           pomocí modulu :grasscmd:`v.extract`, více informací
           :ref:`zde <v-extract>`.
-            
+
+.. raw:: latex
+
+   \newpage
+
 Zvýraznění výběru v mapovém okně
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

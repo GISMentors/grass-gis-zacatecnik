@@ -62,7 +62,7 @@ upravovat ho a tyto změny či opravy šířit dál.
    .. tip::
 
       Text školení je dostupný i v tisknutelné formě `PDF
-      <./skoleni-GRASS-GIS-zacatecnik.pdf>`_.
+      <./skoleni-grass-gis-zacatecnik.pdf>`_.
    
 První kroky
 ===========

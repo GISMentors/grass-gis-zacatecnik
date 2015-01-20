@@ -21,7 +21,7 @@ release = '%sRC2' % version
 # -- Options for HTML output ----------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'skoleni-GRASS-GIS-zacatecnik'
+htmlhelp_basename = 'skoleni-grass-gis-zacatecnik'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".

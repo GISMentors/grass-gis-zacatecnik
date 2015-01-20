@@ -26,7 +26,6 @@ htmlhelp_basename = 'skoleni-grass-gis-zacatecnik'
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 html_title = project
-html_use_index = True
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -79,3 +78,4 @@ sys.path.append(os.path.join('..', 'sphinx-template'))
 from conf_base import *
 
 todo_include_todos = True
+html_use_index = True

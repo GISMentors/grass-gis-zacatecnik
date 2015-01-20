@@ -66,7 +66,7 @@ maloplošných chráněných území :fignote:`(1)`.
 .. figure:: images/v-overlay-01.png
    :scale-latex: 50
    
-    Vytvoření mapy maloplošných a velkoplošných chráněných území
+   Vytvoření mapy maloplošných a velkoplošných chráněných území
 
 K výsledné vektorové mapě je přiřazena atributová tabulka, která je
 spojena z obou vstupních vektorových map. Atributy první vektorové

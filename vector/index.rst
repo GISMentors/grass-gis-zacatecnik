@@ -87,7 +87,7 @@ Na obrázku níže je zobrazen:
 * dva plošné geoprvky, z toho jeden z nich obsahuje otvor
 
 .. figure:: images/grass7-topo.png
-	    :class: large
+   :class: large
 
 Tato kompozice bude v topologické modelu systému GRASS vyjádřena
 následující topologickými elementy:

@@ -53,4 +53,4 @@ pomocí aplikace :wikipedia:`zip <ZIP (souborový formát)>`.
 
    Při přenášení mapsetů platí pouze jedna podmínka. Mapset může být
    umístěn pouze do lokace se stejným souřadnicovým systém. V opačném
-případě dojde k nekozistenci dat, se kterou si GRASS neporadí.
+   případě dojde k nekozistenci dat, se kterou si GRASS neporadí.

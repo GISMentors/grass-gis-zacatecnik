@@ -162,7 +162,7 @@ přidat nové identické body.
 
 .. figure:: images/georect-14.png
    :class: large
-   :scale-latex:70
+   :scale-latex: 70
 
    Souřadnicově připojená rastrová či vektorovou mapu přidáme do správce vrstev.
 

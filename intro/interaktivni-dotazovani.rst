@@ -20,8 +20,8 @@ Rastrová data
 Výstup pro rastrová data obsahuje:
 
 * souřadnice dotazu
-* barevnou hodnotu přiřazenou na základě :ref:`tabulky barev
-  <raster-color-table>`
+* barevnou hodnotu přiřazenou na základě :doc:`tabulky barev
+  <../raster/tabulka-barev>`
 * hodnotu rastrové buňky a
 * připadně popisek dané hodnoty
 

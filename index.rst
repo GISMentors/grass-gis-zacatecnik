@@ -188,7 +188,7 @@ Licence dokumentu
 Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
 .. figure:: images/cc-by-sa.png 
-   :scale-html: 20
+   :scale: 60
    :scale-latex: 100
               
 *Verze textu školení:* |release| (|today|)
@@ -198,5 +198,5 @@ Autoři
 
 Za `GISMentors <http://www.gismentors.eu/>`_:
 
+* Martin Landa ``<martin.landa opengeolabs.cz>``
 * Jáchym Čepický ``<jachym.cepicky opengeolabs.cz>``
-* Martin Landa ``<martin.landa opengeolabs.cz>``            

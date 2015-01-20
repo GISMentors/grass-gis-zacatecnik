@@ -177,7 +177,6 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
    \newpage
 
 .. index::
-   pair: rastrová data; štítky
    single: r.category
    
 .. _prirazeni-stitku:

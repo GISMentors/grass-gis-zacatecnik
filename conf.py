@@ -26,6 +26,7 @@ htmlhelp_basename = 'skoleni-grass-gis-zacatecnik'
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 html_title = project
+html_use_index = True
 
 # -- Options for LaTeX output ---------------------------------------------
 

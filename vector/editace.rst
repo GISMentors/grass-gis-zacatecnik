@@ -46,10 +46,14 @@ attributes`, více v sekci :ref:`editace atributových dat
 
 .. figure:: images/attribute-table.png
    :class: middle
-   :scale-latex: 60
-
+   :scale-latex: 65
+   
    Přidání nového atributu s názvem ``popis``
 
+.. raw:: latex
+
+      \newpage
+      
 .. _editace-vektorovych-dat:
 
 Editace vektorové mapy
@@ -58,13 +62,9 @@ Editace vektorové mapy
 Existující vektorovou mapu můžeme začít editovat z kontextového menu 
 :item:`Start editing`.
 
-.. raw:: latex
-
-   \newpage
-
 .. figure:: images/edit-vector-01.png
    :class: middle
-   :scale-latex: 70
+   :scale-latex: 55
      
    Start editace vektorových dat
     
@@ -79,13 +79,17 @@ atributů.
 
 .. figure:: images/edit-vector-02.png
    :class: middle
-   :scale-latex: 70
+   :scale-latex: 60
 
    Definice atributů pro nově vytvořený vektorový geoprvek
 
 Počáteční a koncové body (tzv. uzly) linií a hranic ploch ploch se na
 sebe budou automaticky přichytávat (výchozí hodnota je `10px`).
 
+.. raw:: latex
+
+   \newpage
+   
 .. note:: Uzly jsou vykresleny různou barvou, podle toho jsou-li
           přichyceny k dalšímu uzlu či nikoliv. Viz dialog
           `Digitization settings`, záložka :item:`Symbology`.

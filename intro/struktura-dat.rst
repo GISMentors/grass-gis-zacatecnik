@@ -40,11 +40,9 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 
 .. figure:: images/help_loc_struct.png
             :class: middle
-                 
+            
             Struktura GRASS DataBase, vztah lokace a mapsetů, umístění
-            souborů s daty pro různé typy map
-
-            (zdroj: `manuál systému
+            souborů s daty pro různé typy map (zdroj: `manuál systému
             GRASS
             <http://grass.osgeo.org/grass70/manuals/helptext.html>`_)
 

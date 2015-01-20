@@ -66,7 +66,7 @@ mezerami mezi vstupními polygony. Vstupní data v tomto případě
 obsahuje nejen překrývající se polygony ale i tzv. mezery.
 
 .. figure:: images/dissolve-errors.png
-	    :scale-latex: 70
+	    :scale-latex: 40
 
             Výsledek spojení polygonů obcí nad daty, které obsahují
             topologické chyby
@@ -82,7 +82,7 @@ než 10km\ :sup:`2`.
    v.clean input=obce_broken output=obce type=area tool=rmarea thresh=10
 
 .. figure:: images/dissolve-ok.png
-	    :scale-latex: 70
+	    :scale-latex: 40
 
             Výsledek spojení polygonů obcí po opravě topologických
             chyb

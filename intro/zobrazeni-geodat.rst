@@ -148,13 +148,13 @@ nástrojové lišty nebo z příkazové řádky správce vrstev.
 
 .. figure:: images/wxgui-toolbar-vector-misc.png
             :class: middle
-	    :scale-latex: 60
+	    :scale-latex: 65
 
             Přidání ostatních vektorových dat z nástrojové lišty správce vrstev
 
 .. figure:: images/wxgui-toolbar-vector-misc-1.png
 	    :class: middle
-	    :scale-latex: 60
+            :scale-latex: 65
 
             Menu pro přidání vektorových dat
 

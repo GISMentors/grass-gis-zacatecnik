@@ -208,6 +208,10 @@ Formát::
 
                Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 1)
 
+   .. raw:: latex
+            
+      \newpage
+
    .. figure:: images/wxgui-mapdisp-show-reg-1.png
                :class: middle
 

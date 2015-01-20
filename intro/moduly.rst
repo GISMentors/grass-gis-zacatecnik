@@ -80,6 +80,10 @@ není splněna, zobrazí se dialog nástroje.
 
 * z :doc:`grafického modeleru <../misc/graficky-modeler>`
 
+.. raw:: latex
+
+     \clearpage
+     
 Nápověda k modulům
 ==================
 
@@ -87,7 +91,8 @@ Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS hel
 
 .. figure:: images/grass-help.png
    :class: large
-
+   :scale-latex: 80
+              
    Nápověda systému GRASS v okně webového prohlížeče
 
 .. notecmd:: Zobrazení nápovědy
@@ -103,7 +108,7 @@ Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS hel
       g.manual r.buffer
                    
 .. figure:: images/r-buffer-help.png
-   :scale-latex: 65
+   :scale-latex: 55
 
    Nápověda k jednotlivým modulům je dostupná i z dialogového okna
 

@@ -46,12 +46,18 @@ Systém GRASS po uložení nastavení a opětovném spuštění (změna jazyka
 se tedy neprojeví ihned) již nastartuje ve zvolené lokalizaci.
 
 .. figure:: images/grass-welcome-english.png
+   :scale-latex: 55
+                 
+   Příklad uvítací obrazovky systému GRASS v angličtině
 
-	    Příklad uvítací obrazovky systému GRASS v angličtině
+.. raw:: latex
 
+   \newpage
+   
 .. figure:: images/grass-welcome-jap.png
-
-	    Příklad uvítací obrazovky systému GRASS v japonštině
+   :scale-latex: 55
+              
+   Příklad uvítací obrazovky systému GRASS v japonštině
 
 .. rubric:: `Poznámky pod čarou`
 	    :class: secnotoc

@@ -48,6 +48,10 @@ Vybrané záznamy lze z atributové tabulky *odstranit*.
 
             Odstranění záznamů z atributové tabulky
 
+.. raw:: latex
+
+   \newpage
+
 .. notecmd:: Odstranění záznamů z atributové tabulky
 
                 .. code-block:: bash

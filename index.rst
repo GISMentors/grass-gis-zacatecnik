@@ -144,16 +144,16 @@ Dodatky
 Související materiály
 ---------------------
 
-*Česky:*
+.. rubric:: Česky:
 
 * `Školení GRASS GIS na Les-ejk.cz <http://les-ejk.cz/skoleni/grass/>`_
 * `GRASS GIS na portálu FreeGIS <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS>`_
 
-*Anglicky:*
+.. rubric:: Anglicky:
 
 * `Dokumentace systému GRASS 7.0 <http://grass.osgeo.org/grass70/manuals/index.html>`_
 
-*Literatura:*
+.. rubric:: Literatura:
 
 * `Open Source GIS: A GRASS GIS Approach <http://www.grassbook.org/>`_ (anglicky)
 * `GIS GRASS - Praktická rukověť <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Praktick%C3%A1_rukov%C4%9B%C5%A5>`_ (česky, velmi zastaralé)
@@ -163,12 +163,14 @@ Technická podpora
 
 * *(česky)* Mailing list `FreeGeoCZ
   <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_ (obecně Open Source GIS, nikoliv pouze GRASS)
- * `registrace
-   <http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz>`_
- * `archiv <http://mailman.fsv.cvut.cz/pipermail/freegeocz/>`_
+
+  * `registrace <http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz>`_
+  * `archiv <http://mailman.fsv.cvut.cz/pipermail/freegeocz/>`_
+  
 * *(anglicky)* Mezinárodní mailing list projektu GRASS GIS (zajímavostí je archiv sahající až do roku 1991!)
- * `registrace <http://lists.osgeo.org/mailman/listinfo/grass-user>`_
- * `archiv <http://lists.osgeo.org/pipermail/grass-user/>`_
+       
+  * `registrace <http://lists.osgeo.org/mailman/listinfo/grass-user>`_
+  * `archiv <http://lists.osgeo.org/pipermail/grass-user/>`_
    
 .. *Komerční podpora v ČR*
            
@@ -185,7 +187,16 @@ Licence dokumentu
 
 Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
-.. image:: images/cc-by-sa.png 
-   :width: 125px          
-
+.. figure:: images/cc-by-sa.png 
+   :scale-html: 20
+   :scale-latex: 100
+              
 *Verze textu školení:* |release| (|today|)
+
+Autoři
+^^^^^^
+
+Za `GISMentors <http://www.gismentors.eu/>`_:
+
+* Jáchym Čepický ``<jachym.cepicky opengeolabs.cz>``
+* Martin Landa ``<martin.landa opengeolabs.cz>``            

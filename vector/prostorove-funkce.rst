@@ -27,7 +27,8 @@ V následujícím příkladě vybereme z vektorové mapy :map:`silnice`
 
 .. figure:: images/v-extract.png
    :class: large
-           
+   :scale-latex: 75
+              
    Vytvoření tématické vektorové mapy :map:`dalnice` z OpenStreetMap.
             
 Obalová zóna
@@ -42,13 +43,9 @@ Příklad vytvoření obalové zóny s šířkou 5 km.
 
    v.buffer input=dalnice output=dalnice5000 distance=5000
 
-.. raw:: latex
-
-   \newpage
-
 .. figure:: images/v-buffer-result.png
    :class: middle
-   :scale-latex: 65
+   :scale-latex: 55
         
    Příklad obalové zóny 5 km okolo dálnic
 
@@ -67,7 +64,8 @@ V našem případě vytvoříme vektorovou mapu :map:`chranena_uzemi`
 maloplošných chráněných území :fignote:`(1)`.
 
 .. figure:: images/v-overlay-01.png
-
+   :scale-latex: 50
+   
     Vytvoření mapy maloplošných a velkoplošných chráněných území
 
 K výsledné vektorové mapě je přiřazena atributová tabulka, která je
@@ -77,7 +75,7 @@ mapy (:option:`ainput`) jsou označeny prefixem ``a_``, atributy druhé
 
 .. figure:: images/v-overlay-01-table.png
    :class: middle
-   :scale-latex: 60
+   :scale-latex: 65
 
    Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`
 
@@ -108,10 +106,6 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
 
 Podobně fungují i operátory ``XOR`` a ``NOT``.
 
-.. raw:: latex
-
-   \clearpage
-
 Spojení vektorových map (merge)
 ===============================
 
@@ -121,7 +115,7 @@ Alternativním způsob spojení vektorových map umožňuje modul
 modul sloučí vstupní vektorové mapy automaticky.
 
 .. figure:: images/v-patch-01.png
-   :scale-latex: 45
+   :scale-latex: 60
 
    Příklad vytvoření nové vektorové mapy :map:`doprava`, která je
    složena ze vstupních vektorových map :map:`silnice,zeleznice`.

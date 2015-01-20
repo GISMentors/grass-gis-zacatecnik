@@ -31,20 +31,14 @@ html_title = project
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-    'papersize': 'a4paper',
+#    'papersize': 'letterpaper',
 
 # The font size ('10pt', '11pt' or '12pt').
-    'pointsize': '11pt',
+    'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-    'preamble': "".join((
-        '\\usepackage{pifont}',
-        '\DeclareUnicodeCharacter{2605}{\ding{72}}',
-        '\DeclareUnicodeCharacter{2611}{\ding{51}}',
-        '\DeclareUnicodeCharacter{2612}{\ding{55}}',
-    )),
-#    'fontenc' : '\\usepackage[T1]{fontenc}',
-#    'inputenc' : '\\usepackage[utf8x]{inputenc}',
+    'preamble': "".join([]),
+    'releasename': u'verze',
     'date': 'leden 2015',
 }
 
@@ -55,6 +49,8 @@ latex_documents = [
     ('index', '%s-%s.tex' % (htmlhelp_basename, version), project,
      u'GISMentors', u'manual'),
     ]
+
+latex_logo = "images/opengeolabs-logo.png"
 
 # -- Options for manual page output ---------------------------------------
 

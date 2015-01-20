@@ -204,7 +204,7 @@ Licence dokumentu
 Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
 .. figure:: images/cc-by-sa.png 
-   :scale: 60
+   :width: 130px
    :scale-latex: 100
               
 *Verze textu školení:* |release| (|today|)

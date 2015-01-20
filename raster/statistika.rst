@@ -8,9 +8,9 @@ Kromě výpisu :ref:`základních metadat <raster-metadata>` rastrových
 map systém GRASS disponuje dalšími moduly pro výpis statistických
 informací rastrových dat. Jde o:
 
-* :grasscmd:`r.report` pro přehledný výpis informací o rastrové mapě
-* :grasscmd:`r.univar` pro základní statistiku  
-* :grasscmd:`r.stats` pro výpis vybraných statistik
+* :grasscmd:`r.report` pro přehledný výpis informací o rastrové mapě,
+* :grasscmd:`r.univar` pro základní statistiku a
+* :grasscmd:`r.stats` pro výpis vybraných statistik.
 
 .. index::
    single: r.report
@@ -28,12 +28,12 @@ z kontextového menu *správce vrstev*.
 
             Pokud je modul vyvolán z kontextového menu, je automaticky
             spuštěn s parametrem ``units=h,c,p`` (tj. výměra v
-            hektarech, počet buněk a procentuální pokrytí)
+            hektarech, počet buněk a procentuální pokrytí).
 
 Příklad pro rastrovou mapu s hodnotami s plovoucí desetinnou čárkou
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    
-Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
+Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`:
 
 * výměra v kilometrech čtverečních
 * procentuální pokrytí
@@ -42,21 +42,21 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
 .. figure:: images/r-report-0.png
 
    Nejprve vybereme rastrovou mapu :fignote:`(1)`, pro kterou si
-   přejeme vypsat report
+   přejeme vypsat report.
    
 .. figure:: images/r-report-1.png
 
-   Dále zvolíme informace, které si přejeme vypsat :fignote:`(2)`
+   Dále zvolíme informace, které si přejeme vypsat :fignote:`(2)`.
 
 .. figure:: images/r-report-2.png
 
    Zvolíme počet tříd, do kterých se mají data s plovoucí desetinnou
-   čárkou rozdělit :fignote:`(3)` a modul spustíme :fignote:`(4)`
+   čárkou rozdělit :fignote:`(3)` a modul spustíme :fignote:`(4)`.
 
 .. figure:: images/r-report-3.png
 
    Výsledný report, např. území s nadmořskou výškou do 202.5 metrů
-   pokrývá necelé tři procenta území ČR
+   pokrývá necelé tři procenta území ČR.
 
 .. raw:: latex
 
@@ -78,7 +78,7 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
       g.region rast=dmt res=1000
 
    .. figure:: images/r-report-4.png
-      :scale-latex: 45
+      :scale-latex: 40
 
       Pro takto převzorkovaná data bude např. území s nadmořskou
       výškou do 202.5 metrů pokrývat místo původních 2,85% nově 2,83%.
@@ -99,10 +99,12 @@ kontextového menu *správce vrstev*.
 .. figure:: images/lmgr-r-univar.png
    :scale-latex: 45
 
+   Základní statistika rastrových dat dostupná z kontextového menu správce vrstev.
+
 .. figure:: images/r-univar-out.png
 
    Příklad statistiky pro rastrovou mapu :map:`dmt` (s výpočetním
-   regionem nastaveným na tuto mapu)
+   regionem nastaveným na tuto mapu).
 
 .. index::
    single: r.stats

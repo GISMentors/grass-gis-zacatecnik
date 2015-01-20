@@ -107,7 +107,7 @@ latex:
 	$(SPHINXBUILD) -E -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	sed -i -e 's/\\begin{figure}\[htbp\]/\\begin{figure}\[!ht\]/' \
 		-e 's/\\DUspan{fignote}/\\textcolor{red}/g' \
-		-e 's/\\DUspan{map}/\\textsc/g' \
+		-e 's/\\DUspan{map}/\\texttt/g' \
 		-e 's/\\DUspan{item}/\\colorbox[rgb]{0.80,0.80,0.80}/g' \
 		-e 's/\\DUspan{secnotoc}/\\textrm/g' \
 		$(BUILDDIR)/latex/*.tex

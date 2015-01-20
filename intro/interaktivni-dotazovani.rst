@@ -7,6 +7,8 @@ Funkcionalita interaktivního dotazování je dostupná z nástrojové lišty
 .. figure:: images/map-display-query.png
    :class: middle
 
+   Interaktivní dotazování.
+
 .. figure:: images/raster-query.png
    :class: large
       
@@ -19,27 +21,31 @@ Rastrová data
 
 Výstup pro rastrová data obsahuje:
 
-* souřadnice dotazu
+* souřadnice dotazu,
 * barevnou hodnotu přiřazenou na základě :doc:`tabulky barev
-  <../raster/tabulka-barev>`
+  <../raster/tabulka-barev>`,
 * hodnotu rastrové buňky a
-* připadně popisek dané hodnoty
+* připadně popisek dané hodnoty.
 
 .. figure:: images/raster-query-result.png
    :scale-latex: 60
+
+   Příklad dotazu na rastrová data.
 
 Vektorová data
 ==============
 
 Výstup pro rastrová data obsahuje:
 
-* souřadnice dotazu
-* kategorii prvku, geometrické vlastnosti a informace o připojení
-  vektorových dat :fignote:`(1)`
-* výpis připojených atributů :fignote:`(2)`
+* souřadnice dotazu,
+* kategorii geoprvku, geometrické vlastnosti a informace o připojení
+  vektorových dat :fignote:`(1)` a
+* výpis připojených atributů :fignote:`(2)`.
 
 .. figure:: images/vector-query-result.png
    :scale-latex: 60
+
+   Příklad dotazu na vektorová data.
 
 .. raw:: latex
 	 

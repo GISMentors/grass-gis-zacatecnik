@@ -17,7 +17,7 @@ Novou vektorovou mapu vytvoříme z menu
    :class: small
    :scale-latex: 55
 
-   Dialog pro výytvoření nové vektorové mapy
+   Dialog pro vytvoření nové vektorové mapy.
 
 .. noteadvanced::
       
@@ -40,7 +40,7 @@ Nástroj pro editaci atributové tabulky spustíme z kontextového menu vektorov
    :class: middle
    :scale-latex: 70
 
-   Spuštění správce atributových dat
+   Spuštění správce atributových dat.
 
 .. raw:: latex
 
@@ -54,7 +54,7 @@ attributes`, více v sekci :ref:`editace atributových dat
    :class: middle
    :scale-latex: 65
    
-   Přidání nového atributu s názvem ``popis``
+   Přidání nového atributu s názvem ``popis``.
 
 .. raw:: latex
 
@@ -66,13 +66,13 @@ Editace vektorové mapy
 ======================
 
 Existující vektorovou mapu můžeme začít editovat z kontextového menu 
-:item:`Start editing`.
+:menuselection:`Start editing`.
 
 .. figure:: images/edit-vector-01.png
    :class: middle
-   :scale-latex: 55
+   :scale-latex: 50
      
-   Start editace vektorových dat
+   Editace vektorových dat z kontextového menu správce vrstev.
     
 Nyní můžeme v mapovém okně zvolit nástroj kreslení linie (nebo kterýkoliv jiný)
 a nakreslit požadovaný tvar.
@@ -85,35 +85,33 @@ atributů.
 
 .. figure:: images/edit-vector-02.png
    :class: middle
-   :scale-latex: 60
+   :scale-latex: 55
 
-   Definice atributů pro nově vytvořený vektorový geoprvek
+   Definice atributů pro nově vytvořený vektorový geoprvek.
 
-Počáteční a koncové body (tzv. uzly) linií a hranic ploch ploch se na
-sebe budou automaticky přichytávat (výchozí hodnota je `10px`).
+.. note::
+      
+   Počáteční a koncové body (tzv. uzly) linií a hranic ploch se na
+   sebe budou automaticky přichytávat (výchozí hodnota je `10px`).
 
-.. raw:: latex
+   Uzly jsou vykresleny různou barvou, podle toho jsou-li
+   přichyceny k dalšímu uzlu či nikoliv. Viz dialog
+   `Digitization settings`, záložka :menuselection:`Symbology`.
 
-   \newpage
-   
-.. note:: Uzly jsou vykresleny různou barvou, podle toho jsou-li
-          přichyceny k dalšímu uzlu či nikoliv. Viz dialog
-          `Digitization settings`, záložka :item:`Symbology`.
-
-Při editaci ploch je každá plocha automaticky *zaplochována*
-centroidem. K centroidu lze později navázat požadované atributy
-plochy. Hranice plochy a jejich centroidy lze také editovat i zvlášť.
+Při editaci je každá plocha automaticky *zaplochována* centroidem. K
+centroidu lze později navázat požadované atributy plochy. Hranice
+plochy a jejich centroidy lze také editovat i zvlášť.
 
 Mazání vybraných prvků je potřeba vždy potvrdit pravým tlačítkem myši.
 
 V nastavení editace můžeme nastavit zobrazení editovaných prvků (šířka, barvy),
-snapping, automatické přiřazování atributů novým prvkům a další.
+přichytávání, automatické přiřazování atributů novým prvkům a další.
 
 .. figure:: images/editing-settings.png
    :class: small
-   :scale-latex: 50
+   :scale-latex: 40
         
-   Nastavení editace
+   Nastavení editace.
 
 .. noteadvanced:: Editovat vektorové prvky lze také v příkazové řádce pomocí modulu
     :grassCmd:`v.edit`.

@@ -14,9 +14,7 @@ jako tzv. *balíček*.
 
    Pokud balíčkovací systém dané linuxové distribuce neobsahuje GRASS
    nebo nabízí jeho zastaralou verzi lze systém GRASS poměrně
-   jednoduše `zkompilovat
-   <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Instalace_GNU/Linux#Kompilace>`_
-   vlastními silami.
+   jednoduše zkompilovat [#f1]_ vlastními silami.
 
 .. index::
    single: Debian
@@ -25,7 +23,7 @@ jako tzv. *balíček*.
 Postup instalace pro Debian GNU/Linux
 =====================================
 
-Přehled balíčků GRASS dostupné pro :wikipedia:`Debian GNU/Linux` (viz
+Přehled balíčků GRASS dostupných pro :wikipedia:`Debian GNU/Linux` (viz
 projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_):
 
 * http://packages.debian.org/search?keywords=grass&searchon=names&suite=all&section=all
@@ -43,7 +41,7 @@ projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_):
 Postup instalace pro Ubuntu
 ===========================
 
-Přehled balíčků GRASS dostupné pro :wikipedia:`Ubuntu` (viz projekt
+Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz projekt
 `UbuntuGIS <https://wiki.ubuntu.com/UbuntuGIS>`_):
 
 * http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all
@@ -64,5 +62,18 @@ Přehled balíčků GRASS dostupné pro :wikipedia:`Ubuntu` (viz projekt
 
 .. figure:: images/grass-ubuntu-launch.png
             :class: middle
-           
+            :scale-latex: 70
+                 
             Spuštění systému GRASS v Ubuntu 12.10
+
+.. rubric:: `Poznámky pod čarou`
+   :class: secnotoc
+           
+.. [#f1]
+         `http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Instalace_GNU/Linux#Kompilace
+         <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Instalace_GNU/Linux#Kompilace>`_
+
+.. raw:: latex
+
+   \newpage
+

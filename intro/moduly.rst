@@ -5,7 +5,7 @@ Příkazy systému GRASS
    single: moduly
 
 GRASS GIS je *modulární systém*, který disponuje poměrně rozsáhlou
-množinou malých, ale výkonných programů (v terminologii systému GRASS
+množinou malých, ale výkonných programů (v~terminologii systému GRASS
 *modulů*).
 
 .. note::
@@ -55,22 +55,21 @@ Příkazy (tj. moduly) systému GRASS lze spouštět několika způsoby
 
 .. figure:: images/wxgui-menu-r-buffer.png
 
-            Spuštění modulu :grasscmd:`r.buffer` z menu správce vrstev
+            Spuštění modulu :grasscmd:`r.buffer` z menu správce vrstev.
 
 * z nástroje :item:`Search module` správce vrstev
 
 .. figure:: images/wxgui-search-r-buffer.png
 
-..
-            Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`
+            Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`.
 
 * z příkazové řádky správce vrstev
 
 .. figure:: images/wxgui-console-r-buffer.png
 	    :class: middle
-	    :scale-latex: 100
+	    :scale-latex: 90
 
-            Spuštění modulu :grasscmd:`r.buffer` s příkazové řádky správce vrstev
+            Spuštění modulu :grasscmd:`r.buffer` z příkazové řádky správce vrstev.
 
 Pokud jsou zadány všechny povinné parametry (v případě modulu
 :grasscmd:`r.buffer` jde o :option:`input`, :option:`output` a
@@ -79,7 +78,7 @@ není splněna, zobrazí se dialog nástroje.
 
 .. figure:: images/wxgui-console-r-buffer-launch.png
 
-            Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů
+            Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů.
 
 * z :doc:`grafického modeleru <../misc/graficky-modeler>`
 
@@ -100,7 +99,7 @@ Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS hel
    :class: large
    :scale-latex: 80
               
-   Nápověda systému GRASS v okně webového prohlížeče
+   Nápověda systému GRASS v okně webového prohlížeče.
 
 .. notecmd:: Zobrazení nápovědy
 
@@ -117,5 +116,5 @@ Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS hel
 .. figure:: images/r-buffer-help.png
    :scale-latex: 55
 
-   Nápověda k jednotlivým modulům je dostupná i z dialogového okna
+   Nápověda k jednotlivým modulům je dostupná i z dialogového okna.
 

@@ -11,14 +11,13 @@ Atributové dotazy
 -----------------
 
 Atributové dotazy, tj. výběr geoprvků na základě jejich popisných
-vlastností, lze provádět pomocí :abbr:`GUI (Grafické uživatelské
-rozhraní)` :ref:`správce atributových dat <wxgui-dbmgr>`.
+vlastností, lze provádět pomocí :ref:`správce atributových dat
+<wxgui-dbmgr>`.
 
 .. noteadvanced::
    
-   Pokročilejší uživatelé mohou využít :ref:`specializované moduly
-   <db-select>` dostupné z :abbr:`GUI (Grafické uživatelské rozhraní)`
-   anebo z příkazové řádky systému GRASS.
+   Pokročilejší uživatelé mohou ve svých skriptech využít
+   specializované moduly, viz kapitola :ref:`níže <db-select>`.
 
 .. _wxgui-dbmgr:
 
@@ -31,13 +30,13 @@ spustit několika způsoby:
 
 .. figure:: images/wxgui-dbmgr-toolbar.png
 
-            Spuštění správce atributových dat z nástrojové lišty
+            Spuštění správce atributových dat z nástrojové lišty.
 
 * z kontextového menu *správce vrstev*
 
 .. figure:: images/wxgui-dbmgr-menu.png
 
-            Spuštění správce atributových dat z kontextového menu
+            Spuštění správce atributových dat z kontextového menu.
 
 * z příkazové řádky jako modul :grasscmd:`g.gui.dbmgr`
 
@@ -73,21 +72,21 @@ viz :ref:`sql-builder`.
 
 .. figure:: images/wxgui-dbmgr-simple-0.png
 
-            Jednoduchý atributový doraz (krok 1 - výběr sloupce pro where podmínku)
+            Jednoduchý atributový doraz (krok 1 - výběr sloupce pro where podmínku).
 
 .. figure:: images/wxgui-dbmgr-simple-1.png
 
-            Jednoduchý atributový doraz (krok 2 - výběr operátoru pro where podmínku)
+            Jednoduchý atributový doraz (krok 2 - výběr operátoru pro where podmínku).
 
 .. figure:: images/wxgui-dbmgr-simple-2.png
 
-            Jednoduchý atributový doraz (krok 3 - určení hodnoty pro where podmínku)
+            Jednoduchý atributový doraz (krok 3 - určení hodnoty pro where podmínku).
 
 .. figure:: images/wxgui-dbmgr-simple-3.png
 
-            Jednoduchý atributový doraz - zobrazení výsledku
+            Jednoduchý atributový doraz - zobrazení výsledku.
 
-.. note:: Vybírat vektorové prvky na základě jejich atributů lze i
+.. note:: Vybírat vektorové geoprvky na základě jejich atributů lze i
           pomocí modulu :grasscmd:`v.extract`, více informací
           :ref:`zde <v-extract>`.
 
@@ -103,7 +102,7 @@ pomocí volby :menuselection:`Highlight selected features`.
 
 .. figure:: images/wxgui-dbmgr-highlight-features.png
 
-            Zvýraznění korespondujících geoprvků v mapovém okně
+            Zvýraznění korespondujících geoprvků v mapovém okně.
 
 .. youtube:: ITHLtQRsbEY
 
@@ -121,19 +120,19 @@ Language)` SELECT dotazy přímo do dialogu *správce atributových dat*.
 
             Pokročilé dotazování, :abbr:`SQL (Structured Query
             Language)` SELECT dotaz (výběr se provede pro stisknutí
-            klávesy :kbd:`Enter`)
+            klávesy :kbd:`Enter`).
 
 :abbr:`SQL (Structured Query Language)` dotaz lze sestavit pohodlně
 pomocí *SQL Builderu*, tlačítko :kbd:`SQL Builder`.
 
 .. figure:: images/wxgui-dbmgr-sq-0.png
 
-            Spuštění SQL Builderu ze správce atributových dat
+            Spuštění SQL Builderu ze správce atributových dat.
 
 .. figure:: images/wxgui-dbmgr-sq-1.png
             :class: large
 
-            Správce atributových dat a SQL Builder
+            Správce atributových dat a SQL Builder.
 
 .. youtube:: PByk8pipCz4
 

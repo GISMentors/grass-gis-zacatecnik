@@ -4,16 +4,16 @@
 Rastrová data
 -------------
 
-Rastrová data jsou v systému GRASS uložena v podobě tzv. **rastrových
-map**. Jde o:
+Rastrová data jsou v systému GRASS uložena v podobě tzv. *rastrových
+map*. Jde o:
 
-* Reprezentaci v podobě pravidelné mřížky hodnot (GRASS nepodporuje
+* reprezentaci v podobě pravidelné mřížky hodnot (GRASS nepodporuje
   nepravidelné mřížky)
-* Ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
-* Elementem mřížky je buňka či tzv. *pixel*, jehož tvar může být buď
+* je ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
+* elementem mřížky je buňka či tzv. *pixel*, jehož tvar může být buď
   čtvercový nebo obdélníkový
-* Velikost pixelu je dána *prostorovým rozlišením*
-* K hodnotě buňky lze přiřadit textový popisek (tzv. *label*) -
+* velikost pixelu je dána *prostorovým rozlišením*
+* k hodnotě buňky lze přiřadit textový popisek (tzv. *label*) -
   :ref:`příklad <prirazeni-stitku>`
 
 .. index::
@@ -32,6 +32,9 @@ rastrové mapy ve *správci vrstev*.
 
 .. figure:: images/lmgr-r-info.png
    :scale-latex: 65
+
+   Spuštění nástroje pro výpis metadat rastrových map z kontextového
+   menu správce vrsvev.
 
 .. figure:: images/lmgr-r-info-example.png
 
@@ -57,6 +60,8 @@ GRASS rozlišuje tři typy rastrových map podle datové typu buňky:
 
 .. figure:: images/rast-num.png
 
+   Celočíselné hodnoty rastrové mřížky.
+   
 * ``FCELL`` (hodnoty s plovoucí desetinnou čárkou,
   :wikipedia-en:`float <Single-precision floating-point format>`)
 * ``DCELL`` (hodnoty s plovoucí desetinnou čárkou s dvojnásobnou
@@ -67,6 +72,8 @@ GRASS rozlišuje tři typy rastrových map podle datové typu buňky:
    \newpage
 
 .. figure:: images/rast-num-float.png
+            
+   Hodnoty s plovoucí desetinnou čárkou rastrové mřížky.
 
 .. note::
 

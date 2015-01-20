@@ -34,9 +34,8 @@ grafických výstupů, časoprostorové modelování a vizualizaci dat.
    single: GNU
    pair: GPL; General Public License
 
-GRASS GIS (http://grass.osgeo.org) je :wikipedia:`free software
-<Svobodný software>` a *open source* publikovaný pod všeobecnou licencí
-:abbr:`GNU (GNU is Not Unix)` :abbr:`GPL (General Public
+GRASS GIS (http://grass.osgeo.org) je *free software* a *open source*
+publikovaný pod všeobecnou licencí GNU :abbr:`GPL (General Public
 License)`. Tato licence nejenže umožňuje software použít k libovolným
 účelům včetně komerčních, dovoluje také studovat jeho zdrojový kód,
 upravovat ho a tyto změny či opravy šířit dál.
@@ -216,3 +215,9 @@ Za `GISMentors <http://www.gismentors.eu/>`_:
 
 * Martin Landa ``<martin.landa opengeolabs.cz>``
 * Jáchym Čepický ``<jachym.cepicky opengeolabs.cz>``
+
+.. only:: latex
+
+   Online HTML verze textu školení je dostupná na adrese: http://training.gismentors.eu/grass-gis-zacatecnik/
+
+Zdrojové texty školení jsou dostupné na adrese: https://github.com/GISMentors/grass-gis-zacatecnik

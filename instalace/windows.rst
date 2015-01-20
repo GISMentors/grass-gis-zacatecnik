@@ -35,7 +35,7 @@ Nativní instalátor
    http://wingrass.fsv.cvut.cz/grass70.
 
 .. figure:: images/wingrass-0.png
-            :scale-latex: 50
+            :scale-latex: 45
 
             Spustíme instalátor.
    
@@ -74,13 +74,13 @@ Nativní instalátor
 .. figure:: images/wingrass-8.png
             :scale-latex: 50
             
-            GRASS můžeme automaticky spustit z nabídky Start.
+            GRASS můžeme spustit z nabídky Start.
             
 .. figure:: images/wingrass-9.png
             :scale-latex: 50
             
-	    Úvodní obrazovka systému GRASS pro výběr tzv. :ref:`lokace
-	    a mapsetu <struktura-dat>`.
+            Po startu se objeví úvodní obrazovka systému GRASS pro
+	    výběr tzv. :ref:`lokace a mapsetu <struktura-dat>`.
 
 .. raw:: latex
 
@@ -107,7 +107,7 @@ OSGeo4W
 .. figure:: images/osgeo4w-1.png
             :scale-latex: 45
 
-            Vybereme instalaci z Internetu
+            Vybereme instalaci z Internetu.
    
 .. figure:: images/osgeo4w-2.png
             :scale-latex: 45
@@ -134,9 +134,9 @@ OSGeo4W
             :scale-latex: 50
             
 	    Ze sekce ``Desktop`` vybereme balíček ``grass70`` či
-	    případně ``grass70-dev`` (tzv. denní buildy) pokud
+	    případně ``grass70-dev`` (tzv. denní buildy), pokud
 	    plánujeme software často aktualizovat a testovat tak
-	    nejnovější funkce
+	    nejnovější funkce.
 
 .. figure:: images/osgeo4w-7.png
             :scale-latex: 50

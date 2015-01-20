@@ -27,11 +27,11 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    
 **Lokace (Location)**
 
-   Lokace je adresář umístěný v GRASS databance. Tento adresář
-   obsahuje data, která souvisejí s daným projektem. Lokace je
-   definována *souřadnicovým systémem* (referenční elipsoid,
-   kartografické zobrazení, mapové jednotky) a výchozí velikostí zájmového
-   území.
+   Lokace je adresář umístěný v GRASS DataBase (adresáři s
+   geodaty). Tento adresář obsahuje data, která souvisejí s daným
+   projektem. Lokace je definována *souřadnicovým systémem*
+   (referenční elipsoid, kartografické zobrazení, mapové jednotky) a
+   výchozí velikostí zájmového území.
 
 .. index::
    pair: mapsety; struktura dat
@@ -54,11 +54,11 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
             Struktura GRASS DataBase, vztah lokace a mapsetů, umístění
             souborů s daty pro různé typy map (zdroj: `manuál systému
             GRASS
-            <http://grass.osgeo.org/grass70/manuals/helptext.html>`_)
+            <http://grass.osgeo.org/grass70/manuals/helptext.html>`_).
 
 .. noteadvanced:: 
    
-   GRASS databanka je definovaná proměnnou prostředí
+   GRASS DataBase je definovaná proměnnou prostředí
    :envvar:`GISDBASE`, lokace :envvar:`LOCATION_NAME` a mapset
    proměnnou :envvar:`MAPSET`, viz modul :grasscmd:`g.gisenv`.
 
@@ -90,7 +90,7 @@ aktuální mapset a mapset `PERMANENT`.
 .. figure:: images/d-rast-user1.png
 
    Přidání nové rastrové mapy do mapového okna, viditelné
-   jsou pouze dva mapsety - aktuální a mapset `PERMANENT`
+   jsou pouze dva mapsety - aktuální (`user1`) a~mapset `PERMANENT`.
 
 Vyhledávací cestu lze modifikovat z menu :menuselection:`Settings -->
 GRASS working environment --> Mapset access`.
@@ -99,15 +99,15 @@ GRASS working environment --> Mapset access`.
    :class: small
    :scale-latex: 50
 
-   Přidání mapsetu `ruian` do vyhledávací cesty
+   Přidání mapsetu `ruian` do vyhledávací cesty.
 
 .. notecmd:: Přidání mapsetu do vyhledávací cesty
 
    .. code-block:: bash
 
-                   g.mapsets mapset=ruian op=add
+                   g.mapsets mapset=ruian operation=add
 
 .. figure:: images/d-rast-user1-ruian.png
 
    Přidání nové rastrové mapy do mapového okna, kromě aktuálního
-   mapsetu a mapset `PERMANENT` je viditelný i mapset `ruian`
+   mapsetu a mapset `PERMANENT` je viditelný i mapset `ruian`.

@@ -14,7 +14,7 @@ obdélníka. Masku lze vytvořit a odstranit pomocí modulu
 .. figure:: images/mask-statusbar.png
    :class: middle
            
-   To zda je maska aktivována, zjistíte ze stavové lišty mapového okna
+   To zda je maska aktivována, zjistíte ze stavové lišty mapového okna.
    
 .. tip::
    
@@ -22,8 +22,10 @@ obdélníka. Masku lze vytvořit a odstranit pomocí modulu
    :option:`--overwrite`.
 
    .. figure:: images/r-mask-overwrite.png
-      :scale-latex: 45
+      :scale-latex: 40
 
+      Přepsání stávající masky.
+               
 .. noteadvanced::
 
    Maska je v systému GRASS definovaná jako standardní rastrová mapa s
@@ -39,12 +41,16 @@ Příklad nastavení masky na základě rastrové mapy
 ================================================
 
 .. figure:: images/r-mask-raster-0.png
-   :scale-latex: 50
+   :scale-latex: 45
 
    Nejprve vybereme rastrovou mapu :fignote:`(1)` na základě, které
    chceme masku nastavit a posléze definujeme hodnoty z této mapy
    :fignote:`(2)`, které poslouží pro vytvoření masky - v tomto
    případě hodnoty 500 až 800.
+
+.. raw:: latex
+                     
+   \newpage
 
 .. note::
 
@@ -59,7 +65,7 @@ Příklad nastavení masky na základě rastrové mapy
 
    .. code-block:: bash
 
-                   g.region rast=dmt
+                   g.region raster=dmt
                    r.mapcalc expr="dmt_int = int(dmt)"
 
 .. figure:: images/dmt-500-800.png
@@ -67,18 +73,20 @@ Příklad nastavení masky na základě rastrové mapy
 	    :scale-latex: 70
 
             Po aktivaci masky se zobrazí pouze část území, které
-            odpovídá nadmořské výšce mezi 500 a 800 metry
+            odpovídá nadmořské výšce mezi 500 a 800 metry.
 
 .. note::
 
    Maska samozřejmě ovlivňuje veškeré výpočty nad rastrovými daty,
    např. modul :grasscmd:`r.univar` v tomto případě vypíše
    :ref:`základní statistiku <r-univar>` pouze pro území s nadmořskou
-   výškou mezi 500 a 800 metry (viz hodnoty `minimum` a `maximum`).
+   výškou mezi 500 a 800 metry (viz hodnoty minimum a~maximum).
 
    .. figure:: images/r-univar-masked.png
-      :scale-latex: 50
+      :scale-latex: 45
 
+      Výpis základní statistiky rastrových dat s aktivovanou maskou.
+   
 Příklad nastavení masky na základě vektorové mapy
 =================================================
 
@@ -88,9 +96,9 @@ Na tomto místě si ukážeme postup vytvoření masky na základě území
 
 .. figure:: images/dmt-uk.png
    :class: middle
-   :scale-latex: 60
+   :scale-latex: 55
 
-   Digitální model terénu a hranice Ústeckého kraje
+   Digitální model terénu a hranice Ústeckého kraje.
 
 Masku nastavíme standardně pomocí modulu :grasscmd:`r.mask` s volbou
 :option:`vector`.
@@ -98,10 +106,12 @@ Masku nastavíme standardně pomocí modulu :grasscmd:`r.mask` s volbou
 .. figure:: images/r-mask-vector.png
    :scale-latex: 40
 
+   Nastavení masky na základě vektorových dat.
+
 .. figure:: images/dmt-uk-mask.png
    :scale-latex: 40
 
-   Výsledek vytvoření masky podle hranice Ústeckého kraje
+   Výsledek vytvoření masky podle hranice Ústeckého kraje.
 
 Odstranění masky
 ================
@@ -110,6 +120,8 @@ Odstranit masku lze přepínačem :option:`-r` modulu :grasscmd:`r.mask`.
 
 .. figure:: images/r-mask-remove.png
    :scale-latex: 40
+                 
+   Odstranění masky.
 
 .. noteadvanced::
 

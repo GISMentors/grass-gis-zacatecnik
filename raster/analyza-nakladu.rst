@@ -38,7 +38,7 @@ uložíme průměrnou rychlost v následující podobě:
    :class: small
    :scale-latex: 50
 
-   Příklad uložení atributu rychlosti pro dálnice (``typ = 1``)     
+   Příklad uložení atributu rychlosti pro dálnice (``typ = 1``).     
 
 .. raw:: latex
 
@@ -83,7 +83,7 @@ barev 'sepia', viz kapitola :doc:`tabulka barev <tabulka-barev>`.
 .. figure:: images/grass-streets-speed.png
 	    :scale-latex: 70
 
-            Rasterizovaná síť silnic s atributem průměrné rychlosti
+            Rasterizovaná síť silnic s atributem průměrné rychlosti.
 
 Modulem :grasscmd:`v.in.ascii` vytvoříme vektorovou mapu s ohniskem
 požáru (souřadnice v S-JTSK -754063, -981284).
@@ -92,7 +92,7 @@ požáru (souřadnice v S-JTSK -754063, -981284).
             
             Vytvoření mapy s ohniskem požáru - definujeme souřadnice
             ohniska požáru :fignote:`(1)` a název výsledné vektorové mapy
-            :fignote:`(2)`
+            :fignote:`(2)`.
 
 .. notecmd:: Vytvoření vektorové mapy s ohniskem požáru
              
@@ -122,7 +122,7 @@ analysis --> Cost surface`) vypočteme rastrovou mapu nákladů pohybu.
 .. figure:: images/grass-streets-cost.png
    :class: middle
            
-   Analýza nákladů pohybu v terénu, ohnisko požáru a požární stanice
+   Analýza nákladů pohybu v terénu, ohnisko požáru a požární stanice.
 
 Dojezdovost pro jednotlivé požární stanice k ohnisku požáru vypočteme
 z rastru nákladu pomocí modulu :grasscmd:`v.what.rast`
@@ -147,7 +147,7 @@ dojezdovosti pro danou požární stanici.
    :scale-latex: 70
 		      
    Nalezení požární stanice s nejmenší hodnotou dojezdovosti,
-   tj. požární stanice s kategorií '89'
+   tj. požární stanice s kategorií '89'.
 
 Souřadnice požární stanice s kategorií '89' poskytne modul
 :grasscmd:`v.out.ascii` (:menuselection:`File --> Export vector map
@@ -174,11 +174,11 @@ flow`).
    :class: middle
    :scale-latex: 60
 
-   Výsledek, nejkratší cesta k požáru
+   Výsledek, nejkratší cesta k požáru.
             
 .. figure:: images/grass-streets-path-3d.png
    :class: middle
    :scale-latex: 90
         
    Vizualizace rastrové mapy nákladů včetně nejkratší spádové cesty ve
-   3D
+   3D.

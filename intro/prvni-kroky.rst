@@ -40,7 +40,7 @@ Spuštění systému GRASS
 
 V případě, že je GRASS :doc:`nainstalován <../instalace/index>`
 standardní cestou, měl by být dostupný z hlavní nabídky vašeho
-:abbr:`OS (Operační systém)`.
+operačního systému.
 
 .. figure:: ../instalace/images/grass-ubuntu-launch.png
             :class: middle
@@ -59,10 +59,9 @@ standardní cestou, měl by být dostupný z hlavní nabídky vašeho
          
 .. notecmd:: Spuštění systému GRASS
 
-   V :abbr:`OS (Operační systém)` :wikipedia:`GNU/Linux` je dostupný systém GRASS po
-   instalaci z příkazové řádky jako program ``grassXY``, kde
-   ``XY`` označuje jeho verzi. Příklad spuštění verze GRASS
-   7.0:
+   V operačním systému :wikipedia:`GNU/Linux` je dostupný systém GRASS
+   po instalaci z příkazové řádky jako program ``grassXY``, kde ``XY``
+   označuje jeho verzi. Příklad spuštění verze GRASS 7.0:
 
    .. code-block:: bash
 
@@ -88,14 +87,14 @@ GRASS`).
 
                 * GRASS v textovém rozhraní, adresář s geodaty nastaven na
                   ``/opt/grassdata``, lokace
-                  ``nc_spm_08_grass7`` a mapset ``user1``
+                  ``nc_spm_08_grass7`` a mapset ``user1``:
 
                   .. code-block:: bash
 
                                   grass70 -text /opt/grassdata/nc_spm_08_grass7/user1/
 
-                * GRASS v grafickém rozhraní, databanka, lokace a
-                  mapset nastavena z minulého sezení
+                * GRASS v grafickém rozhraní, adresář s geodaty, lokace a
+                  mapset nastavena z minulého sezení:
 
                   .. code-block:: bash
 
@@ -103,8 +102,8 @@ GRASS`).
 
                 * GRASS v grafickém rozhraní, vytvořit novou lokace
                   ``skoleni`` (souřadnicový systém S-JTSK :epsg:`5514`
-                  s transformačními parametry pro území ČR - kód
-                  ``3``)
+                  s~transformačními parametry pro území ČR - kód
+                  ``3``):
 
                   .. code-block:: bash
 

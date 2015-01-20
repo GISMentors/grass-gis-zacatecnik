@@ -3,7 +3,7 @@
    \newpage
 
 .. index::
-   single: analýza povrchu
+   pair: analýza povrchu, topografické analýzy
    single: r.slope.aspect
 
 Analýzy povrchu
@@ -17,7 +17,7 @@ analysis --> Slope and aspect`).
                            
             V dialogu nejprve zvolíme vstupní rastrovou mapu s
             povrchem :fignote:`(1)` a poté v záložce :fignote:`(2)`
-            požadovaný výstup
+            požadovaný výstup.
 
 .. important::
 
@@ -36,11 +36,13 @@ Míra svahu
 .. figure:: images/r-slope-aspect-s.png
    :scale-latex: 60
 
+   Výpočet míry svahu.
+   
 .. figure:: images/slope.png
    :class: middle
-   :scale-latex: 70
+   :scale-latex: 60
 
-   Výsledná mapa míry svahu ve stupních                 
+   Výsledná mapa míry svahu ve stupních.                
 
 .. raw:: latex
 
@@ -60,16 +62,19 @@ Orientaci (expozici) svahu opět počítá modul
 :grasscmd:`r.slope.aspect` v kombinaci s parametrem :option:`aspect`.
 
 .. figure:: images/r-slope-aspect-a.png
+            :scale-latex: 50
+                 
+            Výpočet orientace svahu.
 
 .. figure:: images/aspect_diagram.png
             :class: small
         
-            Azimut orientace svahu
+            Azimut orientace svahu.
    
 .. figure:: images/aspect.png
             :class: middle
            
-            Výsledná mapa orientace svahu            
+            Výsledná mapa orientace svahu.           
 
 .. tip::
 
@@ -99,7 +104,7 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
             Zvolíme vstupní rastrovou mapu :fignote:`(1)` s povrchem,
             název výstupní mapy viditelnosti :fignote:`(2)` a
             souřadnice observačního bodu a to buď manuálně či
-            interaktivně z mapového okna :fignote:`(3)`
+            interaktivně z mapového okna :fignote:`(3)`.
 
 .. tip::
 
@@ -111,7 +116,7 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
    :class: large
 
    Observační bod je v mapovém okně označen černým křížkem,
-   obdélník červené barvy zobrazuje hranice výpočetní regionu
+   obdélník červené barvy zobrazuje hranice výpočetní regionu.
 
 .. figure:: images/viewshed-legend.png
    :class: middle
@@ -119,4 +124,4 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
 
    Výsledek analýzy viditelnosti z observačního bodu včetně legendy
    zobrazující velikost úhlu, pod kterým je místo z daného
-   observačního bodu vidět
+   observačního bodu vidět.

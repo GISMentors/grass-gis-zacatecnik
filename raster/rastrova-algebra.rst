@@ -16,9 +16,9 @@ Rastrový kalkulátor je dostupný z menu :menuselection:`Raster -->
 Raster Map Calculator` anebo z nástrojové lišty *správce vrstev*.
 
 .. figure:: images/grass-r-mapcalc-toolbar.png
-	    :scale-latex: 45
+	    :scale-latex: 50
 
-            Spuštění rastrového kalkulátoru
+            Spuštění rastrového kalkulátoru.
 
 Postup
 ======
@@ -30,13 +30,13 @@ Postup
 .. figure:: images/grass-r-mapcalc-dialog.png
 	    :scale-latex: 40
 
-            Dialog rastrového kalkulátoru
+            Dialog rastrového kalkulátoru.
 
 .. figure:: images/grass-gis2-cv4.png
             :class: middle
 	    :scale-latex: 90
 
-            Příklad určení výměry území s nadmořskou výšku mezi 500 a 700 metry
+            Příklad určení výměry území s nadmořskou výšku mezi 500 a 700 metry.
 
 .. youtube:: zADAJD3sytI
 
@@ -51,7 +51,7 @@ Postup
 
    .. code-block:: bash
 
-                   r.mapcalc exp="elev_1000 = if(elev_state_500m > 1000, 1, null())"
+                   r.mapcalc expression="elev_1000 = if(elev_state_500m > 1000, 1, null())"
     
    Výrazy lze uložit do souboru (na každý řádek jeden výraz) a soubor
    předat jako parametr :option:`file`.

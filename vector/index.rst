@@ -5,7 +5,7 @@ Vektorová data
 --------------
 
 Vektorová data jsou v systému GRASS uložena v podobě
-tzv. **vektorových map**.
+tzv. *vektorových map*.
 
 * Vektorová data reprezentují nejčastěji diskrétní fenomény
 
@@ -21,7 +21,7 @@ topologickém formátu, v případě :ref:`importu vektorových dat
 např. :wikipedia-en:`Esri Shapefile` data převádí do topologické formy
 automaticky. 
 
-.. admonition:: Topologie
+.. note:: **Topologie**
 
                 Sleduje prostorové vztahy mezi objekty (návaznost
                 linií, sousednost ploch atd.), viz
@@ -58,6 +58,9 @@ Basic vector metadata` anebo z kontextového menu vektorové mapy ve
 
 .. figure:: images/lmgr-v-info.png
 	    
+            Spuštění nástroje pro výpis metadat vektorových map z kontextového
+            menu správce vrsvev.
+            
 .. figure:: images/lmgr-v-info-example.png
 
 	    Příklad výpisu metadat vektorové mapy
@@ -74,11 +77,13 @@ Topologický model systému GRASS liniové a plošné elementy (bodové
 geoprvky nejsou součástí topologie) rozkládá dále na tzv. *topologické
 elementy*:
 
-* uzel (*node*)
- * každá linie či hraniční linie musí začínat a končit v uzlu
- * linie se musí křížit vždy v uzlu
- * izolované uzly nejsou podporovány
-* linie (*line*)
+* uzel (*node*),
+  
+  * každá linie či hraniční linie musí začínat a končit v uzlu
+  * linie se musí křížit vždy v uzlu
+  * izolované uzly nejsou podporovány
+  
+* linie (*line*),
 * hraniční linie (*boundary*) a
 * reprezentační bod plochy (*centroid*).
 

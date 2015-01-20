@@ -1,3 +1,6 @@
+.. index::
+   pair: rastrová data; reklasifikace
+
 Reklasifikace rastrových dat
 ----------------------------
 
@@ -22,6 +25,10 @@ values and labels --> Reclassify`).
    Reklasifikací nevzniká fyzicky nová rastrová mapa, nýbrž je zapsána
    pouze reklasifikační tabulka. To má za následek to, že nelze
    podkladovou mapu přejmenovat či odstranit.
+
+.. index::
+  single: r.reclass
+  see: reklasifikace; r.reclass
 
 Příklad reklasifikace DMT
 =========================
@@ -98,6 +105,11 @@ např.
 
    \newpage
 
+.. index::
+   pair: data s plovoucí desetinnou čárkou; reklasifikace
+   single: r.recode
+   see: reklasifikace; r.recode
+
 .. _r-recode:
    
 Reklasifikace rastrových dat s plovoucí desetinnou čárkou
@@ -164,6 +176,10 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
 
    \newpage
 
+.. index::
+   pair: rastrová data; štítky
+   single: r.category
+   
 .. _prirazeni-stitku:
                      
 .. tip::

@@ -1,3 +1,9 @@
+.. index::
+   pair: vektorová data; editace
+   single: v.edit
+   single: g.gui.vdigit
+   see: editace; topologie
+
 Editace vektorových dat
 -----------------------
 

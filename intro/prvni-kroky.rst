@@ -19,6 +19,9 @@ opatřit geodata ve struktuře, kterou systém vyžaduje (viz
    instalátoru <nativni-instalator-data>`. V tomto případě najdete
    data v adresáři ``%USERPROFILE%\Documents\grassdata``.
 
+.. index::
+   pair: datové sady; ke stažení
+
 .. note::
 
    Pro účely školení byl vytvořena vlastní lokace s daty pocházejících

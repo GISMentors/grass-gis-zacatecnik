@@ -1,3 +1,9 @@
+.. index::
+   pair: mapové výstupy; tisk
+   single: ps.map
+   single: g.gui.psmap
+   see: tisk; g.gui.psmap
+
 .. _mapove-vystupy:
 
 Tvorba mapových výstupů

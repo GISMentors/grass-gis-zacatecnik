@@ -1,3 +1,6 @@
+.. index::
+   pair: rastrová data; statistika
+
 Základní statistiky rastrových dat
 ----------------------------------
 
@@ -8,7 +11,10 @@ informací rastrových dat. Jde o:
 * :grasscmd:`r.report` pro přehledný výpis informací o rastrové mapě
 * :grasscmd:`r.univar` pro základní statistiku  
 * :grasscmd:`r.stats` pro výpis vybraných statistik
-    
+
+.. index::
+   single: r.report
+
 Report
 ======
 
@@ -77,6 +83,9 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`
       Pro takto převzorkovaná data bude např. území s nadmořskou
       výškou do 202.5 metrů pokrývat místo původních 2,85% nově 2,83%.
 
+.. index::
+   single: r.univar
+
 .. _r-univar:
 
 Základní statistika
@@ -95,6 +104,9 @@ kontextového menu *správce vrstev*.
    Příklad statistiky pro rastrovou mapu :map:`dmt` (s výpočetním
    regionem nastaveným na tuto mapu)
 
+.. index::
+   single: r.stats
+   
 Pokročilá statistika
 ====================
 

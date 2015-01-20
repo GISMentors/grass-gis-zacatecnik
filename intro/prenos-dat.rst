@@ -1,3 +1,9 @@
+.. index::
+   single: r.pack
+   single: v.pack
+   pair: rastrová data; přenos dat
+   pair: vektorová data; přenos dat
+   
 Přenost dat
 -----------
 

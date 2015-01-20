@@ -1,3 +1,8 @@
+.. index::
+   pair: topologie; topologické chyby
+   single: v.clean
+   see: topologie; v.clean
+
 .. _topologie:
 
 Topologie vektorových dat

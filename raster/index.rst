@@ -1,3 +1,6 @@
+.. index::
+   single: rastrová data
+
 Rastrová data
 -------------
 
@@ -12,6 +15,10 @@ map**. Jde o:
 * Velikost pixelu je dána *prostorovým rozlišením*
 * K hodnotě buňky lze přiřadit textový popisek (tzv. *label*) -
   :ref:`příklad <prirazeni-stitku>`
+
+.. index::
+   pair: metadata; rastrová data
+   single: r.info
 
 .. _raster-metadata:
 
@@ -33,6 +40,10 @@ rastrové mapy ve *správci vrstev*.
 .. raw:: latex
 
    \newpage
+
+.. index::
+   pair: rastrová data; datové typy
+   pair: data s plovoucí desetinnou čárkou; datové typy
 
 .. _raster-types:
                  

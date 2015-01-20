@@ -1,3 +1,9 @@
+.. index::
+   pair: geodata; transformace
+   single: souřadnicové systémy
+   single: r.proj
+   single: v.proj
+
 .. _transformace:
 
 Geodata v různých souřadnicových systémech

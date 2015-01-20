@@ -1,3 +1,6 @@
+.. index::
+   pair: geodata; import
+
 .. _import:
 
 Import geodat
@@ -19,6 +22,11 @@ Většina rastrových formátů může být naimportována modulem
 :grasscmd:`r.in.gdal`, pro vektorová data existuje modul
 :grasscmd:`v.in.ogr`. GUI systému GRASS disponuje specializovanými
 nástroji pro hromadný import dat (viz níže).
+
+.. index::
+   pair: rastrová data; import
+   single: r.in.gdal
+   see: import; r.in.gdal
 
 Rastrová data
 =============
@@ -80,7 +88,12 @@ V dialogu pro import rastrových dat určíme:
    Skriptování v jazyce Python je náplní navazujícího
    `školení pro pokročilé uživatele
    <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
-                                
+
+.. index::
+   pair: vektorová data; import
+   single: v.in.ogr
+   see: import; v.in.ogr
+
 .. _import-vector:
                                         
 Vektorová data
@@ -146,6 +159,9 @@ V dialogu pro import vektorových dat určíme:
    `školení pro pokročilé uživatele
    <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 
+.. index::
+   pair: import; topologie
+
 .. _import-topologie:
                                        
 Poznámky k importu vektorových dat
@@ -192,6 +208,9 @@ nejrůznějších důvodů během importu odstraněny, je možné napravit
 pomocí modulu :grasscmd:`v.clean`, více v sekci :ref:`topologie
 <topologie>`.
 
+.. index::
+   pair: kodování; atributy
+
 Kódování atributových dat
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -218,6 +237,9 @@ kódování pro atributová data. Atributy obsahující diakritiku jsou
 
       SHAPE_ENCODING=cp1250 v.in.ogr dsn=orp.shp
 
+.. index::
+   single: DGN
+
 Formát DGN
 ^^^^^^^^^^
 
@@ -230,6 +252,9 @@ nepodporuje formát verze 8.0 a vyšší.
 
    V případě formátu DGN lze doporučit jeho konverzi do formátu DXF a
    import do systému GRASS pomocí modulu :grasscmd:`v.in.dxf`.
+
+.. index::
+   pair: import; region
 
 Importovaná data a výpočetní region
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

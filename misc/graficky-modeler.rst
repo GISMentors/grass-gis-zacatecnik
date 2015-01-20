@@ -1,3 +1,8 @@
+.. index::
+   single: grafický modeler
+   single: g.gui.gmodeler
+   see: grafický modeler; g.gui.gmodeler
+
 Grafický modeler
 ----------------
 

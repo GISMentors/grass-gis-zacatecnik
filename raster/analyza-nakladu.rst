@@ -1,3 +1,9 @@
+.. index::
+   single: analýza nákladů
+   pair: rastrová data; analýza nákladů
+   single: r.cost
+   single: r.drain
+
 Rastrová analýza nákladů
 ------------------------
 

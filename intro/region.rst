@@ -1,7 +1,12 @@
 .. raw:: latex
 
    \newpage
-	 
+
+.. index::
+   pair: region; výpočetní region
+   single: g.region
+   pair: rozlišení; prostorové rozlišení
+
 .. _region:
 
 Výpočetní region

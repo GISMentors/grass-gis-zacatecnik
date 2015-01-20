@@ -1,3 +1,6 @@
+.. index::
+   single: mapové elementy
+
 .. _mapove-elementy:
 
 Mapové elementy
@@ -18,8 +21,12 @@ dostupná z nástrojové lišky mapového okna.
    <wxGUI.psmap>`, více v kapitole :ref:`mapové výstupy
    <mapove-vystupy>`.
 
+.. index::
+   pair: mapové elementy; legenda
+   single: d.legend
+
 .. _map-legend:
-   
+
 Legenda
 =======
 
@@ -132,6 +139,10 @@ umístěnou v mapovém okně.
 
    \newpage
 
+.. index::
+   pair: mapové elementy; směrová růžice
+   single: d.northarrow
+
 Směrová růžice
 ==============
 
@@ -174,7 +185,11 @@ směrovou růžicí):
 .. figure:: images/remove-narrow.png
    :class: small
    :scale-latex: 55
-        
+
+.. index::
+   pair: mapové elementy; měřítko
+   single: d.barscale
+
 Měřítko
 =======
 
@@ -211,6 +226,10 @@ kontextového menu měřítka (pravé tlačítko myši nad měřítkem):
 .. figure:: images/remove-scalebar.png
    :class: small
    :scale-latex: 50
+
+.. index::
+   pair: mapové elementy; textový popisek
+   single: d.text
 
 Textový popisek
 ===============

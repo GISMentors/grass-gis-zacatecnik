@@ -1,3 +1,8 @@
+.. index::
+   pair: rastrová data; tabulka barev
+   single: r.colors
+   see: tabulka barev; r.colors
+   
 Tabulka barev
 -------------
 

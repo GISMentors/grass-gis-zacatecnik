@@ -1,3 +1,7 @@
+.. index::
+   pair: dotazování; prostorové dotazy
+   single: v.select
+
 Prostorové dotazy
 -----------------
 

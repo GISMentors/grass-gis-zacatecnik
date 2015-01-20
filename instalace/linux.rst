@@ -1,5 +1,9 @@
 .. _label: instalace-linux
 
+.. index::
+   single: Linux
+   see: Linux; Instalace
+
 GNU/Linux
 ---------
 
@@ -14,6 +18,9 @@ jako tzv. *balíček*.
    <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Instalace_GNU/Linux#Kompilace>`_
    vlastními silami.
 
+.. index::
+   single: Debian
+   see: Debian; Instalace
 
 Postup instalace pro Debian GNU/Linux
 =====================================
@@ -29,6 +36,10 @@ projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_):
 
       sudo apt-get install grass grass-gui grass-doc
 
+.. index::
+   single: Ubuntu
+   see: Ubuntu; Instalace
+   
 Postup instalace pro Ubuntu
 ===========================
 

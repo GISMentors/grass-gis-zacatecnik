@@ -12,6 +12,10 @@
       :width: 140px
       :align: left
 
+.. index::
+   single: GIS
+   single: geografický informační systém
+       
 **GRASS** (Geographic Resources Analysis Support System) je
 multiplatformní desktopový *geografický informační systém*
 (:wikipedia:`GIS`) určený pro správu geografických 2D/3D rastrových a
@@ -24,7 +28,12 @@ grafických výstupů, časoprostorové modelování a vizualizaci dat.
       :scale-latex: 80
 
       Logo projektu GRASS GIS
-   
+
+.. index::
+   pair: free software; open source
+   single: GNU
+   pair: GPL; General Public License
+
 GRASS GIS (http://grass.osgeo.org) je :wikipedia:`free software
 <Svobodný software>` a *open source* publikovaný pod všeobecnou licencí
 :abbr:`GNU (GNU is Not Unix)` :abbr:`GPL (General Public

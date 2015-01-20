@@ -1,3 +1,7 @@
+.. index::
+   single: MS Windows
+   see: MS Windows; Instalace
+
 MS Windows
 ----------
 
@@ -81,6 +85,10 @@ Nativní instalátor
 .. raw:: latex
 
    \clearpage
+
+.. index::
+   single: OSGeo4W
+   see: OSGeo4W; Instalace
 
 .. _osgeo4w-instalator:
 

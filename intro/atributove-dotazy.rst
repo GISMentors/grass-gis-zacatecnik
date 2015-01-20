@@ -1,3 +1,10 @@
+.. index::
+   pair: dotazování; atributové dotazy
+   see: atributové dotazy; atributy
+   single: g.gui.dbmgr
+   single: SQL builder
+   single: SQL
+
 .. _atributove-dotazy:
 
 Atributové dotazy

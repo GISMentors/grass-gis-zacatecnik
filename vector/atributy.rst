@@ -1,3 +1,10 @@
+.. index::
+   pair: popisná data; editace
+   single: db.execute
+   single: v.db.execute
+   single: v.to.db
+   pair: field calculator; atributy
+
 Atributová data
 ---------------
 .. _editace-atributovych-dat:

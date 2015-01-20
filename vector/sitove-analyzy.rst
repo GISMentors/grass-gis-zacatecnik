@@ -1,3 +1,8 @@
+.. index::
+   pair: vektorová data; síťové analýzy
+   pair: nejkratší cesta; shortest path
+   see: nejkratší cesta; síťové analýzy
+
 .. raw:: latex
 
    \newpage

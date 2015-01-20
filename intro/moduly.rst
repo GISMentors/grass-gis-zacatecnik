@@ -1,6 +1,9 @@
 Příkazy systému GRASS
 ---------------------
 
+.. index::
+   single: moduly
+
 GRASS GIS je *modulární systém*, který disponuje poměrně rozsáhlou
 množinou malých, ale výkonných programů (v terminologii systému GRASS
 *modulů*).
@@ -83,7 +86,11 @@ není splněna, zobrazí se dialog nástroje.
 .. raw:: latex
 
      \clearpage
-     
+
+.. index::
+   pair: moduly; nápověda
+   single: g.manual
+
 Nápověda k modulům
 ==================
 

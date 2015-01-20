@@ -1,3 +1,9 @@
+.. index::
+   pair: algebra; rastrová algebra
+   pair: algebra; mapová algebra
+   single: r.mapcalc
+   see: mapová algebra; r.mapcalc
+
 .. _rastrova-algebra:
 
 Rastrová algebra

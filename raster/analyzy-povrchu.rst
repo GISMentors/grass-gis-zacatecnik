@@ -2,6 +2,10 @@
 	 
    \newpage
 
+.. index::
+   single: analýza povrchu
+   single: r.slope.aspect
+
 Analýzy povrchu
 ---------------
 
@@ -22,6 +26,10 @@ analysis --> Slope and aspect`).
    výpočtem tento :ref:`region nastavit podle vstupní rastrové mapy
    <nastaveni-regionu>`.
 
+.. index::
+   pair: analýza povrchu; míra svahu
+   see: analýza povrchu; r.slope.aspect
+
 Míra svahu
 ==========
 
@@ -37,6 +45,11 @@ Míra svahu
 .. raw:: latex
 
    \newpage
+
+.. index::
+   pair: analýza povrchu; orientace svahu
+   pair: expozice; orientace svahu
+   see: analýza povrchu; r.slope.aspect
 
 .. _aspect:
 
@@ -67,6 +80,12 @@ Orientaci (expozici) svahu opět počítá modul
                :class: middle
            
                Výsledek reklasifikace mapy orientace svahu
+
+.. index::
+   pair: analýza povrchu; viditelnost
+   pair: viewshed; viditelnost
+   single: r.viewshed
+   see: analýza povrchu; r.viewshed
 
 Analýza viditelnosti
 ====================

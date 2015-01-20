@@ -1,3 +1,8 @@
+.. index::
+   single: maska
+   single: r.mask
+   see: maska; r.mask
+
 Nastavení masky
 ---------------
 

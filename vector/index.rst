@@ -1,3 +1,6 @@
+.. index::
+   single: vektorová data
+
 Vektorová data
 --------------
 
@@ -41,6 +44,10 @@ podrobněji :ref:`navazující kapitola <oprava-topologie>`.
    plošné geoprvky zároveň, viz :ref:`kapitola o editaci vektorových
    dat <editace-vektorovych-dat>`.
 
+.. index::
+   pair: metadata; vektorová data
+   single: v.info
+
 Metadata
 ========
 
@@ -55,6 +62,10 @@ Basic vector metadata` anebo z kontextového menu vektorové mapy ve
 
 	    Příklad výpisu metadat vektorové mapy
 	    :map:`obce_polygony`.
+
+.. index::
+   pair: vektorová data; topologie
+   single: topologie
 
 Topologický model
 =================
@@ -100,6 +111,14 @@ následující topologickými elementy:
 .. raw:: latex
 
    \newpage
+
+.. index::
+   single: atributy
+   single: popisná data
+   see: popisná data; atributy
+   single: PostgreSQL
+   single: SQLite
+   single: db.connect
 
 Atributová data
 ===============

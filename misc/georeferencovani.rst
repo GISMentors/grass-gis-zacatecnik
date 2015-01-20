@@ -1,3 +1,10 @@
+.. index::
+   single: georeferencování
+   pair: rastrová data; georerefencování
+   pair: vektorová data; georeferencování
+   single: g.gui.gcp
+   see: georeferencování; g.gui.gcp
+
 Georeferencování
 ----------------
 

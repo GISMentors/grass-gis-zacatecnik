@@ -1,3 +1,6 @@
+.. index::
+   pair: vektorová data; prostorové funkce
+
 Prostorové funkce
 -----------------
 
@@ -6,6 +9,10 @@ Prostorové funkce
 
              Příklad základních prostorových funkcí (buffer, clip,
              erase) v kombinaci s atributovými dotazy
+
+.. index::
+   single: v.extract
+   see: prostorové funkce; v.extract
 
 .. _v-extract:
              
@@ -30,7 +37,12 @@ V následujícím příkladě vybereme z vektorové mapy :map:`silnice`
    :scale-latex: 75
               
    Vytvoření tématické vektorové mapy :map:`dalnice` z OpenStreetMap.
-            
+
+.. index::
+   pair: obalová zóna; buffer
+   single: v.buffer
+   see: prostorové funkce; v.buffer
+
 Obalová zóna
 ============
 
@@ -48,6 +60,12 @@ Příklad vytvoření obalové zóny s šířkou 5 km.
    :scale-latex: 55
         
    Příklad obalové zóny 5 km okolo dálnic
+
+.. index::
+   single: intersect
+   single: union
+   single: v.overlay
+   see: prostorové funkce; v.overlay
 
 Překrytí, průnik, spojení, vyloučení
 ====================================
@@ -105,6 +123,12 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
    kras a CHKO Křivoklátsko
 
 Podobně fungují i operátory ``XOR`` a ``NOT``.
+
+.. index::
+   single: merge
+   single: patch
+   single: v.patch
+   see: prostorové funkce; v.patch
 
 Spojení vektorových map (merge)
 ===============================

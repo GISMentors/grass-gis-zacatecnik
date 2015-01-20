@@ -1,3 +1,7 @@
+.. index::
+   single: lokace
+   see: lokace; struktura dat
+
 .. _tvorba-lokace:
       
 Vytvoření vlastní lokace
@@ -43,6 +47,9 @@ Níže uvedené postupy kombinují různé postupy tvorby lokace.
 * :ref:`Pro data SRTM na základě geodat <lokace-srtm>`
 * :ref:`ETRS-89 na základě EPSG kódu <lokace-etrs89>`
 * :ref:`Lokace pro souřadnicově nepřípojená data (XY) <lokace-xy>`
+
+.. index::
+   single: S-JTSK
 
 .. _lokace-sjtsk:
 
@@ -131,6 +138,9 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 
       grass70 -c EPSG:5514:3 /opt/grassdata/skoleni-s-jstk
 
+.. index::
+   single: UTM
+
 .. _lokace-utm:
 
 Vytvoření lokace pro data v souřadnicovém systému UTM
@@ -171,6 +181,9 @@ definujeme manuálně.
 .. figure:: images/wxgui-loc-utm-5.png
 
             Vytvoření lokace pro UTM (krok 6)
+
+.. index::
+   single: S-42
 
 .. _lokace-s-42:
 
@@ -252,6 +265,9 @@ Vytvoření lokace na základě geodat
 
             Vytvoření lokace pro data SRTM (import dat, krok 2)
 
+.. index::
+   single: EPSG
+
 .. _lokace-etrs89:
 
 Vytvoření lokace na základě EPSG kódu
@@ -282,7 +298,7 @@ Vytvoření lokace na základě EPSG kódu
    .. code-block:: bash
 
                    grass70 -c EPSG:3035 /opt/grassdata/eu-dem
-
+      
 .. _lokace-xy:
 
 Vytvoření lokace pro souřadnicově nepřipojená data
@@ -299,6 +315,9 @@ Vytvoření lokace pro souřadnicově nepřipojená data
 .. figure:: images/wxgui-loc-xy-2.png
 
             Vytvoření lokace pro XY (krok 3)
+
+.. index::
+   single: g.mapset
 
 Vytvoření nového mapsetu v rámci lokace
 =======================================

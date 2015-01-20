@@ -18,6 +18,11 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    některém z externích databázových systémů
    (např. :wikipedia:`PostgreSQL` či :wikipedia:`MySQL`).
 
+.. index::
+   pair: lokace; struktura dat
+   see: lokace; mapsety
+   see: lokace; LOCATION_NAME
+
 .. _lokace:
    
 **Lokace (Location)**
@@ -27,6 +32,11 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    definována *souřadnicovým systémem* (referenční elipsoid,
    kartografické zobrazení, mapové jednotky) a výchozí velikostí zájmového
    území.
+
+.. index::
+   pair: mapsety; struktura dat
+   see: mapsety; lokace
+   see: mapsety; MAPSET
 
 **Mapset**
 
@@ -63,6 +73,10 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
       :file:`%USERPROFILE%\\Documents\\grassdata`, v případě UNIXových
       operačních systémů jako je :wikipedia:`GNU/Linux` či :wikipedia:`Mac
       OS X` :file:`$HOME/grassdata`.
+
+.. index::
+   pair: vyhledávací cesta; struktura dat
+   single: g.mapsets
 
 .. _g-mapsets:
       

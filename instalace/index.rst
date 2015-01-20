@@ -1,6 +1,10 @@
 Instalace
 =========
 
+.. index::
+   single: Unix
+   single: Instalace
+
 GRASS GIS byl od svého počátku (tj. první poloviny 80.let!) vyvíjen na
 platformách, které mají blízko k :wikipedia:`Unixovým <Unix>`
 operačním systémům.

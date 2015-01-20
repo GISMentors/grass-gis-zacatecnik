@@ -1,5 +1,11 @@
 Zobrazení geodat v mapovém okně
 -------------------------------
+
+.. index::
+   single: správce vrstev
+   single: mapové okno
+   single: g.gui
+
 Po spuštění systému GRASS se objeví *správce vrstev* (Layer Manager) a
 *mapové okno* (Map Display).
 
@@ -60,6 +66,10 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
          Příklad vykreslení série prostorových analýz do formátu
          GIF
 
+.. index::
+   pair: zobrazení dat; rastrová data
+   single: d.rast
+
 .. _zobrazeni-dat-raster:
                
 Rastrová data
@@ -117,6 +127,10 @@ Jde o následující typy rastrových dat:
 
             Příklad barevné syntézy kanálů :wikipedia:`Landsat 8 ETM <Landsat>`
             z mapsetu `landsat` ve skutečných barvách
+
+.. index::
+   pair: zobrazení dat; vektorová data
+   single: d.vect
 
 Vektorová data
 ==============

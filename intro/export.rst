@@ -1,3 +1,6 @@
+.. index::
+   pair: geodata; export
+
 Export do externích formátů
 ---------------------------
 
@@ -8,6 +11,11 @@ slouží modul :grasscmd:`v.out.ogr`.
 Výše zmíněné moduly používají pro export dat knihovnu
 :wikipedia:`GDAL`, která v režimu zápisu podporuje více než 100
 rastrových a vektorových formátů.
+
+.. index::
+   pair: rastrová data; export
+   single: r.out.gdal
+   see: export; r.out.gdal
 
 Rastrová data
 =============
@@ -37,6 +45,10 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
       r.out.gdal input=dmt output=dmt.tif format=GTiff
                    
+.. index::
+   pair: vektorová data; export
+   single: v.out.ogr
+   see: export; v.out.ogr
 
 Vektorová data
 ==============
@@ -61,6 +73,10 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
    .. code-block:: bash
 
       v.out.ogr input=obce_polygon dsn=obce.shp format=ESRI_Shapefile
+
+.. index::
+   pair: export; obrázek
+   single: PNG
 
 Export obsahu mapové okna do obrázku
 ====================================

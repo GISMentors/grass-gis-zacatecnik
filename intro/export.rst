@@ -9,7 +9,7 @@ pomocí modulu :grasscmd:`r.out.gdal`. Pro export vektorových map
 slouží modul :grasscmd:`v.out.ogr`.
 
 Výše zmíněné moduly používají pro export dat knihovnu
-:wikipedia:`GDAL`, která v režimu zápisu podporuje více než 100
+:wikipedia:`GDAL`, která v režimu zápisu podporuje téměř 200
 rastrových a vektorových formátů.
 
 .. index::
@@ -22,9 +22,11 @@ Rastrová data
 
 Modul pro export rastrových dat je dostupný z menu
 :menuselection:`File --> Export raster map --> Common export formats`
-anebo z kontextového menu *správce vrstev*.
+anebo z~kontextového menu *správce vrstev*.
 
 .. figure:: images/export-raster-menu.png
+	    
+   Export rastrových dat z kontextového menu správce vrstev.
 
 V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
@@ -35,15 +37,15 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
             souboru :fignote:`(3)`. V tomto případě se data
             vyexportují do souboru ``dmt.tif`` v aktuálním adresáři.
 
-.. raw:: latex
-
-   \newpage
-
 .. notecmd:: Export rastrové mapy do formátu GeoTIFF
 
    .. code-block:: bash
 
       r.out.gdal input=dmt output=dmt.tif format=GTiff
+
+.. raw:: latex
+
+   \newpage
                    
 .. index::
    pair: vektorová data; export
@@ -55,9 +57,11 @@ Vektorová data
 
 Modul pro export vektorových dat je dostupný z menu 
 :menuselection:`File --> Export vector map --> Common export formats`
-anebo z kontextového menu *správce vrstev*.
+anebo z~kontextového menu *správce vrstev*.
 
 .. figure:: images/export-vector-menu.png
+
+   Export vektorových dat z kontextového menu správce vrstev.
 
 V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
@@ -89,15 +93,17 @@ nástrojé lišty *mapového okna*.
             :class: large
 	    :scale-latex: 70
 
+	    Export obsahu mapového okna do obrázku
+	    
 .. figure:: images/map-display-image-1.png
             :class: small
-	    :scale-latex: 45
+	    :scale-latex: 55
 
-            V následující dialogu zvolíme dimenzi výstupního obrázku
+            V následující dialogu zvolíme dimenzi výstupního obrázku.
 
 .. figure:: images/map-display-image-2.png
             :class: large
-	    :scale-latex: 85
+	    :scale-latex: 80
 
             Příklad výsledku včetně :ref:`legendy, měřítka a textového
-            popisku <mapove-elementy>`
+            popisku <mapove-elementy>`.

@@ -13,7 +13,7 @@ vybereme :item:`Location wizard` (průvodce tvorbou lokace).
 
 .. figure:: images/wxgui-loc-s-jtsk-0.png
 
-            Spuštění průvodce tvorbou lokace
+            Spuštění průvodce tvorbou lokace.
 
 Průvodce tvorbou lokace je možné spustit i z běžící seance a to z menu
 :menuselection:`Settings --> GRASS working environment --> Create new
@@ -21,7 +21,7 @@ location`.
 
 .. figure:: images/wxgui-loc-menu.png
 
-            Spuštění průvodce tvorbou lokace z menu *správce vrstev*
+            Spuštění průvodce tvorbou lokace z menu *správce vrstev*.
 
 Lokaci lze vytvořit několika různými postupy:
 
@@ -61,14 +61,14 @@ volitelně i krátký popisek (*Optional Location Title*).
 
 .. figure:: images/wxgui-loc-s-jtsk-1.png
             
-            Vytvoření lokace pro S-JTSK (krok 1)
+            Vytvoření lokace pro S-JTSK (krok 1).
 
 Na další stránce vybereme způsob vytvoření lokace. 
 
 .. figure:: images/wxgui-loc-s-jtsk-2.png
 	    :scale-latex: 60
 
-            Vytvoření lokace pro S-JTSK (krok 2)
+            Vytvoření lokace pro S-JTSK (krok 2).
 
 V našem případě vytvoříme lokaci na základě EPSG kódu, pro
 souřadnicový systém S-JTSK :epsg:`5514`.
@@ -76,7 +76,7 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 .. note::
 
    :epsg:`5514` podporuje systém GRASS pouze pokud používate verzi
-   knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V opačném případě musíte přidat
+   knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V~opačném případě musíte přidat
    parametry pro S-JTSK do konfiguračního souboru ručně:
 
    Na začátek souboru s definicí kódů EPSG (v případě OS
@@ -95,7 +95,7 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 .. figure:: images/wxgui-loc-s-jtsk-3.png
 	    :scale-latex: 60
 
-            Vytvoření lokace pro S-JTSK (krok 3)
+            Vytvoření lokace pro S-JTSK (krok 3).
 
 .. figure:: images/wxgui-loc-s-jtsk-4.png
             :class: small
@@ -126,7 +126,7 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 
 .. figure:: images/wxgui-loc-s-jtsk-8.png
 
-	    Poté se spustí systém GRASS s právě vytvořenou lokací
+	    Poté se spustí systém GRASS s právě vytvořenou lokací.
 
 .. raw:: latex
 
@@ -147,7 +147,7 @@ Vytvoření lokace pro data v souřadnicovém systému UTM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: images/wxgui-loc-utm-0.png
 
-            Vytvoření lokace pro UTM (krok 1)
+            Vytvoření lokace pro UTM (krok 1).
 
 V tomto případě nepoužijeme EPSG kód, nýbrž souřadnicový systém
 definujeme manuálně.
@@ -158,11 +158,11 @@ definujeme manuálně.
 
 .. figure:: images/wxgui-loc-utm-1.png
 
-            Vytvoření lokace pro UTM (krok 2)
+            Vytvoření lokace pro UTM (krok 2).
 
 .. figure:: images/wxgui-loc-utm-2.png
 
-            Vytvoření lokace pro UTM (krok 3)
+            Vytvoření lokace pro UTM (krok 3).
 
 .. figure:: images/wxgui-loc-utm-3.png
             
@@ -180,7 +180,7 @@ definujeme manuálně.
 
 .. figure:: images/wxgui-loc-utm-5.png
 
-            Vytvoření lokace pro UTM (krok 6)
+            Vytvoření lokace pro UTM (krok 6).
 
 .. index::
    single: S-42
@@ -191,11 +191,11 @@ Vytvoření lokace pro data v souřadnicovém systému S-42
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: images/wxgui-loc-s42-0.png
 
-            Vytvoření lokace pro S-42 (krok 1)
+            Vytvoření lokace pro S-42 (krok 1).
 
 .. figure:: images/wxgui-loc-utm-1.png
 
-            Vytvoření lokace pro S-42 (krok 2)
+            Vytvoření lokace pro S-42 (krok 2).
 
 .. raw:: latex
 
@@ -207,25 +207,25 @@ Vytvoření lokace pro data v souřadnicovém systému S-42
 
 .. figure:: images/wxgui-loc-s42-2.png
 
-            Vytvoření lokace pro S-42 (krok 3)
+            Vytvoření lokace pro S-42 (krok 3).
 
 .. figure:: images/wxgui-loc-s42-3.png
 
-            Vytvoření lokace pro S-42 (krok 4)
+            Vytvoření lokace pro S-42 (krok 4).
 
 .. figure:: images/wxgui-loc-s42-4.png
 
-            Vytvoření lokace pro S-42 (krok 5)
+            Vytvoření lokace pro S-42 (krok 5).
 
 .. figure:: images/wxgui-loc-s42-5.png
             :class: small
             :scale-latex: 50
 
-            Vytvoření lokace pro S-42 (krok 6)
+            Vytvoření lokace pro S-42 (krok 6).
 
 .. figure:: images/wxgui-loc-s42-6.png
 
-            Vytvoření lokace pro S-42 (krok 7)
+            Vytvoření lokace pro S-42 (krok 7).
 
 .. raw:: latex
 
@@ -237,19 +237,19 @@ Vytvoření lokace na základě geodat
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: images/wxgui-loc-srtm-0.png
 
-            Vytvoření lokace pro data SRTM (krok 1)
+            Vytvoření lokace pro data SRTM (krok 1).
 
 .. figure:: images/wxgui-loc-srtm-1.png
 
-            Vytvoření lokace pro data SRTM (krok 2)
+            Vytvoření lokace pro data SRTM (krok 2).
 
 .. figure:: images/wxgui-loc-srtm-2.png
 
-            Vytvoření lokace pro data SRTM (krok 3)
+            Vytvoření lokace pro data SRTM (krok 3).
 
 .. figure:: images/wxgui-loc-srtm-3.png
 
-            Vytvoření lokace pro data SRTM (krok 4)
+            Vytvoření lokace pro data SRTM (krok 4).
 
 .. figure:: images/wxgui-loc-srtm-4.png
             :class: small
@@ -263,7 +263,7 @@ Vytvoření lokace na základě geodat
 	    :class: small
 	    :scale-latex: 50
 
-            Vytvoření lokace pro data SRTM (import dat, krok 2)
+            Vytvoření lokace pro data SRTM (import dat, krok 2).
 
 .. index::
    single: EPSG
@@ -275,19 +275,19 @@ Vytvoření lokace na základě EPSG kódu
 
 .. figure:: images/wxgui-loc-epsg-0.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 1)
+            Vytvoření lokace na základě EPSG kódu (krok 1).
 
 .. figure:: images/wxgui-loc-epsg-1.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 2)
+            Vytvoření lokace na základě EPSG kódu (krok 2).
 
 .. figure:: images/wxgui-loc-epsg-2.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 3)
+            Vytvoření lokace na základě EPSG kódu (krok 3).
 
 .. figure:: images/wxgui-loc-epsg-3.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 4)
+            Vytvoření lokace na základě EPSG kódu (krok 4).
 
 .. raw:: latex
 
@@ -306,15 +306,15 @@ Vytvoření lokace pro souřadnicově nepřipojená data
 
 .. figure:: images/wxgui-loc-xy-0.png
 
-            Vytvoření lokace pro XY (krok 1)
+            Vytvoření lokace pro XY (krok 1).
 
 .. figure:: images/wxgui-loc-xy-1.png
 
-            Vytvoření lokace pro XY (krok 2)
+            Vytvoření lokace pro XY (krok 2).
 
 .. figure:: images/wxgui-loc-xy-2.png
 
-            Vytvoření lokace pro XY (krok 3)
+            Vytvoření lokace pro XY (krok 3).
 
 .. index::
    single: g.mapset
@@ -340,20 +340,16 @@ způsoby:
             Vytvoření nového mapsetu v rámci aktuální lokace z menu
             *správce vrstev*.
 
-V následující dialogu zvolíme jeho název.
-
 .. figure:: images/wxgui-new-mapset-dialog.png
             :class: small
 	    :scale-latex: 55
 
-.. raw:: latex
+	    V následující dialogu zvolíme jeho název.
 
-   \newpage
+..
+   .. figure:: images/wxgui-new-mapset-dialog-1.png
+      :class: small
+      :scale-latex: 55
 
 Po vytvoření nového mapsetu se do něj systém GRASS automaticky přepne.
-
-.. figure:: images/wxgui-new-mapset-dialog-1.png
-            :class: small
-	    :scale-latex: 55
-
 

@@ -19,16 +19,16 @@ Import vector map --> Unpack vector map`).
 
 .. figure:: images/pack-from-gui.png
    :class: large
-   :scale-latex: 85
+   :scale-latex: 80
 
-   Zabalení rastrové a vektorové mapy z GUI systému GRASS
+   Zabalení rastrové a vektorové mapy z GUI systému GRASS.
 
 .. figure:: images/unpack-from-gui.png
    :class: middle
-   :scale-latex: 50
+   :scale-latex: 45
      
    Funkce rozbalení rastrové či vektorové mapy je dostupné z
-   nástrojové lišty správce vrstev
+   nástrojové lišty správce vrstev.
 
 .. raw:: latex
 	 
@@ -42,6 +42,8 @@ Import vector map --> Unpack vector map`).
 
    .. figure:: images/r-unpack-proj-match.png
       :scale-latex: 45
+
+      Kontrola souřadnicového systému při rozbalení dat.
 
 .. note::
 

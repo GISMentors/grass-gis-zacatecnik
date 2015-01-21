@@ -197,16 +197,16 @@ Užitečné odkazy
 * http://freegis.fsv.cvut.cz
 * http://epsg.io
   
-Licence dokumentu
------------------
+O dokumentu
+-----------
 
-Text školení je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
+Text dokumentu je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
 .. figure:: images/cc-by-sa.png 
    :width: 130px
-   :scale-latex: 100
+   :scale-latex: 120
               
-*Verze textu školení:* |release| (|today|)
+*Verze textu dokumentu:* |release| (|today|)
 
 Autoři
 ^^^^^^
@@ -216,8 +216,15 @@ Za `GISMentors <http://www.gismentors.eu/>`_:
 * Martin Landa ``<martin.landa opengeolabs.cz>``
 * Jáchym Čepický ``<jachym.cepicky opengeolabs.cz>``
 
+Text dokumentu
+^^^^^^^^^^^^^^
+
 .. only:: latex
 
-   Online HTML verze textu školení je dostupná na adrese: http://training.gismentors.eu/grass-gis-zacatecnik/
+   Online HTML verze textu školení je dostupná na adrese:
 
-Zdrojové texty školení jsou dostupné na adrese: https://github.com/GISMentors/grass-gis-zacatecnik
+   * http://training.gismentors.eu/grass-gis-zacatecnik/
+
+Zdrojové texty školení jsou dostupné na adrese:
+
+* https://github.com/GISMentors/grass-gis-zacatecnik

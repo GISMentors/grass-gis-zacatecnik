@@ -59,7 +59,7 @@ Příklad vytvoření obalové zóny s šířkou 5 km.
    :class: middle
    :scale-latex: 55
         
-   Příklad obalové zóny 5 km okolo dálnic
+   Příklad obalové zóny 5 km okolo dálnic.
 
 .. index::
    single: intersect
@@ -84,7 +84,7 @@ maloplošných chráněných území :fignote:`(1)`.
 .. figure:: images/v-overlay-01.png
    :scale-latex: 50
    
-   Vytvoření mapy maloplošných a velkoplošných chráněných území
+   Vytvoření mapy maloplošných a velkoplošných chráněných území.
 
 K výsledné vektorové mapě je přiřazena atributová tabulka, která je
 spojena z obou vstupních vektorových map. Atributy první vektorové
@@ -95,7 +95,7 @@ mapy (:option:`ainput`) jsou označeny prefixem ``a_``, atributy druhé
    :class: middle
    :scale-latex: 65
 
-   Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`
+   Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`.
 
 Průnik (intersect)
 ^^^^^^^^^^^^^^^^^^
@@ -113,14 +113,14 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
    :class: middle
    :scale-latex: 70
 
-   Hluková oblast zasahující maloplošné chráněné území Černovický hájek u Brna
+   Hluková oblast zasahující maloplošné chráněné území Černovický hájek u Brna.
 
 .. figure:: images/dalnice500buffer_chranena_uzemi-02.png
    :class: middle
    :scale-latex: 70
         
    Hluková oblast zasahující velkoplošné chráněné území CHKO Česká
-   kras a CHKO Křivoklátsko
+   kras a CHKO Křivoklátsko.
 
 Podobně fungují i operátory ``XOR`` a ``NOT``.
 
@@ -142,4 +142,4 @@ modul sloučí vstupní vektorové mapy automaticky.
    :scale-latex: 60
 
    Příklad vytvoření nové vektorové mapy :map:`doprava`, která je
-   složena ze vstupních vektorových map :map:`silnice,zeleznice`.
+   složena ze vstupních vektorových map :map:`silnice` a :map:`zeleznice`.

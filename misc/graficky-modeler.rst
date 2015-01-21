@@ -11,9 +11,11 @@ který umožňuje grafickou formou modelovat geoprostorové analýzy v
 systému GRASS.
 
 Nástroj lze spustit z menu :menuselection:`File --> Graphical modeler`
-nebo z nástrojové lišty *správce vrstev* 
+nebo z nástrojové lišty *správce vrstev*.
 
 .. figure:: images/lmgr-gmodeler.png
+
+   Spuštění grafického modeleru z nástrojové lišty správce vrstev.
 
 .. notecmd:: Spuštění grafického modeleru
 
@@ -24,8 +26,8 @@ nebo z nástrojové lišty *správce vrstev*
                 g.gui.gmodeler
                 
 
-Příklad
-=======
+Ukázky
+======
 
 .. youtube:: 0jkO-ih87mw
 

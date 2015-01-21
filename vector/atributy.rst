@@ -53,7 +53,7 @@ Vybrané záznamy lze z atributové tabulky *odstranit*.
 
 .. figure:: images/wxgui-dbmgr-delete.png
 
-            Odstranění záznamů z atributové tabulky
+            Odstranění záznamů z atributové tabulky.
 
 .. raw:: latex
 
@@ -77,7 +77,7 @@ Numerické atributy mohou být také *vypočítány* na základě zvolené funkc
 .. figure:: images/wxgui-dbmgr-calculate.png
             :class: large
 
-            Funkce pro výpočet numerických atributů
+            Funkce pro výpočet numerických atributů.
 
 .. _pridani-noveho-atributu:
             
@@ -129,12 +129,12 @@ všechny záznamy z atributové tabulky.
 .. figure:: images/v-db-select-0.png
 
             Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
-            (zadání vektorové mapy)
+            (zadání vektorové mapy).
 
 .. figure:: images/v-db-select-1.png
 
             Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
-            (volitelně zadání 'where' podmínky)
+            (volitelně zadání 'where' podmínky).
 
 .. _modul-db-select:
 
@@ -152,12 +152,12 @@ any table`.
 .. figure:: images/db-select-0-single.png
             
             Atributový dotaz pomocí modulu :grasscmd:`db.select`
-            (zadání :abbr:`SQL (Structured Query Language)` dotazu)
+            (zadání :abbr:`SQL (Structured Query Language)` dotazu).
 
 .. figure:: images/db-select-1-single.png
 
             Atributový dotaz pomocí modulu :grasscmd:`db.select`
-            (výsledek :abbr:`SQL (Structured Query Language)` dotazu)
+            (výsledek :abbr:`SQL (Structured Query Language)` dotazu).
 
 .. raw:: latex
 
@@ -177,13 +177,13 @@ any table`.
 
             Vícenásobný atributový dotaz pomocí modulu
             :grasscmd:`db.select` (zadání :abbr:`SQL (Structured Query
-            Language)` dotazů)
+            Language)` dotazů).
 
 .. figure:: images/db-select-1-multi.png
 
             Vícenásobný atributový dotaz pomocí modulu
             :grasscmd:`db.select` (výsledek :abbr:`SQL (Structured
-            Query Language)` dotazů)
+            Query Language)` dotazů).
 
 .. note::
 

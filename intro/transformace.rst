@@ -11,19 +11,22 @@ Geodata v různých souřadnicových systémech
 
 V případě, že chcete do aktuální lokace importovat geodata jejichž
 souřadnicový systém se liší od souřadnicového systému aktuální lokace
-(viz :item:`Projection match` na obr. níže) je třeba několik kroků:
+(viz :item:`Projection match` na obr. níže), tak je třeba několik kroků:
 
 .. figure:: images/import-no-proj.png
+   
+   Data nejsou v souřadnicovém systému lokace. Je nutné je
+   transformovat.
 
 Postup
 ======
    
-#. :ref:`vytvořit novou lokaci <transformace-lokace>` se souřadnicovým
-   systémem vstupních geodat
-#. do této nové lokaci se přepnout a geodata tam :ref:`naimportovat
-   <transformace-import>`
-#. dále se vrátit opět do původní lokace a do této naimportovaná
-   geodata :ref:`transformovat <transformace-data>`
+#. :ref:`Vytvořit novou lokaci <transformace-lokace>` se souřadnicovým
+   systémem vstupních geodat.
+#. Do této nové lokaci se přepnout a geodata tam :ref:`naimportovat
+   <transformace-import>`.
+#. Dále se vrátit opět do původní lokace a do této naimportovaná
+   geodata :ref:`transformovat <transformace-data>`.
 
 .. _transformace-lokace:
    
@@ -40,9 +43,13 @@ umožňuje se do této lokace přepnout.
 .. figure:: images/new-loc-switch.png
             :class: small
            
+	    Přepnutí do nově vytvořené lokace.
+
 .. figure:: images/new-loc-switch-confirm.png
             :class: small
 
+	    Potvrzení aktuální lokace.
+	    
 .. _transformace-import:
                     
 Import geodat do nové lokace
@@ -54,6 +61,8 @@ již hodnotu ``Yes``.
 
 .. figure:: images/import-osm.png
 
+   Souřadnicový systém dat a lokace se schoduje.
+
 .. _loc-switch:
             
 Po importu dat se vrátíme do původní lokace :menuselection:`Settings
@@ -62,17 +71,23 @@ Po importu dat se vrátíme do původní lokace :menuselection:`Settings
 .. figure:: images/change-loc-map.png
             :class: small
 
+	    Dialog změny lokace a mapsetu.
+
 Aktuální nastavení lokace můžeme volitelně uložit do souboru s
 projektem (tzv. *workspace file*).
 
 .. figure:: images/loc-switch-save.png
             :class: small
 
+	    Dialog pro uložení projektu (workspace).
+
 Poté se objeví dialog, který potvrzuje, že aktuální lokace je opět ta
 cílová.
 
 .. figure:: images/loc-switch-back.png
             :class: small
+
+	    Dialog potvrzující přepnutí do původní lokace a mapsetu.
 
 .. _transformace-data:
                     
@@ -117,6 +132,6 @@ Po úspěšné transformaci se vytvořená vrstva automaticky přidá do
 
 .. figure:: images/proj-result.png
             :class: large
-	    :scale-latex: 90
+	    :scale-latex: 80
 
-               
+            Výsledek transformace dat do aktuální lokace a mapsetu.

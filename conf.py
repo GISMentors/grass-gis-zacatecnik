@@ -7,7 +7,7 @@ import os
 
 # General information about the project.
 project = u'Školení GRASS GIS - Úvod do systému'
-copyright = u'2014 by Martin Landa a Jáchym Čepický (GISMentors)'
+copyright = u'2014, Martin Landa a Jáchym Čepický (GISMentors)'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -16,7 +16,7 @@ copyright = u'2014 by Martin Landa a Jáchym Čepický (GISMentors)'
 # The short X.Y version.
 version = '1.0.0'
 # The full version, including alpha/beta/rc tags.
-release = '%sRC3' % version
+release = '%s' % version
 
 # -- Options for HTML output ----------------------------------------------
 

@@ -16,7 +16,10 @@ Import geodat
    následně je :ref:`transformovat <transformace>` do aktuální lokace.
 
    .. figure:: images/import-no-proj.png
-	       :scale-latex: 45
+	       :scale-latex: 35
+
+	       Data nejsou v souřadnicovém systému lokace. Je nutné je
+	       transformovat.
 
 Většina rastrových formátů může být naimportována modulem
 :grasscmd:`r.in.gdal`, pro vektorová data existuje modul
@@ -36,32 +39,32 @@ Nástroj pro import rastrových dat je dostupný z menu
 nebo nástrojové lišty správce vrstev.
 
 .. figure:: images/wxgui-raster-import-menu.png
-	    :scale-latex: 50
+	    :scale-latex: 40
 
             Nástroj pro import rastrových dat dostupný z nástrojové
-            lišty správce vrstev
+            lišty správce vrstev.
 
 V dialogu pro import rastrových dat určíme:
 
-#. *typ zdroje*
-#. *formát dat*
-#. *adresář s daty*
-#. *seznam vrstev k importu*
-#. *spustíme import*
+#. typ zdroje
+#. formát dat
+#. adresář s daty
+#. seznam vrstev k importu
+#. spustíme import
 
 .. figure:: images/wxgui-raster-import-0.png
 
-            Určení rastrových dat (PNG) z daného adresáře k importu
+            Určení rastrových dat (PNG) z daného adresáře k importu.
 
 .. figure:: images/wxgui-raster-import-1.png
 	    :scale-latex: 60
 
-            Průběh importu
+            Průběh importu.
 
 .. figure:: images/wxgui-raster-import-2.png
             :class: large
 
-            Naimportovaná data se automaticky přidají do stromu vrstev
+            Naimportovaná data se automaticky přidají do stromu vrstev.
 
 .. notecmd:: Import rastrových dat
 
@@ -106,7 +109,7 @@ nebo nástrojové lišty správce vrstev.
 .. figure:: images/wxgui-vector-import-menu.png
 
             Nástroj pro import vektorových dat dostupný z nástrojové
-            lišty správce vrstev
+            lišty správce vrstev.
 
 .. raw:: latex
 
@@ -114,25 +117,25 @@ nebo nástrojové lišty správce vrstev.
 
 V dialogu pro import vektorových dat určíme:
 
-#. *typ zdroje*
-#. *formát dat*
-#. *adresář s daty*
-#. *seznam vrstev k importu*
-#. *spustíme import*
+#. typ zdroje
+#. formát dat
+#. adresář s daty
+#. seznam vrstev k importu
+#. spustíme import
 
 .. figure:: images/wxgui-vector-import-0.png
 
-            Určení vektorových dat (Esri Shapefile) z daného adresáře k importu
+            Určení vektorových dat (Esri Shapefile) z daného adresáře k importu.
 
 .. figure:: images/wxgui-vector-import-1.png
 	    :scale-latex: 60
 
-            Průběh importu
+            Průběh importu.
 
 .. figure:: images/wxgui-vector-import-2.png
             :class: large
 
-            Naimportovaná data se automaticky přidají do stromu vrstev
+            Naimportovaná data se automaticky přidají do stromu vrstev.
 
 .. admonition:: Import vektorových dat z příkazové řádky
 
@@ -173,15 +176,15 @@ vektorových dat z reprezentace :wikipedia:`Simple Features` do
 
 * pro body (point) a lomené čáry (linestring) nedochází ke změně
   povahy vektorového prvku, v topologickém formátu GRASS jsou
-  vyjádřeny jako *points* a *lines*
+  vyjádřeny jako *points* a *lines*,
 * polygony jsou rozloženy na hraniční linie (*boundary*) a centroidy
   (*centroid*), externí ring polygonu je převeden na hraniční linie
-  (hraniční linie sousedících polygonů je uložena pouze jednou)
-* pro každý polygon je vypočten centroid, tj. bod ležící uvnitř plochy
+  (hraniční linie sousedících polygonů je uložena pouze jednou),
+* pro každý polygon je vypočten centroid, tj. bod ležící uvnitř plochy,
 * polygon je vyjádřen v topologickém modelu systému GRASS jako plocha
-  (*area*)
+  (*area*),
 * případné díry v polygonu jsou uloženy jako plochy, které tvoří
-  tzv. ostrovy (*isle*)
+  tzv. ostrovy (*isle*).
 
 Například dva sousedící polygony (jeden s otvorem) jsou v topologickém
 modulu systému GRASS vyjádřeny čtyřmi hraničními liniemi a dvěma
@@ -196,15 +199,15 @@ v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
 
 .. figure:: images/polygon-topo.png
    :class: middle
-   :scale-latex: 70
+   :scale-latex: 55
 
-   Topologická reprezentace dvou polygonů (druhý polygon s otvorem)
+   Topologická reprezentace dvou polygonů (druhý polygon s otvorem).
 
 Modul :grasscmd:`v.in.ogr` provádí při importu operace, které by měly
 odstranit případné topologické chyby v datech, které při konverzi z
 reprezentace simple features do topologického formátu systému GRASS
 mohou vzniknout. Případné topologické chyby, které nemohou být z
-nejrůznějších důvodů během importu odstraněny, je možné napravit
+nejrůznějších důvodů během importu odstraněny, je možné opravit
 pomocí modulu :grasscmd:`v.clean`, více v sekci :ref:`topologie
 <topologie>`.
 
@@ -264,12 +267,12 @@ pohled na aktuálně vybranou mapu.
 
 .. figure:: images/wxgui-zoom-to-map-menu.png
 
-            Nastavení pohledu mapového okna na vybranou mapovou vrstvu z kontextového menu správce vrstev
+            Nastavení pohledu mapového okna na vybranou mapovou vrstvu z kontextového menu správce vrstev.
 
 .. figure:: images/map-display-full-zoom.png
             :class: middle
 
-            Nastavení pohledu mapového okna na vybranou mapovou vrstvu
+            Nastavení pohledu mapového okna na vybranou mapovou vrstvu.
 
 Import dat nemá vliv na nastavení :doc:`výpočetního regionu
 <region>`. Výpočetní region lze nastavit na základě naimportovaných
@@ -277,7 +280,7 @@ dat z kontextového menu správce vrstev.
 
 .. figure:: images/wxgui-set-region-menu.png
 
-            Nastavení výpočetního regionu na základě mapové vrstvy
+            Nastavení výpočetního regionu na základě mapové vrstvy.
 
 .. note::
 

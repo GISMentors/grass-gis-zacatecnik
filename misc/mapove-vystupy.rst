@@ -25,8 +25,8 @@ lišty *správce vrstev*.
    je třeba přidat do aplikace ručně.
 
 
-Příklady
-========
+Ukázky
+======
 
 .. youtube:: ZMwuC14omyA
 

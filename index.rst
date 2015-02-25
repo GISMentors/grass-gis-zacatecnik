@@ -164,6 +164,11 @@ Související materiály
 * `Školení GRASS GIS na Les-ejk.cz <http://les-ejk.cz/skoleni/grass/>`_
 * `GRASS GIS na portálu FreeGIS <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS>`_
 
+.. rubric:: Slovensky:
+
+* `GRASS GIS pre geovedné aplikácie
+  <http://staryweb.fns.uniba.sk/fileadmin/user_upload/editors/geog/kfg/Katedra/Studium/Vyuzitie_PC_vo_FGV_2/skripta_burian_et_al_grassgis_2015.zip>`_
+              
 .. rubric:: Anglicky:
 
 * `Dokumentace systému GRASS 7.0 <http://grass.osgeo.org/grass70/manuals/index.html>`_

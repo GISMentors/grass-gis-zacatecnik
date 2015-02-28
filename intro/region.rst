@@ -60,7 +60,7 @@ správce vrstev.
 
    .. code-block:: bash
 
-      g.region raster=elevation
+      g.region raster=dmt
 
 Zároveň je možné vybrat pro nastavení výpočetního regionu i více
 rastrových či vektorových map najednou.
@@ -73,7 +73,7 @@ rastrových či vektorových map najednou.
 
    .. code-block:: bash
                 
-      g.region vector=busroute1,busroute6
+      g.region vector=ulice,adresnimista_bod
 
 .. tip:: Prostorové rozlišení může být nastaveno pomocí modulu
    :grasscmd:`g.region` explicitně (volba :option:`res`) nebo na
@@ -107,9 +107,9 @@ Pro manipulaci s výpočetním regionem je určen modul :grassCmd:`g.region`.
 Modul :grassCmd:`g.region` umožňuje nastavit region na základě
 existujících rastrových, vektorových map či již dříve uloženého
 nastavení (parametr :option:`save`). V níže uvedeném případě nastavíme
-výpočetní region tak, aby pokrýval rastrovou mapu :map:`elevation` a
-vektorové mapy :map:`busroute1` a :map:`busroute6`. Prostorové
-rozlišení je určeno z rastrové mapy :map:`elevation`.
+výpočetní region tak, aby pokrýval rastrovou mapu :map:`dmt` a
+vektorové mapy :map:`ulice` a :map:`adresnimista_bod`. Prostorové
+rozlišení je určeno z rastrové mapy :map:`dmt`.
 
 .. figure:: images/wxgui-g-region-existing.png
 

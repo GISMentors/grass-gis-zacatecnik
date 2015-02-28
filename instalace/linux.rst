@@ -41,10 +41,10 @@ projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_):
 Postup instalace pro Ubuntu
 ===========================
 
-Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz projekt
-`UbuntuGIS <https://wiki.ubuntu.com/UbuntuGIS>`_):
+Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz
+`Launchpad <https://launchpad.net/~grass>`_):
 
-* http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all
+.. * http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all
 
 .. notecmd:: Instalace GRASS 7.0
                
@@ -53,7 +53,7 @@ Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz projekt
       sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
       sudo add-apt-repository ppa:grass/grass-stable
       sudo apt-get update
-      sudo apt-get install grass70
+      sudo apt-get install grass7
 
 .. figure:: images/grass-ubuntu-install.png
             :class: middle

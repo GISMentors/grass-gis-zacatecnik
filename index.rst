@@ -48,13 +48,13 @@ upravovat ho a tyto změny či opravy šířit dál.
    :wikipedia:`Python`.
 
 
-.. important:: Školení je zaměřeno na verzi `GRASS 7.0
-               <http://grass.osgeo.org/download/software/#g70x>`_. Nicméně
-               pokud není uvedeno jinak, tak všechny uvedené postupy
-               jsou funkční i ve verzi GRASS 6.4. Případné rozdíly mezi
-               těmito verzemi jsou vždy explicitně zdůrazněny. Dále
-               předpokládáme zapnutou *anglickou lokalizaci*,
-               viz :ref:`volba lokalizace <volba-lokalizace>`.
+.. important:: Školení je zaměřeno na aktuální verzi `GRASS 7.0
+               <http://grass.osgeo.org/download/software/#g70x>`_. Ve
+               starší verzi GRASS 6.4 není zaručena funkčnost
+               uvedených příkladů, případné rozdíly mezi těmito
+               verzemi jsou vždy explicitně zdůrazněny. Dále
+               předpokládáme zapnutou *anglickou lokalizaci*, viz
+               :ref:`volba lokalizace <volba-lokalizace>`.
 
 .. only:: html
 

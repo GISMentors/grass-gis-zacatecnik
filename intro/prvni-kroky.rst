@@ -48,7 +48,7 @@ operačního systému.
                  
             Spuštění systému GRASS v Ubuntu 12.10
 
-.. figure:: ../instalace/images/wingrass-8.png
+.. figure:: ../instalace/images/wingrass-4.png
             :scale-latex: 35
                  
             Spuštění systému GRASS z nabídky *Start* v MS Windows.

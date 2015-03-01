@@ -27,12 +27,13 @@ Nativní instalátor
 
 * http://grass.osgeo.org/grass70/binary/mswindows/native/
 
-.. noteadvanced:: 
+..
+   .. noteadvanced:: 
 
-   V případě nutnosti aktuálnější verze či testování
-   nových vlastností je možné využít denní snapshoty
-   instalátoru dostupných na adrese
-   http://wingrass.fsv.cvut.cz/grass70.
+      V případě nutnosti aktuálnější verze či testování
+      nových vlastností je možné využít denní snapshoty
+      instalátoru dostupných na adrese
+      http://wingrass.fsv.cvut.cz/grass70.
 
 .. figure:: images/wingrass-0.png
             :scale-latex: 45
@@ -58,25 +59,12 @@ Nativní instalátor
 	    "Important Microsoft Runtime Libraries" a ukázkovou
 	    geografickou datovou sadu pro GRASS "North Carolina".
 
-..
-   .. figure:: images/wingrass-4.png
-               :scale-latex: 50
-   .. figure:: images/wingrass-5.png
-               :scale-latex: 50
-   .. figure:: images/wingrass-6.png
-               :scale-latex: 50
-            
-   .. figure:: images/wingrass-7.png
-               :scale-latex: 50
-            
-	       GRASS můžeme automaticky spustit ...
-
-.. figure:: images/wingrass-8.png
+.. figure:: images/wingrass-4.png
             :scale-latex: 50
             
             GRASS můžeme spustit z nabídky Start.
             
-.. figure:: images/wingrass-9.png
+.. figure:: images/wingrass-5.png
             :scale-latex: 50
             
             Po startu se objeví úvodní obrazovka systému GRASS pro
@@ -123,22 +111,12 @@ OSGeo4W
 
             Nastavíme cestu k adresáři, kam se budou stahovat data instalátoru.
 
-..
-   .. figure:: images/osgeo4w-4.png
-      :scale-latex: 50
-
-   .. figure:: images/osgeo4w-5.png
-      :scale-latex: 50
-                    
-.. figure:: images/osgeo4w-6.png
+.. figure:: images/osgeo4w-4.png
             :scale-latex: 50
             
-	    Ze sekce ``Desktop`` vybereme balíček ``grass70`` či
-	    případně ``grass70-dev`` (tzv. denní buildy), pokud
-	    plánujeme software často aktualizovat a testovat tak
-	    nejnovější funkce.
+	    Ze sekce ``Desktop`` vybereme balíček ``grass``7.
 
-.. figure:: images/osgeo4w-7.png
+.. figure:: images/osgeo4w-5.png
             :scale-latex: 50
             
 	    Nutné závislosti (jako např. knihovna GDAL či Python) se
@@ -148,19 +126,13 @@ OSGeo4W
 
    \clearpage
 
-.. figure:: images/osgeo4w-8.png
+.. figure:: images/osgeo4w-6.png
             :scale-latex: 50
             
 	    Součástí instalace je i proprietární součást knihovny GDAL
 	    ``szip``, kterou potvrdíme.
-..   
-   .. figure:: images/osgeo4w-9.png
-               :scale-latex: 50
-                             
-   .. figure:: images/osgeo4w-10.png
-               :scale-latex: 50
             
-.. figure:: images/osgeo4w-11.png
+.. figure:: images/osgeo4w-7.png
             :scale-latex: 50
             
 	    GRASS spustíme z nabídky Start ``OSGeo4W``.
@@ -168,16 +140,15 @@ OSGeo4W
 .. noteadvanced::
 
    V rámci OSGeo4W frameworku je možné nainstalovat i *denní
-   snapshoty* systému GRASS. To se hodí v případě, že potřebujete
-   otestovat např. novou funkcionalitu, která není součástí stabilní
-   verze.
+   snapshoty* vývojové verze systému GRASS. To se hodí v případě, že
+   potřebujete otestovat např. novou funkcionalitu, která není
+   součástí stabilní verze.
 
-   .. figure:: images/osgeo4w-12.png
+   .. figure:: images/osgeo4w-8.png
             :scale-latex: 50
                
-	    Ze sekce ``Desktop`` vybereme balíček ``grass70-dev``
-            (denní snapshoty verze GRASS 7.0) nebo ``grass71-dev``
-            (denní snapshoty verze GRASS 7.1).
+	    Ze sekce ``Desktop`` vybereme balíček ``grass-daily``
+            (denní snapshoty verze aktuální vývojové verze systému GRASS).
 
 .. raw:: latex
 

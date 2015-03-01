@@ -31,7 +31,7 @@ Volba lokalizace
 GRASS nastartuje automaticky v lokalizaci odpovídající danému
 operačnímu systému.
 
-.. figure:: ../instalace/images/wingrass-9.png
+.. figure:: ../instalace/images/wingrass-5.png
 	    :scale-latex: 50
 
 	    GRASS lokalizovaný do češtiny pro MS Windows.

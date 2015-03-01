@@ -78,8 +78,9 @@ GRASS`).
 .. figure:: images/welcome-screen.png
             :scale-latex: 60
 
-            Úvodní dialog systému GRASS pro výběr adresáře s geodaty :fignote:`(1)`,
-            lokace :fignote:`(2)` a mapsetu :fignote:`(3)`.
+            Úvodní dialog systému GRASS pro výběr adresáře s geodaty
+            :fignote:`(1)`, lokace :fignote:`(2)`, mapsetu
+            :fignote:`(3)` a spuštění systému GRASS :fignote:`(4)`.
 
 .. noteadvanced::
    
@@ -87,11 +88,11 @@ GRASS`).
 
                 * GRASS v textovém rozhraní, adresář s geodaty nastaven na
                   ``/opt/grassdata``, lokace
-                  ``nc_spm_08_grass7`` a mapset ``user1``:
+                  ``gismentors`` a mapset ``user1``:
 
                   .. code-block:: bash
 
-                                  grass70 -text /opt/grassdata/nc_spm_08_grass7/user1/
+                                  grass70 -text /opt/grassdata/gismentors/user1/
 
                 * GRASS v grafickém rozhraní, adresář s geodaty, lokace a
                   mapset nastavena z minulého sezení:

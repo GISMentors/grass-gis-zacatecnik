@@ -3,6 +3,9 @@
 import sys
 import os
 
+sys.path.append(os.path.join('..', 'sphinx-template'))
+from utils import get_month_year
+
 # -- General configuration ------------------------------------------------
 
 # General information about the project.
@@ -39,7 +42,7 @@ latex_elements = {
 # Additional stuff for the LaTeX preamble.
     'preamble': "".join([]),
     'releasename': u'verze',
-    'date': 'leden 2015',
+    'date': '%s %s' % get_month_year(),
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -74,7 +77,6 @@ texinfo_documents = [
 
 html_favicon = "images/favicon.ico"
 
-sys.path.append(os.path.join('..', 'sphinx-template'))
 from conf_base import *
 
 todo_include_todos = True

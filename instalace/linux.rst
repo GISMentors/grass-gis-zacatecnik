@@ -55,11 +55,6 @@ Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz
       sudo apt-get update
       sudo apt-get install grass7
 
-.. figure:: images/grass-ubuntu-install.png
-            :class: middle
-
-            Instalace systému GRASS pod Ubuntu 12.10
-
 .. figure:: images/grass-ubuntu-launch.png
             :class: middle
             :scale-latex: 70

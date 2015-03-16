@@ -39,6 +39,16 @@ tvar, viz obrázek níže.
           interpolation>`. Mřížka výstupních rastrových dat vždy
           odpovídají aktuálně nastavenému regionu.
 
+.. important:: Změna pohledu v mapovém okně nemá na nastavení regionu
+               žádný vliv. Aktuální rozsah území zobrazené v mapovém
+               okně je dostupné ze stavové lišty jako volba
+               :item:`Extent`, viz :ref:`region-kontrola`.
+
+               .. figure:: images/wxgui-mapdisp-status-extent.png
+			   :class: middle
+
+			   Rozsah zobrazeného území.
+
 .. _nastaveni-regionu:
           
 Nastavení výpočetního regionu
@@ -153,6 +163,8 @@ ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
 
       g.region raster=dem vector=mesto n=n+1000 s=s-1000 w=w-1000 e=e+1000
 
+.. _region-kontrola:
+
 Kontrola výpočetního regionu
 ============================
 
@@ -194,15 +206,6 @@ Formát::
    :class: middle
 
    Zobrazení výpočetního regionu ve stavové liště mapového okna.
-
-.. note:: Změna pohledu v mapovém okně nemá na nastavení regionu
-          žádný vliv. Aktuální rozsah území zobrazené v mapovém okně
-          je dostupné ze stavové lišty jako volba :item:`Extent`.
-
-          .. figure:: images/wxgui-mapdisp-status-extent.png
-                      :class: middle
-
-                      Rozsah zobrazeného území.
 
 .. tip::
 

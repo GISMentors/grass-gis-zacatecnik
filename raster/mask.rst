@@ -130,4 +130,4 @@ Odstranit masku lze přepínačem :option:`-r` modulu :grasscmd:`r.mask`.
 
    .. code-block:: bash
 
-                   g.remove type=rast name=MASK
+                   g.remove -f type=rast name=MASK

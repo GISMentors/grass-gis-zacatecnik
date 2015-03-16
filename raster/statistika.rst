@@ -8,12 +8,15 @@ Kromě výpisu :ref:`základních metadat <raster-metadata>` rastrových
 map systém GRASS disponuje dalšími moduly pro výpis statistických
 informací rastrových dat. Jde o:
 
-* :grasscmd:`r.report` pro přehledný výpis informací o rastrové mapě,
-* :grasscmd:`r.univar` pro základní statistiku a
-* :grasscmd:`r.stats` pro výpis vybraných statistik.
+* :ref:`r.report <r-report>` pro přehledný výpis informací o rastrové mapě,
+* :ref:`r.univar <r-univar>` pro základní statistiku a
+* :ref:`r.stats <r-stats>` pro výpis vybraných statistik (určeno
+  především pro pokročilé uživatele a jejich skripty).
 
 .. index::
    single: r.report
+
+.. _r-report:
 
 Report
 ======
@@ -108,6 +111,8 @@ kontextového menu *správce vrstev*.
 
 .. index::
    single: r.stats
+
+.. _r-stats:
    
 Pokročilá statistika
 ====================
@@ -121,7 +126,7 @@ statistics`.
 .. notecmd:: Výpis statistiky rastrové mapy
 
    Výpis počtu buněk na základě 10 intervalů seřazených sestupně (znak
-   ``*`` označuje no-data)
+   ``*`` označuje no-data, tj. rastrové bunky bez hodnoty)
 
    .. code-block:: bash
 
@@ -140,3 +145,17 @@ statistics`.
       1121.473064-1274.63044 447183
       1274.63044-1427.787815 104742
       1427.787815-1580.94519 12743
+
+Kromě skriptů můžete tento modul využít například pro export
+statistiky rastrové mapy do Vašeho tabulkové procesoru
+(např. LibreOffice Calc či MS Excel) a to přes výměnný formát
+:wikipedia:`CSV` (parametr :option:`separator=comma`).
+
+.. code-block:: bash
+
+   r.stats -acp input=elevation separator=comma output=elev_stat.csv
+
+.. figure:: images/libreoffice-stats.png
+
+   Soubor ``elev_stats.csv`` poté můžete načíst do Vašeho oblíbeného
+   tabulkového procesoru.

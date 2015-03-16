@@ -211,12 +211,12 @@ Text dokumentu je licencován pod `Creative Commons Attribution-ShareAlike 4.0 I
    :width: 130px
    :scale-latex: 120
               
-*Verze textu dokumentu:* |release| (|today|)
+*Verze textu dokumentu:* |release| (sestaveno |today|)
 
 Autoři
 ^^^^^^
 
-Za `GISMentors <http://www.gismentors.eu/>`_:
+Za `GISMentors <http://www.gismentors.cz/>`_:
 
 * Martin Landa ``<martin.landa opengeolabs.cz>``
 * Jáchym Čepický ``<jachym.cepicky opengeolabs.cz>``

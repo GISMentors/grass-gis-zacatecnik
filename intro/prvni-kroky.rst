@@ -31,9 +31,11 @@ opatřit geodata ve struktuře, kterou systém vyžaduje (viz
    <http://wiki.openstreetmap.org/wiki/Main_Page>`_ a `Dibavod
    <http://www.dibavod.cz/>`_.
 
-   Předpřipravená *GRASS lokace pro školení* je stažitelná jako `zip
-   archiv
-   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (1.8 GB).
+   **GRASS lokace pro školení** je stažitelná jako `zip archiv
+   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (830
+   MB), družicové snímky `Landsat
+   <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
+   (985 MB).
 
 Spuštění systému GRASS
 ======================

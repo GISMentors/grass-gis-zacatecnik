@@ -219,8 +219,8 @@ Autoři
 
 Za `GISMentors <http://www.gismentors.cz/>`_:
 
-* Martin Landa ``<martin.landa opengeolabs.cz>``
-* Jáchym Čepický ``<jachym.cepicky opengeolabs.cz>``
+* `Martin Landa <http://www.gismentors.cz/mentors/landa>`_ ``<martin.landa opengeolabs.cz>``
+* `Jáchym Čepický <http://www.gismentors.cz/mentors/cepicky>`_ ``<jachym.cepicky opengeolabs.cz>``
 
 Text dokumentu
 ^^^^^^^^^^^^^^

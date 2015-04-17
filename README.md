@@ -1,12 +1,9 @@
-Školení GRASS GIS - Začátečník
-==============================
+Školení GRASS GIS pro začínající uživatele
+==========================================
 
-URL: http://training.gismentors.eu/grass-gis-zacatecnik/
+http://training.gismentors.eu/grass-gis-zacatecnik
 
-Poznámky pro školitele
-----------------------
+Licence
+-------
 
-**Stažení GRASS lokace**
-
-      cd grassdata
-      rsync -avz --delete skoleni@training.gismentors.eu:~/grassdata/gismentors .
+http://creativecommons.org/licenses/by-sa/4.0/

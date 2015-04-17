@@ -9,7 +9,7 @@ from utils import get_month_year, get_year
 # -- General configuration ------------------------------------------------
 
 # General information about the project.
-project = u'Školení GRASS GIS - Úvod do systému'
+project = u'Školení GRASS GIS pro začátečníky'
 copyright = u'2014-%d, Martin Landa a Jáchym Čepický (GISMentors)' % get_year()
 
 # The version info for the project you're documenting, acts as replacement for

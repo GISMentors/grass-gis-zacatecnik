@@ -19,24 +19,6 @@ opatřit geodata ve struktuře, kterou systém vyžaduje (viz
    instalátoru <nativni-instalator-data>`. V tomto případě najdete
    data v adresáři ``%USERPROFILE%\Documents\grassdata``.
 
-.. index::
-   pair: datové sady; ke stažení
-
-.. note::
-
-   Pro účely školení byl vytvořena vlastní lokace s daty pocházejících
-   z otevřených či veřejných zdrojů jako je `EU-DEM
-   <http://www.eea.europa.eu/data-and-maps/data/eu-dem>`_, `RÚIAN
-   <http://www.cuzk.cz/ruian/RUIAN.aspx>`_, `OpenStreetMap
-   <http://wiki.openstreetmap.org/wiki/Main_Page>`_ a `Dibavod
-   <http://www.dibavod.cz/>`_.
-
-   **GRASS lokace pro školení** je stažitelná jako `zip archiv
-   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (830
-   MB), družicové snímky `Landsat
-   <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
-   (985 MB).
-
 Spuštění systému GRASS
 ======================
 

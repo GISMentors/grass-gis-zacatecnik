@@ -21,7 +21,8 @@ ve směru sever-jih a~východ-západ totožnou hodnotu) nebo obdélníkový
 tvar, viz obrázek níže.
 
 .. figure:: images/region2d.png
-
+   :scale-latex: 35
+              
    Mřížka výpočetního regionu pro 2D data.
 
 .. important:: Veškeré rastrové operace jsou prováděny vždy a pouze v
@@ -59,12 +60,9 @@ Ve většině případů stačí nastavit výpočetní region na základě rastr
 správce vrstev.
 
 .. figure:: images/wxgui-set-region-from-map.png
-
+   :scale-latex: 40
+              
    Nastavení výpočetního regionu na základě rastrové mapy.
-
-.. raw:: latex
-	 
-   \newpage
 
 .. notecmd:: Nastavení regionu na základě rastrové mapy
 
@@ -104,13 +102,17 @@ rastrových či vektorových map najednou.
 
    Příklad definice hranic výpočetního regionu interaktivně.
 
+.. raw:: latex
+	 
+   \newpage
+
 Pokročilé nastavení výpočetního regionu
 =======================================
 
 Pro manipulaci s výpočetním regionem je určen modul :grassCmd:`g.region`. 
 
 .. figure:: images/wxgui-g-region-menu.png
-   :scale-latex: 70
+   :scale-latex: 50
 
    Nastavení výpočetního regionu z menu správce vrstev.
 
@@ -122,17 +124,19 @@ vektorové mapy :map:`ulice` a :map:`adresnimista_bod`. Prostorové
 rozlišení je určeno z rastrové mapy :map:`dmt`.
 
 .. figure:: images/wxgui-g-region-existing.png
-
+   :scale-latex: 40
+              
    Nastavení regionu na základě existujících dat.
 
 .. figure:: images/wxgui-mapdisplay-region.png
    :class: middle
-   
+   :scale-latex: 50
+              
    Kontrola nastavení výpočetního regionu v mapovém okně.
 
 .. raw:: latex
 
-   \newpage
+   \clearpage
    
 Dále je možno nastavit hraniční souřadnice explicitně, např. severní
 souřadnici na '1000' (v mapových jednotkách) anebo jako offset
@@ -142,10 +146,6 @@ jednotek).
 .. figure:: images/wxgui-g-region-bounds.png
 
    Explicitní nastavení hraničních souřadnic.
-
-.. raw:: latex
-
-   \clearpage
 
 Podobně je možné explicitně definovat hodnoty prostorového rozlišení
 ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
@@ -179,10 +179,6 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 .. figure:: images/wxgui-display-region-out.png
 
    Aktuálně nastavený výpočetní region.
-
-.. raw:: latex
-
-   \newpage
 
 .. notecmd:: Zobrazení aktuálně nastaveného regionu
 

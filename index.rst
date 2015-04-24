@@ -1,11 +1,14 @@
 .. only:: latex
-                         
-   Obsah
-   =====
 
-####   
-Úvod
-####
+   #####
+   Obsah
+   #####
+
+.. only:: html
+                    
+   ****
+   Úvod
+   ****
 
 .. only:: html
 
@@ -83,9 +86,11 @@ upravovat ho a tyto změny či opravy šířit dál.
    <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
    (985 MB).
 
-#####   
-Obsah
-#####
+.. only:: html
+             
+   #####   
+   Obsah
+   #####
 
 .. toctree::
    :maxdepth: 2
@@ -96,9 +101,9 @@ Obsah
    data/index
    misc/index
 
-#######   
+*******
 Dodatky
-#######
+*******
 
 Související materiály
 =====================

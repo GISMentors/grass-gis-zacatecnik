@@ -36,7 +36,7 @@ Nativní instalátor
       http://wingrass.fsv.cvut.cz/grass70.
 
 .. figure:: images/wingrass-0.png
-            :scale-latex: 45
+            :scale-latex: 50
 
             Spustíme instalátor.
    

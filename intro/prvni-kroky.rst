@@ -60,7 +60,7 @@ GRASS`).
 .. _spusteni-grass:
 
 .. figure:: images/welcome-screen.png
-            :scale-latex: 60
+            :scale-latex: 55
 
             Úvodní dialog systému GRASS pro výběr adresáře s geodaty
             :fignote:`(1)`, lokace :fignote:`(2)`, mapsetu

@@ -48,10 +48,6 @@ Příklad nastavení masky na základě rastrové mapy
    :fignote:`(2)`, které poslouží pro vytvoření masky - v tomto
    případě hodnoty 500 až 800.
 
-.. raw:: latex
-                     
-   \newpage
-
 .. note::
 
    Rastrová mapa na základě, které chcete definovat masku musí být
@@ -83,7 +79,7 @@ Příklad nastavení masky na základě rastrové mapy
    výškou mezi 500 a 800 metry (viz hodnoty minimum a~maximum).
 
    .. figure:: images/r-univar-masked.png
-      :scale-latex: 45
+      :scale-latex: 40
 
       Výpis základní statistiky rastrových dat s aktivovanou maskou.
    
@@ -96,7 +92,7 @@ Na tomto místě si ukážeme postup vytvoření masky na základě území
 
 .. figure:: images/dmt-uk.png
    :class: middle
-   :scale-latex: 55
+   :scale-latex: 40
 
    Digitální model terénu a hranice Ústeckého kraje.
 

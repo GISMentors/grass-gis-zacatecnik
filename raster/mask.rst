@@ -79,7 +79,7 @@ Příklad nastavení masky na základě rastrové mapy
    výškou mezi 500 a 800 metry (viz hodnoty minimum a~maximum).
 
    .. figure:: images/r-univar-masked.png
-      :scale-latex: 40
+      :scale-latex: 35
 
       Výpis základní statistiky rastrových dat s aktivovanou maskou.
    
@@ -100,7 +100,7 @@ Masku nastavíme standardně pomocí modulu :grasscmd:`r.mask` s volbou
 :option:`vector`.
 
 .. figure:: images/r-mask-vector.png
-   :scale-latex: 40
+   :scale-latex: 35
 
    Nastavení masky na základě vektorových dat.
 

@@ -2,7 +2,11 @@
    pair: rastrová data; tabulka barev
    single: r.colors
    see: tabulka barev; r.colors
-   
+
+.. raw:: latex
+
+   \newpage
+
 Tabulka barev
 -------------
 
@@ -15,10 +19,6 @@ Manage color rules interactively`.
 	    :scale-latex: 40
 
             Příklad tabulky barev pro rastrovou mapu :map:`dmt`.
-
-.. raw:: latex
-
-   \clearpage
 
 .. noteadvanced::
    
@@ -93,5 +93,6 @@ Modul umožňuje definovat tabulku barev manuálně, použít předefinovanou
            
    DMT v inverzních odstínech šedi.
 
-   
+.. raw:: latex
 
+   \clearpage

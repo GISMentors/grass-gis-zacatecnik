@@ -3,8 +3,9 @@
    Obsah
    =====
 
+####   
 Úvod
-====
+####
 
 .. only:: html
 
@@ -81,102 +82,26 @@ upravovat ho a tyto změny či opravy šířit dál.
    MB), družicové snímky `Landsat
    <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
    (985 MB).
-                    
-První kroky
-===========
-          
-.. toctree::
-   :maxdepth: 1
 
-   instalace/index
-   intro/prvni-kroky
-   intro/struktura-dat
-   intro/zobrazeni-geodat
-   intro/moduly
-
-Základní pojmy
-==============
+#####   
+Obsah
+#####
 
 .. toctree::
-   :maxdepth: 1
-	      
+   :maxdepth: 2
+
+   intro/index
    raster/index
-   vector/index 
-   intro/region
-   
-Dotazování
-==========
+   vector/index
+   data/index
+   misc/index
 
-.. toctree::
-   :maxdepth: 1
-
-   intro/interaktivni-dotazovani
-   intro/atributove-dotazy
-   intro/prostorove-dotazy
-
-Rastrové analýzy
-================
-
-.. toctree::
-   :maxdepth: 1
-	      
-   raster/statistika
-   raster/mask
-   raster/tabulka-barev
-   raster/analyzy-povrchu
-   raster/rastrova-algebra
-   raster/reklasifikace
-   raster/analyza-nakladu
-
-Vektorové analýzy
-=================
-
-.. toctree::
-   :maxdepth: 1
-
-   vector/editace
-   vector/prostorove-funkce
-   vector/topologie
-   vector/atributy
-   vector/sitove-analyzy
-                 
-Import, export geodat
-=====================
-          
-.. toctree::
-   :maxdepth: 1
-	      
-   intro/import
-   intro/export
-   intro/prenos-dat
-   intro/tvorba-lokace
-   intro/transformace
-   misc/georeferencovani
-         
-Mapové výstupy
-==============
-
-.. toctree::
-   :maxdepth: 1
-                 
-   misc/mapove-elementy
-   misc/mapove-vystupy
-
-Různé
-=====
-
-.. toctree::
-   :maxdepth: 1
-	      
-   misc/graficky-modeler
-   misc/lokalizace
-
-          
+#######   
 Dodatky
-=======
+#######
 
 Související materiály
----------------------
+=====================
 
 .. rubric:: Česky:
 
@@ -198,7 +123,7 @@ Související materiály
 * `GIS GRASS - Praktická rukověť <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Praktick%C3%A1_rukov%C4%9B%C5%A5>`_ (česky, velmi zastaralé)
 
 Technická podpora
------------------
+=================
 
 * *(česky)* Mailing list `FreeGeoCZ
   <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_ (obecně Open Source GIS, nikoliv pouze GRASS)
@@ -216,13 +141,13 @@ Technická podpora
 .. * OpenGeoLabs s.r.o. ``podpora@opengeolabs.cz``
 
 Užitečné odkazy
----------------
+===============
 
 * http://freegis.fsv.cvut.cz
 * http://epsg.io
   
 O dokumentu
------------
+===========
 
 Text dokumentu je licencován pod `Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
@@ -233,7 +158,7 @@ Text dokumentu je licencován pod `Creative Commons Attribution-ShareAlike 4.0 I
 *Verze textu dokumentu:* |release| (sestaveno |today|)
 
 Autoři
-^^^^^^
+------
 
 Za `GISMentors <http://www.gismentors.cz/>`_:
 
@@ -241,7 +166,7 @@ Za `GISMentors <http://www.gismentors.cz/>`_:
 * `Jáchym Čepický <http://www.gismentors.cz/mentors/cepicky>`_ ``<jachym.cepicky opengeolabs.cz>``
 
 Text dokumentu
-^^^^^^^^^^^^^^
+--------------
 
 .. only:: latex
 

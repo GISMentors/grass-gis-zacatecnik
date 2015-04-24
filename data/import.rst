@@ -269,12 +269,12 @@ pohled na aktuálně vybranou mapu.
 
             Nastavení pohledu mapového okna na vybranou mapovou vrstvu z kontextového menu správce vrstev.
 
-.. figure:: images/map-display-full-zoom.png
+.. figure:: ../intro/images/map-display-full-zoom.png
             :class: middle
 
             Nastavení pohledu mapového okna na vybranou mapovou vrstvu.
 
-Import dat nemá vliv na nastavení :doc:`výpočetního regionu
+Import dat nemá vliv na nastavení :ref:`výpočetního regionu
 <region>`. Výpočetní region lze nastavit na základě naimportovaných
 dat z kontextového menu správce vrstev.
 

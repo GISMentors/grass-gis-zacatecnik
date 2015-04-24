@@ -128,13 +128,11 @@ Technická podpora
 * *(česky)* Mailing list `FreeGeoCZ
   <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_ (obecně Open Source GIS, nikoliv pouze GRASS)
 
-  * `registrace <http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz>`_
-  * `archiv <http://mailman.fsv.cvut.cz/pipermail/freegeocz/>`_
+  * http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz>
   
 * *(anglicky)* Mezinárodní mailing list projektu GRASS GIS (zajímavostí je archiv sahající až do roku 1991!)
        
-  * `registrace <http://lists.osgeo.org/mailman/listinfo/grass-user>`_
-  * `archiv <http://lists.osgeo.org/pipermail/grass-user/>`_
+  * http://lists.osgeo.org/mailman/listinfo/grass-user
    
 .. *Komerční podpora v ČR*
            

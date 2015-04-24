@@ -145,10 +145,10 @@ OSGeo4W
    součástí stabilní verze.
 
    .. figure:: images/osgeo4w-8.png
-            :scale-latex: 50
+      :scale-latex: 50
                
-	    Ze sekce ``Desktop`` vybereme balíček ``grass-daily``
-            (denní snapshoty verze aktuální vývojové verze systému GRASS).
+      Ze sekce ``Desktop`` vybereme balíček ``grass-daily``
+      (denní snapshoty verze aktuální vývojové verze systému GRASS).
 
 .. raw:: latex
 

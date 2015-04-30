@@ -16,7 +16,7 @@ operačním systémům.
    Construction Engineering Research Laboratory)` před počítačem Compaq
    386 na který portoval GRASS.
 
-.. youtube:: 7U3Hf0qI4JLc
+.. youtube:: U3Hf0qI4JLc
 
              GRASS GIS (CERL, 1987)
         

@@ -55,9 +55,10 @@ Nativní instalátor
 .. figure:: images/wingrass-3.png
             :scale-latex: 50
            
-	    Při první instalaci doporučujeme nainstalovat také
-	    "Important Microsoft Runtime Libraries" a ukázkovou
-	    geografickou datovou sadu pro GRASS "North Carolina".
+	    Velmi silně doporučujeme nainstalovat také "Important
+	    Microsoft Runtime Libraries" a pokud nemáte vlastní data
+	    tak i ukázkovou geografickou datovou sadu pro GRASS "North
+	    Carolina".
 
 .. figure:: images/wingrass-4.png
             :scale-latex: 50

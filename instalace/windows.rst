@@ -157,8 +157,25 @@ OSGeo4W
 
 ..  _osgeo4w-aktualizace:
 
+Poznámky
+^^^^^^^^
+
+Nastavení velikosti fontu terminálu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+V novějších verzích Windows bývá výchozí velikost fontu terminálu
+příliš malá.
+
+.. figure:: images/winterminal-small.png
+   :class: small
+
+Velikost fontu můžete změnit ve vlastnostech okna (pravé tlačítko myši
+nad titulkem okna, :menuselection:`Vlastnosti`).
+
+.. figure:: images/winterminal-font.png
+
 Automatická aktualizace (pro pokročilé uživatele)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Aktualizovat instalaci OSGeo4W (včetně instalace systému GRASS) lze provádět automaticky v rámci plánovače úloh OS MS Windows.
 
 Stačí umístit do zvoleného adresáře níže uvedený skript s příponou

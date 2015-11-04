@@ -27,12 +27,12 @@ mezi oficiálně podporované platformy patří :wikipedia:`GNU/Linux`,
 menších úpravách zprovoznit na dalších méně obvyklých platformách jako
 je např. :wikipedia:`AIX`.
 
-V následujícím textu se zaměříme na dvě nejrozšířenější platformy - *MS
-Windows* a *GNU/Linux*.
+V následujícím textu se zaměříme na dvě nejrozšířenější platformy -
+*GNU/Linux* a *MS Windows*.
 
 .. only:: html
           
-   .. rubric:: Návod
+   .. rubric:: Návod k instalaci
       :class: secnotoc
         
 .. toctree::

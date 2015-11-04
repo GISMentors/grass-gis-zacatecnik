@@ -12,9 +12,9 @@ Funkcionalita interaktivního dotazování je dostupná z nástrojové lišty
 .. figure:: images/raster-query.png
    :class: large
       
-   Podle typu aktuálně zvolené mapy ve *správci vrstev* :fignote:`(1)`
-   se zobrazí informace rastrového :fignote:`(2)` či vektorového
-   charakteru.
+   Podle typu aktuálně zvolené mapové vrstvy ve *správci vrstev*
+   :fignote:`(1)` se zobrazí informace rastrového :fignote:`(2)` či
+   vektorového charakteru.
 
 Rastrová data
 =============

@@ -73,7 +73,7 @@ upravovat ho a tyto změny či opravy šířit dál.
 
 .. note::
 
-   Pro účely školení byl vytvořena vlastní lokace s daty pocházejících
+   Pro účely školení byla vytvořena vlastní lokace s daty pocházejících
    z otevřených či veřejných zdrojů jako je `EU-DEM
    <http://www.eea.europa.eu/data-and-maps/data/eu-dem>`_, `RÚIAN
    <http://www.cuzk.cz/ruian/RUIAN.aspx>`_, `OpenStreetMap
@@ -131,13 +131,11 @@ Technická podpora
 =================
 
 * *(česky)* Mailing list `FreeGeoCZ
-  <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_ (obecně Open Source GIS, nikoliv pouze GRASS)
-
-  * http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz>
+  <http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ>`_
+  (obecně Open Source GIS, nikoliv pouze GRASS),
+  http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz
   
-* *(anglicky)* Mezinárodní mailing list projektu GRASS GIS (zajímavostí je archiv sahající až do roku 1991!)
-       
-  * http://lists.osgeo.org/mailman/listinfo/grass-user
+* *(anglicky)* Mezinárodní mailing list projektu GRASS GIS (zajímavostí je archiv sahající až do roku 1991!), http://lists.osgeo.org/mailman/listinfo/grass-user
    
 .. *Komerční podpora v ČR*
            

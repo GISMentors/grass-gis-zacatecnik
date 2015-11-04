@@ -18,8 +18,10 @@ východ-západ. Pro 3D data jsou definovány hraniční souřadnice a
 prostorové rozlišení navíc ve vertikálním směru (top-bottom). Vzniká
 tak pravidelná mřížka jejíž buňky mají čtvercový (prostorové rozlišení
 ve směru sever-jih a~východ-západ totožnou hodnotu) nebo obdélníkový
-tvar, viz obrázek níže.
+tvar, viz :num:`region2d`.
 
+.. _region2d:
+         
 .. figure:: images/region2d.png
    :scale-latex: 35
               
@@ -42,13 +44,13 @@ tvar, viz obrázek níže.
 
 .. important:: Změna pohledu v mapovém okně nemá na nastavení regionu
                žádný vliv. Aktuální rozsah území zobrazené v mapovém
-               okně je dostupné ze stavové lišty jako volba
-               :item:`Extent`, viz :ref:`region-kontrola`.
+               okně je dostupný ze stavové lišty jako volba
+               :item:`Extent`, viz kapitola :ref:`region-kontrola`.
 
                .. figure:: images/wxgui-mapdisp-status-extent.png
 			   :class: middle
 
-			   Rozsah zobrazeného území.
+			   Rozsah zobrazeného území (extent).
 
 .. _nastaveni-regionu:
           
@@ -157,7 +159,8 @@ ve směru sever-jih (počet řádků) a východ-západ (počet sloupců). Pro
 
 .. notecmd:: Nastavení prostorového rozlišení na základě rastrové
              mapy, hraniční souřadnice s offsetem 1000 mapových
-             jednotek od hranic polygonu města
+             jednotek od minimálního ohraničujícího obdélníku polygonu
+             města
 
    .. code-block:: bash
 
@@ -205,16 +208,15 @@ Formát::
 
 .. tip::
 
-   Minimální ohraničující obdélník výpočetního regionu lze v
-   mapovém okně i zobrazit. Hraniční souřadnice budou zobrazeny
-   jako linie červené barvy, pokud je výpočetní region celou plochou
-   uvnitř aktuálního pohledu. V opačném případě budou hranice
-   výpočetního regionu zobrazeny modrou barvou.
+   Rozsah výpočetního regionu lze v mapovém okně i zobrazit. Hraniční
+   souřadnice budou zobrazeny jako linie červené barvy, pokud je
+   výpočetní region celou plochou uvnitř aktuálního pohledu. V opačném
+   případě budou hranice výpočetního regionu zobrazeny modrou barvou.
 
    .. figure:: images/wxgui-mapdisp-show-reg-0.png
                :class: middle
 
-               Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 1).
+               Zobrazení rozsahu výpočetního regionu v mapovém okně (krok 1).
 
    .. raw:: latex
             
@@ -223,12 +225,12 @@ Formát::
    .. figure:: images/wxgui-mapdisp-show-reg-1.png
                :class: middle
 
-               Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně (krok 2).
+               Zobrazení rozsahu výpočetního regionu v mapovém okně (krok 2).
 
    .. figure:: images/wxgui-mapdisp-show-reg-2.png
                :class: middle
                     
-               Zobrazení hraničních souřadnic výpočetního regionu v mapovém okně.
+               Zobrazení rozsahu výpočetního regionu v mapovém okně.
 
 .. raw:: latex
 

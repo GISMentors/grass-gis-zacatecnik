@@ -15,7 +15,9 @@ Systém GRASS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 #. v rámci :ref:`OSGeo4W frameworku <osgeo4w-instalator>`
 
    * *pro pokročilejší uživatele*
-   * komplexnější řešení umožňující instalaci dalšího softwaru distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
+   * komplexnější řešení umožňující instalaci dalšího softwaru
+     distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
+     (jako je např. `QGIS <http://qgis.org>`_, `MapServer <http://mapserver.org>`_ a další)
    * vhodné při předpokladu :ref:`časté aktualizace softwaru <osgeo4w-aktualizace>` 
 
 .. _nativni-instalator:
@@ -55,10 +57,11 @@ Nativní instalátor
 .. figure:: images/wingrass-3.png
             :scale-latex: 50
            
-	    Velmi silně doporučujeme nainstalovat také "Important
-	    Microsoft Runtime Libraries" a pokud nemáte vlastní data
-	    tak i ukázkovou geografickou datovou sadu pro GRASS "North
-	    Carolina".
+	    Důrazně doporučujeme (vyhnete se problémům při spuštení
+	    systému GRASS v případě chybějících knihoven MS Windows)
+	    nainstalovat také "Important Microsoft Runtime Libraries"
+	    a pokud nemáte vlastní data tak i ukázkovou geografickou
+	    datovou sadu pro GRASS "North Carolina".
 
 .. figure:: images/wingrass-4.png
             :scale-latex: 50
@@ -115,13 +118,13 @@ OSGeo4W
 .. figure:: images/osgeo4w-4.png
             :scale-latex: 50
             
-	    Ze sekce ``Desktop`` vybereme balíček ``grass``7.
+	    Ze sekce ``Desktop`` vybereme balíček ``grass``.
 
 .. figure:: images/osgeo4w-5.png
             :scale-latex: 50
             
-	    Nutné závislosti (jako např. knihovna GDAL či Python) se
-	    nainstalují automaticky.
+	    Nutné závislosti (jako např. knihovna GDAL, Python či
+	    wxPython) se nainstalují automaticky.
 
 .. raw:: latex
 
@@ -140,7 +143,7 @@ OSGeo4W
 
 .. noteadvanced::
 
-   V rámci OSGeo4W frameworku je možné nainstalovat i *denní
+   V rámci frameworku OSGeo4W je možné nainstalovat i *denní
    snapshoty* vývojové verze systému GRASS. To se hodí v případě, že
    potřebujete otestovat např. novou funkcionalitu, která není
    součástí stabilní verze.
@@ -149,7 +152,7 @@ OSGeo4W
       :scale-latex: 50
                
       Ze sekce ``Desktop`` vybereme balíček ``grass-daily``
-      (denní snapshoty verze aktuální vývojové verze systému GRASS).
+      (denní snapshoty aktuální vývojové verze systému GRASS).
 
 .. raw:: latex
 
@@ -157,9 +160,11 @@ OSGeo4W
 
 ..  _osgeo4w-aktualizace:
 
-Automatická aktualizace (pro pokročilé uživatele)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Aktualizovat instalaci OSGeo4W (včetně instalace systému GRASS) lze provádět automaticky v rámci plánovače úloh OS MS Windows.
+Automatická aktualizace (pro velmi pokročilé uživatele)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Aktualizovat instalaci OSGeo4W (včetně instalace systému GRASS) lze
+provádět automaticky v rámci plánovače úloh MS Windows.
 
 Stačí umístit do zvoleného adresáře níže uvedený skript s příponou
 :wikipedia-en:`bat <Batch file>` (předpokládejme, že je framework

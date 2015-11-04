@@ -1,18 +1,21 @@
 Úvod do systému GRASS
 ---------------------
 
-Po instalaci (viz návod pro :doc:`GNU/Linux <../instalace/linux>` a
-:doc:`MS Windows <../instalace/windows>`) systému GRASS je potřeba
-opatřit geodata ve struktuře, kterou systém vyžaduje (viz
-:doc:`koncept lokací a mapsetů <../intro/struktura-dat>`).
+Systém GRASS vyžaduje spravovat geodata *v pevně definované
+struktuře*, v konceptu tzv.  :doc:`lokací a mapsetů
+<../intro/struktura-dat>`. To bývá pro začínajícího uživatele
+kritickým bodem, proto doporučujeme začít pracovat s předpřipravenými
+datovými sadami (viz poznámka níže) a teprve po pochopení tohoto
+konceptu :doc:`importovat <../data/import>` do systému GRASS svoje
+vlastní data.
 
 .. tip::
 
    Na webových stránkách projektu GRASS jsou volně ke stažení
    `testovací a edukační datasety
    <http://grass.osgeo.org/download/sample-data/>`_. Jde především o
-   OSGeo edukační `North Carolina
-   <http://www.grassbook.org/data_menu3rd.php>`_ dataset, který je ke
+   edukační datovou sadu OSGeo `North Carolina
+   <http://www.grassbook.org/data_menu3rd.php>`_ dataset, která je ke
    stažení jako `zip archiv
    <http://grass.osgeo.org/sampledata/north_carolina/nc_spm_08_grass7.zip>`_. Tato
    data lze pod MS Windows stáhnout i pomocí :ref:`nativního
@@ -30,7 +33,7 @@ operačního systému.
             :class: middle
             :scale-latex: 60
                  
-            Spuštění systému GRASS v Ubuntu 12.10
+            Spuštění systému GRASS v Ubuntu
 
 .. figure:: ../instalace/images/wingrass-4.png
             :scale-latex: 35
@@ -41,11 +44,12 @@ operačního systému.
                      
    \newpage
          
-.. notecmd:: Spuštění systému GRASS
+.. notecmd:: Spuštění systému GRASS v OS Linux
 
    V operačním systému :wikipedia:`GNU/Linux` je dostupný systém GRASS
    po instalaci z příkazové řádky jako program ``grassXY``, kde ``XY``
-   označuje jeho verzi. Příklad spuštění verze GRASS 7.0:
+   označuje jeho verzi. To umožňuje vedle sebe nainstalovat současně
+   různé verze systému GRASS. Příklad spuštění verze GRASS 7.0:
 
    .. code-block:: bash
 
@@ -54,8 +58,8 @@ operačního systému.
 Ve výchozím nastavení program nastartuje v grafickém módu. Úvodní
 dialog umožňuje nastavit :doc:`adresář s geodaty, lokaci a mapset
 <../intro/struktura-dat>`, které jsou nutné pro samotné spuštění
-systému. Po jejich zadaní lze pokračovat dále (tlačítko :item:`Start
-GRASS`).
+systému. Po jejich zadaní lze pokračovat dále (tlačítko
+:item:`Start GRASS`).
 
 .. _spusteni-grass:
 
@@ -76,10 +80,10 @@ GRASS`).
 
                   .. code-block:: bash
 
-                                  grass70 -text /opt/grassdata/gismentors/user1/
+                                  grass70 -text /opt/grassdata/gismentors/user1
 
                 * GRASS v grafickém rozhraní, adresář s geodaty, lokace a
-                  mapset nastavena z minulého sezení:
+                  mapset nastavena z předchozího spuštění:
 
                   .. code-block:: bash
 

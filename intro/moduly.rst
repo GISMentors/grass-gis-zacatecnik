@@ -14,11 +14,11 @@ množinou malých, ale výkonných programů (v~terminologii systému GRASS
    takového. Daný program má za úkol vyřešit dílčí problém, měl by být co
    nejmenší a poměrně jednoduchý.
 
-Jednotlivé příkazy - moduly - mají konzistentní syntaxi, jejich
-názvy se skládají z předpony označující skupinu příkazů a krátkého
-názvu napovídající účel modulu (viz tabulka níže). Například modul
-:grasscmd:`v.buffer` patří do skupiny *vector* a je určen pro vytvoření
-obalové zóny (tzv. bufferu) nad vektorovými daty.
+Jednotlivé příkazy systému GRASS - moduly - mají konzistentní syntaxi,
+jejich názvy se skládají z předpony označující skupinu příkazů a
+krátkého názvu napovídající účel modulu (viz tabulka níže). Například
+modul :grasscmd:`v.buffer` patří do skupiny *vector* a je určen pro
+vytvoření obalové zóny (tzv. bufferu) nad vektorovými daty.
 
 .. only:: latex
           
@@ -31,7 +31,7 @@ obalové zóny (tzv. bufferu) nad vektorovými daty.
 +----------+--------------------------------+-----------------------------------------------+
 | prefix   | skupina                        | popis                                         |
 +==========+================================+===============================================+
-| ``db.``  | :grasscmd:`database`           | podpora externích databázových systémů        |
+| ``db.``  | :grasscmd:`database`           | práce s atributovými daty a tabulkami         |
 +----------+--------------------------------+-----------------------------------------------+
 | ``d.``   | :grasscmd:`display`            | grafické výstupy a vizuální dotazy            |
 +----------+--------------------------------+-----------------------------------------------+
@@ -48,39 +48,40 @@ obalové zóny (tzv. bufferu) nad vektorovými daty.
 | ``v.``   | :grasscmd:`vector`             | zpracování 2D/3D vektorových dat              |
 +----------+--------------------------------+-----------------------------------------------+
 
-Příkazy (tj. moduly) systému GRASS lze spouštět několika způsoby
-(příklad pro :grasscmd:`r.buffer`):
+Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
+:grasscmd:`r.buffer`):
 
-* z menu správce vrstev
+#. z menu správce vrstev
 
-.. figure:: images/wxgui-menu-r-buffer.png
+   .. figure:: images/wxgui-menu-r-buffer.png
 
-            Spuštění modulu :grasscmd:`r.buffer` z menu správce vrstev.
+               Spuštění modulu :grasscmd:`r.buffer` z menu správce vrstev.
 
-* z nástroje :item:`Search module` správce vrstev
+#. z nástroje :item:`Search module` správce vrstev
 
-.. figure:: images/wxgui-search-r-buffer.png
+   .. figure:: images/wxgui-search-r-buffer.png
+               
+               Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`.
 
-            Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`.
+#. z příkazové řádky správce vrstev
 
-* z příkazové řádky správce vrstev
+   .. figure:: images/wxgui-console-r-buffer.png
+	       :class: middle
+	       :scale-latex: 90
 
-.. figure:: images/wxgui-console-r-buffer.png
-	    :class: middle
-	    :scale-latex: 90
+               Spuštění modulu :grasscmd:`r.buffer` z příkazové řádky správce vrstev.
 
-            Spuštění modulu :grasscmd:`r.buffer` z příkazové řádky správce vrstev.
+   Pokud jsou zadány všechny povinné parametry (v případě modulu
+   :grasscmd:`r.buffer` jde o parametry :option:`input`,
+   :option:`output` a :option:`distances`), tak se modul spustí
+   přímo. Pokud tato podmínka není splněna, zobrazí se dialog
+   nástroje.
 
-Pokud jsou zadány všechny povinné parametry (v případě modulu
-:grasscmd:`r.buffer` jde o :option:`input`, :option:`output` a
-:option:`distances`), tak se modul spustí přímo. Pokud tato podmínka
-není splněna, zobrazí se dialog nástroje.
+   .. figure:: images/wxgui-console-r-buffer-launch.png
 
-.. figure:: images/wxgui-console-r-buffer-launch.png
+               Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů.
 
-            Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů.
-
-* z :doc:`grafického modeleru <../misc/graficky-modeler>`
+#. z :doc:`grafického modeleru <../misc/graficky-modeler>`
 
 .. raw:: latex
 

@@ -1,35 +1,36 @@
 .. index::
    single: vektorová data
 
-Vektorová data
---------------
+===============
+ Vektorová data
+===============
 
 Vektorová data jsou v systému GRASS uložena v podobě
 tzv. *vektorových map*.
 
 * Vektorová data reprezentují nejčastěji diskrétní fenomény
 
-Ve 2D GIS rozlišujeme tři základní *typy geoprvků*:
+Ve 2D GIS rozlišujeme tři základní *typy geoprvků*, které označujeme
+jako *jednoduché* (simple features):
 
 * bodové (*point*)
 * liniové (*linestring*)
 * plošné (*polygon*)
 
-GRASS je striktně **topologický GIS**. Vektorová data ukládá v
-topologickém formátu, v případě :ref:`importu vektorových dat
-<import-vector>` z netopologických formátů jako je
-např. :wikipedia-en:`Esri Shapefile` data převádí do topologické formy
-automaticky. 
+GRASS je nicméně striktně **topologický GIS**, který s jednoduchými
+geoprvky nepracuje. Vektorová data ukládá v topologickém formátu, v
+případě :ref:`importu vektorových dat <import-vector>` z
+netopologických formátů jako je např. :wikipedia-en:`Esri Shapefile`
+data převádí do topologické formy automaticky.
 
-.. note:: **Topologie**
+.. note::
 
-                Sleduje prostorové vztahy mezi objekty (návaznost
-                linií, sousednost ploch atd.), viz
-                :wikipedia-en:`prostorová topologie
-                <Geospatial_topology>`.
+   *Topologie* sleduje prostorové vztahy mezi objekty (návaznost
+   linií, sousednost ploch atd.), viz :wikipedia-en:`prostorová
+   topologie <Geospatial_topology>`.
 
 Vstupní vektorová data často obsahují nejrůznější topologické chyby,
-jako např. překrývající se polygony. Modul pro import
+jako např. překrývající se polygony. Importní nástroj systému GRASS
 :grasscmd:`v.in.ogr` se snaží tyto chyby automaticky opravit. V
 některých případech to však není možné a je dále na uživateli, aby
 data opravil sám. Opravám případných topologických chyb se věnuje
@@ -94,7 +95,7 @@ a případně i jedním *centroidem*. Izolovaná plocha nebo souvislá
 množina ploch formuje plošný element označovaný jako ostrov (*isle*).
 
 Příklad
-^^^^^^^
+-------
 
 Na obrázku níže je zobrazen:
 
@@ -161,8 +162,8 @@ Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
 
    K jedné vektorové mapě lze přiřadit více atributových tabulek. Tato
    problematika je ale nad rámec tohoto školení a je probírána v
-   navazující `školení pro pokročilé uživatele
-   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+   navazující :skoleni:`školení pro pokročilé uživatele
+   <grass-gis-pokrocily>`.
 
    .. figure:: images/multi-layers.png
       :class: middle

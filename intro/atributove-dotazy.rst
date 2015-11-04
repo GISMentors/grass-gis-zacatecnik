@@ -10,14 +10,14 @@
 Atributové dotazy
 -----------------
 
-Atributové dotazy, tj. výběr geoprvků na základě jejich popisných
-vlastností, lze provádět pomocí :ref:`správce atributových dat
-<wxgui-dbmgr>`.
+Atributové dotazy, tj. výběr geoprvků na základě jeho popisných
+vlastností, lze provádět pomocí `správce atributových dat`.
 
 .. noteadvanced::
    
    Pokročilejší uživatelé mohou ve svých skriptech využít
-   specializované moduly, viz kapitola :ref:`níže <db-select>`.
+   specializované moduly ze skupiny ``db.*``, viz kapitola
+   :ref:`db-select`.
 
 .. _wxgui-dbmgr:
 
@@ -26,23 +26,23 @@ Manager*) je základním nástrojem pro práci s atributovými daty v
 :abbr:`GUI (Grafické uživatelské rozhraní)` systému GRASS. Lze jej
 spustit několika způsoby:
 
-* z nástrojové lišty *správce vrstev*
+#. z nástrojové lišty správce vrstev
 
-.. figure:: images/wxgui-dbmgr-toolbar.png
+   .. figure:: images/wxgui-dbmgr-toolbar.png
 
-            Spuštění správce atributových dat z nástrojové lišty.
+               Spuštění správce atributových dat z nástrojové lišty.
 
-* z kontextového menu *správce vrstev*
+#. z kontextového menu správce vrstev
 
-.. figure:: images/wxgui-dbmgr-menu.png
+   .. figure:: images/wxgui-dbmgr-menu.png
 
-            Spuštění správce atributových dat z kontextového menu.
+               Spuštění správce atributových dat z kontextového menu.
 
-* z příkazové řádky jako modul :grasscmd:`g.gui.dbmgr`
+#. z příkazové řádky jako modul :grasscmd:`g.gui.dbmgr`
 
-.. code-block:: bash
+   .. code-block:: bash
 
-               g.gui.dbmgr map=obce
+                   g.gui.dbmgr map=obce
 
 Dialog správce atributových dat má *tři záložky*:
 
@@ -55,17 +55,17 @@ Dialog správce atributových dat má *tři záložky*:
 :item:`Manage tables`
       Přidání, přejmenování, odebraní sloupce v atributové tabulce
 
-:item:`Manage layers`
-      Správa atributových tabulek připojených k vektorové mapě. Tato problematika je
-      ale nad rámec tohoto školení a je probírána v navazující `školení
-      pro pokročilé uživatele <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+:item:`Manage layers` Správa atributových tabulek připojených k
+      vektorové mapě. Tato problematika je ale nad rámec tohoto
+      školení a je probírána v navazující :skoleni:`školení pro
+      pokročilé uživatele <grass-gis-pokrocily>`.
 
 Dotazování
 ^^^^^^^^^^
 
 Dotazovat se na atributová data je možné v záložce :item:`Browse data`
 a to buď v základním (*simple*) anebo pokročilém (*advanced*) módu,
-viz :ref:`sql-builder`.
+viz kapitola :ref:`sql-builder`.
 
 *Základní mód* umožňuje definovat jednoduchou `where` podmínku typu
 ``sloupec <op> hodnota``.
@@ -87,8 +87,8 @@ viz :ref:`sql-builder`.
             Jednoduchý atributový doraz - zobrazení výsledku.
 
 .. note:: Vybírat vektorové geoprvky na základě jejich atributů lze i
-          pomocí modulu :grasscmd:`v.extract`, více informací
-          :ref:`zde <v-extract>`.
+          pomocí modulu :grasscmd:`v.extract`, více informací v
+          kapitole :ref:`v-extract`.
 
 .. raw:: latex
 

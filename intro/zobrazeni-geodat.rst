@@ -6,14 +6,13 @@ Zobrazení geodat v mapovém okně
    single: mapové okno
    single: g.gui
 
-Po spuštění systému GRASS se objeví *správce vrstev* (Layer Manager) a
-*mapové okno* (Map Display).
+Po spuštění grafického uživatelského rozhraní (GUI) systému GRASS se
+objeví *správce vrstev* (Layer Manager) a *mapové okno* (Map Display).
 
 .. tip::
 
-   Pokud GUI (grafické uživatelské rozhraní) z nějaké důvodu spadne,
-   lze ho z příkazové řádky nastartovat znovu pomocí příkazu
-   :grasscmd:`g.gui`.
+   Pokud GUI systému GRASS z nějaké důvodu zhavaruje, lze ho z
+   příkazové řádky nastartovat znovu pomocí příkazu :grasscmd:`g.gui`.
 
    .. code-block:: bash
 
@@ -41,7 +40,8 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
    .. figure:: images/map-display-full-zoom.png
                :class: middle
 
-               Nastavení pohledu mapového okna na vybranou mapovou vrstvu.
+               Nastavení pohledu mapového okna na aktuálně vybranou
+               mapovou vrstvu.
 
    Automatické nastavení pohledu při přidání nové mapové vrstvy lze
    nastavit v :menuselection:`Settings --> Preferences`.
@@ -54,10 +54,9 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
 
    Geodata lze vykreslovat z příkazové řádky či skriptů do
    nejrůznějších formátů od PNG, GIF až po SVG či PDF pomocí modulu
-   :grasscmd:`d.mon` v kombinaci s :grasscmd:`d.rast` a
-   :grasscmd:`d.vect`. Tyto techniky jsou součástí navazujícího `školení
-   pro pokročilé uživatele
-   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+   :grasscmd:`d.mon` v kombinaci s moduly :grasscmd:`d.rast` a
+   :grasscmd:`d.vect`. Tyto techniky jsou součástí navazujícího
+   :skoleni:`školení pro pokročilé uživatele <grass-gis-pokrocily>`.
 
    .. only:: html
              
@@ -76,35 +75,36 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
 Rastrová data
 =============
 
-Rastrová data (tzv. *rastrovou mapu*) lze přidat čtyřmi různými způsoby:
+Rastrová data (v terminologii systému GRASS tzv. *rastrovou mapu*) lze
+přidat do správce vrstev, resp. mapového okna čtyřmi různými způsoby:
 
-* z nástrojové lišty
+#. z nástrojové lišty správce vrstev
 
-.. figure:: images/wxgui-toolbar-raster.png
+   .. figure:: images/wxgui-toolbar-raster.png
             
-            Přidání rastrové mapy z nástrojové lišty správce vrstev.
+               Přidání rastrové mapy z nástrojové lišty správce vrstev.
 
-.. figure:: images/wxgui-d-rast.png
+   .. figure:: images/wxgui-d-rast.png
 
-            Volba rastrové mapy.
+               Volba rastrové mapy.
 
-* z menu :menuselection:`File --> Map display --> Add raster`
+#. z menu :menuselection:`File --> Map display --> Add raster`
 
-* pomocí klávesové zkratky :kbd:`Ctrl+Shift+R`
+#. pomocí klávesové zkratky :kbd:`Ctrl+Shift+R`
 
-.. raw:: latex
+   .. raw:: latex
            
-   \newpage
+            \newpage
   
-* z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.rast`
+#. z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.rast`
 
-.. figure:: images/wxgui-console.png
+   .. figure:: images/wxgui-console.png
 
-            Příkazová řádka správce vrstev.
+               Příkazová řádka správce vrstev.
 
-.. figure:: images/wxgui-console-raster.png
+   .. figure:: images/wxgui-console-raster.png
 
-            Přidání rastrové mapy z příkazové řádky správce vrstev.
+               Přidání rastrové mapy z příkazové řádky správce vrstev.
 
 Ostatní mapové vrstvy, které mají rastrový charakter jsou dostupné z
 nástrojové lišty nebo z příkazové řádky správce vrstev.
@@ -148,26 +148,26 @@ Vektorová data
 
 Podobně lze přidat vektorová data (tzv. *vektorovou mapu*):
 
-* z nástrojové lišty:
+#. z nástrojové lišty správce vrstev:
 
-.. figure:: images/wxgui-toolbar-vector.png
+   .. figure:: images/wxgui-toolbar-vector.png
+            
+               Přidání vektorové mapy z nástrojové lišty správce vrstev.
 
-            Přidání vektorové mapy z nástrojové lišty správce vrstev.
+   .. figure:: images/wxgui-d-vect.png
+               :scale-latex: 50
+                             
+               Volba vektorové mapy.
 
-.. figure:: images/wxgui-d-vect.png
-            :scale-latex: 50
-                 
-            Volba vektorové mapy.
+#. z menu :menuselection:`File --> Map display --> Add vector`
 
-* z menu :menuselection:`File --> Map display --> Add vector`
+#. pomocí klávesové zkratky :kbd:`Ctrl+Shift+V`
 
-* pomocí klávesové zkratky :kbd:`Ctrl+Shift+V`
+#. z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.vect`
 
-* z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.vect`
-
-.. figure:: images/wxgui-console-vector.png
-
-            Přidání vektorové mapy z příkazové řádky správce vrstev.
+   .. figure:: images/wxgui-console-vector.png
+               
+               Přidání vektorové mapy z příkazové řádky správce vrstev.
 
 Ostatní mapové vrstvy, které mají vektorový charakter jsou dostupné z
 nástrojové lišty nebo z příkazové řádky správce vrstev.

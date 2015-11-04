@@ -53,7 +53,7 @@ rastrové mapy ve *správci vrstev*.
 Typy rastrových map
 ===================
 
-GRASS rozlišuje tři typy rastrových map podle datové typu buňky:
+GRASS rozlišuje tři typy rastrových map podle datového typu buňky:
 
 * ``CELL`` (celé číslo, :wikipedia-en:`integer <Integer (computer
   science)>`)
@@ -79,5 +79,5 @@ GRASS rozlišuje tři typy rastrových map podle datové typu buňky:
 
    Kromě 2D rastrových dat GRASS podporuje i 3D rastrová data
    (tzv. *volumes*) a nad nimi postavené analýzy. Tato problematika je
-   ale nad rámec tohoto školení a je probírána v navazující `školení
-   pro pokročilé uživatele <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+   ale nad rámec tohoto školení a je probírána v navazující
+   :skoleni:`školení pro pokročilé uživatele <grass-gis-pokrocily>`.

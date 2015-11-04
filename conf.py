@@ -53,8 +53,6 @@ latex_documents = [
      u'GISMentors', u'manual'),
     ]
 
-latex_logo = "images/opengeolabs-logo.png"
-
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples

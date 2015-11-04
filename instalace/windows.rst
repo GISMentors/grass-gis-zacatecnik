@@ -158,6 +158,24 @@ OSGeo4W
 
    \newpage
 
+Poznámky
+^^^^^^^^
+
+Nastavení velikosti fontu terminálu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+V novějších verzích Windows bývá výchozí velikost fontu terminálu
+příliš malá.
+
+.. figure:: images/winterminal-small.png
+   :class: small
+
+Velikost fontu můžete změnit ve vlastnostech okna (pravé tlačítko myši
+nad titulkem okna, :menuselection:`Vlastnosti`).
+
+.. figure:: images/winterminal-font.png
+
+
 ..  _osgeo4w-aktualizace:
 
 Automatická aktualizace (pro velmi pokročilé uživatele)

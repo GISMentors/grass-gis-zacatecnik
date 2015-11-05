@@ -174,12 +174,12 @@ Velikost fontu můžete změnit ve vlastnostech okna (pravé tlačítko myši
 nad titulkem okna, :menuselection:`Vlastnosti`).
 
 .. figure:: images/winterminal-font.png
-
+   :class: small
 
 ..  _osgeo4w-aktualizace:
 
 Automatická aktualizace (pro velmi pokročilé uživatele)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aktualizovat instalaci OSGeo4W (včetně instalace systému GRASS) lze
 provádět automaticky v rámci plánovače úloh MS Windows.

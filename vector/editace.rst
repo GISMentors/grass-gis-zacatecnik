@@ -21,8 +21,10 @@ Novou vektorovou mapu vytvoříme z menu
 
 .. noteadvanced::
       
-   V dialogovém okně ponecháme název vazby mezi geometrickou částí a
-   identifikátorem záznamu v atributové databázi ``cat``.
+   Klíč (*key column*) označuje v dialogovém okně název atributu,
+   který bude sloužit pro definovaní vazby mezi geometrickou a
+   atributovou částí popisu geoprvků, ve výchozím nastavení se jedná o
+   atribut ``cat``.
 
 .. notecmd:: Vytvoření prázdné vektorové mapy
 

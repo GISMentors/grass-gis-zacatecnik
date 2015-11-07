@@ -8,9 +8,16 @@ Rastrová analýza nákladů
 ------------------------
 
 Nejprve si v aktuálním mapsetu :ref:`vytvoříme kopii
-<kopie-vektorove-mapy>` vektorové mapy :map:`silnice`. Přidáme
-:ref:`nový atribut <pridani-noveho-atributu>` ``rychlost``, do něhož
-uložíme průměrnou rychlost v následující podobě:
+<kopie-vektorove-mapy>` vektorové mapy :map:`silnice`.
+
+.. note::
+
+   Tento krok je potřeba, jelikož budeme modifikovat atributovou
+   tabulku vektorové mapy a systém GRASS umožňuje editovat pouze
+   datové elementy z aktuálního mapsetu.
+
+:ref:`Přidáme nový atribut <pridani-noveho-atributu>` ``rychlost``, do
+něhož uložíme průměrnou rychlost v následující podobě:
 
 .. only:: latex
           
@@ -33,6 +40,9 @@ uložíme průměrnou rychlost v následující podobě:
 +----------------------+----------------+---------------------+
 | Silnice 3.třídy      | 5              | 60                  |
 +----------------------+----------------+---------------------+
+
+Editaci hodnot atributů umožňuje :ref:`Field Calculator
+<field-calculator>`.
 
 .. figure:: images/field-calculator-speed.png
    :class: small

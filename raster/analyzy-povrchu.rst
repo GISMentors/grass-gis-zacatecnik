@@ -6,8 +6,8 @@
    pair: analýza povrchu, topografické analýzy
    single: r.slope.aspect
 
-Analýzy povrchu
----------------
+Togografické analýzy
+--------------------
 
 Základní topografické analýzy povrchu poskytuje modul
 :grasscmd:`r.slope.aspect` (:menuselection:`Raster --> Terrain
@@ -21,8 +21,8 @@ analysis --> Slope and aspect`).
 
 .. important::
 
-   Jako ostatní moduly pro zpracování rastrových dat i tento modul
-   pracuje v aktuálním výpočetním regionu. Proto je vhodné před
+   Podobně jako ostatní moduly pro zpracování rastrových dat i tento
+   modul pracuje v aktuálním výpočetním regionu. Proto je vhodné před
    výpočtem tento :ref:`region nastavit podle vstupní rastrové mapy
    <nastaveni-regionu>`.
 

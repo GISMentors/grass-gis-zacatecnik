@@ -10,10 +10,10 @@
 Tabulka barev
 -------------
 
-Tabulka barev je zápis pravidel pro barevnou interpretaci rastrových
-hodnot. Podobu tabulky barev pro zvolenou rastrovou mapu zobrazuje
-nástroj dostupný z menu :menuselection:`Raster --> Manage colors -->
-Manage color rules interactively`.
+Tabulka barev představuje zápis pravidel pro barevnou interpretaci
+rastrových hodnot. Podobu tabulky barev pro zvolenou rastrovou mapu
+zobrazuje nástroj dostupný z menu :menuselection:`Raster --> Manage
+colors --> Manage color rules interactively`.
 
 .. figure:: images/color-table-dmt.png
 	    :scale-latex: 40

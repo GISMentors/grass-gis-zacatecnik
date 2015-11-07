@@ -121,7 +121,7 @@ Odstranit masku lze přepínačem :option:`-r` modulu :grasscmd:`r.mask`.
 
 .. noteadvanced::
 
-   Jelikož je maska standardní rastrovou mapu, lze ji deaktivovat
+   Jelikož je maska standardní rastrovou mapou, lze ji deaktivovat
    jejím pouhým odstraněním.
 
    .. code-block:: bash

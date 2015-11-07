@@ -12,19 +12,20 @@ values and labels --> Reclassify`).
 .. important::
 
    Reklasifikovat lze pouze celočíselné rastrové mapy (:ref:`typ CELL
-   <raster-types>`). Pokud je reklasikována rastrová mapa s~hodnotami
-   s plovoucí desetinnou čárkou, jsou její hodnoty před klasifikací
-   převedeny automaticky na celé číslo.
+   <raster-types>`). Pokud má vstupní rastrová mapa hodnoty s plovoucí
+   desetinnou čárkou, jsou tyto hodnoty před klasifikací převedeny
+   nejprve na celé číslo.
 
-   Pokud je potřeba reklasifikovat rastrová data s plovoucí desetinnou
-   čárkou, tak je potřeba namísto :grasscmd:`r.reclass` použít modul
-   :grasscmd:`r.recode`, viz :ref:`příklad níže <r-recode>`.
+   V případě reklasifikace rastrové mapy s hodnotami s plovoucí
+   desetinnou čárkou je třeba namísto :grasscmd:`r.reclass` použít
+   modul :grasscmd:`r.recode`, viz :ref:`příklad níže <r-recode>`.
 
 .. note::
 
    Reklasifikací nevzniká fyzicky nová rastrová mapa, nýbrž je zapsána
-   pouze reklasifikační tabulka. To má za následek to, že nelze
-   podkladovou mapu přejmenovat či odstranit.
+   pouze reklasifikační tabulka. To má za následek to, že nelze, pokud
+   existuje reklasifikovaná mapa, její podkladovou mapu přejmenovat či
+   odstranit.
 
 .. index::
   single: r.reclass

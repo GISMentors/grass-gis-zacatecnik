@@ -6,7 +6,7 @@ Základní statistiky rastrových dat
 
 Kromě výpisu :ref:`základních metadat <raster-metadata>` rastrových
 map systém GRASS disponuje dalšími moduly pro výpis statistických
-informací rastrových dat. Jde o:
+informací rastrových dat:
 
 * :ref:`r.report <r-report>` pro přehledný výpis informací o rastrové mapě,
 * :ref:`r.univar <r-univar>` pro základní statistiku a

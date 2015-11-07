@@ -13,7 +13,8 @@ Import geodat
    :ref:`lokaci <lokace>`. To, že jsou data v jiném souřadnicovém
    systému můžete zjistit z dialogu pro import dat (viz obr. níže). V
    tomto případě musíte nejprve data naimportovat do nové lokace a
-   následně je :ref:`transformovat <transformace>` do aktuální lokace.
+   následně je transformovat do aktuální lokace (viz kapitola
+   :doc:`transformace`).
 
    .. figure:: images/import-no-proj.png
 	       :scale-latex: 35
@@ -76,7 +77,7 @@ V dialogu pro import rastrových dat určíme:
 
    \newpage
 
-.. admonition:: Ukázka hromadného importu rastrových dat jako Python skript
+.. note:: **Ukázka hromadného importu rastrových dat jako Python skript**
 
    .. code-block:: python
 
@@ -89,8 +90,7 @@ V dialogu pro import rastrových dat určíme:
               grass.run_command('r.in.gdal', input = fname, output = name)
 
    Skriptování v jazyce Python je náplní navazujícího
-   `školení pro pokročilé uživatele
-   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+   :skoleni:`školení pro pokročilé uživatele <grass-gis-pokrocily>`.
 
 .. index::
    pair: vektorová data; import
@@ -137,17 +137,17 @@ V dialogu pro import vektorových dat určíme:
 
             Naimportovaná data se automaticky přidají do stromu vrstev.
 
-.. admonition:: Import vektorových dat z příkazové řádky
+.. notecmd:: Import vektorových dat
 
-                .. code-block:: bash
+   .. code-block:: bash
                                 
-                                v.in.ogr dsn=lesy.shp
+      v.in.ogr dsn=lesy.shp
 
 .. raw:: latex
 
    \newpage
 
-.. admonition:: Ukázka hromadného importu vektorových dat jako Python skript
+.. note:: **Ukázka hromadného importu vektorových dat z aktuálního adresáře jako Python skript**
 
    .. code-block:: python
 
@@ -159,8 +159,7 @@ V dialogu pro import vektorových dat určíme:
           grass.run_command('v.in.ogr', dsn = '.', layer = fname) 
 
    Skriptování v jazyce Python je náplní navazujícího
-   `školení pro pokročilé uživatele
-   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
+   :skoleni:`školení pro pokročilé uživatele <grass-gis-pokrocily>`.
 
 .. index::
    pair: import; topologie
@@ -172,22 +171,23 @@ Poznámky k importu vektorových dat
 
 Při importu vektorových dat provádí :grasscmd:`v.in.ogr` konverzi
 vektorových dat z reprezentace :wikipedia:`Simple Features` do
-:ref:`topologického formátu <topologie>` systému GRASS:
+topologického formátu systému GRASS, viz kapitola :ref:`topologie`:
 
-* pro body (point) a lomené čáry (linestring) nedochází ke změně
-  povahy vektorového prvku, v topologickém formátu GRASS jsou
-  vyjádřeny jako *points* a *lines*,
+* v případě bodů (point) a lomených čár (linestring) nedochází ke
+  změně povahy vektorového prvku, v topologickém formátu GRASS jsou
+  vyjádřeny jako *points*, resp. *lines*,
 * polygony jsou rozloženy na hraniční linie (*boundary*) a centroidy
   (*centroid*), externí ring polygonu je převeden na hraniční linie
   (hraniční linie sousedících polygonů je uložena pouze jednou),
-* pro každý polygon je vypočten centroid, tj. bod ležící uvnitř plochy,
+* pro každý polygon je vypočten centroid, tj. reprezentativní bod
+  ležící uvnitř plochy,
 * polygon je vyjádřen v topologickém modelu systému GRASS jako plocha
   (*area*),
 * případné díry v polygonu jsou uloženy jako plochy, které tvoří
   tzv. ostrovy (*isle*).
 
 Například dva sousedící polygony (jeden s otvorem) jsou v topologickém
-modulu systému GRASS vyjádřeny čtyřmi hraničními liniemi a dvěma
+modelu systému GRASS vyjádřeny čtyřmi hraničními liniemi a dvěma
 centroidy. Polygony a otvor v druhém polygonu tvoří tři plochy. Otvor
 v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
 
@@ -203,13 +203,12 @@ v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
 
    Topologická reprezentace dvou polygonů (druhý polygon s otvorem).
 
-Modul :grasscmd:`v.in.ogr` provádí při importu operace, které by měly
+Modul :grasscmd:`v.in.ogr` provádí při importu operace s cílem
 odstranit případné topologické chyby v datech, které při konverzi z
 reprezentace simple features do topologického formátu systému GRASS
-mohou vzniknout. Případné topologické chyby, které nemohou být z
-nejrůznějších důvodů během importu odstraněny, je možné opravit
-pomocí modulu :grasscmd:`v.clean`, více v sekci :ref:`topologie
-<topologie>`.
+mohou vzniknout. Topologické chyby, které nemohou být z nejrůznějších
+důvodů během importu odstraněny, je možné opravit pomocí modulu
+:grasscmd:`v.clean`, více v kapitole :ref:`topologie`.
 
 .. index::
    pair: kodování; atributy
@@ -223,6 +222,11 @@ kódování pro atributová data. Atributy obsahující diakritiku jsou
 ``cp1250``). Hodnotu kódování lze nastavit pomocí parametru
 :option:`encoding` modulu :grasscmd:`v.in.ogr`.
 
+.. figure:: images/wxgui-vector-import-encoding.png
+
+   Kódování atributů vektorových dat lze definovat přímo v importním
+   dialogu GUI systému GRASS.
+                    
 .. notecmd:: Import vektorových dat (znaková sada Windows-1250)
 
    .. code-block:: bash
@@ -267,20 +271,21 @@ pohled na aktuálně vybranou mapu.
 
 .. figure:: images/wxgui-zoom-to-map-menu.png
 
-            Nastavení pohledu mapového okna na vybranou mapovou vrstvu z kontextového menu správce vrstev.
+   Nastavení pohledu mapového okna na vybranou mapovou vrstvu z
+   kontextového menu správce vrstev.
 
 .. figure:: ../intro/images/map-display-full-zoom.png
-            :class: middle
+   :class: middle
 
-            Nastavení pohledu mapového okna na vybranou mapovou vrstvu.
+   Nastavení pohledu mapového okna na vybranou mapovou vrstvu.
 
-Import dat nemá vliv na nastavení :ref:`výpočetního regionu
+Import dat nemá vliv na aktuální nastavení :ref:`výpočetního regionu
 <region>`. Výpočetní region lze nastavit na základě naimportovaných
 dat z kontextového menu správce vrstev.
 
 .. figure:: images/wxgui-set-region-menu.png
 
-            Nastavení výpočetního regionu na základě mapové vrstvy.
+   Nastavení výpočetního regionu na základě mapové vrstvy.
 
 .. note::
 
@@ -289,5 +294,4 @@ dat z kontextového menu správce vrstev.
 
    .. figure:: images/wxgui-import-region.png
 
-               Rozšíření výpočetního regionu na základě importovaných dat
-
+      Rozšíření výpočetního regionu na základě importovaných dat.

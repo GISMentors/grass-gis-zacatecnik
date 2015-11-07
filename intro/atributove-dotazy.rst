@@ -10,7 +10,7 @@
 Atributové dotazy
 -----------------
 
-Atributové dotazy, tj. výběr geoprvků na základě jeho popisných
+Atributové dotazy, tj. výběr geoprvků na základě jejich popisných
 vlastností, lze provádět pomocí `správce atributových dat`.
 
 .. noteadvanced::
@@ -42,7 +42,7 @@ spustit několika způsoby:
 
    .. code-block:: bash
 
-                   g.gui.dbmgr map=obce
+                   g.gui.dbmgr map=ulice
 
 Dialog správce atributových dat má *tři záložky*:
 
@@ -64,7 +64,7 @@ Dotazování
 ^^^^^^^^^^
 
 Dotazovat se na atributová data je možné v záložce :item:`Browse data`
-a to buď v základním (*simple*) anebo pokročilém (*advanced*) módu,
+a to buď v základním (*Simple*) anebo interaktivním (*Builder*) módu,
 viz kapitola :ref:`sql-builder`.
 
 *Základní mód* umožňuje definovat jednoduchou `where` podmínku typu
@@ -113,7 +113,7 @@ pomocí volby :menuselection:`Highlight selected features`.
 SQL Builder
 ^^^^^^^^^^^
 
-*Pokročilý* (advanced) mód umožňuje zadat :abbr:`SQL (Structured Query
+*Interaktivní* (Builder) mód umožňuje zadat :abbr:`SQL (Structured Query
 Language)` SELECT dotazy přímo do dialogu *správce atributových dat*.
 
 .. figure:: images/wxgui-dbmgr-adv-edit.png
@@ -132,7 +132,8 @@ pomocí *SQL Builderu*, tlačítko :kbd:`SQL Builder`.
 .. figure:: images/wxgui-dbmgr-sq-1.png
             :class: large
 
-            Správce atributových dat a SQL Builder.
+            Správce atributových dat a sestavení SQL SELECT dotazu v
+            okně SQL Builderu.
 
 .. youtube:: PByk8pipCz4
 

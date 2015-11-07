@@ -6,8 +6,8 @@
 Mapové elementy
 ---------------
 
-Do mapové okna lze přidat základní mapové elementy jako je legenda,
-směrová růžice, měřítko či textový popis. Tato funkcionalita je
+Do mapové okna lze přidat základní mapové elementy jako je *legenda*,
+*směrová růžice*, *měřítko* či *textový popis*. Tato funkcionalita je
 dostupná z nástrojové lišky mapového okna.
 
 .. figure:: images/add-map-element.png
@@ -117,9 +117,9 @@ umístěnou v mapovém okně.
 
       Chybně vykreslená legenda.
       
-   Písmo změníme z dialogu nastavení dostupného z menu
+   Písmo změníme v dialogu nastavení dostupného z menu
    :menuselection:`Settings --> Preferences` anebo z nástrojové lišty
-   *správce vrstev*
+   *správce vrstev*.
 
    .. figure:: images/lmgr-settings.png
 
@@ -168,7 +168,7 @@ Směrovou růžici lze do mapového okna přidat z jeho nástroje lišty:
 
    Přidání směrové růžice do mapového okna.
 
-Poté se do mapové okna umístí výchozí směrová růžice:
+Do mapové okna se umístí výchozí směrová růžice:
 
 .. figure:: images/narrow.png
             :class: small
@@ -177,8 +177,8 @@ Poté se do mapové okna umístí výchozí směrová růžice:
 	    Příklad směrové růžice.
 	    
 **Podobu směrové růřice** lze změnit z dialogu modulu
-:grasscmd:`d.northarrow` dostupného pomocí dvojkliku nad směrovou
-růžicí umístěnou v mapovém okně.
+:grasscmd:`d.northarrow` přes dvojklik nad směrovou růžicí umístěnou v
+mapovém okně.
 
 .. figure:: images/narrow-prop.png
    :class: middle
@@ -221,7 +221,7 @@ Měřítko lze do mapového okna přidat z jeho nástroje lišty:
 
    Přidání měřítka do mapového okna.
 
-Poté se do mapové okna umístí výchozí měřitko:
+Do mapové okna se umístí výchozí měřitko:
 
 .. figure:: images/scalebar.png
    :class: small
@@ -230,7 +230,7 @@ Poté se do mapové okna umístí výchozí měřitko:
    Vychozí měřítko.
    
 **Podobu měřítka** lze změnit z dialogu modulu :grasscmd:`d.barscale`
-dostupného pomocí dvojkliku nad měřítkem umístěnou v~mapovém okně.
+přes dvojklik nad měřítkem umístěným v~mapovém okně.
 
 .. figure:: images/scalebar-prop.png
    :class: middle
@@ -287,8 +287,8 @@ vlastnosti textového objektu.
 
    Příklad textového popisku v mapovém okně.
             
-Popisek lze **skrýt** opět pomocí výše uvedeného dialogu, který je
-dostupný pomocí dvojkliku nad daným textovým objektem v mapovém okně.
+Popisek lze **skrýt** opět pomocí výše uvedeného dialogu přes dvojklik
+nad daným textovým objektem v mapovém okně.
 
 .. figure:: images/remove-text.png
    :class: small

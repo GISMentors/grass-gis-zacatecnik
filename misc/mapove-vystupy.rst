@@ -20,9 +20,9 @@ lišty *správce vrstev*.
 
 .. note::
    
-   Jde o vlastní aplikaci, která nesouvisí s aktuální obsahem mapového
-   okna. Všechny vrstvy, které chceme, aby byly součástí mapového výstupu,
-   je třeba přidat do aplikace ručně.
+   Jde o samostatnou aplikaci, která nesouvisí s aktuální obsahem
+   mapového okna. Všechny vrstvy, které chceme, aby byly součástí
+   mapového výstupu, je třeba přidat do aplikace ručně.
 
 
 Ukázky

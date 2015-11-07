@@ -33,5 +33,5 @@ Ukázky
 
              Příklad modelu neřízené klasifikace družicových dat
 
-Další videa na `wiki projektu GRASS
+Další názorná videa na stránkách `wiki projektu GRASS
 <http://grasswiki.osgeo.org/wiki/WxGUI_Graphical_Modeler#Video_tutorials>`_.

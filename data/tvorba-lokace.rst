@@ -25,13 +25,42 @@ location`.
 
 Lokaci lze vytvořit několika různými postupy:
 
-#. výběrem kartografického zobrazení, referenčního elipsoidu
 #. pomocí :wikipedia:`EPSG` kódu
 #. na základě georeferencovaných dat
 #. na základě :wikipedia-en:`WKT <Simple_Features#Well-known_text>` či
    :wikipedia:`PRJ <Shapefile#Dopl.C5.88kov.C3.A9_soubory>` souboru
+#. výběrem kartografického zobrazení, referenčního elipsoidu
 #. definicí parametrů pro knihovnu :wikipedia-en:`PROJ.4`
 #. bez zadaní parametrů (pro negeoreferencovaná data)
+
+Většinou bude stačit vytvořit novou lokaci na základě EPSG kódu (viz
+tabulka níže) anebo ze vstupních geodat, pokud je máme k dispozici.
+
+.. only:: latex
+          
+   .. tabularcolumns:: |p{2cm}|p{6cm}|
+                       
+.. only:: html
+                                 
+   .. cssclass:: border
+
++----------------+----------------+---------------------+
+| EPSG           | Souřadnicivý systém                  |
++================+================+=====================+
+| :epsg:`5514`   | S-JTSK                               |
++----------------+----------------+---------------------+
+| :epsg:`4328`   | WGS-84                               |
++----------------+----------------+---------------------+
+| :epsg:`3857`   | Web Mercator                         |
++----------------+----------------+---------------------+
+| :epsg:`32632`  | UTM (zóna 32)                        |
++----------------+----------------+---------------------+
+| :epsg:`32633`  | UTM (zóna 33)                        |
++----------------+----------------+---------------------+
+| :epsg:`3835`   | S-42                                 |
++----------------+----------------+---------------------+
+| :epsg:`4258`   | ETRS-89                              |
++----------------+----------------+---------------------+
 
 ..
   .. figure:: images/wxgui-new-loc-methods.png
@@ -39,22 +68,25 @@ Lokaci lze vytvořit několika různými postupy:
                       
                       Metody tvorby lokace
 
-Níže uvedené postupy kombinují různé postupy tvorby lokace.
+Níže uvedené postupy ukazující tři nejpoužívanější metody vytvoření
+lokace.
 
 * :ref:`S-JTSK na základě EPSG kódu <lokace-sjtsk>`
-* :ref:`UTM na základě manuální definice <lokace-utm>`
-* :ref:`S-42 na základě manuální definice <lokace-s-42>`
 * :ref:`Pro data SRTM na základě geodat <lokace-srtm>`
-* :ref:`ETRS-89 na základě EPSG kódu <lokace-etrs89>`
 * :ref:`Lokace pro souřadnicově nepřípojená data (XY) <lokace-xy>`
+
+..
+   * :ref:`UTM na základě manuální definice <lokace-utm>`
+   * :ref:`S-42 na základě manuální definice <lokace-s-42>`
+   * :ref:`ETRS-89 na základě EPSG kódu <lokace-etrs89>`
 
 .. index::
    single: S-JTSK
 
 .. _lokace-sjtsk:
 
-Vytvoření lokace pro data v souřadnicovém systému S-JTSK
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Příklad vytvoření lokace pro data v souřadnicovém systému S-JTSK
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Na úvodní stránce průvodce vyplníme název lokace (*Project Location*) a
 volitelně i krátký popisek (*Optional Location Title*).
@@ -76,22 +108,22 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 .. note::
 
    :epsg:`5514` podporuje systém GRASS pouze pokud používate verzi
-   knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší. V~opačném případě musíte přidat
-   parametry pro S-JTSK do konfiguračního souboru ručně:
-
-   Na začátek souboru s definicí kódů EPSG (v případě OS
-   GNU/Linux bývá umístěn v :file:`/usr/share/proj/epsg`, u MS
-   Windows :file:`c:\\OSGeo4W\\share\\proj\\epsg`), přidáme
-   následující 2 řádky::
+   knihovny :wikipedia-en:`PROJ.4` 4.9 a vyšší (tuto informaci získáte
+   z menu :menuselection:`Help --> About system`). V~opačném případě
+   musíte přidat parametry pro S-JTSK do konfiguračního souboru ručně:
+   na začátek souboru s definicí kódů EPSG (v případě OS GNU/Linux
+   bývá umístěn v :file:`/usr/share/proj/epsg`, u MS Windows
+   :file:`c:\\OSGeo4W\\share\\proj\\epsg`), přidáme následující 2
+   řádky::
 
         # Krovak S-JTSK
         <5514> +proj=krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.28813972222222 +k=0.9999 \
 	+x_0=-0 +y_0=-0 +ellps=bessel +pm=ferro +to_meter=-1 +no_defs \
 	+towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56
-
-   Soubor uložte, zavřete a případně restartujte GRASS Location Wizard, aby
+   
+   Soubor uložte, zavřete a případně restartujte *GRASS Location Wizard*, aby
    došlo ke znovu načtení databáze kódů EPSG.
-
+   
 .. figure:: images/wxgui-loc-s-jtsk-3.png
 	    :scale-latex: 60
 
@@ -138,98 +170,99 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 
       grass70 -c EPSG:5514:3 /opt/grassdata/skoleni-s-jstk
 
-.. index::
-   single: UTM
+..
+ .. index::
+     single: UTM
 
-.. _lokace-utm:
+  .. _lokace-utm:
 
-Vytvoření lokace pro data v souřadnicovém systému UTM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: images/wxgui-loc-utm-0.png
+  Vytvoření lokace pro data v souřadnicovém systému UTM
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  .. figure:: images/wxgui-loc-utm-0.png
 
-            Vytvoření lokace pro UTM (krok 1).
+              Vytvoření lokace pro UTM (krok 1).
 
-V tomto případě nepoužijeme EPSG kód, nýbrž souřadnicový systém
-definujeme manuálně.
+  V tomto případě nepoužijeme EPSG kód, nýbrž souřadnicový systém
+  definujeme manuálně.
 
-.. note::
+  .. note::
 
-   Pokud bysme chtěli použít EPSG kód, tak jde o :epsg:`32633` (33N).
+     Pokud bysme chtěli použít EPSG kód, tak jde o :epsg:`32633` (33N).
 
-.. figure:: images/wxgui-loc-utm-1.png
+  .. figure:: images/wxgui-loc-utm-1.png
 
-            Vytvoření lokace pro UTM (krok 2).
+              Vytvoření lokace pro UTM (krok 2).
 
-.. figure:: images/wxgui-loc-utm-2.png
+  .. figure:: images/wxgui-loc-utm-2.png
 
-            Vytvoření lokace pro UTM (krok 3).
+              Vytvoření lokace pro UTM (krok 3).
 
-.. figure:: images/wxgui-loc-utm-3.png
-            
-            Vytvoření lokace pro UTM (krok 4). Zadáme 33. zónu,
-            severní polokoule.
+  .. figure:: images/wxgui-loc-utm-3.png
 
-.. raw:: latex
+              Vytvoření lokace pro UTM (krok 4). Zadáme 33. zónu,
+              severní polokoule.
 
-   \clearpage
+  .. raw:: latex
 
-.. figure:: images/wxgui-loc-utm-4.png
+     \clearpage
 
-            Vytvoření lokace pro UTM (krok 5). Geodetické datum
-            uvedeme 'WGS-84'.
+  .. figure:: images/wxgui-loc-utm-4.png
 
-.. figure:: images/wxgui-loc-utm-5.png
+              Vytvoření lokace pro UTM (krok 5). Geodetické datum
+              uvedeme 'WGS-84'.
 
-            Vytvoření lokace pro UTM (krok 6).
+  .. figure:: images/wxgui-loc-utm-5.png
 
-.. index::
-   single: S-42
+              Vytvoření lokace pro UTM (krok 6).
 
-.. _lokace-s-42:
+  .. index::
+     single: S-42
 
-Vytvoření lokace pro data v souřadnicovém systému S-42
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: images/wxgui-loc-s42-0.png
+  .. _lokace-s-42:
 
-            Vytvoření lokace pro S-42 (krok 1).
+  Vytvoření lokace pro data v souřadnicovém systému S-42
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  .. figure:: images/wxgui-loc-s42-0.png
 
-.. figure:: images/wxgui-loc-utm-1.png
+              Vytvoření lokace pro S-42 (krok 1).
 
-            Vytvoření lokace pro S-42 (krok 2).
+  .. figure:: images/wxgui-loc-utm-1.png
 
-.. raw:: latex
+              Vytvoření lokace pro S-42 (krok 2).
 
-   \newpage
+  .. raw:: latex
 
-.. note::
+     \newpage
 
-   Pokud bysme chtěli použít EPSG kód, tak jde o :epsg:`3835`.
+  .. note::
 
-.. figure:: images/wxgui-loc-s42-2.png
+     Pokud bysme chtěli použít EPSG kód, tak jde o :epsg:`3835`.
 
-            Vytvoření lokace pro S-42 (krok 3).
+  .. figure:: images/wxgui-loc-s42-2.png
 
-.. figure:: images/wxgui-loc-s42-3.png
+              Vytvoření lokace pro S-42 (krok 3).
 
-            Vytvoření lokace pro S-42 (krok 4).
+  .. figure:: images/wxgui-loc-s42-3.png
 
-.. figure:: images/wxgui-loc-s42-4.png
+              Vytvoření lokace pro S-42 (krok 4).
 
-            Vytvoření lokace pro S-42 (krok 5).
+  .. figure:: images/wxgui-loc-s42-4.png
 
-.. figure:: images/wxgui-loc-s42-5.png
-            :class: small
-            :scale-latex: 50
+              Vytvoření lokace pro S-42 (krok 5).
 
-            Vytvoření lokace pro S-42 (krok 6).
+  .. figure:: images/wxgui-loc-s42-5.png
+              :class: small
+              :scale-latex: 50
 
-.. figure:: images/wxgui-loc-s42-6.png
+              Vytvoření lokace pro S-42 (krok 6).
 
-            Vytvoření lokace pro S-42 (krok 7).
+  .. figure:: images/wxgui-loc-s42-6.png
 
-.. raw:: latex
+              Vytvoření lokace pro S-42 (krok 7).
 
-   \clearpage
+  .. raw:: latex
+
+     \clearpage
 
 .. _lokace-srtm:
 
@@ -265,39 +298,40 @@ Vytvoření lokace na základě geodat
 
             Vytvoření lokace pro data SRTM (import dat, krok 2).
 
-.. index::
-   single: EPSG
+..
+  .. index::
+     single: EPSG
 
-.. _lokace-etrs89:
+  .. _lokace-etrs89:
 
-Vytvoření lokace na základě EPSG kódu
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Vytvoření lokace na základě EPSG kódu
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: images/wxgui-loc-epsg-0.png
+  .. figure:: images/wxgui-loc-epsg-0.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 1).
+              Vytvoření lokace na základě EPSG kódu (krok 1).
 
-.. figure:: images/wxgui-loc-epsg-1.png
+  .. figure:: images/wxgui-loc-epsg-1.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 2).
+              Vytvoření lokace na základě EPSG kódu (krok 2).
 
-.. figure:: images/wxgui-loc-epsg-2.png
+  .. figure:: images/wxgui-loc-epsg-2.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 3).
+              Vytvoření lokace na základě EPSG kódu (krok 3).
 
-.. figure:: images/wxgui-loc-epsg-3.png
+  .. figure:: images/wxgui-loc-epsg-3.png
 
-            Vytvoření lokace na základě EPSG kódu (krok 4).
+              Vytvoření lokace na základě EPSG kódu (krok 4).
 
-.. raw:: latex
+  .. raw:: latex
 
-   \newpage
+     \newpage
 
-.. notecmd:: Vytvoření lokace pří startu systému GRASS
+  .. notecmd:: Vytvoření lokace pří startu systému GRASS
 
-   .. code-block:: bash
+     .. code-block:: bash
 
-                   grass70 -c EPSG:3035 /opt/grassdata/eu-dem
+                     grass70 -c EPSG:3035 /opt/grassdata/eu-dem
       
 .. _lokace-xy:
 

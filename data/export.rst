@@ -1,16 +1,18 @@
 .. index::
    pair: geodata; export
 
-Export do externích formátů
----------------------------
+Export do ostatních GIS formátů
+-------------------------------
 
 Rastrové mapy lze ze systému GRASS exportovat do externích formátů
 pomocí modulu :grasscmd:`r.out.gdal`. Pro export vektorových map
 slouží modul :grasscmd:`v.out.ogr`.
 
-Výše zmíněné moduly používají pro export dat knihovnu
-:wikipedia:`GDAL`, která v režimu zápisu podporuje téměř 200
-rastrových a vektorových formátů.
+.. note::
+   
+   Výše zmíněné moduly používají pro export dat knihovnu
+   :wikipedia:`GDAL`, která v režimu zápisu podporuje téměř 200
+   rastrových a vektorových formátů.
 
 .. index::
    pair: rastrová data; export
@@ -85,7 +87,7 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 Export obsahu mapové okna do obrázku
 ====================================
 
-Kromě exportu do GIS formátu je možné uložit i obsah mapové okna do
+Kromě exportu dat do GIS formátů je možné uložit obsah mapové okna do
 obrazového souboru jako je např. PNG. Tato funkce je dostupná z
 nástrojé lišty *mapového okna*.
 
@@ -93,10 +95,10 @@ nástrojé lišty *mapového okna*.
             :class: large
 	    :scale-latex: 70
 
-	    Export obsahu mapového okna do obrázku
+	    Export obsahu mapového okna do obrázku.
 	    
 .. figure:: images/map-display-image-1.png
-            :class: small
+            :width: 200px
 	    :scale-latex: 55
 
             V následující dialogu zvolíme dimenzi výstupního obrázku.
@@ -105,5 +107,5 @@ nástrojé lišty *mapového okna*.
             :class: large
 	    :scale-latex: 80
 
-            Příklad výsledku včetně :ref:`legendy, měřítka a textového
-            popisku <mapove-elementy>`.
+            Příklad výsledku včetně legendy, měřítka a textového
+            popisku (viz kapitola :ref:`mapove-elementy`).

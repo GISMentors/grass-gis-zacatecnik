@@ -8,8 +8,8 @@ Vytvoření vlastní lokace
 ------------------------
 
 Novou lokaci lze vytvořit pomocí průvodce, který je dostupný z uvítací
-obrazovky systému GRASS. Spustíme GRASS a v rámci uvítací obrazovky
-vybereme :item:`Location wizard` (průvodce tvorbou lokace).
+obrazovky systému GRASS. Spustíme GRASS a sekci *Select GRASS
+Location* stiskneme tlačítko :item:`New`.
 
 .. figure:: images/wxgui-loc-s-jtsk-0.png
 

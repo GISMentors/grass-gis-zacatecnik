@@ -12,7 +12,7 @@ mapu do tohoto formátu umožňuje modul :grasscmd:`r.pack`
 (:menuselection:`File --> Export raster map --> Pack raster map`), pro
 vektorová data je k dispozici modul :grasscmd:`v.pack`
 (:menuselection:`File --> Export vector map --> Pack vector
-map`). Rozbalit takto vytvořený soubor (tzv. `pack`) umožňují modulu
+map`). Rozbalit takto vytvořený soubor (tzv. `pack`) umožňují moduly
 :grasscmd:`r.unpack` (:menuselection:`File --> Import raster map -->
 Unpack raster map`) a :grasscmd:`v.unpack` (:menuselection:`File -->
 Import vector map --> Unpack vector map`).
@@ -38,7 +38,10 @@ Import vector map --> Unpack vector map`).
 
    Takto zabalenou rastrovou či vektorovou mapu lze rozbalit pouze v
    lokaci se stejnými souřadnicovým systémem. Pokud tato podmínka není
-   splněna, tak rozbalení skončí chybou, viz obr. níže.
+   splněna, tak rozbalení skončí chybou, viz
+   :num:`obr. #r-unpack-proj-match`.
+
+   .. _r-unpack-proj-match:
 
    .. figure:: images/r-unpack-proj-match.png
       :scale-latex: 45

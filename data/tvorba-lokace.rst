@@ -36,6 +36,8 @@ Lokaci lze vytvořit několika různými postupy:
 Většinou bude stačit vytvořit novou lokaci na základě EPSG kódu (viz
 tabulka níže) anebo ze vstupních geodat, pokud je máme k dispozici.
 
+.. _epsg_cr:
+
 .. only:: latex
           
    .. tabularcolumns:: |p{2cm}|p{6cm}|

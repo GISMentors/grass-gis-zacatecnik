@@ -11,11 +11,11 @@ Georeferencování
 Souřadnicové připojení geodat (tzv. georeferencování) umožňuje v
 systému GRASS nástroj :grasscmd:`GCP Manager <wxGUI.gcp>` dostupný z
 menu :menuselection:`File --> Georectify` anebo přímo z nástroje lišty
-*správce vrstev* .
+*správce vrstev*.
 
 .. figure:: images/lmgr-georectify.png
 
-   Spuštění nástroje pro georeferencování dat ze správce vrstvev.
+   Spuštění nástroje pro georeferencování dat ze správce vrstev.
 
 Nástroj je dále dostupný z příkazové řádky jako modul
 :grasscmd:`g.gui.gcp`.
@@ -27,12 +27,11 @@ Postup
 ======
 
 Na vstupu tedy máme souřadnicově nepřipojená rastrová či vektorová
-data. Pokud jsou tato data k dispozici v některém z externích formátu
-jako je např. GeoTIFF či Esri Shapefile musíme je do systému GRASS
-nejprve naimportovat. Pro tento účel se nejprve :ref:`vytvoří
-lokace s matematickým souřadnicovým systémem <lokace-xy>`. Do této
-lokace data :ref:`naimportujeme <import>` a~poté se :ref:`vrátíme zpět
-do lokace <loc-switch>`, do které chceme data georeferencovat.
+data. Tato data nejprve do systému GRASS naimportujeme. Pro tento účel
+se nejprve :ref:`vytvoří lokace s matematickým souřadnicovým systémem
+<lokace-xy>`. Do této lokace data :ref:`naimportujeme <import>` a~poté
+se :ref:`vrátíme zpět do lokace <loc-switch>`, do které chceme data
+georeferencovat.
 
 Následně na to spustíme *GCP Manager* a v průvodci postupně vybereme:
 

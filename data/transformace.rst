@@ -9,13 +9,28 @@
 Geodata v různých souřadnicových systémech
 ------------------------------------------
 
-V případě, že chcete do aktuální lokace importovat geodata jejichž
-souřadnicový systém se liší od souřadnicového systému aktuální lokace
-(viz :item:`Projection match` na obr. níže), tak je třeba několik kroků:
+.. important:: **Tento postup se od verze GRASS 7.0.2 výrazně
+   zjednodušuje**. GRASS od této verze poskytuje nástroj, který
+   nejen vstupní geodata naimportuje do aktuálního mapsetu, ale také
+   provede jejich transformaci v případě, že se souřadnicové systémy
+   vstupních geodat a dané lokace liší. Jedna se moduly
+   :grasscmd:`r.import` a :grasscmd:`v.import`.
+
+   .. figure:: images/v-import-0.png
+               :class: middle
+              
+   .. figure:: images/v-import-1.png
+               :class: middle
+              
+V případě, že se souřadnicový systém vstupních geodat a dané lokace
+liší (viz :item:`Projection match` na :num:`obr. #import-no-proj`)
+nelze import provést přímo. Postup vyžaduje hned několik kroků.
+
+.. _import-no-proj:
 
 .. figure:: images/import-no-proj.png
    
-   Data nejsou v souřadnicovém systému lokace. Je nutné je
+   Vstupní data nejsou v souřadnicovém systému lokace. Je nutné je
    transformovat.
 
 Postup
@@ -61,7 +76,7 @@ již hodnotu ``Yes``.
 
 .. figure:: images/import-osm.png
 
-   Souřadnicový systém dat a lokace se schoduje.
+   Souřadnicový systém dat a lokace se shoduje.
 
 .. _loc-switch:
             
@@ -94,10 +109,10 @@ cílová.
 Transformace dat do cílové lokace
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Transformovat **rastrová data** umožňuje modul :grasscmd:`r.proj`
+Transformovat *rastrová data* umožňuje modul :grasscmd:`r.proj`
 dostupný z menu :menuselection:`Raster --> Develop raster map -->
 Reproject raster map from different GRASS location`, podobně pro
-**vektorová data** existuje :grasscmd:`v.proj` (:menuselection:`Vector
+*vektorová data* existuje :grasscmd:`v.proj` (:menuselection:`Vector
 --> Develop vector map --> Reproject vector map from different GRASS
 location`).
 

@@ -35,8 +35,8 @@ Novou vektorovou mapu vytvoříme z menu
 Vytvoření a úprava atributové tabulky
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Nástroj pro editaci atributové tabulky spustíme z kontextového menu vektorové mapy
-:item:`Show attribute data`.
+Nástroj pro editaci atributové tabulky spustíme z kontextového menu
+vektorové mapy :item:`Show attribute data`.
 
 .. figure:: images/edit-attributes-01.png
    :class: middle
@@ -67,14 +67,14 @@ attributes`, více v sekci :ref:`editace atributových dat
 Editace vektorové mapy
 ======================
 
-Existující vektorovou mapu můžeme začít editovat z kontextového menu 
-:menuselection:`Start editing`.
+Existující vektorovou mapu můžeme začít editovat z kontextového menu
+:item:`Start editing`.
 
 .. figure:: images/edit-vector-01.png
    :class: middle
    :scale-latex: 50
      
-   Editace vektorových dat z kontextového menu správce vrstev.
+   Spuštění editace vektorových dat z kontextového menu správce vrstev.
     
 Nyní můžeme v mapovém okně zvolit nástroj kreslení linie (nebo kterýkoliv jiný)
 a nakreslit požadovaný tvar.

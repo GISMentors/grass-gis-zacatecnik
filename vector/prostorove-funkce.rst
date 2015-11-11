@@ -7,8 +7,8 @@ Prostorové funkce
 
 .. youtube:: YWRHFylZCuo
 
-             Příklad základních prostorových funkcí (buffer, clip,
-             erase) v kombinaci s atributovými dotazy
+   Příklad základních prostorových funkcí (buffer, clip, erase) v
+    kombinaci s atributovými dotazy
 
 .. index::
    single: v.extract
@@ -19,10 +19,10 @@ Prostorové funkce
 Výběr z vektorové mapy
 ======================
 
-Vybírat prvky z vektorové mapy můžeme selektivně podle jejich
-identifikátorů anebo na základě jejich atributů.  Nástroj pro výběr
-:grassCmd:`v.extract` můžeme spustit z menu :menuselection:`Vector -->
-Feature selection --> Select by attributes`.
+Vybírat geoprvky z vektorové mapy můžeme selektivně podle jejich
+kategorií a atributů.  Nástroj pro výběr :grassCmd:`v.extract` můžeme
+spustit z menu :menuselection:`Vector --> Feature selection --> Select
+by attributes`.
 
 .. note:: Ujistěte se, že máte :ref:`v pracovní cestě <g-mapsets>`
     přidány všechny *mapsety* tak, abyste mohli pracovat s daty v nich

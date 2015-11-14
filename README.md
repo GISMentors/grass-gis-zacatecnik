@@ -1,5 +1,5 @@
-Školení GRASS GIS pro začínající uživatele
-==========================================
+Školení GRASS GIS pro začátečníky
+=================================
 
 http://training.gismentors.eu/grass-gis-zacatecnik
 

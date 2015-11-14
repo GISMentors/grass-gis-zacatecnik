@@ -58,33 +58,26 @@ upravovat ho a tyto změny či opravy šířit dál.
       Text školení je dostupný i v tisknutelné formě `PDF
       <./skoleni-grass-gis-zacatecnik.pdf>`_.
    
-.. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
-
 .. important:: Školení je zaměřeno na aktuální verzi `GRASS 7.0
                <http://grass.osgeo.org/download/software/#g70x>`_. Ve
                starší verzi GRASS 6.4 není zaručena funkčnost
                uvedených příkladů, případné rozdíly mezi těmito
                verzemi jsou vždy explicitně zdůrazněny. Dále
-               předpokládáme zapnutou *anglickou lokalizaci*, viz
-               :ref:`volba lokalizace <volba-lokalizace>`.
+               předpokládáme zapnutou *anglickou lokalizaci*, viz kapitola
+               :ref:`volba-lokalizace`.
 
 .. index::
    pair: datové sady; ke stažení
 
-.. note::
+.. notedata::
 
-   Pro účely školení byla vytvořena vlastní lokace s daty pocházejících
-   z otevřených či veřejných zdrojů jako je `EU-DEM
-   <http://www.eea.europa.eu/data-and-maps/data/eu-dem>`_, `RÚIAN
-   <http://www.cuzk.cz/ruian/RUIAN.aspx>`_, `OpenStreetMap
-   <http://wiki.openstreetmap.org/wiki/Main_Page>`_ a `Dibavod
-   <http://www.dibavod.cz/>`_.
-
-   **GRASS lokace pro školení** je stažitelná jako `zip archiv
+   *GRASS lokace GISMentors* je stažitelná jako `zip archiv
    <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (830
    MB), družicové snímky `Landsat
    <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
    (985 MB).
+
+.. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
 
 .. only:: html
              

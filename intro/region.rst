@@ -18,7 +18,7 @@ východ-západ. Pro 3D data jsou definovány hraniční souřadnice a
 prostorové rozlišení navíc ve vertikálním směru (top-bottom). Vzniká
 tak pravidelná mřížka jejíž buňky mají čtvercový (prostorové rozlišení
 ve směru sever-jih a~východ-západ totožnou hodnotu) nebo obdélníkový
-tvar, viz :num:`region2d`.
+tvar, viz :num:`#region2d`.
 
 .. _region2d:
          

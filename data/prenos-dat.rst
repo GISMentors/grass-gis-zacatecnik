@@ -39,7 +39,7 @@ Import vector map --> Unpack vector map`).
    Takto zabalenou rastrovou či vektorovou mapu lze rozbalit pouze v
    lokaci se stejnými souřadnicovým systémem. Pokud tato podmínka není
    splněna, tak rozbalení skončí chybou, viz
-   :num:`obr. #r-unpack-proj-match`.
+   :num:`#r-unpack-proj-match`.
 
    .. _r-unpack-proj-match:
 

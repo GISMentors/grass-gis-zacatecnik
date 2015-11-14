@@ -23,7 +23,7 @@ Geodata v různých souřadnicových systémech
                :class: middle
               
 V případě, že se souřadnicový systém vstupních geodat a dané lokace
-liší (viz :item:`Projection match` na :num:`obr. #import-no-proj`)
+liší (viz :item:`Projection match` na :num:`#import-no-proj`)
 nelze import provést přímo. Postup vyžaduje hned několik kroků.
 
 .. _import-no-proj:

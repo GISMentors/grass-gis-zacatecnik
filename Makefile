@@ -115,6 +115,7 @@ latex:
 		-e 's/\\DUspan{map}/\\texttt/g' \
 		-e 's/\\DUspan{item}/\\colorbox[rgb]{0.80,0.80,0.80}/g' \
 		-e 's/\\DUspan{secnotoc}/\\textrm/g' \
+		-e 's/\\DUspan{}//g' \
 		$(BUILDDIR)/latex/*.tex
 	@echo
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."

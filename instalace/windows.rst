@@ -72,7 +72,7 @@ Nativní instalátor
             :scale-latex: 50
             
             Po startu se objeví úvodní obrazovka systému GRASS pro
-	    výběr tzv. :ref:`lokace a mapsetu <struktura-dat>`.
+	    výběr, viz kapitola :ref:`struktura-dat`.
 
 .. raw:: latex
 

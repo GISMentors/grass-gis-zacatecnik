@@ -89,10 +89,10 @@ upravovat ho a tyto změny či opravy šířit dál.
    :maxdepth: 2
 
    intro/index
-   raster/index
-   vector/index
+   rastrova_data/index
+   vektorova_data/index
    data/index
-   misc/index
+   ruzne/index
 
 *******
 Dodatky

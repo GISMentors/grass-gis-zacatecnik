@@ -50,7 +50,8 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 
 .. figure:: images/help_loc_struct.png
             :class: middle
-            
+            :scale-latex: 72
+      
             Struktura adresáře s geodaty, vztah lokace a mapsetů,
             umístění souborů s daty pro různé typy map (zdroj: `manuál
             systému GRASS
@@ -61,10 +62,6 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    GRASS DataBase je definovaná proměnnou prostředí
    :envvar:`GISDBASE`, lokace :envvar:`LOCATION_NAME` a mapset
    proměnnou :envvar:`MAPSET`, viz modul :grasscmd:`g.gisenv`.
-
-.. raw:: latex
-
-   \newpage
 
 .. note:: **Obvyklé umístění adresáře s geodaty**
       
@@ -89,7 +86,8 @@ lokace. Ve výchozím nastavení je ve vyhledávací cestě vždy umístěn
 aktuální mapset a mapset `PERMANENT`.
 
 .. figure:: images/d-rast-user1.png
-
+   :scale-latex: 55
+              
    Přidání nové rastrové mapy do mapového okna, viditelné
    jsou pouze dva mapsety - aktuální (`user1`) a~mapset `PERMANENT`.
 
@@ -98,7 +96,7 @@ GRASS working environment --> Mapset access`.
 
 .. figure:: images/mapset-access.png
    :class: small
-   :scale-latex: 50
+   :scale-latex: 45
 
    Přidání mapsetu `ruian` do vyhledávací cesty.
 

@@ -10,7 +10,7 @@ platformách, které mají blízko k :wikipedia:`Unixovým <Unix>`
 operačním systémům.
 
 .. figure:: images/grass-cerl-programmers.png
-   :scale-latex: 65 
+   :scale-latex: 60 
         
    Programátor systému GRASS Dave Gerdes :abbr:`USA-CERL (US Army
    Construction Engineering Research Laboratory)` před počítačem Compaq

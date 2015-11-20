@@ -53,17 +53,23 @@ Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
 
 #. z menu správce vrstev
 
+   .. _wxgui-menu-r-buffer:
+
    .. figure:: images/wxgui-menu-r-buffer.png
 
                Spuštění modulu :grasscmd:`r.buffer` z menu správce vrstev.
 
 #. z nástroje :item:`Search module` správce vrstev
 
+   .. _wxgui-search-r-buffer:
+   
    .. figure:: images/wxgui-search-r-buffer.png
                
                Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`.
 
 #. z příkazové řádky správce vrstev
+
+   .. _wxgui-console-r-buffer:
 
    .. figure:: images/wxgui-console-r-buffer.png
 	       :class: middle
@@ -77,6 +83,8 @@ Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
    přímo. Pokud tato podmínka není splněna, zobrazí se dialog
    nástroje.
 
+   .. _wxgui-console-r-buffer-launch:
+           
    .. figure:: images/wxgui-console-r-buffer-launch.png
 
                Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů.
@@ -115,7 +123,7 @@ Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS hel
       g.manual r.buffer
                    
 .. figure:: images/r-buffer-help.png
-   :scale-latex: 55
+   :scale-latex: 50
 
    Nápověda k jednotlivým modulům je dostupná i z dialogového okna.
 

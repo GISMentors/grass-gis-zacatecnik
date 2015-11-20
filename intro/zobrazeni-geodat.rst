@@ -20,7 +20,8 @@ objeví *správce vrstev* (Layer Manager) a *mapové okno* (Map Display).
 
 .. figure:: images/grass-gui-launch.png
             :class: large
-
+            :scale-latex: 85
+                 
             Základní komponenty GUI systému GRASS - správce vrstev
             :fignote:`(1)` a mapové okno :fignote:`(2)`.
 
@@ -31,7 +32,7 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
 .. raw:: latex
 
    \newpage
-
+         
 .. note::
 
    Pokud se v mapovém okně nezobrazují žádná data, je nutné nastavit
@@ -39,7 +40,8 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
 
    .. figure:: images/map-display-full-zoom.png
                :class: middle
-
+               :scale-latex: 65
+                    
                Nastavení pohledu mapového okna na aktuálně vybranou
                mapovou vrstvu.
 
@@ -47,8 +49,9 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
    nastavit v :menuselection:`Settings --> Preferences`.
 
    .. figure:: images/wxgui-settings-autozoom.png
-
-               Nastavení automatické změny pohledu při přidání nové mapové vrstvy.
+      :scale-latex: 50
+      
+      Nastavení automatické změny pohledu při přidání nové mapové vrstvy.
 
 .. noteadvanced::
 
@@ -62,7 +65,7 @@ přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-da
              
       .. figure:: images/gif-example.gif
          :class: middle
-              
+                    
          Příklad vykreslení série prostorových analýz do formátu
          GIF
 
@@ -85,17 +88,14 @@ přidat do správce vrstev, resp. mapového okna čtyřmi různými způsoby:
                Přidání rastrové mapy z nástrojové lišty správce vrstev.
 
    .. figure:: images/wxgui-d-rast.png
-
+               :scale-latex: 50
+                    
                Volba rastrové mapy.
 
 #. z menu :menuselection:`File --> Map display --> Add raster`
 
 #. pomocí klávesové zkratky :kbd:`Ctrl+Shift+R`
 
-   .. raw:: latex
-           
-            \newpage
-  
 #. z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.rast`
 
    .. figure:: images/wxgui-console.png
@@ -116,13 +116,10 @@ nástrojové lišty nebo z příkazové řádky správce vrstev.
             Přidání ostatních rastrových dat z nástrojové lišty správce vrstev.
 
 .. figure:: images/wxgui-toolbar-raster-misc-1.png
-
+            :scale-latex: 50
+      
             Menu pro přidání rastrových dat.
 
-.. raw:: latex
-
-   \newpage
-   
 Jde o následující typy rastrových dat:
 
 * 3D rastrová data
@@ -134,7 +131,7 @@ Jde o následující typy rastrových dat:
 
 .. figure:: images/wxgui-d-rgb.png
             :class: large
-            :scale-latex: 80
+            :scale-latex: 65
                  
             Příklad zobrazení barevné syntézy kanálů :wikipedia:`Landsat 8 ETM <Landsat>`
             z mapsetu `landsat` ve skutečných barvách.
@@ -151,7 +148,8 @@ Podobně lze přidat vektorová data (tzv. *vektorovou mapu*):
 #. z nástrojové lišty správce vrstev:
 
    .. figure:: images/wxgui-toolbar-vector.png
-            
+               :scale-latex: 50
+                    
                Přidání vektorové mapy z nástrojové lišty správce vrstev.
 
    .. figure:: images/wxgui-d-vect.png

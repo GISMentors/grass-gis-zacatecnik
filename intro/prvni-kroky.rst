@@ -36,7 +36,7 @@ operačního systému.
             Spuštění systému GRASS v Ubuntu
 
 .. figure:: ../instalace/images/wingrass-4.png
-            :scale-latex: 35
+            :scale-latex: 40
                  
             Spuštění systému GRASS z nabídky *Start* v MS Windows.
 
@@ -64,7 +64,7 @@ systému. Po jejich zadaní lze pokračovat dále (tlačítko
 .. _spusteni-grass:
 
 .. figure:: images/welcome-screen.png
-            :scale-latex: 55
+            :scale-latex: 45
 
             Úvodní dialog systému GRASS pro výběr adresáře s geodaty
             :fignote:`(1)`, lokace :fignote:`(2)`, mapsetu

@@ -56,7 +56,7 @@ Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz
 
 .. figure:: images/grass-ubuntu-launch.png
             :class: middle
-            :scale-latex: 70
+            :scale-latex: 85
                  
             Spuštění systému GRASS v Ubuntu
 

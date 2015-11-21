@@ -37,13 +37,13 @@ lišty:
 
 .. figure:: images/add-legend.png
    :class: large
-   :scale-latex: 50
+   :scale-latex: 65
 
    Přidání legendy do mapového okna.
 
 .. figure:: images/add-legend-0.png
    :class: large
-   :scale-latex: 50
+   :scale-latex: 75
 
    Pokud je ve *správci vrstev* aktuálně vybraná rastrová mapa, tak se
    automaticky legenda zobrazí pro ni.

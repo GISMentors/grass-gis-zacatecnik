@@ -6,12 +6,14 @@ Funkcionalita interaktivního dotazování je dostupná z nástrojové lišty
 
 .. figure:: images/map-display-query.png
    :class: middle
-
+   :scale-latex: 65
+              
    Interaktivní dotazování.
 
 .. figure:: images/raster-query.png
    :class: large
-      
+   :scale-latex: 85
+              
    Podle typu aktuálně zvolené mapové vrstvy ve *správci vrstev*
    :fignote:`(1)` se zobrazí informace rastrového :fignote:`(2)` či
    vektorového charakteru.
@@ -43,7 +45,7 @@ Výstup pro rastrová data obsahuje:
 * výpis připojených atributů :fignote:`(2)`.
 
 .. figure:: images/vector-query-result.png
-   :scale-latex: 60
+   :scale-latex: 50
 
    Příklad dotazu na vektorová data.
 

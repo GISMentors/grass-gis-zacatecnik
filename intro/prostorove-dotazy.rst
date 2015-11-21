@@ -11,7 +11,8 @@ vztahů, zajišťuje modul :grasscmd:`v.select` (:menuselection:`Vector
 
 .. figure:: images/wxgui-v-select-menu.png
             :class: middle
-
+            :scale-latex: 65
+                 
 Systém GRASS podporuje následující prostorové operátory:
                     
 * *equals* - geoprvky jsou totožné
@@ -46,6 +47,10 @@ operátor *contains*) požární stanice (vektorová mapa
 .. figure:: images/v-select.png
 
    Spuštění modulu :grasscmd:`v.select`.
+
+.. raw:: latex
+
+   \newpage
 
 .. figure:: images/wxgui-v-select-result.png
    :class: large

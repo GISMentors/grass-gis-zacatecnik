@@ -82,6 +82,10 @@ viz kapitola :ref:`sql-builder`.
 
             Jednoduchý atributový doraz (krok 3 - určení hodnoty pro where podmínku).
 
+.. raw:: latex
+
+   \clearpage
+
 .. figure:: images/wxgui-dbmgr-simple-3.png
 
             Jednoduchý atributový doraz - zobrazení výsledku.
@@ -89,10 +93,6 @@ viz kapitola :ref:`sql-builder`.
 .. note:: Vybírat vektorové geoprvky na základě jejich atributů lze i
           pomocí modulu :grasscmd:`v.extract`, více informací v
           kapitole :ref:`v-extract`.
-
-.. raw:: latex
-
-   \newpage
 
 Zvýraznění výběru v mapovém okně
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -131,9 +131,14 @@ pomocí *SQL Builderu*, tlačítko :kbd:`SQL Builder`.
 
 .. figure:: images/wxgui-dbmgr-sq-1.png
             :class: large
-
+            :scale-latex: 85
+                 
             Správce atributových dat a sestavení SQL SELECT dotazu v
             okně SQL Builderu.
+
+.. raw:: latex
+
+   \newpage
 
 .. youtube:: PByk8pipCz4
 

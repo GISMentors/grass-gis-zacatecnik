@@ -23,7 +23,7 @@ tvar, viz :num:`#region2d`.
 .. _region2d:
          
 .. figure:: images/region2d.png
-   :scale-latex: 35
+   :scale-latex: 45
               
    Mřížka výpočetního regionu pro 2D data.
 
@@ -61,8 +61,12 @@ Ve většině případů stačí nastavit výpočetní region na základě rastr
 či vektorové mapy. Toto nastavení je dostupné z~kontextového menu
 správce vrstev.
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/wxgui-set-region-from-map.png
-   :scale-latex: 40
+   :scale-latex: 45
               
    Nastavení výpočetního regionu na základě rastrové mapy.
 
@@ -76,7 +80,8 @@ Zároveň je možné vybrat pro nastavení výpočetního regionu i více
 rastrových či vektorových map najednou.
 
 .. figure:: images/wxgui-set-region-from-maps.png
-
+   :scale-latex: 50
+              
    Nastavení výpočetního regionu na základě více vybraných mapových vrstev.
 
 .. notecmd:: Nastavení regionu na základě vektorových map
@@ -95,7 +100,8 @@ rastrových či vektorových map najednou.
    
 .. figure:: images/zoom-menu.png
    :class: middle
-           
+   :scale-latex: 65
+              
    Z nástrojové lišty mapového okna lze navíc výpočetní region
    nastavit podle aktuálního pohledu či zcela interaktivně.
 
@@ -103,10 +109,6 @@ rastrových či vektorových map najednou.
    :class: middle
 
    Příklad definice hranic výpočetního regionu interaktivně.
-
-.. raw:: latex
-	 
-   \newpage
 
 Pokročilé nastavení výpočetního regionu
 =======================================
@@ -130,16 +132,16 @@ rozlišení je určeno z rastrové mapy :map:`dmt`.
               
    Nastavení regionu na základě existujících dat.
 
+.. raw:: latex
+
+   \newpage
+   
 .. figure:: images/wxgui-mapdisplay-region.png
    :class: middle
    :scale-latex: 50
               
    Kontrola nastavení výpočetního regionu v mapovém okně.
 
-.. raw:: latex
-
-   \clearpage
-   
 Dále je možno nastavit hraniční souřadnice explicitně, např. severní
 souřadnici na '1000' (v mapových jednotkách) anebo jako offset
 's+1000' (aktuálně nastavená jižní souřadnice + 1000 mapových
@@ -175,7 +177,7 @@ Aktuální nastavení výpočetního regionu lze vytisknout pomocí modulu
 :grassCmd:`g.region` s přepínačem :option:`-p`.
 
 .. figure:: images/wxgui-display-region-menu.png
-   :scale-latex: 70
+   :scale-latex: 60
 
    Zobrazení aktuálního výpočetního regionu z menu správce vrstev.
 
@@ -197,9 +199,13 @@ mapového okna (volba :item:`Comp. region`).
            
    Volby stavové lišty mapového okna.
 
+.. raw:: latex
+
+   \newpage
+
 Formát::
 
- hraniční souřadnice západ - východ, jih - sever (rozlišení západ-východ, jih-sever)
+ souřadnice západ - východ, jih - sever (rozlišení západ-východ, jih-sever)
 
 .. figure:: images/wxgui-mapdisp-show-region.png
    :class: middle
@@ -218,18 +224,19 @@ Formát::
 
                Zobrazení rozsahu výpočetního regionu v mapovém okně (krok 1).
 
-   .. raw:: latex
-            
-      \newpage
-
    .. figure:: images/wxgui-mapdisp-show-reg-1.png
                :class: middle
 
                Zobrazení rozsahu výpočetního regionu v mapovém okně (krok 2).
 
+   .. raw:: latex
+            
+      \newpage
+
    .. figure:: images/wxgui-mapdisp-show-reg-2.png
                :class: middle
-                    
+               :scale-latex: 65
+         
                Zobrazení rozsahu výpočetního regionu v mapovém okně.
 
 .. raw:: latex

@@ -37,8 +37,9 @@ rastrové mapy ve *správci vrstev*.
    menu správce vrsvev.
 
 .. figure:: images/lmgr-r-info-example.png
-
-	    Příklad výpisu metadat rastrové mapy :map:`dmt`.
+   :scale-latex: 50
+                 
+   Příklad výpisu metadat rastrové mapy :map:`dmt`.
 
 .. raw:: latex
 
@@ -70,7 +71,7 @@ GRASS rozlišuje tři typy rastrových map podle datového typu buňky:
 .. raw:: latex
 
    \newpage
-
+         
 .. figure:: images/rast-num-float.png
             
    Hodnoty s plovoucí desetinnou čárkou rastrové mřížky.

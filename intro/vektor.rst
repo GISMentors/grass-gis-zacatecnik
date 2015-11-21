@@ -58,12 +58,14 @@ Basic vector metadata` anebo z kontextového menu vektorové mapy ve
 *správci vrstev*.
 
 .. figure:: images/lmgr-v-info.png
-	    
+            :scale-latex: 55
+                 
             Spuštění nástroje pro výpis metadat vektorových map z kontextového
             menu správce vrsvev.
             
 .. figure:: images/lmgr-v-info-example.png
-
+            :scale-latex: 47
+                 
 	    Příklad výpisu metadat vektorové mapy
 	    :map:`obce_polygony`.
 
@@ -105,7 +107,8 @@ Na obrázku níže je zobrazen:
 
 .. figure:: images/grass7-topo.png
    :class: large
-
+   :scale-latex: 85
+              
 Tato kompozice bude v topologické modelu systému GRASS vyjádřena
 následující topologickými elementy:
 
@@ -113,10 +116,6 @@ následující topologickými elementy:
 * jednou linií :fignote:`2`
 * čtyřmi hraničními liniemi :fignote:`3,4,6,8`
 * dvěma centroidy :fignote:`5,7`
-
-.. raw:: latex
-
-   \newpage
 
 .. index::
    single: atributy
@@ -147,6 +146,11 @@ pomocí modulu :grasscmd:`db.connect` (:menuselection:`Database -->
 Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
 :option:`-p`.
 
+.. figure:: images/db-connect-p.png
+
+   Výchozí nastavení připojení atributových dat v GRASS - databáze
+   SQLite.
+
 .. notecmd:: Nastavení databáze PostgreSQL pro uložení atributových dat
 
    .. code-block:: bash
@@ -157,7 +161,11 @@ Manage databases --> Connect`). Aktuální nastavení vypisuje přepínač
 
    Změna nastavení formátu uložení atributových dat se projeví až u nově
    vytvořených vektorových map.
-   
+
+.. raw:: latex
+
+   \newpage
+
 .. noteadvanced::
 
    K jedné vektorové mapě lze přiřadit více atributových tabulek. Tato

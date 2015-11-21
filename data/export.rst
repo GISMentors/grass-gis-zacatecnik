@@ -26,6 +26,10 @@ Modul pro export rastrových dat je dostupný z menu
 :menuselection:`File --> Export raster map --> Common export formats`
 anebo z~kontextového menu *správce vrstev*.
 
+.. raw:: latex
+
+   \newpage
+         
 .. figure:: images/export-raster-menu.png
 	    
    Export rastrových dat z kontextového menu správce vrstev.
@@ -45,10 +49,6 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
       r.out.gdal input=dmt output=dmt.tif format=GTiff
 
-.. raw:: latex
-
-   \newpage
-                   
 .. index::
    pair: vektorová data; export
    single: v.out.ogr
@@ -103,9 +103,13 @@ nástrojé lišty *mapového okna*.
 
             V následující dialogu zvolíme dimenzi výstupního obrázku.
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/map-display-image-2.png
             :class: large
-	    :scale-latex: 80
+	    :scale-latex: 70
 
             Příklad výsledku včetně legendy, měřítka a textového
             popisku (viz kapitola :ref:`mapove-elementy`).

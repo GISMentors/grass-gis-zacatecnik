@@ -25,15 +25,15 @@ Import vector map --> Unpack vector map`).
 
 .. figure:: images/unpack-from-gui.png
    :class: middle
-   :scale-latex: 45
+   :scale-latex: 55
      
    Funkce rozbalení rastrové či vektorové mapy je dostupné z
    nástrojové lišty správce vrstev.
 
 .. raw:: latex
-	 
-   \newpage
 
+   \newpage
+   
 .. important::
 
    Takto zabalenou rastrovou či vektorovou mapu lze rozbalit pouze v
@@ -44,7 +44,7 @@ Import vector map --> Unpack vector map`).
    .. _r-unpack-proj-match:
 
    .. figure:: images/r-unpack-proj-match.png
-      :scale-latex: 45
+      :scale-latex: 55
 
       Kontrola souřadnicového systému při rozbalení dat.
 

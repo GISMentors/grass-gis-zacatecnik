@@ -18,10 +18,12 @@ Geodata v různých souřadnicových systémech
 
    .. figure:: images/v-import-0.png
                :class: middle
-              
+               :scale-latex: 70
+                    
    .. figure:: images/v-import-1.png
                :class: middle
-              
+               :scale-latex: 70
+                    
 V případě, že se souřadnicový systém vstupních geodat a dané lokace
 liší (viz :item:`Projection match` na :num:`#import-no-proj`)
 nelze import provést přímo. Postup vyžaduje hned několik kroků.
@@ -120,33 +122,25 @@ Následuje příklad pro transformaci vektorových dat.
 
 .. figure:: images/v-proj-0.png
    
-            V dialogu modulu :grasscmd:`v.proj` nejprve vybereme
-            lokaci se vstupními daty :fignote:`(1)`.
+            V záložce :item:`Source` vybereme lokaci :fignote:`(1)` a
+            mapset :fignote:`(2)`, který obsahuje vstupní data, dále
+            vstupní vektorovou mapu :fignote:`(3)`. Pokud by lokace
+            byla umístěna v jiném adresáři, tak je potřeba jej
+            definonat pomocí parametru :option:`dbase`.
 
 .. figure:: images/v-proj-1.png
-
-            Dále v záložce :item:`Source` vybereme mapset, ve kterém
-            jsou vstupní data uložena :fignote:`(2)`, vybereme vstupní
-            vektorovou mapu :fignote:`(3)`. Pokud by lokace byly
-            umístěny v odlišných adresářích, je potřeba definovat
-            adresář se vstupní lokací :fignote:`(4)`.
-
-.. raw:: latex
-
-   \clearpage
-
-.. figure:: images/v-proj-2.png
 	    :scale-latex: 50
 
             Případně můžeme v záložce :item:`Target` zvolit název pro
-            výstupní mapu :fignote:`(5)`. Transformaci spustíme
-            :fignote:`(6)`.
+            výstupní mapu :fignote:`(4)`. Transformaci spustíme
+            :fignote:`(5)`.
 
 Po úspěšné transformaci se vytvořená vrstva automaticky přidá do
 *správce vrstev* a zobrazí v mapovém okně.
 
-.. figure:: images/proj-result.png
-            :class: large
-	    :scale-latex: 80
+..
+  .. figure:: images/proj-result.png
+     :class: large
+     :scale-latex: 80
 
-            Výsledek transformace dat do aktuální lokace a mapsetu.
+     Výsledek transformace dat do aktuální lokace a mapsetu.

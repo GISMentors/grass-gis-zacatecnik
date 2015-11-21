@@ -17,7 +17,7 @@ Import geodat
    :doc:`transformace`).
 
    .. figure:: images/import-no-proj.png
-	       :scale-latex: 35
+	       :scale-latex: 50
 
 	       Data nejsou v souřadnicovém systému lokace. Je nutné je
 	       transformovat.
@@ -40,7 +40,7 @@ Nástroj pro import rastrových dat je dostupný z menu
 nebo nástrojové lišty správce vrstev.
 
 .. figure:: images/wxgui-raster-import-menu.png
-	    :scale-latex: 40
+	    :scale-latex: 60
 
             Nástroj pro import rastrových dat dostupný z nástrojové
             lišty správce vrstev.
@@ -67,15 +67,15 @@ V dialogu pro import rastrových dat určíme:
 
             Naimportovaná data se automaticky přidají do stromu vrstev.
 
+.. raw:: latex
+
+   \newpage
+
 .. notecmd:: Import rastrových dat
 
                 .. code-block:: bash
                                 
                    r.in.gdal input=dmt.tif output=dmt
-
-.. raw:: latex
-
-   \newpage
 
 .. note:: **Ukázka hromadného importu rastrových dat jako Python skript**
 
@@ -107,13 +107,10 @@ Nástroj pro import vektorových dat je dostupný z menu
 nebo nástrojové lišty správce vrstev.
 
 .. figure:: images/wxgui-vector-import-menu.png
-
+            :scale-latex: 55
+                 
             Nástroj pro import vektorových dat dostupný z nástrojové
             lišty správce vrstev.
-
-.. raw:: latex
-
-   \newpage
 
 V dialogu pro import vektorových dat určíme:
 
@@ -124,7 +121,8 @@ V dialogu pro import vektorových dat určíme:
 #. spustíme import
 
 .. figure:: images/wxgui-vector-import-0.png
-
+            :scale-latex: 53
+                 
             Určení vektorových dat (Esri Shapefile) z daného adresáře k importu.
 
 .. figure:: images/wxgui-vector-import-1.png
@@ -134,7 +132,8 @@ V dialogu pro import vektorových dat určíme:
 
 .. figure:: images/wxgui-vector-import-2.png
             :class: large
-
+            :scale-latex: 85
+                 
             Naimportovaná data se automaticky přidají do stromu vrstev.
 
 .. notecmd:: Import vektorových dat
@@ -142,10 +141,6 @@ V dialogu pro import vektorových dat určíme:
    .. code-block:: bash
                                 
       v.in.ogr dsn=lesy.shp
-
-.. raw:: latex
-
-   \newpage
 
 .. note:: **Ukázka hromadného importu vektorových dat z aktuálního adresáře jako Python skript**
 
@@ -199,7 +194,7 @@ v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
 
 .. figure:: images/polygon-topo.png
    :class: middle
-   :scale-latex: 55
+   :scale-latex: 75
 
    Topologická reprezentace dvou polygonů (druhý polygon s otvorem).
 
@@ -223,7 +218,8 @@ kódování pro atributová data. Atributy obsahující diakritiku jsou
 :option:`encoding` modulu :grasscmd:`v.in.ogr`.
 
 .. figure:: images/wxgui-vector-import-encoding.png
-
+   :scale-latex: 50
+              
    Kódování atributů vektorových dat lze definovat přímo v importním
    dialogu GUI systému GRASS.
                     
@@ -270,7 +266,8 @@ Pokud se v mapovém okně nezobrazují žádná data, je nutné nastavit
 pohled na aktuálně vybranou mapu.
 
 .. figure:: images/wxgui-zoom-to-map-menu.png
-
+   :scale-latex: 55
+              
    Nastavení pohledu mapového okna na vybranou mapovou vrstvu z
    kontextového menu správce vrstev.
 

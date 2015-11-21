@@ -33,13 +33,20 @@ Lokaci lze vytvořit několika různými postupy:
 #. definicí parametrů pro knihovnu :wikipedia-en:`PROJ.4`
 #. bez zadaní parametrů (pro negeoreferencovaná data)
 
+.. index::
+   single: EPSG
+
 Většinou bude stačit vytvořit novou lokaci na základě EPSG kódu (viz
 tabulka níže) anebo ze vstupních geodat, pokud je máme k dispozici.
 
 .. _epsg_cr:
 
 .. only:: latex
-          
+
+   .. raw:: latex
+
+      \newline
+   
    .. tabularcolumns:: |p{2cm}|p{6cm}|
                        
 .. only:: html
@@ -99,6 +106,10 @@ volitelně i krátký popisek (*Optional Location Title*).
 
 Na další stránce vybereme způsob vytvoření lokace. 
 
+.. raw:: latex
+         
+   \newpage
+
 .. figure:: images/wxgui-loc-s-jtsk-2.png
 	    :scale-latex: 60
 
@@ -119,8 +130,8 @@ souřadnicový systém S-JTSK :epsg:`5514`.
    řádky::
 
         # Krovak S-JTSK
-        <5514> +proj=krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.28813972222222 +k=0.9999 \
-	+x_0=-0 +y_0=-0 +ellps=bessel +pm=ferro +to_meter=-1 +no_defs \
+        <5514> +proj=krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.28813972222222 
+        +k=0.9999 x_0=-0 +y_0=-0 +ellps=bessel +pm=ferro +to_meter=-1 +no_defs 
 	+towgs84=570.8,85.7,462.8,4.998,1.587,5.261,3.56
    
    Soubor uložte, zavřete a případně restartujte *GRASS Location Wizard*, aby
@@ -139,13 +150,14 @@ souřadnicový systém S-JTSK :epsg:`5514`.
             se objeví dialog pro volbu transformačních parametrů.
 
 .. figure:: images/wxgui-loc-s-jtsk-5.png
-	    
+            :scale-latex: 50
+                 
             Vytvoření lokace pro S-JTSK (krok 5). Po zadání EPSG kódu
             se objeví dialog pro volbu transformačních parametrů.
 
 .. figure:: images/wxgui-loc-s-jtsk-6.png
             :class: small
-	    :scale-latex: 55
+	    :scale-latex: 53
 
             Vytvoření lokace pro S-JTSK (krok 6). Nastavení výchozího
 	    výpočetního regionu přeskočíme. Výchozí region nastavíme později po
@@ -266,44 +278,6 @@ souřadnicový systém S-JTSK :epsg:`5514`.
 
      \clearpage
 
-.. _lokace-srtm:
-
-Vytvoření lokace na základě geodat
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: images/wxgui-loc-srtm-0.png
-
-            Vytvoření lokace pro data SRTM (krok 1).
-
-.. figure:: images/wxgui-loc-srtm-1.png
-
-            Vytvoření lokace pro data SRTM (krok 2).
-
-.. figure:: images/wxgui-loc-srtm-2.png
-
-            Vytvoření lokace pro data SRTM (krok 3).
-
-.. figure:: images/wxgui-loc-srtm-3.png
-
-            Vytvoření lokace pro data SRTM (krok 4).
-
-.. figure:: images/wxgui-loc-srtm-4.png
-            :class: small
-	    :scale-latex: 50
-
-            Vytvoření lokace pro data SRTM (import dat, krok
-	    1). Volitelně můžeme data, na základě kterých byla lokace vytvořena, i
-	    naimportovat (do mapsetu *PERMANENT*).
-
-.. figure:: images/wxgui-loc-srtm-5.png
-	    :class: small
-	    :scale-latex: 50
-
-            Vytvoření lokace pro data SRTM (import dat, krok 2).
-
-..
-  .. index::
-     single: EPSG
-
   .. _lokace-etrs89:
 
   Vytvoření lokace na základě EPSG kódu
@@ -334,18 +308,59 @@ Vytvoření lokace na základě geodat
      .. code-block:: bash
 
                      grass70 -c EPSG:3035 /opt/grassdata/eu-dem
-      
+
+.. _lokace-srtm:
+
+Vytvoření lokace na základě geodat
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: images/wxgui-loc-srtm-0.png
+
+            Vytvoření lokace pro data SRTM (krok 1).
+
+.. figure:: images/wxgui-loc-srtm-1.png
+
+            Vytvoření lokace pro data SRTM (krok 2).
+
+.. figure:: images/wxgui-loc-srtm-2.png
+
+            Vytvoření lokace pro data SRTM (krok 3).
+
+.. figure:: images/wxgui-loc-srtm-3.png
+
+            Vytvoření lokace pro data SRTM (krok 4).
+
+.. raw:: latex
+
+   \clearpage
+
+.. figure:: images/wxgui-loc-srtm-4.png
+            :class: small
+	    :scale-latex: 50
+
+            Vytvoření lokace pro data SRTM (import dat, krok
+	    1). Volitelně můžeme data, na základě kterých byla lokace vytvořena, i
+	    naimportovat (do mapsetu *PERMANENT*).
+
+.. figure:: images/wxgui-loc-srtm-5.png
+	    :class: small
+	    :scale-latex: 50
+
+            Vytvoření lokace pro data SRTM (import dat, krok 2).
+
 .. _lokace-xy:
 
 Vytvoření lokace pro souřadnicově nepřipojená data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: images/wxgui-loc-xy-0.png
-
+            :scale-latex: 53
+                 
             Vytvoření lokace pro XY (krok 1).
 
 .. figure:: images/wxgui-loc-xy-1.png
-
+            :scale-latex: 53
+                 
             Vytvoření lokace pro XY (krok 2).
 
 .. figure:: images/wxgui-loc-xy-2.png
@@ -370,6 +385,10 @@ způsoby:
 
 * z menu *Správce vrstev* :menuselection:`Settings --> GRASS working
   environment --> Create new mapset`.
+
+.. raw:: latex
+
+   \newpage
 
 .. figure:: images/wxgui-new-mapset-menu.png
 

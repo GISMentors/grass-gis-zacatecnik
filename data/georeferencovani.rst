@@ -13,6 +13,10 @@ systému GRASS nástroj :grasscmd:`GCP Manager <wxGUI.gcp>` dostupný z
 menu :menuselection:`File --> Georectify` anebo přímo z nástroje lišty
 *správce vrstev*.
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/lmgr-georectify.png
 
    Spuštění nástroje pro georeferencování dat ze správce vrstev.
@@ -49,9 +53,13 @@ Následně na to spustíme *GCP Manager* a v průvodci postupně vybereme:
             Dále vytvoříme skupinu, která bude obsahovat data určená
             pro souřadnicové připojení :fignote:`(4)`.
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/georect-2.png
             :class: small
-	    :scale-latex: 35
+	    :scale-latex: 45
 
             Zvolíme název skupiny :fignote:`(5)` a přidáme do ni
             rastrové či vektorové mapy :fignote:`(6)`. Pokud do
@@ -73,14 +81,18 @@ Následně na to spustíme *GCP Manager* a v průvodci postupně vybereme:
 	    :scale-latex: 45
 
             Vytvoření skupiny potvrdíme :fignote:`(10)`.
-           
+
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/georect-5.png
-	    :scale-latex: 45
+	    :scale-latex: 40
 
             Přejdeme na poslední dialog :fignote:`(11)`.
 
 .. figure:: images/georect-6.png
-	    :scale-latex: 45
+	    :scale-latex: 40
 
             Tam zvolíme z cílové (aktuální lokace) rastrovou či
             vektorovou mapu :fignote:`(12)`, kterou chceme použít jako
@@ -97,7 +109,7 @@ Výběr identických bodů probíhá následovně:
                     
 .. figure:: images/georect-8.png
             :class: large
-	    :scale-latex: 70
+	    :scale-latex: 65
 
             Z nástrojové lišty vybere nástroj definice identických
             bodů :fignote:`(1)`, zvolíme číslo identického bodu, který
@@ -107,13 +119,9 @@ Výběr identických bodů probíhá následovně:
 
 .. figure:: images/georect-9.png
             :class: large
-	    :scale-latex: 70
+	    :scale-latex: 69
 
             Takto postupně zvolíme první tři identické body.
-
-.. raw:: latex
-
-   \newpage
 
 .. figure:: images/georect-7.png
             :class: large
@@ -123,7 +131,7 @@ Výběr identických bodů probíhá následovně:
 
 .. figure:: images/georect-10.png
             :class: large
-	    :scale-latex: 70
+	    :scale-latex: 69
 
             Pokud nejsou identické body aktivovány, tak je nejprve
             aktivujeme :fignote:`(1)` a poté nastavíme vlastnosti
@@ -142,10 +150,6 @@ V dialogu nastavení:
             metoda nejbližšího souseda (nearest), pro data jako je
             digitální model reliéfu naopak lineární interpolace
             (linear) či kubická konvoluce (cubic).
-
-.. raw:: latex
-
-   \newpage
 
 Před vlastním souřadnicovým připojení můžeme spočíst na základě
 identických bodů tzv. RMS chybu a na jejím základě vyřadit nebo naopak
@@ -170,15 +174,19 @@ přidat nové identické body.
    Vlastní výpočet spustíme pomocí funkce ``Georecify`` dostupnou z
    nástrojové lišty.
 
+.. raw:: latex
+
+   \clearpage
+
 .. figure:: images/georect-14.png
    :class: large
-   :scale-latex: 60
+   :scale-latex: 70
 
    Souřadnicově připojená rastrová či vektorovou mapu přidáme do správce vrstev.
 
 .. figure:: images/georect-15.png
    :class: large
-   :scale-latex: 75
+   :scale-latex: 85
 			 
    A zobrazíme společně s dalšími mapovými vrstvami v mapovém okně.
 

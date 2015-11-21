@@ -57,13 +57,10 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`:
    čárkou rozdělit :fignote:`(3)` a modul spustíme :fignote:`(4)`.
 
 .. figure:: images/r-report-3.png
-
+   :scale-latex: 50
+            
    Výsledný report, např. území s nadmořskou výškou do 202.5 metrů
    pokrývá necelé tři procenta území ČR.
-
-.. raw:: latex
-
-   \clearpage
 
 .. important::
 
@@ -81,7 +78,7 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`:
       g.region rast=dmt res=1000
 
    .. figure:: images/r-report-4.png
-      :scale-latex: 40
+      :scale-latex: 50
 
       Pro takto převzorkovaná data bude např. území s nadmořskou
       výškou do 202.5 metrů pokrývat místo původních 2,85% nově 2,83%.
@@ -156,6 +153,12 @@ statistiky rastrové mapy do Vašeho tabulkové procesoru
    r.stats -acp input=elevation separator=comma output=elev_stat.csv
 
 .. figure:: images/libreoffice-stats.png
-
+   :scale-latex: 60
+              
    Soubor ``elev_stats.csv`` poté můžete načíst do Vašeho oblíbeného
    tabulkového procesoru.
+
+.. raw:: latex
+
+   \newpage
+   

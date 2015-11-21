@@ -16,7 +16,7 @@ Rastrový kalkulátor je dostupný z menu :menuselection:`Raster -->
 Raster Map Calculator` anebo z nástrojové lišty *správce vrstev*.
 
 .. figure:: images/grass-r-mapcalc-toolbar.png
-	    :scale-latex: 50
+	    :scale-latex: 55
 
             Spuštění rastrového kalkulátoru.
 
@@ -27,8 +27,12 @@ Postup
 #. zadání výrazu pro :grasscmd:`r.mapcalc`
 #. spuštění vypočtu
 
+.. raw:: latex
+
+   \newpage
+   
 .. figure:: images/grass-r-mapcalc-dialog.png
-	    :scale-latex: 40
+	    :scale-latex: 50
 
             Dialog rastrového kalkulátoru.
 

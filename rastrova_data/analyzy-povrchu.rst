@@ -1,7 +1,3 @@
-.. raw:: latex
-	 
-   \newpage
-
 .. index::
    pair: analýza povrchu, topografické analýzy
    single: r.slope.aspect
@@ -40,13 +36,9 @@ Míra svahu
    
 .. figure:: images/slope.png
    :class: middle
-   :scale-latex: 60
+   :scale-latex: 65
 
    Výsledná mapa míry svahu ve stupních.                
-
-.. raw:: latex
-
-   \newpage
 
 .. index::
    pair: analýza povrchu; orientace svahu
@@ -70,10 +62,15 @@ Orientaci (expozici) svahu opět počítá modul
             :class: small
         
             Azimut orientace svahu.
-   
+
+.. raw:: latex
+                     
+   \newpage
+
 .. figure:: images/aspect.png
             :class: middle
-           
+            :scale-latex: 70
+                
             Výsledná mapa orientace svahu.           
 
 .. tip::
@@ -83,8 +80,13 @@ Orientaci (expozici) svahu opět počítá modul
 
    .. figure:: images/aspect-reclass.png
                :class: middle
-           
+               :scale-latex: 70
+                    
                Výsledek reklasifikace mapy orientace svahu
+
+.. raw:: latex
+
+   \newpage
 
 .. index::
    pair: analýza povrchu; viditelnost
@@ -118,9 +120,13 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
    Observační bod je v mapovém okně označen černým křížkem,
    obdélník červené barvy zobrazuje hranice výpočetní regionu.
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/viewshed-legend.png
    :class: middle
-   :scale-latex: 50
+   :scale-latex: 70
 
    Výsledek analýzy viditelnosti z observačního bodu včetně legendy
    zobrazující velikost úhlu, pod kterým je místo z daného

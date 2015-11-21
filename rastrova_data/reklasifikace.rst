@@ -70,6 +70,10 @@ anebo včetně popisku
    
    <od> thru <do> = hodnota popisek
 
+.. raw:: latex
+            
+   \newpage
+   
 .. figure:: images/r-reclass-dmt.png
    :scale-latex: 60
 
@@ -88,23 +92,15 @@ např.
    3 139:105:20
    4 255:255:255
 
-.. raw:: latex
-         
-   \newpage
-	 
 .. figure:: images/dmt-reclass-color-table.png
 
             Příklad nastavení tabulky barev pomocí modulu :grasscmd:`r.colors`.   
 
 .. figure:: images/dmt-reclass-legend.png
    :class: large
-   :scale-latex: 90
+   :scale-latex: 75
 
    Výsledná reklasifikovaná mapa včetně :ref:`legendy <map-legend>`.
-
-.. raw:: latex
-
-   \newpage
 
 .. index::
    pair: data s plovoucí desetinnou čárkou; reklasifikace
@@ -203,18 +199,22 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
       8:SV
 
    .. figure:: images/r-category-set-0.png
-	       :scale-latex: 50
+	       :scale-latex: 55
 
                V záložce :item:`Optional` zvolíme nejprve oddělovač ``:``.
 
+   .. raw:: latex
+
+      \newpage
+   
    .. figure:: images/r-category-set-1.png
-	       :scale-latex: 50
+	       :scale-latex: 55
 
                A poté přiřadíme popisky z textového pole v záložce :item:`Define`.
 
 .. figure:: images/aspect-reclass.png
    :class: large
-   :scale-latex: 60
+   :scale-latex: 65
 
    Výsledek reklasifikace mapy orientace svahu.
             

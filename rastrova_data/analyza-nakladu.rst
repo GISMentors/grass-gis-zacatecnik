@@ -46,13 +46,9 @@ Editaci hodnot atributů umožňuje :ref:`Field Calculator
 
 .. figure:: images/field-calculator-speed.png
    :class: small
-   :scale-latex: 50
+   :scale-latex: 55
 
    Příklad uložení atributu rychlosti pro dálnice (``typ = 1``).     
-
-.. raw:: latex
-
-   \newpage
 
 .. notecmd:: Nastavení atributu rychlosti
 
@@ -76,6 +72,10 @@ nastavit :ref:`výpočetní region <region>`, např. :ref:`interaktivně
                 g.region res=25
                 v.to.rast input=silnice output=silnice use=attr attrcolumn=rychlost
 
+.. raw:: latex
+
+   \newpage
+
 .. notegrass6::
 
    Místo parametru :option:`attrcolumn` použijte :option:`column`.
@@ -91,7 +91,7 @@ barev 'sepia', viz kapitola :doc:`tabulka barev <tabulka-barev>`.
                 r.colors -n map=silnice color=sepia
 
 .. figure:: images/grass-streets-speed.png
-	    :scale-latex: 70
+	    :scale-latex: 60
 
             Rasterizovaná síť silnic s atributem průměrné rychlosti.
 
@@ -99,7 +99,8 @@ Modulem :grasscmd:`v.in.ascii` vytvoříme vektorovou mapu s ohniskem
 požáru (souřadnice v S-JTSK -754063, -981284).
 
 .. figure:: images/wxgui-v-in-ascii.png
-            
+            :scale-latex: 45
+                 
             Vytvoření mapy s ohniskem požáru - definujeme souřadnice
             ohniska požáru :fignote:`(1)` a název výsledné vektorové mapy
             :fignote:`(2)`.
@@ -110,10 +111,6 @@ požáru (souřadnice v S-JTSK -754063, -981284).
 
       echo "-754063|-981284|1" | v.in.ascii input=- output=pozar
             
-.. raw:: latex
-
-   \newpage
-
 Rastrovou mapu časové náročnosti vytvoříme pomocí modulu
 :grasscmd:`r.mapcalc`, viz kapitola :ref:`rastrová algebra
 <rastrova-algebra>`.
@@ -131,7 +128,8 @@ analysis --> Cost surface`) vypočteme rastrovou mapu nákladů pohybu.
 
 .. figure:: images/grass-streets-cost.png
    :class: middle
-           
+   :scale-latex: 65
+              
    Analýza nákladů pohybu v terénu, ohnisko požáru a požární stanice.
 
 Dojezdovost pro jednotlivé požární stanice k ohnisku požáru vypočteme
@@ -153,8 +151,12 @@ dojezdovosti pro danou požární stanici.
 
    v.what.rast map=pozarni_stanice raster=silnice_naklady column=dojezdovost
 
+.. raw:: latex
+
+      \newpage
+      
 .. figure:: images/grass-streets-nearest.png
-   :scale-latex: 70
+   :scale-latex: 60
 		      
    Nalezení požární stanice s nejmenší hodnotou dojezdovosti,
    tj. požární stanice s kategorií '89'.
@@ -174,7 +176,8 @@ flow`).
 
 .. code-block:: bash
 
-                r.drain -n input=silnice_naklady output=cesta start_coor=-750649.82535985,-992867.12907965
+   r.drain -n input=silnice_naklady output=cesta
+    start_coor=-750649.82535985,-992867.12907965
 
 .. notegrass6:: 
 
@@ -182,13 +185,13 @@ flow`).
 
 .. figure:: images/grass-streets-path.png
    :class: middle
-   :scale-latex: 60
+   :scale-latex: 65
 
    Výsledek, nejkratší cesta k požáru.
             
 .. figure:: images/grass-streets-path-3d.png
    :class: middle
-   :scale-latex: 90
+   :scale-latex: 70
         
    Vizualizace rastrové mapy nákladů včetně nejkratší spádové cesty ve
    3D.

@@ -32,13 +32,14 @@ topology`.
           (mapset `ruian`).
 
           .. figure:: images/vector-make-copy.png
-             :scale-latex: 45
+             :scale-latex: 55
 			   
 	     Vytvoření kopie vektorové mapy v aktuálním mapsetu.
 	     
 .. figure:: images/v-build-01.png
    :class: large
-
+   :scale-latex: 90
+              
    Znovu vybudování topologie pro vektorovou mapu :map:`obce_polygon`
    (lokální kopie - :fignote:`1`). Chyby v~topologii uložíme do nové
    vektorové mapy :fignote:`(2)`.
@@ -73,7 +74,7 @@ mezerami mezi vstupními polygony. Vstupní data v tomto případě
 obsahuje nejen překrývající se polygony ale i tzv. mezery.
 
 .. figure:: images/dissolve-errors.png
-	    :scale-latex: 40
+	    :scale-latex: 50
 
             Výsledek spojení polygonů obcí nad daty, které obsahují
             topologické chyby.
@@ -89,7 +90,7 @@ než 10km\ :sup:`2`.
    v.clean input=obce_broken output=obce type=area tool=rmarea thresh=10
 
 .. figure:: images/dissolve-ok.png
-	    :scale-latex: 40
+	    :scale-latex: 50
 
             Výsledek spojení polygonů obcí po opravě topologických
             chyb.

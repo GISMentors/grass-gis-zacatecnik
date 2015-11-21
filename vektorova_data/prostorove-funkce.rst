@@ -4,7 +4,6 @@
 Prostorové funkce
 -----------------
 
-
 .. youtube:: YWRHFylZCuo
 
    Příklad základních prostorových funkcí (buffer, clip, erase) v
@@ -34,7 +33,7 @@ V následujícím příkladě vybereme z vektorové mapy :map:`silnice`
 
 .. figure:: images/v-extract.png
    :class: large
-   :scale-latex: 75
+   :scale-latex: 85
               
    Vytvoření tématické vektorové mapy :map:`dalnice` z OpenStreetMap.
 
@@ -57,7 +56,7 @@ Příklad vytvoření obalové zóny s šířkou 5 km.
 
 .. figure:: images/v-buffer-result.png
    :class: middle
-   :scale-latex: 55
+   :scale-latex: 65
         
    Příklad obalové zóny 5 km okolo dálnic.
 
@@ -115,6 +114,10 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
 
    Hluková oblast zasahující maloplošné chráněné území Černovický hájek u Brna.
 
+.. raw:: latex
+
+   \newpage
+      
 .. figure:: images/dalnice500buffer_chranena_uzemi-02.png
    :class: middle
    :scale-latex: 70

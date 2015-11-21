@@ -36,9 +36,20 @@ GRASS nabízí řadu modulů pro tzv. *síťové analýzy*. Jedná se o typy
     ale pouze suboptimální (kompromis mezi optimálním řešením a
     omezením výpočetního času na přípustnou dobu).
 
+.. raw:: latex
+
+   \newpage
+         
 Ukázka
 ======
-   
+
+.. figure:: images/wxgui-vnet.png
+   :class: large
+   :scale-latex: 90
+
+   Příklad nalezení nejkratší cesty pomocí GUI nástroje pro síťové
+   analýzy.
+            
 .. youtube:: McOrMauPc_I
 
    Příklad síťových analýz v GUI systému GRASS

@@ -12,9 +12,15 @@ Atributová data
 Editace atributových dat
 ========================
 
-Správce atributových dat umožňuje kromě :ref:`dotazování
-<atributove-dotazy>` i atributová data *modifikovat*.
+Správce atributových dat umožňuje kromě dotazování (viz kapitola
+:doc:`../intro/atributove-dotazy`) atributová data **modifikovat**.
 
+.. figure:: images/dbmgr-edit.png
+   :scale-latex: 55
+              
+.. important:: Editovat lze atributové data vektorových map pouze z
+               aktualního mapsetu.
+                           
 .. youtube:: UZswOcIyaX8
 
              Editace záznamů v atributové tabulce
@@ -29,15 +35,20 @@ Správce atributových dat umožňuje kromě :ref:`dotazování
 
                .. code-block:: bash
                                
-                               db.execute sql="update urbanarea set UA_TYPE = 'UA (edited)' WHERE cat = 3"
+                  db.execute sql="update urbanarea set UA_TYPE = 'UA (edited)'
+                   where cat = 3"
 
              * anebo :grasscmd:`v.db.update` jako frontend pro vektorové mapy
 
                .. code-block:: bash
                
-                               v.db.update map=urbanarea column=UA_TYPE value="UA (edited)" where="cat = 3"
+                  v.db.update map=urbanarea column=UA_TYPE value="UA (edited)"
+                   where="cat = 3"
 
-Správce atributových dat umožňuje *přidávat* do atributové tabulky nové záznamy.
+Správce atributových dat umožňuje **přidávat** do atributové tabulky nové záznamy.
+
+.. figure:: images/dbmgr-new-record.png
+   :scale-latex: 53
 
 .. youtube:: mmPvMRBDxLg
 
@@ -47,17 +58,15 @@ Správce atributových dat umožňuje *přidávat* do atributové tabulky nové 
 
                 .. code-block:: bash
 
-                                db.execute sql="insert into urbanarea values (109, 109, 29306, 'Farmville', 'UA')"
+                   db.execute sql="insert into urbanarea values
+                    (109, 109, 29306, 'Farmville', 'UA')"
 
-Vybrané záznamy lze z atributové tabulky *odstranit*.
+Vybrané záznamy lze z atributové tabulky **odstranit**.
 
 .. figure:: images/wxgui-dbmgr-delete.png
-
+            :scale-latex: 55
+                 
             Odstranění záznamů z atributové tabulky.
-
-.. raw:: latex
-
-   \newpage
 
 .. notecmd:: Odstranění záznamů z atributové tabulky
 
@@ -78,6 +87,10 @@ Numerické atributy mohou být také *vypočítány* na základě zvolené funkc
             :class: large
 
             Funkce pro výpočet numerických atributů.
+
+.. raw:: latex
+
+   \newpage
 
 .. _pridani-noveho-atributu:
             
@@ -131,6 +144,10 @@ všechny záznamy z atributové tabulky.
             Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
             (zadání vektorové mapy).
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/v-db-select-1.png
 
             Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
@@ -168,10 +185,6 @@ any table`.
              .. code-block:: bash
 
                              db.select sql="SELECT COUNT(*) FROM obce WHERE ob01/ob91-1 >= 1"
-
-.. raw:: latex
-
-	 \clearpage
 
 .. figure:: images/db-select-0-multi.png
 

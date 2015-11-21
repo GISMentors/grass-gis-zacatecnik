@@ -24,7 +24,12 @@ nebo z nástrojové lišty *správce vrstev*.
              .. code-block:: bash
 
                 g.gui.gmodeler
-                
+
+.. figure:: images/gmodeler.png
+   :class: middle
+   :scale-latex: 60
+              
+   Příklad modelu pro výpočet obalové zóny kolem dálnic.
 
 Ukázky
 ======

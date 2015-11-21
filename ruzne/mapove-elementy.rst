@@ -41,6 +41,10 @@ lišty:
 
    Přidání legendy do mapového okna.
 
+.. raw:: latex
+            
+   \newpage
+
 .. figure:: images/add-legend-0.png
    :class: large
    :scale-latex: 75
@@ -48,16 +52,12 @@ lišty:
    Pokud je ve *správci vrstev* aktuálně vybraná rastrová mapa, tak se
    automaticky legenda zobrazí pro ni.
 
-.. raw:: latex
-
-   \newpage
-
 V opačném případě se zobrazí dialog pro výběr rastrové mapy, pro
 kterou si přejete legendu zobrazit.
 
 .. figure:: images/add-legend-1.png
             :class: large
-	    :scale-latex: 70
+	    :scale-latex: 75
 
             Vybereme rastrovou mapu pro kterou chceme legendu zobrazit
             :fignote:`(1)` a nastavení potvrdíme :fignote:`(2)`.
@@ -71,6 +71,10 @@ z kontextového menu legendy (pravé tlačítko myši nad legendou):
    Skrytí legendy.
 
 Z tohoto menu lze také **změnit velikost** legendy i její orientaci.
+
+.. raw:: latex
+
+   \newpage
 
 .. figure:: images/resize-legend-0.png
    :scale-latex: 50
@@ -106,6 +110,10 @@ umístěnou v mapovém okně.
    :grasscmd:`Cartographic Composer <wxGUI.psmap>`, více v kapitole
    :ref:`mapové výstupy <mapove-vystupy>`.
 
+.. raw:: latex
+
+   \newpage
+
 .. tip::
 
    Pokud se popisky legenda nezobrazují korektně, je potřeba změnit
@@ -122,18 +130,20 @@ umístěnou v mapovém okně.
    *správce vrstev*.
 
    .. figure:: images/lmgr-settings.png
-
+      :scale-latex: 50
+                 
       Nastavení GUI systému GRASS.
 
    .. figure:: images/settings-font.png            
       :class: middle
-      :scale-latex: 55
+      :scale-latex: 60
 
       V záložce :item:`Map display` zvolíme vhodný font.
 
    .. figure:: images/font-dialog.png
       :class: small
-           
+      :scale-latex: 40
+                 
       Kromě fontu :fignote:`(1)` změníme kodóvání na UTF-8
       :fignote:`(2)`.
 
@@ -142,16 +152,16 @@ umístěnou v mapovém okně.
       :scale-latex: 80
 
       Obsah mapové okna překreslíme.
-   
+
+   .. raw:: latex
+
+      \newpage
+
    .. figure:: images/legend-ok.png
       :class: small
-      :scale-latex: 40
+      :scale-latex: 35
 
       Výsledek.
-
-.. raw:: latex
-
-   \clearpage
 
 .. index::
    pair: mapové elementy; směrová růžice
@@ -182,7 +192,7 @@ mapovém okně.
 
 .. figure:: images/narrow-prop.png
    :class: middle
-   :scale-latex: 50
+   :scale-latex: 55
 
    Příklad změny stylu směrové růžice.
 
@@ -234,7 +244,7 @@ přes dvojklik nad měřítkem umístěným v~mapovém okně.
 
 .. figure:: images/scalebar-prop.png
    :class: middle
-   :scale-latex: 50
+   :scale-latex: 40
      
    Příklad změny stylu měřítka.
 
@@ -268,7 +278,7 @@ Textový popisek lze do mapového okna přidat z jeho nástroje lišty:
 
 .. figure:: images/add-text.png
    :class: large
-   :scale-latex: 70
+   :scale-latex: 65
 
    Přidání textového popisku do mapového okna.
    
@@ -292,5 +302,6 @@ nad daným textovým objektem v mapovém okně.
 
 .. figure:: images/remove-text.png
    :class: small
-
+   :scale-latex: 50
+              
    Odstranění textového popisku z mapového okna.

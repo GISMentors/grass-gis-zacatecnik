@@ -24,6 +24,11 @@ lišty *správce vrstev*.
    mapového okna. Všechny vrstvy, které chceme, aby byly součástí
    mapového výstupu, je třeba přidat do aplikace ručně.
 
+.. figure:: images/wxgui-psmap.png
+   :class: middle
+   :scale-latex: 75
+              
+   GUI pro tvorbu mapových výstupů
 
 Ukázky
 ======

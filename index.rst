@@ -69,8 +69,10 @@ upravovat ho a tyto změny či opravy šířit dál.
                starší verzi GRASS 6.4 není zaručena funkčnost
                uvedených příkladů, případné rozdíly mezi těmito
                verzemi jsou vždy explicitně zdůrazněny. Dále
-               předpokládáme zapnutou *anglickou lokalizaci*, viz kapitola
-               :ref:`volba-lokalizace`.
+               předpokládáme zapnutou *anglickou lokalizaci*, viz
+               kapitola :ref:`volba-lokalizace`. Na toto školení do
+               jisté míry navazuje školení :skoleni:`GRASS GIS pro
+               pokročilé <grass-gis-pokrocily>`.
 
 .. index::
    pair: datové sady; ke stažení

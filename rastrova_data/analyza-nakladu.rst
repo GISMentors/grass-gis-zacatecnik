@@ -69,8 +69,10 @@ nastavit :ref:`výpočetní region <region>`, např. :ref:`interaktivně
 
 .. code-block:: bash
 
-                g.region res=25 n=-974156.940354 s=-994356.565878 w=-766980.908775 e=-736680.675344
-                v.to.rast input=silnice output=silnice use=attr attrcolumn=rychlost
+   g.region res=25 n=-974156.940354 s=-994356.565878 \
+    w=-766980.908775 e=-736680.675344
+   
+   v.to.rast input=silnice output=silnice use=attr attrcolumn=rychlost
 
 .. raw:: latex
 
@@ -177,7 +179,8 @@ flow`).
 
 .. code-block:: bash
 
-   r.drain -n input=silnice_naklady output=cesta start_coor=-750649.82535985,-992867.12907965
+   r.drain -n input=silnice_naklady output=cesta \
+    start_coor=-750649.82535985,-992867.12907965
 
 .. notegrass6:: 
 

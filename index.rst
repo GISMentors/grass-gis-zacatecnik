@@ -85,7 +85,8 @@ upravovat ho a tyto změny či opravy šířit dál.
    <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
    (985 MB).
 
-.. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
+..
+   .. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
 
 .. only:: html
              

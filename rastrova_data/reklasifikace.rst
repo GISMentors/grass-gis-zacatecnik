@@ -70,10 +70,6 @@ anebo včetně popisku
    
    <od> thru <do> = hodnota popisek
 
-.. raw:: latex
-            
-   \newpage
-
 Dle tabulky výše může vypadat zápis následovně:
    
 ::
@@ -82,6 +78,10 @@ Dle tabulky výše může vypadat zápis následovně:
    300  thru 800 = 2 nízká vysočina
    800  thru 1500 = 3 střední vysočina
    1500 thru 1700 = 4 vysoká vysočina
+
+.. raw:: latex
+            
+   \newpage
 
 .. figure:: images/r-reclass-dmt.png
    :scale-latex: 60

@@ -48,6 +48,13 @@ operátor *contains*) požární stanice (vektorová mapa
 
    Spuštění modulu :grasscmd:`v.select`.
 
+.. notecmd:: Spuštění
+
+   .. code-block:: bash
+                   
+      v.select ainput=obce_polygon binput=pozarni_stanice output=obce_stanice \
+       operator=contains
+
 .. raw:: latex
 
    \newpage

@@ -35,15 +35,13 @@ Správce atributových dat umožňuje kromě dotazování (viz kapitola
 
                .. code-block:: bash
                                
-                  db.execute sql="update urbanarea set UA_TYPE = 'UA (edited)'
-                   where cat = 3"
+                  db.execute sql="update obce_polygon set nespravny = '1' where kod = 569054"
 
              * anebo :grasscmd:`v.db.update` jako frontend pro vektorové mapy
 
                .. code-block:: bash
                
-                  v.db.update map=urbanarea column=UA_TYPE value="UA (edited)"
-                   where="cat = 3"
+                  v.db.update map=obce_polygon column=nespravny value="1" where="kod = 569054"
 
 Správce atributových dat umožňuje **přidávat** do atributové tabulky nové záznamy.
 
@@ -58,8 +56,7 @@ Správce atributových dat umožňuje **přidávat** do atributové tabulky nov�
 
                 .. code-block:: bash
 
-                   db.execute sql="insert into urbanarea values
-                    (109, 109, 29306, 'Farmville', 'UA')"
+                   db.execute sql="insert into obce_polygon(cat, nazev) values (6253, 'pokus')"
 
 Vybrané záznamy lze z atributové tabulky **odstranit**.
 
@@ -72,7 +69,7 @@ Vybrané záznamy lze z atributové tabulky **odstranit**.
 
                 .. code-block:: bash
 
-                                db.execute sql="delete from urbanarea where cat = 109"
+                                db.execute sql="delete from obce_polygon where cat = 6253"
 
 .. warning::
 
@@ -92,6 +89,12 @@ Numerické atributy mohou být také *vypočítány* na základě zvolené funkc
 
    \newpage
 
+.. notecmd:: Výpočet hodnoty atributu
+             
+   .. code-block:: bash
+                   
+      v.to.db map=obce_polygon option=area columns=vymera
+
 .. _pridani-noveho-atributu:
             
 Příklad přidání nového atributu s výměrou a její výpočet (ve
@@ -101,11 +104,6 @@ Příklad přidání nového atributu s výměrou a její výpočet (ve
 
              Přidání nového sloupce do atributové tabulky a výpočet plochy
 
-.. notecmd:: Výpočet hodnoty atributu
-
-             .. code-block:: bash
-
-                             v.to.db map=urbanarea option=area columns=AREA
 
 .. _field-calculator:
                 

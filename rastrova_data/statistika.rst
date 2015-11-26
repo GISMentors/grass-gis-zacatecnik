@@ -150,12 +150,12 @@ statistiky rastrové mapy do Vašeho tabulkové procesoru
 
 .. code-block:: bash
 
-   r.stats -acp input=elevation separator=comma output=elev_stat.csv
+   r.stats -acp input=dmt separator=comma output=elev_stat.csv
 
 .. figure:: images/libreoffice-stats.png
    :scale-latex: 60
               
-   Soubor ``elev_stats.csv`` poté můžete načíst do Vašeho oblíbeného
+   Soubor ``elev_stat.csv`` poté můžete načíst do Vašeho oblíbeného
    tabulkového procesoru.
 
 .. raw:: latex

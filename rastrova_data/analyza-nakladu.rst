@@ -65,11 +65,11 @@ Dále převedeme modulem :grasscmd:`v.to.rast` (:menuselection:`File -->
 Map type conversions --> Vector to raster`) vektorovou mapu
 :map:`silnice` do rastrové reprezentace. Před konverzí je nutné
 nastavit :ref:`výpočetní region <region>`, např. :ref:`interaktivně
-<nastaveni-regionu-mapove-okno>` z mapového okna:
+<nastaveni-regionu-mapove-okno>` z mapového okna nebo z příkazové řádky:
 
 .. code-block:: bash
 
-                g.region res=25
+                g.region res=25 n=-974156.940354 s=-994356.565878 w=-766980.908775 e=-736680.675344
                 v.to.rast input=silnice output=silnice use=attr attrcolumn=rychlost
 
 .. raw:: latex
@@ -145,6 +145,7 @@ dojezdovosti pro danou požární stanici.
 
    .. code-block:: bash
 
+      g.copy vect=pozarni_stanice@osm,pozarni_stanice
       v.db.addcolumn map=pozarni_stanice column="dojezdovost double precision"
 
 .. code-block:: bash
@@ -176,8 +177,7 @@ flow`).
 
 .. code-block:: bash
 
-   r.drain -n input=silnice_naklady output=cesta
-    start_coor=-750649.82535985,-992867.12907965
+   r.drain -n input=silnice_naklady output=cesta start_coor=-750649.82535985,-992867.12907965
 
 .. notegrass6:: 
 

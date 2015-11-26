@@ -55,7 +55,7 @@ Postup
 
    .. code-block:: bash
 
-                   r.mapcalc expression="elev_1000 = if(elev_state_500m > 1000, 1, null())"
+                   r.mapcalc expression="dmt_1000 = if(dmt > 1000, 1, null())"
     
    Výrazy lze uložit do souboru (na každý řádek jeden výraz) a soubor
    předat jako parametr :option:`file`.

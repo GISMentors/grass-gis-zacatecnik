@@ -32,7 +32,7 @@ topology`.
           (mapset `ruian`).
 
           .. figure:: images/vector-make-copy.png
-             :scale-latex: 55
+             :scale-latex: 50
 			   
 	     Vytvoření kopie vektorové mapy v aktuálním mapsetu.
 	     

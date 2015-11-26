@@ -114,6 +114,10 @@ Field Calculator
 (Structured Query Language)` UPDATE příkaz a pomocí něho modifikovat
 atributová data.
 
+.. figure:: images/wx-field-calculator.png
+
+   Ukázka nástroje Field Calculator.
+   
 .. youtube:: 44KmtnBJtgo
 
              Výpočet poměru obvodu a výměry plochy pomocí Field Calculatoru

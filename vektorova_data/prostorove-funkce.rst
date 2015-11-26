@@ -81,7 +81,7 @@ V našem případě vytvoříme vektorovou mapu :map:`chranena_uzemi`
 maloplošných chráněných území :fignote:`(1)`.
 
 .. figure:: images/v-overlay-01.png
-   :scale-latex: 50
+   :scale-latex: 45
    
    Vytvoření mapy maloplošných a velkoplošných chráněných území.
 
@@ -89,7 +89,8 @@ maloplošných chráněných území :fignote:`(1)`.
 
    .. code-block:: bash
                    
-      v.overlay ainput=maloplosna_uzemi binput=velkoplosna_uzemi operator=or output=chranena_uzemi
+      v.overlay ainput=maloplosna_uzemi binput=velkoplosna_uzemi operator=or \
+       output=chranena_uzemi
                    
 K výsledné vektorové mapě je přiřazena atributová tabulka, která je
 spojena z obou vstupních vektorových map. Atributy první vektorové
@@ -98,7 +99,7 @@ mapy (:option:`ainput`) jsou označeny prefixem ``a_``, atributy druhé
 
 .. figure:: images/v-overlay-01-table.png
    :class: middle
-   :scale-latex: 65
+   :scale-latex: 50
 
    Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`.
 
@@ -118,11 +119,12 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
 
    .. code-block:: bash
 
-      v.overlay ainput=chranena_uzemi binput=hluk operator=and output=dalnice_chranenauzemi
+      v.overlay ainput=chranena_uzemi binput=hluk operator=and \
+       output=dalnice_chranenauzemi
                 
 .. figure:: images/dalnice500buffer_chranena_uzemi-01.png
    :class: middle
-   :scale-latex: 70
+   :scale-latex: 60
 
    Hluková oblast zasahující maloplošné chráněné území Černovický hájek u Brna.
 
@@ -132,7 +134,7 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
       
 .. figure:: images/dalnice500buffer_chranena_uzemi-02.png
    :class: middle
-   :scale-latex: 70
+   :scale-latex: 60
         
    Hluková oblast zasahující velkoplošné chráněné území CHKO Česká
    kras a CHKO Křivoklátsko.

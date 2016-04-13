@@ -83,7 +83,7 @@ Co se týče polygonových dat, většina topologických chyb může být
 opravena odstraněním ploch s relativně malou výměrou, tj. ploch, které
 reprezentují části, kde dochází k překryvu či mezerám mezi vstupními
 polygony. V našem případě bude stačit odstranit plochy s výměrou menší
-než 10km\ :sup:`2`.
+než 10m\ :sup:`2`.
 
 .. code-block:: bash
 

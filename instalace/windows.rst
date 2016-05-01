@@ -87,9 +87,7 @@ Nativní instalátor
 OSGeo4W
 =======
 
-*Instalátor frameworku OSGeo4W* je ke stažení na adrese:
-
-* http://download.osgeo.org/osgeo4w/
+*Instalátor frameworku OSGeo4W* je ke stažení pro `32bit <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe>`_ a `64bit <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ platformu.
 
 .. figure:: images/osgeo4w-0.png
             :scale-latex: 45

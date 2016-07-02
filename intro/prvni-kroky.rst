@@ -67,8 +67,8 @@ systému. Po jejich zadaní lze pokračovat dále (tlačítko
             :scale-latex: 45
 
             Úvodní dialog systému GRASS pro výběr adresáře s geodaty
-            :fignote:`(1)`, lokace :fignote:`(2)`, mapsetu
-            :fignote:`(3)` a spuštění systému GRASS :fignote:`(4)`.
+            :fignote:`(1)`, lokace :fignote:`(2)` a mapsetu
+            :fignote:`(3)`.
 
 .. noteadvanced::
    

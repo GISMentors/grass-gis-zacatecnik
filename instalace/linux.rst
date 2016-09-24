@@ -42,7 +42,7 @@ Postup instalace pro Ubuntu
 ===========================
 
 Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz
-`Launchpad <https://launchpad.net/~grass>`_):
+projekt `UbuntuGIS <https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable>`_):
 
 .. * http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all
 

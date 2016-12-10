@@ -2,7 +2,7 @@
    pair: analýza povrchu, topografické analýzy
    single: r.slope.aspect
 
-Togografické analýzy
+Topografické analýzy
 --------------------
 
 Základní topografické analýzy povrchu poskytuje modul

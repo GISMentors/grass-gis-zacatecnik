@@ -19,7 +19,7 @@ objeví *správce vrstev* (Layer Manager) a *mapové okno* (Map Display).
       g.gui
 
 .. figure:: images/grass-gui-launch.png
-            :class: large
+            :class: middle
             :scale-latex: 85
                  
             Základní komponenty GUI systému GRASS - správce vrstev

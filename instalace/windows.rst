@@ -9,25 +9,24 @@ Systém GRASS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 
 #. pomocí :ref:`nativního instalátoru<nativni-instalator>`
 
-   * *pro začátečníky*
+   * vhodné *pro začátečníky*
    * nepředpokládáme častou aktualizaci softwaru
 
 #. v rámci :ref:`OSGeo4W frameworku <osgeo4w-instalator>`
 
-   * *pro pokročilejší uživatele*
-   * komplexnější řešení umožňující instalaci dalšího softwaru
+   * vhodné *pro pokročilejší uživatele*
+   * komplexní řešení umožňující instalaci dalšího softwaru
      distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
-     (jako je např. `QGIS <http://qgis.org>`_, `MapServer <http://mapserver.org>`_ a další)
-   * vhodné při předpokladu :ref:`časté aktualizace softwaru <osgeo4w-aktualizace>` 
+     (jako je např. `QGIS <http://qgis.org>`_, `MapServer
+     <http://mapserver.org>`_ a další)
+   * vhodné při předpokladu časté aktualizace softwaru
 
 .. _nativni-instalator:
 
 Nativní instalátor
 ==================
 
-*Nativní (standalone) instalátor* pro GRASS 7.0 je dostupný na adrese:
-
-* http://grass.osgeo.org/grass70/binary/mswindows/native/
+Nativní instalátor je dostupný na adrese: https://grass.osgeo.org/download/software/ms-windows/#stand-alone. Následující obrazová dokumentace dokresluje proces instatalace.
 
 ..
    .. noteadvanced:: 
@@ -50,7 +49,7 @@ Nativní instalátor
 .. figure:: images/wingrass-2.png
             :scale-latex: 49
    
-            Zvolíme adresář, kam se má GRASS nainstalovat.
+            Potvrdíme adresář, kam se má GRASS nainstalovat.
 
 .. _nativni-instalator-data:
 
@@ -72,7 +71,8 @@ Nativní instalátor
             :scale-latex: 60
             
             Po startu se objeví úvodní obrazovka systému GRASS pro
-	    výběr, viz kapitola :ref:`struktura-dat`.
+	    výběr tzv. lokace a mapsetu, viz kapitola
+	    :ref:`struktura-dat`.
 
 .. raw:: latex
 
@@ -87,7 +87,7 @@ Nativní instalátor
 OSGeo4W
 =======
 
-*Instalátor frameworku OSGeo4W* je ke stažení pro `32bit <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe>`_ a `64bit <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ platformu.
+Instalátor frameworku OSGeo4W je ke stažení pro `32 bitovou <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe>`_ a `64 bitovou <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ platformu.
 
 .. figure:: images/osgeo4w-0.png
             :scale-latex: 45
@@ -102,7 +102,8 @@ OSGeo4W
 .. figure:: images/osgeo4w-2.png
             :scale-latex: 45
             
-	    Zvolíme adresář, kam se má GRASS nainstalovat.
+	    Zvolíme adresář, kam se má GRASS a případně další software
+	    z nabídky OSGeo4W nainstalovat.
 
 .. raw:: latex
 
@@ -111,7 +112,7 @@ OSGeo4W
 .. figure:: images/osgeo4w-3.png
             :scale-latex: 50
 
-            Nastavíme cestu k adresáři, kam se budou stahovat data instalátoru.
+            Potvrdíme cestu k adresáři, kam se budou stahovat data instalátoru.
 
 .. figure:: images/osgeo4w-4.png
             :scale-latex: 50
@@ -138,7 +139,7 @@ OSGeo4W
 .. figure:: images/osgeo4w-7.png
             :scale-latex: 50
             
-	    GRASS spustíme z nabídky Start ``OSGeo4W``.
+	    Systém GRASS spustíme z nabídky Start ``OSGeo4W``.
 
 .. noteadvanced::
 
@@ -160,34 +161,33 @@ OSGeo4W
 Poznámky
 ^^^^^^^^
 
-Nastavení velikosti fontu terminálu
+Nastavení velikosti písma terminálu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-V novějších verzích Windows bývá výchozí velikost fontu terminálu
+V novějších verzích Windows bývá výchozí velikost písma terminálu
 příliš malá.
 
 .. figure:: images/winterminal-small.png
    :class: small
 
-Velikost fontu můžete změnit ve vlastnostech okna (pravé tlačítko myši
+Velikost písma můžete změnit ve vlastnostech okna (pravé tlačítko myši
 nad titulkem okna, :menuselection:`Vlastnosti`).
 
 .. figure:: images/winterminal-font.png
    :class: small
 
-..  _osgeo4w-aktualizace:
+..
+   Automatická aktualizace (pro velmi pokročilé uživatele)
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Automatická aktualizace (pro velmi pokročilé uživatele)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Aktualizovat instalaci OSGeo4W (včetně instalace systému GRASS) lze
+   provádět automaticky v rámci plánovače úloh MS Windows.
+   
+   Stačí umístit do zvoleného adresáře níže uvedený skript s příponou
+   :wikipedia-en:`bat <Batch file>` (předpokládejme, že je framework
+   OSGeo4W nainstalován v adresáři ``C:\OSGeo4W``):
 
-Aktualizovat instalaci OSGeo4W (včetně instalace systému GRASS) lze
-provádět automaticky v rámci plánovače úloh MS Windows.
-
-Stačí umístit do zvoleného adresáře níže uvedený skript s příponou
-:wikipedia-en:`bat <Batch file>` (předpokládejme, že je framework
-OSGeo4W nainstalován v adresáři ``C:\OSGeo4W``):
-
-.. code-block:: bat
+   .. code-block:: bat
 
                 @echo off
 
@@ -197,9 +197,8 @@ OSGeo4W nainstalován v adresáři ``C:\OSGeo4W``):
                 apt update
                 apt upgrade
 
-a nastavit spuštění skriptu jako úlohu.
+   a nastavit spuštění skriptu jako úlohu.
 
-..   
    .. figure:: images/osgeo4w-cronjob-0.png
       :scale-latex: 50
 

@@ -11,7 +11,7 @@
    <http://gismentors.cz/skoleni/qgis>`_ | `PostGIS
    <http://gismentors.cz/skoleni/postgis>`_ | `GeoPython
    <http://gismentors.cz/skoleni/geopython>`_
-   
+
    ****
    Úvod
    ****
@@ -27,7 +27,7 @@
    single: geografický informační systém
        
 **GRASS** (Geographic Resources Analysis Support System) je
-multiplatformní desktopový *geografický informační systém*
+multiplatformní desktopový geografický informační systém
 (:wikipedia:`GIS`) určený pro správu geografických 2D/3D rastrových a
 vektorových dat, obrazových záznamů, produkci vysoce kvalitních
 grafických výstupů, časoprostorové modelování a vizualizaci dat.
@@ -44,7 +44,7 @@ grafických výstupů, časoprostorové modelování a vizualizaci dat.
    single: GNU
    pair: GPL; General Public License
 
-GRASS GIS (http://grass.osgeo.org) je *free software* a *open source*
+GRASS GIS (http://grass.osgeo.org) je svobodný a open source software
 publikovaný pod všeobecnou licencí GNU :abbr:`GPL (General Public
 License)`. Tato licence nejenže umožňuje software použít k libovolným
 účelům včetně komerčních, dovoluje také studovat jeho zdrojový kód,
@@ -67,12 +67,12 @@ upravovat ho a tyto změny či opravy šířit dál.
 .. important:: Školení je zaměřeno na aktuální verzi `GRASS 7.2
                <http://grass.osgeo.org/download/software/#g72x>`_. Ve
                starší verzi GRASS 6.4 není zaručena funkčnost
-               uvedených příkladů, případné rozdíly mezi těmito
-               verzemi jsou vždy explicitně zdůrazněny. Dále
-               předpokládáme zapnutou *anglickou lokalizaci*, viz
-               kapitola :ref:`volba-lokalizace`. Na toto školení do
-               jisté míry navazuje školení :skoleni:`GRASS GIS pro
-               pokročilé <grass-gis-pokrocily>`.
+               uvedených příkladů. Dále předpokládáme zapnutou
+               *anglickou lokalizaci*, viz kapitola
+               :ref:`volba-lokalizace`.
+
+.. tip:: Na toto školení do značné míry navazuje školení
+         :skoleni:`GRASS GIS pro pokročilé <grass-gis-pokrocily>`.
 
 .. index::
    pair: datové sady; ke stažení
@@ -122,7 +122,7 @@ Související materiály
               
 .. rubric:: Anglicky:
 
-* `Dokumentace systému GRASS 7.0 <http://grass.osgeo.org/grass70/manuals/index.html>`_
+* `Dokumentace systému GRASS 7.2 <http://grass.osgeo.org/grass72/manuals/index.html>`_
 
 .. rubric:: Literatura:
 

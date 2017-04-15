@@ -23,10 +23,11 @@ jako tzv. *balíček (package)*.
 Postup instalace pro Debian GNU/Linux
 =====================================
 
-Přehled balíčků GRASS dostupných pro :wikipedia:`Debian GNU/Linux` (viz
-projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_):
+Systém GRASS můžete nainstalovat běžným způsobem, viz `přehled verzí
+<http://packages.debian.org/search?keywords=grass&searchon=names&suite=all&section=all>`__.
 
-* http://packages.debian.org/search?keywords=grass&searchon=names&suite=all&section=all
+.. note:: Údržbu balíčku systému GRASS a ostatních GIS software
+   zajišťuje projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_.
 
 .. notecmd:: Instalace
    
@@ -41,13 +42,13 @@ projekt `DebianGIS <http://wiki.debian.org/DebianGis>`_):
 Postup instalace pro Ubuntu
 ===========================
 
-Přehled balíčků GRASS dostupných pro :wikipedia:`Ubuntu` (viz
-projekt `UbuntuGIS <https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable>`_):
+Systém GRASS můžete nainstalovat běžným způsobem, viz `přehled verzí
+<http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all>`__.
 
-.. * http://packages.ubuntu.com/search?keywords=grass&searchon=names&suite=all&section=all
+.. tip:: Pokud chcete používat co možná nejaktuálnější verzi systému
+   GRASS, tak použijte balíčky z projektu `UbuntuGIS
+   <https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable>`__:
 
-.. notecmd:: Instalace
-               
    .. code-block:: bash
 
       sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
@@ -58,7 +59,7 @@ projekt `UbuntuGIS <https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-u
             :class: middle
             :scale-latex: 85
                  
-            Spuštění systému GRASS v Ubuntu
+            Spuštění systému GRASS v Ubuntu.
 
 .. rubric:: `Poznámky pod čarou`
    :class: secnotoc

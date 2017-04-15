@@ -14,11 +14,11 @@ operačním systémům.
         
    Programátor systému GRASS Dave Gerdes :abbr:`USA-CERL (US Army
    Construction Engineering Research Laboratory)` před počítačem Compaq
-   386 na který portoval GRASS.
+   386, na který portoval GRASS.
 
 .. youtube:: U3Hf0qI4JLc
 
-             GRASS GIS (CERL, 1987)
+             Instruktážní video GRASS GIS (CERL, 1987).
         
 Postupem času byl systém GRASS portován na další platformy a nadále
 vyvíjen jako striktně multiplatformní informační systém. V současnosti

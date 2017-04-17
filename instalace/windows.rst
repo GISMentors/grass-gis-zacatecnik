@@ -72,7 +72,7 @@ Nativní instalátor je dostupný na adrese: https://grass.osgeo.org/download/so
             
             Po startu se objeví úvodní obrazovka systému GRASS pro
 	    výběr tzv. lokace a mapsetu, viz kapitola
-	    :ref:`struktura-dat`.
+	    :doc:`../intro/struktura-dat`.
 
 .. raw:: latex
 

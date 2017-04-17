@@ -19,34 +19,30 @@ objeví *správce vrstev* (Layer Manager) a *mapové okno* (Map Display).
       g.gui
 
 .. figure:: images/grass-gui-launch.png
-            :class: middle
+            :class: large
             :scale-latex: 85
                  
             Základní komponenty GUI systému GRASS - správce vrstev
             :fignote:`(1)` a mapové okno :fignote:`(2)`.
 
-Rastrová či vektorová data lze do *stromu vrstev* (viz záložka :item:`Map
-layers`) přidávat z menu :menuselection:`File --> Map display`, nástrojové lišty či
-přímo z příkazové řádky *správce vrstev*, viz :ref:`níže <zobrazeni-dat-raster>`.
+Rastrová či vektorová data lze do *správce vrstev* (záložka
+:item:`Layers`) přidávat z menu :menuselection:`File --> Map display`,
+nástrojové lišty či přímo z příkazové řádky *správce vrstev* (záložka
+:item:`Console`), viz :ref:`níže <zobrazeni-dat-raster>`.
 
 .. raw:: latex
 
    \newpage
          
-.. note::
+.. tip::
 
-   Pokud se v mapovém okně nezobrazují žádná data, je nutné nastavit
-   pohled na aktuálně vybranou mapu.
-
-   .. figure:: images/map-display-full-zoom.png
-               :class: middle
-               :scale-latex: 65
-                    
-               Nastavení pohledu mapového okna na aktuálně vybranou
-               mapovou vrstvu.
-
-   Automatické nastavení pohledu při přidání nové mapové vrstvy lze
-   nastavit v :menuselection:`Settings --> Preferences`.
+   Pokud se v mapovém okně po přidání vrstvy nezobrazují žádná data,
+   je nutné nastavit pohled na aktuálně vybranou mapovou vrstvu
+   |grass-zoom-extent| :sup:`Zoom to selected map
+   layer(s)`. Automatické nastavení pohledu při přidání každé nové
+   mapové vrstvy lze kontrolovat v nastavení |grass-settings|
+   :sup:`GUI Settings` anebo z menu :menuselection:`Settings -->
+   Preferences`.
 
    .. figure:: images/wxgui-settings-autozoom.png
       :scale-latex: 50

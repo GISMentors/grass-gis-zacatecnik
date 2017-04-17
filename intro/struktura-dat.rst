@@ -1,13 +1,15 @@
-.. _struktura-dat:
+==========================================
+ Struktura dat - koncept lokací a mapsetů
+==========================================
 
-Struktura dat - koncept lokací a mapsetů
-----------------------------------------
+Data, ke kterým GRASS přistupuje, musí mít pevně danou strukturu. Při
+spuštění systému GRASS uživatel volí *tři* níže uvedené elementy v
+daném pořadí, viz obrázek níže.
 
-Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
-:ref:`spuštění systému GRASS <spusteni-grass>` musí uživatel zvolit
-*tři* níže uvedené elementy v daném pořadí:
+.. figure:: images/welcome-screen.png
+            :scale-latex: 45
 
-**Adresář s geodaty (DataBase)**
+**1. Adresář s geodaty (DataBase)**
 
    Jde o adresář umístěný na lokálním či síťovém disku,
    např. :file:`/opt/grassdata` nebo :file:`C:\\grassdata` v případě
@@ -25,11 +27,11 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 
 .. _lokace:
    
-**Lokace (Location)**
+**2. Lokace (Location)**
 
    Lokace je adresář umístěný v GRASS DataBase (adresáři s
-   geodaty). Tento adresář obsahuje data, která souvisejí s daným
-   projektem. Lokace je definována *souřadnicovým systémem*
+   geodaty). Lokace obsahuje data, která souvisejí s daným
+   *projektem*. Lokace je definována *souřadnicovým systémem*
    (referenční elipsoid, kartografické zobrazení, mapové jednotky) a
    výchozí velikostí zájmového území.
 
@@ -38,24 +40,23 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
    see: mapsety; lokace
    see: mapsety; MAPSET
 
-**Mapset**
+**3. Mapset**
 
-   Mapset je souborem map, které tvoří jakýsi logický celek v rámci
-   lokace (projektu). Může např. odpovídat jednotlivým uživatelům
-   nebo uceleným analýzám (studium vegetace, záplavová území,
-   apod.). Každá lokace musí obsahovat alespoň jeden mapset s
-   unikátním názvem *PERMANENT*. Ten většinou obsahuje
-   základní datové vrstvy a ostatní mapsety jsou brány jako pracovní
-   (zpracování vstupních dat, jejich analýza apod.).
+   Mapset je souborem map, které tvoří logický celek v rámci lokace
+   (projektu). Může např. odpovídat jednotlivým uživatelům nebo
+   uceleným analýzám (studium vegetace, záplavová území, apod.). Každá
+   lokace musí obsahovat mapset s unikátním názvem *PERMANENT*. Ten
+   většinou obsahuje základní datové vrstvy a ostatní mapsety jsou
+   brány jako pracovní (zpracování vstupních dat, jejich analýza
+   apod.).
 
 .. figure:: images/help_loc_struct.png
             :class: middle
             :scale-latex: 72
       
             Struktura adresáře s geodaty, vztah lokace a mapsetů,
-            umístění souborů s daty pro různé typy map (zdroj: `manuál
-            systému GRASS
-            <http://grass.osgeo.org/grass70/manuals/helptext.html>`_).
+            umístění souborů s daty pro různé typy map (zdroj:
+            :grasscmd2:`manuál systému GRASS <helptext.html>`).
 
 .. noteadvanced:: 
    
@@ -66,11 +67,10 @@ Data, ke kterým GRASS přistupuje, mají pevně danou strukturu. Při
 .. note:: **Obvyklé umístění adresáře s geodaty**
       
       Adresář s geodaty je většinou umístěn v domovském adresáři
-      uživatele pod názvem :file:`grassdata`. V případě :wikipedia:`MS
-      Windows` to může být
-      :file:`%USERPROFILE%\\Documents\\grassdata`, u UNIXových
-      operačních systémů jako je :wikipedia:`GNU/Linux` či
-      :wikipedia:`Mac OS X` potom :file:`$HOME/grassdata`.
+      uživatele pod názvem :file:`grassdata`. V případě MS Windows to
+      může být :file:`%USERPROFILE%\\Documents\\grassdata`, u
+      UNIXových operačních systémů jako je GNU/Linux či Mac OS X potom
+      :file:`$HOME/grassdata`.
 
 .. index::
    pair: vyhledávací cesta; struktura dat
@@ -98,7 +98,7 @@ GRASS working environment --> Mapset access`.
    :class: small
    :scale-latex: 45
 
-   Přidání mapsetu `ruian` do vyhledávací cesty.
+   Přidání mapsetu "ruian" do vyhledávací cesty.
 
 .. notecmd:: Přidání mapsetu do vyhledávací cesty
 
@@ -109,4 +109,4 @@ GRASS working environment --> Mapset access`.
 .. figure:: images/d-rast-user1-ruian.png
 
    Přidání nové rastrové mapy do mapového okna, kromě aktuálního
-   mapsetu a mapset `PERMANENT` je viditelný i mapset `ruian`.
+   mapsetu a mapset `PERMANENT` je viditelný i mapset "ruian".

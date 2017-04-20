@@ -7,14 +7,47 @@ Tabulka barev
 -------------
 
 Tabulka barev představuje zápis pravidel pro barevnou interpretaci
-rastrových hodnot. Podobu tabulky barev pro zvolenou rastrovou mapu
-zobrazuje nástroj dostupný z menu :menuselection:`Raster --> Manage
-colors --> Manage color rules interactively`.
+rastrových hodnot.
+
+Nastavit tabulku barev umožňuje modul :grasscmd:`r.colors`, který je
+dostupný buď z menu :menuselection:`Raster --> Manage colors --> Color
+tables` anebo z~kontextového menu rastrové mapy.
+
+.. figure:: images/lmgr-r-colors.png
+   :scale-latex: 50
+              
+   Nastavení tabulky barev z kontextového menu správce vrstev.
+
+Modul umožňuje definovat tabulku barev manuálně, použít předefinovanou
+či již přiřazenou jiné rastrové mapě.
+
+.. figure:: images/r-colors-grey-i.png
+   :scale-latex: 50
+              
+   Příklad nastavení tabulky barev odstínů šedi v opačném pořadí.
+
+.. figure:: images/dmt-grey-i.png
+   :class: middle
+   :scale-latex: 65
+              
+   DMT v inverzních odstínech šedi.
+
+Podrobné nastavení tabulky barev
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Podobu tabulky barev pro zvolenou rastrovou mapu zobrazuje nástroj
+dostupný z menu :menuselection:`Raster --> Manage colors --> Manage
+color rules interactively` anebo z~kontextového menu rastrové mapy.
+
+.. figure:: images/lmgr-r-colors-inter.png
+   :scale-latex: 50
+              
+   Interaktivní nastavení tabulky barev z kontextového menu správce vrstev.
 
 .. figure:: images/color-table-dmt.png
-	    :scale-latex: 50
+   :scale-latex: 50
 
-            Příklad tabulky barev pro rastrovou mapu :map:`dmt`.
+   Příklad tabulky barev pro rastrovou mapu :map:`dmt`.
 
 .. raw:: latex
 
@@ -39,59 +72,31 @@ včetně náhledu na data.
 .. figure:: images/color-table-dmt-custom.png
    :scale-latex: 50
 
-   Příklad interaktivně změněné tabulky barev :fignote:`(1)` pouze v
-   náhledu :fignote:`(2)`.
+   Příklad interaktivně změněné tabulky barev pouze v náhledu.
 
 Nástroj umožňuje použít některou z předdefinovaných tabulek
 barev.
 
 .. figure:: images/color-table-dmt-defined-0.png
 
-            Příklad pro výběr tabulky barev odstínů šedi
-            :fignote:`(1)`, tabulka barev se nastaví pro náhled po
-            stisknutí tlačítka :item:`Set` :fignote:`(2)`.
+            Příklad pro výběr tabulky barev odstínů šedi, tabulka
+            barev se nastaví pro náhled po stisknutí tlačítka
+            :item:`Set`.
 
 .. figure:: images/color-table-dmt-defined-1.png
 
             Příklad pro výběr tabulky barev odstínů šedi. Tabulka
             barev je aplikována pouze pro náhled, pokud ji chceme
-            nastavit, stiskneme tlačítko :fignote:`(1)`. Návrat k
-            výchozí tabulce barev poskytuje :fignote:`(2)`.
+            nastavit, stiskneme tlačítko :item:`Apply`. Návrat k
+            výchozí tabulce barev poskytuje :item:`Reload default
+            table`.
 
 .. raw:: latex
 	 
    \newpage
-	 
-Tabulku barev lze dále načíst anebo uložit do souboru.
 
-.. figure:: images/color-table-file.png
+.. tip:: Tabulku barev lze dále načíst anebo uložit do souboru.
 
-            Uložení a načtení tabulky barev do/z souboru.
+   .. figure:: images/color-table-file.png
 
-Pokročilé nastavení tabulky barev
-=================================
-
-Kromě interaktivního nástroje samozřejmě v systému GRASS existuje
-modul, který umožňuje nastavit tabulku barev neinteraktivně, jde o
-:grasscmd:`r.colors`. Tento modul je dostupný buď z menu
-:menuselection:`Raster --> Manage colors --> Color tables` anebo
-z~kontextového menu rastrové mapy.
-
-.. figure:: images/lmgr-r-colors.png
-   :scale-latex: 50
-              
-   Nastavení tabulky barev z kontextového menu správce vrstev.
-
-Modul umožňuje definovat tabulku barev manuálně, použít předefinovanou
-či již přiřazenou jiné rastrové mapě.
-
-.. figure:: images/r-colors-grey-i.png
-   :scale-latex: 50
-              
-   Příklad nastavení tabulky barev odstínů šedi v opačném pořadí.
-
-.. figure:: images/dmt-grey-i.png
-   :class: middle
-   :scale-latex: 65
-              
-   DMT v inverzních odstínech šedi.
+      Uložení a načtení tabulky barev do/z souboru.

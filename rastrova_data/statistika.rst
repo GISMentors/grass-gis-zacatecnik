@@ -5,8 +5,8 @@ Základní statistiky rastrových dat
 ----------------------------------
 
 Kromě výpisu :ref:`základních metadat <raster-metadata>` rastrových
-map systém GRASS disponuje dalšími moduly pro výpis statistických
-informací rastrových dat:
+dat systém GRASS disponuje dalšími moduly pro výpis statistických
+informací:
 
 * :ref:`r.report <r-report>` pro přehledný výpis informací o rastrové mapě,
 * :ref:`r.univar <r-univar>` pro základní statistiku a
@@ -44,17 +44,17 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`:
 
 .. figure:: images/r-report-0.png
 
-   Nejprve vybereme rastrovou mapu :fignote:`(1)`, pro kterou si
-   přejeme vypsat report.
+   Nejprve vybereme rastrovou mapu, pro kterou si přejeme vypsat
+   report.
    
 .. figure:: images/r-report-1.png
 
-   Dále zvolíme informace, které si přejeme vypsat :fignote:`(2)`.
+   Dále zvolíme informace, které si přejeme vypsat.
 
 .. figure:: images/r-report-2.png
 
    Zvolíme počet tříd, do kterých se mají data s plovoucí desetinnou
-   čárkou rozdělit :fignote:`(3)` a modul spustíme :fignote:`(4)`.
+   čárkou rozdělit a modul spustíme.
 
 .. figure:: images/r-report-3.png
    :scale-latex: 50
@@ -64,14 +64,15 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`:
 
 .. important::
 
-   Jak již bylo uvedeno v kapitole :ref:`výpočetní region <region>`
-   drtivá většina modulů pro zpracování rastrových dat pracuje vždy v
-   aktuální výpočetním regionu! Pokud např. změníme prostorové
-   rozlišení výpočetního regionu na 100m, změní se i report rastrové
-   mapy :map:`dmt`. Modul nejprve data převzorkuje metodou
-   :wikipedia-en:`nejbližšího souseda <Nearest neighbor
-   interpolation>` do mřížky s velikostí buňky 100x100m a teprve nad
-   těmito daty vypočítá údaje pro report.
+   Jak již bylo uvedeno v kapitole :doc:`../intro/region` drtivá
+   většina modulů pro zpracování rastrových dat pracuje vždy v
+   aktuální výpočetním regionu. Modul :grasscmd:`r.report` není
+   vyjímkou. To stejné platí pro další prezentované moduly. Pokud
+   např. změníme prostorové rozlišení výpočetního regionu na 1km,
+   změní se i report rastrové mapy :map:`dmt`. Modul nejprve data
+   převzorkuje metodou :wikipedia-en:`nejbližšího souseda <Nearest
+   neighbor interpolation>` do mřížky s velikostí buňky 1x1km a teprve
+   nad těmito daty vypočítá údaje pro report.
 
    .. code-block:: bash
 
@@ -91,7 +92,7 @@ Příklad výpisu statistiky pro rastrovou vrstvu :map:`dmt`:
 Základní statistika
 ===================
 
-Základní statistiku o rastrových datech poskytuje modul
+Základní statistiku rastrových dat poskytuje modul
 :grasscmd:`r.univar` dostupný buď z menu :menuselection:`Raster -->
 Repors and statistics --> Univariate raster statistics` anebo z
 kontextového menu *správce vrstev*.
@@ -114,8 +115,8 @@ kontextového menu *správce vrstev*.
 Pokročilá statistika
 ====================
 
-Modul :grasscmd:`r.stats` je základní modul poskytující statistiku
-rastrových dat, jde nicméně o modul určený především pro pokročilé
+Modul :grasscmd:`r.stats` je nizkoúrovňový modul poskytující
+statistiku rastrových dat. Modul je určený především pro pokročilé
 uživatele, kteří si píší vlastní skripty. Modul je dostupný z menu
 :menuselection:`Raster --> Repors and statistics --> General
 statistics`.
@@ -127,7 +128,7 @@ statistics`.
 
    .. code-block:: bash
 
-                   r.stats -c input=dmt nsteps=10 sort=desc
+      r.stats -c input=dmt nsteps=10 sort=desc
 
    ::
    
@@ -144,9 +145,9 @@ statistics`.
       1427.787815-1580.94519 12743
 
 Kromě skriptů můžete tento modul využít například pro export
-statistiky rastrové mapy do Vašeho tabulkové procesoru
-(např. LibreOffice Calc či MS Excel) a to přes výměnný formát
-:wikipedia:`CSV` (parametr :option:`separator=comma`).
+statistiky rastrové mapy do tabulkové procesoru (např. LibreOffice
+Calc či MS Excel) a to přes výměnný formát :wikipedia:`CSV` (parametr
+:option:`separator=comma`).
 
 .. code-block:: bash
 

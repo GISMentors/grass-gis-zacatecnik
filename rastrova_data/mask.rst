@@ -40,15 +40,14 @@ obdélníka. Masku lze vytvořit a odstranit pomocí modulu
 Příklad nastavení masky na základě rastrové mapy
 ================================================
 
+Nejprve vybereme rastrovou mapu na základě, které chceme masku
+nastavit a posléze definujeme hodnoty z této mapy, které poslouží pro
+vytvoření masky - v tomto případě hodnoty 500 až 800.
+
 .. figure:: images/r-mask-raster-0.png
    :scale-latex: 45
 
-   Nejprve vybereme rastrovou mapu :fignote:`(1)` na základě, které
-   chceme masku nastavit a posléze definujeme hodnoty z této mapy
-   :fignote:`(2)`, které poslouží pro vytvoření masky - v tomto
-   případě hodnoty 500 až 800.
-
-.. note::
+.. important::
 
    Rastrová mapa na základě, které chcete definovat masku musí být
    celočíselná, viz :ref:`typ CELL <raster-types>`. Pokud tomu tak
@@ -57,7 +56,7 @@ Příklad nastavení masky na základě rastrové mapy
    použít pro vytvoření masky.
 
    Tuto operaci lze provést např. pomocí modulu :grasscmd:`r.mapcalc`,
-   více v kapitole :ref:`rastrová algebra <rastrova-algebra>`.
+   více v kapitole :doc:`rastrova-algebra`.
 
    .. code-block:: bash
 
@@ -87,8 +86,8 @@ Příklad nastavení masky na základě vektorové mapy
 =================================================
 
 Na tomto místě si ukážeme postup vytvoření masky na základě území
-Ústeckého kraje. Vektorová mapa kraje vznikla jednoduchým 
-:ref:`atributovým dotazem <atributove-dotazy>`.
+Ústeckého kraje. Vektorová mapa kraje vznikla jednoduchým dotazem, viz
+kapitola :doc:`../intro/atributove-dotazy`.
 
 .. figure:: images/dmt-uk.png
    :class: middle

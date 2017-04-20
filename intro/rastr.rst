@@ -5,17 +5,22 @@ Rastrová data
 -------------
 
 Rastrová data jsou v systému GRASS uložena v podobě tzv. *rastrových
-map*. Jde o:
+map*. Základní charakteristika:
 
-* reprezentaci v podobě pravidelné mřížky hodnot (GRASS nepodporuje
+* reprezentace v podobě pravidelné mřížky hodnot (GRASS nepodporuje
   nepravidelné mřížky)
-* je ideální pro reprezentaci spojitých jevů jako nadmořská výška, teplota povrchu a pod.
+* vhodná pro reprezentaci spojitých jevů jako nadmořská výška, teplota
+  povrchu a pod.
 * elementem mřížky je buňka či tzv. *pixel*, jehož tvar může být buď
   čtvercový nebo obdélníkový
 * velikost pixelu je dána *prostorovým rozlišením*
-* k hodnotě buňky lze přiřadit textový popisek (tzv. *label*) -
+* k hodnotě buňky lze přiřadit textový popisek (tzv. *label*), viz
   :ref:`příklad <prirazeni-stitku>`
 
+.. tip:: Více o rastrové reprezentace v rámci školení :skoleni:`Úvod
+   do GIS <open-source-gis/formaty/rastr.html>`.
+   
+                
 .. index::
    pair: metadata; rastrová data
    single: r.info
@@ -33,7 +38,7 @@ rastrové mapy ve *správci vrstev*.
 .. figure:: images/lmgr-r-info.png
    :scale-latex: 65
 
-   Spuštění nástroje pro výpis metadat rastrových map z kontextového
+   Spuštění nástroje pro výpis metadat rastrových dat z kontextového
    menu správce vrsvev.
 
 .. figure:: images/lmgr-r-info-example.png
@@ -51,7 +56,7 @@ rastrové mapy ve *správci vrstev*.
 
 .. _raster-types:
                  
-Typy rastrových map
+Typy rastrových dat
 ===================
 
 GRASS rozlišuje tři typy rastrových map podle datového typu buňky:
@@ -81,4 +86,5 @@ GRASS rozlišuje tři typy rastrových map podle datového typu buňky:
    Kromě 2D rastrových dat GRASS podporuje i 3D rastrová data
    (tzv. *volumes*) a nad nimi postavené analýzy. Tato problematika je
    ale nad rámec tohoto školení a je probírána v navazující
-   :skoleni:`školení pro pokročilé uživatele <grass-gis-pokrocily>`.
+   :skoleni:`školení pro pokročilé uživatele
+   <grass-gis-pokrocily/3d/index.html>`.

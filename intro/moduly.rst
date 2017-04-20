@@ -52,7 +52,7 @@ Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
 
 #. z menu správce vrstev
 
-   .. _wxgui-menu-r-buffer:
+   .. _wxgui-menu-v-buffer:
 
    .. figure:: images/wxgui-menu-v-buffer.png
 
@@ -60,7 +60,7 @@ Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
 
 #. ze záložky :item:`Modules` správce vrstev
 
-   .. _wxgui-search-r-buffer:
+   .. _wxgui-search-v-buffer:
    
    .. figure:: images/wxgui-search-v-buffer.png
                
@@ -69,7 +69,7 @@ Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
 
 #. z příkazové řádky správce vrstev
 
-   .. _wxgui-console-r-buffer:
+   .. _wxgui-console-v-buffer:
 
    .. figure:: images/wxgui-console-v-buffer.png
       :scale-latex: 45
@@ -90,7 +90,7 @@ Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
             :option:`output` a :option:`distance`), tak se modul spustí
             přímo.
 
-   .. _wxgui-console-r-buffer-launch:
+   .. _wxgui-console-v-buffer-launch:
       
    .. figure:: images/wxgui-console-v-buffer-launch.png
 

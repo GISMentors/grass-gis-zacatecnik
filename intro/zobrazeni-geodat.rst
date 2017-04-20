@@ -75,13 +75,10 @@ Rastrová data
 =============
 
 Rastrová data (v terminologii systému GRASS tzv. *rastrovou mapu*) lze
-přidat do správce vrstev, resp. mapového okna čtyřmi různými způsoby:
+přidat do správce vrstev, resp. mapového okna různými způsoby:
 
-#. z nástrojové lišty správce vrstev
-
-   .. figure:: images/wxgui-toolbar-raster.png
-            
-               Přidání rastrové mapy z nástrojové lišty správce vrstev.
+#. z nástrojové lišty správce vrstev |grass-layer-raster-add|
+   :sup:`Add raster map layer`
 
    .. figure:: images/wxgui-d-rast.png
                :scale-latex: 50
@@ -92,7 +89,7 @@ přidat do správce vrstev, resp. mapového okna čtyřmi různými způsoby:
 
 #. pomocí klávesové zkratky :kbd:`Ctrl+Shift+R`
 
-#. z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.rast`
+#. z příkazové řádky (``Console``) správce vrstev příkazem :grasscmd:`d.rast`
 
    .. figure:: images/wxgui-console.png
 
@@ -103,13 +100,9 @@ přidat do správce vrstev, resp. mapového okna čtyřmi různými způsoby:
                Přidání rastrové mapy z příkazové řádky správce vrstev.
 
 Ostatní mapové vrstvy, které mají rastrový charakter jsou dostupné z
-nástrojové lišty nebo z příkazové řádky správce vrstev.
-
-.. figure:: images/wxgui-toolbar-raster-misc.png
-            :class: middle
-            :scale-latex: 60
-                 
-            Přidání ostatních rastrových dat z nástrojové lišty správce vrstev.
+nástrojové lišty |grass-layer-raster-more| :sup:`Add various raster
+map layers (RGB, HIS, shaded relief, ...)` nebo z příkazové řádky
+správce vrstev.
 
 .. figure:: images/wxgui-toolbar-raster-misc-1.png
             :scale-latex: 50
@@ -129,8 +122,9 @@ Jde o následující typy rastrových dat:
             :class: large
             :scale-latex: 65
                  
-            Příklad zobrazení barevné syntézy kanálů :wikipedia:`Landsat 8 ETM <Landsat>`
-            z mapsetu `landsat` ve skutečných barvách.
+            Příklad zobrazení barevné syntézy kanálů
+            :wikipedia:`Landsat 8 ETM <Landsat>` z mapsetu "landsat"
+            ve skutečných barvách.
 
 .. index::
    pair: zobrazení dat; vektorová data
@@ -141,12 +135,8 @@ Vektorová data
 
 Podobně lze přidat vektorová data (tzv. *vektorovou mapu*):
 
-#. z nástrojové lišty správce vrstev:
-
-   .. figure:: images/wxgui-toolbar-vector.png
-               :scale-latex: 50
-                    
-               Přidání vektorové mapy z nástrojové lišty správce vrstev.
+#. z nástrojové lišty správce vrstev |grass-layer-vector-add|
+   :sup:`Add vector map layer`
 
    .. figure:: images/wxgui-d-vect.png
                :scale-latex: 50
@@ -157,20 +147,17 @@ Podobně lze přidat vektorová data (tzv. *vektorovou mapu*):
 
 #. pomocí klávesové zkratky :kbd:`Ctrl+Shift+V`
 
-#. z příkazové řádky (``Command console``) správce vrstev příkazem :grasscmd:`d.vect`
+#. z příkazové řádky (``Console``) správce vrstev příkazem
+   :grasscmd:`d.vect`
 
    .. figure:: images/wxgui-console-vector.png
                
                Přidání vektorové mapy z příkazové řádky správce vrstev.
 
 Ostatní mapové vrstvy, které mají vektorový charakter jsou dostupné z
-nástrojové lišty nebo z příkazové řádky správce vrstev.
-
-.. figure:: images/wxgui-toolbar-vector-misc.png
-            :class: middle
-	    :scale-latex: 65
-
-            Přidání ostatních vektorových dat z nástrojové lišty správce vrstev.
+nástrojové lišty |grass-layer-vector-more| :sup:`Add various raster
+map layers (thematic, chart, ...)` nebo z příkazové řádky správce
+vrstev.
 
 .. figure:: images/wxgui-toolbar-vector-misc-1.png
 	    :class: middle
@@ -180,5 +167,6 @@ nástrojové lišty nebo z příkazové řádky správce vrstev.
 
 Jde o následující typy vektorových dat:
 
-* tématické zobrazení plošných vektorových dat - příkaz :grasscmd:`d.thematic.area`
+* tématické zobrazení plošných vektorových dat - příkaz
+  :grasscmd:`d.thematic.area`
 * zobrazení grafů - :grasscmd:`d.vect.chart`

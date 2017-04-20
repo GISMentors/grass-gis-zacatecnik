@@ -4,20 +4,19 @@ Příkazy systému GRASS
 .. index::
    single: moduly
 
-GRASS GIS je *modulární systém*, který disponuje poměrně rozsáhlou
-množinou malých, ale výkonných programů (v~terminologii systému GRASS
-*modulů*).
+GRASS GIS je *modulární systém*, který disponuje rozsáhlou množinou
+malých, ale výkonných programů (v~terminologii systému *modulů*).
 
 .. note::
    
-   To odpovídá koncepci :wikipedia:`Unixu <Unix>` jako
-   takového. Daný program má za úkol vyřešit dílčí problém, měl by být co
-   nejmenší a poměrně jednoduchý.
+   To odpovídá koncepci :wikipedia:`Unixu <Unix>` jako takového. Daný
+   program má za úkol vyřešit dílčí problém, měl by být co nejmenší a
+   poměrně jednoduchý.
 
 Jednotlivé příkazy systému GRASS - moduly - mají konzistentní syntaxi,
-jejich názvy se skládají z předpony označující skupinu příkazů a
-krátkého názvu napovídající účel modulu (viz tabulka níže). Například
-modul :grasscmd:`v.buffer` patří do skupiny *vector* a je určen pro
+jejich názvy se skládají z prefixu označujícího skupinu příkazů a
+krátkého názvu napovídajícího účel modulu (viz tabulka níže). Například
+modul :grasscmd:`v.buffer` patří do skupiny "vector" a je určen pro
 vytvoření obalové zóny (tzv. bufferu) nad vektorovými daty.
 
 .. only:: latex
@@ -49,47 +48,58 @@ vytvoření obalové zóny (tzv. bufferu) nad vektorovými daty.
 +----------+--------------------------------+-----------------------------------------------+
 
 Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
-:grasscmd:`r.buffer`):
+:grasscmd:`v.buffer`):
 
 #. z menu správce vrstev
 
    .. _wxgui-menu-r-buffer:
 
-   .. figure:: images/wxgui-menu-r-buffer.png
+   .. figure:: images/wxgui-menu-v-buffer.png
 
-               Spuštění modulu :grasscmd:`r.buffer` z menu správce vrstev.
+      Vyhledání modulu :grasscmd:`v.buffer` v menu správce vrstev.
 
-#. z nástroje :item:`Search module` správce vrstev
+#. ze záložky :item:`Modules` správce vrstev
 
    .. _wxgui-search-r-buffer:
    
-   .. figure:: images/wxgui-search-r-buffer.png
+   .. figure:: images/wxgui-search-v-buffer.png
                
-               Spuštění modulu :grasscmd:`r.buffer` pomocí nástroje :item:`Search module`.
+      Vyhledání modulu :grasscmd:`v.buffer` v záložce správce vrstev
+      :item:`Modules`.
 
 #. z příkazové řádky správce vrstev
 
    .. _wxgui-console-r-buffer:
 
-   .. figure:: images/wxgui-console-r-buffer.png
-	       :class: middle
-	       :scale-latex: 90
+   .. figure:: images/wxgui-console-v-buffer.png
+      :scale-latex: 45
 
-               Spuštění modulu :grasscmd:`r.buffer` z příkazové řádky správce vrstev.
+      Vyhledání modulu :grasscmd:`v.buffer` z příkazové řádky správce
+      vrstev.
 
-   Pokud jsou zadány všechny povinné parametry (v případě modulu
-   :grasscmd:`r.buffer` jde o parametry :option:`input`,
-   :option:`output` a :option:`distances`), tak se modul spustí
-   přímo. Pokud tato podmínka není splněna, zobrazí se dialog
-   nástroje.
+   Po vybrání modulu se objeví GUI dialog umožňující zadat vstupní,
+   výstupní parametry a nástroj spustit (:item:`Run`).
+
+   .. figure:: images/wxgui-dialog-v-buffer.png
+
+      Spuštění modulu :grasscmd:`v.buffer`.
+      
+   .. tip:: Pokud jsou v příkazové řádce (:item:`Console`) zadány
+            všechny povinné parametry (v případě modulu
+            :grasscmd:`v.buffer` jde o parametry :option:`input`,
+            :option:`output` a :option:`distance`), tak se modul spustí
+            přímo.
 
    .. _wxgui-console-r-buffer-launch:
-           
-   .. figure:: images/wxgui-console-r-buffer-launch.png
+      
+   .. figure:: images/wxgui-console-v-buffer-launch.png
 
-               Spuštění modulu :grasscmd:`r.buffer` včetně zadání parametrů.
+      Spuštění modulu :grasscmd:`v.buffer` včetně zadání parametrů.
 
-#. z :doc:`grafického modeleru <../misc/graficky-modeler>`
+   Příkazové řádka má historii, lze tedy moduly spouštět opakovaně
+   např. s mírnou obměnou parametrů.
+
+#. z :doc:`grafického modeleru <../ruzne/graficky-modeler>`
 
 .. raw:: latex
 
@@ -102,7 +112,8 @@ Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
 Nápověda k modulům
 ==================
 
-Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS help`.
+Nápověda systému GRASS je dostupná z menu :menuselection:`Help -->
+GRASS help`.
 
 .. figure:: images/grass-help.png
    :class: large
@@ -110,20 +121,23 @@ Nápověda systému GRASS je dostupná z menu :menuselection:`Help --> GRASS hel
               
    Nápověda systému GRASS v okně webového prohlížeče.
 
-.. notecmd:: Zobrazení nápovědy
-
-   Nápovědu lze spustit pomocí modulu :grasscmd:`g.manual`:
-
-   .. code-block:: bash
-
-      g.manual -i
-
-   .. code-block:: bash
-                
-      g.manual r.buffer
-                   
-.. figure:: images/r-buffer-help.png
+Návověda k jednotlivým modulům je dostupná přímo z dialogového okna:
+   
+.. figure:: images/v-buffer-help.png
    :scale-latex: 50
 
-   Nápověda k jednotlivým modulům je dostupná i z dialogového okna.
+   Nápověda modulu :grasscmd:`v.buffer`.
 
+.. tip::
+      
+   .. notecmd:: Zobrazení nápovědy
+
+      Nápovědu lze zobrazit pomocí modulu :grasscmd:`g.manual`:
+
+      .. code-block:: bash
+
+         g.manual -i
+
+      .. code-block:: bash
+                
+         g.manual v.buffer

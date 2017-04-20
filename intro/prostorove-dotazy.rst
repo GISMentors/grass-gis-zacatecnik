@@ -6,14 +6,9 @@ Prostorové dotazy
 -----------------
 
 Prostorové dotazy, tj. výběr geoprvků na základě jejich prostorových
-vztahů, zajišťuje modul :grasscmd:`v.select` (:menuselection:`Vector
---> Feature selection --> Select by another map`).
-
-.. figure:: images/wxgui-v-select-menu.png
-            :class: middle
-            :scale-latex: 65
-                 
-Systém GRASS podporuje následující prostorové operátory:
+vztahů, zajišťuje modul :grasscmd:`v.select` dostupný z
+:menuselection:`Vector --> Feature selection --> Select by another
+map`. Systém GRASS podporuje standardní prostorové operátory:
                     
 * *equals* - geoprvky jsou totožné
 * *disjoint* - geoprvky jsou prostorově různé 
@@ -25,12 +20,12 @@ Systém GRASS podporuje následující prostorové operátory:
 * *overlaps* - geoprvky se prostorově překrývají
 * *relate* - obecný prostorový vztah definovaný jako vztahová matice
 
-Podrobný popis prostorových operátorů je k nalezení v :wikipedia:`OGC`
-specifikaci `Simple Features Access
-<http://www.opengeospatial.org/standards/sfa>`_ více informací
-specifikaci `zde <http://geo.fsv.cvut.cz/~gin/uzpd/uzpd.pdf#18>`_.
+.. tip:: Podrobný popis prostorových operátorů je k nalezení v
+   :wikipedia:`OGC` specifikaci `Simple Features Access
+   <http://www.opengeospatial.org/standards/sfa>`_ více informací
+   specifikaci `zde <http://geo.fsv.cvut.cz/~gin/uzpd/uzpd.pdf#page=18>`_.
 
-.. note::
+.. noteadvanced::
 
    Nativně :grasscmd:`v.select` podporuje pouze jeden prostorový
    operátor: *overlap* - geoprvky se částečně či úplně
@@ -39,28 +34,28 @@ specifikaci `zde <http://geo.fsv.cvut.cz/~gin/uzpd/uzpd.pdf#18>`_.
 
 .. rubric:: :secnotoc:`Příklad`
 
-Výběr obcí (vektorová mapa :map:`obce_polygon@ruian`), ve kterých je
-umístěna alespoň jedna (v tomto případě může použít např. prostorový
-operátor *contains*) požární stanice (vektorová mapa
-:map:`pozarni_stanice@osm`).
+Výběr obcí (vektorová mapa :map:`obce@ruian`), ve kterých je umístěna
+alespoň jedna (použijeme prostorový operátor *contains*) požární
+stanice (vektorová mapa :map:`pozarni_stanice@osm`). Výsledek dotazu
+uložíme do nové vektorové mapy :map:`obce_stanice`.
 
 .. figure:: images/v-select.png
 
    Spuštění modulu :grasscmd:`v.select`.
 
-.. notecmd:: Spuštění
+.. noteadvanced::
+      
+   .. notecmd:: Spuštění
 
-   .. code-block:: bash
+      .. code-block:: bash
                    
-      v.select ainput=obce_polygon binput=pozarni_stanice output=obce_stanice \
-       operator=contains
+         v.select ainput=obce_polygon binput=pozarni_stanice output=obce_staniceoperator=contains
 
 .. raw:: latex
 
    \newpage
 
 .. figure:: images/wxgui-v-select-result.png
-   :class: large
    
    Výsledek prostorového dotazu.
 

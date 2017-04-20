@@ -10,17 +10,8 @@ První kroky
    struktura-dat
    zobrazeni-geodat
    moduly
-
-**************
-Základní pojmy
-**************
-
-.. toctree::
-   :maxdepth: 2
-	      
    rastr
    vektor
-   region
 
 **********
 Dotazování

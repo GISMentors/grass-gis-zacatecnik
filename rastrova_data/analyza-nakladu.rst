@@ -191,7 +191,7 @@ flow`).
 
 .. code-block:: bash
 
-   r.drain -n input=cas_naklady output=cesta start_coor=-750649,-992867
+   r.drain -n input=cas_naklady output=cesta start_coordinates=-750649,-992867
 
 .. figure:: images/grass-streets-path.png
    :class: middle

@@ -205,3 +205,10 @@ flow`).
         
    Vizualizace rastrové mapy nákladů včetně nejkratší spádové cesty ve
    3D.
+
+.. tip:: Optimální cestu lze převést do vektorové reprezentace pomocí
+   modulu :grasscmd:`r.to.rast`:
+
+   .. code-block:: bash
+
+      r.to.vect input=cesta output=cesta type=line

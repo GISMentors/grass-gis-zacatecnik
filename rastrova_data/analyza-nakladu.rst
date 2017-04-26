@@ -17,7 +17,7 @@ Nejprve si v aktuálním mapsetu :ref:`vytvoříme kopii
    :doc:`../intro/struktura-dat` systém GRASS umožňuje editovat pouze
    datové elementy z aktuálního mapsetu.
 
-:ref:`Přidáme nový atribut <pridani-noveho-atributu>` ``rychlost``, do
+Přidáme :ref:`nový atribut <pridani-noveho-atributu>` ``rychlost``, do
 něhož uložíme průměrnou rychlost dle následující tabulky:
 
 .. only:: latex

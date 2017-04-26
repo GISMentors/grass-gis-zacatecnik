@@ -94,13 +94,13 @@ kapitola :doc:`tabulka-barev`.
 
 .. code-block:: bash
 
-                r.mapcalc expression='rychlost = if(silnice == 0, 5, silnice)'
-                r.colors -n map=rychlost color=sepia
-
+   r.mapcalc expression='rychlost = if(isnull(silnice), 5, silnice)'
+   r.colors -n map=rychlost color=sepia
+   
 .. figure:: images/grass-streets-speed.png
-	    :scale-latex: 60
+   :scale-latex: 60
 
-            Rasterizovaná síť silnic s atributem průměrné rychlosti.
+   Rasterizovaná síť silnic s atributem průměrné rychlosti.
 
 Modulem :grasscmd:`v.in.ascii` vytvoříme vektorovou mapu s ohniskem
 požáru. Souřadnice bodu (-754235,-980474) zadáme v notaci ``X|Y|cat``,
@@ -108,10 +108,10 @@ kategorii zvolíme libovolně, např. 1. Ve výsledku bude tedy zápis bodu
 vypadat následovně: ``-754235|-980474|1``.
 
 .. figure:: images/wxgui-v-in-ascii.png
-            :scale-latex: 45
+   :scale-latex: 45
                  
-            Vytvoření mapy s ohniskem požáru - definujeme souřadnice
-            ohniska požáru a název výsledné vektorové mapy.
+   Vytvoření mapy s ohniskem požáru - definujeme souřadnice
+   ohniska požáru a název výsledné vektorové mapy.
 
 Rastrovou mapu časové náročnosti vytvoříme pomocí modulu
 :grasscmd:`r.mapcalc`, viz kapitola :doc:`rastrova-algebra`. Uvažujeme
@@ -123,9 +123,9 @@ buňky v minutách.
    r.mapcalc expression="rychlost_cas = 25.0 / ((1000 * rychlost) / 60.0)"
 
 .. warning:: Pozor na dělení celých čísel, výsledkem je v mapové
-             algebře systému GRASS vždy celé číslo. Proto je v
-             čitateli použito číslo s plovoucí desetinnou čárkou
-             (25.0).
+   algebře systému GRASS vždy celé číslo. Proto je v
+   čitateli použito číslo s plovoucí desetinnou čárkou
+   (25.0).
              
 Pomocí modulu :grasscmd:`r.cost` (:menuselection:`Raster --> Terrain
 analysis --> Cost surface`) vypočteme rastrovou mapu nákladů pohybu,

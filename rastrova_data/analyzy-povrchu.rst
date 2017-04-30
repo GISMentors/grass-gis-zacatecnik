@@ -12,33 +12,35 @@ analysis --> Slope and aspect`).
 .. figure:: images/r-slope-aspect-0.png
                            
             V dialogu nejprve zvolíme vstupní rastrovou mapu s
-            povrchem :fignote:`(1)` a poté v záložce :fignote:`(2)`
-            požadovaný výstup.
+            digitálním modelem terénu :fignote:`(1)` a poté v záložce
+            :item:`Output` :fignote:`(2)` požadovaný výstup.
 
 .. important::
 
    Podobně jako ostatní moduly pro zpracování rastrových dat i tento
-   modul pracuje v aktuálním výpočetním regionu. Proto je vhodné před
+   modul pracuje v aktuálním výpočetním regionu. Proto je nutné před
    výpočtem tento :ref:`region nastavit podle vstupní rastrové mapy
-   <nastaveni-regionu>`.
+   <nastaveni-regionu>`. Modul :grasscmd:`r.slope.aspect` má přeci
+   jenom jednu specialitu, nepřejímá prostorové rozlišení z
+   výpočetního regionu, ale ze vstupní rastrové vrstvy!
 
 .. index::
-   pair: analýza povrchu; míra svahu
+   pair: analýza povrchu; sklon svahu
    see: analýza povrchu; r.slope.aspect
 
-Míra svahu
-==========
+Sklon svahu
+===========
 
 .. figure:: images/r-slope-aspect-s.png
    :scale-latex: 60
 
-   Výpočet míry svahu.
+   Výpočet sklonu svahu, parametr :option:`slope`.
    
 .. figure:: images/slope.png
    :class: middle
    :scale-latex: 65
 
-   Výsledná mapa míry svahu ve stupních.                
+   Výsledná mapa sklonu svahu ve stupních.                
 
 .. index::
    pair: analýza povrchu; orientace svahu
@@ -50,39 +52,37 @@ Míra svahu
 Orientace svahu
 ===============
 
-Orientaci (expozici) svahu opět počítá modul
-:grasscmd:`r.slope.aspect` v kombinaci s parametrem :option:`aspect`.
-
 .. figure:: images/r-slope-aspect-a.png
-            :scale-latex: 50
+   :scale-latex: 50
                  
-            Výpočet orientace svahu.
-
-.. figure:: images/aspect_diagram.png
-            :class: small
-        
-            Azimut orientace svahu.
+   Výpočet orientace svahu, parametr :option:`aspect`.
 
 .. raw:: latex
                      
    \newpage
 
 .. figure:: images/aspect.png
-            :class: middle
-            :scale-latex: 70
+   :class: middle
+   :scale-latex: 70
                 
-            Výsledná mapa orientace svahu.           
+   Výsledná mapa orientace svahu (azimut ve stupních, viz diagram níže).
 
+.. figure:: images/aspect_diagram.png
+   :class: small
+        
+   Azimut orientace svahu.
+
+            
 .. tip::
 
-   Postup jak orientaci svahu reklasifikovat je prezentováno v
-   kapitole :ref:`reklasifikace <r-recode>`.
+   Postup reklasifikace orientace svahu je uveden v kapitole
+   :ref:`Reklasifikace rastrových dat <r-recode>`.
 
    .. figure:: images/aspect-reclass.png
-               :class: middle
-               :scale-latex: 70
-                    
-               Výsledek reklasifikace mapy orientace svahu
+      :class: middle
+      :scale-latex: 70
+                       
+      Výsledek reklasifikace mapy orientace svahu.
 
 .. raw:: latex
 

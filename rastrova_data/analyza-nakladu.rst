@@ -76,7 +76,7 @@ z mapového okna nebo z příkazové řádky:
 
 .. code-block:: bash
                 
-   v.to.rast input=silnice output=silnice use=attr attrcolumn=rychlost
+   v.to.rast input=silnice output=silnice use=attr attribute_column=rychlost
 
 .. raw:: latex
 

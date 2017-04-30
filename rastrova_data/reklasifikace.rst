@@ -4,16 +4,17 @@
 Reklasifikace rastrových dat
 ----------------------------
 
-Reklasifikací rastrové mapy vzniká nová rastrová mapa na základě
-jejich původních hodnot. Tento proces provádí v~systému GRASS modul
-:grasscmd:`r.reclass` (:menuselection:`Raster --> Change category
-values and labels --> Reclassify`).
+Reklasifikací rastrové mapy vznikají nová rastrová data na základě
+interpretace původních hodnot rastrových buněk. Tento proces provádí
+v~systému GRASS modul :grasscmd:`r.reclass` (:menuselection:`Raster
+--> Change category values and labels --> Reclassify`).
 
 .. important::
 
-   Reklasifikovat lze pouze celočíselné rastrové mapy (:ref:`typ CELL
+   Modulem :grasscmd:`r.reclass` lze reklasifikovat pouze celočíselná
+   rastrová data (typ CELL, viz kapitola :ref:`Typy rastrových map
    <raster-types>`). Pokud má vstupní rastrová mapa hodnoty s plovoucí
-   desetinnou čárkou, jsou tyto hodnoty před klasifikací převedeny
+   desetinnou čárkou, jsou tyto hodnoty před klasifikací "oříznuty"
    nejprve na celé číslo.
 
    V případě reklasifikace rastrové mapy s hodnotami s plovoucí
@@ -22,9 +23,10 @@ values and labels --> Reclassify`).
 
 .. note::
 
-   Reklasifikací nevzniká fyzicky nová rastrová mapa, nýbrž je zapsána
-   pouze reklasifikační tabulka. To má za následek to, že nelze, pokud
-   existuje reklasifikovaná mapa, její podkladovou mapu přejmenovat či
+   Reklasifikací nevznikají fyzicky na disku nová rastrová data, nýbrž
+   je zapsána rastrová mapa jako reklasifikační tabulka odkazující na
+   původní data. To má za následek to, že nelze, pokud existuje
+   reklasifikovaná mapa, její podkladovou mapu přejmenovat či
    odstranit.
 
 .. index::
@@ -91,8 +93,8 @@ Dle tabulky výše může vypadat zápis následovně:
    výstupní reklasifikované mapy :fignote:`(2)` a reklasifikační
    tabulku :fignote:`(3)`.
 
-Výsledku přiřadíme vhodnou :doc:`tabulku barev <tabulka-barev>`,
-např.
+Výsledku přiřadíme vhodnou barevnou interpretaci, viz kapitola
+:doc:`tabulka-barev`, např.
    
 ::
    
@@ -101,15 +103,13 @@ např.
    3 139:105:20
    4 255:255:255
 
-.. figure:: images/dmt-reclass-color-table.png
-
-            Příklad nastavení tabulky barev pomocí modulu :grasscmd:`r.colors`.   
-
 .. figure:: images/dmt-reclass-legend.png
-   :class: large
+   :class: middle
    :scale-latex: 75
 
-   Výsledná reklasifikovaná mapa včetně :ref:`legendy <map-legend>`.
+   Výsledná reklasifikovaná mapa včetně :ref:`legendy
+   <map-legend>`. Tabulka barev byla nastavena pomocí parametru
+   :option:`rules` modulu :grasscmd:`r.colors`.
 
 .. index::
    pair: data s plovoucí desetinnou čárkou; reklasifikace
@@ -121,8 +121,8 @@ např.
 Reklasifikace rastrových dat s plovoucí desetinnou čárkou
 =========================================================
 
-Našim cílem bude reklasifikovat :ref:`mapu orientace svahu <aspect>`
-do následujících tříd:
+Našim cílem bude reklasifikovat mapu orientace (expozice) svahu, viz
+kapitola :ref:`aspect`, do následujících tříd:
 
 .. only:: latex
           
@@ -156,7 +156,8 @@ do následujících tříd:
 | 337.5      | 360.0          | 1 (východ)          |
 +------------+----------------+---------------------+
 
-V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypadat následovně:
+V zápisu pro reklasifikační tabulku modulu :grasscmd:`r.recode` budou
+pravidla vypadat následovně:
    
 ::
    
@@ -172,11 +173,11 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
    0:0:0
 
 .. figure:: images/r-recode-aspect.png
-	    
-            V dialogu :grasscmd:`r.recode` nejprve zvolíme vstupní
-            rastrovou mapu :fignote:`(1)`, kterou chceme
-            reklasifikovat, poté název výstupní reklasifikované mapy
-            :fignote:`(2)` a reklasifikační tabulku :fignote:`(3)`.
+
+   V dialogu :grasscmd:`r.recode` nejprve zvolíme vstupní
+   rastrovou mapu :fignote:`(1)`, kterou chceme
+   reklasifikovat, poté název výstupní reklasifikované mapy
+   :fignote:`(2)` a reklasifikační tabulku :fignote:`(3)`.
 
 .. raw:: latex
 
@@ -189,40 +190,44 @@ V zápisu pro reklasifikační tabulku :grasscmd:`r.recode` budou pravidla vypad
                      
 .. tip::
                      
-   Nakonec můžeme ještě přiřadit jednotlivým kategoriím štítky a to
-   pomocí modulu :grasscmd:`r.category` (:menuselection:`Raster -->
-   Report and statistics --> Manage category information`).
+   Modul :grasscmd:`r.recode` neumožňuje přiřadit popisky kategorii
+   přímo. Ty můžeme posléze nastavit pomocí modulu
+   :grasscmd:`r.category` (:menuselection:`Raster --> Report and
+   statistics --> Manage category information`).
 
-   Příklad přiřazení štítků:
+   Příklad přiřazení popisků:
 
    ::
 
-      0:Rovina
-      1:V
-      2:JV
-      3:J
-      4:JZ
-      5:Z
-      6:SZ
-      7:S
-      8:SV
-
-   .. figure:: images/r-category-set-0.png
-	       :scale-latex: 55
-
-               V záložce :item:`Optional` zvolíme nejprve oddělovač ``:``.
+      0 Rovina
+      1 V
+      2 JV
+      3 J
+      4 JZ
+      5 Z
+      6 SZ
+      7 S
+      8 SV
 
    .. raw:: latex
 
       \newpage
    
-   .. figure:: images/r-category-set-1.png
-	       :scale-latex: 55
+   .. figure:: images/r-category-set-0.png
+      :scale-latex: 55
+                    
+      Přiřadíme popisky z textového pole v záložce :item:`Define`,
+      parametr :option:`rules`.
 
-               A poté přiřadíme popisky z textového pole v záložce :item:`Define`.
+   .. figure:: images/r-category-set-1.png
+      :scale-latex: 55
+
+      V záložce :item:`Optional` nastavíme parametr
+      :option:`separator` na hodnotu ``space`` (položky máme odděleny
+      mezerou).
 
 .. figure:: images/aspect-reclass.png
-   :class: large
+   :class: middle
    :scale-latex: 65
 
    Výsledek reklasifikace mapy orientace svahu.

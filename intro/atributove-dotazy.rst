@@ -5,8 +5,6 @@
    single: SQL builder
    single: SQL
 
-.. _atributove-dotazy:
-
 Atributové dotazy
 -----------------
 

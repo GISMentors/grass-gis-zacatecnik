@@ -7,7 +7,7 @@ Prostorové funkce
 .. youtube:: YWRHFylZCuo
 
    Příklad základních prostorových funkcí (buffer, clip, erase) v
-    kombinaci s atributovými dotazy
+    kombinaci s atributovými dotazy.
 
 .. index::
    single: v.extract
@@ -19,23 +19,24 @@ Výběr z vektorové mapy
 ======================
 
 Vybírat geoprvky z vektorové mapy můžeme selektivně podle jejich
-kategorií a atributů.  Nástroj pro výběr :grassCmd:`v.extract` můžeme
-spustit z menu :menuselection:`Vector --> Feature selection --> Select
-by attributes`.
+kategorií a atributů, viz kapitola :doc:`../intro/atributove-dotazy`.
+Nástroj pro výběr :grassCmd:`v.extract` je dostupný z menu
+:menuselection:`Vector --> Feature selection --> Select by
+attributes`.
 
-.. note:: Ujistěte se, že máte :ref:`v pracovní cestě <g-mapsets>`
+.. tip:: Ujistěte se, že máte :ref:`v pracovní cestě <g-mapsets>`
     přidány všechny *mapsety* tak, abyste mohli pracovat s daty v nich
     obsaženými.
 
-V následujícím příkladě vybereme z vektorové mapy :map:`silnice`
-(mapset :map:`osm`) všechny dálnice (splňující podmínku ``typ =
-1``). Výsledek uložíme do vektorové mapy :map:`dalnice`.
+V následující ukázce vybereme z vektorové mapy :map:`silnice` (mapset
+:map:`osm`) všechny dálnice (splňující podmínku ``typ = 1``). Výsledek
+uložíme do vektorové mapy :map:`dalnice`.
 
 .. figure:: images/v-extract.png
    :class: large
    :scale-latex: 85
               
-   Vytvoření tématické vektorové mapy :map:`dalnice` z OpenStreetMap.
+   Vytvoření tématické vektorové mapy :map:`dalnice`.
 
 .. index::
    pair: obalová zóna; buffer

@@ -76,7 +76,17 @@ z mapového okna nebo z příkazové řádky:
 
 .. code-block:: bash
                 
-   v.to.rast input=silnice output=silnice use=attr attribute_column=rychlost
+   v.to.rast input=silnice output=silnice_rast use=attr attribute_column=rychlost type=line
+
+Dále použijeme vrstvy :map:`vodni\_toky` a :map:`vodni\_nadrze` jako
+přirozené bariéry pro pohyb mimo silnice. Provedeme rasterizaci,
+rastrové vrstvy složíme pomocí modulu :grasscmd:`r.patch`.
+
+.. code-block:: bash
+                
+   v.to.rast input=vodni_toky output=vodni_toky_rast use=val type=line
+   v.to.rast input=vodni_nadrze output=vodni_nadrze_rast use=val type=area
+   r.patch input=vodni_toky_rast,vodni_nadrze_rast output=bariery             
 
 .. raw:: latex
 
@@ -94,13 +104,13 @@ kapitola :doc:`tabulka-barev`.
 
 .. code-block:: bash
 
-   r.mapcalc expression='rychlost = if(isnull(silnice), 5, silnice)'
+   r.mapcalc expression='rychlost = if(isnull(silnice_rast), if(isnull(bariery), 5, null()), silnice_rast)'
    r.colors -n map=rychlost color=sepia
    
 .. figure:: images/grass-streets-speed.png
    :scale-latex: 60
 
-   Rasterizovaná síť silnic s atributem průměrné rychlosti.
+   Rasterizovaná síť silnic s atributem průměrné rychlosti a bariérami.
 
 Modulem :grasscmd:`v.in.ascii` vytvoříme vektorovou mapu s ohniskem
 požáru. Souřadnice bodu (-754235,-980474) zadáme v notaci ``X|Y|cat``,
@@ -191,7 +201,7 @@ flow`).
 
 .. code-block:: bash
 
-   r.drain -n input=cas_naklady output=cesta start_coordinates=-750649,-992867
+   r.drain -n input=cas_naklady output=cesta_rast start_coordinates=-750649,-992867
 
 .. figure:: images/grass-streets-path.png
    :class: middle
@@ -211,4 +221,4 @@ flow`).
 
    .. code-block:: bash
 
-      r.to.vect input=cesta output=cesta type=line
+      r.to.vect input=cesta_rast output=cesta type=line

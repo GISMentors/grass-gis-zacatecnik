@@ -104,9 +104,6 @@ atributů.
    topologická primitiva jako linie, hraniční linie a centroidy, viz
    záložka :item:`Symbology`.
 
-   .. figure:: images/digitize-settings-symbols.png
-      :class: small
-
 Každá plocha |grass-polygon-create| :sup:`Digitize new area`
 automaticky *zaplochována* centroidem. K centroidu lze později navázat
 požadované atributy plochy. Hranice plochy a jejich centroidy lze také

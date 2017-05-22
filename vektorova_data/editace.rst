@@ -109,8 +109,6 @@ automaticky *zaplochována* centroidem. K centroidu lze později navázat
 požadované atributy plochy. Hranice plochy a jejich centroidy lze také
 editovat zvlášť.
 
-.. figure:: images/digitize-boundary-centroid.png
-
 Mazání vybraných prvků |grass-line-delete| :sup:`Delete selected
 point(s), line(s), boundary(ies) or centroid(s)`
 |grass-polygon-delete| :sup:`Delete selected area(s)` je potřeba vždy

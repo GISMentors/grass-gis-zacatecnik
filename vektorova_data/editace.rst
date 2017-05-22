@@ -100,7 +100,7 @@ atributů.
    :item:`General` ``Snapping threshold``.
 
    .. figure:: images/digitize-settings-snapping.png
-   :class: small
+      :class: small
 
    Uzly jsou vykresleny různou barvou, podle toho jsou-li přichyceny k
    dalšímu uzlu či nikoliv. Podobně jsou zvýrazněna i ostatní

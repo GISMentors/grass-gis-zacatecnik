@@ -99,7 +99,6 @@ atributů.
    v nastavení |grass-settings| :sup:`Digitization settings` v sekci
    :item:`General` ``Snapping threshold``.
 
-..
    .. figure:: images/digitize-settings-snapping.png
    :class: small
 

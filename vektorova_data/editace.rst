@@ -99,15 +99,24 @@ atributů.
    v nastavení |grass-settings| :sup:`Digitization settings` v sekci
    :item:`General` ``Snapping threshold``.
 
+..
+   .. figure:: images/digitize-settings-snapping.png
+   :class: small
+
    Uzly jsou vykresleny různou barvou, podle toho jsou-li přichyceny k
    dalšímu uzlu či nikoliv. Podobně jsou zvýrazněna i ostatní
    topologická primitiva jako linie, hraniční linie a centroidy, viz
    záložka :item:`Symbology`.
 
+   .. figure:: images/digitize-settings-symbols.png
+      :class: small
+
 Každá plocha |grass-polygon-create| :sup:`Digitize new area`
 automaticky *zaplochována* centroidem. K centroidu lze později navázat
 požadované atributy plochy. Hranice plochy a jejich centroidy lze také
 editovat zvlášť.
+
+.. figure:: images/digitize-boundary-centroid.png
 
 Mazání vybraných prvků |grass-line-delete| :sup:`Delete selected
 point(s), line(s), boundary(ies) or centroid(s)`

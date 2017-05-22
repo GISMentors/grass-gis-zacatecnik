@@ -99,10 +99,6 @@ atributů.
    v nastavení |grass-settings| :sup:`Digitization settings` v sekci
    :item:`General` ``Snapping threshold``.
 
-..
-   .. figure:: images/digitize-settings-snapping.png
-   :class: small
-
    Uzly jsou vykresleny různou barvou, podle toho jsou-li přichyceny k
    dalšímu uzlu či nikoliv. Podobně jsou zvýrazněna i ostatní
    topologická primitiva jako linie, hraniční linie a centroidy, viz

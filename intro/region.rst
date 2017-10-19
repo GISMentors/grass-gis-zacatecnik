@@ -16,7 +16,7 @@ Výpočetní region je dán *hraničními souřadnicemi* (sever, jih, východ,
 západ) a *prostorovým rozlišením* ve směru sever-jih,
 východ-západ. Vzniká tak pravidelná mřížka jejíž buňky mají čtvercový
 (prostorové rozlišení ve směru sever-jih a~východ-západ totožnou
-hodnotu) nebo obdélníkový tvar, viz :num:`#region2d`.
+hodnotu) nebo obdélníkový tvar, viz :numref:`region2d`.
 
 .. _region2d:
          

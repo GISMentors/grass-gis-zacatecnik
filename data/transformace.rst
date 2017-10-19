@@ -25,7 +25,7 @@ Geodata v různých souřadnicových systémech
                :scale-latex: 70
                     
 V případě, že se souřadnicový systém vstupních geodat a dané lokace
-liší (viz :item:`Projection match` na :num:`#import-no-proj`)
+liší (viz :item:`Projection match` na :numref:`import-no-proj`)
 nelze import provést přímo. Postup vyžaduje hned několik kroků.
 
 .. _import-no-proj:

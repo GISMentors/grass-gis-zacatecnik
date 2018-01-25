@@ -80,8 +80,8 @@ upravovat ho a tyto změny či opravy šířit dál.
 .. notedata::
 
    *GRASS lokace GISMentors* je stažitelná jako `zip archiv
-   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (1.9
-   GB), družicové snímky `Landsat
+   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (970
+   MB), družicové snímky `Landsat
    <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
    (985 MB).
 

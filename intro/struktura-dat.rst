@@ -6,8 +6,8 @@ Data, ke kterým GRASS přistupuje, musí mít pevně danou strukturu. Při
 spuštění systému GRASS uživatel volí *tři* níže uvedené elementy v
 daném pořadí, viz obrázek níže.
 
-.. figure:: images/welcome-screen.png
-            :scale-latex: 45
+.. figure:: images/startup-1.svg
+   :scale-latex: 45
 
 **1. Adresář s geodaty (DataBase)**
 

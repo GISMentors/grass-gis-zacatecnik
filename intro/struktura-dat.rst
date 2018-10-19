@@ -89,7 +89,7 @@ aktuální mapset a mapset `PERMANENT`.
    :scale-latex: 55
               
    Přidání nové rastrové mapy do mapového okna, viditelné
-   jsou pouze dva mapsety - aktuální (`user1`) a~mapset `PERMANENT`.
+   jsou pouze dva mapsety - aktuální (`user1`) a mapset `PERMANENT`.
 
 Vyhledávací cestu lze modifikovat z menu :menuselection:`Settings -->
 GRASS working environment --> Mapset access`.

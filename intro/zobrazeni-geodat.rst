@@ -77,7 +77,14 @@ Rastrová data
 Rastrová data (v terminologii systému GRASS tzv. *rastrovou mapu*) lze
 přidat do správce vrstev, resp. mapového okna různými způsoby:
 
-#. z nástrojové lišty správce vrstev |grass-layer-raster-add|
+#. ze záložky :item:`Data` správce vrstev
+
+   .. figure:: images/wxgui-data-display-rast.png
+
+      Zobrazit rastrovou mapu lze z kontextového menu :item:`Display
+      layer` anebo jednoduše od verze GRASS GIS 7.4.1 i dvojklikem.
+               
+#. tradičně z nástrojové lišty správce vrstev |grass-layer-raster-add|
    :sup:`Add raster map layer`
 
    .. figure:: images/wxgui-d-rast.png
@@ -135,7 +142,14 @@ Vektorová data
 
 Podobně lze přidat vektorová data (tzv. *vektorovou mapu*):
 
-#. z nástrojové lišty správce vrstev |grass-layer-vector-add|
+#. ze záložky :item:`Data` správce vrstev
+
+   .. figure:: images/wxgui-data-display-vect.png
+
+      Zobrazit vektorovou mapu lze z kontextového menu :item:`Display
+      layer` anebo jednoduše od verze GRASS GIS 7.4.1 i dvojklikem.
+               
+#. tradičně z nástrojové lišty správce vrstev |grass-layer-vector-add|
    :sup:`Add vector map layer`
 
    .. figure:: images/wxgui-d-vect.png

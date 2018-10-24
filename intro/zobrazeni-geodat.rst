@@ -121,7 +121,7 @@ Jde o následující typy rastrových dat:
 * 3D rastrová data
 * :wikipedia:`RGB` barevná syntéza - příkaz :grasscmd:`d.rgb`
 * :wikipedia:`HIS <HSL>` barevná syntéza - příkaz :grasscmd:`d.his`
-* :wikipedia-en:`stínovaný reliéf <Shapeded relief>` - příkaz :grasscmd:`d.shadedmap`
+* :wikipedia-en:`stínovaný reliéf <Shaded relief>` - příkaz :grasscmd:`d.shade`
 * rastrová mapa, zobrazení směru - příkaz :grasscmd:`d.rast.arrow`
 * rastrová mapa, zobrazení hodnot buněk - příkaz :grasscmd:`d.rast.num`
 

@@ -5,7 +5,7 @@ Příkazy systému GRASS
    single: moduly
 
 GRASS GIS je *modulární systém*, který disponuje rozsáhlou množinou
-malých, ale výkonných programů (v~terminologii systému *modulů*).
+malých, ale výkonných programů (v terminologii systému *modulů*).
 
 .. note::
    
@@ -43,6 +43,8 @@ vytvoření obalové zóny (tzv. bufferu) nad vektorovými daty.
 | ``r.``   | :grasscmd:`raster`             | zpracování (2D) rastrových dat                |
 +----------+--------------------------------+-----------------------------------------------+
 | ``r3.``  | :grasscmd:`raster3D`           | zpracování 3D rastrových dat (voxels)         |
++----------+--------------------------------+-----------------------------------------------+
+| ``t.``   | :grasscmd:`temporal`           | zpracování časoprostorových dat               |
 +----------+--------------------------------+-----------------------------------------------+
 | ``v.``   | :grasscmd:`vector`             | zpracování 2D/3D vektorových dat              |
 +----------+--------------------------------+-----------------------------------------------+

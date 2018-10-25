@@ -88,6 +88,71 @@ Orientace svahu
 
    \newpage
 
+Stínovaný reliéf
+================
+
+Stínovaný reliéf může být vytvořen pomocí modulu
+:grasscmd:`r.relief`. Podobně jako u ostatních modulů pro zpracování
+rastrových dat je třeba před výpočtem nastavit :ref:`výpočetní region
+<nastaveni-regionu>`.
+
+.. code-block:: bash
+
+   r.relief input=dmt output=shaded
+
+Ve výše uvedeném příkladě bude stínovaný reliéf vytvořen ve výchozím
+nastavení, tj. světelný zdroj s azimutem 270° a výškou 30°.
+
+.. figure:: images/shaded-detail.png
+   :class: middle
+           
+   Stínovaný reliéf ve výchozím nastavení.
+
+Příklad jiného nastavení níže.
+
+.. code-block:: bash
+
+   r.relief input=dmt output=shaded azimuth=90 altitude=60
+
+.. figure:: images/shaded-comp.png
+   :class: middle
+           
+   Porovnání stínovaný reliéfu v různém nastavení (azimut 270/90° a
+   výška 30/60° světelného zdroje).
+
+.. _display-shade:
+   
+Takto vytvořený stínovaný reliéf lze vizualizovat v tabulce barev
+převzaté z rastrové mapy digitálního modelu terénu. Pro tento účel
+lze využít dva nástroje :grasscmd:`d.shade` a
+:grasscmd:`r.shade`. První uvedený nástroj slouží pro zobrazení
+výsledku v mapovém okně, viz kapitola :ref:`Zobrazení geodat v mapovém
+okně <d-rast-various>`. Druhý modul, :grasscmd:`r.shade` výsledek
+zapisuje v podobě nově vytvořené rastrové mapy.
+
+Příklad zobrazení stínovaného reliéfu pomocí modulu :grasscmd:`d.shade`.
+
+.. code-block:: bash
+
+   d.shade shade=shaded color=dmt
+
+.. figure:: images/shaded-dmt.png
+   :class: middle
+           
+   Stínovaný reliéf zobrazený pomocí modulu :grasscmd:`d.shade`.
+
+.. note:: Místo stíhovaného reliéfu lze použít mapu orientace svahu
+   vytvořené pomocí modulu :grasscmd:`r.slope.aspect`.
+
+   .. code-block:: bash
+
+      d.shade shade=aspect color=dmt
+                   
+   .. figure:: images/shaded-aspect.png
+      :class: middle
+              
+      Mapa orientace svahu zobrazená pomocí modulu :grasscmd:`d.shade`.
+
 .. index::
    pair: analýza povrchu; viditelnost
    pair: viewshed; viditelnost

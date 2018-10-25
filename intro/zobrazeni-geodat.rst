@@ -116,12 +116,14 @@ správce vrstev.
       
             Menu pro přidání rastrových dat.
 
+.. _d-rast-various:
+
 Jde o následující typy rastrových dat:
 
 * 3D rastrová data
 * :wikipedia:`RGB` barevná syntéza - příkaz :grasscmd:`d.rgb`
 * :wikipedia:`HIS <HSL>` barevná syntéza - příkaz :grasscmd:`d.his`
-* :wikipedia-en:`stínovaný reliéf <Shaded relief>` - příkaz :grasscmd:`d.shade`
+* :wikipedia-en:`stínovaný reliéf <Shaded relief>` - příkaz :grasscmd:`d.shade`, viz kapitola :ref:`Stínovaný reliéf <display-shade>`
 * rastrová mapa, zobrazení směru - příkaz :grasscmd:`d.rast.arrow`
 * rastrová mapa, zobrazení hodnot buněk - příkaz :grasscmd:`d.rast.num`
 

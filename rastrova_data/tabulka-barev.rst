@@ -11,7 +11,7 @@ rastrových hodnot.
 
 Nastavit tabulku barev umožňuje modul :grasscmd:`r.colors`, který je
 dostupný buď z menu :menuselection:`Raster --> Manage colors --> Color
-tables` anebo z~kontextového menu rastrové mapy.
+tables` anebo z kontextového menu rastrové mapy.
 
 .. figure:: images/lmgr-r-colors.png
    :scale-latex: 50

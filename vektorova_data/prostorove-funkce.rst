@@ -168,4 +168,47 @@ modul sloučí vstupní vektorové mapy automaticky.
                 
       v.patch input=silnice,zeleznice output=doprava
 
-                
+Generalizace vektorových prvků
+==============================
+
+Proces generalizace vektorových prvků umožňuje modul
+:grasscmd:`v.generalize`. Kromě generalizace (zobecnění,
+zjednodušení - *simplification*) lze tento modul použít i pro opačný
+proces, tj. vyhlazení (*smoothing*). Modul podporuje celou řadu
+generalizačních algoritmů, viz :grasscmd:`dokumentace modulu
+<v.generalize>`. V následujících ukázkách je použit algoritmus
+:wikipedia-en:`Ramer–Douglas–Peucker algorithm`.
+
+Následuje příklad generalizace liniových prvků. Příkaz vypisuje
+procento zachovaných lomových bodů.
+
+.. code-block:: bash
+
+   v.generalize input=zeleznice output=zelenice_g method=douglas threshold=100
+
+::
+
+   v.generalize complete. Number of vertices for selected features reduced
+   from 409477 to 85018 (20% remaining)
+
+.. figure:: images/generalize-line.png
+
+   Příklad generalizace linových vektorových prvků železnic (původní
+   prvek černou barvou, generalizovaný červeně).
+   
+Vzhledem k tomu, že je GRASS GIS :ref:`topologický GIS
+<import-topologie>`, tak proces generalizace plošných prvků
+automaticky zachovává prostorovou topologii prvků, viz příklad
+generalizace vrstvy obcí.
+
+.. code-block:: bash
+
+   v.generalize input=obce@ruian output=obce_g method=douglas threshold=20
+
+.. figure:: images/generalize-area.png
+   :class: middle
+   
+   Příklad generalizace plošných vektorových prvků obcí (vlevo původní
+   prvky, vpravo generalizované).
+   
+   

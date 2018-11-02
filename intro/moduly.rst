@@ -143,3 +143,21 @@ Návověda k jednotlivým modulům je dostupná přímo z dialogového okna:
       .. code-block:: bash
                 
          g.manual v.buffer
+
+.. _addons-install:
+
+Addons
+======
+
+Součástí základní instalace je více než 500 nástrojů (modulů). Další
+moduly si může uživatel stáhnout v rámci tzv. Addons. Jde o moduly
+vytvořené uživateli systému GRASS. Jejich kvalita a stabilita tak může
+být různorodá.
+
+Addons moduly lze nainstalovat jednoduše z menu
+:menuselection:`Settings --> Addons extensions --> Install extensions
+from addons`.
+
+.. figure:: images/skyview-install.png
+             
+   Instalace nástroje :grasscmdaddons:`r.skyview`.

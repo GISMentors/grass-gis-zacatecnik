@@ -168,6 +168,8 @@ modul sloučí vstupní vektorové mapy automaticky.
                 
       v.patch input=silnice,zeleznice output=doprava
 
+.. _generalizace:
+
 Generalizace vektorových prvků
 ==============================
 
@@ -210,5 +212,3 @@ generalizace vrstvy obcí.
    
    Příklad generalizace plošných vektorových prvků obcí (vlevo původní
    prvky, vpravo generalizované).
-   
-   

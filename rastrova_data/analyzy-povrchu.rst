@@ -217,3 +217,21 @@ Klíčový modul pro výpočet analýzy viditelnosti je modul
    Výsledek analýzy viditelnosti z observačního bodu včetně legendy
    zobrazující velikost úhlu, pod kterým je místo z daného
    observačního bodu vidět.
+
+.. _vrstevnice:
+
+Generování vrstevnic
+====================
+
+Vrstevnice lze odvodit z digitálního modelu terénu pomocí modulu
+:grasscmd:`r.contour`. Příklad vytvoření vektorové mapy vrstevnic v
+kroku 5m v aktuálním výpočetním regionu níže.
+
+.. code-block:: bash
+
+   r.contour input=dmt output=vrstevnice step=5
+
+.. figure:: images/contours.png
+   :class: middle
+	   
+   Vytvořené vrstevnice v kroku 5m.

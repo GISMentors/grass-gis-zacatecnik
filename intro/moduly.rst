@@ -149,10 +149,10 @@ Návověda k jednotlivým modulům je dostupná přímo z dialogového okna:
 Addons
 ======
 
-Součástí základní instalace je více než 500 nástrojů (modulů). Další
-moduly si může uživatel stáhnout v rámci tzv. Addons. Jde o moduly
-vytvořené uživateli systému GRASS. Jejich kvalita a stabilita tak může
-být různorodá.
+Součástí základní instalace systému je více než :grasscmd2:`500
+nástrojů <full_index.html>` (modulů). Další moduly si může uživatel
+stáhnout v rámci tzv. Addons. Jde o moduly vytvořené uživateli systému
+GRASS. Jejich kvalita a stabilita tak může být různorodá.
 
 Addons moduly lze nainstalovat jednoduše z menu
 :menuselection:`Settings --> Addons extensions --> Install extensions

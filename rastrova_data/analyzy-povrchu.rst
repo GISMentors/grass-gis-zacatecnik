@@ -162,13 +162,13 @@ Příklad zobrazení stínovaného reliéfu pomocí modulu :grasscmd:`d.shade`.
 Sky-view faktor
 ===============
 
-Sky-view faktor (SVF) je vizualizační technika, která zobrazuje
-proporci části viditelné oblohy. V systému GRASS umožňuje SVF
+Sky-view faktor (SVF) je vizualizační technika, která pro daný bod
+zobrazuje poměr viditelné oblohy. V systému GRASS umožňuje SVF
 vypočítat modul :grasscmdaddons:`r.skyview` (jedná se o Addons modul,
-který je třeba doinstalovat, viz :ref:`addons-install`).
+který je třeba doinstalovat, viz kapitola :ref:`addons-install`).
 
 Výpočet probíhá podobně jako u ostatních modulů pro zpracování
-rastrových dat na území výpočetního regionu.
+rastrových dat na území :ref:`výpočetního regionu <region>`.
 
 .. code-block:: bash
    

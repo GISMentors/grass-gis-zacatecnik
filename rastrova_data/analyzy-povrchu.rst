@@ -5,6 +5,17 @@
 Topografické analýzy
 --------------------
 
+V následujících příkladech použíjeme digitální model terénu získaný z
+evropského programu EU-DEM, který je součástí lokace *gismentors* v
+mapsetu PERMANENT.
+
+.. tip:: Ve školení :skoleni:`GRASS GIS pro pokročilé
+   <grass-gis-pokrocily>` je uveden postup pro tvorbu velmi
+   :skoleni:`podrobného digitální modelu terénu
+   <grass-gis-pokrocily/lidar/dmr-dmp-cuzk.html>` z lidarových dat
+   poskytovaných v ČR.
+
+
 Základní topografické analýzy povrchu poskytuje modul
 :grasscmd:`r.slope.aspect` (:menuselection:`Raster --> Terrain
 analysis --> Slope and aspect`).

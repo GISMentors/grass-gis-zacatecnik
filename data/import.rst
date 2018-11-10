@@ -6,8 +6,9 @@
 Import geodat
 -------------
 
-.. important::
-
+..
+   .. important::
+   
    V této kapitole předpokládáme, že importovaná data jsou
    lokalizovaná v souřadnicovém systému odpovídající aktuální
    :ref:`lokaci <lokace>`. To, že jsou data v jiném souřadnicovém
@@ -23,21 +24,21 @@ Import geodat
 	       transformovat.
 
 Většina rastrových formátů může být naimportována modulem
-:grasscmd:`r.in.gdal`, pro vektorová data existuje modul
-:grasscmd:`v.in.ogr`. GUI systému GRASS disponuje specializovanými
-nástroji pro hromadný import dat (viz níže).
+:grasscmd:`r.import`, pro vektorová data existuje modul
+:grasscmd:`v.import`. GUI systému GRASS dále disponuje
+specializovanými nástroji pro hromadný import dat.
 
 .. index::
    pair: rastrová data; import
-   single: r.in.gdal
-   see: import; r.in.gdal
+   single: r.import
+   see: import; r.import
 
 Rastrová data
 =============
 
 Nástroj pro import rastrových dat je dostupný z menu
-:menuselection:`File --> Import raster data --> Common formats import`
-nebo nástrojové lišty správce vrstev.
+:menuselection:`File --> Import raster data --> Simplified raster
+import with reprojection` nebo nástrojové lišty správce vrstev.
 
 .. figure:: images/wxgui-raster-import-menu.png
 	    :scale-latex: 60

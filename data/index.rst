@@ -9,5 +9,7 @@ Import a export geodat
    import
    export
    prenos-dat
-   transformace
    georeferencovani
+
+..
+   transformace

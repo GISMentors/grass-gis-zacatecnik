@@ -40,33 +40,64 @@ Nástroj pro import rastrových dat je dostupný z menu
 :menuselection:`File --> Import raster data --> Simplified raster
 import with reprojection` nebo nástrojové lišty správce vrstev.
 
+.. note:: Pro naši potřebu použijeme `ortofoto
+   <http://www.geoportalpraha.cz/cs/opendata/468E977C-DE78-480D-B3D9-43A19BF1CD77#.W-gDTaAo-V5>`__
+   publikované IPR v režimu otevřených dat. Vybereme např. dlaždici
+   PRAHA_7_0_13 (soubory `JPG
+   <http://opendata.iprpraha.cz/CUR/ORT/ORT/S_JTSK/PRAHA_7_0_13.jpg>`__ a
+   `JGW
+   <http://opendata.iprpraha.cz/CUR/ORT/ORT/S_JTSK/PRAHA_7_0_13.jgw>`__).
+
 .. figure:: images/wxgui-raster-import-menu.png
 	    :scale-latex: 60
 
             Nástroj pro import rastrových dat dostupný z nástrojové
             lišty správce vrstev.
 
-V dialogu pro import rastrových dat určíme:
+V dialogu vybereme soubor pro import.
 
-#. typ zdroje
-#. formát dat
-#. adresář s daty
-#. seznam vrstev k importu
-#. spustíme import
+.. figure:: images/wxgui-raster-import-0.svg
 
-.. figure:: images/wxgui-raster-import-0.png
+            Výběr rastrového souboru (JPG) pro import.
 
-            Určení rastrových dat (PNG) z daného adresáře k importu.
+.. important:: Položka :item:`Projection match` udává informaci o tom,
+   zda se souřadnicový systém importovaných rastrových dat shoduje s
+   nastavením aktuální lokace. V případě, že je souřadnicový systém
+   vstupních dat a lokace rozdílný, tak bude systém GRASS vstupní data
+   při importu *současně transformovat* do souřadnicového systému
+   lokace. Nicméně v našem případě je situace jiná. Vstupní data jsou
+   v souřadnicovém systému S-JTSK, nicméně ve datovém formátu JPG tato
+   informace není uložena. Vynutíme tedy import rastrových dat tak,
+   jak jsou, viz :numref:`projection-override`.
 
-.. figure:: images/wxgui-raster-import-1.png
-	    :scale-latex: 60
+   .. _projection-override:
+   
+   .. figure:: images/wxgui-raster-import-1.svg
+      :scale-latex: 60
 
-            Průběh importu.
+      Vypnutí kontroly souřadnicového systému při importu.
+
+.. _display-raster-after-import:
 
 .. figure:: images/wxgui-raster-import-2.png
             :class: large
 
             Naimportovaná data se automaticky přidají do stromu vrstev.
+
+.. note:: Jak je vidět na :numref:`display-raster-after-import` systém
+   GRASS naimportovaný RGB snímek rozložil do třech rastrových vrstev
+   a zobrazil je v odstínech šedi. RGB kompozici můžeme zobrazit
+   pomocí modulu :grasscmd:`d.rgb`, viz kapitola :ref:`Zobrazení
+   rastrových dat <d-rast-various>`.
+
+   .. figure:: images/wxgui-raster-import-3.png
+
+      Volba jednotlivých RGB vrstev pro zobrazení.
+      
+   .. figure:: images/wxgui-raster-import-4.png
+      :class: large
+                       
+      Zobrazení RGB kompozice ve skutečných barvách.
 
 .. raw:: latex
 
@@ -74,21 +105,30 @@ V dialogu pro import rastrových dat určíme:
 
 .. notecmd:: Import rastrových dat
 
-                .. code-block:: bash
+   .. code-block:: bash
                                 
-                   r.in.gdal input=dmt.tif output=dmt
+      r.import input=PRAHA_7_0_13.1.jpg output=PRAHA_7_0_13
 
-.. note:: **Ukázka hromadného importu rastrových dat jako Python skript**
+V případě importu více rastrových souborů z jednoho adresáře je
+výhodné nastavit typ zdroje na adresář a zvolit příponu importovaných
+souborů. Tímto způsobem lze naimportovat všechny soubory najednou.
+
+.. figure:: images/wxgui-raster-import-5.svg
+
+   Import rastrových souboru z jedné složky. Všechny soubory lze
+   označit pro import přes pravé tlačítko myši :item:`Select all`.
+
+.. noteadvanced:: **Ukázka hromadného importu rastrových dat jako Python skript**
 
    .. code-block:: python
 
       import os
-      import grass.script as grass
+      import grass.script as gs
 
       for fname in os.listdir("."):
           name, ext = os.path.splitext(fname)
           if ext in ('.png', '.tif', '.jpg', '.gif'):
-              grass.run_command('r.in.gdal', input = fname, output = name)
+              gs.run_command('r.import', input=fname, output=name)
 
    Skriptování v jazyce Python je náplní navazujícího
    :skoleni:`školení pro pokročilé uživatele <grass-gis-pokrocily>`.

@@ -60,6 +60,8 @@ V dialogu vybereme soubor pro import.
 
             Výběr rastrového souboru (JPG) pro import.
 
+.. _projection-match:
+
 .. important:: Položka :item:`Projection match` udává informaci o tom,
    zda se souřadnicový systém importovaných rastrových dat shoduje s
    nastavením aktuální lokace. V případě, že je souřadnicový systém
@@ -83,6 +85,20 @@ V dialogu vybereme soubor pro import.
             :class: large
 
             Naimportovaná data se automaticky přidají do stromu vrstev.
+
+Pokud se v mapovém okně nezobrazují žádná data, je nutné nastavit
+pohled na aktuálně vybranou mapu.
+
+.. figure:: images/wxgui-zoom-to-map-menu.png
+   :scale-latex: 55
+              
+   Nastavení pohledu mapového okna na vybranou mapovou vrstvu z
+   kontextového menu správce vrstev.
+
+.. figure:: ../intro/images/map-display-full-zoom.png
+   :class: middle
+
+   Nastavení pohledu mapového okna na vybranou mapovou vrstvu.
 
 .. note:: Jak je vidět na :numref:`display-raster-after-import` systém
    GRASS naimportovaný RGB snímek rozložil do třech rastrových vrstev
@@ -133,6 +149,18 @@ souborů. Tímto způsobem lze naimportovat všechny soubory najednou.
    Skriptování v jazyce Python je náplní navazujícího
    :skoleni:`školení pro pokročilé uživatele <grass-gis-pokrocily>`.
 
+.. tip:: V případě, že pracujete s velkým množství rastrových dat, tak
+   může být import do nativního formátu GRASS nevýhodný. Dochází k
+   duplikování dat v originálním a datovém formátu GRASS. V této
+   situaci je vhodné místo importu zvolit vytvoření odkazu na
+   originální data. Při vytvoření odkazu čte data systém GRASS z
+   původních souborů.
+
+   .. figure:: images/wxgui-raster-link.png
+
+      Vytvoření odkazu na původní data namísto importu do nativního
+      formátu GRASS.
+   
 .. index::
    pair: vektorová data; import
    single: v.in.ogr
@@ -144,46 +172,71 @@ Vektorová data
 ==============
 
 Nástroj pro import vektorových dat je dostupný z menu
-:menuselection:`File --> Import vector data --> Common formats import`
-nebo nástrojové lišty správce vrstev.
+:menuselection:`File --> Import vector data --> Simplified raster
+import with reprojection` nebo nástrojové lišty správce vrstev.
+
+Import vektorových dat probíhá podobně jako v případě dat
+rastrových. Lze importovat pouze jeden vybraný soubor nebo více
+souborů z jednoho adresáře.
+
+.. note:: Pro naši potřebu použijeme vrstvu `cyklistických tras
+   <http://www.geoportalpraha.cz/cs/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636#.W-gfvKAo--l>`__
+   z otevřených dat IPR. Data stáhneme v souřadnicovém systému WGS-84
+   (vyzkoušíme si transformaci do S-JTSK) ve formátu `GML
+   <http://opendata.iprpraha.cz/CUR/DOP/DOP_Cyklotrasy_l/WGS_84/DOP_Cyklotrasy_l_gml.zip>`__.
 
 .. figure:: images/wxgui-vector-import-menu.png
-            :scale-latex: 55
+   :scale-latex: 55
                  
-            Nástroj pro import vektorových dat dostupný z nástrojové
-            lišty správce vrstev.
+   Nástroj pro import vektorových dat dostupný z nástrojové
+   lišty správce vrstev.
 
-V dialogu pro import vektorových dat určíme:
-
-#. typ zdroje
-#. formát dat
-#. adresář s daty
-#. seznam vrstev k importu
-#. spustíme import
-
-.. figure:: images/wxgui-vector-import-0.png
-            :scale-latex: 53
+.. figure:: images/wxgui-vector-import-0.svg
+   :scale-latex: 53
                  
-            Určení vektorových dat (Esri Shapefile) z daného adresáře k importu.
+   Výběr vektorového souboru (GML) pro import.
 
+.. note:: Podobně jako v případě importu rastrových dat detekuje
+   systém GRASS souřadnicicový systém vstupních dat a aktuální lokace
+   jako rozdílný. Narozdíl od :ref:`souboru JPG <projection-match>`
+   jsou data uložená ve formátu GML skutečně v jiném souřadnicovém
+   systému, konkrétně WGS-84 (:epsg:`4326`).
+               
 .. figure:: images/wxgui-vector-import-1.png
-	    :scale-latex: 60
+   :class: small
+   :scale-latex: 60
 
-            Průběh importu.
+   Po stisknutí tlačítka :item:`Import` se zobrazí dialog, ve kterém
+   je třeba transformaci dat ještě potvrdit.
 
 .. figure:: images/wxgui-vector-import-2.png
-            :class: large
-            :scale-latex: 85
+   :class: large
+   :scale-latex: 85
                  
-            Naimportovaná data se automaticky přidají do stromu vrstev.
+   Příklad vizualizace importovaných cyklotras a ortofota na pozadí.
 
+.. important:: Při importu dat vytvořených v prostředí Esri ArcGIS je
+   vhodné nastavit před importem hodnotu pro přichycení prvků
+   (tzv. snapping). Esri ArcGIS má ve výchozím nastavení zvolenu
+   toleranci 0.001 mapové jednotky. Tuto hodnotu anebo mírně výšší
+   (např. 0.01) je vhodné nastavit před importem do systému GRASS. V
+   opačném případě mohou vzniknout po importu v datech topologické
+   chyby, které se v Esri ArcGIS neprojevily. Typicky to mohou být
+   mezery anebo překryvy mezi sousedními polygony a pod.
+
+   .. figure:: images/wxgui-vector-import-3.svg
+                 
+   Před importem nastavíme v záložce :item:`Import settings` hodnotu
+   parametru :option:`snap`.
+   
 .. notecmd:: Import vektorových dat
 
    .. code-block:: bash
                                 
-      v.in.ogr dsn=lesy.shp
+      v.import input=DOP_Cyklotrasy_l.gml output=DOP_Cyklotrasy_l
 
-.. note:: **Ukázka hromadného importu vektorových dat z aktuálního adresáře jako Python skript**
+..
+   .. note:: **Ukázka hromadného importu vektorových dat z aktuálního adresáře jako Python skript**
 
    .. code-block:: python
 
@@ -205,7 +258,7 @@ V dialogu pro import vektorových dat určíme:
 Poznámky k importu vektorových dat
 ==================================
 
-Při importu vektorových dat provádí :grasscmd:`v.in.ogr` konverzi
+Při importu vektorových dat provádí :grasscmd:`v.import` konverzi
 vektorových dat z reprezentace :wikipedia:`Simple Features` do
 topologického formátu systému GRASS, viz kapitola :ref:`topologie`:
 
@@ -213,7 +266,7 @@ topologického formátu systému GRASS, viz kapitola :ref:`topologie`:
   změně povahy vektorového prvku, v topologickém formátu GRASS jsou
   vyjádřeny jako *points*, resp. *lines*,
 * polygony jsou rozloženy na hraniční linie (*boundary*) a centroidy
-  (*centroid*), externí ring polygonu je převeden na hraniční linie
+  (*centroid*), vnější hranice polygonu je převedena na hraniční linie
   (hraniční linie sousedících polygonů je uložena pouze jednou),
 * pro každý polygon je vypočten centroid, tj. reprezentativní bod
   ležící uvnitř plochy,
@@ -239,7 +292,7 @@ v druhém polygonu a prostor vně polygonu definuje dva ostrovy.
 
    Topologická reprezentace dvou polygonů (druhý polygon s otvorem).
 
-Modul :grasscmd:`v.in.ogr` provádí při importu operace s cílem
+Modul :grasscmd:`v.import` provádí při importu operace s cílem
 odstranit případné topologické chyby v datech, které při konverzi z
 reprezentace simple features do topologického formátu systému GRASS
 mohou vzniknout. Topologické chyby, které nemohou být z nejrůznějších
@@ -252,11 +305,11 @@ důvodů během importu odstraněny, je možné opravit pomocí modulu
 Kódování atributových dat
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Při importu dat ve formátu Esri Shapefile je nutné nastavit správné
-kódování pro atributová data. Atributy obsahující diakritiku jsou
-často kódována ve znakové sadě :wikipedia:`Windows-1250` (kód
+Při importu dat ve formátu Esri Shapefile je občas nutné nastavit
+správné kódování pro atributová data. Atributy obsahující diakritiku
+jsou často kódována ve znakové sadě :wikipedia:`Windows-1250` (kód
 ``cp1250``). Hodnotu kódování lze nastavit pomocí parametru
-:option:`encoding` modulu :grasscmd:`v.in.ogr`.
+:option:`encoding` v záložce :item:`Import settings`.
 
 .. figure:: images/wxgui-vector-import-encoding.png
    :scale-latex: 50
@@ -268,9 +321,10 @@ kódování pro atributová data. Atributy obsahující diakritiku jsou
 
    .. code-block:: bash
 
-      v.in.ogr dsn=orp.shp encoding=cp1250
+      v.import input=orp.shp encoding=cp1250 output=orp
 
-.. notegrass6::
+..     
+   .. notegrass6::
 
    Vzhledem k tomu, že modul :grasscmd:`v.in.ogr` nemá ve
    verzi GRASS 6 parametr :option:`encoding`, je nutné
@@ -289,13 +343,14 @@ Formát DGN
 
 Formát DGN lze naimportovat pouze v případě, že je knihovna
 :wikipedia:`GDAL` zkompilována s podporou pro `tento formát
-<http://www.gdal.org/ogr/drv_dgn.html>`_. Bohužel knihovna GDAL
+<http://www.gdal.org/drv_dgn.html>`__. Bohužel knihovna GDAL
 nepodporuje formát verze 8.0 a vyšší.
 
 .. note::
 
    V případě formátu DGN lze doporučit jeho konverzi do formátu DXF a
-   import do systému GRASS pomocí modulu :grasscmd:`v.in.dxf`.
+   import do systému GRASS pomocí modulu :grasscmd:`v.import` anebo
+   specializovaného :grasscmd:`v.in.dxf`.
 
 .. index::
    pair: import; region
@@ -303,21 +358,7 @@ nepodporuje formát verze 8.0 a vyšší.
 Importovaná data a výpočetní region
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pokud se v mapovém okně nezobrazují žádná data, je nutné nastavit
-pohled na aktuálně vybranou mapu.
-
-.. figure:: images/wxgui-zoom-to-map-menu.png
-   :scale-latex: 55
-              
-   Nastavení pohledu mapového okna na vybranou mapovou vrstvu z
-   kontextového menu správce vrstev.
-
-.. figure:: ../intro/images/map-display-full-zoom.png
-   :class: middle
-
-   Nastavení pohledu mapového okna na vybranou mapovou vrstvu.
-
-Import dat nemá vliv na aktuální nastavení :ref:`výpočetního regionu
+Import dat *nemá vliv* na aktuální nastavení :ref:`výpočetního regionu
 <region>`. Výpočetní region lze nastavit na základě naimportovaných
 dat z kontextového menu správce vrstev.
 
@@ -325,7 +366,8 @@ dat z kontextového menu správce vrstev.
 
    Nastavení výpočetního regionu na základě mapové vrstvy.
 
-.. note::
+..   
+   .. note::
 
    Výpočetní region lze automaticky během importu rozšířit na základě
    importovaných dat.

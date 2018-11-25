@@ -56,10 +56,10 @@ Systém GRASS můžete nainstalovat běžným způsobem, viz `přehled verzí
       sudo apt-get install grass
 
 .. figure:: images/grass-ubuntu-launch.png
-            :class: middle
-            :scale-latex: 85
+   :class: large
+   :scale-latex: 85
                  
-            Spuštění systému GRASS v Ubuntu.
+   Příklad spuštění systému GRASS na OS Linux.
 
 .. rubric:: `Poznámky pod čarou`
    :class: secnotoc

@@ -5,22 +5,27 @@
 MS Windows
 ----------
 
+.. important:: Pokud máte nainstalován na svém počítači `QGIS
+   <https://www.qgis.org>`__, tak máte systém GRASS k dispozici a
+   nemusíte ho instalovat.
+               
 Systém GRASS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 
-#. pomocí :ref:`nativního instalátoru<nativni-instalator>`
+#. pomocí tradičního :ref:`nativního instalátoru<nativni-instalator>`
 
-   * vhodné *pro začátečníky*
+   * vhodné *pro naprosté začátečníky*
    * nepředpokládáme častou aktualizaci softwaru
 
-#. v rámci :ref:`OSGeo4W frameworku <osgeo4w-instalator>`
+#. pomocí síťového instalátoru :ref:`OSGeo4W <osgeo4w-instalator>`
 
-   * vhodné *pro pokročilejší uživatele*
-   * komplexní řešení umožňující instalaci dalšího softwaru
+   * komplexní řešení umožňující instalaci i dalšího softwaru
      distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
      (jako je např. `QGIS <http://qgis.org>`_, `MapServer
      <http://mapserver.org>`_ a další)
    * vhodné při předpokladu časté aktualizace softwaru
 
+.. note:: Na většině dnešních počítačů zvolte instalaci 64bitové verze softwaru.
+          
 .. _nativni-instalator:
 
 Nativní instalátor
@@ -63,6 +68,7 @@ Nativní instalátor je dostupný na adrese: https://grass.osgeo.org/download/so
 	    datovou sadu pro GRASS "North Carolina".
 
 .. figure:: images/wingrass-4.png
+            :class: small
             :scale-latex: 50
             
             GRASS můžeme spustit z nabídky Start.
@@ -87,68 +93,33 @@ Nativní instalátor je dostupný na adrese: https://grass.osgeo.org/download/so
 OSGeo4W
 =======
 
-Instalátor frameworku OSGeo4W je ke stažení pro `32 bitovou <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe>`_ a `64 bitovou <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ platformu.
+Síťový instalátor je ke stažení pro `32 bitovou
+<http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe>`_ a `64
+bitovou <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_
+platformu.
 
 .. figure:: images/osgeo4w-0.png
             :scale-latex: 45
                  
-	    GRASS 7 nainstalujeme ze sekce ``Advanced Install``.
+	    GRASS nainstalujeme ze sekce ``Express Desktop Install``.
 
 .. figure:: images/osgeo4w-1.png
             :scale-latex: 45
 
-            Vybereme instalaci z Internetu.
+            V následující části necháme povolené balíčky GDAL a GRASS GIS.
    
-.. figure:: images/osgeo4w-2.png
-            :scale-latex: 45
-            
-	    Zvolíme adresář, kam se má GRASS a případně další software
-	    z nabídky OSGeo4W nainstalovat.
-
-.. raw:: latex
-
-   \clearpage
-
-.. figure:: images/osgeo4w-3.png
-            :scale-latex: 50
-
-            Potvrdíme cestu k adresáři, kam se budou stahovat data instalátoru.
-
-.. figure:: images/osgeo4w-4.png
-            :scale-latex: 50
-            
-	    Ze sekce ``Desktop`` vybereme balíček ``grass``.
-
-.. figure:: images/osgeo4w-5.png
-            :scale-latex: 50
-            
-	    Nutné závislosti (jako např. knihovna GDAL, Python či
-	    wxPython) se nainstalují automaticky.
-
-.. raw:: latex
-
-   \newpage
-         
-..
-   .. figure:: images/osgeo4w-6.png
-      :scale-latex: 50
-                    
-      Součástí instalace je i proprietární součást knihovny GDAL
-      ``szip``, kterou potvrdíme.
-            
-.. figure:: images/osgeo4w-7.png
-            :scale-latex: 50
-            
-	    Systém GRASS spustíme z nabídky Start ``OSGeo4W``.
-
 .. noteadvanced::
 
-   V rámci frameworku OSGeo4W je možné nainstalovat i *denní
-   snapshoty* vývojové verze systému GRASS. To se hodí v případě, že
-   potřebujete otestovat např. novou funkcionalitu, která není
-   součástí stabilní verze.
+   V rámci OSGeo4W je možné nainstalovat i *denní snapshoty* vývojové
+   verze systému GRASS. To se hodí v případě, že potřebujete otestovat
+   např. novou funkcionalitu, která není součástí stabilní verze.
 
-   .. figure:: images/osgeo4w-8.png
+   .. figure:: images/osgeo4w-2.png
+      :scale-latex: 50
+               
+      Zvolíme ``Advanced Install``.
+      
+   .. figure:: images/osgeo4w-3.png
       :scale-latex: 50
                
       Ze sekce ``Desktop`` vybereme balíček ``grass-daily``

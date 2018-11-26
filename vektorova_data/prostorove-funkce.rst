@@ -15,8 +15,8 @@ Prostorové funkce
 
 .. _v-extract:
              
-Výběr z vektorové mapy
-======================
+Atributový výběr
+================
 
 Vybírat geoprvky z vektorové mapy můžeme selektivně podle jejich
 kategorií a atributů, viz kapitola :doc:`../intro/atributove-dotazy`.
@@ -32,7 +32,7 @@ V následující ukázce vybereme z vektorové mapy :map:`silnice` (mapset
 :map:`osm`) všechny dálnice (splňující podmínku ``typ = 1``). Výsledek
 uložíme do vektorové mapy :map:`dalnice`.
 
-.. figure:: images/v-extract.png
+.. figure:: images/v-extract.svg
    :class: large
    :scale-latex: 85
               
@@ -49,7 +49,7 @@ Obalová zóna
 Obalovou zónu pro vektorová data vytváří modul :grasscmd:`v.buffer`
 (:menuselection:`Vector --> Buffer vector`).
 
-Příklad vytvoření obalové zóny s šířkou 5 km.
+Příklad vytvoření obalové zóny kolem dálnic s šířkou 5 km.
 
 .. code-block:: bash
 
@@ -61,21 +61,30 @@ Příklad vytvoření obalové zóny s šířkou 5 km.
         
    Příklad obalové zóny 5 km okolo dálnic.
 
+.. tip:: Výpočet může trvat delší dobu jelikož je dálnice
+   reprezentována vždy dvěma pruhy. Pomocí modulu :grasscmd:`v.clean`
+   můžeme reprezentaci dálnice převést pouze na jednu lomenou čáru
+   tím, že jeden z pruhů sloučíme s druhým.
+
+   .. code-block:: bash
+
+      v.clean input=dalnice output=dalnice1 tool=snap threshold=100
+
 .. index::
    single: intersect
    single: union
    single: v.overlay
    see: prostorové funkce; v.overlay
 
-Překrytí, průnik, spojení, vyloučení
-====================================
+Operace překrytí
+================
 
 Tyto operace zajišťuje modul :grasscmd:`v.overlay`
 (:menuselection:`Vector --> Overlay vector maps --> Overlay vector
 maps`).
 
-Překrytí (union)
-^^^^^^^^^^^^^^^^
+Sjednocení (union)
+^^^^^^^^^^^^^^^^^^
 
 V našem případě vytvoříme vektorovou mapu :map:`chranena_uzemi`
 :fignote:`(4)` spojením :fignote:`(3)` velkoplošných :fignote:`(2)` a

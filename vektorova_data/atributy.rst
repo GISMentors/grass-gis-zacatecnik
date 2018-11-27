@@ -16,11 +16,33 @@ Správce atributových dat umožňuje kromě dotazování (viz kapitola
 :doc:`../intro/atributove-dotazy`) atributová data **modifikovat**.
 
 .. figure:: images/dbmgr-edit.png
+   :class: large
    :scale-latex: 55
               
-.. important:: Editovat lze atributové data vektorových map pouze z
-               aktualního mapsetu.
-                           
+.. note:: Editovat lze atributové data vektorových map pouze z
+          aktualního mapsetu.
+
+          Kopírovat vektorové mapy do aktuálního mapsetu lze z
+          kontextového menu stromu vrstev (:numref:`copy-vector-01`)
+          anebo pomocí nástoje ze záložky :item:`Data`
+          (:numref:`copy-vector-02`).
+
+          .. _copy-vector-01:
+          
+          .. figure:: images/copy-vector-01.png
+             :class: small
+             
+             Vytvoření kopie vektorovové mapy v aktuálním mapsetu z
+             kontextového menu správce vrstev.
+
+          .. _copy-vector-02:
+          
+          .. figure:: images/copy-vector-02.png
+             :class: middle
+
+             Kopírování vektorových map pomocí nástroje ze záložky
+             :item:`Data`.
+             
 .. youtube:: UZswOcIyaX8
 
              Editace záznamů v atributové tabulce
@@ -29,34 +51,41 @@ Správce atributových dat umožňuje kromě dotazování (viz kapitola
 
                Nabízejí se dva moduly:
 
-             * :grasscmd:`db.execute` který umožňuje spustit jakýkoliv
+             * :grasscmd:`db.execute` umožňující spustit jakýkoliv
                :abbr:`SQL (Structured Query Language)` příkaz typu
                ``UPDATE``, ``ALTER`` či ``DELETE``
 
                .. code-block:: bash
                                
-                  db.execute sql="update obce_polygon set nespravny = '1' where kod = 569054"
+                  db.execute sql="update obce set nespravny = '1' where kod = 569054"
 
              * anebo :grasscmd:`v.db.update` jako frontend pro vektorové mapy
 
                .. code-block:: bash
                
-                  v.db.update map=obce_polygon column=nespravny value="1" where="kod = 569054"
+                  v.db.update map=obce column=nespravny value="1" where="kod = 569054"
 
-Správce atributových dat umožňuje **přidávat** do atributové tabulky nové záznamy.
+Správce atributových dat umožňuje **přidávat** do atributové tabulky
+nové záznamy.
 
 .. figure:: images/dbmgr-new-record.png
    :scale-latex: 53
+   :class: large
 
+   Přidání nového záznamu do atributové tabulky.
+
+.. note:: Tato operace neznamená, že bude do vektorové mapy přidán
+   nový prvek.
+          
 .. youtube:: mmPvMRBDxLg
 
-             Přidání nového záznamu do atributové tabulky
+   Přidání nového záznamu do atributové tabulky.
 
 .. notecmd:: Vložení nového záznamu do atributové tabulky
 
-                .. code-block:: bash
+   .. code-block:: bash
 
-                   db.execute sql="insert into obce_polygon(cat, nazev) values (6253, 'pokus')"
+      db.execute sql="insert into obce_polygon(cat, nazev) values (6253, 'pokus')"
 
 Vybrané záznamy lze z atributové tabulky **odstranit**.
 
@@ -67,11 +96,11 @@ Vybrané záznamy lze z atributové tabulky **odstranit**.
 
 .. notecmd:: Odstranění záznamů z atributové tabulky
 
-                .. code-block:: bash
+   .. code-block:: bash
 
-                                db.execute sql="delete from obce_polygon where cat = 6253"
+      db.execute sql="delete from obce where cat = 6253"
 
-.. warning::
+.. important::
 
    Při odstranění či přidání záznamů do atributové tabulky dochází k
    modifikaci pouze popisné složky geoprvků. Např. při odstranění
@@ -81,9 +110,8 @@ Vybrané záznamy lze z atributové tabulky **odstranit**.
 Numerické atributy mohou být také *vypočítány* na základě zvolené funkce.
 
 .. figure:: images/wxgui-dbmgr-calculate.png
-            :class: large
 
-            Funkce pro výpočet numerických atributů.
+   Funkce pro výpočet numerických atributů.
 
 .. raw:: latex
 
@@ -93,7 +121,7 @@ Numerické atributy mohou být také *vypočítány* na základě zvolené funkc
              
    .. code-block:: bash
                    
-      v.to.db map=obce_polygon option=area columns=vymera
+      v.to.db map=obce option=area columns=vymera
 
 .. _pridani-noveho-atributu:
             
@@ -115,19 +143,20 @@ Field Calculator
 atributová data.
 
 .. figure:: images/wx-field-calculator.png
-
-   Ukázka nástroje Field Calculator.
+   :class: large
+           
+   Ukázka nástroje využití Field Calculator.
    
 .. youtube:: 44KmtnBJtgo
 
-             Výpočet poměru obvodu a výměry plochy pomocí Field Calculatoru
+   Výpočet poměru obvodu a výměry plochy pomocí Field Calculatoru.
 
 .. _db-select:
 
 Pokročilé dotazování
 ====================
 
-Atributové dotazy na geoprvky umožňují dva moduly :ref:`v.db.select
+Atributové dotazy umožňují dva moduly :ref:`v.db.select
 <modul-v-db-select>` a :ref:`db.select <modul-db-select>`.
 
 .. _modul-v-db-select:
@@ -141,19 +170,19 @@ menu :menuselection:`Database --> Query --> Query vector attribute
 data`. Pokud není zadána :option:`where` podmínka, tak modul vypíše
 všechny záznamy z atributové tabulky.
 
-.. figure:: images/v-db-select-0.png
+.. figure:: images/v-db-select-0.svg
 
-            Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
-            (zadání vektorové mapy).
+   Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
+   (zadání vektorové mapy).
 
 .. raw:: latex
 
    \newpage
 
-.. figure:: images/v-db-select-1.png
+.. figure:: images/v-db-select-1.svg
 
-            Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
-            (volitelně zadání 'where' podmínky).
+   Atributový dotaz pomocí modulu :grasscmd:`v.db.select`
+   (volitelně zadání 'where' podmínky).
 
 .. _modul-db-select:
 

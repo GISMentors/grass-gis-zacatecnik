@@ -87,10 +87,10 @@ Sjednocení (union)
 ^^^^^^^^^^^^^^^^^^
 
 V našem případě vytvoříme vektorovou mapu :map:`chranena_uzemi`
-:fignote:`(4)` spojením :fignote:`(3)` velkoplošných :fignote:`(2)` a
+:fignote:`(4)` sjednocením :fignote:`(3)` velkoplošných :fignote:`(2)` a
 maloplošných chráněných území :fignote:`(1)`.
 
-.. figure:: images/v-overlay-01.png
+.. figure:: images/v-overlay-01.svg
    :scale-latex: 45
    
    Vytvoření mapy maloplošných a velkoplošných chráněných území.
@@ -99,8 +99,7 @@ maloplošných chráněných území :fignote:`(1)`.
 
    .. code-block:: bash
                    
-      v.overlay ainput=maloplosna_uzemi binput=velkoplosna_uzemi operator=or \
-       output=chranena_uzemi
+      v.overlay ainput=maloplosna_uzemi binput=velkoplosna_uzemi_zonace operator=or output=chranena_uzemi
                    
 K výsledné vektorové mapě je přiřazena atributová tabulka, která je
 spojena z obou vstupních vektorových map. Atributy první vektorové
@@ -108,20 +107,19 @@ mapy (:option:`ainput`) jsou označeny prefixem ``a_``, atributy druhé
 (:option:`binput`) prefixem ``b_``.
 
 .. figure:: images/v-overlay-01-table.png
-   :class: middle
    :scale-latex: 50
 
    Atributová tabulka výsledné vektorové mapy :map:`chranene_uzemi`.
 
-Průnik (intersect)
-^^^^^^^^^^^^^^^^^^
+Průnik (intersection)
+^^^^^^^^^^^^^^^^^^^^^
 
 V tomto případě zjistíme, jak obalová zóna dálnic :fignote:`(2)`
 zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
-:grasscmd:`v.overlay` a použijeme operaci průnik (operátor ``AND`` -
+:grasscmd:`v.overlay` a použijeme operaci průnik (operátor ``and`` -
 :fignote:`(3)`).
 
-.. figure:: images/v-overlay-02.png
+.. figure:: images/v-overlay-02.svg
 
     Dálniční obalová zóna procházející chráněným územím.
 
@@ -129,28 +127,18 @@ zasahuje do chráněných území :fignote:`(1)`. Opět spustíme modul
 
    .. code-block:: bash
 
-      v.overlay ainput=chranena_uzemi binput=hluk operator=and \
-       output=dalnice_chranenauzemi
+      v.overlay ainput=chranena_uzemi binput=hluk operator=and output=dalnice_chranena_uzemi
                 
 .. figure:: images/dalnice500buffer_chranena_uzemi-01.png
    :class: middle
    :scale-latex: 60
 
-   Hluková oblast zasahující maloplošné chráněné území Černovický hájek u Brna.
+   Hluková oblast zasahující chráněné území České středohoří před dostavbou úseku vedoucího přes toto území.
 
 .. raw:: latex
 
    \newpage
       
-.. figure:: images/dalnice500buffer_chranena_uzemi-02.png
-   :class: middle
-   :scale-latex: 60
-        
-   Hluková oblast zasahující velkoplošné chráněné území CHKO Česká
-   kras a CHKO Křivoklátsko.
-
-Podobně fungují i operátory ``XOR`` a ``NOT``.
-
 .. index::
    single: merge
    single: patch
@@ -160,16 +148,18 @@ Podobně fungují i operátory ``XOR`` a ``NOT``.
 Spojení vektorových map (merge)
 ===============================
 
-Alternativním způsob spojení vektorových map umožňuje modul
+Spojení vektorových prvků ze vstupních map umožňuje modul
 :grasscmd:`v.patch` (:menuselection:`Vector --> Overlay vector maps
 --> Patch vector maps`). Na rozdíl od :grasscmd:`v.overlay` tento
-modul sloučí vstupní vektorové mapy automaticky.
+modul neprovádí překryvnou operaci ale nýbrž prosté uložení prvků ze
+dvou a více vstupních map do výstupní mapy.
 
 .. figure:: images/v-patch-01.png
    :scale-latex: 60
 
    Příklad vytvoření nové vektorové mapy :map:`doprava`, která je
-   složena ze vstupních vektorových map :map:`silnice` a :map:`zeleznice`.
+   složena z prvků vstupních vektorových map :map:`silnice` a
+   :map:`zeleznice`.
 
 .. notecmd:: Spuštění
 

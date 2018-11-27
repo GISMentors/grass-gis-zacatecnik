@@ -9,7 +9,7 @@ Topologie vektorových dat
 -------------------------
 
 Jak již bylo uvedeno v :ref:`úvodní části <import-topologie>`,
-vektorová data jsou v prostředí GRASS uložena v topologickém
+vektorová data jsou v prostředí GRASS uložena v nativním topologickém
 formátu. Znamená to, že nad nimi můžeme rychleji provádět celou řadu
 operací, které jsou v netopologickém formátu daleko náročnější. Toto
 je na druhou stranu vyváženo náročnější správou dat a potenciálně
@@ -18,42 +18,20 @@ větším nebezpečím jejich poškození.
 Pokaždé, když je vytvořena nová vektorová mapa či změněna již
 existující mapa, je vždy nově vytvořena topologie vektorových prvků v
 mapě. Tu můžeme znovu vybudovat také manuálně modulem
-:grasscmd:`v.build`, který můžete spustit z~menu
+:grasscmd:`v.build`, který můžete spustit z menu
 :menuselection:`Vector --> Topology maintenance --> Create or rebuild
 topology`.
 
-.. _kopie-vektorove-mapy:
-
-.. note:: Data lze modifikovat (včetně sestavení topologie) pouze v
-          aktuálním mapsetu. Pro řešení níže uvedené úlohy si nejprve
-          pomocí modulu :grasscmd:`g.copy` či z kontextového menu
-          správce vrstev (viz obr. níže) vytvoříme v aktuálním mapsetu
-	  lokální kopii vektorové mapy :map:`obce_polygon`
-          (mapset `ruian`).
-
-          .. figure:: images/vector-make-copy.png
-             :scale-latex: 50
-			   
-	     Vytvoření kopie vektorové mapy v aktuálním mapsetu.
-	     
-.. figure:: images/v-build-01.png
-   :class: large
-   :scale-latex: 90
-              
-   Znovu vybudování topologie pro vektorovou mapu :map:`obce_polygon`
-   (lokální kopie - :fignote:`1`). Chyby v~topologii uložíme do nové
-   vektorové mapy :fignote:`(2)`.
-
 .. _oprava-topologie:
            
-Oprava topologických chyb
-=========================
+Příklad opravy topologických chyb
+=================================
 
 Pro práci s topologií vektorových dat slouží především modul
 :grasscmd:`v.clean` (:menuselection:`Vector --> Topology maintenance
 --> Clean vector map`). Tento modul je zásadní v okamžiku, kdy
 vektorová mapa obsahuje topologické chyby např. :ref:`po importu dat
-<import-topologie>` z formátu Esri Shapefile .
+<import-topologie>`.
 
 ::
    
@@ -95,5 +73,6 @@ než 10m\ :sup:`2`.
             Výsledek spojení polygonů obcí po opravě topologických
             chyb.
 
-Tato problematika je více rozebrána na `portálu FreeGIS
-<http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Konzistence_vektorov%C3%BDch_dat>`_.
+.. note:: Tato problematika je podrobněji rozebrána na `portálu
+          FreeGIS
+          <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Konzistence_vektorov%C3%BDch_dat>`_.

@@ -117,12 +117,7 @@ umístěnou v mapovém okně.
       
    Písmo změníme v dialogu nastavení dostupného z menu
    :menuselection:`Settings --> Preferences` anebo z nástrojové lišty
-   *správce vrstev*.
-
-   .. figure:: images/lmgr-settings.png
-      :scale-latex: 50
-                 
-      Nastavení GUI systému GRASS.
+   *správce vrstev* |grass-settings| :sup:`GUI settings`.
 
    .. figure:: images/settings-font.png            
       :class: middle
@@ -134,15 +129,11 @@ umístěnou v mapovém okně.
       :class: small
       :scale-latex: 40
                  
-      Kromě fontu :fignote:`(1)` změníme kodóvání na UTF-8
-      :fignote:`(2)`.
+      Kromě typu písma změníme kodóvání na UTF-8.
 
-   .. figure:: images/map-render.png
-      :class: large
-      :scale-latex: 80
-
-      Obsah mapové okna překreslíme.
-
+   Pokud se změna v nastavení neprojevuje, tak mapové okno překreslíme
+   |grass-layer-redraw| :sup:`Render map`.
+   
    .. raw:: latex
 
       \newpage
@@ -151,7 +142,7 @@ umístěnou v mapovém okně.
       :class: small
       :scale-latex: 35
 
-      Výsledek.
+      Výsledek po změně nastavení písma.
 
 .. index::
    pair: mapové elementy; směrová růžice
@@ -163,7 +154,7 @@ Směrová růžice
 Směrovou růžici lze do mapového okna přidat z jeho nástroje lišty:
 
 .. figure:: images/add-narrow.png
-   :class: large
+   :class: middle
    :scale-latex: 70
 
    Přidání směrové růžice do mapového okna.
@@ -196,9 +187,8 @@ mapovém okně.
 	 
    \newpage
 	 
-Směrovou růžici můžete v mapovém okně **skrýt** buď z nástorové lišty
-anebo z kontextového menu směrové růžice (pravé tlačítko myši nad
-směrovou růžicí):
+Směrovou růžici můžete v mapovém okně **skrýt** z kontextového menu
+směrové růžice (pravé tlačítko myši nad směrovou růžicí):
                      
 .. figure:: images/remove-narrow.png
    :class: small
@@ -216,7 +206,7 @@ Měřítko
 Měřítko lze do mapového okna přidat z jeho nástroje lišty:
 
 .. figure:: images/add-scalebar.png
-   :class: large
+   :class: middle
    :scale-latex: 60
 
    Přidání měřítka do mapového okna.
@@ -230,7 +220,7 @@ Do mapové okna se umístí výchozí měřitko:
    Vychozí měřítko.
    
 **Podobu měřítka** lze změnit z dialogu modulu :grasscmd:`d.barscale`
-přes dvojklik nad měřítkem umístěným v~mapovém okně.
+přes dvojklik nad měřítkem umístěným v mapovém okně.
 
 .. figure:: images/scalebar-prop.png
    :class: middle
@@ -248,8 +238,8 @@ přes dvojklik nad měřítkem umístěným v~mapovém okně.
 
    \newpage
 
-Měřítko můžete v mapovém okně **skrýt** buď z nástorové lišty anebo z
-kontextového menu měřítka (pravé tlačítko myši nad měřítkem):
+Měřítko můžete v mapovém okně **skrýt** z kontextového menu měřítka
+(pravé tlačítko myši nad měřítkem):
                      
 .. figure:: images/remove-scalebar.png
    :class: small
@@ -267,19 +257,18 @@ Textový popisek
 Textový popisek lze do mapového okna přidat z jeho nástroje lišty:
 
 .. figure:: images/add-text.png
-   :class: large
+   :class: middle
    :scale-latex: 65
 
    Přidání textového popisku do mapového okna.
    
-V následující dialogu uvedeme text a případně můžeme změnit i
-vlastnosti textového objektu.
+V následující dialogu modulu :grasscmd:`d.text` uvedeme text. Případně
+můžeme v záložce :item:`Font settings` můžeme nastavit velikost a typ
+písma.
       
 .. figure:: images/text-prop.png
-   :class: small
         
-   Po nastavení textu :fignote:`(1)` můžeme nastavit rotaci
-   či styl písma :fignote:`(2)`.
+   Po nastavení textu v dialogu :grasscmd:`d.text`.
 
 .. figure:: images/text-example.png
    :class: large
@@ -287,8 +276,7 @@ vlastnosti textového objektu.
 
    Příklad textového popisku v mapovém okně.
             
-Popisek lze **skrýt** opět pomocí výše uvedeného dialogu přes dvojklik
-nad daným textovým objektem v mapovém okně.
+Popisek lze **skrýt** z kontextového menu textového objektu.
 
 .. figure:: images/remove-text.png
    :class: small

@@ -43,21 +43,13 @@ GRASS nabízí řadu modulů pro tzv. *síťové analýzy*. Jedná se o typy
 Ukázka
 ======
 
-.. figure:: images/wxgui-vnet-01.png
-
-   Spuštění grafického nástroje pro síťové analýzy z nástrojové lišty
-   mapového okna.
-
 .. figure:: images/wxgui-vnet.png
    :class: large
    :scale-latex: 90
 
    Příklad nalezení nejkratší cesty pomocí GUI nástroje pro síťové
    analýzy.
-
-.. todo:: Aktualizovat screenshot (nástroj je ve verzi GRASS 7.4.2
-          nefunkční)
-
+            
 .. youtube:: McOrMauPc_I
 
    Příklad síťových analýz v GUI systému GRASS
@@ -70,6 +62,7 @@ Ukázka
    negativními cenami (např. jednosměrné komunikace, uzavírky silnic,
    atd.).
    
-   Příprava dat je náročná a je náplní navazujícího :skoleni:`školení
-   pro pokročilé uživatele <grass-gis-pokrocily>`.
+   Příprava dat je náročná a je náplní navazujícího
+   `školení pro pokročilé uživatele
+   <http://www.gismentors.eu/skoleni/grass-gis.html#pokrocily>`_.
 

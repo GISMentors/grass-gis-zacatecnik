@@ -200,34 +200,45 @@ any table`.
 .. figure:: images/db-select-0-single.png
             
             Atributový dotaz pomocí modulu :grasscmd:`db.select`
-            (zadání :abbr:`SQL (Structured Query Language)` dotazu).
+            (zadání :abbr:`SQL (Structured Query Language)`
+            dotazu). Výpočet plošné zakulacenosti prvků (poměr
+            kvadrátu obvodu vůči ploše).
 
 .. figure:: images/db-select-1-single.png
 
             Atributový dotaz pomocí modulu :grasscmd:`db.select`
             (výsledek :abbr:`SQL (Structured Query Language)` dotazu).
 
+.. important:: Modul :grasscmd:`db.select` pracuje s atributy uloženými
+   v aktuální mapsetu (ve výchozím nastavení systém GRASS použivá pro
+   uložení atributových dat SQLite databázi, každý mapset má svoji
+   DB). Cestu k DB lze změnit pomocí atributu :param:`database`.
+              
 .. raw:: latex
 
    \newpage
 
 .. notecmd:: Jednoduché atributové dotazu
 
-             .. code-block:: bash
+   .. code-block:: bash
 
-                             db.select sql="SELECT COUNT(*) FROM obce WHERE ob01/ob91-1 >= 1"
+      db.select sql="select nazev,(shape_len*shape_len)/shape_area as zaku from maloplosna_uzemi where zaku > 3e3"
 
 .. figure:: images/db-select-0-multi.png
 
-            Vícenásobný atributový dotaz pomocí modulu
-            :grasscmd:`db.select` (zadání :abbr:`SQL (Structured Query
-            Language)` dotazů).
+   Vícenásobný atributový dotaz pomocí modulu :grasscmd:`db.select`
+   (zadání :abbr:`SQL (Structured Query Language)` dotazů).
+
+.. code-block:: sql
+
+   select nazev,(shape_len*shape_len)/shape_area as zaku from maloplosna_uzemi where zaku > 3e3;
+   select count(*) from maloplosna_uzemi;
+   select count(distinct kod) as pocet from maloplosna_uzemi;
 
 .. figure:: images/db-select-1-multi.png
 
-            Vícenásobný atributový dotaz pomocí modulu
-            :grasscmd:`db.select` (výsledek :abbr:`SQL (Structured
-            Query Language)` dotazů).
+   Vícenásobný atributový dotaz pomocí modulu :grasscmd:`db.select`
+   (výsledek :abbr:`SQL (Structured Query Language)` dotazů).
 
 .. note::
 

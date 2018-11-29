@@ -14,7 +14,7 @@ status`.
 
    Stav lokalizace do češtiny.
 
-.. noteadvanced::
+.. note::
    
    "Fuzzy" označuje překlad, který již neodpovídá původní zprávě
    programu a musí být aktualizován.
@@ -34,11 +34,11 @@ operačnímu systému.
 .. figure:: images/grass-welcome-czech.png
 	    :scale-latex: 50
 
-	    GRASS lokalizovaný do češtiny pro MS Windows.
+	    GRASS lokalizovaný do češtiny.
 
 Lokalizaci je možné změnit v nastavení :abbr:`GUI (Grafické
 uživatelské rozhraní)` systému GRASS :menuselection:`Settings -->
-Preferences` v záložce :item:`Appearance` [#f1]_.
+Preferences` |grass-settings| v záložce :item:`Appearance` [#f1]_.
 
 .. figure:: images/grass-change-lang.png
             :scale-latex: 65

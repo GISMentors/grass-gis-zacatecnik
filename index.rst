@@ -72,7 +72,11 @@ upravovat ho a tyto změny či opravy šířit dál.
    kapitola :ref:`volba-lokalizace`.
 
 .. tip:: Na toto školení do značné míry navazuje školení
-         :skoleni:`GRASS GIS pro pokročilé <grass-gis-pokrocily>`.
+   :skoleni:`GRASS GIS pro pokročilé <grass-gis-pokrocily>`. Další
+   materiály týkající se systému GRASS jsou dostupné v angličtině
+   :skoleni:`GRASS GIS Workshop in Jena
+   <grass-gis-workshop-jena-2018/>` a :skoleni:`GRASS GIS IRSAE Winter
+   Course 2018 <grass-gis-irsae-winter-course-2018>`.
 
 .. index::
    pair: datové sady; ke stažení

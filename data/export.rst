@@ -11,8 +11,9 @@ slouží modul :grasscmd:`v.out.ogr`.
 .. note::
    
    Výše zmíněné moduly používají pro export dat knihovnu
-   :wikipedia:`GDAL`, která v režimu zápisu podporuje téměř 200
-   rastrových a vektorových formátů.
+   :wikipedia:`GDAL`, která v režimu zápisu podporuje téměř 250
+   `rastrových <https://gdal.org/formats_list.html>`__ a `vektorových
+   <https://gdal.org/ogr_formats.html>`__ formátů.
 
 .. index::
    pair: rastrová data; export
@@ -24,7 +25,7 @@ Rastrová data
 
 Modul pro export rastrových dat je dostupný z menu
 :menuselection:`File --> Export raster map --> Common export formats`
-anebo z~kontextového menu *správce vrstev*.
+anebo z kontextového menu *správce vrstev*.
 
 .. raw:: latex
 
@@ -36,19 +37,25 @@ anebo z~kontextového menu *správce vrstev*.
 
 V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
-.. figure:: images/export-raster.png
+.. figure:: images/export-raster.svg
 
-            Zvolíme rastrovou mapu pro export :fignote:`(1)`, cestu k
-            výstupnímu souboru :fignote:`(2)` a formát výstupního
-            souboru :fignote:`(3)`. V tomto případě se data
-            vyexportují do souboru ``dmt.tif`` v aktuálním adresáři.
+   Zvolíme rastrovou mapu pro export :fignote:`(1)`, cestu k
+   výstupnímu souboru :fignote:`(2)` a formát souboru :fignote:`(3)`.
 
 .. notecmd:: Export rastrové mapy do formátu GeoTIFF
 
    .. code-block:: bash
 
-      r.out.gdal input=dmt output=dmt.tif format=GTiff
+      r.out.gdal input=dmt output=/tmp/dmt.tif format=GTiff
 
+.. important:: Export dat je proveden z **aktuálně nastaveného
+   výpočetního regionu** včetně případné masky.
+   
+.. tip:: Pokud exportujete rastrová data ve formátu GTiff pro potřeby
+         Esri ArcGIS, tak je potřeba nastavit speciální volby, viz
+         :grasscmd2:`dokumentace modulu
+         <r.out.gdal.html#export-a-dcell-raster-map-in-geotiff-format-suitable-for-esri-software>`.
+   
 .. index::
    pair: vektorová data; export
    single: v.out.ogr
@@ -57,9 +64,9 @@ V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 Vektorová data
 ==============
 
-Modul pro export vektorových dat je dostupný z menu 
+Modul pro export vektorových dat je dostupný z menu
 :menuselection:`File --> Export vector map --> Common export formats`
-anebo z~kontextového menu *správce vrstev*.
+anebo z kontextového menu *správce vrstev*.
 
 .. figure:: images/export-vector-menu.png
 
@@ -67,18 +74,18 @@ anebo z~kontextového menu *správce vrstev*.
 
 V následujícím dialogu zvolíme název výstupního souboru a jeho formát.
 
-.. figure:: images/export-vector.png
+.. figure:: images/export-vector.svg
 
-            Zvolíme vektorovou mapu pro export :fignote:`(1)`, cestu k
-            výstupnímu souboru :fignote:`(2)` a formát výstupního
-            souboru :fignote:`(3)`. V tomto případě se data
-            vyexportují do souboru ``obce.shp`` v aktuálním adresáři.
+   Zvolíme vektorovou mapu pro export :fignote:`(1)`, cestu k
+   výstupnímu souboru :fignote:`(2)` a formát výstupního souboru
+   :fignote:`(3)`.
 
-.. notecmd:: Export vektorové mapy do formátu Esri Shapefiel
+.. notecmd:: Export vektorové mapy do formátu OGC GeoPackage a Esri Shapefile
 
    .. code-block:: bash
 
-      v.out.ogr input=obce_polygon dsn=obce.shp format=ESRI_Shapefile
+      v.out.ogr input=obce@ruian dsn=/tmp/obce.gpkg format=GPKG                   
+      v.out.ogr input=obce@ruian dsn=/tmp/obce.shp format=ESRI_Shapefile
 
 .. index::
    pair: export; obrázek
@@ -92,24 +99,23 @@ obrazového souboru jako je např. PNG. Tato funkce je dostupná z
 nástrojé lišty *mapového okna*.
 
 .. figure:: images/map-display-image-0.png
-            :class: large
-	    :scale-latex: 70
-
-	    Export obsahu mapového okna do obrázku.
+   :class: large
+   :scale-latex: 70
+                         
+   Export obsahu mapového okna do obrázku.
 	    
 .. figure:: images/map-display-image-1.png
-            :width: 200px
-	    :scale-latex: 55
+   :width: 200px
+   :scale-latex: 55
 
-            V následující dialogu zvolíme dimenzi výstupního obrázku.
+   V následující dialogu zvolíme dimenzi výstupního obrázku.
 
 .. raw:: latex
 
    \newpage
 
 .. figure:: images/map-display-image-2.png
-            :class: large
-	    :scale-latex: 70
+   :class: middle
 
-            Příklad výsledku včetně legendy, měřítka a textového
-            popisku (viz kapitola :ref:`mapove-elementy`).
+   Příklad výsledku včetně legendy, měřítka a textového popisku (viz
+   kapitola :ref:`mapove-elementy`).

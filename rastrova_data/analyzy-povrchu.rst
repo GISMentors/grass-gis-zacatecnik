@@ -123,7 +123,7 @@ Příklad jiného nastavení níže.
 
 .. code-block:: bash
 
-   r.relief input=dmt output=shaded azimuth=90 altitude=60
+   r.relief input=dmt output=shaded1 azimuth=90 altitude=60
 
 .. figure:: images/shaded-comp.png
    :class: middle

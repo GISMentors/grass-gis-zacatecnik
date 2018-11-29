@@ -7,14 +7,14 @@ Mapové elementy
 ---------------
 
 Do mapové okna lze přidat základní mapové elementy jako je *legenda*,
-*směrová růžice*, *měřítko* či *textový popis*. Tato funkcionalita je
-dostupná z nástrojové lišky mapového okna.
+*směrová růžice*, *měřítko* či *textový popisek*. Tato funkcionalita
+je dostupná z nástrojové lišky mapového okna.
 
 .. figure:: images/add-map-element.png
-            :class: large
-	    :scale-latex: 50
+   :class: large
+   :scale-latex: 50
 			  
-	    Mapové elementy.
+   Mapové elementy.
 
 .. note::
 
@@ -33,39 +33,34 @@ Legenda
 =======
 
 Legendu pro rastrová data lze do mapového okna přidat z jeho nástroje
-lišty:
+lišty.
 
 .. figure:: images/add-legend.png
-   :class: large
+   :class: middle
    :scale-latex: 65
 
-   Přidání legendy do mapového okna.
+   Přidání legendy rastrových mapových vrstev do mapového okna.
 
 .. raw:: latex
             
    \newpage
 
 .. figure:: images/add-legend-0.png
-   :class: large
-   :scale-latex: 75
 
    Pokud je ve *správci vrstev* aktuálně vybraná rastrová mapa, tak se
    automaticky legenda zobrazí pro ni.
 
-V opačném případě se zobrazí dialog pro výběr rastrové mapy, pro
-kterou si přejete legendu zobrazit.
-
 .. figure:: images/add-legend-1.png
-            :class: large
-	    :scale-latex: 75
+   :class: large
+   :scale-latex: 75
 
-            Vybereme rastrovou mapu pro kterou chceme legendu zobrazit
-            :fignote:`(1)` a nastavení potvrdíme :fignote:`(2)`.
+   Zobrazená legenda rastrové mapy.
 
-Legendu můžete v mapovém okně **skrýt** buď z nástorové lišty anebo
-z kontextového menu legendy (pravé tlačítko myši nad legendou):
+Legendu můžete v mapovém okně **skrýt** z kontextového menu legendy
+(pravé tlačítko myši nad legendou):
                      
 .. figure:: images/remove-legend.png
+   :class: small
    :scale-latex: 50
 
    Skrytí legendy.
@@ -86,7 +81,7 @@ Z tohoto menu lze také **změnit velikost** legendy i její orientaci.
            
    Příklad změněné orientace legendy.
 
-**Vlatnosti legendy** můžeme změnit z dialogu modulu
+**Vlastnosti legendy** můžeme změnit z dialogu modulu
 :grasscmd:`d.legend` dostupného pomocí dvojkliku nad legendou
 umístěnou v mapovém okně.
 
@@ -103,13 +98,8 @@ umístěnou v mapovém okně.
 
 .. note::
 
-   Legendu v současnosti lze definonat pouze pro rastrová data,
-   legenda pro vektorové mapy není modulem :grasscmd:`d.legend`
-   podporována. Tato funkcionalita je plánovana pro další verze systému
-   GRASS. Legendu pro vektorové mapy lze nicméně definovat v aplikaci
-   :grasscmd:`Cartographic Composer <wxGUI.psmap>`, více v kapitole
-   :ref:`mapové výstupy <mapove-vystupy>`.
-
+   Podobně lze přidat do mapového okna legendu pro vektorová data.
+   
 .. raw:: latex
 
    \newpage

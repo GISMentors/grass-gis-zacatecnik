@@ -107,6 +107,7 @@ nástrojé lišty *mapového okna*.
 .. figure:: images/map-display-image-1.png
    :width: 200px
    :scale-latex: 55
+   :class: small
 
    V následující dialogu zvolíme dimenzi výstupního obrázku.
 

@@ -112,17 +112,17 @@ Související materiály
 
 .. rubric:: Česky:
 
-* `Školení GRASS GIS na Les-ejk.cz <http://les-ejk.cz/skoleni/grass/>`_
-* `GRASS GIS na portálu FreeGIS <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS>`_
+* `Školení GRASS GIS na Les-ejk.cz <http://les-ejk.cz/skoleni/grass/>`__
+* `GRASS GIS na portálu FreeGIS <http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS>`__
 
 .. rubric:: Slovensky:
 
 * `GRASS GIS pre geovedné aplikácie
-  <http://staryweb.fns.uniba.sk/fileadmin/user_upload/editors/geog/kfg/Katedra/Studium/Vyuzitie_PC_vo_FGV_2/skripta_burian_et_al_grassgis_2015.zip>`_
+  <http://staryweb.fns.uniba.sk/fileadmin/user_upload/editors/geog/kfg/Katedra/Studium/Vyuzitie_PC_vo_FGV_2/skripta_burian_et_al_grassgis_2015.zip>`__
               
 .. rubric:: Anglicky:
 
-* `Dokumentace systému GRASS 7.2 <http://grass.osgeo.org/grass72/manuals/index.html>`_
+* :grasscmd2:`Dokumentace systému GRASS GIS <index.html>`
 
 .. rubric:: Literatura:
 

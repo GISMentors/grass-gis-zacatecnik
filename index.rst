@@ -57,7 +57,8 @@ upravovat ho a tyto změny či opravy šířit dál.
    jazyce :wikipedia:`C++`, jiné jsou dostupné v podobě skriptů v jazyce
    :wikipedia:`Python`.
 
-.. only:: html
+..              
+   .. only:: html
 
    .. tip::
 
@@ -79,8 +80,8 @@ upravovat ho a tyto změny či opravy šířit dál.
 .. notedata::
 
    *GRASS lokace GISMentors* je stažitelná jako `zip archiv
-   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (970
-   MB), družicové snímky `Landsat
+   <http://training.gismentors.eu/geodata/grass/gismentors.zip>`_ (1.0
+   GB), družicové snímky `Landsat
    <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
    (985 MB).
 

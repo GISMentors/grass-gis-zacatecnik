@@ -34,7 +34,8 @@ dostupný z hlavní nabídky vašeho operačního systému.
 
 .. figure:: ../instalace/images/wingrass-4.png
    :scale-latex: 40
-                 
+   :class: small
+   
    Spuštění systému GRASS z nabídky *Start* v MS Windows.
 
 .. raw:: latex

@@ -65,8 +65,8 @@ upravovat ho a tyto změny či opravy šířit dál.
       Text školení je dostupný i v tisknutelné formě `PDF
       <./skoleni-grass-gis-zacatecnik.pdf>`_.
    
-.. important:: Školení je zaměřeno na aktuální verzi `GRASS 7.4
-   <http://grass.osgeo.org/download/software/#g74x>`_. Ve starších
+.. important:: Školení je zaměřeno na aktuální verzi `GRASS 7.6
+   <http://grass.osgeo.org/download/software/#g76x>`_. Ve starších
    verzích systému GRASS není zaručena funkčnost uvedených
    příkladů. Dále předpokládáme zapnutou *anglickou lokalizaci*, viz
    kapitola :ref:`volba-lokalizace`.

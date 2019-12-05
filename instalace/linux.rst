@@ -33,7 +33,7 @@ Systém GRASS můžete nainstalovat běžným způsobem, viz `přehled verzí
    
    .. code-block:: bash
 
-      sudo apt-get install grass grass-gui grass-doc
+      sudo apt install grass grass-gui grass-doc
 
 .. index::
    single: Ubuntu
@@ -52,8 +52,8 @@ Systém GRASS můžete nainstalovat běžným způsobem, viz `přehled verzí
    .. code-block:: bash
 
       sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-      sudo apt-get update
-      sudo apt-get install grass
+      sudo apt update
+      sudo apt install grass
 
 .. figure:: images/grass-ubuntu-launch.png
    :class: large

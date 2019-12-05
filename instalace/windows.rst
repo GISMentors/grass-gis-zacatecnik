@@ -6,7 +6,7 @@ MS Windows
 ----------
 
 .. important:: Pokud máte nainstalován na svém počítači `QGIS
-   <https://www.qgis.org>`__, tak máte systém GRASS k dispozici a
+   <https://www.qgis.org>`__, tak máte systém GRASS již k dispozici a
    nemusíte ho instalovat.
                
 Systém GRASS je možné pod MS Windows nainstalovat *dvěma způsoby*:
@@ -16,7 +16,7 @@ Systém GRASS je možné pod MS Windows nainstalovat *dvěma způsoby*:
    * vhodné *pro naprosté začátečníky*
    * nepředpokládáme častou aktualizaci softwaru
 
-#. pomocí síťového instalátoru :ref:`OSGeo4W <osgeo4w-instalator>`
+#. pomocí síťového instalátoru :ref:`OSGeo4W <osgeo4w-instalator>` (*doporučeno*)
 
    * komplexní řešení umožňující instalaci i dalšího softwaru
      distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_

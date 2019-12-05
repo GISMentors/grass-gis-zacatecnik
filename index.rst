@@ -89,6 +89,13 @@ upravovat ho a tyto změny či opravy šířit dál.
    <http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip>`_
    (985 MB).
 
+   .. tip::
+      
+      Datovou sadu GISMentors lze stáhnout i z prostředí uvítací obrazovky systému GRASS GIS.
+
+      .. figure:: images/grass-sample-download-svg.png
+         :class: large
+
 ..
    .. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
 

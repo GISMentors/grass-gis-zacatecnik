@@ -61,4 +61,4 @@ uložíme do nové vektorové mapy :map:`obce_stanice`.
 
 .. youtube:: teA-x-vmXYc
 
-   Příklad dalšího prostorového dotazu - výběr komunikací, které kříží železnice.
+   Příklad dalšího prostorového dotazu - výběr komunikací, které kříží železnice (https://youtube.com/watch?v=teA-x-vmXYc).

@@ -49,7 +49,7 @@ uložíme do nové vektorové mapy :map:`obce_stanice`.
 
       .. code-block:: bash
                    
-         v.select ainput=obce_polygon binput=pozarni_stanice output=obce_staniceoperator=contains
+         v.select ainput=obce_polygon binput=pozarni_stanice output=obce_stanice operator=contains
 
 .. raw:: latex
 

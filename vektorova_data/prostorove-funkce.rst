@@ -4,10 +4,11 @@
 Prostorové funkce
 -----------------
 
-.. youtube:: YWRHFylZCuo
+.. 
+   .. youtube:: YWRHFylZCuo
 
    Příklad základních prostorových funkcí (buffer, clip, erase) v
-    kombinaci s atributovými dotazy.
+   kombinaci s atributovými dotazy.
 
 .. index::
    single: v.extract

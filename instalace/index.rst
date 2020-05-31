@@ -16,9 +16,8 @@ operačním systémům.
    Construction Engineering Research Laboratory)` před počítačem Compaq
    386, na který portoval GRASS.
 
-.. youtube:: U3Hf0qI4JLc
-
-             Instruktážní video GRASS GIS (CERL, 1987).
+.. note::
+   Instruktážní video GRASS GIS (CERL, 1987), https://www.youtube.com/watch?v=U3Hf0qI4JLc
         
 Postupem času byl systém GRASS portován na další platformy a nadále
 vyvíjen jako striktně multiplatformní informační systém. V současnosti

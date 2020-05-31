@@ -46,8 +46,9 @@ Postup
             if( dmt > 700, 1, null() )
 
          vytvoříme rastrovou mapu s hodnotami 1 a NULL (žádná data).
-   
-.. youtube:: zADAJD3sytI
+
+..         
+   .. youtube:: zADAJD3sytI
 
    Příklad výběru oblasti s nadmořskou výškou větší než 1000m.
 

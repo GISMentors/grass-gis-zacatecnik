@@ -42,8 +42,9 @@ Správce atributových dat umožňuje kromě dotazování (viz kapitola
 
              Kopírování vektorových map pomocí nástroje ze záložky
              :item:`Data`.
-             
-.. youtube:: UZswOcIyaX8
+
+..                   
+  .. youtube:: UZswOcIyaX8
 
              Editace záznamů v atributové tabulce
 
@@ -76,8 +77,9 @@ nové záznamy.
 
 .. note:: Tato operace neznamená, že bude do vektorové mapy přidán
    nový prvek.
-          
-.. youtube:: mmPvMRBDxLg
+
+.. 
+   .. youtube:: mmPvMRBDxLg
 
    Přidání nového záznamu do atributové tabulky.
 
@@ -128,7 +130,8 @@ Numerické atributy mohou být také *vypočítány* na základě zvolené funkc
 Příklad přidání nového atributu s výměrou a její výpočet (ve
 čtverečních mapových jednotkách).
 
-.. youtube:: qkXgQXF1QkA
+.. 
+  .. youtube:: qkXgQXF1QkA
 
              Přidání nového sloupce do atributové tabulky a výpočet plochy
 
@@ -146,8 +149,9 @@ atributová data.
    :class: large
            
    Ukázka nástroje využití Field Calculator.
-   
-.. youtube:: 44KmtnBJtgo
+
+..   
+   .. youtube:: 44KmtnBJtgo
 
    Výpočet poměru obvodu a výměry plochy pomocí Field Calculatoru.
 

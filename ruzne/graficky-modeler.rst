@@ -37,7 +37,8 @@ vstupních a výstupních dat.
 Ukázky
 ======
 
-.. youtube:: 0jkO-ih87mw
+.. 
+   .. youtube:: 0jkO-ih87mw
 
    Příklad modelu neřízené klasifikace družicových dat.
 

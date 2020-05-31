@@ -58,7 +58,8 @@ Ukázka
 .. todo:: Aktualizovat screenshot (nástroj je ve verzi GRASS 7.4.2
           nefunkční)
 
-.. youtube:: McOrMauPc_I
+..           
+   .. youtube:: McOrMauPc_I
 
    Příklad síťových analýz v GUI systému GRASS
 

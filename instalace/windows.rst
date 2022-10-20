@@ -93,10 +93,7 @@ Nativní instalátor je dostupný na adrese: https://grass.osgeo.org/download/so
 OSGeo4W
 =======
 
-Síťový instalátor je ke stažení pro `32 bitovou
-<http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe>`_ a `64
-bitovou <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_
-platformu.
+Síťový instalátor je dostupný na adrese: http://download.osgeo.org/osgeo4w/osgeo4w-setup.exe.
 
 .. figure:: images/osgeo4w-0.png
             :scale-latex: 45

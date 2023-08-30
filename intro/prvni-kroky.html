@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Úvod do systému GRASS &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Struktura dat - koncept lokací a mapsetů" href="struktura-dat.html" />
+    <link rel="prev" title="MS Windows" href="../instalace/windows.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../instalace/windows.html" title="MS Windows"
+             accesskey="P">předchozí</a> |
+          <a href="struktura-dat.html" title="Struktura dat - koncept lokací a mapsetů"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="uvod-do-systemu-grass">
+<h1>Úvod do systému GRASS<a class="headerlink" href="#uvod-do-systemu-grass" title="Permalink to this heading">¶</a></h1>
+<p>Systém GRASS vyžaduje spravovat geodata <em>v pevně definované
+struktuře</em>, v konceptu tzv. <em>lokací a mapsetů</em>, viz kapitola
+<a class="reference internal" href="struktura-dat.html"><span class="doc">Struktura dat - koncept lokací a mapsetů</span></a>. To bývá pro začínajícího uživatele
+kritickým bodem, proto doporučujeme začít pracovat s předpřipravenými
+datovými sadami (viz poznámka níže) a teprve po pochopení tohoto
+konceptu importovat do systému GRASS svoje vlastní data, viz kapitola
+<a class="reference internal" href="../data/import.html"><span class="doc">Import geodat</span></a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Na webových stránkách projektu GRASS jsou volně ke stažení
+<a class="reference external" href="http://grass.osgeo.org/download/sample-data/">testovací a edukační datasety</a>. Jde především o
+datovou sadu <em>North Carolina</em>, která je ke stažení jako <a class="reference external" href="http://grass.osgeo.org/sampledata/north_carolina/nc_spm_08_grass7.zip">zip archiv</a>. Tato
+data lze pod MS Windows stáhnout i pomocí <a class="reference internal" href="../instalace/windows.html#nativni-instalator-data"><span class="std std-ref">nativního
+instalátoru</span></a>, v tomto případě budou
+umístěna v adresáři <code class="docutils literal notranslate"><span class="pre">%USERPROFILE%\Documents\grassdata</span></code>.</p>
+</div>
+<section id="spusteni-systemu-grass">
+<h2>Spuštění systému GRASS<a class="headerlink" href="#spusteni-systemu-grass" title="Permalink to this heading">¶</a></h2>
+<p>V případě, že je GRASS nainstalován běžným způsobem, měl by být
+dostupný z hlavní nabídky vašeho operačního systému.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/grass-ubuntu-launch.png" class="middle" src="../_images/grass-ubuntu-launch.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 14 </span><span class="caption-text">Spuštění systému GRASS v Ubuntu.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<img alt="../_images/wingrass-4.png" class="small" src="../_images/wingrass-4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 15 </span><span class="caption-text">Spuštění systému GRASS z nabídky <em>Start</em> v MS Windows.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Ve výchozím nastavení systém GRASS nastartuje v grafickém módu. Úvodní
+dialog umožňuje nastavit adresář s geodaty, lokaci a mapset, viz
+kapitola <a class="reference internal" href="struktura-dat.html"><span class="doc">Struktura dat - koncept lokací a mapsetů</span></a>, což je nutný krok pro samotné
+spuštění systému (<span class="item">Start GRASS session</span>).</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/startup-0.svg" src="../_images/startup-0.svg" /><figcaption>
+<p><span class="caption-number">Obr. 16 </span><span class="caption-text">Uvítací obrazovka systému GRASS.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Novou lokaci můžete vytvořit, pro začátek bude ale snadnější použít
+předpřipravený dataset GISMentors. Lokaci GISMentors lze stáhnout
+pomocí tlačítka <span class="item">Download</span> <span class="fignote">(2b.)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Funkcionalita stažení vzorových lokací je dostupná od verze
+GRASS GIS 7.4.0.</p>
+</div>
+<figure class="align-center" id="id4">
+<img alt="../_images/gismentors-location-download.png" src="../_images/gismentors-location-download.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 17 </span><span class="caption-text">Stažení lokace GISMentors.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<span id="spusteni-grass"></span><img alt="../_images/startup-1.svg" src="../_images/startup-1.svg" /><figcaption>
+<p><span class="caption-number">Obr. 18 </span><span class="caption-text">Úvodní dialog systému GRASS pro výběr adresáře s geodaty
+<span class="fignote">(1.)</span>, lokace <span class="fignote">(2.)</span> a mapsetu
+<span class="fignote">(3.)</span>.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p><strong>Příklady spuštění systému GRASS z příkazové řádky</strong></p>
+<ul>
+<li><p>GRASS v textovém rozhraní, adresář s geodaty nastaven na
+<code class="docutils literal notranslate"><span class="pre">/opt/grassdata</span></code>, lokace
+<code class="docutils literal notranslate"><span class="pre">gismentors</span></code> a mapset <code class="docutils literal notranslate"><span class="pre">user1</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grass<span class="w"> </span>-text<span class="w"> </span>/opt/grassdata/gismentors/user1
+</pre></div>
+</div>
+</li>
+<li><p>GRASS v grafickém rozhraní, adresář s geodaty, lokace a
+mapset nastavena z předchozího spuštění:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grass<span class="w"> </span>-gui
+</pre></div>
+</div>
+</li>
+<li><p>GRASS v grafickém rozhraní, vytvořit novou lokace
+<code class="docutils literal notranslate"><span class="pre">skoleni</span></code> (souřadnicový systém S-JTSK <a class="reference external" href="http://epsg.io/5514">EPSG:5514</a>
+s~transformačními parametry pro území ČR - kód
+<code class="docutils literal notranslate"><span class="pre">3</span></code>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grass<span class="w"> </span>-gui<span class="w"> </span>-c<span class="w"> </span>EPSG:5514:3<span class="w"> </span>/opt/grassdata/skoleni
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">První kroky</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../instalace/index.html">Instalace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Úvod do systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struktura-dat.html">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zobrazeni-geodat.html">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduly.html">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr.html">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor.html">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../instalace/windows.html" title="MS Windows"
+              >předchozí</a> |
+            <a href="struktura-dat.html" title="Struktura dat - koncept lokací a mapsetů"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

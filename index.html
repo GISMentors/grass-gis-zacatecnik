@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Obsah &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/gismentors.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="genindex.html" />
+    <link rel="search" title="Vyhledávání" href="search.html" />
+    <link rel="next" title="První kroky" href="intro/index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="#">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="intro/index.html" title="První kroky"
+             accesskey="N">další</a> |
+          <a href="genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p><a class="reference external" href="http://gismentors.cz">GISMentors</a> | Školení <a class="reference external" href="http://gismentors.cz/skoleni/grass-gis">GRASS GIS</a> | <a class="reference external" href="http://gismentors.cz/skoleni/qgis">QGIS</a> | <a class="reference external" href="http://gismentors.cz/skoleni/postgis">PostGIS</a> | <a class="reference external" href="http://gismentors.cz/skoleni/geopython">GeoPython</a></p>
+<section id="uvod">
+<h1>Úvod<a class="headerlink" href="#uvod" title="Permalink to this heading">¶</a></h1>
+</section>
+<a class="reference internal image-reference" href="_images/grass-logo.png"><img alt="_images/grass-logo.png" class="align-left" src="_images/grass-logo.png" style="width: 140px;" /></a>
+<p id="index-0"><strong>GRASS</strong> (Geographic Resources Analysis Support System) je
+multiplatformní desktopový geografický informační systém
+(<a class="reference external" href="http://cs.wikipedia.org/wiki/GIS">GIS</a>) určený pro správu geografických 2D/3D rastrových a
+vektorových dat, obrazových záznamů, produkci vysoce kvalitních
+grafických výstupů, časoprostorové modelování a vizualizaci dat.</p>
+<p id="index-1">GRASS GIS (<a class="reference external" href="http://grass.osgeo.org">http://grass.osgeo.org</a>) je svobodný a open source software
+publikovaný pod všeobecnou licencí GNU <abbr title="General Public License">GPL</abbr>. Tato licence nejenže umožňuje software použít k libovolným
+účelům včetně komerčních, dovoluje také studovat jeho zdrojový kód,
+upravovat ho a tyto změny či opravy šířit dál.</p>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Školení je zaměřeno na aktuální verzi <a class="reference external" href="http://grass.osgeo.org/download/software/#g78x">GRASS 7.8</a>. Ve starších
+verzích systému GRASS není zaručena funkčnost uvedených
+příkladů. Dále předpokládáme zapnutou <em>anglickou lokalizaci</em>, viz
+kapitola <a class="reference internal" href="ruzne/lokalizace.html#volba-lokalizace"><span class="std std-ref">Volba lokalizace</span></a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Na toto školení do značné míry navazuje školení
+<a class="reference external" href="http://training.gismentors.eu/grass-gis-pokrocily">GRASS GIS pro pokročilé</a>. Další
+materiály týkající se systému GRASS jsou dostupné v angličtině
+<a class="reference external" href="http://training.gismentors.eu/grass-gis-workshop-jena-2018/">GRASS GIS Workshop in Jena</a> a <a class="reference external" href="http://training.gismentors.eu/grass-gis-irsae-winter-course-2018">GRASS GIS IRSAE Winter
+Course 2018</a>.</p>
+</div>
+<div class="note admonition" id="index-2">
+<p class="admonition-title">Poznámka k datové sadě GISMentors</p>
+<p><em>GRASS lokace GISMentors</em> je stažitelná jako <a class="reference external" href="http://training.gismentors.eu/geodata/grass/gismentors.zip">zip archiv</a> (1.0
+GB), družicové snímky <a class="reference external" href="http://training.gismentors.eu/geodata/grass/gismentors-landsat.zip">Landsat</a>
+(985 MB).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Datovou sadu GISMentors lze stáhnout i z prostředí uvítací obrazovky systému GRASS GIS.</p>
+<figure class="align-center">
+<img alt="_images/grass-sample-download-svg.png" class="large" src="_images/grass-sample-download-svg.png" />
+</figure>
+</div>
+<p>Datová sada GISMentors je založena na datech pocházejících pouze z otevřených či veřejných zdrojů jako je <a class="reference external" href="http://www.eea.europa.eu/data-and-maps/data/eu-dem">EU-DEM</a>, <a class="reference external" href="http://www.cuzk.cz/ruian/RUIAN.aspx">RÚIAN</a>, <a class="reference external" href="http://wiki.openstreetmap.org/wiki/Main_Page">OpenStreetMap</a>, <a class="reference external" href="http://www.dibavod.cz/">Dibavod</a>,  <a class="reference external" href="http://gis-aopkcr.opendata.arcgis.com/">AOPK</a> a <a class="reference external" href="http://www.geoportalpraha.cz/cs/opendata">IPR</a>.</p>
+</div>
+<section id="id1">
+<h1>Obsah<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+</section>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/index.html">První kroky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instalace/index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/prvni-kroky.html">Úvod do systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/struktura-dat.html">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/zobrazeni-geodat.html">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/moduly.html">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/rastr.html">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/vektor.html">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intro/index.html#dotazovani">Dotazování</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/interaktivni-dotazovani.html">Interaktivní dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/atributove-dotazy.html">Atributové dotazy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro/prostorove-dotazy.html">Prostorové dotazy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rastrova_data/index.html">Rastrové analýzy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro/region.html">Výpočetní region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova_data/statistika.html">Základní statistiky rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova_data/mask.html">Nastavení masky</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova_data/tabulka-barev.html">Tabulka barev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova_data/analyzy-povrchu.html">Topografické analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova_data/rastrova-algebra.html">Rastrová algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova_data/reklasifikace.html">Reklasifikace rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova_data/analyza-nakladu.html">Rastrová analýza nákladů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vektorova_data/index.html">Vektorové analýzy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vektorova_data/editace.html">Editace vektorových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektorova_data/prostorove-funkce.html">Prostorové funkce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektorova_data/topologie.html">Topologie vektorových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektorova_data/atributy.html">Atributová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektorova_data/sitove-analyzy.html">Síťové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data/index.html">Import a export geodat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data/tvorba-lokace.html">Vytvoření vlastní lokace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/import.html">Import geodat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/export.html">Export do ostatních GIS formátů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/prenos-dat.html">Přenost dat mezi lokacemi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/georeferencovani.html">Georeferencování</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ruzne/index.html">Mapové výstupy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ruzne/mapove-elementy.html">Mapové elementy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ruzne/mapove-vystupy.html">Tvorba mapových výstupů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ruzne/index.html#ruzne">Různé</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ruzne/graficky-modeler.html">Grafický modeler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ruzne/lokalizace.html">Lokalizace</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="dodatky">
+<h1>Dodatky<a class="headerlink" href="#dodatky" title="Permalink to this heading">¶</a></h1>
+<section id="souvisejici-materialy">
+<h2>Související materiály<a class="headerlink" href="#souvisejici-materialy" title="Permalink to this heading">¶</a></h2>
+<p class="rubric">Česky:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://les-ejk.cz/skoleni/grass/">Školení GRASS GIS na Les-ejk.cz</a></p></li>
+<li><p><a class="reference external" href="http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS">GRASS GIS na portálu FreeGIS</a></p></li>
+</ul>
+<p class="rubric">Slovensky:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://staryweb.fns.uniba.sk/fileadmin/user_upload/editors/geog/kfg/Katedra/Studium/Vyuzitie_PC_vo_FGV_2/skripta_burian_et_al_grassgis_2015.zip">GRASS GIS pre geovedné aplikácie</a></p></li>
+</ul>
+<p class="rubric">Anglicky:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/index.html">Dokumentace systému GRASS GIS</a></p></li>
+</ul>
+<p class="rubric">Literatura:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.grassbook.org/">Open Source GIS: A GRASS GIS Approach</a> (anglicky)</p></li>
+<li><p><a class="reference external" href="http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Praktick%C3%A1_rukov%C4%9B%C5%A5">GIS GRASS - Praktická rukověť</a> (česky, velmi zastaralé)</p></li>
+</ul>
+</section>
+<section id="technicka-podpora">
+<h2>Technická podpora<a class="headerlink" href="#technicka-podpora" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><em>(česky)</em> Mailing list <a class="reference external" href="http://freegis.fsv.cvut.cz/gwiki/Emailov%C3%A1_konference_FreeGeoCZ">FreeGeoCZ</a>
+(obecně Open Source GIS, nikoliv pouze GRASS),
+<a class="reference external" href="http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz">http://mailman.fsv.cvut.cz/mailman/listinfo/freegeocz</a></p></li>
+<li><p><em>(anglicky)</em> Mezinárodní mailing list projektu GRASS GIS (zajímavostí je archiv sahající až do roku 1991!), <a class="reference external" href="http://lists.osgeo.org/mailman/listinfo/grass-user">http://lists.osgeo.org/mailman/listinfo/grass-user</a></p></li>
+</ul>
+</section>
+<section id="uzitecne-odkazy">
+<h2>Užitečné odkazy<a class="headerlink" href="#uzitecne-odkazy" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://freegis.fsv.cvut.cz">http://freegis.fsv.cvut.cz</a></p></li>
+<li><p><a class="reference external" href="http://epsg.io">http://epsg.io</a></p></li>
+</ul>
+</section>
+<section id="o-dokumentu">
+<h2>O dokumentu<a class="headerlink" href="#o-dokumentu" title="Permalink to this heading">¶</a></h2>
+<p>Text dokumentu je licencován pod <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/cc-by-sa.png"><img alt="_images/cc-by-sa.png" src="_images/cc-by-sa.png" style="width: 130px;" /></a>
+</figure>
+<p><em>Verze textu dokumentu:</em> 1.1.0 (sestaveno 30.08.2023)</p>
+<section id="autori">
+<h3>Autoři<a class="headerlink" href="#autori" title="Permalink to this heading">¶</a></h3>
+<p>Za <a class="reference external" href="http://www.gismentors.cz/">GISMentors</a>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.gismentors.cz/mentors/landa">Martin Landa</a> <code class="docutils literal notranslate"><span class="pre">&lt;martin.landa</span> <span class="pre">opengeolabs.cz&gt;</span></code></p></li>
+<li><p><a class="reference external" href="http://www.gismentors.cz/mentors/cepicky">Jáchym Čepický</a> <code class="docutils literal notranslate"><span class="pre">&lt;jachym.cepicky</span> <span class="pre">opengeolabs.cz&gt;</span></code></p></li>
+</ul>
+</section>
+<section id="text-dokumentu">
+<h3>Text dokumentu<a class="headerlink" href="#text-dokumentu" title="Permalink to this heading">¶</a></h3>
+<p>Zdrojové texty školení jsou dostupné na adrese:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/GISMentors/grass-gis-zacatecnik">https://github.com/GISMentors/grass-gis-zacatecnik</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="intro/index.html" title="První kroky"
+              >další</a> |
+            <a href="genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

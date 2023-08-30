@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Příkazy systému GRASS &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Rastrová data" href="rastr.html" />
+    <link rel="prev" title="Zobrazení geodat v mapovém okně" href="zobrazeni-geodat.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="zobrazeni-geodat.html" title="Zobrazení geodat v mapovém okně"
+             accesskey="P">předchozí</a> |
+          <a href="rastr.html" title="Rastrová data"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="prikazy-systemu-grass">
+<h1>Příkazy systému GRASS<a class="headerlink" href="#prikazy-systemu-grass" title="Permalink to this heading">¶</a></h1>
+<p id="index-0">GRASS GIS je <em>modulární systém</em>, který disponuje rozsáhlou množinou
+malých, ale výkonných programů (v terminologii systému <em>modulů</em>).</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>To odpovídá koncepci <a class="reference external" href="http://cs.wikipedia.org/wiki/Unix">Unixu</a> jako takového. Daný
+program má za úkol vyřešit dílčí problém, měl by být co nejmenší a
+poměrně jednoduchý.</p>
+</div>
+<p>Jednotlivé příkazy systému GRASS - moduly - mají konzistentní syntaxi,
+jejich názvy se skládají z prefixu označujícího skupinu příkazů a
+krátkého názvu napovídajícího účel modulu (viz tabulka níže). Například
+modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a> patří do skupiny „vector“ a je určen pro
+vytvoření obalové zóny (tzv. bufferu) nad vektorovými daty.</p>
+<table class="border docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>prefix</p></th>
+<th class="head"><p>skupina</p></th>
+<th class="head"><p>popis</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">db.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/database.html">database</a></p></td>
+<td><p>práce s atributovými daty a tabulkami</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">d.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/display.html">display</a></p></td>
+<td><p>grafické výstupy a vizuální dotazy</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">g.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/general.html">general</a></p></td>
+<td><p>obecné příkazy pro manipulaci s daty</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">i.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/imagery.html">imagery</a></p></td>
+<td><p>zpracování obrazových dat</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ps.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/postscript.html">postscript</a></p></td>
+<td><p>tvorba mapových výstupů ve formátu PostScript</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">r.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/raster.html">raster</a></p></td>
+<td><p>zpracování (2D) rastrových dat</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">r3.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/raster3D.html">raster3D</a></p></td>
+<td><p>zpracování 3D rastrových dat (voxels)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">t.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/temporal.html">temporal</a></p></td>
+<td><p>zpracování časoprostorových dat</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">v.</span></code></p></td>
+<td><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/vector.html">vector</a></p></td>
+<td><p>zpracování 2D/3D vektorových dat</p></td>
+</tr>
+</tbody>
+</table>
+<p>Příkazy systému GRASS lze spouštět několika způsoby (příklad pro
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a>):</p>
+<ol class="arabic">
+<li><p>z menu správce vrstev</p>
+<figure class="align-center" id="id1">
+<span id="wxgui-menu-v-buffer"></span><img alt="../_images/wxgui-menu-v-buffer.png" src="../_images/wxgui-menu-v-buffer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 36 </span><span class="caption-text">Vyhledání modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a> v menu správce vrstev.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>ze záložky <span class="item">Modules</span> správce vrstev</p>
+<figure class="align-center" id="id2">
+<span id="wxgui-search-v-buffer"></span><img alt="../_images/wxgui-search-v-buffer.png" src="../_images/wxgui-search-v-buffer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 37 </span><span class="caption-text">Vyhledání modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a> v záložce správce vrstev
+<span class="item">Modules</span>.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>z příkazové řádky správce vrstev</p>
+<figure class="align-center" id="id3">
+<span id="wxgui-console-v-buffer"></span><img alt="../_images/wxgui-console-v-buffer.png" src="../_images/wxgui-console-v-buffer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 38 </span><span class="caption-text">Vyhledání modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a> z příkazové řádky správce
+vrstev.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Po vybrání modulu se objeví GUI dialog umožňující zadat vstupní,
+výstupní parametry a nástroj spustit (<span class="item">Run</span>).</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/wxgui-dialog-v-buffer.png" src="../_images/wxgui-dialog-v-buffer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 39 </span><span class="caption-text">Spuštění modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a>.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud jsou v příkazové řádce (<span class="item">Console</span>) zadány
+všechny povinné parametry (v případě modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a> jde o parametry <code class="xref std std-option docutils literal notranslate"><span class="pre">input</span></code>,
+<code class="xref std std-option docutils literal notranslate"><span class="pre">output</span></code> a <code class="xref std std-option docutils literal notranslate"><span class="pre">distance</span></code>), tak se modul spustí
+přímo.</p>
+</div>
+<figure class="align-center" id="id5">
+<span id="wxgui-console-v-buffer-launch"></span><img alt="../_images/wxgui-console-v-buffer-launch.png" src="../_images/wxgui-console-v-buffer-launch.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 40 </span><span class="caption-text">Spuštění modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a> včetně zadání parametrů.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Příkazové řádka má historii, lze tedy moduly spouštět opakovaně
+např. s mírnou obměnou parametrů.</p>
+</li>
+<li><p>z <a class="reference internal" href="../ruzne/graficky-modeler.html"><span class="doc">grafického modeleru</span></a></p></li>
+</ol>
+<section id="napoveda-k-modulum">
+<span id="index-1"></span><h2>Nápověda k modulům<a class="headerlink" href="#napoveda-k-modulum" title="Permalink to this heading">¶</a></h2>
+<p>Nápověda systému GRASS je dostupná z menu <span class="menuselection">Help ‣
+GRASS help</span>.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/grass-help.png" class="large" src="../_images/grass-help.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 41 </span><span class="caption-text">Nápověda systému GRASS v okně webového prohlížeče.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Návověda k jednotlivým modulům je dostupná přímo z dialogového okna:</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/v-buffer-help.png" src="../_images/v-buffer-help.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 42 </span><span class="caption-text">Nápověda modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a>.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="notecmd admonition">
+<p class="admonition-title">Zobrazení nápovědy z příkazové řádky</p>
+<p>Nápovědu lze zobrazit pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/g.manual.html">g.manual</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.manual<span class="w"> </span>-i
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.manual<span class="w"> </span>v.buffer
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="addons">
+<span id="addons-install"></span><h2>Addons<a class="headerlink" href="#addons" title="Permalink to this heading">¶</a></h2>
+<p>Součástí základní instalace systému je více než <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/full_index.html">500
+nástrojů</a> (modulů). Další moduly si může uživatel
+stáhnout v rámci tzv. Addons. Jde o moduly vytvořené uživateli systému
+GRASS. Jejich kvalita a stabilita tak může být různorodá.</p>
+<p>Addons moduly lze nainstalovat jednoduše z menu
+<span class="menuselection">Settings ‣ Addons extensions ‣ Install extensions
+from addons</span>.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/skyview-install.png" src="../_images/skyview-install.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 43 </span><span class="caption-text">Instalace nástroje <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/addons/r.skyview.html">r.skyview</a>.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">První kroky</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../instalace/index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prvni-kroky.html">Úvod do systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struktura-dat.html">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zobrazeni-geodat.html">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr.html">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor.html">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="zobrazeni-geodat.html" title="Zobrazení geodat v mapovém okně"
+              >předchozí</a> |
+            <a href="rastr.html" title="Rastrová data"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

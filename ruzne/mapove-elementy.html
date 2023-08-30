@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Mapové elementy &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Tvorba mapových výstupů" href="mapove-vystupy.html" />
+    <link rel="prev" title="Mapové výstupy" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Mapové výstupy"
+             accesskey="P">předchozí</a> |
+          <a href="mapove-vystupy.html" title="Tvorba mapových výstupů"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mapove-elementy">
+<span id="index-0"></span><span id="id1"></span><h1>Mapové elementy<a class="headerlink" href="#mapove-elementy" title="Permalink to this heading">¶</a></h1>
+<p>Do mapové okna lze přidat základní mapové elementy jako je <em>legenda</em>,
+<em>směrová růžice</em>, <em>měřítko</em> či <em>textový popisek</em>. Tato funkcionalita
+je dostupná z nástrojové lišky mapového okna.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/add-map-element.png" class="large" src="../_images/add-map-element.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 225 </span><span class="caption-text">Mapové elementy.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Mapové okno není určeno pro tvorbu plnohodnotných mapových
+výstupů. K tomuto účelu je určen <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/wxGUI.psmap.html">Cartographic Composer</a>, více v kapitole <a class="reference internal" href="mapove-vystupy.html#mapove-vystupy"><span class="std std-ref">mapové výstupy</span></a>.</p>
+</div>
+<section id="legenda">
+<span id="map-legend"></span><span id="index-1"></span><h2>Legenda<a class="headerlink" href="#legenda" title="Permalink to this heading">¶</a></h2>
+<p>Legendu pro rastrová data lze do mapového okna přidat z jeho nástroje
+lišty.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/add-legend.png" class="middle" src="../_images/add-legend.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 226 </span><span class="caption-text">Přidání legendy rastrových mapových vrstev do mapového okna.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../_images/add-legend-0.png" src="../_images/add-legend-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 227 </span><span class="caption-text">Pokud je ve <em>správci vrstev</em> aktuálně vybraná rastrová mapa, tak se
+automaticky legenda zobrazí pro ni.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../_images/add-legend-1.png" class="large" src="../_images/add-legend-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 228 </span><span class="caption-text">Zobrazená legenda rastrové mapy.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Legendu můžete v mapovém okně <strong>skrýt</strong> z kontextového menu legendy
+(pravé tlačítko myši nad legendou):</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/remove-legend.png" class="small" src="../_images/remove-legend.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 229 </span><span class="caption-text">Skrytí legendy.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Z tohoto menu lze také <strong>změnit velikost</strong> legendy i její orientaci.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/resize-legend-0.png" src="../_images/resize-legend-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 230 </span><span class="caption-text">Změna velikosti legendy.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="../_images/resize-legend-1.png" class="small" src="../_images/resize-legend-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 231 </span><span class="caption-text">Příklad změněné orientace legendy.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Vlastnosti legendy</strong> můžeme změnit z dialogu modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.legend.html">d.legend</a> dostupného pomocí dvojkliku nad legendou
+umístěnou v mapovém okně.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/legend-prop-flip.png" class="middle" src="../_images/legend-prop-flip.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 232 </span><span class="caption-text">Přiklad změny legendy - otočení škály.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
+<img alt="../_images/legend-flip.png" class="small" src="../_images/legend-flip.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 233 </span><span class="caption-text">Výsledek otočení škály legendy.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Podobně lze přidat do mapového okna legendu pro vektorová data.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud se popisky legenda nezobrazují korektně, je potřeba změnit
+font legendy.</p>
+<figure class="align-center" id="id11">
+<img alt="../_images/legend-broken.png" class="small" src="../_images/legend-broken.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 234 </span><span class="caption-text">Chybně vykreslená legenda.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Písmo změníme v dialogu nastavení dostupného z menu
+<span class="menuselection">Settings ‣ Preferences</span> anebo z nástrojové lišty
+<em>správce vrstev</em> <a class="reference internal" href="../_images/settings1.png"><img alt="grass-settings" src="../_images/settings1.png" style="width: 1.5em;" /></a> <sup>GUI settings</sup>.</p>
+<figure class="align-center" id="id12">
+<img alt="../_images/settings-font.png" class="middle" src="../_images/settings-font.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 235 </span><span class="caption-text">V záložce <span class="item">Map display</span> zvolíme vhodný font.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<img alt="../_images/font-dialog.png" class="small" src="../_images/font-dialog.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 236 </span><span class="caption-text">Kromě typu písma změníme kodóvání na UTF-8.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud se změna v nastavení neprojevuje, tak mapové okno překreslíme
+<a class="reference internal" href="../_images/layer-redraw.png"><img alt="grass-layer-redraw" src="../_images/layer-redraw.png" style="width: 1.5em;" /></a> <sup>Render map</sup>.</p>
+<figure class="align-center" id="id14">
+<img alt="../_images/legend-ok.png" class="small" src="../_images/legend-ok.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 237 </span><span class="caption-text">Výsledek po změně nastavení písma.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="smerova-ruzice">
+<span id="index-2"></span><h2>Směrová růžice<a class="headerlink" href="#smerova-ruzice" title="Permalink to this heading">¶</a></h2>
+<p>Směrovou růžici lze do mapového okna přidat z jeho nástroje lišty:</p>
+<figure class="align-center" id="id15">
+<img alt="../_images/add-narrow.png" class="middle" src="../_images/add-narrow.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 238 </span><span class="caption-text">Přidání směrové růžice do mapového okna.</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Do mapové okna se umístí výchozí směrová růžice:</p>
+<figure class="align-center" id="id16">
+<img alt="../_images/narrow.png" class="small" src="../_images/narrow.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 239 </span><span class="caption-text">Příklad směrové růžice.</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Podobu směrové růřice</strong> lze změnit z dialogu modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.northarrow.html">d.northarrow</a> přes dvojklik nad směrovou růžicí umístěnou v
+mapovém okně.</p>
+<figure class="align-center" id="id17">
+<img alt="../_images/narrow-prop.png" class="middle" src="../_images/narrow-prop.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 240 </span><span class="caption-text">Příklad změny stylu směrové růžice.</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id18">
+<img alt="../_images/narrow-1.png" class="small" src="../_images/narrow-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 241 </span><span class="caption-text">Výsledek změny stylu směrové růžice.</span><a class="headerlink" href="#id18" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Směrovou růžici můžete v mapovém okně <strong>skrýt</strong> z kontextového menu
+směrové růžice (pravé tlačítko myši nad směrovou růžicí):</p>
+<figure class="align-center" id="id19">
+<img alt="../_images/remove-narrow.png" class="small" src="../_images/remove-narrow.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 242 </span><span class="caption-text">Skrytí směrové růžice.</span><a class="headerlink" href="#id19" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="meritko">
+<span id="index-3"></span><h2>Měřítko<a class="headerlink" href="#meritko" title="Permalink to this heading">¶</a></h2>
+<p>Měřítko lze do mapového okna přidat z jeho nástroje lišty:</p>
+<figure class="align-center" id="id20">
+<img alt="../_images/add-scalebar.png" class="middle" src="../_images/add-scalebar.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 243 </span><span class="caption-text">Přidání měřítka do mapového okna.</span><a class="headerlink" href="#id20" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Do mapové okna se umístí výchozí měřitko:</p>
+<figure class="align-center" id="id21">
+<img alt="../_images/scalebar.png" class="small" src="../_images/scalebar.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 244 </span><span class="caption-text">Vychozí měřítko.</span><a class="headerlink" href="#id21" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Podobu měřítka</strong> lze změnit z dialogu modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.barscale.html">d.barscale</a>
+přes dvojklik nad měřítkem umístěným v mapovém okně.</p>
+<figure class="align-center" id="id22">
+<img alt="../_images/scalebar-prop.png" class="middle" src="../_images/scalebar-prop.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 245 </span><span class="caption-text">Příklad změny stylu měřítka.</span><a class="headerlink" href="#id22" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id23">
+<img alt="../_images/scalebar-1.png" class="small" src="../_images/scalebar-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 246 </span><span class="caption-text">Výsledek změny stylu měřítka.</span><a class="headerlink" href="#id23" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Měřítko můžete v mapovém okně <strong>skrýt</strong> z kontextového menu měřítka
+(pravé tlačítko myši nad měřítkem):</p>
+<figure class="align-center" id="id24">
+<img alt="../_images/remove-scalebar.png" class="small" src="../_images/remove-scalebar.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 247 </span><span class="caption-text">Skrytí měřítka.</span><a class="headerlink" href="#id24" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="textovy-popisek">
+<span id="index-4"></span><h2>Textový popisek<a class="headerlink" href="#textovy-popisek" title="Permalink to this heading">¶</a></h2>
+<p>Textový popisek lze do mapového okna přidat z jeho nástroje lišty:</p>
+<figure class="align-center" id="id25">
+<img alt="../_images/add-text.png" class="middle" src="../_images/add-text.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 248 </span><span class="caption-text">Přidání textového popisku do mapového okna.</span><a class="headerlink" href="#id25" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V následující dialogu modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.text.html">d.text</a> uvedeme text. Případně
+můžeme v záložce <span class="item">Font settings</span> můžeme nastavit velikost a typ
+písma.</p>
+<figure class="align-center" id="id26">
+<img alt="../_images/text-prop.png" src="../_images/text-prop.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 249 </span><span class="caption-text">Po nastavení textu v dialogu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.text.html">d.text</a>.</span><a class="headerlink" href="#id26" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id27">
+<img alt="../_images/text-example.png" class="large" src="../_images/text-example.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 250 </span><span class="caption-text">Příklad textového popisku v mapovém okně.</span><a class="headerlink" href="#id27" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Popisek lze <strong>skrýt</strong> z kontextového menu textového objektu.</p>
+<figure class="align-center" id="id28">
+<img alt="../_images/remove-text.png" class="small" src="../_images/remove-text.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 251 </span><span class="caption-text">Odstranění textového popisku z mapového okna.</span><a class="headerlink" href="#id28" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Mapové výstupy</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mapové elementy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapove-vystupy.html">Tvorba mapových výstupů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Mapové výstupy"
+              >předchozí</a> |
+            <a href="mapove-vystupy.html" title="Tvorba mapových výstupů"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

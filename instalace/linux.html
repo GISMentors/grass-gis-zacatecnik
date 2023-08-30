@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>GNU/Linux &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="MS Windows" href="windows.html" />
+    <link rel="prev" title="Instalace" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Instalace"
+             accesskey="P">předchozí</a> |
+          <a href="windows.html" title="MS Windows"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="gnu-linux">
+<span id="index-0"></span><h1>GNU/Linux<a class="headerlink" href="#gnu-linux" title="Permalink to this heading">¶</a></h1>
+<p>Systém GRASS je dostupný ve většině rozšířených linuxových distribucí
+jako tzv. <em>balíček (package)</em>.</p>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Pokud balíčkovací systém dané linuxové distribuce neobsahuje GRASS
+nebo nabízí jeho zastaralou verzi lze systém GRASS poměrně
+jednoduše zkompilovat <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> vlastními silami.</p>
+</div>
+<section id="postup-instalace-pro-debian-gnu-linux">
+<span id="index-1"></span><h2>Postup instalace pro Debian GNU/Linux<a class="headerlink" href="#postup-instalace-pro-debian-gnu-linux" title="Permalink to this heading">¶</a></h2>
+<p>Systém GRASS můžete nainstalovat běžným způsobem, viz <a class="reference external" href="http://packages.debian.org/search?keywords=grass&amp;searchon=names&amp;suite=all&amp;section=all">přehled verzí</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Údržbu balíčku systému GRASS a ostatních GIS software
+zajišťuje projekt <a class="reference external" href="http://wiki.debian.org/DebianGis">DebianGIS</a>.</p>
+</div>
+<div class="notecmd admonition">
+<p class="admonition-title">Instalace z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>grass<span class="w"> </span>grass-gui<span class="w"> </span>grass-doc
+</pre></div>
+</div>
+</div>
+</section>
+<section id="postup-instalace-pro-ubuntu">
+<span id="index-2"></span><h2>Postup instalace pro Ubuntu<a class="headerlink" href="#postup-instalace-pro-ubuntu" title="Permalink to this heading">¶</a></h2>
+<p>Systém GRASS můžete nainstalovat běžným způsobem, viz <a class="reference external" href="http://packages.ubuntu.com/search?keywords=grass&amp;searchon=names&amp;suite=all&amp;section=all">přehled verzí</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud chcete používat co možná nejaktuálnější verzi systému
+GRASS, tak použijte balíčky z projektu <a class="reference external" href="https://launchpad.net/~ubuntugis/+archive/ubuntu/ubuntugis-unstable">UbuntuGIS</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ubuntugis/ubuntugis-unstable
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>grass
+</pre></div>
+</div>
+</div>
+<figure class="align-center" id="id2">
+<img alt="../_images/grass-ubuntu-launch.png" class="large" src="../_images/grass-ubuntu-launch.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3 </span><span class="caption-text">Příklad spuštění systému GRASS na OS Linux.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p class="secnotoc rubric"><cite>Poznámky pod čarou</cite></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Instalace_GNU/Linux#Kompilace">http://freegis.fsv.cvut.cz/gwiki/GRASS_GIS_/_Instalace_GNU/Linux#Kompilace</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../intro/index.html">První kroky</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/prvni-kroky.html">Úvod do systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/struktura-dat.html">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/zobrazeni-geodat.html">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/moduly.html">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/rastr.html">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/vektor.html">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Instalace"
+              >předchozí</a> |
+            <a href="windows.html" title="MS Windows"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

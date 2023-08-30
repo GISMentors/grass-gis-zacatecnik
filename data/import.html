@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Import geodat &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Export do ostatních GIS formátů" href="export.html" />
+    <link rel="prev" title="Vytvoření vlastní lokace" href="tvorba-lokace.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="tvorba-lokace.html" title="Vytvoření vlastní lokace"
+             accesskey="P">předchozí</a> |
+          <a href="export.html" title="Export do ostatních GIS formátů"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="import-geodat">
+<span id="import"></span><span id="index-0"></span><h1>Import geodat<a class="headerlink" href="#import-geodat" title="Permalink to this heading">¶</a></h1>
+<p>Většina rastrových formátů může být naimportována modulem
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.import.html">r.import</a>, pro vektorová data existuje modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.import.html">v.import</a>. GUI systému GRASS dále disponuje
+specializovanými nástroji pro hromadný import dat.</p>
+<section id="rastrova-data">
+<span id="index-1"></span><h2>Rastrová data<a class="headerlink" href="#rastrova-data" title="Permalink to this heading">¶</a></h2>
+<p>Nástroj pro import rastrových dat je dostupný z menu
+<span class="menuselection">File ‣ Import raster data ‣ Simplified raster
+import with reprojection</span> nebo nástrojové lišty správce vrstev.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pro naši potřebu použijeme <a class="reference external" href="http://www.geoportalpraha.cz/cs/opendata/468E977C-DE78-480D-B3D9-43A19BF1CD77#.W-gDTaAo-V5">ortofoto</a>
+publikované IPR v režimu otevřených dat. Vybereme např. dlaždici
+PRAHA_7_0_13 (soubory <a class="reference external" href="http://opendata.iprpraha.cz/CUR/ORT/ORT/S_JTSK/PRAHA_7_0_13.jpg">JPG</a> a
+<a class="reference external" href="http://opendata.iprpraha.cz/CUR/ORT/ORT/S_JTSK/PRAHA_7_0_13.jgw">JGW</a>).</p>
+</div>
+<figure class="align-center" id="id1">
+<img alt="../_images/wxgui-raster-import-menu.png" src="../_images/wxgui-raster-import-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 178 </span><span class="caption-text">Nástroj pro import rastrových dat dostupný z nástrojové
+lišty správce vrstev.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V dialogu vybereme soubor pro import.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/wxgui-raster-import-0.svg" src="../_images/wxgui-raster-import-0.svg" /><figcaption>
+<p><span class="caption-number">Obr. 179 </span><span class="caption-text">Výběr rastrového souboru (JPG) pro import.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition important" id="projection-match">
+<p class="admonition-title">Důležité</p>
+<p>Položka <span class="item">Projection match</span> udává informaci o tom,
+zda se souřadnicový systém importovaných rastrových dat shoduje s
+nastavením aktuální lokace. V případě, že je souřadnicový systém
+vstupních dat a lokace rozdílný, tak bude systém GRASS vstupní data
+při importu <em>současně transformovat</em> do souřadnicového systému
+lokace. Nicméně v našem případě je situace jiná. Vstupní data jsou
+v souřadnicovém systému S-JTSK, nicméně ve datovém formátu JPG tato
+informace není uložena. Vynutíme tedy import rastrových dat tak,
+jak jsou, viz <a class="reference internal" href="#projection-override"><span class="std std-numref">Obr. 180</span></a>.</p>
+<figure class="align-center" id="id3">
+<span id="projection-override"></span><img alt="../_images/wxgui-raster-import-1.svg" src="../_images/wxgui-raster-import-1.svg" /><figcaption>
+<p><span class="caption-number">Obr. 180 </span><span class="caption-text">Vypnutí kontroly souřadnicového systému při importu.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<figure class="align-center" id="id4">
+<span id="display-raster-after-import"></span><img alt="../_images/wxgui-raster-import-2.png" class="large" src="../_images/wxgui-raster-import-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 181 </span><span class="caption-text">Naimportovaná data se automaticky přidají do stromu vrstev.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud se v mapovém okně nezobrazují žádná data, je nutné nastavit
+pohled na aktuálně vybranou mapu.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/wxgui-zoom-to-map-menu.png" src="../_images/wxgui-zoom-to-map-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 182 </span><span class="caption-text">Nastavení pohledu mapového okna na vybranou mapovou vrstvu z
+kontextového menu správce vrstev.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<img alt="../_images/map-display-full-zoom.png" class="middle" src="../_images/map-display-full-zoom.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 183 </span><span class="caption-text">Nastavení pohledu mapového okna na vybranou mapovou vrstvu.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Jak je vidět na <a class="reference internal" href="#display-raster-after-import"><span class="std std-numref">Obr. 181</span></a> systém
+GRASS naimportovaný RGB snímek rozložil do třech rastrových vrstev
+a zobrazil je v odstínech šedi. RGB kompozici můžeme zobrazit
+pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.rgb.html">d.rgb</a>, viz kapitola <a class="reference internal" href="../intro/zobrazeni-geodat.html#d-rast-various"><span class="std std-ref">Zobrazení
+rastrových dat</span></a>.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/wxgui-raster-import-3.png" src="../_images/wxgui-raster-import-3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 184 </span><span class="caption-text">Volba jednotlivých RGB vrstev pro zobrazení.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="../_images/wxgui-raster-import-4.png" class="large" src="../_images/wxgui-raster-import-4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 185 </span><span class="caption-text">Zobrazení RGB kompozice ve skutečných barvách.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="notecmd admonition">
+<p class="admonition-title">Import rastrových dat z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.import<span class="w"> </span><span class="nv">input</span><span class="o">=</span>PRAHA_7_0_13.1.jpg<span class="w"> </span><span class="nv">output</span><span class="o">=</span>PRAHA_7_0_13
+</pre></div>
+</div>
+</div>
+<p>V případě importu více rastrových souborů z jednoho adresáře je
+výhodné nastavit typ zdroje na adresář a zvolit příponu importovaných
+souborů. Tímto způsobem lze naimportovat všechny soubory najednou.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/wxgui-raster-import-5.svg" src="../_images/wxgui-raster-import-5.svg" /><figcaption>
+<p><span class="caption-number">Obr. 186 </span><span class="caption-text">Import rastrových souboru z jedné složky. Všechny soubory lze
+označit pro import přes pravé tlačítko myši <span class="item">Select all</span>.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p><strong>Ukázka hromadného importu rastrových dat jako Python skript</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">grass.script</span> <span class="k">as</span> <span class="nn">gs</span>
+
+<span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ext</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span> <span class="s1">&#39;.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;.gif&#39;</span><span class="p">):</span>
+        <span class="n">gs</span><span class="o">.</span><span class="n">run_command</span><span class="p">(</span><span class="s1">&#39;r.import&#39;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="n">fname</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Skriptování v jazyce Python je náplní navazujícího
+<a class="reference external" href="http://training.gismentors.eu/grass-gis-pokrocily">školení pro pokročilé uživatele</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>V případě, že pracujete s velkým množství rastrových dat, tak
+může být import do nativního formátu GRASS nevýhodný. Dochází k
+duplikování dat v originálním a datovém formátu GRASS. V této
+situaci je vhodné místo importu zvolit vytvoření odkazu na
+originální data. Při vytvoření odkazu čte data systém GRASS z
+původních souborů.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/wxgui-raster-link.png" src="../_images/wxgui-raster-link.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 187 </span><span class="caption-text">Vytvoření odkazu na původní data namísto importu do nativního
+formátu GRASS.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="vektorova-data">
+<span id="import-vector"></span><span id="index-2"></span><h2>Vektorová data<a class="headerlink" href="#vektorova-data" title="Permalink to this heading">¶</a></h2>
+<p>Nástroj pro import vektorových dat je dostupný z menu
+<span class="menuselection">File ‣ Import vector data ‣ Simplified raster
+import with reprojection</span> nebo nástrojové lišty správce vrstev.</p>
+<p>Import vektorových dat probíhá podobně jako v případě dat
+rastrových. Lze importovat pouze jeden vybraný soubor nebo více
+souborů z jednoho adresáře.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pro naši potřebu použijeme vrstvu <a class="reference external" href="http://www.geoportalpraha.cz/cs/opendata/0AF6DE97-68B3-4CD6-AE5D-76ACEEE50636#.W-gfvKAo--l">cyklistických tras</a>
+z otevřených dat IPR. Data stáhneme v souřadnicovém systému WGS-84
+(vyzkoušíme si transformaci do S-JTSK) ve formátu <a class="reference external" href="http://opendata.iprpraha.cz/CUR/DOP/DOP_Cyklotrasy_l/WGS_84/DOP_Cyklotrasy_l_gml.zip">GML</a>.</p>
+</div>
+<figure class="align-center" id="id11">
+<img alt="../_images/wxgui-vector-import-menu.png" src="../_images/wxgui-vector-import-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 188 </span><span class="caption-text">Nástroj pro import vektorových dat dostupný z nástrojové
+lišty správce vrstev.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<img alt="../_images/wxgui-vector-import-0.svg" src="../_images/wxgui-vector-import-0.svg" /><figcaption>
+<p><span class="caption-number">Obr. 189 </span><span class="caption-text">Výběr vektorového souboru (GML) pro import.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Podobně jako v případě importu rastrových dat detekuje
+systém GRASS souřadnicicový systém vstupních dat a aktuální lokace
+jako rozdílný. Narozdíl od <a class="reference internal" href="#projection-match"><span class="std std-ref">souboru JPG</span></a>
+jsou data uložená ve formátu GML skutečně v jiném souřadnicovém
+systému, konkrétně WGS-84 (<a class="reference external" href="http://epsg.io/4326">EPSG:4326</a>).</p>
+</div>
+<figure class="align-center" id="id13">
+<img alt="../_images/wxgui-vector-import-1.png" class="small" src="../_images/wxgui-vector-import-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 190 </span><span class="caption-text">Po stisknutí tlačítka <span class="item">Import</span> se zobrazí dialog, ve kterém
+je třeba transformaci dat ještě potvrdit.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id14">
+<img alt="../_images/wxgui-vector-import-2.png" class="large" src="../_images/wxgui-vector-import-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 191 </span><span class="caption-text">Příklad vizualizace importovaných cyklotras a ortofota na pozadí.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Při importu dat vytvořených v prostředí Esri ArcGIS je
+vhodné nastavit před importem hodnotu pro přichycení prvků
+(tzv. snapping). Esri ArcGIS má ve výchozím nastavení zvolenu
+toleranci 0.001 mapové jednotky. Tuto hodnotu anebo mírně výšší
+(např. 0.01) je vhodné nastavit před importem do systému GRASS. V
+opačném případě mohou vzniknout po importu v datech topologické
+chyby, které se v Esri ArcGIS neprojevily. Typicky to mohou být
+mezery anebo překryvy mezi sousedními polygony a pod.</p>
+<figure class="align-center">
+<img alt="../_images/wxgui-vector-import-3.svg" src="../_images/wxgui-vector-import-3.svg" /></figure>
+<p>Před importem nastavíme v záložce <span class="item">Import settings</span> hodnotu
+parametru <code class="xref std std-option docutils literal notranslate"><span class="pre">snap</span></code>.</p>
+</div>
+<div class="notecmd admonition">
+<p class="admonition-title">Import vektorových dat z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.import<span class="w"> </span><span class="nv">input</span><span class="o">=</span>DOP_Cyklotrasy_l.gml<span class="w"> </span><span class="nv">output</span><span class="o">=</span>DOP_Cyklotrasy_l
+</pre></div>
+</div>
+</div>
+</section>
+<section id="poznamky-k-importu-vektorovych-dat">
+<span id="import-topologie"></span><span id="index-3"></span><h2>Poznámky k importu vektorových dat<a class="headerlink" href="#poznamky-k-importu-vektorovych-dat" title="Permalink to this heading">¶</a></h2>
+<p>Při importu vektorových dat provádí <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.import.html">v.import</a> konverzi
+vektorových dat z reprezentace <a class="reference external" href="http://cs.wikipedia.org/wiki/Simple Features">Simple Features</a> do
+topologického formátu systému GRASS, viz kapitola <a class="reference internal" href="../vektorova_data/topologie.html#topologie"><span class="std std-ref">Topologie vektorových dat</span></a>:</p>
+<ul class="simple">
+<li><p>v případě bodů (point) a lomených čár (linestring) nedochází ke
+změně povahy vektorového prvku, v topologickém formátu GRASS jsou
+vyjádřeny jako <em>points</em>, resp. <em>lines</em>,</p></li>
+<li><p>polygony jsou rozloženy na hraniční linie (<em>boundary</em>) a centroidy
+(<em>centroid</em>), vnější hranice polygonu je převedena na hraniční linie
+(hraniční linie sousedících polygonů je uložena pouze jednou),</p></li>
+<li><p>pro každý polygon je vypočten centroid, tj. reprezentativní bod
+ležící uvnitř plochy,</p></li>
+<li><p>polygon je vyjádřen v topologickém modelu systému GRASS jako plocha
+(<em>area</em>),</p></li>
+<li><p>případné díry v polygonu jsou uloženy jako plochy, které tvoří
+tzv. ostrovy (<em>isle</em>).</p></li>
+</ul>
+<p>Například dva sousedící polygony (jeden s otvorem) jsou v topologickém
+modelu systému GRASS vyjádřeny čtyřmi hraničními liniemi a dvěma
+centroidy. Polygony a otvor v druhém polygonu tvoří tři plochy. Otvor
+v druhém polygonu a prostor vně polygonu definuje dva ostrovy.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span>   <span class="n">Number</span> <span class="n">of</span> <span class="n">points</span><span class="p">:</span>       <span class="mi">0</span>               <span class="n">Number</span> <span class="n">of</span> <span class="n">centroids</span><span class="p">:</span>  <span class="mi">2</span>          <span class="o">|</span>
+<span class="o">|</span>   <span class="n">Number</span> <span class="n">of</span> <span class="n">lines</span><span class="p">:</span>        <span class="mi">0</span>               <span class="n">Number</span> <span class="n">of</span> <span class="n">boundaries</span><span class="p">:</span> <span class="mi">4</span>          <span class="o">|</span>
+<span class="o">|</span>   <span class="n">Number</span> <span class="n">of</span> <span class="n">areas</span><span class="p">:</span>        <span class="mi">3</span>               <span class="n">Number</span> <span class="n">of</span> <span class="n">islands</span><span class="p">:</span>    <span class="mi">2</span>          <span class="o">|</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id15">
+<img alt="../_images/polygon-topo.png" class="middle" src="../_images/polygon-topo.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 192 </span><span class="caption-text">Topologická reprezentace dvou polygonů (druhý polygon s otvorem).</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.import.html">v.import</a> provádí při importu operace s cílem
+odstranit případné topologické chyby v datech, které při konverzi z
+reprezentace simple features do topologického formátu systému GRASS
+mohou vzniknout. Topologické chyby, které nemohou být z nejrůznějších
+důvodů během importu odstraněny, je možné opravit pomocí modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.clean.html">v.clean</a>, více v kapitole <a class="reference internal" href="../vektorova_data/topologie.html#topologie"><span class="std std-ref">Topologie vektorových dat</span></a>.</p>
+<section id="kodovani-atributovych-dat">
+<span id="index-4"></span><h3>Kódování atributových dat<a class="headerlink" href="#kodovani-atributovych-dat" title="Permalink to this heading">¶</a></h3>
+<p>Při importu dat ve formátu Esri Shapefile je občas nutné nastavit
+správné kódování pro atributová data. Atributy obsahující diakritiku
+jsou často kódována ve znakové sadě <a class="reference external" href="http://cs.wikipedia.org/wiki/Windows-1250">Windows-1250</a> (kód
+<code class="docutils literal notranslate"><span class="pre">cp1250</span></code>). Hodnotu kódování lze nastavit pomocí parametru
+<code class="xref std std-option docutils literal notranslate"><span class="pre">encoding</span></code> v záložce <span class="item">Import settings</span>.</p>
+<figure class="align-center" id="id16">
+<img alt="../_images/wxgui-vector-import-encoding.png" src="../_images/wxgui-vector-import-encoding.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 193 </span><span class="caption-text">Kódování atributů vektorových dat lze definovat přímo v importním
+dialogu GUI systému GRASS.</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Import vektorových dat (znaková sada Windows-1250) z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.import<span class="w"> </span><span class="nv">input</span><span class="o">=</span>orp.shp<span class="w"> </span><span class="nv">encoding</span><span class="o">=</span>cp1250<span class="w"> </span><span class="nv">output</span><span class="o">=</span>orp
+</pre></div>
+</div>
+</div>
+</section>
+<section id="format-dgn">
+<span id="index-5"></span><h3>Formát DGN<a class="headerlink" href="#format-dgn" title="Permalink to this heading">¶</a></h3>
+<p>Formát DGN lze naimportovat pouze v případě, že je knihovna
+<a class="reference external" href="http://cs.wikipedia.org/wiki/GDAL">GDAL</a> zkompilována s podporou pro <a class="reference external" href="http://www.gdal.org/drv_dgn.html">tento formát</a>. Bohužel knihovna GDAL
+nepodporuje formát verze 8.0 a vyšší.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>V případě formátu DGN lze doporučit jeho konverzi do formátu DXF a
+import do systému GRASS pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.import.html">v.import</a> anebo
+specializovaného <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.in.dxf.html">v.in.dxf</a>.</p>
+</div>
+</section>
+<section id="importovana-data-a-vypocetni-region">
+<span id="index-6"></span><h3>Importovaná data a výpočetní region<a class="headerlink" href="#importovana-data-a-vypocetni-region" title="Permalink to this heading">¶</a></h3>
+<p>Import dat <em>nemá vliv</em> na aktuální nastavení <a class="reference internal" href="../intro/region.html#region"><span class="std std-ref">výpočetního regionu</span></a>. Výpočetní region lze nastavit na základě naimportovaných
+dat z kontextového menu správce vrstev.</p>
+<figure class="align-center" id="id17">
+<img alt="../_images/wxgui-set-region-menu.png" src="../_images/wxgui-set-region-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 194 </span><span class="caption-text">Nastavení výpočetního regionu na základě mapové vrstvy.</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Import a export geodat</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tvorba-lokace.html">Vytvoření vlastní lokace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Import geodat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export do ostatních GIS formátů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html">Přenost dat mezi lokacemi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="georeferencovani.html">Georeferencování</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="tvorba-lokace.html" title="Vytvoření vlastní lokace"
+              >předchozí</a> |
+            <a href="export.html" title="Export do ostatních GIS formátů"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

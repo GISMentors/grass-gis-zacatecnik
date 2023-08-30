@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Nastavení masky &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Tabulka barev" href="tabulka-barev.html" />
+    <link rel="prev" title="Základní statistiky rastrových dat" href="statistika.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="statistika.html" title="Základní statistiky rastrových dat"
+             accesskey="P">předchozí</a> |
+          <a href="tabulka-barev.html" title="Tabulka barev"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="nastaveni-masky">
+<span id="index-0"></span><h1>Nastavení masky<a class="headerlink" href="#nastaveni-masky" title="Permalink to this heading">¶</a></h1>
+<p>Pomocí masky lze definovat nepravidelnou oblast výpočtu. To souvisí s
+<a class="reference internal" href="../intro/region.html#region"><span class="std std-ref">výpočetním regionem</span></a>, který má obecně tvar
+obdélníka. Masku lze vytvořit a odstranit pomocí modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.mask.html">r.mask</a> (<span class="menuselection">Raster ‣ Mask</span>).</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/mask-statusbar.png" class="middle" src="../_images/mask-statusbar.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 80 </span><span class="caption-text">To zda je maska aktivována, zjistíte ze stavové lišty mapového okna.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud si přejete přepsat již existující masku musíte přidat přepínač
+<code class="xref std std-option docutils literal notranslate"><span class="pre">--overwrite</span></code>.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/r-mask-overwrite.png" src="../_images/r-mask-overwrite.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 81 </span><span class="caption-text">Přepsání stávající masky.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Maska je v systému GRASS definovaná jako standardní rastrová mapa s
+názvem <span class="map">MASK</span>. Buňky s hodnotou no-data anebo 0 budou při
+výpočtu ignorovány, naopak nenulové hodnoty označují buňky, jejichž
+hodnota nebude při výpočtu ignorována.</p>
+<p>Pokud rastrovou mapu s tímto názvem odstraníte, bude tím
+deaktivována i maska.</p>
+</div>
+<section id="priklad-nastaveni-masky-na-zaklade-rastrove-mapy">
+<h2>Příklad nastavení masky na základě rastrové mapy<a class="headerlink" href="#priklad-nastaveni-masky-na-zaklade-rastrove-mapy" title="Permalink to this heading">¶</a></h2>
+<p>Nejprve vybereme rastrovou mapu na základě, které chceme masku
+nastavit a posléze definujeme hodnoty z této mapy, které poslouží pro
+vytvoření masky - v tomto případě hodnoty 500 až 800.</p>
+<figure class="align-center">
+<img alt="../_images/r-mask-raster-0.png" src="../_images/r-mask-raster-0.png" />
+</figure>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Rastrová mapa na základě, které chcete definovat masku musí být
+celočíselná, viz <a class="reference internal" href="../intro/rastr.html#raster-types"><span class="std std-ref">typ CELL</span></a>. Pokud tomu tak
+není, např. v našem případě je rastrová mapa <span class="map">dmt</span> typu FCELL,
+je potřeba na základě ni vytvořit mapu celočíselnou a tu potom
+použít pro vytvoření masky.</p>
+<p>Tuto operaci lze provést např. pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.mapcalc.html">r.mapcalc</a>,
+více v kapitole <a class="reference internal" href="rastrova-algebra.html"><span class="doc">Rastrová algebra</span></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.region<span class="w"> </span><span class="nv">raster</span><span class="o">=</span>dmt
+r.mapcalc<span class="w"> </span><span class="nv">expr</span><span class="o">=</span><span class="s2">&quot;dmt_int = int(dmt)&quot;</span>
+</pre></div>
+</div>
+</div>
+<figure class="align-center" id="id3">
+<img alt="../_images/dmt-500-800.png" class="middle" src="../_images/dmt-500-800.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 82 </span><span class="caption-text">Po aktivaci masky se zobrazí pouze část území, které
+odpovídá nadmořské výšce mezi 500 a 800 metry.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Maska samozřejmě ovlivňuje veškeré výpočty nad rastrovými daty,
+např. modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.univar.html">r.univar</a> v tomto případě vypíše
+<a class="reference internal" href="statistika.html#r-univar"><span class="std std-ref">základní statistiku</span></a> pouze pro území s nadmořskou
+výškou mezi 500 a 800 metry (viz hodnoty minimum a~maximum).</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/r-univar-masked.png" src="../_images/r-univar-masked.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 83 </span><span class="caption-text">Výpis základní statistiky rastrových dat s aktivovanou maskou.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="priklad-nastaveni-masky-na-zaklade-vektorove-mapy">
+<h2>Příklad nastavení masky na základě vektorové mapy<a class="headerlink" href="#priklad-nastaveni-masky-na-zaklade-vektorove-mapy" title="Permalink to this heading">¶</a></h2>
+<p>Na tomto místě si ukážeme postup vytvoření masky na základě území
+Ústeckého kraje. Vektorová mapa kraje vznikla jednoduchým dotazem, viz
+kapitola <a class="reference internal" href="../intro/atributove-dotazy.html"><span class="doc">Atributové dotazy</span></a>.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/dmt-uk.png" class="middle" src="../_images/dmt-uk.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 84 </span><span class="caption-text">Digitální model terénu a hranice Ústeckého kraje.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Masku nastavíme standardně pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.mask.html">r.mask</a> s volbou
+<code class="xref std std-option docutils literal notranslate"><span class="pre">vector</span></code>.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/r-mask-vector.png" src="../_images/r-mask-vector.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 85 </span><span class="caption-text">Nastavení masky na základě vektorových dat.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<img alt="../_images/dmt-uk-mask.png" src="../_images/dmt-uk-mask.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 86 </span><span class="caption-text">Výsledek vytvoření masky podle hranice Ústeckého kraje.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="odstraneni-masky">
+<h2>Odstranění masky<a class="headerlink" href="#odstraneni-masky" title="Permalink to this heading">¶</a></h2>
+<p>Odstranit masku lze přepínačem <code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code> modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.mask.html">r.mask</a>.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/r-mask-remove.png" src="../_images/r-mask-remove.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 87 </span><span class="caption-text">Odstranění masky.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Jelikož je maska standardní rastrovou mapou, lze ji deaktivovat
+jejím pouhým odstraněním.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.remove<span class="w"> </span>-f<span class="w"> </span><span class="nv">type</span><span class="o">=</span>rast<span class="w"> </span><span class="nv">name</span><span class="o">=</span>MASK
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Rastrové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/region.html">Výpočetní region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="statistika.html">Základní statistiky rastrových dat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Nastavení masky</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabulka-barev.html">Tabulka barev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyzy-povrchu.html">Topografické analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova-algebra.html">Rastrová algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reklasifikace.html">Reklasifikace rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyza-nakladu.html">Rastrová analýza nákladů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="statistika.html" title="Základní statistiky rastrových dat"
+              >předchozí</a> |
+            <a href="tabulka-barev.html" title="Tabulka barev"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

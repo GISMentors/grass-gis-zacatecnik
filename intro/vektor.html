@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Vektorová data &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Interaktivní dotazování" href="interaktivni-dotazovani.html" />
+    <link rel="prev" title="Rastrová data" href="rastr.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="rastr.html" title="Rastrová data"
+             accesskey="P">předchozí</a> |
+          <a href="interaktivni-dotazovani.html" title="Interaktivní dotazování"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="vektorova-data">
+<span id="index-0"></span><h1>Vektorová data<a class="headerlink" href="#vektorova-data" title="Permalink to this heading">¶</a></h1>
+<p>Vektorová data jsou v systému GRASS uložena v podobě
+tzv. <em>vektorových map</em>.</p>
+<ul class="simple">
+<li><p>Vektorová data reprezentují nejčastěji diskrétní fenomény</p></li>
+</ul>
+<p>Ve 2D GIS rozlišujeme tři základní <em>typy geoprvků</em>, které označujeme
+jako <em>jednoduché</em> (simple features):</p>
+<ul class="simple">
+<li><p>bodové (<em>point</em>)</p></li>
+<li><p>liniové (<em>linestring</em>)</p></li>
+<li><p>plošné (<em>polygon</em>)</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Více o vektorové reprezentace v rámci školení <a class="reference external" href="http://training.gismentors.eu/open-source-gis/formaty/vektor.html">Úvod
+do GIS</a>.</p>
+</div>
+<p>Vzhledem k tomu, že je GRASS striktně <strong>topologický GIS</strong>, tak s
+jednoduchými geoprvky nepracuje. Vektorová data ukládá v topologickém
+formátu, v případě <a class="reference internal" href="../data/import.html#import-vector"><span class="std std-ref">importu vektorových dat</span></a> z
+běžných GIS formátů jako je např. <a class="reference external" href="http://en.wikipedia.org/wiki/Esri Shapefile">Esri Shapefile</a> data
+převádí do topologické formy automaticky.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p><em>Topologie</em> studuje prostorové vztahy mezi objekty (návaznost
+linií, sousednost ploch atd.), viz <a class="reference external" href="http://en.wikipedia.org/wiki/Geospatial_topology">prostorová
+topologie</a>.</p>
+</div>
+<p>Vstupní vektorová data často obsahují nejrůznější topologické chyby,
+jako např. překrývající se polygony. Importní nástroj systému GRASS
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.import.html">v.import</a> se snaží tyto chyby automaticky opravit. V
+některých případech to však není možné a je dále na uživateli, aby
+data opravil sám. Opravám případných topologických chyb se věnuje
+podrobněji <a class="reference internal" href="../vektorova_data/topologie.html#oprava-topologie"><span class="std std-ref">navazující kapitola</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Nativní vektorový formát systému GRASS umožňuje na rozdíl od jiných
+formátů jako je např. <a class="reference external" href="http://en.wikipedia.org/wiki/Esri Shapefile">Esri Shapefile</a> uložit v
+jednou souboru (vektorové mapě) rozdílné typy geoprvků vedle
+sebe. V jedné vektorové mapě tedy mohou být uloženy bodové, liniové
+i plošné geoprvky zároveň, viz <a class="reference internal" href="../vektorova_data/editace.html#id1"><span class="std std-ref">kapitola o editaci vektorových
+dat</span></a>.</p>
+</div>
+<section id="metadata">
+<span id="index-1"></span><h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">¶</a></h2>
+<p>Základní metadata o vektorové mapě vypisuje modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.info.html">v.info</a>
+dostupný z menu <span class="menuselection">Vector ‣ Reports and statistics ‣
+Basic vector metadata</span> anebo z kontextového menu vektorové mapy ve
+<em>správci vrstev</em>.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/lmgr-v-info.png" src="../_images/lmgr-v-info.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 48 </span><span class="caption-text">Spuštění nástroje pro výpis metadat vektorových map z
+kontextového menu správce vrsvev.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/lmgr-v-info-example.png" src="../_images/lmgr-v-info-example.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 49 </span><span class="caption-text">Příklad výpisu metadat vektorové mapy
+<span class="map">okresy</span>.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="topologicky-model">
+<span id="index-2"></span><h2>Topologický model<a class="headerlink" href="#topologicky-model" title="Permalink to this heading">¶</a></h2>
+<p>Topologický model systému GRASS liniové a plošné elementy (bodové
+geoprvky nejsou součástí topologie) rozkládá dále na tzv. <em>topologické
+elementy</em>:</p>
+<ul class="simple">
+<li><p>uzel (<em>node</em>),</p>
+<ul>
+<li><p>každá linie či hraniční linie musí začínat a končit v uzlu</p></li>
+<li><p>linie se musí křížit vždy v uzlu</p></li>
+<li><p>izolované uzly nejsou podporovány</p></li>
+</ul>
+</li>
+<li><p>linie (<em>line</em>),</p></li>
+<li><p>hraniční linie (<em>boundary</em>) a</p></li>
+<li><p>reprezentační bod plochy (<em>centroid</em>).</p></li>
+</ul>
+<p>Hraniční linie je liniový element, který na rozdíl od elementu
+označovaného jako linie, může tvořit hranici plochy. Plošný
+topologický element <em>area</em> je tvořen jednou či více hraničními liniemi
+a případně i jedním <em>centroidem</em>. Izolovaná plocha nebo souvislá
+množina ploch formuje plošný element označovaný jako ostrov (<em>isle</em>).</p>
+<section id="priklad">
+<h3>Příklad<a class="headerlink" href="#priklad" title="Permalink to this heading">¶</a></h3>
+<p>Na obrázku níže je zobrazen:</p>
+<ul class="simple">
+<li><p>jeden bodový geoprvek</p></li>
+<li><p>jeden liniový geoprvek</p></li>
+<li><p>dva plošné geoprvky, z toho jeden z nich obsahuje otvor</p></li>
+</ul>
+<figure class="align-center">
+<img alt="../_images/grass7-topo.png" class="large" src="../_images/grass7-topo.png" />
+</figure>
+<p>Tato kompozice bude v topologickém modelu systému GRASS vyjádřena
+následujícími topologickými elementy:</p>
+<ul class="simple">
+<li><p>pěti uzly <span class="fignote">n1-5</span></p></li>
+<li><p>jednou linií <span class="fignote">2</span></p></li>
+<li><p>čtyřmi hraničními liniemi <span class="fignote">3,4,6,8</span></p></li>
+<li><p>dvěma centroidy <span class="fignote">5,7</span></p></li>
+</ul>
+</section>
+</section>
+<section id="atributova-data">
+<span id="index-3"></span><span id="id1"></span><h2>Atributová data<a class="headerlink" href="#atributova-data" title="Permalink to this heading">¶</a></h2>
+<p>Atributová data jsou uložena v libovolném formátu podporovaném jedním
+z <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/sql.html">databázových ovladačů</a> systému GRASS. Ve verzi
+GRASS 7.x je výchozím formátem databáze <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/grass-sqlite.html">SQLite</a>. Volitelně lze atributová data ukládat do databáze
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/grass-pg.html">PostgreSQL</a>, <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/grass-mysql.html">MySQL</a> či
+do jiné databáze pomocí rozhraní <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/grass-odbc.html">ODBC</a>.</p>
+<div class="notegrass6 admonition">
+<p class="admonition-title">Poznámka pro GRASS GIS verze 6</p>
+<p>Ve verzi GRASS 6 byl výchozím formátem pro atributová data
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/grass-dbf.html">DBF</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Výchozí nastavení formátu pro uložení atributových dat můžete změnit
+pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.connect.html">db.connect</a> (<span class="menuselection">Database ‣
+Manage databases ‣ Connect</span>). Aktuální nastavení vypisuje přepínač
+<code class="xref std std-option docutils literal notranslate"><span class="pre">-p</span></code>.</p>
+<blockquote>
+<div><figure class="align-center" id="id4">
+<img alt="../_images/db-connect-p.png" src="../_images/db-connect-p.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 50 </span><span class="caption-text">Výchozí nastavení připojení atributových dat v GRASS - databáze
+SQLite.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Nastavení databáze PostgreSQL pro uložení atributových dat z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.connect<span class="w"> </span><span class="nv">driver</span><span class="o">=</span>pg<span class="w"> </span><span class="nv">database</span><span class="o">=</span>grass
+</pre></div>
+</div>
+</div>
+<p>Změna nastavení formátu uložení atributových dat se projeví až u nově
+vytvořených vektorových map.</p>
+</div></blockquote>
+</div>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>K jedné vektorové mapě lze přiřadit více atributových tabulek. Tato
+problematika je ale nad rámec tohoto školení a je probírána v
+navazující <a class="reference external" href="http://training.gismentors.eu/grass-gis-pokrocily">školení pro pokročilé uživatele</a>.</p>
+<figure class="align-center">
+<img alt="../_images/multi-layers.png" class="middle" src="../_images/multi-layers.png" />
+</figure>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">První kroky</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../instalace/index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prvni-kroky.html">Úvod do systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struktura-dat.html">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zobrazeni-geodat.html">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduly.html">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr.html">Rastrová data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="rastr.html" title="Rastrová data"
+              >předchozí</a> |
+            <a href="interaktivni-dotazovani.html" title="Interaktivní dotazování"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Rastrová analýza nákladů &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Vektorové analýzy" href="../vektorova_data/index.html" />
+    <link rel="prev" title="Reklasifikace rastrových dat" href="reklasifikace.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="reklasifikace.html" title="Reklasifikace rastrových dat"
+             accesskey="P">předchozí</a> |
+          <a href="../vektorova_data/index.html" title="Vektorové analýzy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="rastrova-analyza-nakladu">
+<span id="index-0"></span><h1>Rastrová analýza nákladů<a class="headerlink" href="#rastrova-analyza-nakladu" title="Permalink to this heading">¶</a></h1>
+<p>Nejprve si v aktuálním mapsetu <span class="xref std std-ref">vytvoříme kopii</span> vektorové mapy <span class="map">silnice</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Tento krok je potřeba, jelikož budeme modifikovat atributovou
+tabulku vektorové mapy. A jak již bylo uvedeno v kapitole
+<a class="reference internal" href="../intro/struktura-dat.html"><span class="doc">Struktura dat - koncept lokací a mapsetů</span></a> systém GRASS umožňuje editovat pouze
+datové elementy z aktuálního mapsetu.</p>
+</div>
+<p>Přidáme <a class="reference internal" href="../vektorova_data/atributy.html#pridani-noveho-atributu"><span class="std std-ref">nový atribut</span></a> <code class="docutils literal notranslate"><span class="pre">rychlost</span></code>, do
+něhož uložíme průměrnou rychlost dle následující tabulky:</p>
+<table class="border docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Silnice</p></th>
+<th class="head"><p>Typ</p></th>
+<th class="head"><p>Rychlost (km/h)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Dálnice</p></td>
+<td><p>1</p></td>
+<td><p>130</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rychlostní silnice</p></td>
+<td><p>2</p></td>
+<td><p>110</p></td>
+</tr>
+<tr class="row-even"><td><p>Silnice 1.třídy</p></td>
+<td><p>3</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-odd"><td><p>Silnice 2.třídy</p></td>
+<td><p>4</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-even"><td><p>Silnice 3.třídy</p></td>
+<td><p>5</p></td>
+<td><p>60</p></td>
+</tr>
+</tbody>
+</table>
+<p>Editaci hodnot atributů umožňuje <a class="reference internal" href="../vektorova_data/atributy.html#field-calculator"><span class="std std-ref">Field Calculator</span></a>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/field-calculator-speed.png" class="small" src="../_images/field-calculator-speed.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 122 </span><span class="caption-text">Příklad určení atributu rychlosti pro dálnice (<code class="docutils literal notranslate"><span class="pre">typ</span> <span class="pre">=</span> <span class="pre">1</span></code>).</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<div class="notecmd admonition">
+<p class="admonition-title">Nastavení atributu rychlosti z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.db.addcolumn<span class="w"> </span><span class="nv">map</span><span class="o">=</span>silnice<span class="w"> </span><span class="nv">column</span><span class="o">=</span><span class="s2">&quot;rychlost integer&quot;</span>
+v.db.update<span class="w"> </span><span class="nv">map</span><span class="o">=</span>silnice<span class="w"> </span><span class="nv">column</span><span class="o">=</span>rychlost<span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="m">130</span><span class="w"> </span><span class="nv">where</span><span class="o">=</span><span class="s2">&quot;typ=1&quot;</span>
+v.db.update<span class="w"> </span><span class="nv">map</span><span class="o">=</span>silnice<span class="w"> </span><span class="nv">column</span><span class="o">=</span>rychlost<span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="m">110</span><span class="w"> </span><span class="nv">where</span><span class="o">=</span><span class="s2">&quot;typ=2&quot;</span>
+v.db.update<span class="w"> </span><span class="nv">map</span><span class="o">=</span>silnice<span class="w"> </span><span class="nv">column</span><span class="o">=</span>rychlost<span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="m">90</span><span class="w">  </span><span class="nv">where</span><span class="o">=</span><span class="s2">&quot;typ=3&quot;</span>
+v.db.update<span class="w"> </span><span class="nv">map</span><span class="o">=</span>silnice<span class="w"> </span><span class="nv">column</span><span class="o">=</span>rychlost<span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="m">70</span><span class="w">  </span><span class="nv">where</span><span class="o">=</span><span class="s2">&quot;typ=4&quot;</span>
+v.db.update<span class="w"> </span><span class="nv">map</span><span class="o">=</span>silnice<span class="w"> </span><span class="nv">column</span><span class="o">=</span>rychlost<span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="m">60</span><span class="w">  </span><span class="nv">where</span><span class="o">=</span><span class="s2">&quot;typ=5&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dále převedeme modulem <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.to.rast.html">v.to.rast</a> (<span class="menuselection">File ‣
+Map type conversions ‣ Vector to raster</span>) vektorovou mapu
+<span class="map">silnice</span> do rastrové reprezentace. Před konverzí je nutné
+nastavit <a class="reference internal" href="../intro/region.html"><span class="doc">výpočetní region</span></a>, např. interaktivně
+z mapového okna nebo z příkazové řádky:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.region<span class="w"> </span><span class="nv">align</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">n</span><span class="o">=</span>-974156<span class="w"> </span><span class="nv">s</span><span class="o">=</span>-994356<span class="w"> </span><span class="nv">w</span><span class="o">=</span>-766980<span class="w"> </span><span class="nv">e</span><span class="o">=</span>-736680
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.to.rast<span class="w"> </span><span class="nv">input</span><span class="o">=</span>silnice<span class="w"> </span><span class="nv">output</span><span class="o">=</span>silnice_rast<span class="w"> </span><span class="nv">use</span><span class="o">=</span>attr<span class="w"> </span><span class="nv">attribute_column</span><span class="o">=</span>rychlost<span class="w"> </span><span class="nv">type</span><span class="o">=</span>line
+</pre></div>
+</div>
+<p>Dále použijeme vrstvy <span class="map">vodni_toky</span> a <span class="map">vodni_nadrze</span> jako
+přirozené bariéry pro pohyb mimo silnice. Provedeme rasterizaci,
+rastrové vrstvy složíme pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.patch.html">r.patch</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.to.rast<span class="w"> </span><span class="nv">input</span><span class="o">=</span>vodni_toky<span class="w"> </span><span class="nv">output</span><span class="o">=</span>vodni_toky_rast<span class="w"> </span><span class="nv">use</span><span class="o">=</span>val<span class="w"> </span><span class="nv">type</span><span class="o">=</span>line
+v.to.rast<span class="w"> </span><span class="nv">input</span><span class="o">=</span>vodni_nadrze<span class="w"> </span><span class="nv">output</span><span class="o">=</span>vodni_nadrze_rast<span class="w"> </span><span class="nv">use</span><span class="o">=</span>val<span class="w"> </span><span class="nv">type</span><span class="o">=</span>area
+r.patch<span class="w"> </span><span class="nv">input</span><span class="o">=</span>vodni_toky_rast,vodni_nadrze_rast<span class="w"> </span><span class="nv">output</span><span class="o">=</span>bariery
+</pre></div>
+</div>
+<p>V místech mimo silnice (hodnota 0) přiřadíme pomocí nástroje
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.mapcalc.html">r.mapcalc</a> (viz kapitola <a class="reference internal" href="rastrova-algebra.html"><span class="doc">Rastrová algebra</span></a>) rychlost
+pohybu ‚5‘. Vzniklé rastrové mapě přiřadíme tabulku barev ‚sepia‘, viz
+kapitola <a class="reference internal" href="tabulka-barev.html"><span class="doc">Tabulka barev</span></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.mapcalc<span class="w"> </span><span class="nv">expression</span><span class="o">=</span><span class="s1">&#39;rychlost = if(isnull(silnice_rast), if(isnull(bariery), 5, null()), silnice_rast)&#39;</span>
+r.colors<span class="w"> </span>-n<span class="w"> </span><span class="nv">map</span><span class="o">=</span>rychlost<span class="w"> </span><span class="nv">color</span><span class="o">=</span>sepia
+</pre></div>
+</div>
+<figure class="align-center" id="id2">
+<img alt="../_images/grass-streets-speed.png" src="../_images/grass-streets-speed.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 123 </span><span class="caption-text">Rasterizovaná síť silnic s atributem průměrné rychlosti a bariérami.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Modulem <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.in.ascii.html">v.in.ascii</a> vytvoříme vektorovou mapu s ohniskem
+požáru. Souřadnice bodu (-754235,-980474) zadáme v notaci <code class="docutils literal notranslate"><span class="pre">X|Y|cat</span></code>,
+kategorii zvolíme libovolně, např. 1. Ve výsledku bude tedy zápis bodu
+vypadat následovně: <code class="docutils literal notranslate"><span class="pre">-754235|-980474|1</span></code>.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/wxgui-v-in-ascii.png" src="../_images/wxgui-v-in-ascii.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 124 </span><span class="caption-text">Vytvoření mapy s ohniskem požáru - definujeme souřadnice
+ohniska požáru a název výsledné vektorové mapy.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Rastrovou mapu časové náročnosti vytvoříme pomocí modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.mapcalc.html">r.mapcalc</a>, viz kapitola <a class="reference internal" href="rastrova-algebra.html"><span class="doc">Rastrová algebra</span></a>. Uvažujeme
+prostorové rozlišení 25m a výpočet časové náročnosti pro překonání
+buňky v minutách.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.mapcalc<span class="w"> </span><span class="nv">expression</span><span class="o">=</span><span class="s2">&quot;rychlost_cas = 25.0 / ((1000 * rychlost) / 60.0)&quot;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Pozor na dělení celých čísel, výsledkem je v mapové
+algebře systému GRASS vždy celé číslo. Proto je v
+čitateli použito číslo s plovoucí desetinnou čárkou
+(25.0).</p>
+</div>
+<p>Pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.cost.html">r.cost</a> (<span class="menuselection">Raster ‣ Terrain
+analysis ‣ Cost surface</span>) vypočteme rastrovou mapu nákladů pohybu,
+tzv. frikční povrch.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.cost<span class="w"> </span>-k<span class="w"> </span><span class="nv">input</span><span class="o">=</span>rychlost_cas<span class="w"> </span><span class="nv">output</span><span class="o">=</span>cas_naklady<span class="w"> </span><span class="nv">start_points</span><span class="o">=</span>pozar
+</pre></div>
+</div>
+<figure class="align-center" id="id4">
+<img alt="../_images/grass-streets-cost.png" class="middle" src="../_images/grass-streets-cost.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 125 </span><span class="caption-text">Analýza nákladů pohybu v terénu, ohnisko požáru a požární stanice
+(tabulka barev „oranges“).</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Dojezdovost pro jednotlivé požární stanice k ohnisku požáru vypočteme
+z rastru nákladu pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.what.rast.html">v.what.rast</a>
+(<span class="menuselection">Vector ‣ Update attributes ‣ Sample raster maps
+at point locations</span>). Nejprve si v aktuálním mapsetu <span class="xref std std-ref">vytvoříme
+kopii</span> vektorové mapy
+<span class="map">pozarni_stanice</span>. Přidáme <a class="reference internal" href="../vektorova_data/atributy.html#pridani-noveho-atributu"><span class="std std-ref">nový atribut</span></a> <code class="docutils literal notranslate"><span class="pre">dojezdovost</span></code>, do něhož uložíme hodnotu
+dojezdovosti pro danou požární stanici.</p>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<div class="notecmd admonition">
+<p class="admonition-title">Přidání atributu dojezdovosti z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.copy<span class="w"> </span><span class="nv">vector</span><span class="o">=</span>pozarni_stanice@osm,pozarni_stanice
+v.db.addcolumn<span class="w"> </span><span class="nv">map</span><span class="o">=</span>pozarni_stanice<span class="w"> </span><span class="nv">column</span><span class="o">=</span><span class="s2">&quot;dojezdovost double precision&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.what.rast<span class="w"> </span><span class="nv">map</span><span class="o">=</span>pozarni_stanice<span class="w"> </span><span class="nv">raster</span><span class="o">=</span>cas_naklady<span class="w"> </span><span class="nv">column</span><span class="o">=</span>dojezdovost
+</pre></div>
+</div>
+<figure class="align-center" id="id5">
+<img alt="../_images/grass-streets-nearest.png" src="../_images/grass-streets-nearest.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 126 </span><span class="caption-text">Nalezení požární stanice s nejmenší hodnotou dojezdovosti.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Souřadnice požární stanice s kategorií ‚89‘ poskytne modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.out.ascii.html">v.out.ascii</a> (<span class="menuselection">File ‣ Export vector map
+‣ ASCII points or GRASS ASCII vector export</span>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.out.ascii<span class="w"> </span><span class="nv">input</span><span class="o">=</span>pozarni_stanice<span class="w"> </span><span class="nv">cats</span><span class="o">=</span><span class="m">89</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mf">750649.82535985</span><span class="o">|-</span><span class="mf">992867.12907965</span><span class="o">|</span><span class="mi">89</span>
+</pre></div>
+</div>
+<p>Nejkratší (spádovou) cestu vypočteme modulem <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.drain.html">r.drain</a>
+(<span class="menuselection">Raster ‣ Terrain analysis ‣ Least cost route or
+flow</span>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.drain<span class="w"> </span>-n<span class="w"> </span><span class="nv">input</span><span class="o">=</span>cas_naklady<span class="w"> </span><span class="nv">output</span><span class="o">=</span>cesta_rast<span class="w"> </span><span class="nv">start_coordinates</span><span class="o">=</span>-750649,-992867
+</pre></div>
+</div>
+<figure class="align-center" id="id6">
+<img alt="../_images/grass-streets-path.png" class="middle" src="../_images/grass-streets-path.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 127 </span><span class="caption-text">Výsledek, nejkratší cesta k požáru.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<img alt="../_images/grass-streets-path-3d.png" class="middle" src="../_images/grass-streets-path-3d.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 128 </span><span class="caption-text">Vizualizace rastrové mapy nákladů včetně nejkratší spádové cesty ve
+3D.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Optimální cestu lze převést do vektorové reprezentace pomocí
+modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.to.rast.html">r.to.rast</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.to.vect<span class="w"> </span><span class="nv">input</span><span class="o">=</span>cesta_rast<span class="w"> </span><span class="nv">output</span><span class="o">=</span>cesta<span class="w"> </span><span class="nv">type</span><span class="o">=</span>line
+</pre></div>
+</div>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Rastrové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/region.html">Výpočetní region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="statistika.html">Základní statistiky rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask.html">Nastavení masky</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabulka-barev.html">Tabulka barev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyzy-povrchu.html">Topografické analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova-algebra.html">Rastrová algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reklasifikace.html">Reklasifikace rastrových dat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Rastrová analýza nákladů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="reklasifikace.html" title="Reklasifikace rastrových dat"
+              >předchozí</a> |
+            <a href="../vektorova_data/index.html" title="Vektorové analýzy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

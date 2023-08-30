@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Prostorové dotazy &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Rastrové analýzy" href="../rastrova_data/index.html" />
+    <link rel="prev" title="Atributové dotazy" href="atributove-dotazy.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="atributove-dotazy.html" title="Atributové dotazy"
+             accesskey="P">předchozí</a> |
+          <a href="../rastrova_data/index.html" title="Rastrové analýzy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="prostorove-dotazy">
+<span id="index-0"></span><h1>Prostorové dotazy<a class="headerlink" href="#prostorove-dotazy" title="Permalink to this heading">¶</a></h1>
+<p>Prostorové dotazy, tj. výběr geoprvků na základě jejich prostorových
+vztahů, zajišťuje modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.select.html">v.select</a> dostupný z
+<span class="menuselection">Vector ‣ Feature selection ‣ Select by another
+map</span>. Systém GRASS podporuje standardní prostorové operátory:</p>
+<ul class="simple">
+<li><p><em>equals</em> - geoprvky jsou totožné</p></li>
+<li><p><em>disjoint</em> - geoprvky jsou prostorově různé</p></li>
+<li><p><em>intersects</em> - geoprvky se prostorově protínají</p></li>
+<li><p><em>touches</em> - geoprvky se prostorově dotýkají</p></li>
+<li><p><em>crosses</em> - geoprvky se kříží</p></li>
+<li><p><em>within</em> - geoprvek je prostorově lokalizován uvnitř jiného geoprvku</p></li>
+<li><p><em>contains</em> - geoprvek je prostorově obsažen v jiném geoprvku</p></li>
+<li><p><em>overlaps</em> - geoprvky se prostorově překrývají</p></li>
+<li><p><em>relate</em> - obecný prostorový vztah definovaný jako vztahová matice</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Podrobný popis prostorových operátorů je k nalezení v
+<a class="reference external" href="http://cs.wikipedia.org/wiki/OGC">OGC</a> specifikaci <a class="reference external" href="http://www.opengeospatial.org/standards/sfa">Simple Features Access</a> více informací
+specifikaci <a class="reference external" href="http://geo.fsv.cvut.cz/~gin/uzpd/uzpd.pdf#page=18">zde</a>.</p>
+</div>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Nativně <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.select.html">v.select</a> podporuje pouze jeden prostorový
+operátor: <em>overlap</em> - geoprvky se částečně či úplně
+překrývají. Ostatní výše zmíněné operátory jsou implementovány v
+knihovně <a class="reference external" href="http://trac.osgeo.org/geos">GEOS</a>, kterou systém GRASS používá.</p>
+</div>
+<p class="rubric"><span class="secnotoc">Příklad</span></p>
+<p>Výběr obcí (vektorová mapa <span class="map">obce&#64;ruian</span>), ve kterých je umístěna
+alespoň jedna (použijeme prostorový operátor <em>contains</em>) požární
+stanice (vektorová mapa <span class="map">pozarni_stanice&#64;osm</span>). Výsledek dotazu
+uložíme do nové vektorové mapy <span class="map">obce_stanice</span>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/v-select.png" src="../_images/v-select.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 61 </span><span class="caption-text">Spuštění modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.select.html">v.select</a>.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<div class="notecmd admonition">
+<p class="admonition-title">Spuštění z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.select<span class="w"> </span><span class="nv">ainput</span><span class="o">=</span>obce_polygon<span class="w"> </span><span class="nv">binput</span><span class="o">=</span>pozarni_stanice<span class="w"> </span><span class="nv">output</span><span class="o">=</span>obce_stanice<span class="w"> </span><span class="nv">operator</span><span class="o">=</span>contains
+</pre></div>
+</div>
+</div>
+</div>
+<figure class="align-center" id="id2">
+<img alt="../_images/wxgui-v-select-result.png" src="../_images/wxgui-v-select-result.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 62 </span><span class="caption-text">Výsledek prostorového dotazu.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div style="text-align: center"><iframe src="http://www.youtube.com/embed/teA-x-vmXYc"     width="700" height="360" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-center"></iframe><div style="margin-top: 5px; margin-bottom: 5px"><i>Příklad dalšího prostorového dotazu - výběr komunikací, které kříží železnice (https://youtube.com/watch?v=teA-x-vmXYc).</i></div></div></section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html#dotazovani">Dotazování</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="interaktivni-dotazovani.html">Interaktivní dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atributove-dotazy.html">Atributové dotazy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Prostorové dotazy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="atributove-dotazy.html" title="Atributové dotazy"
+              >předchozí</a> |
+            <a href="../rastrova_data/index.html" title="Rastrové analýzy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

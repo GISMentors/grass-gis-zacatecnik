@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Georeferencování &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Mapové výstupy" href="../ruzne/index.html" />
+    <link rel="prev" title="Přenost dat mezi lokacemi" href="prenos-dat.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="prenos-dat.html" title="Přenost dat mezi lokacemi"
+             accesskey="P">předchozí</a> |
+          <a href="../ruzne/index.html" title="Mapové výstupy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="georeferencovani">
+<span id="index-0"></span><h1>Georeferencování<a class="headerlink" href="#georeferencovani" title="Permalink to this heading">¶</a></h1>
+<p>Souřadnicové připojení geodat (tzv. georeferencování) umožňuje v
+systému GRASS nástroj <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/wxGUI.gcp.html">GCP Manager</a> dostupný z
+menu <span class="menuselection">File ‣ Georectify</span> anebo přímo z nástroje lišty
+<em>správce vrstev</em>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/lmgr-georectify.png" src="../_images/lmgr-georectify.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 208 </span><span class="caption-text">Spuštění nástroje pro georeferencování dat ze správce vrstev.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Nástroj je dále dostupný z příkazové řádky jako modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/g.gui.gcp.html">g.gui.gcp</a>.</p>
+<p>Tento nástroj umožňuje souřadnicově připojit jak rastrová tak
+vektorová data.</p>
+<section id="postup">
+<h2>Postup<a class="headerlink" href="#postup" title="Permalink to this heading">¶</a></h2>
+<p>Na vstupu tedy máme souřadnicově nepřipojená rastrová či vektorová
+data. Tato data nejprve do systému GRASS naimportujeme. Pro tento účel
+se nejprve <a class="reference internal" href="tvorba-lokace.html#lokace-xy"><span class="std std-ref">vytvoří lokace s matematickým souřadnicovým systémem</span></a>. Do této lokace data <a class="reference internal" href="import.html#import"><span class="std std-ref">naimportujeme</span></a> a~poté
+se <a class="reference internal" href="transformace.html#loc-switch"><span class="std std-ref">vrátíme zpět do lokace</span></a>, do které chceme data
+georeferencovat.</p>
+<p>Následně na to spustíme <em>GCP Manager</em> a v průvodci postupně vybereme:</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/georect-0.png" src="../_images/georect-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 209 </span><span class="caption-text">Nejprve zvolíme typ dat, které chceme souřadnicově
+připojit - buď rastrová anebo vektorová data
+<span class="fignote">(1)</span>, dále zvolíme lokaci <span class="fignote">(2)</span> a
+mapset <span class="fignote">(3)</span>, ve které jsou tato data uložena.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/georect-1.png" src="../_images/georect-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 210 </span><span class="caption-text">Dále vytvoříme skupinu, která bude obsahovat data určená
+pro souřadnicové připojení <span class="fignote">(4)</span>.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../_images/georect-2.png" class="small" src="../_images/georect-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 211 </span><span class="caption-text">Zvolíme název skupiny <span class="fignote">(5)</span> a přidáme do ni
+rastrové či vektorové mapy <span class="fignote">(6)</span>. Pokud do
+skupiny přidáme více map najednou, tak budou všechny tyto
+mapy souřadnicově připojeny na základě stejných
+identických bodů.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../_images/georect-3.png" class="small" src="../_images/georect-3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 212 </span><span class="caption-text">Zvolíme typ dat <span class="fignote">(7)</span>, který budeme to skupiny
+přidávat - rastrová či vektorová data, dále zvolíme
+mapset <span class="fignote">(8)</span>, ze které bude tato data volit a
+nakonec zvolíme data <span class="fignote">(9)</span>.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<img alt="../_images/georect-4.png" class="small" src="../_images/georect-4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 213 </span><span class="caption-text">Vytvoření skupiny potvrdíme <span class="fignote">(10)</span>.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<img alt="../_images/georect-5.png" src="../_images/georect-5.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 214 </span><span class="caption-text">Přejdeme na poslední dialog <span class="fignote">(11)</span>.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="../_images/georect-6.png" src="../_images/georect-6.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 215 </span><span class="caption-text">Tam zvolíme z cílové (aktuální lokace) rastrovou či
+vektorovou mapu <span class="fignote">(12)</span>, kterou chceme použít jako
+referenci pro souřadnicové připojení a průvodce ukončíme
+<span class="fignote">(13)</span>.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Následně na to se objeví okno <em>GCP Manageru</em> s rastrovou či vektorovou
+mapou určenou k souřadnicovému připojení vlevo a referenční rastrovou
+či vektorovou mapu vpravo. Začneme volit identické body <em>(Ground
+Control Points)</em> nejprve ve zdrojové lokaci (vlevo) a poté v cílové
+lokaci (vpravo).</p>
+<p>Výběr identických bodů probíhá následovně:</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/georect-8.png" class="large" src="../_images/georect-8.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 216 </span><span class="caption-text">Z nástrojové lišty vybere nástroj definice identických
+bodů <span class="fignote">(1)</span>, zvolíme číslo identického bodu, který
+chceme definovat <span class="fignote">(2)</span> a jeho pozici nejprve ve
+zdrojové <span class="fignote">(3)</span> a poté v cílové lokaci
+<span class="fignote">(4)</span>.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
+<img alt="../_images/georect-9.png" class="large" src="../_images/georect-9.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 217 </span><span class="caption-text">Takto postupně zvolíme první tři identické body.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id11">
+<img alt="../_images/georect-7.png" class="large" src="../_images/georect-7.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 218 </span><span class="caption-text">Další identické body můžeme přidat z nástrojové lišty.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<img alt="../_images/georect-10.png" class="large" src="../_images/georect-10.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 219 </span><span class="caption-text">Pokud nejsou identické body aktivovány, tak je nejprve
+aktivujeme <span class="fignote">(1)</span> a poté nastavíme vlastnosti
+souřadnicového připojení <span class="fignote">(2)</span>.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V dialogu nastavení:</p>
+<figure class="align-center" id="id13">
+<img alt="../_images/georect-11.png" class="small" src="../_images/georect-11.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 220 </span><span class="caption-text">V záložce <span class="item">Rectification</span> nastavíme stupeň
+polynomické interpolace <span class="fignote">(1)</span> a metodu pro
+převzorkování rastru <span class="fignote">(2)</span> - obecně lze říci, že
+pro kategorizovaná data (např. geologická mapa) je vhodná
+metoda nejbližšího souseda (nearest), pro data jako je
+digitální model reliéfu naopak lineární interpolace
+(linear) či kubická konvoluce (cubic).</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Před vlastním souřadnicovým připojení můžeme spočíst na základě
+identických bodů tzv. RMS chybu a na jejím základě vyřadit nebo naopak
+přidat nové identické body.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Střední kvadratická (RMS) chyba by neměla přesáhnout
+polovinu rozlišení hodnoty cílové lokace.</p>
+<figure class="align-center" id="id14">
+<img alt="../_images/georect-12.png" class="large" src="../_images/georect-12.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 221 </span><span class="caption-text">Střední kvadratická (RMS) chyba.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<figure class="align-center" id="id15">
+<img alt="../_images/georect-13.png" class="large" src="../_images/georect-13.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 222 </span><span class="caption-text">Vlastní výpočet spustíme pomocí funkce <code class="docutils literal notranslate"><span class="pre">Georecify</span></code> dostupnou z
+nástrojové lišty.</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id16">
+<img alt="../_images/georect-14.png" class="large" src="../_images/georect-14.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 223 </span><span class="caption-text">Souřadnicově připojená rastrová či vektorovou mapu přidáme do správce vrstev.</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id17">
+<img alt="../_images/georect-15.png" class="large" src="../_images/georect-15.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 224 </span><span class="caption-text">A zobrazíme společně s dalšími mapovými vrstvami v mapovém okně.</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Import a export geodat</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tvorba-lokace.html">Vytvoření vlastní lokace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import.html">Import geodat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export do ostatních GIS formátů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html">Přenost dat mezi lokacemi</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Georeferencování</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="prenos-dat.html" title="Přenost dat mezi lokacemi"
+              >předchozí</a> |
+            <a href="../ruzne/index.html" title="Mapové výstupy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

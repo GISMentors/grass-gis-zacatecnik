@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Tabulka barev &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Topografické analýzy" href="analyzy-povrchu.html" />
+    <link rel="prev" title="Nastavení masky" href="mask.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="mask.html" title="Nastavení masky"
+             accesskey="P">předchozí</a> |
+          <a href="analyzy-povrchu.html" title="Topografické analýzy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tabulka-barev">
+<span id="index-0"></span><h1>Tabulka barev<a class="headerlink" href="#tabulka-barev" title="Permalink to this heading">¶</a></h1>
+<p>Tabulka barev představuje zápis pravidel pro barevnou interpretaci
+rastrových hodnot.</p>
+<p>Nastavit tabulku barev umožňuje modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.colors.html">r.colors</a>, který je
+dostupný buď z menu <span class="menuselection">Raster ‣ Manage colors ‣ Color
+tables</span> anebo z kontextového menu rastrové mapy.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/lmgr-r-colors.png" src="../_images/lmgr-r-colors.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 88 </span><span class="caption-text">Nastavení tabulky barev z kontextového menu správce vrstev.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Modul umožňuje definovat tabulku barev manuálně, použít předefinovanou
+či již přiřazenou jiné rastrové mapě.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/r-colors-grey-i.png" src="../_images/r-colors-grey-i.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 89 </span><span class="caption-text">Příklad nastavení tabulky barev odstínů šedi v opačném pořadí.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/dmt-grey-i.png" class="middle" src="../_images/dmt-grey-i.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 90 </span><span class="caption-text">DMT v inverzních odstínech šedi.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="podrobne-nastaveni-tabulky-barev">
+<h2>Podrobné nastavení tabulky barev<a class="headerlink" href="#podrobne-nastaveni-tabulky-barev" title="Permalink to this heading">¶</a></h2>
+<p>Podobu tabulky barev pro zvolenou rastrovou mapu zobrazuje nástroj
+dostupný z menu <span class="menuselection">Raster ‣ Manage colors ‣ Manage
+color rules interactively</span> anebo z~kontextového menu rastrové mapy.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/lmgr-r-colors-inter.png" src="../_images/lmgr-r-colors-inter.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 91 </span><span class="caption-text">Interaktivní nastavení tabulky barev z kontextového menu správce vrstev.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../_images/color-table-dmt.png" src="../_images/color-table-dmt.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 92 </span><span class="caption-text">Příklad tabulky barev pro rastrovou mapu <span class="map">dmt</span>.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Podobu tabulky barev pro zvolenou rastrovou mapu vypisuje modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.colors.out.html">r.colors.out</a> (<span class="menuselection">Raster ‣ Manage colors
+‣ Export color table</span>).</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/r-colors-out-dmt.png" src="../_images/r-colors-out-dmt.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 93 </span><span class="caption-text">Tabulka barev pro rastrovou mapu <span class="map">dmt</span>, barvy jsou v
+notaci RGB, tabulka např. definuje, že buňka s~hodnotou
+355.686 se vykreslí zeleně (0:255:0).</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Tento nástroj umožňuje tabulku barev navíc <em>interaktivně měnit</em>
+včetně náhledu na data.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/color-table-dmt-custom.png" src="../_images/color-table-dmt-custom.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 94 </span><span class="caption-text">Příklad interaktivně změněné tabulky barev pouze v náhledu.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Nástroj umožňuje použít některou z předdefinovaných tabulek
+barev.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/color-table-dmt-defined-0.png" src="../_images/color-table-dmt-defined-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 95 </span><span class="caption-text">Příklad pro výběr tabulky barev odstínů šedi, tabulka
+barev se nastaví pro náhled po stisknutí tlačítka
+<span class="item">Set</span>.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id9">
+<img alt="../_images/color-table-dmt-defined-1.png" src="../_images/color-table-dmt-defined-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 96 </span><span class="caption-text">Příklad pro výběr tabulky barev odstínů šedi. Tabulka
+barev je aplikována pouze pro náhled, pokud ji chceme
+nastavit, stiskneme tlačítko <span class="item">Apply</span>. Návrat k
+výchozí tabulce barev poskytuje <span class="item">Reload default
+table</span>.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Tabulku barev lze dále načíst anebo uložit do souboru.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/color-table-file.png" src="../_images/color-table-file.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 97 </span><span class="caption-text">Uložení a načtení tabulky barev do/z souboru.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Rastrové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/region.html">Výpočetní region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="statistika.html">Základní statistiky rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask.html">Nastavení masky</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tabulka barev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyzy-povrchu.html">Topografické analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova-algebra.html">Rastrová algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reklasifikace.html">Reklasifikace rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyza-nakladu.html">Rastrová analýza nákladů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="mask.html" title="Nastavení masky"
+              >předchozí</a> |
+            <a href="analyzy-povrchu.html" title="Topografické analýzy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

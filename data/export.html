@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Export do ostatních GIS formátů &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Přenost dat mezi lokacemi" href="prenos-dat.html" />
+    <link rel="prev" title="Import geodat" href="import.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="import.html" title="Import geodat"
+             accesskey="P">předchozí</a> |
+          <a href="prenos-dat.html" title="Přenost dat mezi lokacemi"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="export-do-ostatnich-gis-formatu">
+<span id="index-0"></span><h1>Export do ostatních GIS formátů<a class="headerlink" href="#export-do-ostatnich-gis-formatu" title="Permalink to this heading">¶</a></h1>
+<p>Rastrové mapy lze ze systému GRASS exportovat do externích formátů
+pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.out.gdal.html">r.out.gdal</a>. Pro export vektorových map
+slouží modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.out.ogr.html">v.out.ogr</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Výše zmíněné moduly používají pro export dat knihovnu
+<a class="reference external" href="http://cs.wikipedia.org/wiki/GDAL">GDAL</a>, která v režimu zápisu podporuje téměř 250
+<a class="reference external" href="https://gdal.org/formats_list.html">rastrových</a> a <a class="reference external" href="https://gdal.org/ogr_formats.html">vektorových</a> formátů.</p>
+</div>
+<section id="rastrova-data">
+<span id="index-1"></span><h2>Rastrová data<a class="headerlink" href="#rastrova-data" title="Permalink to this heading">¶</a></h2>
+<p>Modul pro export rastrových dat je dostupný z menu
+<span class="menuselection">File ‣ Export raster map ‣ Common export formats</span>
+anebo z kontextového menu <em>správce vrstev</em>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/export-raster-menu.png" src="../_images/export-raster-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 195 </span><span class="caption-text">Export rastrových dat z kontextového menu správce vrstev.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V následujícím dialogu zvolíme název výstupního souboru a jeho formát.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/export-raster.svg" src="../_images/export-raster.svg" /><figcaption>
+<p><span class="caption-number">Obr. 196 </span><span class="caption-text">Zvolíme rastrovou mapu pro export <span class="fignote">(1)</span>, cestu k
+výstupnímu souboru <span class="fignote">(2)</span> a formát souboru <span class="fignote">(3)</span>.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Export rastrové mapy do formátu GeoTIFF z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.out.gdal<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">output</span><span class="o">=</span>/tmp/dmt.tif<span class="w"> </span><span class="nv">format</span><span class="o">=</span>GTiff
+</pre></div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Export dat je proveden z <strong>aktuálně nastaveného
+výpočetního regionu</strong> včetně případné masky.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud exportujete rastrová data ve formátu GTiff pro potřeby
+Esri ArcGIS, tak je potřeba nastavit speciální volby, viz
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.out.gdal.html#export-a-dcell-raster-map-in-geotiff-format-suitable-for-esri-software">dokumentace modulu</a>.</p>
+</div>
+</section>
+<section id="vektorova-data">
+<span id="index-2"></span><h2>Vektorová data<a class="headerlink" href="#vektorova-data" title="Permalink to this heading">¶</a></h2>
+<p>Modul pro export vektorových dat je dostupný z menu
+<span class="menuselection">File ‣ Export vector map ‣ Common export formats</span>
+anebo z kontextového menu <em>správce vrstev</em>.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/export-vector-menu.png" src="../_images/export-vector-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 197 </span><span class="caption-text">Export vektorových dat z kontextového menu správce vrstev.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V následujícím dialogu zvolíme název výstupního souboru a jeho formát.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/export-vector.svg" src="../_images/export-vector.svg" /><figcaption>
+<p><span class="caption-number">Obr. 198 </span><span class="caption-text">Zvolíme vektorovou mapu pro export <span class="fignote">(1)</span>, cestu k
+výstupnímu souboru <span class="fignote">(2)</span> a formát výstupního souboru
+<span class="fignote">(3)</span>.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Export vektorové mapy do formátu OGC GeoPackage a Esri Shapefile z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.out.ogr<span class="w"> </span><span class="nv">input</span><span class="o">=</span>obce@ruian<span class="w"> </span><span class="nv">dsn</span><span class="o">=</span>/tmp/obce.gpkg<span class="w"> </span><span class="nv">format</span><span class="o">=</span>GPKG
+v.out.ogr<span class="w"> </span><span class="nv">input</span><span class="o">=</span>obce@ruian<span class="w"> </span><span class="nv">dsn</span><span class="o">=</span>/tmp/obce.shp<span class="w"> </span><span class="nv">format</span><span class="o">=</span>ESRI_Shapefile
+</pre></div>
+</div>
+</div>
+</section>
+<section id="export-obsahu-mapove-okna-do-obrazku">
+<span id="index-3"></span><h2>Export obsahu mapové okna do obrázku<a class="headerlink" href="#export-obsahu-mapove-okna-do-obrazku" title="Permalink to this heading">¶</a></h2>
+<p>Kromě exportu dat do GIS formátů je možné uložit obsah mapové okna do
+obrazového souboru jako je např. PNG. Tato funkce je dostupná z
+nástrojé lišty <em>mapového okna</em>.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/map-display-image-0.png" class="large" src="../_images/map-display-image-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 199 </span><span class="caption-text">Export obsahu mapového okna do obrázku.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<a class="small reference internal image-reference" href="../_images/map-display-image-1.png"><img alt="../_images/map-display-image-1.png" class="small" src="../_images/map-display-image-1.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Obr. 200 </span><span class="caption-text">V následující dialogu zvolíme dimenzi výstupního obrázku.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<img alt="../_images/map-display-image-2.png" class="middle" src="../_images/map-display-image-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 201 </span><span class="caption-text">Příklad výsledku včetně legendy, měřítka a textového popisku (viz
+kapitola <a class="reference internal" href="../ruzne/mapove-elementy.html#mapove-elementy"><span class="std std-ref">Mapové elementy</span></a>).</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Import a export geodat</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tvorba-lokace.html">Vytvoření vlastní lokace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import.html">Import geodat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Export do ostatních GIS formátů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html">Přenost dat mezi lokacemi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="georeferencovani.html">Georeferencování</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="import.html" title="Import geodat"
+              >předchozí</a> |
+            <a href="prenos-dat.html" title="Přenost dat mezi lokacemi"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

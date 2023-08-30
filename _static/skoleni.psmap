@@ -1,0 +1,49 @@
+# timestamp: 2014-11-09 14:45
+# location: skoleni
+# mapset: user1
+# page orientation: Portrait
+# g.region rast=dmt@PERMANENT nsres=243.37048829 ewres=243.22461039
+
+maploc 0.838 1.511  6.481 4.003
+border y
+    width 1
+    color black
+    end
+
+paper a4
+    left 0.5
+    right 0.5
+    bottom 1
+    top 1
+    end
+
+raster dmt@PERMANENT
+
+vareas stat_polygon@ruian
+    layer 1
+    masked n
+    color red
+    width 1.0
+    fcolor none
+    label stat_polygon(ruian)
+    lpos 1
+    end
+colortable y
+    raster dmt@PERMANENT
+    where 0.857 5.653
+    discrete n
+    tickbar n
+    font Helvetica
+    fontsize 10
+    color black
+    end
+text -672083 -920180 Data: EU-DEM, RUIAN, OSM
+    font Helvetica-Bold
+    fontsize 14
+    color black
+    hcolor none
+    border none
+    background none
+    ref center center
+    end
+end

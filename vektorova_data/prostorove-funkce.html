@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Prostorové funkce &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Topologie vektorových dat" href="topologie.html" />
+    <link rel="prev" title="Editace vektorových dat" href="editace.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="editace.html" title="Editace vektorových dat"
+             accesskey="P">předchozí</a> |
+          <a href="topologie.html" title="Topologie vektorových dat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="prostorove-funkce">
+<span id="index-0"></span><h1>Prostorové funkce<a class="headerlink" href="#prostorove-funkce" title="Permalink to this heading">¶</a></h1>
+<section id="atributovy-vyber">
+<span id="v-extract"></span><span id="index-1"></span><h2>Atributový výběr<a class="headerlink" href="#atributovy-vyber" title="Permalink to this heading">¶</a></h2>
+<p>Vybírat geoprvky z vektorové mapy můžeme selektivně podle jejich
+kategorií a atributů, viz kapitola <a class="reference internal" href="../intro/atributove-dotazy.html"><span class="doc">Atributové dotazy</span></a>.
+Nástroj pro výběr <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.extract.html">v.extract</a> je dostupný z menu
+<span class="menuselection">Vector ‣ Feature selection ‣ Select by
+attributes</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Ujistěte se, že máte <a class="reference internal" href="../intro/struktura-dat.html#g-mapsets"><span class="std std-ref">v pracovní cestě</span></a>
+přidány všechny <em>mapsety</em> tak, abyste mohli pracovat s daty v nich
+obsaženými.</p>
+</div>
+<p>V následující ukázce vybereme z vektorové mapy <span class="map">silnice</span> (mapset
+<span class="map">osm</span>) všechny dálnice (splňující podmínku <code class="docutils literal notranslate"><span class="pre">typ</span> <span class="pre">=</span> <span class="pre">1</span></code>). Výsledek
+uložíme do vektorové mapy <span class="map">dalnice</span>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/v-extract.svg" class="large" src="../_images/v-extract.svg" /><figcaption>
+<p><span class="caption-number">Obr. 134 </span><span class="caption-text">Vytvoření tématické vektorové mapy <span class="map">dalnice</span>.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="obalova-zona">
+<span id="index-2"></span><h2>Obalová zóna<a class="headerlink" href="#obalova-zona" title="Permalink to this heading">¶</a></h2>
+<p>Obalovou zónu pro vektorová data vytváří modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.buffer.html">v.buffer</a>
+(<span class="menuselection">Vector ‣ Buffer vector</span>).</p>
+<p>Příklad vytvoření obalové zóny kolem dálnic s šířkou 5 km.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.buffer<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dalnice<span class="w"> </span><span class="nv">output</span><span class="o">=</span>hluk<span class="w"> </span><span class="nv">distance</span><span class="o">=</span><span class="m">5000</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id2">
+<img alt="../_images/v-buffer-result.png" class="middle" src="../_images/v-buffer-result.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 135 </span><span class="caption-text">Příklad obalové zóny 5 km okolo dálnic.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Výpočet může trvat delší dobu jelikož je dálnice
+reprezentována vždy dvěma pruhy. Pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.clean.html">v.clean</a>
+můžeme reprezentaci dálnice převést pouze na jednu lomenou čáru
+tím, že jeden z pruhů sloučíme s druhým.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.clean<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dalnice<span class="w"> </span><span class="nv">output</span><span class="o">=</span>dalnice1<span class="w"> </span><span class="nv">tool</span><span class="o">=</span>snap<span class="w"> </span><span class="nv">threshold</span><span class="o">=</span><span class="m">100</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="operace-prekryti">
+<span id="index-3"></span><h2>Operace překrytí<a class="headerlink" href="#operace-prekryti" title="Permalink to this heading">¶</a></h2>
+<p>Tyto operace zajišťuje modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.overlay.html">v.overlay</a>
+(<span class="menuselection">Vector ‣ Overlay vector maps ‣ Overlay vector
+maps</span>).</p>
+<section id="sjednoceni-union">
+<h3>Sjednocení (union)<a class="headerlink" href="#sjednoceni-union" title="Permalink to this heading">¶</a></h3>
+<p>V našem případě vytvoříme vektorovou mapu <span class="map">chranena_uzemi</span>
+<span class="fignote">(4)</span> sjednocením <span class="fignote">(3)</span> velkoplošných <span class="fignote">(2)</span> a
+maloplošných chráněných území <span class="fignote">(1)</span>.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/v-overlay-01.svg" src="../_images/v-overlay-01.svg" /><figcaption>
+<p><span class="caption-number">Obr. 136 </span><span class="caption-text">Vytvoření mapy maloplošných a velkoplošných chráněných území.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Spuštění z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.overlay<span class="w"> </span><span class="nv">ainput</span><span class="o">=</span>maloplosna_uzemi<span class="w"> </span><span class="nv">binput</span><span class="o">=</span>velkoplosna_uzemi_zonace<span class="w"> </span><span class="nv">operator</span><span class="o">=</span>or<span class="w"> </span><span class="nv">output</span><span class="o">=</span>chranena_uzemi
+</pre></div>
+</div>
+</div>
+<p>K výsledné vektorové mapě je přiřazena atributová tabulka, která je
+spojena z obou vstupních vektorových map. Atributy první vektorové
+mapy (<code class="xref std std-option docutils literal notranslate"><span class="pre">ainput</span></code>) jsou označeny prefixem <code class="docutils literal notranslate"><span class="pre">a_</span></code>, atributy druhé
+(<code class="xref std std-option docutils literal notranslate"><span class="pre">binput</span></code>) prefixem <code class="docutils literal notranslate"><span class="pre">b_</span></code>.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/v-overlay-01-table.png" src="../_images/v-overlay-01-table.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 137 </span><span class="caption-text">Atributová tabulka výsledné vektorové mapy <span class="map">chranene_uzemi</span>.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="prunik-intersection">
+<h3>Průnik (intersection)<a class="headerlink" href="#prunik-intersection" title="Permalink to this heading">¶</a></h3>
+<p>V tomto případě zjistíme, jak obalová zóna dálnic <span class="fignote">(2)</span>
+zasahuje do chráněných území <span class="fignote">(1)</span>. Opět spustíme modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.overlay.html">v.overlay</a> a použijeme operaci průnik (operátor <code class="docutils literal notranslate"><span class="pre">and</span></code> -
+<span class="fignote">(3)</span>).</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/v-overlay-02.svg" src="../_images/v-overlay-02.svg" /><figcaption>
+<p><span class="caption-number">Obr. 138 </span><span class="caption-text">Dálniční obalová zóna procházející chráněným územím.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Spuštění z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.overlay<span class="w"> </span><span class="nv">ainput</span><span class="o">=</span>chranena_uzemi<span class="w"> </span><span class="nv">binput</span><span class="o">=</span>hluk<span class="w"> </span><span class="nv">operator</span><span class="o">=</span>and<span class="w"> </span><span class="nv">output</span><span class="o">=</span>dalnice_chranena_uzemi
+</pre></div>
+</div>
+</div>
+<figure class="align-center" id="id6">
+<img alt="../_images/dalnice500buffer_chranena_uzemi-01.png" class="middle" src="../_images/dalnice500buffer_chranena_uzemi-01.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 139 </span><span class="caption-text">Hluková oblast zasahující chráněné území České středohoří před dostavbou úseku vedoucího přes toto území.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="spojeni-vektorovych-map-merge">
+<span id="index-4"></span><h2>Spojení vektorových map (merge)<a class="headerlink" href="#spojeni-vektorovych-map-merge" title="Permalink to this heading">¶</a></h2>
+<p>Spojení vektorových prvků ze vstupních map umožňuje modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.patch.html">v.patch</a> (<span class="menuselection">Vector ‣ Overlay vector maps
+‣ Patch vector maps</span>). Na rozdíl od <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.overlay.html">v.overlay</a> tento
+modul neprovádí překryvnou operaci ale nýbrž prosté uložení prvků ze
+dvou a více vstupních map do výstupní mapy.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/v-patch-01.png" src="../_images/v-patch-01.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 140 </span><span class="caption-text">Příklad vytvoření nové vektorové mapy <span class="map">doprava</span>, která je
+složena z prvků vstupních vektorových map <span class="map">silnice</span> a
+<span class="map">zeleznice</span>.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Spuštění z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.patch<span class="w"> </span><span class="nv">input</span><span class="o">=</span>silnice,zeleznice<span class="w"> </span><span class="nv">output</span><span class="o">=</span>doprava
+</pre></div>
+</div>
+</div>
+</section>
+<section id="generalizace-vektorovych-prvku">
+<span id="generalizace"></span><h2>Generalizace vektorových prvků<a class="headerlink" href="#generalizace-vektorovych-prvku" title="Permalink to this heading">¶</a></h2>
+<p>Proces generalizace vektorových prvků umožňuje modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.generalize.html">v.generalize</a>. Kromě generalizace (zobecnění,
+zjednodušení - <em>simplification</em>) lze tento modul použít i pro opačný
+proces, tj. vyhlazení (<em>smoothing</em>). Modul podporuje celou řadu
+generalizačních algoritmů, viz <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.generalize.html">dokumentace modulu</a>. V následujících ukázkách je použit algoritmus
+<a class="reference external" href="http://en.wikipedia.org/wiki/Ramer–Douglas–Peucker algorithm">Ramer–Douglas–Peucker algorithm</a>.</p>
+<p>Následuje příklad generalizace liniových prvků. Příkaz vypisuje
+procento zachovaných lomových bodů.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.generalize<span class="w"> </span><span class="nv">input</span><span class="o">=</span>zeleznice<span class="w"> </span><span class="nv">output</span><span class="o">=</span>zelenice_g<span class="w"> </span><span class="nv">method</span><span class="o">=</span>douglas<span class="w"> </span><span class="nv">threshold</span><span class="o">=</span><span class="m">100</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">.</span><span class="n">generalize</span> <span class="n">complete</span><span class="o">.</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">vertices</span> <span class="k">for</span> <span class="n">selected</span> <span class="n">features</span> <span class="n">reduced</span>
+<span class="kn">from</span> <span class="mi">409477</span> <span class="n">to</span> <span class="mi">85018</span> <span class="p">(</span><span class="mi">20</span><span class="o">%</span> <span class="n">remaining</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id8">
+<img alt="../_images/generalize-line.png" src="../_images/generalize-line.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 141 </span><span class="caption-text">Příklad generalizace linových vektorových prvků železnic (původní
+prvek černou barvou, generalizovaný červeně).</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Vzhledem k tomu, že je GRASS GIS <a class="reference internal" href="../data/import.html#import-topologie"><span class="std std-ref">topologický GIS</span></a>, tak proces generalizace plošných prvků
+automaticky zachovává prostorovou topologii prvků, viz příklad
+generalizace vrstvy obcí.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.generalize<span class="w"> </span><span class="nv">input</span><span class="o">=</span>obce@ruian<span class="w"> </span><span class="nv">output</span><span class="o">=</span>obce_g<span class="w"> </span><span class="nv">method</span><span class="o">=</span>douglas<span class="w"> </span><span class="nv">threshold</span><span class="o">=</span><span class="m">20</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id9">
+<img alt="../_images/generalize-area.png" class="middle" src="../_images/generalize-area.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 142 </span><span class="caption-text">Příklad generalizace plošných vektorových prvků obcí (vlevo původní
+prvky, vpravo generalizované).</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Vektorové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Editace vektorových dat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Prostorové funkce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topologie.html">Topologie vektorových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atributy.html">Atributová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sitove-analyzy.html">Síťové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="editace.html" title="Editace vektorových dat"
+              >předchozí</a> |
+            <a href="topologie.html" title="Topologie vektorových dat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

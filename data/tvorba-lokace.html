@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Vytvoření vlastní lokace &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Import geodat" href="import.html" />
+    <link rel="prev" title="Import a export geodat" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Import a export geodat"
+             accesskey="P">předchozí</a> |
+          <a href="import.html" title="Import geodat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="vytvoreni-vlastni-lokace">
+<span id="tvorba-lokace"></span><span id="index-0"></span><h1>Vytvoření vlastní lokace<a class="headerlink" href="#vytvoreni-vlastni-lokace" title="Permalink to this heading">¶</a></h1>
+<p>Novou lokaci lze vytvořit pomocí průvodce, který je dostupný z uvítací
+obrazovky systému GRASS. Spustíme GRASS a sekci <em>Select GRASS
+Location</em> stiskneme tlačítko <span class="item">New</span>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/wxgui-loc-s-jtsk-0.png" src="../_images/wxgui-loc-s-jtsk-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 159 </span><span class="caption-text">Spuštění průvodce tvorbou lokace.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Průvodce tvorbou lokace je možné spustit i z běžící seance, a to z menu
+<span class="menuselection">Settings ‣ GRASS working environment ‣ Create new
+location</span>.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/wxgui-loc-menu.png" src="../_images/wxgui-loc-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 160 </span><span class="caption-text">Spuštění průvodce tvorbou lokace z menu <em>správce vrstev</em>.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Lokaci lze vytvořit několika různými postupy:</p>
+<ol class="arabic simple">
+<li><p>pomocí <a class="reference external" href="http://cs.wikipedia.org/wiki/EPSG">EPSG</a> kódu</p></li>
+<li><p>na základě georeferencovaných dat</p></li>
+<li><p>na základě <a class="reference external" href="http://en.wikipedia.org/wiki/Simple_Features#Well-known_text">WKT</a> či
+<a class="reference external" href="http://cs.wikipedia.org/wiki/Shapefile#Dopl.C5.88kov.C3.A9_soubory">PRJ</a> souboru</p></li>
+<li><p>výběrem kartografického zobrazení, referenčního elipsoidu</p></li>
+<li><p>definicí parametrů pro knihovnu <a class="reference external" href="http://en.wikipedia.org/wiki/PROJ.4">PROJ.4</a></p></li>
+<li><p>bez zadaní parametrů (pro negeoreferencovaná data)</p></li>
+</ol>
+<p id="index-1">Většinou bude stačit vytvořit novou lokaci na základě EPSG kódu (viz
+tabulka níže) anebo ze vstupních geodat, pokud je máme k dispozici.</p>
+<table class="border docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>EPSG</p></th>
+<th class="head"><p>Souřadnicivý systém</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="http://epsg.io/5514">EPSG:5514</a></p></td>
+<td><p>S-JTSK</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://epsg.io/4328">EPSG:4328</a></p></td>
+<td><p>WGS-84</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://epsg.io/3857">EPSG:3857</a></p></td>
+<td><p>Web Mercator</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://epsg.io/32632">EPSG:32632</a></p></td>
+<td><p>UTM (zóna 32)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://epsg.io/32633">EPSG:32633</a></p></td>
+<td><p>UTM (zóna 33)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://epsg.io/3835">EPSG:3835</a></p></td>
+<td><p>S-42</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://epsg.io/4258">EPSG:4258</a></p></td>
+<td><p>ETRS-89</p></td>
+</tr>
+</tbody>
+</table>
+<p>Níže uvedené postupy prezentují tři nejpoužívanější metody vytvoření
+lokace.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#lokace-sjtsk"><span class="std std-ref">S-JTSK na základě EPSG kódu</span></a></p></li>
+<li><p><a class="reference internal" href="#lokace-srtm"><span class="std std-ref">Na základě vstupních geodat</span></a></p></li>
+<li><p><a class="reference internal" href="#lokace-xy"><span class="std std-ref">Lokace pro souřadnicově nepřípojená data (XY)</span></a></p></li>
+</ul>
+<section id="priklad-vytvoreni-lokace-na-zaklade-epsg-kodu">
+<span id="lokace-sjtsk"></span><span id="index-2"></span><h2>Příklad vytvoření lokace na základě EPSG kódu<a class="headerlink" href="#priklad-vytvoreni-lokace-na-zaklade-epsg-kodu" title="Permalink to this heading">¶</a></h2>
+<p>Postup bude ukázán pro souřadnicový systém S-JTSK (<a class="reference external" href="http://epsg.io/5514">EPSG:5514</a>). Na
+úvodní stránce průvodce vyplníme název lokace (<em>Project Location</em>) a
+volitelně i krátký popisek (<em>Optional Location Title</em>).</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/wxgui-loc-s-jtsk-1.png" src="../_images/wxgui-loc-s-jtsk-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 161 </span><span class="caption-text">Vytvoření lokace pro S-JTSK (krok 1).</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Na další stránce vybereme způsob vytvoření lokace.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/wxgui-loc-s-jtsk-2.svg" src="../_images/wxgui-loc-s-jtsk-2.svg" /><figcaption>
+<p><span class="caption-number">Obr. 162 </span><span class="caption-text">Vytvoření lokace pro S-JTSK (krok 2).</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V našem případě vytvoříme lokaci na základě EPSG kódu, pro
+souřadnicový systém S-JTSK <a class="reference external" href="http://epsg.io/5514">EPSG:5514</a>.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/wxgui-loc-s-jtsk-3.svg" src="../_images/wxgui-loc-s-jtsk-3.svg" /><figcaption>
+<p><span class="caption-number">Obr. 163 </span><span class="caption-text">Vytvoření lokace pro S-JTSK (krok 3).</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<img alt="../_images/wxgui-loc-s-jtsk-4.png" class="small" src="../_images/wxgui-loc-s-jtsk-4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 164 </span><span class="caption-text">Vytvoření lokace pro S-JTSK (krok 4). Po zadání EPSG kódu
+se objeví dialog pro volbu transformačních
+parametrů. Zvolte variantu (2) pro ČR.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<img alt="../_images/wxgui-loc-s-jtsk-5.png" src="../_images/wxgui-loc-s-jtsk-5.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 165 </span><span class="caption-text">Vytvoření lokace pro S-JTSK (krok 5). Potvrzení nastavení.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="../_images/wxgui-loc-s-jtsk-8.svg" src="../_images/wxgui-loc-s-jtsk-8.svg" /><figcaption>
+<p><span class="caption-number">Obr. 166 </span><span class="caption-text">Poté můžete systém GRASS spustit s právě vytvořenou lokací.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Vytvoření lokace z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grass74<span class="w"> </span>-c<span class="w"> </span>EPSG:5514:2<span class="w"> </span>/opt/grassdata/skoleni-s-jstk
+</pre></div>
+</div>
+</div>
+</section>
+<section id="vytvoreni-lokace-na-zaklade-geodat">
+<span id="lokace-srtm"></span><h2>Vytvoření lokace na základě geodat<a class="headerlink" href="#vytvoreni-lokace-na-zaklade-geodat" title="Permalink to this heading">¶</a></h2>
+<p>Pro ilustraci použijeme DMT ve formátu GeoTIFF dostupný v rámci
+GISMentors datasetu jako <a class="reference external" href="http://training.gismentors.eu/geodata/eu-dem/dmt.zip">dmt.zip</a> (97MB, zdroj
+EU-DEM, <a class="reference external" href="http://epsg.io/3035">EPSG:3035</a>).</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/wxgui-loc-srtm-0.png" src="../_images/wxgui-loc-srtm-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 167 </span><span class="caption-text">Vytvoření lokace pro data EU-DEM (krok 1).</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
+<img alt="../_images/wxgui-loc-srtm-1.svg" src="../_images/wxgui-loc-srtm-1.svg" /><figcaption>
+<p><span class="caption-number">Obr. 168 </span><span class="caption-text">Vytvoření lokace pro data EU-DEM (krok 2).</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id11">
+<img alt="../_images/wxgui-loc-srtm-2.png" src="../_images/wxgui-loc-srtm-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 169 </span><span class="caption-text">Vytvoření lokace pro data EU-DEM (krok 3).</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<img alt="../_images/wxgui-loc-srtm-3.png" src="../_images/wxgui-loc-srtm-3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 170 </span><span class="caption-text">Vytvoření lokace pro data EU-DEM (krok 4).</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<img alt="../_images/wxgui-loc-srtm-4.png" src="../_images/wxgui-loc-srtm-4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 171 </span><span class="caption-text">Vytvoření lokace pro data EU-DEM (krok 5). Volitelně
+můžeme data, na základě kterých byla lokace vytvořena, i
+naimportovat (do mapsetu <em>PERMANENT</em>).</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="vytvoreni-lokace-pro-souradnicove-nepripojena-data">
+<span id="lokace-xy"></span><h2>Vytvoření lokace pro souřadnicově nepřipojená data<a class="headerlink" href="#vytvoreni-lokace-pro-souradnicove-nepripojena-data" title="Permalink to this heading">¶</a></h2>
+<figure class="align-center" id="id14">
+<img alt="../_images/wxgui-loc-xy-0.png" src="../_images/wxgui-loc-xy-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 172 </span><span class="caption-text">Vytvoření lokace pro XY (krok 1).</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id15">
+<img alt="../_images/wxgui-loc-xy-1.svg" src="../_images/wxgui-loc-xy-1.svg" /><figcaption>
+<p><span class="caption-number">Obr. 173 </span><span class="caption-text">Vytvoření lokace pro XY (krok 2).</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id16">
+<img alt="../_images/wxgui-loc-xy-2.png" src="../_images/wxgui-loc-xy-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 174 </span><span class="caption-text">Vytvoření lokace pro XY (krok 3).</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="vytvoreni-noveho-mapsetu-v-ramci-existujici-lokace">
+<span id="index-3"></span><h3>Vytvoření nového mapsetu v rámci existujicí lokace<a class="headerlink" href="#vytvoreni-noveho-mapsetu-v-ramci-existujici-lokace" title="Permalink to this heading">¶</a></h3>
+<p>Nový mapset v rámci již existující lokace můžeme vytvořit dvěma
+způsoby:</p>
+<ul class="simple">
+<li><p>z uvítací obrazovky systému GRASS anebo</p></li>
+</ul>
+<figure class="align-center" id="id17">
+<img alt="../_images/wxgui-new-mapset.svg" src="../_images/wxgui-new-mapset.svg" /><figcaption>
+<p><span class="caption-number">Obr. 175 </span><span class="caption-text">Vytvoření nového mapsetu <span class="fignote">(2)</span> v rámci vybrané
+lokace <span class="fignote">(1)</span>.</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>z menu <em>Správce vrstev</em> <span class="menuselection">Settings ‣ GRASS working
+environment ‣ Create new mapset</span> v rámci již běžící seance</p></li>
+</ul>
+<figure class="align-center" id="id18">
+<img alt="../_images/wxgui-new-mapset-menu.png" src="../_images/wxgui-new-mapset-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 176 </span><span class="caption-text">Vytvoření nového mapsetu v rámci aktuální lokace z menu
+<em>správce vrstev</em>.</span><a class="headerlink" href="#id18" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id19">
+<img alt="../_images/wxgui-new-mapset-dialog.png" class="small" src="../_images/wxgui-new-mapset-dialog.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 177 </span><span class="caption-text">V následující dialogu zvolíme název nového mapsetu a
+potvrdíme jeho vytvoření.</span><a class="headerlink" href="#id19" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Po vytvoření nového mapsetu se do něj systém GRASS automaticky přepne.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Import a export geodat</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vytvoření vlastní lokace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import.html">Import geodat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export do ostatních GIS formátů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html">Přenost dat mezi lokacemi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="georeferencovani.html">Georeferencování</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Import a export geodat"
+              >předchozí</a> |
+            <a href="import.html" title="Import geodat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Síťové analýzy &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Import a export geodat" href="../data/index.html" />
+    <link rel="prev" title="Atributová data" href="atributy.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="atributy.html" title="Atributová data"
+             accesskey="P">předchozí</a> |
+          <a href="../data/index.html" title="Import a export geodat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="sitove-analyzy">
+<h1>Síťové analýzy<a class="headerlink" href="#sitove-analyzy" title="Permalink to this heading">¶</a></h1>
+<p>GRASS nabízí řadu modulů pro tzv. <em>síťové analýzy</em>. Jedná se o typy
+úloh nad síťovým grafem (v tomto případě cestní sítě).</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.html">v.net</a> - správa vektorové sítě</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.alloc.html">v.net.alloc</a> - alokace zdrojů (vytvoření podsítí, např. policejní okrsky)</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.allpairs.html">v.net.allpairs</a> - počítá nejkratší cesty mezi všemi páry uzlů v síti</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.bridge.html">v.net.bridge</a> - hledá mosty a artikulační body</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.centrality.html">v.net.centrality</a> - zjišťuje centralitu (užitečnost) uzlů v síti</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.components.html">v.net.components</a> - hledá silné a slabé komponenty v síti (grafu)</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.connectivity.html">v.net.connectivity</a> - zjišťuje úroveň spojitosti sítě</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.distance.html">v.net.distance</a> - výpočet vzdáleností po síti mezi dvěma skupinami prvků</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.flow.html">v.net.flow</a> - nalezení minimálního toku v síti mezi dvěma skupinami uzlů</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.iso.html">v.net.iso</a> - analýza nákladů pohybu od zdroje</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.path.html">v.net.path</a> - hledání nejkratší cesty</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.salesman.html">v.net.salesman</a> - problém obchodního cestujícího</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.spanningtree.html">v.net.spanningtree</a> - hledá minimální kostru sítě (grafu)</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.steiner.html">v.net.steiner</a> - problém minimálního Steinerova stromu</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.timetable.html">v.net.timetable</a> - hledá nejkratší cesty s užitím časových plánů</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.visibility.html">v.net.visibility</a> - konstrukce grafu viditelnosti</p></li>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.net.turntable.html">v.net.turntable</a> - připravovaný modul, v němž bude možné definovat ceny za odbočování v jednotlivých směrech</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Síťové analýzy jsou založeny na heuristických algoritmech,
+což znamená, že nebude pravděpodobně nalezeno optimální řešení,
+ale pouze suboptimální (kompromis mezi optimálním řešením a
+omezením výpočetního času na přípustnou dobu).</p>
+</div>
+<section id="ukazka">
+<h2>Ukázka<a class="headerlink" href="#ukazka" title="Permalink to this heading">¶</a></h2>
+<figure class="align-center" id="id2">
+<img alt="../_images/wxgui-vnet-01.png" src="../_images/wxgui-vnet-01.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 157 </span><span class="caption-text">Spuštění grafického nástroje pro síťové analýzy z nástrojové lišty
+mapového okna.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/wxgui-vnet.png" class="large" src="../_images/wxgui-vnet.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 158 </span><span class="caption-text">Příklad nalezení nejkratší cesty pomocí GUI nástroje pro síťové
+analýzy.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Aktualizovat screenshot (nástroj je ve verzi GRASS 7.4.2
+nefunkční)</p>
+</div>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Je možné rozlišovat směr linie tam <em>(forward)</em> a zpět <em>(backward)</em>.
+Všechny moduly totiž obsahují parametry, které dovolují definovat ceny
+pro pohyb jednotlivými směry. Zakázané směry jsou reprezentovány
+negativními cenami (např. jednosměrné komunikace, uzavírky silnic,
+atd.).</p>
+<p>Příprava dat je náročná a je náplní navazujícího <a class="reference external" href="http://training.gismentors.eu/grass-gis-pokrocily">školení
+pro pokročilé uživatele</a>.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Vektorové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Editace vektorových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove-funkce.html">Prostorové funkce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topologie.html">Topologie vektorových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="atributy.html">Atributová data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Síťové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="atributy.html" title="Atributová data"
+              >předchozí</a> |
+            <a href="../data/index.html" title="Import a export geodat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

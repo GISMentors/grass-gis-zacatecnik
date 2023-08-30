@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Import a export geodat &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Vytvoření vlastní lokace" href="tvorba-lokace.html" />
+    <link rel="prev" title="Síťové analýzy" href="../vektorova_data/sitove-analyzy.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../vektorova_data/sitove-analyzy.html" title="Síťové analýzy"
+             accesskey="P">předchozí</a> |
+          <a href="tvorba-lokace.html" title="Vytvoření vlastní lokace"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="import-a-export-geodat">
+<h1>Import a export geodat<a class="headerlink" href="#import-a-export-geodat" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tvorba-lokace.html">Vytvoření vlastní lokace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tvorba-lokace.html#priklad-vytvoreni-lokace-na-zaklade-epsg-kodu">Příklad vytvoření lokace na základě EPSG kódu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tvorba-lokace.html#vytvoreni-lokace-na-zaklade-geodat">Vytvoření lokace na základě geodat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tvorba-lokace.html#vytvoreni-lokace-pro-souradnicove-nepripojena-data">Vytvoření lokace pro souřadnicově nepřipojená data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="import.html">Import geodat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="import.html#rastrova-data">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import.html#vektorova-data">Vektorová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import.html#poznamky-k-importu-vektorovych-dat">Poznámky k importu vektorových dat</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Export do ostatních GIS formátů</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="export.html#rastrova-data">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html#vektorova-data">Vektorová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html#export-obsahu-mapove-okna-do-obrazku">Export obsahu mapové okna do obrázku</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prenos-dat.html">Přenost dat mezi lokacemi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html#kopirovani">Kopírování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html#vymenny-format-pack">Výměnný formát (pack)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html#prenos-mapsetu-ci-lokaci">Přenos mapsetů či lokací</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="georeferencovani.html">Georeferencování</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="georeferencovani.html#postup">Postup</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Import a export geodat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tvorba-lokace.html">Vytvoření vlastní lokace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import.html">Import geodat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export do ostatních GIS formátů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prenos-dat.html">Přenost dat mezi lokacemi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="georeferencovani.html">Georeferencování</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../vektorova_data/sitove-analyzy.html" title="Síťové analýzy"
+              >předchozí</a> |
+            <a href="tvorba-lokace.html" title="Vytvoření vlastní lokace"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Struktura dat - koncept lokací a mapsetů &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Zobrazení geodat v mapovém okně" href="zobrazeni-geodat.html" />
+    <link rel="prev" title="Úvod do systému GRASS" href="prvni-kroky.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="prvni-kroky.html" title="Úvod do systému GRASS"
+             accesskey="P">předchozí</a> |
+          <a href="zobrazeni-geodat.html" title="Zobrazení geodat v mapovém okně"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="struktura-dat-koncept-lokaci-a-mapsetu">
+<h1>Struktura dat - koncept lokací a mapsetů<a class="headerlink" href="#struktura-dat-koncept-lokaci-a-mapsetu" title="Permalink to this heading">¶</a></h1>
+<p>Data, ke kterým GRASS přistupuje, musí mít pevně danou strukturu. Při
+spuštění systému GRASS uživatel volí <em>tři</em> níže uvedené elementy v
+daném pořadí, viz obrázek níže.</p>
+<figure class="align-center">
+<img alt="../_images/startup-1.svg" src="../_images/startup-1.svg" /></figure>
+<p><strong>1. Adresář s geodaty (DataBase)</strong></p>
+<blockquote>
+<div><p>Jde o adresář umístěný na lokálním či síťovém disku,
+např. <code class="file docutils literal notranslate"><span class="pre">/opt/grassdata</span></code> nebo <code class="file docutils literal notranslate"><span class="pre">C:\grassdata</span></code> v případě
+MS Windows. V tomto adresáři jsou uložena veškerá data, ke kterým
+GRASS přistupuje (tedy rastrové a vektorové mapy v nativním formátu
+GRASS, atributové tabulky ve formátu SQLite či DBF, různá nastavení
+apod.). Výjimku představují atributová (popisná) data skladovaná v
+databázových systémech jako je např. <a class="reference external" href="http://cs.wikipedia.org/wiki/PostgreSQL">PostgreSQL</a> či
+<a class="reference external" href="http://cs.wikipedia.org/wiki/MySQL">MySQL</a>.</p>
+</div></blockquote>
+<p id="lokace"><span id="index-0"></span><strong>2. Lokace (Location)</strong></p>
+<blockquote>
+<div><p>Lokace je adresář umístěný v GRASS DataBase (adresáři s
+geodaty). Lokace obsahuje data, která souvisejí s daným
+<em>projektem</em>. Lokace je definována <em>souřadnicovým systémem</em>
+(referenční elipsoid, kartografické zobrazení, mapové jednotky) a
+výchozí velikostí zájmového území.</p>
+</div></blockquote>
+<p id="index-1"><strong>3. Mapset</strong></p>
+<blockquote>
+<div><p>Mapset je souborem map, které tvoří logický celek v rámci lokace
+(projektu). Může např. odpovídat jednotlivým uživatelům nebo
+uceleným analýzám (studium vegetace, záplavová území, apod.). Každá
+lokace musí obsahovat mapset s unikátním názvem <em>PERMANENT</em>. Ten
+většinou obsahuje základní datové vrstvy a ostatní mapsety jsou
+brány jako pracovní (zpracování vstupních dat, jejich analýza
+apod.).</p>
+</div></blockquote>
+<figure class="align-center" id="id1">
+<img alt="../_images/help_loc_struct.png" class="middle" src="../_images/help_loc_struct.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 19 </span><span class="caption-text">Struktura adresáře s geodaty, vztah lokace a mapsetů,
+umístění souborů s daty pro různé typy map (zdroj:
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/helptext.html">manuál systému GRASS</a>).</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>GRASS DataBase je definovaná proměnnou prostředí
+<span class="target" id="index-2"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">GISDBASE</span></code>, lokace <span class="target" id="index-3"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">LOCATION_NAME</span></code> a mapset
+proměnnou <span class="target" id="index-4"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">MAPSET</span></code>, viz modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/g.gisenv.html">g.gisenv</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p><strong>Obvyklé umístění adresáře s geodaty</strong></p>
+<p>Adresář s geodaty je většinou umístěn v domovském adresáři
+uživatele pod názvem <code class="file docutils literal notranslate"><span class="pre">grassdata</span></code>. V případě MS Windows to
+může být <code class="file docutils literal notranslate"><span class="pre">%USERPROFILE%\Documents\grassdata</span></code>, u
+UNIXových operačních systémů jako je GNU/Linux či Mac OS X potom
+<code class="file docutils literal notranslate"><span class="pre">$HOME/grassdata</span></code>.</p>
+</div>
+<section id="vyhledavaci-cesta">
+<span id="g-mapsets"></span><span id="index-5"></span><h2>Vyhledávací cesta<a class="headerlink" href="#vyhledavaci-cesta" title="Permalink to this heading">¶</a></h2>
+<p>Vyhledávací cesta definuje viditelné mapsety v rámci aktuální
+lokace. Ve výchozím nastavení je ve vyhledávací cestě vždy umístěn
+aktuální mapset a mapset <cite>PERMANENT</cite>.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/d-rast-user1.png" src="../_images/d-rast-user1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 20 </span><span class="caption-text">Přidání nové rastrové mapy do mapového okna, viditelné
+jsou pouze dva mapsety - aktuální (<cite>user1</cite>) a mapset <cite>PERMANENT</cite>.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Vyhledávací cestu lze modifikovat z menu <span class="menuselection">Settings ‣
+GRASS working environment ‣ Mapset access</span>.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/mapset-access.png" class="small" src="../_images/mapset-access.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 21 </span><span class="caption-text">Přidání mapsetu „ruian“ do vyhledávací cesty.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Přidání mapsetu do vyhledávací cesty z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.mapsets<span class="w"> </span><span class="nv">mapset</span><span class="o">=</span>ruian<span class="w"> </span><span class="nv">operation</span><span class="o">=</span>add
+</pre></div>
+</div>
+</div>
+<figure class="align-center" id="id4">
+<img alt="../_images/d-rast-user1-ruian.png" src="../_images/d-rast-user1-ruian.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 22 </span><span class="caption-text">Přidání nové rastrové mapy do mapového okna, kromě aktuálního
+mapsetu a mapset <cite>PERMANENT</cite> je viditelný i mapset „ruian“.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">První kroky</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../instalace/index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prvni-kroky.html">Úvod do systému GRASS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zobrazeni-geodat.html">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduly.html">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr.html">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor.html">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="prvni-kroky.html" title="Úvod do systému GRASS"
+              >předchozí</a> |
+            <a href="zobrazeni-geodat.html" title="Zobrazení geodat v mapovém okně"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

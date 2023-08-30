@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Topografické analýzy &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Rastrová algebra" href="rastrova-algebra.html" />
+    <link rel="prev" title="Tabulka barev" href="tabulka-barev.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="tabulka-barev.html" title="Tabulka barev"
+             accesskey="P">předchozí</a> |
+          <a href="rastrova-algebra.html" title="Rastrová algebra"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="topograficke-analyzy">
+<span id="index-0"></span><h1>Topografické analýzy<a class="headerlink" href="#topograficke-analyzy" title="Permalink to this heading">¶</a></h1>
+<p>V následujících příkladech použíjeme digitální model terénu získaný z
+evropského programu EU-DEM, který je součástí lokace <em>gismentors</em> v
+mapsetu PERMANENT.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Ve školení <a class="reference external" href="http://training.gismentors.eu/grass-gis-pokrocily">GRASS GIS pro pokročilé</a> je uveden postup pro tvorbu velmi
+<a class="reference external" href="http://training.gismentors.eu/grass-gis-pokrocily/lidar/dmr-dmp-cuzk.html">podrobného digitální modelu terénu</a> z lidarových dat
+poskytovaných v ČR.</p>
+</div>
+<p>Základní topografické analýzy povrchu poskytuje modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.slope.aspect.html">r.slope.aspect</a> (<span class="menuselection">Raster ‣ Terrain
+analysis ‣ Slope and aspect</span>).</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/r-slope-aspect-0.png" src="../_images/r-slope-aspect-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 98 </span><span class="caption-text">V dialogu nejprve zvolíme vstupní rastrovou mapu s
+digitálním modelem terénu <span class="fignote">(1)</span> a poté v záložce
+<span class="item">Output</span> <span class="fignote">(2)</span> požadovaný výstup.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Podobně jako ostatní moduly pro zpracování rastrových dat i tento
+modul pracuje v aktuálním výpočetním regionu. Proto je nutné před
+výpočtem tento <a class="reference internal" href="../intro/region.html#nastaveni-regionu"><span class="std std-ref">region nastavit podle vstupní rastrové mapy</span></a>. Modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.slope.aspect.html">r.slope.aspect</a> má přeci
+jenom jednu specialitu, nepřejímá prostorové rozlišení z
+výpočetního regionu, ale ze vstupní rastrové vrstvy!</p>
+</div>
+<section id="sklon-svahu">
+<span id="index-1"></span><h2>Sklon svahu<a class="headerlink" href="#sklon-svahu" title="Permalink to this heading">¶</a></h2>
+<figure class="align-center" id="id2">
+<img alt="../_images/r-slope-aspect-s.png" src="../_images/r-slope-aspect-s.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 99 </span><span class="caption-text">Výpočet sklonu svahu, parametr <code class="xref std std-option docutils literal notranslate"><span class="pre">slope</span></code>.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/slope.png" class="middle" src="../_images/slope.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 100 </span><span class="caption-text">Výsledná mapa sklonu svahu ve stupních.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="orientace-svahu">
+<span id="aspect"></span><span id="index-2"></span><h2>Orientace svahu<a class="headerlink" href="#orientace-svahu" title="Permalink to this heading">¶</a></h2>
+<figure class="align-center" id="id4">
+<img alt="../_images/r-slope-aspect-a.png" src="../_images/r-slope-aspect-a.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 101 </span><span class="caption-text">Výpočet orientace svahu, parametr <code class="xref std std-option docutils literal notranslate"><span class="pre">aspect</span></code>.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../_images/aspect.png" class="middle" src="../_images/aspect.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 102 </span><span class="caption-text">Výsledná mapa orientace svahu (azimut ve stupních, viz diagram níže).</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<img alt="../_images/aspect_diagram.png" class="small" src="../_images/aspect_diagram.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 103 </span><span class="caption-text">Azimut orientace svahu.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Postup reklasifikace orientace svahu je uveden v kapitole
+<a class="reference internal" href="reklasifikace.html#r-recode"><span class="std std-ref">Reklasifikace rastrových dat</span></a>.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/aspect-reclass.png" class="middle" src="../_images/aspect-reclass.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 104 </span><span class="caption-text">Výsledek reklasifikace mapy orientace svahu.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="stinovany-relief">
+<h2>Stínovaný reliéf<a class="headerlink" href="#stinovany-relief" title="Permalink to this heading">¶</a></h2>
+<p>Stínovaný reliéf může být vytvořen pomocí modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.relief.html">r.relief</a>. Podobně jako u ostatních modulů pro zpracování
+rastrových dat je třeba před výpočtem nastavit <a class="reference internal" href="../intro/region.html#nastaveni-regionu"><span class="std std-ref">výpočetní region</span></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.relief<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">output</span><span class="o">=</span>shaded
+</pre></div>
+</div>
+<p>Ve výše uvedeném příkladě bude stínovaný reliéf vytvořen ve výchozím
+nastavení, tj. světelný zdroj s azimutem 270° a výškou 30°.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/shaded-detail.png" class="middle" src="../_images/shaded-detail.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 105 </span><span class="caption-text">Stínovaný reliéf ve výchozím nastavení.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Příklad jiného nastavení níže.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.relief<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">output</span><span class="o">=</span>shaded1<span class="w"> </span><span class="nv">azimuth</span><span class="o">=</span><span class="m">90</span><span class="w"> </span><span class="nv">altitude</span><span class="o">=</span><span class="m">60</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id9">
+<img alt="../_images/shaded-comp.png" class="middle" src="../_images/shaded-comp.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 106 </span><span class="caption-text">Porovnání stínovaný reliéfu v různém nastavení (azimut 270/90° a
+výška 30/60° světelného zdroje).</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p id="display-shade">Takto vytvořený stínovaný reliéf lze vizualizovat v tabulce barev
+převzaté z rastrové mapy digitálního modelu terénu. Pro tento účel
+lze využít dva nástroje <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.shade.html">d.shade</a> a
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.shade.html">r.shade</a>. První uvedený nástroj slouží pro zobrazení
+výsledku v mapovém okně, viz kapitola <a class="reference internal" href="../intro/zobrazeni-geodat.html#d-rast-various"><span class="std std-ref">Zobrazení geodat v mapovém
+okně</span></a>. Druhý modul, <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.shade.html">r.shade</a> výsledek
+zapisuje v podobě nově vytvořené rastrové mapy.</p>
+<p>Příklad zobrazení stínovaného reliéfu pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.shade.html">d.shade</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>d.shade<span class="w"> </span><span class="nv">shade</span><span class="o">=</span>shaded<span class="w"> </span><span class="nv">color</span><span class="o">=</span>dmt
+</pre></div>
+</div>
+<figure class="align-center" id="id10">
+<img alt="../_images/shaded-dmt.png" class="middle" src="../_images/shaded-dmt.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 107 </span><span class="caption-text">Stínovaný reliéf zobrazený pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.shade.html">d.shade</a>.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Místo stíhovaného reliéfu lze použít mapu orientace svahu
+vytvořené pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.slope.aspect.html">r.slope.aspect</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>d.shade<span class="w"> </span><span class="nv">shade</span><span class="o">=</span>aspect<span class="w"> </span><span class="nv">color</span><span class="o">=</span>dmt
+</pre></div>
+</div>
+<figure class="align-center" id="id11">
+<img alt="../_images/shaded-aspect.png" class="middle" src="../_images/shaded-aspect.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 108 </span><span class="caption-text">Mapa orientace svahu zobrazená pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.shade.html">d.shade</a>.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sky-view-faktor">
+<span id="index-3"></span><h2>Sky-view faktor<a class="headerlink" href="#sky-view-faktor" title="Permalink to this heading">¶</a></h2>
+<p>Sky-view faktor (SVF) je vizualizační technika, která pro daný bod
+zobrazuje poměr viditelné oblohy. V systému GRASS umožňuje SVF
+vypočítat modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/addons/r.skyview.html">r.skyview</a> (jedná se o Addons modul,
+který je třeba doinstalovat, viz kapitola <a class="reference internal" href="../intro/moduly.html#addons-install"><span class="std std-ref">Addons</span></a>).</p>
+<p>Výpočet probíhá podobně jako u ostatních modulů pro zpracování
+rastrových dat na území <a class="reference internal" href="../intro/region.html#region"><span class="std std-ref">výpočetního regionu</span></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.skyview<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">output</span><span class="o">=</span>svf
+</pre></div>
+</div>
+<figure class="align-center" id="id12">
+<img alt="../_images/svf.png" class="middle" src="../_images/svf.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 109 </span><span class="caption-text">Sky-view faktor pro zájmové území. Hodnoty od 0 do 1. Čím vyšší
+hodnota (světlejší barva) tím otevřenější terén.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="analyza-viditelnosti">
+<h2>Analýza viditelnosti<a class="headerlink" href="#analyza-viditelnosti" title="Permalink to this heading">¶</a></h2>
+<p>Klíčový modul pro výpočet analýzy viditelnosti je modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.viewshed.html">r.viewshed</a> (<span class="menuselection">Raster ‣ Terrain analysis
+‣ Visibility</span>).</p>
+<figure class="align-center" id="id13">
+<img alt="../_images/r-viewshed-0.png" src="../_images/r-viewshed-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 110 </span><span class="caption-text">Zvolíme vstupní rastrovou mapu <span class="fignote">(1)</span> s povrchem,
+název výstupní mapy viditelnosti <span class="fignote">(2)</span> a
+souřadnice observačního bodu a to buď manuálně či
+interaktivně z mapového okna <span class="fignote">(3)</span>.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Výpočet omezíme na menší území, např. <a class="reference internal" href="../intro/region.html#nastaveni-regionu-mapove-okno"><span class="std std-ref">interaktivním
+nastavením výpočetního regionu</span></a>
+přímo z mapového okna.</p>
+</div>
+<figure class="align-center" id="id14">
+<img alt="../_images/r-viewshed-1.png" class="large" src="../_images/r-viewshed-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 111 </span><span class="caption-text">Observační bod je v mapovém okně označen černým křížkem,
+obdélník červené barvy zobrazuje hranice výpočetní regionu.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id15">
+<img alt="../_images/viewshed-legend.png" class="middle" src="../_images/viewshed-legend.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 112 </span><span class="caption-text">Výsledek analýzy viditelnosti z observačního bodu včetně legendy
+zobrazující velikost úhlu, pod kterým je místo z daného
+observačního bodu vidět.</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="generovani-vrstevnic">
+<span id="vrstevnice"></span><h2>Generování vrstevnic<a class="headerlink" href="#generovani-vrstevnic" title="Permalink to this heading">¶</a></h2>
+<p>Vrstevnice lze odvodit z digitálního modelu terénu pomocí modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.contour.html">r.contour</a>. Příklad vytvoření vektorové mapy vrstevnic v
+kroku 5m v aktuálním výpočetním regionu níže.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.contour<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">output</span><span class="o">=</span>vrstevnice<span class="w"> </span><span class="nv">step</span><span class="o">=</span><span class="m">5</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id16">
+<img alt="../_images/contours.png" class="middle" src="../_images/contours.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 113 </span><span class="caption-text">Vytvořené vrstevnice v kroku 5m.</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Rastrové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/region.html">Výpočetní region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="statistika.html">Základní statistiky rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask.html">Nastavení masky</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabulka-barev.html">Tabulka barev</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Topografické analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova-algebra.html">Rastrová algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reklasifikace.html">Reklasifikace rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyza-nakladu.html">Rastrová analýza nákladů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="tabulka-barev.html" title="Tabulka barev"
+              >předchozí</a> |
+            <a href="rastrova-algebra.html" title="Rastrová algebra"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

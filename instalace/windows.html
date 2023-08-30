@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>MS Windows &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Úvod do systému GRASS" href="../intro/prvni-kroky.html" />
+    <link rel="prev" title="GNU/Linux" href="linux.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="linux.html" title="GNU/Linux"
+             accesskey="P">předchozí</a> |
+          <a href="../intro/prvni-kroky.html" title="Úvod do systému GRASS"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ms-windows">
+<span id="index-0"></span><h1>MS Windows<a class="headerlink" href="#ms-windows" title="Permalink to this heading">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Pokud máte nainstalován na svém počítači <a class="reference external" href="https://www.qgis.org">QGIS</a>, tak máte systém GRASS již k dispozici a
+nemusíte ho instalovat.</p>
+</div>
+<p>Systém GRASS je možné pod MS Windows nainstalovat <em>dvěma způsoby</em>:</p>
+<ol class="arabic simple">
+<li><p>pomocí tradičního <a class="reference internal" href="#nativni-instalator"><span class="std std-ref">nativního instalátoru</span></a></p>
+<ul class="simple">
+<li><p>vhodné <em>pro naprosté začátečníky</em></p></li>
+<li><p>nepředpokládáme častou aktualizaci softwaru</p></li>
+</ul>
+</li>
+<li><p>pomocí síťového instalátoru <a class="reference internal" href="#osgeo4w-instalator"><span class="std std-ref">OSGeo4W</span></a> (<em>doporučeno</em>)</p>
+<ul class="simple">
+<li><p>komplexní řešení umožňující instalaci i dalšího softwaru
+distribuovaného pod hlavičkou <a class="reference external" href="http://www.osgeo.org/">OSGeo</a>
+(jako je např. <a class="reference external" href="http://qgis.org">QGIS</a>, <a class="reference external" href="http://mapserver.org">MapServer</a> a další)</p></li>
+<li><p>vhodné při předpokladu časté aktualizace softwaru</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Na většině dnešních počítačů zvolte instalaci 64bitové verze softwaru.</p>
+</div>
+<section id="nativni-instalator">
+<span id="id1"></span><h2>Nativní instalátor<a class="headerlink" href="#nativni-instalator" title="Permalink to this heading">¶</a></h2>
+<p>Nativní instalátor je dostupný na adrese: <a class="reference external" href="https://grass.osgeo.org/download/software/ms-windows/#stand-alone">https://grass.osgeo.org/download/software/ms-windows/#stand-alone</a>. Následující obrazová dokumentace dokresluje proces instatalace.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/wingrass-0.png" src="../_images/wingrass-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 4 </span><span class="caption-text">Spustíme instalátor.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../_images/wingrass-1.png" src="../_images/wingrass-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5 </span><span class="caption-text">Potvrdíme licenci.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../_images/wingrass-2.png" src="../_images/wingrass-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 6 </span><span class="caption-text">Potvrdíme adresář, kam se má GRASS nainstalovat.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<span id="nativni-instalator-data"></span><img alt="../_images/wingrass-3.png" src="../_images/wingrass-3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 7 </span><span class="caption-text">Důrazně doporučujeme (vyhnete se problémům při spuštení
+systému GRASS v případě chybějících knihoven MS Windows)
+nainstalovat také „Important Microsoft Runtime Libraries“
+a pokud nemáte vlastní data tak i ukázkovou geografickou
+datovou sadu pro GRASS „North Carolina“.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<img alt="../_images/wingrass-4.png" class="small" src="../_images/wingrass-4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 8 </span><span class="caption-text">GRASS můžeme spustit z nabídky Start.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="../_images/wingrass-5.png" src="../_images/wingrass-5.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 9 </span><span class="caption-text">Po startu se objeví úvodní obrazovka systému GRASS pro
+výběr tzv. lokace a mapsetu, viz kapitola
+<a class="reference internal" href="../intro/struktura-dat.html"><span class="doc">Struktura dat - koncept lokací a mapsetů</span></a>.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="osgeo4w">
+<span id="osgeo4w-instalator"></span><span id="index-1"></span><h2>OSGeo4W<a class="headerlink" href="#osgeo4w" title="Permalink to this heading">¶</a></h2>
+<p>Síťový instalátor je ke stažení pro <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe">32 bitovou</a> a <a class="reference external" href="http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe">64
+bitovou</a>
+platformu.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/osgeo4w-0.png" src="../_images/osgeo4w-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10 </span><span class="caption-text">GRASS nainstalujeme ze sekce <code class="docutils literal notranslate"><span class="pre">Express</span> <span class="pre">Desktop</span> <span class="pre">Install</span></code>.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
+<img alt="../_images/osgeo4w-1.png" src="../_images/osgeo4w-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 11 </span><span class="caption-text">V následující části necháme povolené balíčky GDAL a GRASS GIS.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>V rámci OSGeo4W je možné nainstalovat i <em>denní snapshoty</em> vývojové
+verze systému GRASS. To se hodí v případě, že potřebujete otestovat
+např. novou funkcionalitu, která není součástí stabilní verze.</p>
+<figure class="align-center" id="id11">
+<img alt="../_images/osgeo4w-2.png" src="../_images/osgeo4w-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12 </span><span class="caption-text">Zvolíme <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Install</span></code>.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<img alt="../_images/osgeo4w-3.png" src="../_images/osgeo4w-3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 13 </span><span class="caption-text">Ze sekce <code class="docutils literal notranslate"><span class="pre">Desktop</span></code> vybereme balíček <code class="docutils literal notranslate"><span class="pre">grass-daily</span></code>
+(denní snapshoty aktuální vývojové verze systému GRASS).</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<section id="poznamky">
+<h3>Poznámky<a class="headerlink" href="#poznamky" title="Permalink to this heading">¶</a></h3>
+<section id="nastaveni-velikosti-pisma-terminalu">
+<h4>Nastavení velikosti písma terminálu<a class="headerlink" href="#nastaveni-velikosti-pisma-terminalu" title="Permalink to this heading">¶</a></h4>
+<p>V novějších verzích Windows bývá výchozí velikost písma terminálu
+příliš malá.</p>
+<figure class="align-center">
+<img alt="../_images/winterminal-small.png" class="small" src="../_images/winterminal-small.png" />
+</figure>
+<p>Velikost písma můžete změnit ve vlastnostech okna (pravé tlačítko myši
+nad titulkem okna, <span class="menuselection">Vlastnosti</span>).</p>
+<figure class="align-center">
+<img alt="../_images/winterminal-font.png" class="small" src="../_images/winterminal-font.png" />
+</figure>
+</section>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../intro/index.html">První kroky</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/prvni-kroky.html">Úvod do systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/struktura-dat.html">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/zobrazeni-geodat.html">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/moduly.html">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/rastr.html">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/vektor.html">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="linux.html" title="GNU/Linux"
+              >předchozí</a> |
+            <a href="../intro/prvni-kroky.html" title="Úvod do systému GRASS"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

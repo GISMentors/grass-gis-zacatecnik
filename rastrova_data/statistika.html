@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Základní statistiky rastrových dat &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Nastavení masky" href="mask.html" />
+    <link rel="prev" title="Výpočetní region" href="../intro/region.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../intro/region.html" title="Výpočetní region"
+             accesskey="P">předchozí</a> |
+          <a href="mask.html" title="Nastavení masky"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="zakladni-statistiky-rastrovych-dat">
+<span id="index-0"></span><h1>Základní statistiky rastrových dat<a class="headerlink" href="#zakladni-statistiky-rastrovych-dat" title="Permalink to this heading">¶</a></h1>
+<p>Kromě výpisu <a class="reference internal" href="../intro/rastr.html#raster-metadata"><span class="std std-ref">základních metadat</span></a> rastrových
+dat systém GRASS disponuje dalšími moduly pro výpis statistických
+informací:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#r-report"><span class="std std-ref">r.report</span></a> pro přehledný výpis informací o rastrové mapě,</p></li>
+<li><p><a class="reference internal" href="#r-univar"><span class="std std-ref">r.univar</span></a> pro základní statistiku a</p></li>
+<li><p><a class="reference internal" href="#r-stats"><span class="std std-ref">r.stats</span></a> pro výpis vybraných statistik (určeno
+především pro pokročilé uživatele a jejich skripty).</p></li>
+</ul>
+<section id="report">
+<span id="r-report"></span><span id="index-1"></span><h2>Report<a class="headerlink" href="#report" title="Permalink to this heading">¶</a></h2>
+<p>Základní informace o rastrových datech poskytuje modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.report.html">r.report</a> dostupný buď z menu <span class="menuselection">Raster ‣
+Reports and statistics ‣ Sum area by raster map and category</span> anebo
+z kontextového menu <em>správce vrstev</em>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/lmgr-r-report.png" src="../_images/lmgr-r-report.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 71 </span><span class="caption-text">Pokud je modul vyvolán z kontextového menu, je automaticky
+spuštěn s parametrem <code class="docutils literal notranslate"><span class="pre">units=h,c,p</span></code> (tj. výměra v
+hektarech, počet buněk a procentuální pokrytí).</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="priklad-pro-rastrovou-mapu-s-hodnotami-s-plovouci-desetinnou-carkou">
+<h3>Příklad pro rastrovou mapu s hodnotami s plovoucí desetinnou čárkou<a class="headerlink" href="#priklad-pro-rastrovou-mapu-s-hodnotami-s-plovouci-desetinnou-carkou" title="Permalink to this heading">¶</a></h3>
+<p>Příklad výpisu statistiky pro rastrovou vrstvu <span class="map">dmt</span>:</p>
+<ul class="simple">
+<li><p>výměra v kilometrech čtverečních</p></li>
+<li><p>procentuální pokrytí</p></li>
+<li><p>rozděleno do 10 tříd</p></li>
+</ul>
+<figure class="align-center" id="id2">
+<img alt="../_images/r-report-0.png" src="../_images/r-report-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 72 </span><span class="caption-text">Nejprve vybereme rastrovou mapu, pro kterou si přejeme vypsat
+report.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/r-report-1.png" src="../_images/r-report-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 73 </span><span class="caption-text">Dále zvolíme informace, které si přejeme vypsat.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../_images/r-report-2.png" src="../_images/r-report-2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 74 </span><span class="caption-text">Zvolíme počet tříd, do kterých se mají data s plovoucí desetinnou
+čárkou rozdělit a modul spustíme.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<img alt="../_images/r-report-3.png" src="../_images/r-report-3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 75 </span><span class="caption-text">Výsledný report, např. území s nadmořskou výškou do 202.5 metrů
+pokrývá necelé tři procenta území ČR.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Jak již bylo uvedeno v kapitole <a class="reference internal" href="../intro/region.html"><span class="doc">Výpočetní region</span></a> drtivá
+většina modulů pro zpracování rastrových dat pracuje vždy v
+aktuální výpočetním regionu. Modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.report.html">r.report</a> není
+vyjímkou. To stejné platí pro další prezentované moduly. Pokud
+např. změníme prostorové rozlišení výpočetního regionu na 1km,
+změní se i report rastrové mapy <span class="map">dmt</span>. Modul nejprve data
+převzorkuje metodou <a class="reference external" href="http://en.wikipedia.org/wiki/Nearest neighbor interpolation">nejbližšího souseda</a> do mřížky s velikostí buňky 1x1km a teprve
+nad těmito daty vypočítá údaje pro report.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.region<span class="w"> </span><span class="nv">rast</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">res</span><span class="o">=</span><span class="m">1000</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id6">
+<img alt="../_images/r-report-4.png" src="../_images/r-report-4.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 76 </span><span class="caption-text">Pro takto převzorkovaná data bude např. území s nadmořskou
+výškou do 202.5 metrů pokrývat místo původních 2,85% nově 2,83%.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="zakladni-statistika">
+<span id="r-univar"></span><span id="index-2"></span><h2>Základní statistika<a class="headerlink" href="#zakladni-statistika" title="Permalink to this heading">¶</a></h2>
+<p>Základní statistiku rastrových dat poskytuje modul
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.univar.html">r.univar</a> dostupný buď z menu <span class="menuselection">Raster ‣
+Repors and statistics ‣ Univariate raster statistics</span> anebo z
+kontextového menu <em>správce vrstev</em>.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/lmgr-r-univar.png" src="../_images/lmgr-r-univar.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 77 </span><span class="caption-text">Základní statistika rastrových dat dostupná z kontextového menu správce vrstev.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<img alt="../_images/r-univar-out.png" src="../_images/r-univar-out.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 78 </span><span class="caption-text">Příklad statistiky pro rastrovou mapu <span class="map">dmt</span> (s výpočetním
+regionem nastaveným na tuto mapu).</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pokrocila-statistika">
+<span id="r-stats"></span><span id="index-3"></span><h2>Pokročilá statistika<a class="headerlink" href="#pokrocila-statistika" title="Permalink to this heading">¶</a></h2>
+<p>Modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.stats.html">r.stats</a> je nizkoúrovňový modul poskytující
+statistiku rastrových dat. Modul je určený především pro pokročilé
+uživatele, kteří si píší vlastní skripty. Modul je dostupný z menu
+<span class="menuselection">Raster ‣ Repors and statistics ‣ General
+statistics</span>.</p>
+<div class="notecmd admonition">
+<p class="admonition-title">Výpis statistiky rastrové mapy z příkazové řádky</p>
+<p>Výpis počtu buněk na základě 10 intervalů seřazených sestupně (znak
+<code class="docutils literal notranslate"><span class="pre">*</span></code> označuje no-data, tj. rastrové bunky bez hodnoty)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.stats<span class="w"> </span>-c<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">nsteps</span><span class="o">=</span><span class="m">10</span><span class="w"> </span><span class="nv">sort</span><span class="o">=</span>desc
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="mi">94752766</span>
+<span class="mf">355.686188</span><span class="o">-</span><span class="mf">508.843563</span> <span class="mi">43213697</span>
+<span class="mf">202.528812</span><span class="o">-</span><span class="mf">355.686188</span> <span class="mi">34747630</span>
+<span class="mf">508.843563</span><span class="o">-</span><span class="mf">662.000938</span> <span class="mi">28140420</span>
+<span class="mf">662.000938</span><span class="o">-</span><span class="mf">815.158314</span> <span class="mi">8635189</span>
+<span class="mf">49.371437</span><span class="o">-</span><span class="mf">202.528812</span> <span class="mi">6291794</span>
+<span class="mf">815.158314</span><span class="o">-</span><span class="mf">968.315689</span> <span class="mi">3363937</span>
+<span class="mf">968.315689</span><span class="o">-</span><span class="mf">1121.473064</span> <span class="mi">1231565</span>
+<span class="mf">1121.473064</span><span class="o">-</span><span class="mf">1274.63044</span> <span class="mi">447183</span>
+<span class="mf">1274.63044</span><span class="o">-</span><span class="mf">1427.787815</span> <span class="mi">104742</span>
+<span class="mf">1427.787815</span><span class="o">-</span><span class="mf">1580.94519</span> <span class="mi">12743</span>
+</pre></div>
+</div>
+</div>
+<p>Kromě skriptů můžete tento modul využít například pro export
+statistiky rastrové mapy do tabulkové procesoru (např. LibreOffice
+Calc či MS Excel) a to přes výměnný formát <a class="reference external" href="http://cs.wikipedia.org/wiki/CSV">CSV</a> (parametr
+<code class="xref std std-option docutils literal notranslate"><span class="pre">separator=comma</span></code>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>r.stats<span class="w"> </span>-acp<span class="w"> </span><span class="nv">input</span><span class="o">=</span>dmt<span class="w"> </span><span class="nv">separator</span><span class="o">=</span>comma<span class="w"> </span><span class="nv">output</span><span class="o">=</span>elev_stat.csv
+</pre></div>
+</div>
+<figure class="align-center" id="id9">
+<img alt="../_images/libreoffice-stats.png" src="../_images/libreoffice-stats.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 79 </span><span class="caption-text">Soubor <code class="docutils literal notranslate"><span class="pre">elev_stat.csv</span></code> poté můžete načíst do Vašeho oblíbeného
+tabulkového procesoru.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Rastrové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../intro/region.html">Výpočetní region</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Základní statistiky rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask.html">Nastavení masky</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabulka-barev.html">Tabulka barev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyzy-povrchu.html">Topografické analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastrova-algebra.html">Rastrová algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reklasifikace.html">Reklasifikace rastrových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analyza-nakladu.html">Rastrová analýza nákladů</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../intro/region.html" title="Výpočetní region"
+              >předchozí</a> |
+            <a href="mask.html" title="Nastavení masky"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

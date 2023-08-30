@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Atributová data &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Síťové analýzy" href="sitove-analyzy.html" />
+    <link rel="prev" title="Topologie vektorových dat" href="topologie.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="topologie.html" title="Topologie vektorových dat"
+             accesskey="P">předchozí</a> |
+          <a href="sitove-analyzy.html" title="Síťové analýzy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="atributova-data">
+<span id="index-0"></span><h1>Atributová data<a class="headerlink" href="#atributova-data" title="Permalink to this heading">¶</a></h1>
+<section id="editace-atributovych-dat">
+<span id="id1"></span><h2>Editace atributových dat<a class="headerlink" href="#editace-atributovych-dat" title="Permalink to this heading">¶</a></h2>
+<p>Správce atributových dat umožňuje kromě dotazování (viz kapitola
+<a class="reference internal" href="../intro/atributove-dotazy.html"><span class="doc">Atributové dotazy</span></a>) atributová data <strong>modifikovat</strong>.</p>
+<figure class="align-center">
+<img alt="../_images/dbmgr-edit.png" class="large" src="../_images/dbmgr-edit.png" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Editovat lze atributové data vektorových map pouze z
+aktualního mapsetu.</p>
+<p>Kopírovat vektorové mapy do aktuálního mapsetu lze z
+kontextového menu stromu vrstev (<a class="reference internal" href="#copy-vector-01"><span class="std std-numref">Obr. 145</span></a>)
+anebo pomocí nástoje ze záložky <span class="item">Data</span>
+(<a class="reference internal" href="#copy-vector-02"><span class="std std-numref">Obr. 146</span></a>).</p>
+<figure class="align-center" id="id5">
+<span id="copy-vector-01"></span><img alt="../_images/copy-vector-01.png" class="small" src="../_images/copy-vector-01.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 145 </span><span class="caption-text">Vytvoření kopie vektorovové mapy v aktuálním mapsetu z
+kontextového menu správce vrstev.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<span id="copy-vector-02"></span><img alt="../_images/copy-vector-02.png" class="middle" src="../_images/copy-vector-02.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 146 </span><span class="caption-text">Kopírování vektorových map pomocí nástroje ze záložky
+<span class="item">Data</span>.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="notecmd admonition">
+<p class="admonition-title">Editace atributových dat z příkazové řádky</p>
+<blockquote>
+<div><p>Nabízejí se dva moduly:</p>
+</div></blockquote>
+<ul>
+<li><p><a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.execute.html">db.execute</a> umožňující spustit jakýkoliv
+<abbr title="Structured Query Language">SQL</abbr> příkaz typu
+<code class="docutils literal notranslate"><span class="pre">UPDATE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALTER</span></code> či <code class="docutils literal notranslate"><span class="pre">DELETE</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.execute<span class="w"> </span><span class="nv">sql</span><span class="o">=</span><span class="s2">&quot;update obce set nespravny = &#39;1&#39; where kod = 569054&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>anebo <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.db.update.html">v.db.update</a> jako frontend pro vektorové mapy</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.db.update<span class="w"> </span><span class="nv">map</span><span class="o">=</span>obce<span class="w"> </span><span class="nv">column</span><span class="o">=</span>nespravny<span class="w"> </span><span class="nv">value</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="w"> </span><span class="nv">where</span><span class="o">=</span><span class="s2">&quot;kod = 569054&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<p>Správce atributových dat umožňuje <strong>přidávat</strong> do atributové tabulky
+nové záznamy.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/dbmgr-new-record.png" class="large" src="../_images/dbmgr-new-record.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 147 </span><span class="caption-text">Přidání nového záznamu do atributové tabulky.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Tato operace neznamená, že bude do vektorové mapy přidán
+nový prvek.</p>
+</div>
+<div class="notecmd admonition">
+<p class="admonition-title">Vložení nového záznamu do atributové tabulky z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.execute<span class="w"> </span><span class="nv">sql</span><span class="o">=</span><span class="s2">&quot;insert into obce_polygon(cat, nazev) values (6253, &#39;pokus&#39;)&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>Vybrané záznamy lze z atributové tabulky <strong>odstranit</strong>.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/wxgui-dbmgr-delete.png" src="../_images/wxgui-dbmgr-delete.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 148 </span><span class="caption-text">Odstranění záznamů z atributové tabulky.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Odstranění záznamů z atributové tabulky z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.execute<span class="w"> </span><span class="nv">sql</span><span class="o">=</span><span class="s2">&quot;delete from obce where cat = 6253&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Při odstranění či přidání záznamů do atributové tabulky dochází k
+modifikaci pouze popisné složky geoprvků. Např. při odstranění
+záznamu z atributové tabulky zůstává asociovaná geometrická složka
+popisu geoprvku ve vektorové mapě zachována.</p>
+</div>
+<p>Numerické atributy mohou být také <em>vypočítány</em> na základě zvolené funkce.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/wxgui-dbmgr-calculate.png" src="../_images/wxgui-dbmgr-calculate.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 149 </span><span class="caption-text">Funkce pro výpočet numerických atributů.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="notecmd admonition">
+<p class="admonition-title">Výpočet hodnoty atributu z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>v.to.db<span class="w"> </span><span class="nv">map</span><span class="o">=</span>obce<span class="w"> </span><span class="nv">option</span><span class="o">=</span>area<span class="w"> </span><span class="nv">columns</span><span class="o">=</span>vymera
+</pre></div>
+</div>
+</div>
+<p id="pridani-noveho-atributu">Příklad přidání nového atributu s výměrou a její výpočet (ve
+čtverečních mapových jednotkách).</p>
+</section>
+<section id="field-calculator">
+<span id="id2"></span><h2>Field Calculator<a class="headerlink" href="#field-calculator" title="Permalink to this heading">¶</a></h2>
+<p><em>Field Calculator</em> je nástroj, který umožňuje sestavit <abbr title="Structured Query Language">SQL</abbr> UPDATE příkaz a pomocí něho modifikovat
+atributová data.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/wx-field-calculator.png" class="large" src="../_images/wx-field-calculator.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 150 </span><span class="caption-text">Ukázka nástroje využití Field Calculator.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pokrocile-dotazovani">
+<span id="db-select"></span><h2>Pokročilé dotazování<a class="headerlink" href="#pokrocile-dotazovani" title="Permalink to this heading">¶</a></h2>
+<p>Atributové dotazy umožňují dva moduly <a class="reference internal" href="#modul-v-db-select"><span class="std std-ref">v.db.select</span></a> a <a class="reference internal" href="#modul-db-select"><span class="std std-ref">db.select</span></a>.</p>
+<section id="modul-v-db-select">
+<span id="id3"></span><h3>Modul v.db.select<a class="headerlink" href="#modul-v-db-select" title="Permalink to this heading">¶</a></h3>
+<p>Modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.db.select.html">v.db.select</a> umožňuje provádět dotazy pouze nad
+atributovými daty připojenými k dané vektorové mapě. Je dostupný z
+menu <span class="menuselection">Database ‣ Query ‣ Query vector attribute
+data</span>. Pokud není zadána <code class="xref std std-option docutils literal notranslate"><span class="pre">where</span></code> podmínka, tak modul vypíše
+všechny záznamy z atributové tabulky.</p>
+<figure class="align-center" id="id11">
+<img alt="../_images/v-db-select-0.svg" src="../_images/v-db-select-0.svg" /><figcaption>
+<p><span class="caption-number">Obr. 151 </span><span class="caption-text">Atributový dotaz pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.db.select.html">v.db.select</a>
+(zadání vektorové mapy).</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<img alt="../_images/v-db-select-1.svg" src="../_images/v-db-select-1.svg" /><figcaption>
+<p><span class="caption-number">Obr. 152 </span><span class="caption-text">Atributový dotaz pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/v.db.select.html">v.db.select</a>
+(volitelně zadání ‚where‘ podmínky).</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="modul-db-select">
+<span id="id4"></span><h3>Modul db.select<a class="headerlink" href="#modul-db-select" title="Permalink to this heading">¶</a></h3>
+<p>Modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.select.html">db.select</a> umožňuje provádět <abbr title="Structured Query Language">SQL</abbr> dotazy (SELECT) nad <em>libovolnými</em> atributovými daty
+dostupnými pomocí daného databázového ovladače. <abbr title="Structured Query Language">SQL</abbr> dotazy mohou být uloženy v souboru (parametr
+<code class="xref std std-option docutils literal notranslate"><span class="pre">input</span></code>) anebo definovány jako parametr <code class="xref std std-option docutils literal notranslate"><span class="pre">sql</span></code>. Tento
+modul je dostupný z menu <span class="menuselection">Database ‣ Query ‣ Query
+any table</span>.</p>
+<figure class="align-center" id="id13">
+<img alt="../_images/db-select-0-single.png" src="../_images/db-select-0-single.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 153 </span><span class="caption-text">Atributový dotaz pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.select.html">db.select</a>
+(zadání <abbr title="Structured Query Language">SQL</abbr>
+dotazu). Výpočet plošné zakulacenosti prvků (poměr
+kvadrátu obvodu vůči ploše).</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id14">
+<img alt="../_images/db-select-1-single.png" src="../_images/db-select-1-single.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 154 </span><span class="caption-text">Atributový dotaz pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.select.html">db.select</a>
+(výsledek <abbr title="Structured Query Language">SQL</abbr> dotazu).</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.select.html">db.select</a> pracuje s atributy uloženými
+v aktuální mapsetu (ve výchozím nastavení systém GRASS použivá pro
+uložení atributových dat SQLite databázi, každý mapset má svoji
+DB). Cestu k DB lze změnit pomocí atributu <span class="param">database</span>.</p>
+</div>
+<div class="notecmd admonition">
+<p class="admonition-title">Jednoduché atributové dotazu z příkazové řádky</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>db.select<span class="w"> </span><span class="nv">sql</span><span class="o">=</span><span class="s2">&quot;select nazev,(shape_len*shape_len)/shape_area as zaku from maloplosna_uzemi where zaku &gt; 3e3&quot;</span>
+</pre></div>
+</div>
+</div>
+<figure class="align-center" id="id15">
+<img alt="../_images/db-select-0-multi.png" src="../_images/db-select-0-multi.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 155 </span><span class="caption-text">Vícenásobný atributový dotaz pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.select.html">db.select</a>
+(zadání <abbr title="Structured Query Language">SQL</abbr> dotazů).</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="n">nazev</span><span class="p">,(</span><span class="n">shape_len</span><span class="o">*</span><span class="n">shape_len</span><span class="p">)</span><span class="o">/</span><span class="n">shape_area</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">zaku</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">maloplosna_uzemi</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">zaku</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="n">e3</span><span class="p">;</span>
+<span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">maloplosna_uzemi</span><span class="p">;</span>
+<span class="k">select</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="k">distinct</span><span class="w"> </span><span class="n">kod</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">pocet</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">maloplosna_uzemi</span><span class="p">;</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id16">
+<img alt="../_images/db-select-1-multi.png" src="../_images/db-select-1-multi.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 156 </span><span class="caption-text">Vícenásobný atributový dotaz pomocí modulu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.select.html">db.select</a>
+(výsledek <abbr title="Structured Query Language">SQL</abbr> dotazů).</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pro ostatní <abbr title="Structured Query Language">SQL</abbr> příkazy
+(<code class="docutils literal notranslate"><span class="pre">INSERT</span></code>, <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">ALTER</span></code> a další) je určen
+modul <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/db.execute.html">db.execute</a>.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Vektorové analýzy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Editace vektorových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove-funkce.html">Prostorové funkce</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topologie.html">Topologie vektorových dat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Atributová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sitove-analyzy.html">Síťové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="topologie.html" title="Topologie vektorových dat"
+              >předchozí</a> |
+            <a href="sitove-analyzy.html" title="Síťové analýzy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

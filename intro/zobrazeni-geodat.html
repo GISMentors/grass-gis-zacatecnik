@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Zobrazení geodat v mapovém okně &#8212; Školení GRASS GIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Příkazy systému GRASS" href="moduly.html" />
+    <link rel="prev" title="Struktura dat - koncept lokací a mapsetů" href="struktura-dat.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GRASS GIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="struktura-dat.html" title="Struktura dat - koncept lokací a mapsetů"
+             accesskey="P">předchozí</a> |
+          <a href="moduly.html" title="Příkazy systému GRASS"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="zobrazeni-geodat-v-mapovem-okne">
+<h1>Zobrazení geodat v mapovém okně<a class="headerlink" href="#zobrazeni-geodat-v-mapovem-okne" title="Permalink to this heading">¶</a></h1>
+<p id="index-0">Po spuštění grafického uživatelského rozhraní (GUI) systému GRASS se
+objeví <em>správce vrstev</em> (Layer Manager) a <em>mapové okno</em> (Map Display).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud GUI systému GRASS z nějaké důvodu zhavaruje, lze ho z
+příkazové řádky nastartovat znovu pomocí příkazu <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/g.gui.html">g.gui</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>g.gui
+</pre></div>
+</div>
+</div>
+<figure class="align-center" id="id1">
+<img alt="../_images/grass-gui-launch.png" class="large" src="../_images/grass-gui-launch.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 23 </span><span class="caption-text">Základní komponenty GUI systému GRASS - správce vrstev
+<span class="fignote">(1)</span> a mapové okno <span class="fignote">(2)</span>.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Rastrová či vektorová data lze do <em>správce vrstev</em> (záložka
+<span class="item">Layers</span>) přidávat z menu <span class="menuselection">File ‣ Map display</span>,
+nástrojové lišty či přímo z příkazové řádky <em>správce vrstev</em> (záložka
+<span class="item">Console</span>), viz <a class="reference internal" href="#zobrazeni-dat-raster"><span class="std std-ref">níže</span></a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud se v mapovém okně po přidání vrstvy nezobrazují žádná data,
+je nutné nastavit pohled na aktuálně vybranou mapovou vrstvu
+<a class="reference internal" href="../_images/zoom-extent.png"><img alt="grass-zoom-extent" src="../_images/zoom-extent.png" style="width: 1.5em;" /></a> <sup>Zoom to selected map
+layer(s)</sup>. Automatické nastavení pohledu při přidání každé nové
+mapové vrstvy lze kontrolovat v nastavení <a class="reference internal" href="../_images/settings1.png"><img alt="grass-settings" src="../_images/settings1.png" style="width: 1.5em;" /></a>
+<sup>GUI Settings</sup> anebo z menu <span class="menuselection">Settings ‣
+Preferences</span>.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/wxgui-settings-autozoom.png" src="../_images/wxgui-settings-autozoom.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 24 </span><span class="caption-text">Nastavení automatické změny pohledu při přidání nové mapové vrstvy.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Geodata lze vykreslovat z příkazové řádky či skriptů do
+nejrůznějších formátů od PNG, GIF až po SVG či PDF pomocí modulu
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.mon.html">d.mon</a> v kombinaci s moduly <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.rast.html">d.rast</a> a
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.vect.html">d.vect</a>. Tyto techniky jsou součástí navazujícího
+<a class="reference external" href="http://training.gismentors.eu/grass-gis-pokrocily">školení pro pokročilé uživatele</a>.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/gif-example.gif" class="middle" src="../_images/gif-example.gif" />
+<figcaption>
+<p><span class="caption-number">Obr. 25 </span><span class="caption-text">Příklad vykreslení série prostorových analýz do formátu
+GIF</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<section id="rastrova-data">
+<span id="zobrazeni-dat-raster"></span><span id="index-1"></span><h2>Rastrová data<a class="headerlink" href="#rastrova-data" title="Permalink to this heading">¶</a></h2>
+<p>Rastrová data (v terminologii systému GRASS tzv. <em>rastrovou mapu</em>) lze
+přidat do správce vrstev, resp. mapového okna různými způsoby:</p>
+<ol class="arabic">
+<li><p>ze záložky <span class="item">Data</span> správce vrstev</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/wxgui-data-display-rast.png" src="../_images/wxgui-data-display-rast.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 26 </span><span class="caption-text">Zobrazit rastrovou mapu lze z kontextového menu <span class="item">Display
+layer</span> anebo jednoduše od verze GRASS GIS 7.4.1 i dvojklikem.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>tradičně z nástrojové lišty správce vrstev <a class="reference internal" href="../_images/layer-raster-add.png"><img alt="grass-layer-raster-add" src="../_images/layer-raster-add.png" style="width: 1.5em;" /></a>
+<sup>Add raster map layer</sup></p>
+<figure class="align-center" id="id5">
+<img alt="../_images/wxgui-d-rast.png" src="../_images/wxgui-d-rast.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 27 </span><span class="caption-text">Volba rastrové mapy.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>z menu <span class="menuselection">File ‣ Map display ‣ Add raster</span></p></li>
+<li><p>pomocí klávesové zkratky <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">R</kbd></kbd></p></li>
+<li><p>z příkazové řádky (<code class="docutils literal notranslate"><span class="pre">Console</span></code>) správce vrstev příkazem <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.rast.html">d.rast</a></p>
+<figure class="align-center" id="id6">
+<img alt="../_images/wxgui-console.png" src="../_images/wxgui-console.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 28 </span><span class="caption-text">Příkazová řádka správce vrstev.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id7">
+<img alt="../_images/wxgui-console-raster.png" src="../_images/wxgui-console-raster.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 29 </span><span class="caption-text">Přidání rastrové mapy z příkazové řádky správce vrstev.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+<p>Ostatní mapové vrstvy, které mají rastrový charakter jsou dostupné z
+nástrojové lišty <a class="reference internal" href="../_images/layer-raster-more.png"><img alt="grass-layer-raster-more" src="../_images/layer-raster-more.png" style="width: 1.5em;" /></a> <sup>Add various raster
+map layers (RGB, HIS, shaded relief, …)</sup> nebo z příkazové řádky
+správce vrstev.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/wxgui-toolbar-raster-misc-1.png" src="../_images/wxgui-toolbar-raster-misc-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 30 </span><span class="caption-text">Menu pro přidání rastrových dat.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p id="d-rast-various">Jde o následující typy rastrových dat:</p>
+<ul class="simple">
+<li><p>3D rastrová data</p></li>
+<li><p><a class="reference external" href="http://cs.wikipedia.org/wiki/RGB">RGB</a> barevná syntéza - příkaz <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.rgb.html">d.rgb</a></p></li>
+<li><p><a class="reference external" href="http://cs.wikipedia.org/wiki/HSL">HIS</a> barevná syntéza - příkaz <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.his.html">d.his</a></p></li>
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/Shaded relief">stínovaný reliéf</a> - příkaz <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.shade.html">d.shade</a>, viz kapitola <a class="reference internal" href="../rastrova_data/analyzy-povrchu.html#display-shade"><span class="std std-ref">Stínovaný reliéf</span></a></p></li>
+<li><p>rastrová mapa, zobrazení směru - příkaz <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.rast.arrow.html">d.rast.arrow</a></p></li>
+<li><p>rastrová mapa, zobrazení hodnot buněk - příkaz <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.rast.num.html">d.rast.num</a></p></li>
+</ul>
+<figure class="align-center" id="id9">
+<img alt="../_images/wxgui-d-rgb.png" class="large" src="../_images/wxgui-d-rgb.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 31 </span><span class="caption-text">Příklad zobrazení barevné syntézy kanálů
+<a class="reference external" href="http://cs.wikipedia.org/wiki/Landsat">Landsat 8 ETM</a> z mapsetu „landsat“
+ve skutečných barvách.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="vektorova-data">
+<span id="index-2"></span><h2>Vektorová data<a class="headerlink" href="#vektorova-data" title="Permalink to this heading">¶</a></h2>
+<p>Podobně lze přidat vektorová data (tzv. <em>vektorovou mapu</em>):</p>
+<ol class="arabic">
+<li><p>ze záložky <span class="item">Data</span> správce vrstev</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/wxgui-data-display-vect.png" src="../_images/wxgui-data-display-vect.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 32 </span><span class="caption-text">Zobrazit vektorovou mapu lze z kontextového menu <span class="item">Display
+layer</span> anebo jednoduše od verze GRASS GIS 7.4.1 i dvojklikem.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>tradičně z nástrojové lišty správce vrstev <a class="reference internal" href="../_images/layer-vector-add.png"><img alt="grass-layer-vector-add" src="../_images/layer-vector-add.png" style="width: 1.5em;" /></a>
+<sup>Add vector map layer</sup></p>
+<figure class="align-center" id="id11">
+<img alt="../_images/wxgui-d-vect.png" src="../_images/wxgui-d-vect.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 33 </span><span class="caption-text">Volba vektorové mapy.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>z menu <span class="menuselection">File ‣ Map display ‣ Add vector</span></p></li>
+<li><p>pomocí klávesové zkratky <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">V</kbd></kbd></p></li>
+<li><p>z příkazové řádky (<code class="docutils literal notranslate"><span class="pre">Console</span></code>) správce vrstev příkazem
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.vect.html">d.vect</a></p>
+<figure class="align-center" id="id12">
+<img alt="../_images/wxgui-console-vector.png" src="../_images/wxgui-console-vector.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 34 </span><span class="caption-text">Přidání vektorové mapy z příkazové řádky správce vrstev.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+<p>Ostatní mapové vrstvy, které mají vektorový charakter jsou dostupné z
+nástrojové lišty <a class="reference internal" href="../_images/layer-vector-more.png"><img alt="grass-layer-vector-more" src="../_images/layer-vector-more.png" style="width: 1.5em;" /></a> <sup>Add various raster
+map layers (thematic, chart, …)</sup> nebo z příkazové řádky správce
+vrstev.</p>
+<figure class="align-center" id="id13">
+<img alt="../_images/wxgui-toolbar-vector-misc-1.png" class="middle" src="../_images/wxgui-toolbar-vector-misc-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 35 </span><span class="caption-text">Menu pro přidání vektorových dat.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Jde o následující typy vektorových dat:</p>
+<ul class="simple">
+<li><p>tématické zobrazení plošných vektorových dat - příkaz
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.thematic.area.html">d.thematic.area</a></p></li>
+<li><p>zobrazení grafů - <a class="reference external" href="http://grass.osgeo.org/grass80/manuals/d.vect.chart.html">d.vect.chart</a></p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">První kroky</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../instalace/index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prvni-kroky.html">Úvod do systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="struktura-dat.html">Struktura dat - koncept lokací a mapsetů</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Zobrazení geodat v mapovém okně</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moduly.html">Příkazy systému GRASS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr.html">Rastrová data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor.html">Vektorová data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#dotazovani">Dotazování</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Rastrové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Vektorové analýzy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Import a export geodat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Mapové výstupy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html#ruzne">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="struktura-dat.html" title="Struktura dat - koncept lokací a mapsetů"
+              >předchozí</a> |
+            <a href="moduly.html" title="Příkazy systému GRASS"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
